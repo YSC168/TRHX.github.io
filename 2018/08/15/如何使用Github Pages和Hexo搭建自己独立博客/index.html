@@ -100,7 +100,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2018-08-15</span>
-            <span class="time">20:40:07</span>
+            <span class="time">20:41:26</span>
           </span>
           
         </div>
@@ -113,7 +113,7 @@
 <hr>
 <h1 id="前言"><a href="#前言" class="headerlink" title="- 前言"></a><strong>- 前言</strong></h1><p>首先感谢您能访问我的博客：<a href="http://trhx.github.io" target="_blank" rel="noopener">TRHX’Blog</a> <br></p>
 <p>这是一篇有关如何使用 <font color="#DC143C">Github Pages</font> 和 <font color="#DC143C">Hexo</font> 搭建属于自己独立博客的详尽教程，本人是软件工程专业本科生，目前只学习了C和C++编程语言，对网站开发的有关知识几乎为零，这也是我搭建好自己的博客之后写的第一篇博客，刚开始搭建博客的时候自己也是网上各种百度，由于自己属于<font color="#DC143C"><strong>小白</strong></font>那种，历经了千辛万苦才弄好，所以借这个机会写一篇小白真正能看懂的博客搭建教程，教你一步一步走向成功的彼岸！ <br></p>
-<p>推荐文章： <a href="http://www.cnblogs.com/jhzhu/p/3893297.html" target="_blank" rel="noopener">《我为什么写博客》</a> （By 知明所以）<br>　<br>　　　　<a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">《为什么你应该（从现在开始就）写博客》</a>  (By 刘未鹏 | Mind Hacks)</p>
+<p>推荐文章： <a href="http://www.cnblogs.com/jhzhu/p/3893297.html" target="_blank" rel="noopener">《我为什么写博客》</a> （By 知明所以）<br>　　　　 　<a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">《为什么你应该（从现在开始就）写博客》</a>  (By 刘未鹏 | Mind Hacks)</p>
 <h1 id="入门"><a href="#入门" class="headerlink" title="- 入门"></a><strong>- 入门</strong></h1><blockquote>
 <p><strong>Github Pages</strong></p>
 </blockquote>
@@ -126,7 +126,7 @@
 <p><img src="https://i.imgur.com/l9qbq4X.png" alt=""></p>
 <p>注：本人在安装过程中出现了Warning 1909,无法创建快捷方式，这种情况很少出现，如果在安装过程中也有这种情况请参考百度文库（win10系统实测可行）：<a href="https://wenku.baidu.com/view/4ad59110964bcf84b9d57ba5.html" target="_blank" rel="noopener">《Win7 安装程序快捷方式报错 警告1909,无法创建快捷方式》</a></p>
 <p><img src="https://i.imgur.com/qzNCltv.png" alt=""></p>
-<h1 id="安装Git"><a href="#安装Git" class="headerlink" title="- 安装Git"></a><strong>- 安装Git</strong></h1><p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">点击此处</a>访问官网，按需下载相应版本，默认安装即可 <br><br>参考资料：<a href="https://www.cnblogs.com/jytx/p/5602927.html" target="_blank" rel="noopener">《如何在windows下安装GIT》</a> 　（By 俊雨廷休）<br><br>Git相关教程：<a href="http://git.oschina.net/progit/" target="_blank" rel="noopener">《Pro Git（中文版）》</a></p>
+<h1 id="安装Git"><a href="#安装Git" class="headerlink" title="- 安装Git"></a><strong>- 安装Git</strong></h1><p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">点击此处</a>访问官网，按需下载相应版本，默认安装即可 <br><br>参考资料：<a href="https://www.cnblogs.com/jytx/p/5602927.html" target="_blank" rel="noopener">《如何在windows下安装GIT》</a> 　（By 俊雨廷休）<br>　　　　　<a href="http://git.oschina.net/progit/" target="_blank" rel="noopener">《Pro Git（中文版）》</a></p>
 <h1 id="检验软件是否安装成功"><a href="#检验软件是否安装成功" class="headerlink" title="- 检验软件是否安装成功"></a><strong>- 检验软件是否安装成功</strong></h1><p>同时按下 Win 键和 R 键打开运行窗口,输入 <font color="#DC143C">cmd</font> ，然后输入以下命令，有相应版本信息显示则安装成功，若不正确可以卸载软件重新安装，此外若安装成功，在桌面右键鼠标，可以看到菜单里多了<font color="#DC143C">Git GUI Here</font> 和 <font color="#DC143C">Git Bash Here</font>两个选项，第一个是<font color="#DC143C">图形界面的Git操作</font>，另一个是<font color="#DC143C">命令行</font></p>
 <blockquote>
 <p>$ git –version<br>$ node -v<br>$ npm -v   </p>
@@ -161,21 +161,37 @@
 <p>三、配置 <font color="#DC143C">SSH</font> 密钥：只有配置好 <font color="#DC143C">SSH</font> 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步，在你第一次新建的文件夹里面（如：我的文件夹为：<font color="#DC143C">Ｅ\TRHX_Blog</font>） <font color="#DC143C">Git Bash Here</font> 输入以下命令：</p>
 <blockquote>
 <p>$ ssh-keygen -t rsa -C “your <a href="mailto:email@example.com" target="_blank" rel="noopener">email@example.com</a>“  </p>
-</blockquote>
 <font color="#00CD00">//引号里面填写你的邮箱地址，比如我的是<a href="mailto:tanrenhou@126.com" target="_blank" rel="noopener">tanrenhou@126.com</a></font>
-
+</blockquote>
 <p>之后会出现：</p>
 <blockquote>
 <p>Generating public/private rsa key pair.<br>Enter file in which to save the key (/c/Users/you/.ssh/id_rsa):  </p>
-</blockquote>
 <font color="#00CD00">//到这里可以直接回车将密钥按默认文件进行存储</font>
-
+</blockquote>
 <p>然后会出现：</p>
 <blockquote>
 <p>Enter passphrase (empty for no passphrase):  </p>
+<p><font color="#00CD00">//这里是要你输入密码，其实不需要输什么密码，直接回车就行</font><br>Enter same passphrase again:  </p>
 </blockquote>
-<font color="#00CD00">//这里是要你输入密码，其实不需要输什么密码，直接回车就行</font><br>&gt; Enter same passphrase again:<br><br>接下来屏幕会显示：<br>&gt; Your identification has been saved in /c/Users/you/.ssh/id_rsa.<br>&gt; Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.<br>&gt; The key fingerprint is:<br>&gt; 这里是各种字母数字组成的字符串，结尾是你的邮箱<br>&gt; The key’s randomart image is:<br>&gt; 这里也是各种字母数字符号组成的字符串<br><br>运行以下命令，将公钥的内容复制到系统粘贴板上<br>&gt; $ clip &lt; ~/.ssh/id_rsa.pub<br><br>四、在 GitHub 账户中添加你的公钥<br><br>1.登陆 GitHub，进入 <font color="#DC143C">Settings</font>：<br><br><img src="https://i.imgur.com/jzyEME2.png" alt=""><br><br>2.点击 <font color="#DC143C">SSH and GPG Keys</font>：<br><br><img src="https://i.imgur.com/4PAjGms.png" alt=""><br><br>3.选择 <font color="#DC143C">New SSH key</font>：<br><br><img src="https://i.imgur.com/CYnhV4W.png" alt=""><br><br>3.粘贴密钥：<br><br><img src="https://i.imgur.com/vnTjW4z.png" alt=""><br><br>五、测试<br><br>输入以下命令：<font color="#DC143C">注意：<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>不要做任何更改！</font>
-
+<p>接下来屏幕会显示：</p>
+<blockquote>
+<p>Your identification has been saved in /c/Users/you/.ssh/id_rsa.<br>Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>这里是各种字母数字组成的字符串，结尾是你的邮箱<br>The key’s randomart image is:<br>这里也是各种字母数字符号组成的字符串  </p>
+</blockquote>
+<p>运行以下命令，将公钥的内容复制到系统粘贴板上</p>
+<blockquote>
+<p>$ clip &lt; ~/.ssh/id_rsa.pub</p>
+</blockquote>
+<p>四、在 GitHub 账户中添加你的公钥</p>
+<p>1.登陆 GitHub，进入 <font color="#DC143C">Settings</font>：</p>
+<p><img src="https://i.imgur.com/jzyEME2.png" alt=""></p>
+<p>2.点击 <font color="#DC143C">SSH and GPG Keys</font>：</p>
+<p><img src="https://i.imgur.com/4PAjGms.png" alt=""></p>
+<p>3.选择 <font color="#DC143C">New SSH key</font>：</p>
+<p><img src="https://i.imgur.com/CYnhV4W.png" alt=""></p>
+<p>3.粘贴密钥：</p>
+<p><img src="https://i.imgur.com/vnTjW4z.png" alt=""></p>
+<p>五、测试</p>
+<p>输入以下命令：<font color="#DC143C">注意：<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>不要做任何更改！</font></p>
 <blockquote>
 <p>$ ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
 </blockquote>
@@ -237,7 +253,7 @@
 <p>$ hexo d -g </p>
 </blockquote>
 <p>现在访问你的博客就可以看见写好的文章啦！</p>
-<p>参考资料：<a href="https://blog.csdn.net/jinhui157/article/details/73872795" target="_blank" rel="noopener">《10款流行的Markdown编辑器，总有一款适合你》</a> （By xiaoxiao_engineer）<br><br>　　　　　<a href="https://www.jianshu.com/p/q81RER/" target="_blank" rel="noopener">《献给写作者的 Markdown 新手指南》</a> （By 简书）<br><br>　　　　　<a href="https://sspai.com/post/25137" target="_blank" rel="noopener">《认识与入门 Markdown》</a> （By Te_Lee）<br><br>　　　　　<a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="noopener">《markdown简明语法》</a> （By 不如）<br><br>　　　　　<a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">《markdown基本语法》</a> （By 高鸿祥）<br><br>　　　　　<a href="http://www.liuhaihua.cn/archives/143443.html" target="_blank" rel="noopener">《Markdown 公式指导手册》</a> （By Harries）<br>
+<p>参考资料：<a href="https://blog.csdn.net/jinhui157/article/details/73872795" target="_blank" rel="noopener">《10款流行的Markdown编辑器，总有一款适合你》</a> （By xiaoxiao_engineer）<br>　　　　　<a href="https://www.jianshu.com/p/q81RER/" target="_blank" rel="noopener">《献给写作者的 Markdown 新手指南》</a> （By 简书）<br>　　　　　<a href="https://sspai.com/post/25137" target="_blank" rel="noopener">《认识与入门 Markdown》</a> （By Te_Lee）<br>　　　　　<a href="http://ibruce.info/2013/11/26/markdown/" target="_blank" rel="noopener">《markdown简明语法》</a> （By 不如）<br>　　　　　<a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">《markdown基本语法》</a> （By 高鸿祥）<br>　　　　　<a href="http://www.liuhaihua.cn/archives/143443.html" target="_blank" rel="noopener">《Markdown 公式指导手册》</a> （By Harries）  
 　　　　　
 　　　　　</p>
 <h1 id="如何为博客更换自己喜欢的主题"><a href="#如何为博客更换自己喜欢的主题" class="headerlink" title="- 如何为博客更换自己喜欢的主题"></a><strong>- 如何为博客更换自己喜欢的主题</strong></h1><p>博客也搭建好了，文章也会写了，但是！！！默认的主题并不喜欢怎么办？现在，我们就来为自己的博客更换自己喜欢的主题</p>
@@ -271,7 +287,7 @@
 <p>$ hexo g -d</p>
 </blockquote>
 <p>此时访问自己的博客即可看见更换后的主题，但我们仍然需要对主题的相关配置进行修改，比如网站标题，图标等等，Hexo 中有两份主要的配置文件，名称都是  <font color="#DC143C">_config.yml</font> ，它们均是用于站点配置使用的。其中，一份位于站点根目录下（比如我的：<font color="#DC143C">E:\TRHX_Blog\Hexo\_config.yml</font>），主要包含 Hexo 本身整站的配置；另一份位于主题目录下（比如我的：<font color="#DC143C">E:\TRHX_Blog\Hexo\themes\hexo-theme-aero-dual\_config.yml</font>），这份配置由主题作者提供，主要用于配置主题相关的选项，一般  <font color="#DC143C">_config.yml</font>  文件里都有相关注释，按需修改即可</p>
-<p>参考资料：<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">《有哪些好看的 Hexo 主题？》</a> （知乎）<br><br>　　　　　<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">《Hexo | 配置》</a> （Hexo官方文档）<br><br>　　　　　<a href="https://segmentfault.com/a/1190000002632530" target="_blank" rel="noopener">《hexo常用命令笔记》</a> （By 小弟调调）</p>
+<p>参考资料：<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">《有哪些好看的 Hexo 主题？》</a> （知乎）<br>　　　　　<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">《Hexo | 配置》</a> （Hexo官方文档）<br>　　　　　<a href="https://segmentfault.com/a/1190000002632530" target="_blank" rel="noopener">《hexo常用命令笔记》</a> （By 小弟调调）</p>
 <h1 id="为你的-Hexo-博客配置个性域名"><a href="#为你的-Hexo-博客配置个性域名" class="headerlink" title="- 为你的 Hexo 博客配置个性域名"></a>- 为你的 Hexo 博客配置个性域名</h1><p>本人在配置域名的时候问题百出，百度的各种方法都不管用，打开网站总是 404，可能是我太笨了 　o(╥﹏╥)o　，不过好在后来终于解决了这个问题</p>
 <p>首先我们要购买域名，<a href="https://www.aliyun.com" target="_blank" rel="noopener">阿里云</a>，<a href="https://cloud.tencent.com" target="_blank" rel="noopener">腾讯云</a>都可以，也不贵，一年几十块钱，最便宜几块钱也能买到，以阿里云为例，我购买的域名是 <a href="http://trhx.top" target="_blank" rel="noopener">trhx.top</a>，购买过程就不赘述了，选择阿里云的解析平台，来到阿里云的管理控制台，点击进入域名解析列表或者直接点击域名后面的解析</p>
 <p><img src="https://i.imgur.com/WNzFja7.png" alt=""></p>
@@ -281,7 +297,7 @@
 <p>为了使 GitHub 接收我们的域名，还需要在博客的根目录下添加一个名为 <font color="#DC143C">CNAME</font> 的文件（<font color="#DC143C">注意不要加.txt，没有任何后缀名！</font>），这个文件放到 <font color="#DC143C">Hexo</font> 文件夹的 <font color="#DC143C">source</font> 里面，（比如我的是：<font color="#DC143C">E:\TRHX_Blog\Hexo\source</font>），文件里面填写你的域名（<font color="#DC143C">去掉www</font>），比如要填写我的域名，文件里面就放一句话：<font color="#DC143C">trhx.top</font>，经过以上操作，别人就可以通过 <a href="http://www.trhx.top" target="_blank" rel="noopener">www.trhx.top</a> 、<a href="http://trhx.top" target="_blank" rel="noopener">trhx.top</a> 、<a href="http://trhx.github.io" target="_blank" rel="noopener">trhx.github.io</a> 三个当中任意一个访问我的博客了！你的也一样！</p>
 <p><img src="https://i.imgur.com/FeUbvsS.png" alt=""></p>
 <p>如果你在其他平台购买域名，或者选择 <a href="https://www.dnspod.cn" target="_blank" rel="noopener">DNSPod</a> 等其他域名解析，操作方法大同小异，遇到问题可自行百度解决！</p>
-<p>参考资料：<a href="https://zhuanlan.zhihu.com/p/27349039" target="_blank" rel="noopener">《推荐几家域名注册服务商》</a>  （By Jelly Bool）<br><br>　　　　　<a href="http://www.chinaz.com/web/2015/0122/380042.shtml" target="_blank" rel="noopener">《盘点十大免费DNS域名解析服务：稳定、可靠》</a><br></p>
+<p>参考资料：<a href="https://zhuanlan.zhihu.com/p/27349039" target="_blank" rel="noopener">《推荐几家域名注册服务商》</a>  （By Jelly Bool）<br>　　　　　<a href="http://www.chinaz.com/web/2015/0122/380042.shtml" target="_blank" rel="noopener">《盘点十大免费DNS域名解析服务：稳定、可靠》</a></p>
 <h1 id="结语"><a href="#结语" class="headerlink" title="- 结语"></a><strong>- 结语</strong></h1><p>一顿操作下来虽然有点儿累，但看见拥有了自己的博客还是非常有成就感的，人生就是需要折腾，那么现在就开始你的创作之旅吧！文章的不断积累，你会从中受益很多的！另外，这是一篇小白写的适用于小白的博客搭建教程，比较详细，有这方面基础的可以百度有简略一点儿的教程，文中如有错误还请大佬指出改正！文中涉及参考资料如有侵权请联系我删除！</p>
 <hr>
 <p>转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://trhx.github.io" target="_blank" rel="noopener">TRHX</a></p>
