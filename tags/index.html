@@ -2,6 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
   
   <title>Tags | TRHX&#39;s Blog - Live and Learn!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,10 +24,10 @@
     <link rel="alternative" href="/atom.xml" title="TRHX&#39;s Blog - Live and Learn!" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/trhx2.png">
+    <link rel="icon" href="/img/favicon.png">
   
   
-      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -37,7 +41,6 @@
     <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
   <script>
       var yiliaConfig = {
-          rootUrl: '/',
           fancybox: true,
           animate: true,
           isHome: false,
@@ -55,19 +58,71 @@
     <div class="overlay"></div>
 <div class="intrude-less">
     <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
         <a href="/" class="profilepic">
             
-            <img lazy-src="/img/trhx.png" class="js-avatar">
+            <img lazy-src="/img/avatar.png" class="js-avatar">
             
         </a>
-
         <hgroup>
-          <h1 class="header-author"><a href="/" title="Hi Mate">TRHX</a></h1>
+          <h1 class="header-author"><a href="/">TRHX</a></h1>
         </hgroup>
-
         
         <p class="header-subtitle">天下事有难易乎？为之，则难者亦易矣；不为，则易者亦难矣！</p>
         
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -87,13 +142,7 @@
                         </div>
                         
                         
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
                     </div>
-                    
                 </div>
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
@@ -104,44 +153,40 @@
                         <li>友情链接</li>
                         
                         
-                        <li>关于我</li>
-                        
                     </ul>
                 </div>
             </div>
         
-
         <div id="switch-area" class="switch-area">
             <div class="switch-wrap">
                 <section class="switch-part switch-part1">
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a href="/Home">博客首页</a></li>
+                            <li><a  href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/works">作品展示</a></li>
+                            <li><a  href="/course/">实用教程</a></li>
                         
-                            <li><a href="/about">留言打卡</a></li>
+                            <li><a  href="/Python/">Python学习</a></li>
                         
-                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                            <li><a  href="/about/">关于我</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fl Email" target="_blank" href="mailto:tanrenhou@126.com" title="Email">Email</a>
+                                <a class="fl CSDN"  target="_blank" href="https://blog.csdn.net/qq_36759224" title="CSDN">CSDN</a>
                             
-                                <a class="fl github" target="_blank" href="https://github.com/TRHX" title="github">github</a>
+                                <a class="fl github"  target="_blank" href="https://github.com/TRHX" title="github">github</a>
                             
-                                <a class="fl QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" title="QQ">QQ</a>
+                                <a class="fl mail"  target="_blank" href="mailto:tanrenhou@126.com" title="mail">mail</a>
                             
-                                <a class="fl CSDN" target="_blank" href="https://blog.csdn.net/qq_36759224" title="CSDN">CSDN</a>
+                                <a class="fl QQ"  target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" title="QQ">QQ</a>
                             
                         </ul>
                     </nav>
                 </section>
-                
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
@@ -150,43 +195,40 @@
                 </section>
                 
                 
-                
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://blog.csdn.net/qq_36759224">CSDN</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://home.cnblogs.com/u/TRHX/">博客园</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://github.com/TRHX">GitHub</a>
                     
                     </div>
                 </section>
                 
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
-                </section>
                 
             </div>
         </div>
-    </header>                
+    </header>
 </div>
+
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
       <div class="overlay">
           <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">TRHX</a></h1>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">TRHX</a></h1>
       </div>
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 
-                    <img lazy-src="/img/trhx.png" class="js-avatar">
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
                 
             </a>
             <hgroup>
-              <h1 class="header-author"><a href="/" title="Me">TRHX</a></h1>
+              <h1 class="header-author"><a href="/" title="回到主页">TRHX</a></h1>
             </hgroup>
             
             <p class="header-subtitle">天下事有难易乎？为之，则难者亦易矣；不为，则易者亦难矣！</p>
@@ -194,13 +236,13 @@
             <nav class="header-menu">
                 <ul>
                 
-                    <li><a href="/Home">博客首页</a></li>
+                    <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/works">作品展示</a></li>
+                    <li><a href="/course/">实用教程</a></li>
                 
-                    <li><a href="/about">留言打卡</a></li>
+                    <li><a href="/Python/">Python学习</a></li>
                 
-                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                    <li><a href="/about/">关于我</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -208,25 +250,26 @@
             <nav class="header-nav">
                 <div class="social">
                     
-                        <a class="Email" target="_blank" href="mailto:tanrenhou@126.com" title="Email">Email</a>
+                        <a class="CSDN" target="_blank" href="https://blog.csdn.net/qq_36759224" title="CSDN">CSDN</a>
                     
                         <a class="github" target="_blank" href="https://github.com/TRHX" title="github">github</a>
                     
-                        <a class="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" title="QQ">QQ</a>
+                        <a class="mail" target="_blank" href="mailto:tanrenhou@126.com" title="mail">mail</a>
                     
-                        <a class="CSDN" target="_blank" href="https://blog.csdn.net/qq_36759224" title="CSDN">CSDN</a>
+                        <a class="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" title="QQ">QQ</a>
                     
                 </div>
             </nav>
-        </header>                
+        </header>
     </div>
 </nav>
       <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/tags/index.html" class="article-date">
+      <a  href="/tags/index.html" class="article-date">
       <time datetime="2018-08-19T10:37:25.000Z" itemprop="datePublished">2018-08-19</time>
 </a>
+
     </div>
   
   <div class="article-inner">
@@ -241,6 +284,7 @@
       Tags
     </h1>
   
+
 
       </header>
       
@@ -295,7 +339,6 @@
     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/实用教程/">实用教程</a><span class="category-list-count">1</span></li></ul>
 
     <p class="count"></p>
-
     <div class="tags">
         <a href="/tags/Github-Pages/" style="font-size: 16px; color: #808080">Github Pages</a> <a href="/tags/Hexo/" style="font-size: 16px; color: #808080">Hexo</a>
     </div>
@@ -347,7 +390,10 @@
     </style>
 
     <!-- Count tags and categories -->
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
     <p id="count">
             已有<span><script>document.write($(".category-list-item").length)</script></span>个分类，
             共计<span><script>document.write($(".tags > a").length)</script></span>个标签。
@@ -360,58 +406,12 @@
           
         
       
-      
-        <div class="page-reward">
-          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
-          <div class="hide_box"></div>
-          <div class="shang_box">
-            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
-            <div class="shang_tit">
-              <p>纯属好玩</p>
-            </div>
-            <div class="shang_payimg">
-              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
-            </div>
-              <div class="pay_explain">扫码打赏，你说多少就多少</div>
-            <div class="shang_payselect">
-              
-                <div class="pay_item checked" data-id="alipay">
-                  <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/alipay.jpg" alt="支付宝" /></span>
-                </div>
-              
-              
-                <div class="pay_item" data-id="wechat">
-                  <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/weixin.jpg" alt="微信" /></span>
-                </div>
-              
-            </div>
-            <div class="shang_info">
-              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
-            </div>
-          </div>
-        </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
-        <script type="text/javascript">
-          $(".pay_item").click(function(){
-            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
-            var dataid=$(this).attr('data-id');
-            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
-            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
-          });
-          function dashangToggle(){
-            
-            $(".hide_box").fadeToggle();
-            $(".shang_box").fadeToggle();
-          }
-        </script>
-      
     </div>
     
   </div>
   
     
+
 
 
   
@@ -428,27 +428,25 @@
 	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
 	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
 </div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
 
     
-        <div id="gitments"></div>
-<script src="/js/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      owner: 'trhx',
-      repo: 'trhx.github.io',
-      oauth: {
-        client_id: '',
-        client_secret: '',
-      },
-    })
-    gitment.render('gitments')
-</script>
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
     
+
 
 
 
@@ -457,6 +455,7 @@
     <script>
         
     </script>
+
 </div>
       <footer id="footer">
     <div class="outer">
@@ -465,14 +464,14 @@
                 &copy; 2018 TRHX
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >海贼到访数: 
+                        <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -492,32 +491,37 @@
     </div>
 </footer>
 
-<center>
-    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
-    <script> 
-        var now = new Date(); 
-        function createtime() { 
-          var grt= new Date("08/10/2018 17:38:00");//此处修改你的建站时间或者网站上线时间 
-          now.setTime(now.getTime()+250); 
-          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-          document.getElementById("timeDate").innerHTML = " 本站已安全运行 "+dnum+" 天 "; 
-          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 "; 
-          } 
-      setInterval("createtime()",250); 
-    </script>
-</center>
+<font size=2>
+        <center>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
+        <script> 
+            var now = new Date(); 
+            function createtime() { 
+              var grt= new Date("08/10/2018 17:38:00");//此处修改你的建站时间或者网站上线时间 
+              now.setTime(now.getTime()+250); 
+              days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+              hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+              if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+              mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+              seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+              snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+              document.getElementById("timeDate").innerHTML = " 本站已安全运行 "+dnum+" 天 "; 
+              document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 "; 
+              } 
+          setInterval("createtime()",250); 
+        </script>
+    </center>
+    </font>
+
     </div>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
 <script src="/js/main.js"></script>
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 24;
+            var backgroundnum = 31;
             var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
@@ -525,6 +529,30 @@
     </script>
 
 
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
 
 
 
@@ -551,7 +579,6 @@
             var title = a.attr('title');
             if (title == undefined || title == "") return;
             a.data('title', title).removeAttr('title').hover(
-
             function() {
                 var offset = a.offset();
                 $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
