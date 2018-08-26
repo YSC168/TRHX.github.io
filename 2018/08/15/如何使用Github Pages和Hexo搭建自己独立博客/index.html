@@ -584,22 +584,6 @@
 </script>
 
 
-    <style>
-        .toc {
-            white-space: nowrap;
-            overflow-x: hidden;
-        }
-    </style>
-
-    <script>
-        $(document).ready(function() {
-            $(".toc li a").mouseover(function() {
-                var title = $(this).attr('href');
-                $(this).attr("title", title);
-            });
-        })
-    </script>
-
 
 
 
@@ -617,21 +601,6 @@
 
 
 
-    
-        <div id="gitments"></div>
-<script src="/js/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      owner: 'trhx',
-      repo: 'trhx.github.io',
-      oauth: {
-        client_id: 'ef0979d05903186953ae',
-        client_secret: 'a387b25655d361ee8a18047276941bc4513bf83d',
-      },
-    })
-    gitment.render('gitments')
-</script>
     
 
 
@@ -738,7 +707,7 @@
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 24;
+            var backgroundnum = 71;
             var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
