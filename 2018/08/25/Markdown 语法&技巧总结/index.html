@@ -333,7 +333,7 @@
             </div>
           </div>
         </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript" src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
         <script type="text/javascript">
           $(".pay_item").click(function(){
             $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
@@ -390,7 +390,7 @@
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 <script>
     var valueHide = "隐藏目录";
     var valueShow = "显示目录";
@@ -448,20 +448,31 @@
 
 
     
-        <div id="gitments"></div>
-<script src="/js/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      owner: 'trhx',
-      repo: 'trhx.github.io',
-      oauth: {
-        client_id: 'ef0979d05903186953ae',
-        client_secret: 'a387b25655d361ee8a18047276941bc4513bf83d',
-      },
-    })
-    gitment.render('gitments')
-</script>
+      <section id="comments">
+    <div id="valine_thread" style="margin: 30px;"></div>
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+          <script>
+              var GUEST_INFO = ['nick','mail','link'];
+              var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+                  return GUEST_INFO.indexOf(item) > -1
+              });
+              var notify = 'false' == true;
+              var verify = 'false' == true;
+              var valine = new Valine();
+              valine.init({
+                  el: '#valine_thread',
+                  notify: notify,
+                  verify: verify,
+                  appId: "",
+                  appKey: "",
+                  placeholder: "在这里留下你的脚印吧 ٩(๑❛ᴗ❛๑)۶",
+                  pageSize:'10',
+                  avatar:'mm',
+                  lang:'zh-cn'
+              })
+          </script>
+  </section>
     
 
 
@@ -559,7 +570,7 @@
 </font>
 </div>
     </div>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="/js/main.js"></script>
 
     <script>
