@@ -348,6 +348,25 @@
 
 
     
+        <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zOTA3MS8xNTU5OA==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+    
 
 
 
@@ -366,17 +385,17 @@
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme spfk by <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">luuman</a>
             </div>
-    
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <font size=1.5 color=#4094C7>
+                        <font size=2 color=#4094C7>
                             <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
                             <script> 
                                 var now = new Date(); 
-                                function createtime() { 
+                                function createtime() 
+                                { 
                                   var grt= new Date("08/10/2018 17:38:00");//此处修改你的建站时间或者网站上线时间 
                                   now.setTime(now.getTime()+250); 
                                   days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
@@ -387,17 +406,18 @@
                                   snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
                                   document.getElementById("timeDate").innerHTML = " 本站已运行 "+dnum+" 天 "; 
                                   document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 "; 
-                                  } 
-                              setInterval("createtime()",250); 
+                                } 
+                                setInterval("createtime()",250); 
                             </script>
-                    </font>
+                        </font>
+                         ||
                         <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
                 
-                    <span>, </span>
+                    <span> || </span>
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
@@ -408,7 +428,6 @@
                 
             </div>
         
-        </center>
     </div>
 </footer>
 
@@ -490,5 +509,8 @@
     </script>
 
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":50,"height":100},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
