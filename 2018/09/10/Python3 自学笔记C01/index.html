@@ -3,20 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>本站镇站之宝 | TRHX&#39;s Blog - Live and Learn!</title>
+  <title>Python3 自学笔记 C01 | TRHX&#39;s Blog - Live and Learn!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本站镇站之宝，勿忘初心，方得始终！">
-<meta name="keywords" content="梦想,人生">
+  <meta name="description" content="Python3 【变量和简单数据类型】">
+<meta name="keywords" content="数据类型,变量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="本站镇站之宝">
-<meta property="og:url" content="http://yoursite.com/2018/08/10/博客镇站之宝/index.html">
+<meta property="og:title" content="Python3 自学笔记 C01">
+<meta property="og:url" content="http://yoursite.com/2018/09/10/Python3 自学笔记C01/index.html">
 <meta property="og:site_name" content="TRHX&#39;s Blog - Live and Learn!">
-<meta property="og:description" content="本站镇站之宝，勿忘初心，方得始终！">
+<meta property="og:description" content="Python3 【变量和简单数据类型】">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-29T15:17:59.198Z">
+<meta property="og:image" content="https://i.imgur.com/Do9ja5A.png">
+<meta property="og:updated_time" content="2018-09-10T16:26:41.975Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="本站镇站之宝">
-<meta name="twitter:description" content="本站镇站之宝，勿忘初心，方得始终！">
+<meta name="twitter:title" content="Python3 自学笔记 C01">
+<meta name="twitter:description" content="Python3 【变量和简单数据类型】">
+<meta name="twitter:image" content="https://i.imgur.com/Do9ja5A.png">
   
     <link rel="alternative" href="/atom.xml" title="TRHX&#39;s Blog - Live and Learn!" type="application/atom+xml">
   
@@ -240,11 +242,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-博客镇站之宝" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Python3 自学笔记C01" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/08/10/博客镇站之宝/" class="article-date">
-      <time datetime="2018-08-10T09:38:00.000Z" itemprop="datePublished">2018-08-10</time>
+      <a href="/2018/09/10/Python3 自学笔记C01/" class="article-date">
+      <time datetime="2018-09-10T15:55:00.947Z" itemprop="datePublished">2018-09-10</time>
 </a>
     </div>
   
@@ -257,7 +259,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      本站镇站之宝
+      Python3 自学笔记 C01
     </h1>
   
 
@@ -269,13 +271,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/励志视频/">励志视频</a>
+    <a class="article-category-link" href="/categories/Python/">Python</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/人生/">人生</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/梦想/">梦想</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/变量/">变量</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据类型/">数据类型</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -285,11 +287,62 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <hr>
-<font color="#FF0000" face="华文楷体" size="6"><br><strong>人类的幸福和欢乐在于奋斗，而最有价值的是为理想而奋斗！<br>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　————  苏格拉底<br><br><br>Human happiness and joy lie in struggle, and what is most valuable is striving for ideals!<br>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　————   Socrates</strong><br></font>
+        <center><font color="#4094C7" size="4">Python3 自学笔记第一章：变量和简单数据类型</font></center>
 
 <hr>
-<center><br><br><iframe frameborder="0" width="1040" height="700" src="https://v.qq.com/iframe/player.html?vid=m0768lhl5uh&tiny=0&auto=0" allowfullscreen></iframe><br><br><iframe frameborder="0" width="1040" height="700" src="https://v.qq.com/iframe/player.html?vid=h0389uqwxkw&tiny=0&auto=0" allowfullscreen></iframe><br><br></center>
+<h1 id="1-1变量的命名和使用"><a href="#1-1变量的命名和使用" class="headerlink" title=" - 1.1变量的命名和使用 "></a><font color="#FF0000"> - 1.1变量的命名和使用 </font></h1><blockquote>
+<p>变量名只能包含字母、数字和下划线。变量名可以字母或者下划线打头，但不能以数字开头，例如，可以将变量命名为message_1，但不能将其命名为1_message</p>
+</blockquote>
+<blockquote>
+<p>变量名不能包含空格，但可使用下划线来分割其中的单词，例如，变量名greeting_message可行，但变量名greeting message会引发错误</p>
+</blockquote>
+<blockquote>
+<p>不要将Python关键字和函数名用作变量名，即不要使用Python保留用于特殊用途的单词，如print</p>
+</blockquote>
+<blockquote>
+<p>变量名应既简短又具有描述性，例如，name比n好，student_name比s_n好，name_length比length_of_persons_name好</p>
+</blockquote>
+<blockquote>
+<p>慎用小写字母l和大写字母O，因为它们可能被人看错成数字1和0</p>
+</blockquote>
+<h1 id="1-2字符串"><a href="#1-2字符串" class="headerlink" title=" - 1.2字符串 "></a><font color="#FF0000"> - 1.2字符串 </font></h1><p> 字符串就是一系列字符，在Python中，用引号括起来的都是字符串，其中的引号可以是单引号也可以双引号：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"This is a string."</span></span><br><span class="line"><span class="string">'This is also a string.'</span></span><br></pre></td></tr></table></figure>
+<p>这种灵活性让我们能够在字符串中包含引号和撇号：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'I told my friend,"Python is my favorite language!"'</span></span><br><span class="line"><span class="string">"The language 'Python' is named er Monty Python,not the snake."</span></span><br><span class="line"><span class="string">"One of Python's strengths is i diverse and supportive community."</span></span><br></pre></td></tr></table></figure>
+<h1 id="1-2-1使用方法修改字符串的大小写"><a href="#1-2-1使用方法修改字符串的大小写" class="headerlink" title=" - 1.2.1使用方法修改字符串的大小写"></a><font color="#FF0000"> - 1.2.1使用方法修改字符串的大小写</font></h1><p>三种处理方法如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title()     <span class="comment">#将字符串每个单词的首字母都改为大写</span></span><br><span class="line">upper()     <span class="comment">#将字符串的每个字母都改为大写</span></span><br><span class="line">lower()     <span class="comment">#将字符串的每个字母都改为小写</span></span><br></pre></td></tr></table></figure></p>
+<p>例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">"I love you!"</span></span><br><span class="line">print(name.title())</span><br><span class="line">print(name.upper())</span><br><span class="line">print(name.lower())</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I Love You!</span><br><span class="line">I LOVE YOU!</span><br><span class="line">i love you!</span><br></pre></td></tr></table></figure></p>
+<h1 id="1-2-2合并（拼接）字符串"><a href="#1-2-2合并（拼接）字符串" class="headerlink" title=" - 1.2.2合并（拼接）字符串"></a><font color="#FF0000"> - 1.2.2合并（拼接）字符串</font></h1><p>Python使用加号（+）来合并字符串，举例说明：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">first_name = <span class="string">"I"</span></span><br><span class="line">second_name = <span class="string">"love"</span></span><br><span class="line">third_name = <span class="string">"python"</span></span><br><span class="line">full_name = first_name + <span class="string">" "</span> + second_name + <span class="string">" "</span> + third_time</span><br><span class="line">print(full_name.title() + <span class="string">"!"</span>)</span><br></pre></td></tr></table></figure>
+<p>输出结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I Love Python!</span><br></pre></td></tr></table></figure>
+<h1 id="1-2-3使用制表符或换行符来添加空白"><a href="#1-2-3使用制表符或换行符来添加空白" class="headerlink" title=" - 1.2.3使用制表符或换行符来添加空白"></a><font color="#FF0000"> - 1.2.3使用制表符或换行符来添加空白</font></h1><p>添加横向制表符：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">"\tPython"</span>)</span><br><span class="line">    Python</span><br></pre></td></tr></table></figure>
+<p>添加换行符：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">"C\nC++\nPython\nJavaScript"</span>)</span><br><span class="line">C</span><br><span class="line">C++</span><br><span class="line">Python</span><br><span class="line">JavaScript</span><br></pre></td></tr></table></figure>
+<center><font color="#FF0000"> 附表：Python转义符 </font><br><br><img src="https://i.imgur.com/Do9ja5A.png" alt=""><br><br></center>
+
+<h1 id="1-2-4删除空白"><a href="#1-2-4删除空白" class="headerlink" title=" - 1.2.4删除空白"></a><font color="#FF0000"> - 1.2.4删除空白</font></h1><p>在Python中可用 lstrip()、rstrip()、strip() 分别删除字符串开头、结尾、全部的空白，举例说明：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;message = <span class="string">' python '</span></span><br><span class="line">&gt;&gt;&gt;message</span><br><span class="line"><span class="string">' python '</span></span><br><span class="line">&gt;&gt;&gt;message.lstrip()</span><br><span class="line"><span class="string">'python '</span></span><br><span class="line">&gt;&gt;&gt;message.rstrip()</span><br><span class="line"><span class="string">' python'</span></span><br><span class="line">&gt;&gt;&gt;message.strip()</span><br><span class="line"><span class="string">'python'</span></span><br></pre></td></tr></table></figure>
+<p>如果要永久删除字符串中的空白，必须将删除操作的结果存回到变量中：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;message = <span class="string">' python '</span></span><br><span class="line">&gt;&gt;&gt;message = message.strip()</span><br><span class="line">&gt;&gt;&gt;message</span><br><span class="line"><span class="string">'python'</span></span><br></pre></td></tr></table></figure>
+<h1 id="1-3数字"><a href="#1-3数字" class="headerlink" title=" - 1.3数字"></a><font color="#FF0000"> - 1.3数字</font></h1><p>在编程中，经常使用数字来记录游戏得分、表示可视化数据、储存Web应用信息等。Python根据数字的用法以不同的方式处理它们</p>
+<h1 id="1-3-1整数"><a href="#1-3-1整数" class="headerlink" title=" - 1.3.1整数"></a><font color="#FF0000"> - 1.3.1整数</font></h1><p>在Python中，可对整数执行加（+）减（-）乘（*）除（/）乘方（**）运算，同时也支持运算次序：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="number">3</span> + <span class="number">2</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> - <span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> * <span class="number">2</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> \ <span class="number">2</span></span><br><span class="line"><span class="number">1.5</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> ** <span class="number">2</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> ** <span class="number">3</span></span><br><span class="line"><span class="number">27</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">2</span> + <span class="number">3</span> * <span class="number">4</span></span><br><span class="line"><span class="number">14</span></span><br><span class="line">&gt;&gt;&gt;(<span class="number">2</span> + <span class="number">3</span>) * <span class="number">4</span></span><br><span class="line"><span class="number">20</span></span><br></pre></td></tr></table></figure>
+<h1 id="1-3-2浮点数"><a href="#1-3-2浮点数" class="headerlink" title=" - 1.3.2浮点数"></a><font color="#FF0000"> - 1.3.2浮点数</font></h1><p>Python将带小数点的数字都称为浮点数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="number">0.1</span> + <span class="number">0.1</span></span><br><span class="line"><span class="number">0.2</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">2</span> * <span class="number">0.2</span></span><br><span class="line"><span class="number">0.4</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，结果包含的小数位可能是不确定的，就现在而言，暂时忽略多余的小数位即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="number">0.2</span> + <span class="number">0.1</span></span><br><span class="line"><span class="number">0.30000000000000004</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> * <span class="number">0.1</span></span><br><span class="line"><span class="number">0.30000000000000004</span></span><br></pre></td></tr></table></figure>
+<h1 id="1-3-3使用函数-str-避免错误"><a href="#1-3-3使用函数-str-避免错误" class="headerlink" title=" - 1.3.3使用函数 str() 避免错误"></a><font color="#FF0000"> - 1.3.3使用函数 str() 避免错误</font></h1><p>错误例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">"Happy "</span> + age + <span class="string">"rd Birthday!"</span></span><br><span class="line">print(message)</span><br></pre></td></tr></table></figure>
+<p>运行时会报错：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"birthday.py"</span>, line <span class="number">2</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    message = <span class="string">"Happy "</span> + age + <span class="string">"rd Birthday!"</span></span><br><span class="line">TypeError: must be str, <span class="keyword">not</span> int</span><br></pre></td></tr></table></figure>
+<p>这是一个类型错误，意味着Python无法识别我们使用的信息。在这个例子中，Python发现我们使用了一个值为整数（int）的变量，但它不知道该如何解读这个值，这个变量表示的可能是数值23，也可能是字符2和3。像上面这样的字符串中使用整数时，需要显式地指出我们希望Python将这个整数用作字符串。为此，可调用函数 str()，它让Python将非字符串值表示为字符串：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">"Happy "</span> + str(age) + <span class="string">"rd Birthday!"</span></span><br><span class="line">print(message)</span><br></pre></td></tr></table></figure>
+<p>输出结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Happy <span class="number">23</span>rd Birthday!</span><br></pre></td></tr></table></figure>
+<h1 id="1-4注释"><a href="#1-4注释" class="headerlink" title=" - 1.4注释"></a><font color="#FF0000"> - 1.4注释</font></h1><p>注释让我们能够使用自然语言在程序中添加说明，Python中注释有三种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello Python!"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#这是单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="string">'''这是多行注释</span></span><br><span class="line"><span class="string">这是多行注释'''</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""这也是多行注释</span></span><br><span class="line"><span class="string">这也是多行注释"""</span></span><br></pre></td></tr></table></figure>
 
       
       
@@ -299,13 +352,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/08/10/博客镇站之宝/">本站镇站之宝</a></p>
+        <p><span>本文标题:</span><a href="/2018/09/10/Python3 自学笔记C01/">Python3 自学笔记 C01</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 TRHX 的个人博客">TRHX</a></p>
-        <p><span>发布时间:</span>2018年08月10日 - 17时38分</p>
-        <p><span>最后更新:</span>2018年08月29日 - 23时17分</p>
+        <p><span>发布时间:</span>2018年09月10日 - 23时55分</p>
+        <p><span>最后更新:</span>2018年09月11日 - 00时26分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/08/10/博客镇站之宝/" title="本站镇站之宝">http://yoursite.com/2018/08/10/博客镇站之宝/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/10/博客镇站之宝/　　作者: TRHX" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/10/Python3 自学笔记C01/" title="Python3 自学笔记 C01">http://yoursite.com/2018/09/10/Python3 自学笔记C01/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/10/Python3 自学笔记C01/　　作者: TRHX" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -318,15 +371,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/08/15/如何使用Github Pages和Hexo搭建自己独立博客/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          如何使用 Github Pages 和 Hexo 搭建自己的独立博客
-        
-      </div>
-    </a>
   
+    <a href="/2018/09/09/VMware Pro 14 安装 Ubuntu 18.04 详细教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VMware Pro 14 安装 Ubuntu 18.04 详细教程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -335,7 +384,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-1变量的命名和使用"><span class="toc-number">1.</span> <span class="toc-text"> - 1.1变量的命名和使用 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2字符串"><span class="toc-number">2.</span> <span class="toc-text"> - 1.2字符串 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2-1使用方法修改字符串的大小写"><span class="toc-number">3.</span> <span class="toc-text"> - 1.2.1使用方法修改字符串的大小写</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2-2合并（拼接）字符串"><span class="toc-number">4.</span> <span class="toc-text"> - 1.2.2合并（拼接）字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2-3使用制表符或换行符来添加空白"><span class="toc-number">5.</span> <span class="toc-text"> - 1.2.3使用制表符或换行符来添加空白</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2-4删除空白"><span class="toc-number">6.</span> <span class="toc-text"> - 1.2.4删除空白</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-3数字"><span class="toc-number">7.</span> <span class="toc-text"> - 1.3数字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-3-1整数"><span class="toc-number">8.</span> <span class="toc-text"> - 1.3.1整数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-3-2浮点数"><span class="toc-number">9.</span> <span class="toc-text"> - 1.3.2浮点数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-3-3使用函数-str-避免错误"><span class="toc-number">10.</span> <span class="toc-text"> - 1.3.3使用函数 str() 避免错误</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-4注释"><span class="toc-number">11.</span> <span class="toc-text"> - 1.4注释</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -405,13 +454,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/08/15/如何使用Github Pages和Hexo搭建自己独立博客/" title="上一篇: 如何使用 Github Pages 和 Hexo 搭建自己的独立博客">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/09/09/VMware Pro 14 安装 Ubuntu 18.04 详细教程/" title="下一篇: VMware Pro 14 安装 Ubuntu 18.04 详细教程">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/10/Python3 自学笔记C01/">Python3 自学笔记 C01</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/09/VMware Pro 14 安装 Ubuntu 18.04 详细教程/">VMware Pro 14 安装 Ubuntu 18.04 详细教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/主流 Markdown 编辑器推荐/">主流 Markdown 编辑器推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/27/Hexo 博客主题个性化/">Hexo 博客主题个性化</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/Markdown 语法&技巧总结/">Markdown 语法&技巧总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/15/如何使用Github Pages和Hexo搭建自己独立博客/">如何使用 Github Pages 和 Hexo 搭建自己的独立博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/10/博客镇站之宝/">本站镇站之宝</a></li></ul>
