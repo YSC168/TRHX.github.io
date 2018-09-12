@@ -2124,8 +2124,8 @@ a {
   border: 1px solid #f00;
 }
 #header .header-nav .social a.CSDN {
-  background: url("../img/csdn.png") center no-repeat #f00;
-  border: 1px solid #f00;
+  background: url("../img/csdn.png") center no-repeat #cc0001;
+  border: 1px solid #cc0001;
 }
 #header .header-nav .social a.rss {
   background: url("../img/rss.png") center no-repeat #ef7522;
@@ -2160,12 +2160,12 @@ a {
   border: 1px solid #06c611;
 }
 #header .header-nav .social a.mail {
-  background: url("../img/mail.png") center no-repeat #3b98ba;
-  border: 1px solid #3b98ba;
+  background: url("../img/mail.png") center no-repeat #0663c1;
+  border: 1px solid #0663c1;
 }
 #header .header-nav .social a.QQ {
-  background: url("../img/qq.png") center no-repeat #00abff;
-  border: 1px solid #00abff;
+  background: url("../img/qq.png") center no-repeat #0663c1;
+  border: 1px solid #0663c1;
 }
 #header .header-nav .social a.wechat {
   background: url("../img/wechat.png") center no-repeat #51c332;
