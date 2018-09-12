@@ -2123,9 +2123,9 @@ a {
   background: url("../img/weibo.png") center no-repeat #f00;
   border: 1px solid #f00;
 }
-#header .header-nav .social a.CSDN {
-  background: url("../img/csdn.png") center no-repeat #fff;
-  border: 1px solid #fff;
+#header .header-nav .social a.csdn {
+  background: url("../img/csdn.png") center no-repeat #cc0001;
+  border: 1px solid #cc0001;
 }
 #header .header-nav .social a.rss {
   background: url("../img/rss.png") center no-repeat #ef7522;
