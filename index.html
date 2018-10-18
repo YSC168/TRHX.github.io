@@ -138,6 +138,8 @@
                             
                                 <a class="f1 QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" title="QQ">QQ</a>
                             
+                                <a class="f1 weibo" target="_blank" href="http://weibo.com/TRHX1" title="weibo">weibo</a>
+                            
                         </ul>
                     </nav>
                 </section>
@@ -154,7 +156,7 @@
                 
                 <section class="switch-part switch-part3">
                 
-                    <div id="js-aboutme">业余单车运动员、菜鸟级软件工程大学生、爱折腾、爱刺激、爱编程、爱科技</div>
+                    <div id="js-aboutme">单车入魔、编程入门、爱折腾、爱刺激、爱编程、爱科技</div>
                 </section>
                 
             </div>
@@ -162,7 +164,7 @@
     </header>                
 </div>
 
-<div style="position:absolute; bottom:130px; left:0px; width:50%">
+<div style="position:absolute; bottom:65px; left:0px; width:50%">
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=90 src="//music.163.com/outchain/player?type=2&id=32405683&auto=0&height=66"></iframe>
 </div>
     </div>
@@ -211,6 +213,8 @@
                         <a class="mail" target="_blank" href="mailto:&#116;&#114;&#104;&#120;&#64;&#102;&#111;&#120;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" title="mail">mail</a>
                     
                         <a class="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" title="QQ">QQ</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/TRHX1" title="weibo">weibo</a>
                     
                 </div>
             </nav>
@@ -913,7 +917,7 @@
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 71;
+            var backgroundnum = 64;
             var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
@@ -922,6 +926,16 @@
 
 
 
+
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?68019af241ffe13fed16341dc16acd4f";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
 
 
 <div class="scroll" id="scroll">
@@ -939,32 +953,6 @@
 
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
-        });
-    });
 </script>
 
 
