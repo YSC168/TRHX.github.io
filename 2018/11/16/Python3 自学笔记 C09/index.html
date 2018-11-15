@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python3 自学笔记 C09 | TRHX&#39;s Blog - Live for code!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Python3 【文件和异常】">
+<meta name="keywords" content="文件,异常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python3 自学笔记 C09">
+<meta property="og:url" content="http://yoursite.com/2018/11/16/Python3 自学笔记 C09/index.html">
+<meta property="og:site_name" content="TRHX&#39;s Blog - Live for code!">
+<meta property="og:description" content="Python3 【文件和异常】">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-15T16:48:05.385Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python3 自学笔记 C09">
+<meta name="twitter:description" content="Python3 【文件和异常】">
+  
+    <link rel="alternative" href="/atom.xml" title="TRHX&#39;s Blog - Live for code!" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/trhx2.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/trhx.png" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">TRHX</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">路漫漫其修远兮，吾将上下而求索！</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
+            </form>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签云</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="http://trhx.top">博客首页</a></li>
+                        
+                            <li><a href="/archives">所有文章</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                            <li><a href="/Message Board">友链 &amp; 留言板</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="f1 github" target="_blank" href="https://github.com/TRHX" title="github">github</a>
+                            
+                                <a class="f1 CSDN" target="_blank" href="https://blog.csdn.net/qq_36759224" title="CSDN">CSDN</a>
+                            
+                                <a class="f1 zhihu" target="_blank" href="https://www.zhihu.com/people/tan-70-56/activities" title="zhihu">zhihu</a>
+                            
+                                <a class="f1 mail" target="_blank" href="mailto:&#116;&#114;&#104;&#120;&#64;&#102;&#111;&#120;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" title="mail">mail</a>
+                            
+                                <a class="f1 QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" title="QQ">QQ</a>
+                            
+                                <a class="f1 weibo" target="_blank" href="http://weibo.com/TRHX1" title="weibo">weibo</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Dream/" style="font-size: 10px;">Dream</a> <a href="/tags/Github-Pages/" style="font-size: 10px;">Github Pages</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/VMware/" style="font-size: 10px;">VMware</a> <a href="/tags/if语句/" style="font-size: 10px;">if语句</a> <a href="/tags/input-函数/" style="font-size: 10px;">input()函数</a> <a href="/tags/while循环/" style="font-size: 10px;">while循环</a> <a href="/tags/主题个性化/" style="font-size: 10px;">主题个性化</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/列表/" style="font-size: 10px;">列表</a> <a href="/tags/变量/" style="font-size: 10px;">变量</a> <a href="/tags/字典/" style="font-size: 10px;">字典</a> <a href="/tags/异常/" style="font-size: 10px;">异常</a> <a href="/tags/技巧/" style="font-size: 10px;">技巧</a> <a href="/tags/操作列表/" style="font-size: 10px;">操作列表</a> <a href="/tags/数据类型/" style="font-size: 10px;">数据类型</a> <a href="/tags/文件/" style="font-size: 10px;">文件</a> <a href="/tags/模块/" style="font-size: 10px;">模块</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/继承/" style="font-size: 10px;">继承</a> <a href="/tags/编辑器/" style="font-size: 10px;">编辑器</a>
+                    </div>
+                </section>
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">单车入魔、编程入门、爱折腾、爱刺激、爱编程、爱科技</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+
+<div style="position:absolute; bottom:65px; left:0px; width:50%">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=90 src="//music.163.com/outchain/player?type=2&id=32405683&auto=0&height=66"></iframe>
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">TRHX</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/trhx.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">TRHX</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">路漫漫其修远兮，吾将上下而求索！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="http://trhx.top">博客首页</a></li>
+                
+                    <li><a href="/archives">所有文章</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                    <li><a href="/Message Board">友链 &amp; 留言板</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/TRHX" title="github">github</a>
+                    
+                        <a class="CSDN" target="_blank" href="https://blog.csdn.net/qq_36759224" title="CSDN">CSDN</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/tan-70-56/activities" title="zhihu">zhihu</a>
+                    
+                        <a class="mail" target="_blank" href="mailto:&#116;&#114;&#104;&#120;&#64;&#102;&#111;&#120;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" title="mail">mail</a>
+                    
+                        <a class="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" title="QQ">QQ</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/TRHX1" title="weibo">weibo</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-Python3 自学笔记 C09" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/11/16/Python3 自学笔记 C09/" class="article-date">
+      <time datetime="2018-11-15T16:37:26.503Z" itemprop="datePublished">2018-11-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python3 自学笔记 C09
+    </h1>
+  
+
+        <div style="position:absolute; top:90px; left:30px">
+      
+      </div>
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/异常/">异常</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文件/">文件</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <center><font color="#4094C7" size="4">Python3 自学笔记第九章【文件和异常】</font></center>
+
+<hr>
+<h1 id="9-1-从文件中读取数据"><a href="#9-1-从文件中读取数据" class="headerlink" title=" - 9.1 从文件中读取数据  "></a><font color="#FF0000"> - 9.1 从文件中读取数据  </font></h1><h1 id="9-1-1-读取整个文件"><a href="#9-1-1-读取整个文件" class="headerlink" title=" - 9.1.1 读取整个文件  "></a><font color="#FF0000"> - 9.1.1 读取整个文件  </font></h1><p>有一个文件，包含精确到小数点后30位的圆周率值，且在小数点后每10位处都换行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Circumference rate.txt</span><br><span class="line">----------</span><br><span class="line">3.1415926535</span><br><span class="line">  8979323846</span><br><span class="line">  2643383279</span><br></pre></td></tr></table></figure></p>
+<p>以下两个程序将打开并读取这个文件，再将其内容显示到屏幕上：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#file_reader.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'Circumference rate.txt'</span>) <span class="keyword">as</span> file_object:</span><br><span class="line">    contents = file_object.read()</span><br><span class="line">    print(contents)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#file_reader2.py</span></span><br><span class="line"></span><br><span class="line">contents = open (<span class="string">'Circumference rate.txt'</span>)</span><br><span class="line">print(contents.read())</span><br><span class="line">contents.close()</span><br></pre></td></tr></table></figure>
+<p>函数<font color="#FF0000">open()</font>接受一个参数：要打开的文件的名称，Python在当前执行的文件所在的目录中查找指定的文件；关键字<font color="#FF0000">with</font>在不再需要访问文件后将其关闭；也可以调用<font color="#FF0000">open()</font>和<font color="#FF0000">close()</font>来打开和关闭文件，如果使用这种方法，当程序存在bug时，<font color="#FF0000">close()</font>语句未执行，文件将不会被关闭；方法<font color="#FF0000">read()</font>将读取这个文件的全部内容，并将其作为一个长长的字符串储存在变量<font color="#FF0000">contents</font>中，通过打印<font color="#FF0000">contents</font>的值，就可以将这个文本文件的全部内容打印出来：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.1415926535</span></span><br><span class="line">  <span class="number">8979323846</span></span><br><span class="line">  <span class="number">2643383279</span></span><br></pre></td></tr></table></figure></p>
+<p>输出结果末尾有一空行，这是因为read()到达末尾时返回一个空字符串，而将这个空字符串显示出来就是一个空行，如果要删除末尾的空行，可在print语句中使用rstrip():<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#file_reader.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'Circumference rate.txt'</span>) <span class="keyword">as</span> file_object:</span><br><span class="line">    contents = file_object.read()</span><br><span class="line">    print(contents.rstrip())</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.1415926535</span></span><br><span class="line">  <span class="number">8979323846</span></span><br><span class="line">  <span class="number">2643383279</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="9-1-2-文件路径"><a href="#9-1-2-文件路径" class="headerlink" title=" - 9.1.2 文件路径  "></a><font color="#FF0000"> - 9.1.2 文件路径  </font></h1><blockquote>
+<p><font color="#FF0000">相对文件路径：</font>假定程序文件位于python_work文件夹中，程序文件操作的文本文件位于python_work文件夹的子文件夹text_files中，此时可以使用相对文件路径来打开该文本文件，相对文件路径让Python到指定的位置去查找，而该位置是相对于当前运行的程序所在目录的</p>
+</blockquote>
+<p>在Linux和OS X中，相对路径类似于如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'text_files/filename.txt'</span>) <span class="keyword">as</span> file_object:</span><br></pre></td></tr></table></figure></p>
+<p>在Windows系统中，文件路径中使用反斜杠（\）而不是斜杠（/）:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'text_files\filename.txt'</span>) <span class="keyword">as</span> file_object:</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><font color="#FF0000">绝对文件路径：</font>不用关心当前运行的程序储存在什么地方，直接将文件在计算机中的准确位置告诉Python，这称为绝对文件路径，绝对路径通常比相对路径更长，因此将其储存在一个变量中，再将变量传递给open()会有所帮助</p>
+</blockquote>
+<p>在Linux和OS X中，绝对路径类似于如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">file_path = <span class="string">'/home/ehmatthes/other_files/text_files/filename.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(file_path) <span class="keyword">as</span> file_object:</span><br></pre></td></tr></table></figure></p>
+<p>在Windows系统中，绝对路径类似于如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">file_path = <span class="string">'C:\Users\ehmatthes\other_files\text_files\filename.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(file_path) <span class="keyword">as</span> file_object:</span><br></pre></td></tr></table></figure></p>
+<h1 id="9-1-3-逐行读取"><a href="#9-1-3-逐行读取" class="headerlink" title=" - 9.1.3 逐行读取  "></a><font color="#FF0000"> - 9.1.3 逐行读取  </font></h1><p>要以每次一行的方式检查文件，可对文件对象使用for循环：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#file_reader.py</span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">'Circumference rate.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file_object:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> file_object:</span><br><span class="line">        print(line)</span><br></pre></td></tr></table></figure></p>
+<p>在文件中每行的末尾都有一个看不见的换行符，而print语句也会加上一个换行符，因此每行末尾都有两个换行符：一个来自文件，一个来自print语句，输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.1415926535</span></span><br><span class="line"></span><br><span class="line">  <span class="number">8979323846</span></span><br><span class="line"></span><br><span class="line">  <span class="number">2643383279</span></span><br></pre></td></tr></table></figure></p>
+<p>要消除这些多余的空白行，可以使用rstrip():<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#file_reader.py</span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">'Circumference rate.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file_object:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> file_object:</span><br><span class="line">        print(line.rstrip())</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.1415926535</span></span><br><span class="line">  <span class="number">8979323846</span></span><br><span class="line">  <span class="number">2643383279</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="9-1-4-创建一个包含文件各行内容的列表"><a href="#9-1-4-创建一个包含文件各行内容的列表" class="headerlink" title=" - 9.1.4 创建一个包含文件各行内容的列表  "></a><font color="#FF0000"> - 9.1.4 创建一个包含文件各行内容的列表  </font></h1><p>使用关键字with时，open()返回的文件对象只在with代码块内可用，如果要在with代码块外访问文件的内容，可在with代码块内将文件的各行储存在一个列表当中，并在with代码块外使用该列表：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#file_reader.py</span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">'Circumference rate.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file_object:</span><br><span class="line">    lines = file_object.readlines()</span><br><span class="line">    </span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">    print(line.rstrip())</span><br></pre></td></tr></table></figure></p>
+<p>输出结果与文件内容完全一致</p>
+<h1 id="9-1-5-使用文件的内容"><a href="#9-1-5-使用文件的内容" class="headerlink" title=" - 9.1.5 使用文件的内容  "></a><font color="#FF0000"> - 9.1.5 使用文件的内容  </font></h1><p>创建一个字符串，它包含文件中储存的所有数字，且没有任何空格：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#pi_string.py</span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">'Circumference rate.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file_object:</span><br><span class="line">    lines = file_object.readlines()</span><br><span class="line"></span><br><span class="line">pi_string = <span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">    pi_string += line.rstrip()</span><br><span class="line">    </span><br><span class="line">print(pi_string)</span><br><span class="line">print(len(pi_string))</span><br></pre></td></tr></table></figure></p>
+<p>打印该字符串以及其长度：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.1415926535</span>  <span class="number">8979323846</span>  <span class="number">2643383279</span></span><br><span class="line"><span class="number">36</span></span><br></pre></td></tr></table></figure></p>
+<p>由于原文件每行左边都有空格，我们可以使用strip()而不是rstrip()来删除它：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#pi_string.py</span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">'Circumference rate.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file_object:</span><br><span class="line">    lines = file_object.readlines()</span><br><span class="line"></span><br><span class="line">pi_string = <span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">    pi_string += line.strip()</span><br><span class="line">    </span><br><span class="line">print(pi_string)</span><br><span class="line">print(len(pi_string))</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.141592653589793238462643383279</span></span><br><span class="line"><span class="number">32</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>Python中有三个去除头尾字符、空白符的函数，它们依次为: </p>
+<p><font color="#FF0000">strip：</font>用来去除头尾字符、空白符(包括\n、\r、\t、’ ‘，即：换行、回车、制表符、空格) </p>
+<p><font color="#FF0000">lstrip：</font>用来去除开头字符、空白符(包括\n、\r、\t、’ ‘，即：换行、回车、制表符、空格)</p>
+<p><font color="#FF0000">rstrip：</font>用来去除结尾字符、空白符(包括\n、\r、\t、’ ‘，即：换行、回车、制表符、空格)<br>注意：这些函数都只会删除头和尾的字符，中间的不会删除。<br>用法分别为：<br>string.strip([chars])<br>string.lstrip([chars])<br>string.rstrip([chars])<br>参数chars是可选的，当chars为空，默认删除string头尾的空白符(包括\n、\r、\t、’ ‘)<br>当chars不为空时，函数会被chars解成一个个的字符，然后将这些字符去掉<br>它返回的是去除头尾字符(或空白符)的string副本，string本身不会发生改变</p>
+</blockquote>
+<h1 id="9-2-写入文件"><a href="#9-2-写入文件" class="headerlink" title=" - 9.2 写入文件 "></a><font color="#FF0000"> - 9.2 写入文件 </font></h1><p>将一条简单的消息储存到文件中：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#write_message.py</span></span><br><span class="line"></span><br><span class="line">filename = <span class="string">'programming.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> file_object:</span><br><span class="line">    file_object.write(<span class="string">"I love programming!"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>调用open()时提供了两个实参，第一个实参也是要打开文件的名称，第二个实参（’w’）告诉Python，我们要以写入模式打开这个文件，打开文件时，可指定<font color="#FF0000">读取模式（’r’）、写入模式（’w’）、附加模式（’a’）</font>或者让我们能够<font color="#FF0000">读取和写入文件的模式（’r+’）</font>，如果省略模式实参，则默认以只读模式打开文件</p>
+<center>附表：Python读写文件各种模式区别</center>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">可做操作</th>
+<th style="text-align:center">若文件不存在</th>
+<th style="text-align:center">是否覆盖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">打开一个文件用于只读</td>
+<td style="text-align:center">报错</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">rb</td>
+<td style="text-align:center">以二进制格式打开一个文件用于只读</td>
+<td style="text-align:center">报错</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">r+</td>
+<td style="text-align:center">打开一个文件用于读和写</td>
+<td style="text-align:center">报错</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">rb+</td>
+<td style="text-align:center">以二进制格式打开一个文件用于读和写</td>
+<td style="text-align:center">报错</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">w</td>
+<td style="text-align:center">打开一个文件用于只写</td>
+<td style="text-align:center">创建</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">wb</td>
+<td style="text-align:center">以二进制格式打开一个文件只用于只写</td>
+<td style="text-align:center">创建</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">w+</td>
+<td style="text-align:center">打开一个文件用于读和写</td>
+<td style="text-align:center">创建</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">wb+</td>
+<td style="text-align:center">以二进制格式打开一个文件用于读和写</td>
+<td style="text-align:center">创建</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:center">打开一个文件用于追加</td>
+<td style="text-align:center">创建</td>
+<td style="text-align:center">否，追加写</td>
+</tr>
+<tr>
+<td style="text-align:center">ab</td>
+<td style="text-align:center">以二进制格式打开一个文件用于追加</td>
+<td style="text-align:center">创建</td>
+<td style="text-align:center">否，追加写</td>
+</tr>
+<tr>
+<td style="text-align:center">a+</td>
+<td style="text-align:center">打开一个文件用于读和写</td>
+<td style="text-align:center">创建</td>
+<td style="text-align:center">否，追加写</td>
+</tr>
+<tr>
+<td style="text-align:center">ab+</td>
+<td style="text-align:center">以二进制格式打开一个文件用于追加</td>
+<td style="text-align:center">创建</td>
+<td style="text-align:center">否，追加写</td>
+</tr>
+</tbody>
+</table>
+<h1 id="9-3-使用-try-except-代码块处理异常"><a href="#9-3-使用-try-except-代码块处理异常" class="headerlink" title=" - 9.3 使用 try-except 代码块处理异常 "></a><font color="#FF0000"> - 9.3 使用 try-except 代码块处理异常 </font></h1><p>当我们尝试将一个数字除以0时，会发生ZeroDivisionError异常：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="number">5</span>/<span class="number">0</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#0&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    print(<span class="number">5</span>/<span class="number">0</span>)</span><br><span class="line">ZeroDivisionError: division by zero</span><br></pre></td></tr></table></figure></p>
+<p>此时我们可以编写一个<font color="#FF0000">try-except代码块</font>来处理该异常：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(<span class="number">5</span>/<span class="number">0</span>)</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">    print(<span class="string">"You can't divide by zero!"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>当我们运行该程序时，会出现提示：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You can<span class="string">'t divide by zero!</span></span><br></pre></td></tr></table></figure></p>
+<p>在<font color="#FF0000">try-except代码块</font>中加入else，编写一个只执行除法运算的简单计算器：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Give me two numbers,and I'll divide them."</span>)</span><br><span class="line">print(<span class="string">"Enter 'q' to quit."</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    first_number = input(<span class="string">"\nFirst number:"</span>)</span><br><span class="line">    <span class="keyword">if</span> first_number == <span class="string">'q'</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    second_number = input(<span class="string">"\nSecond number:"</span>)</span><br><span class="line">    <span class="keyword">if</span> second_number == <span class="string">'q'</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        answer = int(first_number)/int(second_number)</span><br><span class="line">    <span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line">        print(<span class="string">"You can't divide by 0!"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(answer)</span><br></pre></td></tr></table></figure></p>
+<p>运行程序：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Give me two numbers,<span class="keyword">and</span> I<span class="string">'ll divide them.</span></span><br><span class="line"><span class="string">Enter '</span>q<span class="string">' to quit.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">First number:45</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Second number:0</span></span><br><span class="line"><span class="string">You can'</span>t divide by <span class="number">0</span>!</span><br><span class="line"></span><br><span class="line">First number:<span class="number">36</span></span><br><span class="line"></span><br><span class="line">Second number:<span class="number">8</span></span><br><span class="line"><span class="number">4.5</span></span><br><span class="line"></span><br><span class="line">First number:q</span><br></pre></td></tr></table></figure></p>
+<p>若不加入<font color="#FF0000">try-except代码块</font>，我们在输入0时，程序就会出现异常而崩溃，而<font color="#FF0000">try-except代码块</font>很好的解决了这种问题，而且还起到了提示的作用，同样的，<font color="#FF0000">try-except代码块</font>也可以处理其他异常，如<font color="#FF0000">FileNotFoundError</font>等</p>
+<h1 id="9-4-储存数据"><a href="#9-4-储存数据" class="headerlink" title=" - 9.4 储存数据 "></a><font color="#FF0000"> - 9.4 储存数据 </font></h1><h1 id="9-4-1-使用-json-dump-和-json-load"><a href="#9-4-1-使用-json-dump-和-json-load" class="headerlink" title=" - 9.4.1 使用 json.dump() 和 json.load() "></a><font color="#FF0000"> - 9.4.1 使用 json.dump() 和 json.load() </font></h1><p><font color="#FF0000"> 模块json</font>能够将简单的Python数据结构转储到文件中，并在程序再次运行时加载该文件中的数据；编写一个储存一组数字的简短程序，再编写一个将这些数字读取到内存中的程序，第一个程序将使用<font color="#FF0000"> json.dump()</font>来储存这组数据，而第二个程序将使用<font color="#FF0000"> json.load()</font>。函数<font color="#FF0000"> json.dump()</font>接受两个实参：要储存的数据以及可用于储存数据的文件对象：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#number_writer.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">numbers = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">13</span>]</span><br><span class="line"></span><br><span class="line">filename = <span class="string">'numbers.json'</span></span><br><span class="line"><span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> f_obj:</span><br><span class="line">    json.dump(numbers,f_obj)</span><br></pre></td></tr></table></figure></p>
+<p>先导入模块json，再创建一个数字列表，<font color="#FF0000"> 通常用文件扩展名.json来指出文件储存的数据为JSON格式</font>，然后以写入模式打开该文件，使用函数<font color="#FF0000">json.dump()</font>将数字列表储存到文件numbers.json中，打开该文件，数据的储存格式与Python一样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2, 3, 5, 7, 11, 13]</span><br></pre></td></tr></table></figure></p>
+<p>再编写一个程序，使用<font color="#FF0000">json.load()</font>将这个列表读取到内存中：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#number_reader.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">filename = <span class="string">'numbers.json'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> f_obj:</span><br><span class="line">    numbers = json.load(f_obj)</span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果与number_writer.py中创建的数字列表相同：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2, 3, 5, 7, 11, 13]</span><br></pre></td></tr></table></figure></p>
+<p>进阶：在同一个程序中使用 <font color="#FF0000">json.dump()</font> 和 <font color="#FF0000">json.load()</font>：创建文件username.json储存用户名，从该文件中获取用户名，如果这个文件不存在，就在except代码块中提示用户输入用户名，并将其储存在username.json中：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#remember_me.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="comment">#如果以前储存了用户名，就加载它</span></span><br><span class="line"><span class="comment">#否则就提示用户输入用户名并储存它</span></span><br><span class="line">filename = <span class="string">'numbers.json'</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">with</span> open(filename) <span class="keyword">as</span> f_obj:</span><br><span class="line">        username = json.load(f_obj)</span><br><span class="line"><span class="keyword">except</span> FileNotFoundError:</span><br><span class="line">    username = input(<span class="string">"What's your name?"</span>)</span><br><span class="line">    <span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> f_obj:</span><br><span class="line">        json.dump(username,f_obj)</span><br><span class="line">        print(<span class="string">"We'll remember you when you come back, "</span> + username + <span class="string">"!"</span>)</span><br><span class="line"><span class="keyword">else</span>:        </span><br><span class="line">    print(<span class="string">"Welcome back, "</span> + username + <span class="string">"!"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>以前没有储存用户名，第一次运行程序：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">What<span class="string">'s your name?TRHX</span></span><br><span class="line"><span class="string">We'</span>ll remember you when you come back, TRHX!</span><br></pre></td></tr></table></figure></p>
+<p>再次运行程序：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome back, TRHX!</span><br></pre></td></tr></table></figure></p>
+<h1 id="9-4-2-重构"><a href="#9-4-2-重构" class="headerlink" title=" - 9.4.2 重构 "></a><font color="#FF0000"> - 9.4.2 重构 </font></h1><p>代码能够正确运行，但可以做进一步的改进——将代码划分为一系列完成具体工作的函数，这样的过程称为<font color="#FF0000">重构</font>，重构让代码更清晰、更易于理解、更容易扩展<br>重构remember_me.py，将大部分逻辑放到一个或者多个函数中：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#remember_me.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_user</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#问候用户，并指出其名字</span></span><br><span class="line">    filename = <span class="string">'numbers.json'</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">with</span> open(filename) <span class="keyword">as</span> f_obj:</span><br><span class="line">            username = json.load(f_obj)</span><br><span class="line">    <span class="keyword">except</span> FileNotFoundError:</span><br><span class="line">        username = input(<span class="string">"What's your name?"</span>)</span><br><span class="line">        <span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> f_obj:</span><br><span class="line">            json.dump(username,f_obj)</span><br><span class="line">            print(<span class="string">"We'll remember you when you come back, "</span> + username + <span class="string">"!"</span>)</span><br><span class="line">    <span class="keyword">else</span>:        </span><br><span class="line">        print(<span class="string">"Welcome back, "</span> + username + <span class="string">"!"</span>)</span><br><span class="line"></span><br><span class="line">greet_user()</span><br></pre></td></tr></table></figure></p>
+<p>重构greet_user()，让它不执行这么多任务——将获取储存的用户名的代码移到另一个函数中：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#remember_me.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_stored_username</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#如果储存了用户名，就获取它</span></span><br><span class="line">    filename = <span class="string">'numbers.json'</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">with</span> open(filename) <span class="keyword">as</span> f_obj:</span><br><span class="line">            username = json.load(f_obj)</span><br><span class="line">    <span class="keyword">except</span> FileNotFoundError:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> username</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_user</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#问候用户，并指出其名字</span></span><br><span class="line">    username = get_stored_username()</span><br><span class="line">    <span class="keyword">if</span> username:</span><br><span class="line">        print(<span class="string">"Welcome back, "</span> + username + <span class="string">"!"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        username = input(<span class="string">"What's your name?"</span>)</span><br><span class="line">        filename = <span class="string">'username.json'</span></span><br><span class="line">        <span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> f_obj:</span><br><span class="line">            json.dump(username,f_obj)</span><br><span class="line">            print(<span class="string">"We'll remember you when you come back, "</span> + username + <span class="string">"!"</span>)     </span><br><span class="line"></span><br><span class="line">greet_user()</span><br></pre></td></tr></table></figure></p>
+<p>将greet_user()中的另一个代码块提取出来：将没有储存用户名时提示用户输入的代码放在一个独立的函数中：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#remember_me.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_stored_username</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#如果储存了用户名，就获取它</span></span><br><span class="line">    filename = <span class="string">'numbers.json'</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">with</span> open(filename) <span class="keyword">as</span> f_obj:</span><br><span class="line">            username = json.load(f_obj)</span><br><span class="line">    <span class="keyword">except</span> FileNotFoundError:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> username</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_new_username</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#提示输入用户名</span></span><br><span class="line">    username = input(<span class="string">"What's your name?"</span>)</span><br><span class="line">    filename = <span class="string">'username.json'</span></span><br><span class="line">    <span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> f_obj:</span><br><span class="line">        json.dump(username,f_obj)</span><br><span class="line">    <span class="keyword">return</span> username</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">greet_user</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#问候用户，并指出其名字</span></span><br><span class="line">    username = get_stored_username()</span><br><span class="line">    <span class="keyword">if</span> username:</span><br><span class="line">        print(<span class="string">"Welcome back, "</span> + username + <span class="string">"!"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        username = get_new_username()</span><br><span class="line">        print(<span class="string">"We'll remember you when you come back, "</span> + username + <span class="string">"!"</span>)     </span><br><span class="line"></span><br><span class="line">greet_user()</span><br></pre></td></tr></table></figure></p>
+<p>最终版本实现了每个函数只负责单一而清晰的任务，我们在编写程序时也要像这样，要写出清晰而易于维护和扩展的代码</p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩，扫码打赏，你说多少就多少</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">若无法正常显示二维码，请直接点击小图片放大</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.jpg" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.jpg" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/11/16/Python3 自学笔记 C09/">Python3 自学笔记 C09</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 TRHX 的个人博客">TRHX</a></p>
+        <p><span>发布时间:</span>2018年11月16日 - 00时37分</p>
+        <p><span>最后更新:</span>2018年11月16日 - 00时48分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/16/Python3 自学笔记 C09/" title="Python3 自学笔记 C09">http://yoursite.com/2018/11/16/Python3 自学笔记 C09/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/11/16/Python3 自学笔记 C09/　　作者: TRHX" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span>本作品采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="国际 (CC BY-NC-SA 4.0)" target = "_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/10/Python3 自学笔记 C08/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python3 自学笔记 C08</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#9-1-从文件中读取数据"><span class="toc-number">1.</span> <span class="toc-text"> - 9.1 从文件中读取数据  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-1-1-读取整个文件"><span class="toc-number">2.</span> <span class="toc-text"> - 9.1.1 读取整个文件  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-1-2-文件路径"><span class="toc-number">3.</span> <span class="toc-text"> - 9.1.2 文件路径  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-1-3-逐行读取"><span class="toc-number">4.</span> <span class="toc-text"> - 9.1.3 逐行读取  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-1-4-创建一个包含文件各行内容的列表"><span class="toc-number">5.</span> <span class="toc-text"> - 9.1.4 创建一个包含文件各行内容的列表  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-1-5-使用文件的内容"><span class="toc-number">6.</span> <span class="toc-text"> - 9.1.5 使用文件的内容  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-2-写入文件"><span class="toc-number">7.</span> <span class="toc-text"> - 9.2 写入文件 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-3-使用-try-except-代码块处理异常"><span class="toc-number">8.</span> <span class="toc-text"> - 9.3 使用 try-except 代码块处理异常 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-4-储存数据"><span class="toc-number">9.</span> <span class="toc-text"> - 9.4 储存数据 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-4-1-使用-json-dump-和-json-load"><span class="toc-number">10.</span> <span class="toc-text"> - 9.4.1 使用 json.dump() 和 json.load() </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-4-2-重构"><span class="toc-number">11.</span> <span class="toc-text"> - 9.4.2 重构 </span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/showshare.css"></head>
+    <div id="share" class="bdsharebuttonbox">
+        <button class="share-toggle-button"><i class="share-icon fa fa-share-alt"></i>
+        </button>
+        <ul class="share-items">
+            <li class="share-item"><a href="#" class="share-button fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"></a></li>
+            <li class="share-item"><a href="#" class="share-button fa fa-weixin" data-cmd="weixin" title="分享到微信"></a></li>
+            <li class="share-item"><a href="#" class="share-button fa fa-qq" data-cmd="sqq" title="分享到QQ好友"></a></li>
+            <li class="share-item"><a href="#" class="share-button fa fa-facebook" data-cmd="fbook" title="分享到Facebook"></a></li>
+            <li class="share-item"><a href="#" class="share-button fa fa-twitter" data-cmd="twi" title="分享到Twitter"></a></li>
+            <li class="share-item"><a href="#" class="share-button fa fa-linkedin" data-cmd="linkedin" title="分享到linkedin"></a></li>
+        </ul>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+        </defs>
+    </svg>
+    <!-- 推荐开源CDN来选取需引用的外部JS //-->
+    <script type="text/javascript" src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/TweenMax.js"></script>
+<script>
+    window._bd_share_config = {
+    common : {
+                    bdText : '',
+                    //文本内容
+                    bdDesc : '业余单车运动员、菜鸟级软件工程大学生、爱折腾、爱刺激、爱编程、爱科技',
+                    // 描述
+                    bdUrl : 'http://trhx.top',
+                    // URL地址
+                    bdPic : 'https://i.imgur.com/2VWhI8A.png'
+                    // 图片信息
+                },
+        share: [{
+            "bdSize": 24
+        }]
+    }
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~ (-new Date() / 36e5)];
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33765729-1']);
+    _gaq.push(['_setDomainName', 'chuanke.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+    
+        <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zOTA3MS8xNTU5OA==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+  
+         if (typeof LivereTower === 'function') { return; }
+  
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+  
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/11/10/Python3 自学笔记 C08/" title="下一篇: Python3 自学笔记 C08">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/16/Python3 自学笔记 C09/">Python3 自学笔记 C09</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/10/Python3 自学笔记 C08/">Python3 自学笔记 C08</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/03/Python3 自学笔记 C07/">Python3 自学笔记 C07</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/30/Python3 自学笔记 C06/">Python3 自学笔记 C06</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/27/Python3 自学笔记 C05/">Python3 自学笔记 C05</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/23/Python3 自学笔记 C04/">Python3 自学笔记 C04</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/11/Python3 自学笔记 C03/">Python3 自学笔记 C03</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/15/Python3 自学笔记 C02/">Python3 自学笔记 C02</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/10/Python3 自学笔记 C01/">Python3 自学笔记 C01</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/09/VMware Pro 14 安装 Ubuntu 18.04 详细教程/">VMware Pro 14 安装 Ubuntu 18.04 详细教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/主流 Markdown 编辑器推荐/">主流 Markdown 编辑器推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/27/Hexo 博客主题个性化/">Hexo 博客主题个性化</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/Markdown 语法&技巧总结/">Markdown 语法&技巧总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/15/如何使用Github Pages和Hexo搭建自己独立博客/">如何使用 Github Pages 和 Hexo 搭建自己的独立博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/10/Hello World/">Hello World!</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 <a href="http://trhx.top" target="_blank"> TRHX </a>
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme spfk by <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">luuman</a>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <font size=2 color=#4094C7>
+                            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
+                            <script> 
+                                var now = new Date(); 
+                                function createtime() 
+                                { 
+                                  var grt= new Date("08/10/2018 17:38:00");//此处修改你的建站时间或者网站上线时间 
+                                  now.setTime(now.getTime()+250); 
+                                  days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                  if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                  mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                  snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                  document.getElementById("timeDate").innerHTML = " 本站已运行 "+dnum+" 天 "; 
+                                  document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 "; 
+                                } 
+                                setInterval("createtime()",250); 
+                            </script>
+                        </font>
+                         ||
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span> || </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                            <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 32;
+            var backgroundimg = "url(/background/bg-" + backgroundnum +".jpg)";
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?68019af241ffe13fed16341dc16acd4f";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
+
+  </div>
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
