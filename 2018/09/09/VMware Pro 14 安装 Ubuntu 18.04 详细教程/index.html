@@ -49,8 +49,6 @@
 <meta name="twitter:description" content="VMware Pro 14 安装 Ubuntu 18.04 的详细教程以及一些在安装过程中可能遇到的问题">
 <meta name="twitter:image" content="https://i.imgur.com/zJA6ChL.png">
   
-    <link rel="alternative" href="/atom.xml" title="TRHX&#39;s Blog - Live for code!" type="application/atom+xml">
-  
   
     <link rel="icon" href="/img/trhx2.png">
   
@@ -594,8 +592,8 @@
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 32;
-            var backgroundimg = "url(/background/bg-" + backgroundnum +".jpg)";
+            var backgroundnum = 53;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
         })

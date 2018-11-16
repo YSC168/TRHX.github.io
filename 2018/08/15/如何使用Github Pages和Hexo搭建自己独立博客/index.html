@@ -47,8 +47,6 @@
 <meta name="twitter:description" content="这是一篇有关如何使用 Github Pages 和 Hexo 搭建属于自己独立博客的详尽教程！">
 <meta name="twitter:image" content="https://i.imgur.com/l9qbq4X.png">
   
-    <link rel="alternative" href="/atom.xml" title="TRHX&#39;s Blog - Live for code!" type="application/atom+xml">
-  
   
     <link rel="icon" href="/img/trhx2.png">
   
@@ -721,8 +719,8 @@ $ hexo g -d
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 32;
-            var backgroundimg = "url(/background/bg-" + backgroundnum +".jpg)";
+            var backgroundnum = 53;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
         })

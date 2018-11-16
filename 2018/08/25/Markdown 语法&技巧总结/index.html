@@ -23,8 +23,6 @@
 <meta name="twitter:description" content="在写博客的时候遇到的 Markdown 各种方法技巧或者语法记录下来，方便查阅【持续更新】">
 <meta name="twitter:image" content="https://i.imgur.com/UyEXrBi.jpg">
   
-    <link rel="alternative" href="/atom.xml" title="TRHX&#39;s Blog - Live for code!" type="application/atom+xml">
-  
   
     <link rel="icon" href="/img/trhx2.png">
   
@@ -551,8 +549,8 @@
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 32;
-            var backgroundimg = "url(/background/bg-" + backgroundnum +".jpg)";
+            var backgroundnum = 53;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
         })

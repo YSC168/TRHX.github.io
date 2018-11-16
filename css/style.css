@@ -4180,7 +4180,7 @@ pre .link_url {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 6px solid #000;
+  border-bottom: 6px solid #00b2ee;
   opacity: 0.8;
   position: absolute;
   top: -6px;
@@ -4204,7 +4204,7 @@ pre .link_url {
   color: #ddd;
 }
 .switch-btn .tips-box .tips-inner li:hover {
-  background: #4d4d4d;
+  background: #00b2ee;
 }
 .switch-btn .icon {
   height: 32px;
@@ -4591,7 +4591,7 @@ pre .link_url {
 }
 ::-webkit-scrollbar-thumb:hover {
   border-radius: 8px;
-  background-color: #00b2ee;
+  background-color: #f00;
 }
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-thumb {
