@@ -591,16 +591,29 @@
         <div id="footer-info">
             <div class="footer-left">
                 &copy; 2018 <a href="http://trhx.top" target="_blank"> TRHX </a>
+                <span>
+                <i class="fa fa-comments"> </i>
+                <i class="fa fa-terminal"> </i>
+                <i class="fa fa-italic"> </i>
+                <i class="fa fa-heartbeat"> </i>
+                <i class="fa fa-yahoo"> </i>
+                </span>
             </div>
             <div class="footer-right">
+                <span><i class="fa fa-paw"> </i></span>
                 <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme spfk by <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">luuman</a>
+                <span><i class="fa fa-paw"> </i></span>
+            </div>
+            <div class="footer-middle">
+                        
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <font size=2 color=#4094C7>
+                    <span><i class="fa fa-spinner fa-spin"> </i></span>
+                        <font color=#4094C7>
                             <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
                             <script> 
                                 var now = new Date(); 
@@ -620,20 +633,25 @@
                                 setInterval("createtime()",250); 
                             </script>
                         </font>
-                         ||
+                        <span>
+                         <i class="fa fa-paper-plane"> </i>
+                        </span>
                         <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
                 
-                    <span> || </span>
+                    <span>
+                         <i class="fa fa-paper-plane"> </i>
+                    </span>
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
                         <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
-                            <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+                            <span id="busuanzi_value_page_pv"></span>
+                            <span><i class="fa fa-spinner fa-spin"> </i></span>
                         </span>
                     </span>
                 
@@ -648,7 +666,7 @@
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 53;
+            var backgroundnum = 52;
             var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
@@ -718,6 +736,11 @@
   </div>
 </body>
 </html>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="220" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
 
 <!--单击显示文字-->
 <script type="text/javascript" src="/js/click_show_text.js"></script>

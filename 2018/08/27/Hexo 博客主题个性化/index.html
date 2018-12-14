@@ -22,6 +22,7 @@
 <meta property="og:image" content="https://i.imgur.com/9oCg3Gx.png">
 <meta property="og:image" content="https://i.imgur.com/LI7iFxx.png">
 <meta property="og:image" content="https://i.imgur.com/ss300YU.png">
+<meta property="og:image" content="https://i.imgur.com/fNVHjBi.png">
 <meta property="og:image" content="https://i.imgur.com/vWhZElo.png">
 <meta property="og:image" content="https://i.imgur.com/gqs8NKL.png">
 <meta property="og:image" content="https://i.imgur.com/om8pIL9.png">
@@ -37,7 +38,8 @@
 <meta property="og:image" content="https://i.imgur.com/bLOwfen.png">
 <meta property="og:image" content="https://i.imgur.com/qSu48Xl.png">
 <meta property="og:image" content="https://i.imgur.com/XFE8dTM.png">
-<meta property="og:updated_time" content="2018-10-19T15:23:49.943Z">
+<meta property="og:image" content="https://i.imgur.com/VTzCNSP.png">
+<meta property="og:updated_time" content="2018-12-14T08:09:59.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 博客主题个性化">
 <meta name="twitter:description" content="Hexo 博客主题的美化，添加一些实用功能，定制你的专属博客【持续更新】">
@@ -321,6 +323,12 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面点击小红心 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/love.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>完成以上操作后，当我们点击鼠标的时候就可以看见爱心的特效了</p>
 <p><img src="https://i.imgur.com/ss300YU.png" alt=""></p>
+<h1 id="–-添加鼠标点击显示字体效果"><a href="#–-添加鼠标点击显示字体效果" class="headerlink" title=" – 添加鼠标点击显示字体效果 "></a><font color="#FF0000"> – 添加鼠标点击显示字体效果 </font></h1><p>在<font color="#FF0000"> /themes/hexo-theme-spfk/source/js</font> 下新建文件 <font color="#FF0000">click_show_text.js</font>，在 <font color="#FF0000">click_show_text.js</font> 文件中添加以下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a_idx = <span class="number">0</span>;</span><br><span class="line">jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"body"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span></span><br><span class="line">        (<span class="string">"富强"</span>, <span class="string">"民主"</span>, <span class="string">"文明"</span>, <span class="string">"和谐"</span>, <span class="string">"自由"</span>, <span class="string">"平等"</span>, <span class="string">"公正"</span>, <span class="string">"法治"</span>, <span class="string">"爱国"</span>, <span class="string">"敬业"</span>, <span class="string">"诚信"</span>, <span class="string">"友善"</span>);</span><br><span class="line">        <span class="keyword">var</span> $i = $(<span class="string">"&lt;span/&gt;"</span>).text(a[a_idx]);</span><br><span class="line">        a_idx = (a_idx + <span class="number">1</span>) % a.length;</span><br><span class="line">        <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">        y = e.pageY;</span><br><span class="line">        $i.css(&#123;</span><br><span class="line">            <span class="string">"z-index"</span>: <span class="number">5</span>,</span><br><span class="line">            <span class="string">"top"</span>: y - <span class="number">20</span>,</span><br><span class="line">            <span class="string">"left"</span>: x,</span><br><span class="line">            <span class="string">"position"</span>: <span class="string">"absolute"</span>,</span><br><span class="line">            <span class="string">"font-weight"</span>: <span class="string">"bold"</span>,</span><br><span class="line">            <span class="string">"color"</span>: <span class="string">"#FF0000"</span></span><br><span class="line">        &#125;);</span><br><span class="line">        $(<span class="string">"body"</span>).append($i);</span><br><span class="line">        $i.animate(&#123;</span><br><span class="line">            <span class="string">"top"</span>: y - <span class="number">180</span>,</span><br><span class="line">            <span class="string">"opacity"</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">			<span class="number">3000</span>,</span><br><span class="line">			<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			    $i.remove();</span><br><span class="line">			&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    setTimeout(<span class="string">'delay()'</span>, <span class="number">2000</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delay</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">".buryit"</span>).removeAttr(<span class="string">"onclick"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中的社会主义核心价值观可以根据你自己的创意替换为其他文字，然后在 <font color="#FF0000">\themes\hexo-theme-spfk-x\layout\layout.ejs</font> 文件末尾添加以下代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--单击显示文字--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/click_show_text.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>最终实现效果如下：</p>
+<p><img src="https://i.imgur.com/fNVHjBi.png" alt="添加鼠标点击显示字体效果"></p>
 <h1 id="–-添加字数统计和阅读时长"><a href="#–-添加字数统计和阅读时长" class="headerlink" title=" – 添加字数统计和阅读时长 "></a><font color="#FF0000"> – 添加字数统计和阅读时长 </font></h1><p>先在博客目录下执行以下命令安装 <font color="#FF0000">hexo-wordcount</font> 插件：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm i --save hexo-wordcount</span><br></pre></td></tr></table></figure>
 <p>之后在 <font color="#FF0000">\themes\hexo-theme-spfk-x\layout\_partial\post</font> 目录下创建 <font color="#FF0000">word.ejs</font> 文件，在 <font color="#FF0000">word.ejs</font> 文件中写入以下代码：</p>
@@ -361,6 +369,16 @@
 <p>再次部署博客后就可以看见标题搞笑的效果了：</p>
 <p><img src="https://i.imgur.com/qSu48Xl.png" alt=""></p>
 <p><img src="https://i.imgur.com/XFE8dTM.png" alt=""></p>
+<h1 id="–-背景添加动态线条效果"><a href="#–-背景添加动态线条效果" class="headerlink" title=" – 背景添加动态线条效果 "></a><font color="#FF0000"> – 背景添加动态线条效果 </font></h1><p>在 <font color="#FF0000">\Hexo\themes\hexo-theme-spfk-x\layout\layout.ejs</font> 文件中添加如下代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--动态线条背景--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span></span></span><br><span class="line"><span class="tag"><span class="attr">color</span>=<span class="string">"220,220,220"</span> <span class="attr">opacity</span>=<span class="string">'0.7'</span> <span class="attr">zIndex</span>=<span class="string">"-2"</span> <span class="attr">count</span>=<span class="string">"200"</span> <span class="attr">src</span>=<span class="string">"//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li>color：表示线条颜色，三个数字分别为(R,G,B)，默认：（0,0,0）</li>
+<li>opacity：表示线条透明度（0~1），默认：0.5</li>
+<li>count：表示线条的总数量，默认：150</li>
+<li>zIndex：表示背景的z-index属性，css属性用于控制所在层的位置，默认：-1</li>
+</ul>
+<p>最终实现效果：<br><img src="https://i.imgur.com/VTzCNSP.png" alt="动态线条背景"></p>
 <hr>
 <center><br><font color="#FF0000"><br><br># 未完待续…… #<br><br></font><br></center>
 
@@ -377,7 +395,7 @@
         <p><span>本文标题:</span><a href="/2018/08/27/Hexo 博客主题个性化/">Hexo 博客主题个性化</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 TRHX 的个人博客">TRHX</a></p>
         <p><span>发布时间:</span>2018年08月27日 - 21时25分</p>
-        <p><span>最后更新:</span>2018年10月19日 - 23时23分</p>
+        <p><span>最后更新:</span>2018年12月14日 - 16时09分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/08/27/Hexo 博客主题个性化/" title="Hexo 博客主题个性化">https://trhx.top/2018/08/27/Hexo 博客主题个性化/</a>
             <span class="copy-path" data-clipboard-text="原文: https://trhx.top/2018/08/27/Hexo 博客主题个性化/　　作者: TRHX" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -415,7 +433,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加评论系统"><span class="toc-number">1.</span> <span class="toc-text"> – 添加评论系统 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加卡通人物"><span class="toc-number">2.</span> <span class="toc-text"> – 添加卡通人物 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击爱心效果"><span class="toc-number">3.</span> <span class="toc-text"> – 添加鼠标点击爱心效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加字数统计和阅读时长"><span class="toc-number">4.</span> <span class="toc-text"> – 添加字数统计和阅读时长 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加背景音乐"><span class="toc-number">5.</span> <span class="toc-text"> – 添加背景音乐 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加网站运行时间"><span class="toc-number">6.</span> <span class="toc-text"> – 添加网站运行时间 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加百度统计"><span class="toc-number">7.</span> <span class="toc-text"> – 添加百度统计 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-浏览器网页标题恶搞"><span class="toc-number">8.</span> <span class="toc-text"> – 浏览器网页标题恶搞 </span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加评论系统"><span class="toc-number">1.</span> <span class="toc-text"> – 添加评论系统 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加卡通人物"><span class="toc-number">2.</span> <span class="toc-text"> – 添加卡通人物 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击爱心效果"><span class="toc-number">3.</span> <span class="toc-text"> – 添加鼠标点击爱心效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击显示字体效果"><span class="toc-number">4.</span> <span class="toc-text"> – 添加鼠标点击显示字体效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加字数统计和阅读时长"><span class="toc-number">5.</span> <span class="toc-text"> – 添加字数统计和阅读时长 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加背景音乐"><span class="toc-number">6.</span> <span class="toc-text"> – 添加背景音乐 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加网站运行时间"><span class="toc-number">7.</span> <span class="toc-text"> – 添加网站运行时间 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加百度统计"><span class="toc-number">8.</span> <span class="toc-text"> – 添加百度统计 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-浏览器网页标题恶搞"><span class="toc-number">9.</span> <span class="toc-text"> – 浏览器网页标题恶搞 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-背景添加动态线条效果"><span class="toc-number">10.</span> <span class="toc-text"> – 背景添加动态线条效果 </span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -572,16 +590,29 @@
         <div id="footer-info">
             <div class="footer-left">
                 &copy; 2018 <a href="http://trhx.top" target="_blank"> TRHX </a>
+                <span>
+                <i class="fa fa-comments"> </i>
+                <i class="fa fa-terminal"> </i>
+                <i class="fa fa-italic"> </i>
+                <i class="fa fa-heartbeat"> </i>
+                <i class="fa fa-yahoo"> </i>
+                </span>
             </div>
             <div class="footer-right">
+                <span><i class="fa fa-paw"> </i></span>
                 <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme spfk by <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">luuman</a>
+                <span><i class="fa fa-paw"> </i></span>
+            </div>
+            <div class="footer-middle">
+                        
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <font size=2 color=#4094C7>
+                    <span><i class="fa fa-spinner fa-spin"> </i></span>
+                        <font color=#4094C7>
                             <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
                             <script> 
                                 var now = new Date(); 
@@ -601,20 +632,25 @@
                                 setInterval("createtime()",250); 
                             </script>
                         </font>
-                         ||
+                        <span>
+                         <i class="fa fa-paper-plane"> </i>
+                        </span>
                         <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
                 
-                    <span> || </span>
+                    <span>
+                         <i class="fa fa-paper-plane"> </i>
+                    </span>
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
                         <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
-                            <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+                            <span id="busuanzi_value_page_pv"></span>
+                            <span><i class="fa fa-spinner fa-spin"> </i></span>
                         </span>
                     </span>
                 
@@ -629,7 +665,7 @@
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 53;
+            var backgroundnum = 52;
             var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
@@ -688,6 +724,11 @@
   </div>
 </body>
 </html>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="220" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
 
 <!--单击显示文字-->
 <script type="text/javascript" src="/js/click_show_text.js"></script>
