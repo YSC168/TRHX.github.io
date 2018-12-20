@@ -140,7 +140,7 @@ body {
   font-family: "微软雅黑", 'Microsoft JhengHei', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
   font-size: 16px;
   background: #3f3f3f;
-  color: #999;
+  color: #fff;
   -webkit-overflow-scrolling: touch;
 }
 ::selection {
@@ -601,8 +601,8 @@ a {
   text-align: center;
   margin: 0.67em 0;
   font-family: Roboto, "Roboto", serif;
-  font-size: 30px;
-  color: #00c5cd;
+  font-size: 35px;
+  color: #00b2ee;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -610,9 +610,12 @@ a {
 }
 #header {
   width: 100%;
+/*签名*/
+/*侧边文字大小*/
+/*左边高度宽度*/
 }
 #header a {
-  color: #00c5cd;
+  color: #00b2ee;
 }
 #header a:hover {
   color: #fff;
@@ -2017,9 +2020,9 @@ a {
 }
 #header .header-subtitle {
   text-align: center;
-  color: #fff;
-  font-size: 14px;
-  line-height: 25px;
+  color: #00b2ee;
+  font-size: 16px;
+  line-height: 30px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -2042,12 +2045,12 @@ a {
   cursor: default;
 }
 #header .header-menu li a {
-  font-size: 14px;
+  font-size: 16px;
   min-width: 300px;
 }
 #header .header-menu li a:hover {
   color: #fff;
-  background: #0083a0;
+  background: #00b2ee;
   border-radius: 2px;
   padding: 3px;
   margin: 2px;
@@ -2057,7 +2060,7 @@ a {
   width: 100%;
   overflow: hidden;
   color: #00b2ee;
-  min-height: 300px;
+  min-height: 400px;
   font-size: 14px;
 }
 #header .switch-area .switch-wrap {
@@ -2294,7 +2297,7 @@ a {
   margin: 0.4em 0 0.1em 0.7em;
 }
 .post-list li a {
-  color: #0083a0;
+  color: #00b2ee;
 }
 .post-list li a:hover {
 color
@@ -2318,7 +2321,7 @@ color
   outline: medium;
 }
 .search:hover {
-/* border: 2px solid lightgray; */
+  border: 2px solid #00b2ee;
   opacity: 1;
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -3157,10 +3160,10 @@ a.gitment-editor-footer-tip:hover {
   z-index: 1;
 }
 .article-meta time {
-  color: #aaa;
+  color: #00b2ee;
 }
 .article-meta time:before {
-  color: #999;
+  color: #fff;
   content: "\f073";
   font: 17px FontAwesome;
   margin-right: 10px;
@@ -4472,7 +4475,7 @@ pre .link_url {
 }
 .article-tag:before {
   float: left;
-  color: #999;
+  color: #fff; /*标签图标颜色*/
   content: "\f02e";
   font: 16px FontAwesome;
   float: left;
@@ -4491,7 +4494,7 @@ pre .link_url {
 }
 .article-category:before {
   float: left;
-  color: #999;
+  color: #fff; /*分类图标颜色*/
   content: "\f02d";
   font: 16px FontAwesome;
   float: left;
