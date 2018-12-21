@@ -3173,7 +3173,7 @@ a.gitment-editor-footer-tip:hover {
   text-align: right;
 }
 .article-more-link a {
-  background: #258fb8;
+  background: #00b2ee;
   color: #fff;
   font-size: 12px;
   padding: 2px 8px 4px;
@@ -3187,7 +3187,7 @@ a.gitment-editor-footer-tip:hover {
   transition: background 0.3s;
 }
 .article-more-link a:hover {
-  background: #3f3f3f;
+  background: #1874cd;
 }
 .article-more-link a.hidden {
   visibility: hidden;
@@ -3239,7 +3239,7 @@ a.gitment-editor-footer-tip:hover {
   height: 29px;
   left: 217px;
   border: none;
-  background-color: #ee6252;
+  background-color: #f00;
   top: 344px;
   font-size: 14px;
   text-align: center;
@@ -3247,7 +3247,7 @@ a.gitment-editor-footer-tip:hover {
 }
 #tocButton:hover {
   color: #fff;
-  background: #3f3f3f;
+  background: #00b2ee;
 }
 .toc-article {
   position: fixed;
@@ -3260,7 +3260,7 @@ a.gitment-editor-footer-tip:hover {
   margin-left: 0em;
   margin: 20px 10px 10px 10px;
   background: #3f3f3f;
-  border: 1px solid #080808;
+  border: 1px solid #00b2ee;
   border-radius: 6px;
   overflow: auto;
   -webkit-border-radius: 2.8%;
@@ -3269,7 +3269,7 @@ a.gitment-editor-footer-tip:hover {
   margin-left: 20px;
 }
 .post-list li a {
-  color: #999;
+  color: #00b2ee;
 }
 .post-list li a:hover {
   color: #fff;
@@ -3280,7 +3280,7 @@ a.gitment-editor-footer-tip:hover {
   line-height: 1.65em;
 }
 #toc a {
-  color: #999;
+  color: #00b2ee;
 }
 #toc a:visited {
   color: #fff;
@@ -3293,11 +3293,11 @@ a.gitment-editor-footer-tip:hover {
   background: none;
 }
 #toc li:hover li:hover {
-  background: rgba(158,188,226,0.21);
+  background: #00b2ee;
 }
 #toc .toc-title {
   font-weight: bold;
-  color: #999;
+  color: #f00;
   text-align: center;
   display: block;
 }
@@ -4055,14 +4055,14 @@ pre .link_url {
   background: #5e5e5e;
 }
 #page-nav .current {
-  background: #4094c7;
+  background: #00b2ee;
   cursor: default;
 }
 #page-nav .current:hover {
-  background: #4094c7;
+  background: #00b2ee;
 }
 #page-nav .extend {
-  color: #999;
+  color: #00b2ee;
   margin: 0 27px;
   opacity: 0;
 }
