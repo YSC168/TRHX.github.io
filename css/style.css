@@ -601,7 +601,7 @@ a {
   text-align: center;
   margin: 0.67em 0;
   font-family: Roboto, "Roboto", serif;
-  font-size: 35px;
+  font-size: 40px;
   color: #00b2ee;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -2021,7 +2021,7 @@ a {
 #header .header-subtitle {
   text-align: center;
   color: #00b2ee;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 30px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2031,7 +2031,7 @@ a {
 }
 #header .header-menu {
   font-weight: 300;
-  line-height: 31px;
+  line-height: 35px;
   cursor: pointer;
   text-transform: uppercase;
   float: none;
@@ -2045,7 +2045,7 @@ a {
   cursor: default;
 }
 #header .header-menu li a {
-  font-size: 16px;
+  font-size: 18px;
   min-width: 300px;
 }
 #header .header-menu li a:hover {
@@ -2060,8 +2060,8 @@ a {
   width: 100%;
   overflow: hidden;
   color: #00b2ee;
-  min-height: 400px;
-  font-size: 14px;
+  min-height: 300px;
+  font-size: 25px;
 }
 #header .switch-area .switch-wrap {
   -webkit-transition: -webkit-transform 0.3s ease-in;
@@ -2307,7 +2307,7 @@ color
   color: #88acdb;
 }
 .search {
-  width: 68%;
+  width: 90%;
   height: 18px;
   margin-top: 1px;
   color: #00b2ee;
