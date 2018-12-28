@@ -581,7 +581,7 @@ a {
     margin: auto;
   }
   #container .bdshare-button-style2-24 .fx {
-    color: #999;
+    color: #00b2ee;
     padding: 0;
     margin: 6px;
     height: 54px;
@@ -2116,7 +2116,7 @@ a {
 #header .header-nav .social a:last-of-type {
   margin-right: 0;
 }
-#header .header-nav .social a.weibo {
+#header .header-nav .social a.Weibo {
   background: url("../img/weibo.png") center no-repeat #f00;
   border: 1px solid #f00;
 }
@@ -2124,11 +2124,15 @@ a {
   background: url("../img/CSDN.png") center no-repeat #cc0001;
   border: 1px solid #cc0001;
 }
+#header .header-nav .social a.bilibili {
+  background: url("../img/bilibili.png") center no-repeat #fff;
+  border: 1px solid #fff;
+}
 #header .header-nav .social a.rss {
   background: url("../img/rss.png") center no-repeat #ef7522;
   border: 1px solid #ef7522;
 }
-#header .header-nav .social a.github {
+#header .header-nav .social a.Github {
   background: url("../img/github.png") center no-repeat #000;
   border: 1px solid #000;
 }
@@ -2148,7 +2152,7 @@ a {
   background: url("../img/linkedin.png") center no-repeat #00639a;
   border: 1px solid #00639a;
 }
-#header .header-nav .social a.zhihu {
+#header .header-nav .social a.Zhihu {
   background: url("../img/zhihu.png") center no-repeat #0663c1;
   border: 1px solid #0663c1;
 }
@@ -2156,7 +2160,7 @@ a {
   background: url("../img/douban.png") center no-repeat #06c611;
   border: 1px solid #06c611;
 }
-#header .header-nav .social a.mail {
+#header .header-nav .social a.Mail {
   background: url("../img/mail.png") center no-repeat #0663c1;
   border: 1px solid #0663c1;
 }
@@ -2164,7 +2168,7 @@ a {
   background: url("../img/qq.png") center no-repeat #0663c1;
   border: 1px solid #0663c1;
 }
-#header .header-nav .social a.wechat {
+#header .header-nav .social a.Wechat {
   background: url("../img/wechat.png") center no-repeat #51c332;
   border: 1px solid #51c332;
 }
@@ -3969,7 +3973,7 @@ pre .link_url {
   color: #258fb8;
 }
 #footer {
-  font-size: 12px;
+  font-size: 11px;
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   color: #999;
   position: absolute;
@@ -4594,7 +4598,7 @@ pre .link_url {
 }
 ::-webkit-scrollbar-thumb:hover {
   border-radius: 8px;
-  background-color: #f00;
+  background-color: #00b2ee;
 }
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-thumb {
@@ -4602,7 +4606,7 @@ pre .link_url {
   border-left: 1px solid transparent;
 }
 ::-webkit-scrollbar-track:hover {
-  background-color: #00b2ee;
+  background-color: #000;
 }
 ::-webkit-scrollbar-button:start {
   width: 10px;
