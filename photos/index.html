@@ -17,9 +17,13 @@
 <meta name="twitter:title" content="相册">
 <meta name="twitter:description" content="Ins 	摄影   	图片来自instagram，正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChi">
   
+    <link rel="alternative" href="/atom.xml" title="TRHX&#39;s Blog - Live for code!" type="application/atom+xml">
+  
   
     <link rel="icon" href="/img/trhx2.png">
   
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -35,7 +39,7 @@
       var yiliaConfig = {
           rootUrl: '/',
           fancybox: true,
-          animate: false,
+          animate: true,
           isHome: false,
           isPost: false,
           isArchive: false,
@@ -53,7 +57,7 @@
     <header id="header" class="inner">
         <a href="/" class="profilepic">
             
-            <img src="/img/trhx.png" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+            <img lazy-src="/img/trhx.png" class="js-avatar">
             
         </a>
 
@@ -179,7 +183,7 @@
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 
-                    <img src="/img/trhx.png" class="js-avatar" style="width: 100%; height: 100%; opacity: 1;">
+                    <img lazy-src="/img/trhx.png" class="js-avatar">
                 
             </a>
             <hgroup>
@@ -425,7 +429,7 @@
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 45;
+            var backgroundnum = 44;
             var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
