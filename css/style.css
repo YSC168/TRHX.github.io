@@ -2118,39 +2118,39 @@ a {
 }
 #header .header-nav .social a.Github {
   background: url("../img/github.png") center no-repeat #fff;
-  border: 1px solid #fff;
+  border: 1px solid #0663c1;
 }
 #header .header-nav .social a.CSDN {
   background: url("../img/csdn.png") center no-repeat #cc0001;
-  border: 1px solid #cc0001;
+  border: 1px solid #fff;
 }
 #header .header-nav .social a.Zhihu {
   background: url("../img/zhihu.png") center no-repeat #0663c1;
-  border: 1px solid #0663c1;
+  border: 1px solid #fff;
 }
 #header .header-nav .social a.QQ {
   background: url("../img/qq.png") center no-repeat #0663c1;
-  border: 1px solid #0663c1;
+  border: 1px solid #fff;
 }
 #header .header-nav .social a.Wechat {
   background: url("../img/wechat.png") center no-repeat #51c332;
-  border: 1px solid #51c332;
+  border: 1px solid #fff;
 }
 #header .header-nav .social a.Weibo {
   background: url("../img/weibo.png") center no-repeat #f00;
-  border: 1px solid #f00;
+  border: 1px solid #fff;
 }
 #header .header-nav .social a.bilibili {
   background: url("../img/bilibili.png") center no-repeat #fff;
-  border: 1px solid #fff;
+  border: 1px solid #0663c1;
 }
 #header .header-nav .social a.Mail {
   background: url("../img/mail.png") center no-repeat #0663c1;
-  border: 1px solid #0663c1;
+  border: 1px solid #fff;
 }
 #header .header-nav .social a.RSS {
   background: url("../img/rss.png") center no-repeat #ef7522;
-  border: 1px solid #ef7522;
+  border: 1px solid #fff;
 }
 #header .header-nav .social a.facebook {
   background: url("../img/facebook.png") center no-repeat #3b5998;
