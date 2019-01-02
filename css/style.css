@@ -2022,7 +2022,7 @@ a {
   text-align: center;
   color: #00b2ee;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 35px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -2060,8 +2060,8 @@ a {
   width: 100%;
   overflow: hidden;
   color: #00b2ee;
-  min-height: 300px;
-  font-size: 25px;
+  min-height: 320px;
+  font-size: 28px;
 }
 #header .switch-area .switch-wrap {
   -webkit-transition: -webkit-transform 0.3s ease-in;
@@ -2103,8 +2103,8 @@ a {
   text-indent: -9999px;
   margin: 0 8px 15px 8px;
   opacity: 1;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -2128,6 +2128,10 @@ a {
   background: url("../img/zhihu.png") center no-repeat #0663c1;
   border: 1px solid #0663c1;
 }
+#header .header-nav .social a.Mail {
+  background: url("../img/mail.png") center no-repeat #0663c1;
+  border: 1px solid #0663c1;
+}
 #header .header-nav .social a.QQ {
   background: url("../img/qq.png") center no-repeat #0663c1;
   border: 1px solid #0663c1;
@@ -2143,10 +2147,6 @@ a {
 #header .header-nav .social a.bilibili {
   background: url("../img/bilibili.png") center no-repeat #fff;
   border: 1px solid #fff;
-}
-#header .header-nav .social a.Mail {
-  background: url("../img/mail.png") center no-repeat #0663c1;
-  border: 1px solid #0663c1;
 }
 #header .header-nav .social a.RSS {
   background: url("../img/rss.png") center no-repeat #ef7522;
