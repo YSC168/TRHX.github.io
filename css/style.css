@@ -2051,9 +2051,9 @@ a {
 #header .header-menu li a:hover {
   color: #fff;
   background: #00b2ee;
-  border-radius: 2px;
-  padding: 3px;
-  margin: 2px;
+  border-radius: 1px;
+  padding: 2px;
+  margin: 1px;
 }
 #header .switch-area {
   position: relative;
@@ -2103,8 +2103,8 @@ a {
   text-indent: -9999px;
   margin: 0 8px 15px 8px;
   opacity: 1;
-  width: 32px;
-  height: 32px;
+  width: 33px;
+  height: 33px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
