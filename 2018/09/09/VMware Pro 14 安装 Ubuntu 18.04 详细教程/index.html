@@ -40,7 +40,7 @@
   
   >
   
-  <link rel="icon" href="img/trhx.png"
+  <link rel="icon" href="https://i.imgur.com/HaAdpfm.png"
    type="image/x-icon"
    sizes="32x32"
   
@@ -513,6 +513,11 @@
     
       <div class='text'>
         
+          <h2>TRHX'S BLOG</h2>
+        
+        
+          <p>求知若饥 虚心若愚</p>
+
         
         
           <p><span id="jinrishici-sentence">TRHX'S BLOG</span></p>
@@ -549,25 +554,6 @@
         
       </div>
     
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        <section class='plain'>
-  
-<header class='material'>
-  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;公告</div>
-  
-</header>
-
-  <div class='content material'>
-    <p>本站刚更换主题，近期实在是有点儿忙，有些问题后期会优化的哦~</p>
-
   </div>
 </section>
 
@@ -660,13 +646,39 @@
   <div class='content material'>
     <ul class="entry">
       
+        <li><a class="flat-box" title="http://space.bilibili.com/314463806?/" href="http://space.bilibili.com/314463806?/">
+          <div class='name'>
+            
+              <i class="fas fa-film fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;bilibili
+          </div>
+          
+            <div class='badge'>(我的主页)</div>
+          
+        </a></li>
+      
         <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/">
           <div class='name'>
             
-              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
             
-            &nbsp;&nbsp;主题链接
+            &nbsp;&nbsp;Material X
           </div>
+          
+            <div class='badge'>(Hexo博客主题)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://hexo.io/zh-cn/" href="https://hexo.io/zh-cn/">
+          <div class='name'>
+            
+              <i class="fas fa-blog fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Hexo
+          </div>
+          
+            <div class='badge'>(Hexo官网)</div>
           
         </a></li>
       
@@ -688,7 +700,7 @@
 <header class='material'>
   <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
   
-    <a class="rightBtn" target="_blank"
+    <a class="rightBtn rotate90" target="_blank"
     rel="external nofollow noopener noreferrer"
     href="https://music.163.com/#/playlist?id=2415512873"
     title="https://music.163.com/#/playlist?id=2415512873">
@@ -782,8 +794,28 @@
   <br>
   <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
-  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv" style="color:#00ccff"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
   </div>
+  
+  <!-- 网站运行时间 -->
+  <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
+  <script>
+      var now = new Date(); 
+      function createtime() { 
+          var grt= new Date("08/10/2018 17:38:00");//在此处修改你的建站时间
+          now.setTime(now.getTime()+250); 
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+          document.getElementById("timeDate").innerHTML = "本站已勉强运行 "
+          document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+          document.getElementById("times").style.color="#00ccff";
+      }
+      setInterval("createtime()",250);
+  </script>
 </footer>
 
     <script>setLoadingBarProgress(80);</script>
@@ -876,5 +908,37 @@
 
 
     <script>setLoadingBarProgress(100);</script>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
+
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/ClickShowText.js"></script>
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/snow.js"></script>
+
+<!-- 心知天气插件 -->
+<!-- https://www.seniverse.com/widget/get 
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "0px 0px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "U3A639EE85",
+    "hash": "e6276cdeeaf5b49cabca7dee59b30862"
+});
+tpwidget("show");</script>
+-->
