@@ -682,7 +682,7 @@
 </header>
 
   <div class='content material'>
-    <p>本站使用 <a href="https://xaoxuu.com/wiki/material-x/">Material X</a> 作为主题，喜欢这个主题的朋友可以阅读文档进行安装哦，超喜欢的话还可以安利给身边的朋友哦～</p>
+    <p>本站使用 <a href="https://xaoxuu.com/wiki/material-x/">Material X</a> 作为主题，喜欢这个主题的朋友可以阅读文档进行安装哦，超喜欢的话还可以安利给身边的朋友哦～</br></br><font color=#FF0000>Tip：电脑端访问本站效果更佳</font></p>
 
   </div>
 </section>
@@ -895,25 +895,21 @@
   <br>
 
   <div>
-    <i class="fas fa-blog"></i>
-    Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a>&nbsp;
-    Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>
-  </div>
-
-  <div>
-      &copy;2018-2019
-      <a href="http://trhx.top" target="_blank"> TRHX&#39;BLOG </a> &nbsp;
-      <span>License:</span>
-      <i class="fab fa-creative-commons"></i>
-      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="CC BY-NC-SA 4.0 International" target="_blank">"CC BY-NC-SA 4.0"</a>
+    &copy;2018-2019
+    <a href="http://trhx.top" target="_blank"> TRHX&#39;BLOG </a>
+    - Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a>
+    - Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;
+    - <i class="fab fa-creative-commons"></i>
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="CC BY-NC-SA 4.0 International" target="_blank">CC BY-NC-SA 4.0 International</a>
   </div>
   
+  <div>
   <!-- 网站运行时间 -->
   <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
   <script>
       var now = new Date(); 
       function createtime() { 
-          var grt= new Date("08/10/2018 17:38:00");//在此处修改你的建站时间
+          var grt= new Date("08/10/2018 17:38:00");//建站时间
           now.setTime(now.getTime()+250); 
           days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
           hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
@@ -921,24 +917,22 @@
           mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
           seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
           snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-          document.getElementById("timeDate").innerHTML = "本站已成功存活了 "
+          document.getElementById("timeDate").innerHTML = "本站已勉强存活了 "
           document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
           document.getElementById("times").style.color="#00ccff";
       }
       setInterval("createtime()",250);
   </script>
-  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275909280'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275909280%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-
-  <div>
-      <span id="busuanzi_container_site_pv">
-          <i class="fa fa-user"></i>
-          访问人数：<span id="busuanzi_value_site_uv" style="color:#00ccff"></span>&nbsp; 
-          <span id="busuanzi_container_site_uv"></span>
-          <i class="fa fa-eye"></i>
-          总阅读量：<span id="busuanzi_value_site_pv" style="color:#00ccff"></span>&nbsp;
-      </span> 
-      <i class="fas fa-chart-area"></i>
-      <span class="post-count">字数统计：36.1k</span>
+  <span id="busuanzi_container_site_pv">
+    <i class="fa fa-user"></i>
+    访问人数：<span id="busuanzi_value_site_uv" style="color:#00ccff"></span>&nbsp; 
+    <span id="busuanzi_container_site_uv"></span>
+    <i class="fa fa-eye"></i>
+    总阅读量：<span id="busuanzi_value_site_pv" style="color:#00ccff"></span>&nbsp;
+  </span> 
+    <i class="fas fa-chart-area"></i>
+    <span class="post-count">字数统计：36.1k</span>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275909280'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275909280%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
   </div>
 </footer>
 
