@@ -148,14 +148,14 @@
         <category>实用教程</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>主题个性化</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Markdown 语法&技巧总结]]></title>
     <url>%2F2018%2F08%2F25%2FMarkdown%20%E8%AF%AD%E6%B3%95%26%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[在写博客的时候，我们不希望都是千篇一律的没有色彩，多了解一些 Markdown 语法技巧有利于丰富我们的博客，看起来更有 feel ！ – 插入图片 如果你使用 MarkdownPad 的话就比较方便，可以直接选择插入本地图片或者是网络图片，实质是通过以下代码实现的，小括号里面就是你的图片地址，中括号里面是图片的替代文字，比如上面的图片代码如下： 1![车](https://i.imgur.com/UyEXrBi.jpg) – 插入音乐 打开网页版网易云音乐，选择你准备插入的音乐，点击生成外链播放器，前提是要有版权，不然是无法生成外链播放器的，复制底下的HTML代码 然后将此HTML代码粘贴到你想要放的地方，可自行调节播放器的大小，其中 auto=1 表示打开网页自动播放音乐，auto=0 表示关闭自动播放音乐，比如See You Again (中英文版) - 罗艺恒这首歌曲代码如下： 1&lt;iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&amp;id=32405683&amp;auto=1&amp;height=66"&gt;&lt;/iframe&gt; – 插入视频 高考毕业了我们为下一届的学弟学妹们录制高考加油视频，我担任后期制作，在这里就以该视频为例٩(๑❛ᴗ❛๑)۶，在腾讯视频播放页面找到分享按钮，复制该视频的通用代码（其他视频播放平台也一样）,粘贴到文章中对应位置即可，可根据情况调整视频播放器的大小 1&lt;iframe frameborder="0" width="1040" height="700" src="https://v.qq.com/txp/iframe/player.html?vid=x0643zvgtf7" allowFullScreen="true"&gt;&lt;/iframe&gt; # 未完待续…… #]]></content>
+    <content type="text"><![CDATA[在写博客的时候，我们不希望都是千篇一律的没有色彩，多了解一些 Markdown 语法技巧有利于丰富我们的博客，看起来更有 feel ！ – 插入图片 如果你使用 MarkdownPad 的话就比较方便，可以直接选择插入本地图片或者是网络图片，实质是通过以下代码实现的，小括号里面就是你的图片地址，中括号里面是图片的替代文字，比如上面的图片代码如下：1![车](https://i.imgur.com/UyEXrBi.jpg) – 插入音乐 打开网页版网易云音乐，选择你准备插入的音乐，点击生成外链播放器，前提是要有版权，不然是无法生成外链播放器的，复制底下的HTML代码 然后将此HTML代码粘贴到你想要放的地方，可自行调节播放器的大小，其中 auto=1 表示打开网页自动播放音乐，auto=0 表示关闭自动播放音乐，比如See You Again (中英文版) - 罗艺恒这首歌曲代码如下： 1&lt;iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&amp;id=32405683&amp;auto=1&amp;height=66"&gt;&lt;/iframe&gt; – 插入视频 高考毕业了我们为下一届的学弟学妹们录制高考加油视频，我担任后期制作，在这里就以该视频为例٩(๑❛ᴗ❛๑)۶，在腾讯视频播放页面找到分享按钮，复制该视频的通用代码（其他视频播放平台也一样）,粘贴到文章中对应位置即可，可根据情况调整视频播放器的大小 1&lt;iframe frameborder="0" width="840" height="500" src="https://v.qq.com/txp/iframe/player.html?vid=x0643zvgtf7" allowFullScreen="true"&gt;&lt;/iframe&gt; 未完待续……]]></content>
       <categories>
         <category>实用教程</category>
       </categories>
@@ -179,7 +179,7 @@
   <entry>
     <title><![CDATA[Hello World!]]></title>
     <url>%2F2018%2F08%2F10%2FHello%20World%2F</url>
-    <content type="text"><![CDATA[人类的幸福和欢乐在于奋斗，而最有价值的是为理想而奋斗！ ——— 苏格拉底Human happiness and joy lie in struggle, and what is most valuable is striving for ideals! ——— Socrates]]></content>
+    <content type="text"><![CDATA[人类的幸福和欢乐在于奋斗，而最有价值的是为理想而奋斗！ ——— 苏格拉底 Human happiness and joy lie in struggle, and what is most valuable is striving for ideals! ——— Socrates]]></content>
       <categories>
         <category>Hello World</category>
       </categories>
