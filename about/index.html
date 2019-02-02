@@ -526,7 +526,7 @@
 </header>
 
   <div class='content material'>
-    <p>以下闲置域名低价转让，音译我爱BUG，价格非常美丽，欢迎骚扰：<br><center>52bug.club<br>52bug.xyz<br>52bug.top</center></p>
+    <p>以下闲置域名低价转让，音译我爱BUG，价格非常美丽，给钱就扔，欢迎骚扰：<br><center>52bug.club<br>52bug.xyz<br>52bug.top</center></p>
 
   </div>
 </section>
@@ -773,51 +773,45 @@
     </div>
   
   <br>
-  
+
   <div>
-    Copyright <i class="far fa-copyright"></i> 2018-2019
-    <a href="http://trhx.top" target="_blank"> TRHX&#39;BLOG </a> •
-    <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备19003281号-2</a> •
+    <!-- 网站运行时间 -->
+    <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
+    <script>
+        var now = new Date(); 
+        function createtime() { 
+            var grt= new Date("08/10/2018 17:38:00");//建站时间
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已勉强存活了 "
+            document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+            document.getElementById("times").style.color="#00ccff";
+        }
+        setInterval("createtime()",250);
+    </script> • 
+    <!--<i class="fa fa-user"></i>-->
+    <span id="busuanzi_container_site_uv">访问人数：<span id="busuanzi_value_site_uv" style="color:#00ccff"></span></span> • 
+    <!--<i class="fa fa-eye"></i>-->
+    <span id="busuanzi_container_site_pv">总阅读量：<span id="busuanzi_value_site_pv" style="color:#00ccff"></span></span> • 
+    <!--<i class="fas fa-chart-area"></i>-->
+    <span class="post-count">字数统计：37.9k</span> • 
     <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script>
-  </div>
-  
-  <div>
-    Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a>
-    • Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;
-    • <i class="fab fa-creative-commons"></i>
-    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="CC BY-NC-SA 4.0 International" target="_blank">CC BY-NC-SA 4.0 International</a>
   </div>
 
   <div>
-  <!-- 网站运行时间 -->
-  <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
-  <script>
-      var now = new Date(); 
-      function createtime() { 
-          var grt= new Date("08/10/2018 17:38:00");//建站时间
-          now.setTime(now.getTime()+250); 
-          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-          document.getElementById("timeDate").innerHTML = "本站已勉强存活了 "
-          document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-          document.getElementById("times").style.color="#00ccff";
-      }
-      setInterval("createtime()",250);
-  </script>&nbsp;&nbsp;
-  <span id="busuanzi_container_site_pv">
-    <i class="fa fa-user"></i>
-    访问人数：<span id="busuanzi_value_site_uv" style="color:#00ccff"></span>&nbsp;&nbsp;
-    <span id="busuanzi_container_site_uv"></span>
-    <i class="fa fa-eye"></i>
-    总阅读量：<span id="busuanzi_value_site_pv" style="color:#00ccff"></span>&nbsp;&nbsp;
-  </span> 
-    <i class="fas fa-chart-area"></i>
-    <span class="post-count">字数统计：37.9k</span>
-  </div>
+      Copyright <i class="far fa-copyright"></i> 2018-2019
+      <a href="http://trhx.top" target="_blank"> TRHX&#39;BLOG </a> • 
+      <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备19003281号-2</a> • 
+      Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a>
+      • Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;
+      • <i class="fab fa-creative-commons"></i>
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)许可协议" target="_blank">CC BY-NC-SA 4.0 International</a>
+    </div>
 </footer>
 
     <script>setLoadingBarProgress(80);</script>
