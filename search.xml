@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[免费CDN：jsDeliver+Github]]></title>
+    <url>%2F2019%2F02%2F10%2F%E5%85%8D%E8%B4%B9CDN%EF%BC%9AjsDeliver%2BGithub%2F</url>
+    <content type="text"><![CDATA[本文有参考《jsDeliver+github使用教程，免费好用的cdn》—— By hojun CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。——百度百科 放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDeliver + Github便是免费且好用的CDN，非常适合博客网站使用。 1、新建Github仓库 2、克隆Github仓库到本地 点击 Clone or download，一键复制仓库地址 在本地目录右键 Git Bash Here，执行以下命令： 1git clone 一键复制的仓库地址 3、上传资源 复制需要上传的资源到本地git仓库（注：jsDeliver不支持加载超过20M的资源），在本地git仓库目录下右键 Git Bash Here，执行以下命令：1234git status //查看状态git add . //添加所有文件到暂存区git commit -m &apos;第一次提交&apos; //把文件提交到仓库git push //推送至远程仓库 4、发布仓库 点击release发布 自定义发布版本号 5、通过jsDeliver引用资源 使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径例如：https://cdn.jsdelivr.net/gh/TRHX/CDN@1.0/images/RidingWuhanLichuan01.jpg]]></content>
+      <categories>
+        <category>CDN</category>
+      </categories>
+      <tags>
+        <tag>jsDeliver</tag>
+        <tag>CDN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[新年快乐！]]></title>
     <url>%2F2019%2F02%2F05%2F%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90%2F</url>
     <content type="text"><![CDATA[C printf(&quot;2019，祝大家&quot;); C++ cout&lt;&lt;&quot;一帆风顺&quot;; C# System.Console.WriteLine(&quot;二龙腾飞&quot;) VB Msg(&quot;三羊开泰&quot;) VC MessageBox(&quot;四季平安&quot;); Java System.out.println(&quot;五福临门&quot;); JavaScript alert(&quot;六六大顺&quot;) PHP echo &quot;七星高照&quot;; Python print(&quot;八方来财&quot;) Html &lt;br/&gt;九运当头&lt;br/&gt; Objectivec NSLog(@&quot;十全十美&quot;); QBasic Print &quot;阖家幸福&quot; Asp Response.Write &quot;心想事成&quot; Ruby puts &quot;财源广进&quot; VBScript MsgBox &quot;幸福安康&quot; XML &lt;TextView android:text=&quot;大展宏图&quot; /&gt; LUA print(&quot;学业有成&quot;) Delphi ShowMessage(&#39;万事如意&#39;); shell echo 步步高升 perl print &#39;鸿案齐眉&#39; LISP (format t &quot;身体健康~%&quot;) powerBuilder messagebox（&quot;龙马精神&quot;) COBOL DISPLAY &#39;笑口常开&#39; aswing JOptionPane.showMessageDialog(&quot;happy&quot;,&quot;好运连连&quot;) Android Toast.makeText(getApplicationContext(),&quot;年年有余&quot;,Toast.LENGTH_SHORT).show() flex Alert.show(&quot;大吉大利&quot;); Foxpro ?[家庭幸福！] iapp tw(&quot;瑞气盈门&quot;) DOS批处理 echo 鹏程万里 易语言 调试输出(“万事亨通”) Clojure (println &quot;年年有今昔&quot;) verilog/systemverilog/e $display(&quot;岁岁有今朝&quot;) as trace(&quot;祝大家新年快乐！&quot;);]]></content>
