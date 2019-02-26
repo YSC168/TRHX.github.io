@@ -1,0 +1,1112 @@
+<!--
+
+               .@@@@@@@@@@@@@@@@^ .@@@@@@@@@@@\`    .@@@@@.   =@@@@^ .@@@@@@.   .@@@@@^      =@@@@@^         ./@@@@@@@@\.                      =@@@@@@@@@@@].     =@@@@O             ./@@@@@@@O`        .]@@@@@@@@].
+               .@@@@@@@@@@@@@@@@^ .@@@@@@@@@@@@@@`  .@@@@@.   =@@@@^  .@@@@@@. .@@@@@^       =@@@@@.       ./@@@@@@@@@@@@`                     =@@@@@@@@@@@@@^    =@@@@O            /@@@@@@@@@@@@.    ./@@@@@@@@@@@/
+               .[[[[[\@@@@@[[[[[` .@@@@@...,\@@@@@. .@@@@@.   =@@@@^   .\@@@@\./@@@@^        ,@@@@@.       =@@@@@`..[\@/.                      =@@@@/...\@@@@@    =@@@@O           =@@@@@/.,@@@@@@.  .@@@@@@/..,\/.
+                     =@@@@O       .@@@@@.   .@@@@@. .@@@@@`.../@@@@^     \@@@@@@@@@`         .@@@@/        =@@@@@@].                           =@@@@^  ./@@@@^    =@@@@O          .@@@@@^   .@@@@@^  /@@@@@.
+                     =@@@@O       .@@@@@]]]/@@@@@/  .@@@@@@@@@@@@@@^      =@@@@@@@`           =@@@^        .\@@@@@@@@@@]                       =@@@@@@@@@@@/.     =@@@@O          =@@@@@.    =@@@@O .@@@@@^  /@@@@@@^
+                     =@@@@O       .@@@@@@@@@@@@@/.  .@@@@@@@@@@@@@@^      /@@@@@@@`           ,@@@.          .\@@@@@@@@@@^                     =@@@@@@@@@@@@@\.   =@@@@O          =@@@@@.    =@@@@O .@@@@@^  O@@@@@@^
+                     =@@@@O       .@@@@@@@@@@@@^    .@@@@@.   =@@@@^    ./@@@@@@@@@`                             .[\@@@@@@.                    =@@@@^    =@@@@^   =@@@@O          .@@@@@^    @@@@@^  @@@@@\  ,[\@@@@^
+                     =@@@@O       .@@@@@. ,@@@@@^   .@@@@@.   =@@@@^   .@@@@@`,@@@@@^                       ,@@\`...=@@@@@.                    =@@@@^  .,@@@@@^   =@@@@O.........  =@@@@@`../@@@@@.  ,@@@@@@]..=@@@@^
+                     =@@@@O       .@@@@@.  ,@@@@@\  .@@@@@.   =@@@@^  ,@@@@@^  ,@@@@@\.                   .@@@@@@@@@@@@@@^                     =@@@@@@@@@@@@@@.   =@@@@@@@@@@@@@.  .\@@@@@@@@@@@@`    ,@@@@@@@@@@@@@^
+                     =@@@@O       .@@@@@.   ,@@@@@\ .@@@@@.   =@@@@^ ,@@@@@^    ,@@@@@\.                   .[@@@@@@@@@@[.                      =@@@@@@@@@@@/`     =@@@@@@@@@@@@@.    .\@@@@@@@@`        ,\@@@@@@@@/`
+
+-->                                                                          
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Python3 自学笔记 C08 | TRHX&#39;S BLOG</title>
+  
+  
+  <meta name="description" content="Python3 【类】, 一个大学生用于自学的个人博客">
+  
+
+  <link rel="alternate" href="/atom.xml" title="TRHX'S BLOG">
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#f24e32">
+  
+  <meta name="msapplication-TileColor" content="#f24e32">
+  
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/browserconfig.xml">
+  
+  
+  <!-- link -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+
+  
+  
+  <link rel="shortcut icon" href="https://trhx.top/images/trhx.png"
+   type="image/x-icon"
+  
+  
+  
+  >
+  
+  <link rel="icon" href="https://trhx.top/images/trhx.png"
+   type="image/x-icon"
+   sizes="32x32"
+  
+  
+  >
+  
+  <link rel="apple-touch-icon" href="https://trhx.top/images/trhx.png"
+   type="image/png"
+   sizes="180x180"
+  
+  
+  >
+  
+  <link rel="mask-icon" href="https://trhx.top/images/trhx.png"
+  
+  
+  
+  
+   color="#f24e32">
+  
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/site.webmanifest"
+  
+  
+  
+  
+  >
+  
+  
+
+  
+  <link rel="stylesheet" href="/style.css">
+  
+
+  
+
+
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?68019af241ffe13fed16341dc16acd4f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  
+</head>
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar" class="material"></div>
+</div>
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header material">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          TRHX'S BLOG
+        
+      </a>
+			<div class='menu'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a id="home"
+								 class="nav flat-box" href="/">
+									<i class='fas fa-home fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="archives"
+								 class="nav flat-box" href="/archives/">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="Message Board"
+								 class="nav flat-box" href="/Message Board/">
+									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="https:love109.cn"
+								 class="nav flat-box" href="https://love109.cn/">
+									<i class='fas fa-heartbeat fa-fw'></i>&nbsp;情侣博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="https:blog.csdn.netqq_36759224"
+								 class="nav flat-box" href="https://blog.csdn.net/qq_36759224/">
+									<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="about"
+								 class="nav flat-box" href="/about/">
+									<i class='fas fa-user-tie fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="atom.xml"
+								 class="nav flat-box" href="/atom.xml">
+									<i class='fas fa-rss fa-fw'></i>&nbsp;RSS
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+				<li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="home" class="nav flat-box" href="/">
+											<i class='fas fa-home fa-fw'></i>&nbsp;主页
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="archives" class="nav flat-box" href="/archives/">
+											<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="Message Board" class="nav flat-box" href="/Message Board/">
+											<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="https:love109.cn" class="nav flat-box" href="https://love109.cn/">
+											<i class='fas fa-heartbeat fa-fw'></i>&nbsp;情侣博客
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="https:blog.csdn.netqq_36759224" class="nav flat-box" href="https://blog.csdn.net/qq_36759224/">
+											<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="about" class="nav flat-box" href="/about/">
+											<i class='fas fa-user-tie fa-fw'></i>&nbsp;关于
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="atom.xml" class="nav flat-box" href="/atom.xml">
+											<i class='fas fa-rss fa-fw'></i>&nbsp;RSS
+										</a>
+                  </li>
+              
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
+<section class='meta'>
+  
+  <div class="meta" id="header-meta">
+    
+      
+          <h1 class="title">Python3 自学笔记 C08</h1>
+      
+    
+
+    
+      <time class="metatag time">
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-11-10
+      </time>
+    
+
+    
+      
+    
+    <div class='metatag cats'>
+        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;<a class="categories" href="/categories/Python/">Python</a>
+    </div>
+
+
+    
+
+    
+      
+        <div class="metatag browse busuanzi"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+          &nbsp;<span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </div>
+      
+    
+
+    
+
+  </div>
+</section>
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <center><font color="#4094C7" size="4">Python3 自学笔记第八章【类】</font></center>
+
+<hr>
+<h1 id="8-1-创建类和使用类"><a href="#8-1-创建类和使用类" class="headerlink" title=" - 8.1 创建类和使用类  "></a><font color="#FF0000"> - 8.1 创建类和使用类  </font></h1><p>创建一个表示小狗的简单类Dog，根据Dog类创建的每个实例都将储存名字和年龄，赋予每条小狗蹲下（sit()）和打滚（roll_over()）的能力：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line">        <span class="comment">#初始化属性name和age</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sit</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#模拟小狗被命令时蹲下</span></span><br><span class="line">        print(self.name.title() + <span class="string">" is now sitting."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">roll_over</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#模拟小狗被命令时打滚</span></span><br><span class="line">        print(self.name.title() + <span class="string">" rolled over!"</span>)</span><br></pre></td></tr></table></figure>
+<p>方法<strong>init</strong>()：类中的函数称为<font color="#FF0000">方法</font>，本例中<font color="#FF0000">方法<strong>init</strong>()</font>是一个特殊的方法，每当我们根据Dog类创建新实例时，Python都会自动运行它，在方法的名称中，开头和结尾各有两个下划线，这是一种约定，避免Python默认方法与普通方法发生名称冲突，例子中将<font color="#FF0000">方法<strong>init</strong>()</font>定义成了包含三个形参：self、name和age，在这个方法的定义中，形参self必不可少，还必须位于其他形参的前面，Python调用<font color="#FF0000">方法<strong>init</strong>()</font>来创建Dog实例时，将自动传入实参self，每个与类相关联的方法调用都自动传递实参self，它是一个指向实例本身的引用，让实例能够访问类中的属性和方法，我们创建Dog实例时，Python将调用Dog类的<font color="#FF0000">方法<strong>init</strong>()</font>，我们将通过实参向Dog()传递名字和年龄；self会自动传递，因此我们不需要传递它，每当我们根据Dog类创建实例时，都只需要给最后两个形参（name和age）提供值；定义的两个变量都有前缀self，以self为前缀的变量都可以供类中的所有方法使用，还可以通过类的任何实例来访问这些变量。self.name = name 获取储存在形参name中的值，并将其储存到变量name中，然后该变量被关联到当前创建的实例。self.age = age 的作用与此类似，像这样可通过实例访问的变量称为<font color="#FF0000">属性</font>；Dog还定义了另外两种方法：sit() 和 roll_over() ，由于这些方法不需要额外的信息，如名字和年龄，因此它们只有一个形参self</p>
+<p>在Python 2.7中创建类时，需要在括号内包含单词object：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span><span class="params">(object)</span>:</span></span><br><span class="line">   ---snip---</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-2-根据类创建实例"><a href="#8-2-根据类创建实例" class="headerlink" title="- 8.2 根据类创建实例"></a><font color="#FF0000">- 8.2 根据类创建实例</font></h1><p>访问属性：创建一个表示特定小狗的实例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line">        <span class="comment">#初始化属性name和age</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sit</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#模拟小狗被命令时蹲下</span></span><br><span class="line">        print(self.name.title() + <span class="string">" is now sitting."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">roll_over</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#模拟小狗被命令时打滚</span></span><br><span class="line">        print(self.name.title() + <span class="string">" rolled over!"</span>)</span><br><span class="line"></span><br><span class="line">my_dog = Dog(<span class="string">'willie'</span>,<span class="number">6</span>)</span><br><span class="line">print(<span class="string">"My dog's name is "</span> + my_dog.name.title() + <span class="string">"."</span>)</span><br><span class="line">print(<span class="string">"My dog is "</span> + str(my_dog.age) + <span class="string">" years old."</span>)</span><br></pre></td></tr></table></figure>
+<p>让Python创建一条名字为’willie’，年龄为6的小狗，Python使用实参’willie’和6调用Dog类中的方法<strong>init</strong>()。方法<strong>init</strong>()创建一个表示特定小狗的示例，并使用我们提供的值来设置属性name和age；在访问实例的属性时，可使用句点表示法，比如该例子中的 my_dog.name；最终程序输出结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">My dog<span class="string">'s name is Willie.</span></span><br><span class="line"><span class="string">My dog is 6 years old.</span></span><br></pre></td></tr></table></figure>
+<p>调用方法：根据Dog类创建实例后，就可以使用句点表示法来调用Dog类中定义的任何方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line">        <span class="comment">#初始化属性name和age</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sit</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#模拟小狗被命令时蹲下</span></span><br><span class="line">        print(self.name.title() + <span class="string">" is now sitting."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">roll_over</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#模拟小狗被命令时打滚</span></span><br><span class="line">        print(self.name.title() + <span class="string">" rolled over!"</span>)</span><br><span class="line"></span><br><span class="line">my_dog = Dog(<span class="string">'willie'</span>,<span class="number">6</span>)</span><br><span class="line">my_dog.sit()</span><br><span class="line">my_dog.roll_over()</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Willie <span class="keyword">is</span> now sitting.</span><br><span class="line">Willie rolled over!</span><br></pre></td></tr></table></figure></p>
+<p>创建多个实例：可按需求根据类创建任意数量的实例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line">        <span class="comment">#初始化属性name和age</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sit</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#模拟小狗被命令时蹲下</span></span><br><span class="line">        print(self.name.title() + <span class="string">" is now sitting."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">roll_over</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#模拟小狗被命令时打滚</span></span><br><span class="line">        print(self.name.title() + <span class="string">" rolled over!"</span>)</span><br><span class="line"></span><br><span class="line">my_dog = Dog(<span class="string">'willie'</span>,<span class="number">6</span>)</span><br><span class="line">your_dog = Dog(<span class="string">'lucy'</span>,<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"My dog's name is "</span> + my_dog.name.title() + <span class="string">"."</span>)</span><br><span class="line">print(<span class="string">"My dog is "</span> + str(my_dog.age) + <span class="string">" years old."</span>)</span><br><span class="line">my_dog.sit()</span><br><span class="line"></span><br><span class="line">print(<span class="string">"\nYour dog's name is "</span> + your_dog.name.title() + <span class="string">"."</span>)</span><br><span class="line">print(<span class="string">"Your dog is "</span> + str(your_dog.age) + <span class="string">" years old."</span>)</span><br><span class="line">your_dog.roll_over()</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">My dog<span class="string">'s name is Willie.</span></span><br><span class="line"><span class="string">My dog is 6 years old.</span></span><br><span class="line"><span class="string">Willie is now sitting.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Your dog'</span>s name <span class="keyword">is</span> Lucy.</span><br><span class="line">Your dog <span class="keyword">is</span> <span class="number">8</span> years old.</span><br><span class="line">Lucy rolled over!</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-3-使用类和实例"><a href="#8-3-使用类和实例" class="headerlink" title=" - 8.3 使用类和实例 "></a><font color="#FF0000"> - 8.3 使用类和实例 </font></h1><p>创建一个表示汽车的类，其中储存了有关汽车的信息，还有一个汇总这些信息的方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">		</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line">		</span><br><span class="line">my_new_car = Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-3-1-给属性指定默认值"><a href="#8-3-1-给属性指定默认值" class="headerlink" title=" - 8.3.1 给属性指定默认值  "></a><font color="#FF0000"> - 8.3.1 给属性指定默认值  </font></h1><p>类中的每个属性都必须有初始值，如果我们设置了默认值，就无需包含为它提供初始值的形参，下面为8.3的例子添加一个 odometer_reading 的属性，其初值是0，添加一个 odometer_reading() 方法，用于读取汽车的里程表：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">		</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line">		</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read_odomter</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"This car has "</span> + str(self.odometer_reading) + <span class="string">" miles on it."</span>)</span><br><span class="line"></span><br><span class="line">my_new_car = Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br><span class="line">my_new_car.read_odomter()</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br><span class="line">This car has <span class="number">0</span> miles on it.</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-3-2-修改属性的值"><a href="#8-3-2-修改属性的值" class="headerlink" title=" - 8.3.2 修改属性的值  "></a><font color="#FF0000"> - 8.3.2 修改属性的值  </font></h1><p> 可以以三种不同的方式修改属性的值：直接通过实例进行修改；通过方法进行设置；通过方法进行递增（增加特定的值）</p>
+<p>直接修改属性的值：<br>要修改属性的值，最简单的方法就是通过实例直接访问它，将8.3.1中的例子第7行代码 <code>self.odometer_reading = 0</code> 改为 <code>self.odometer_reading = 66</code>，输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">2018</span> Audi A9</span><br><span class="line">This car has <span class="number">66</span> miles on it.</span><br></pre></td></tr></table></figure></p>
+<p>通过方法修改属性的值：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read_odomter</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"This car has "</span> + str(self.odometer_reading) + <span class="string">" miles on it."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update_odometer</span><span class="params">(self,mileage)</span>:</span></span><br><span class="line">        self.odometer_reading = mileage</span><br><span class="line">        </span><br><span class="line">my_new_car = Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br><span class="line"></span><br><span class="line">my_new_car.update_odometer(<span class="number">66</span>)</span><br><span class="line">my_new_car.read_odomter()</span><br></pre></td></tr></table></figure></p>
+<p>对Car类所做的唯一修改就是在第17、18行添加了方法 update_odometer()，这个方法接受一个里程值，并将其储存到 self.odometer_reading 中，在倒数第二行，调用了 update_odometer()，并向它提供了一个实参（该实参对应于方法定义中的形参mileage），它将里程数设置为66，而方法 read_odomter() 打印该读数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br><span class="line">This car has <span class="number">66</span> miles on it.</span><br></pre></td></tr></table></figure></p>
+<p>可对方法 update_odometer() 进行扩展，使其能够在修改里程表读数时做一些额外的工作，添加一些逻辑，禁止任何人将里程表读数往回调：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">50</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read_odomter</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"This car has "</span> + str(self.odometer_reading) + <span class="string">" miles on it."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update_odometer</span><span class="params">(self,mileage)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> mileage &gt;= self.odometer_reading:</span><br><span class="line">            self.odometer_reading = mileage</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"You can't roll back an odometer!"</span>)</span><br><span class="line">        </span><br><span class="line">my_new_car = Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br><span class="line"></span><br><span class="line">my_new_car.update_odometer(<span class="number">33</span>)</span><br><span class="line">my_new_car.read_odomter()</span><br></pre></td></tr></table></figure></p>
+<p>修改 self.odometer_reading 的默认值为50，当我们再次尝试修改其值为33时，由于小于原来的里程，因此无法修改：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br><span class="line">You can<span class="string">'t roll back an odometer!</span></span><br><span class="line"><span class="string">This car has 50 miles on it.</span></span><br></pre></td></tr></table></figure>
+<p>通过方法对属性的值进行递增：<br>有时候需要将属性值递增到特定的量，而不是将其设置为全新的值，假设我们购买了一辆二手车，从购买到登记期间增加了100英里的里程，下面的方法让我们能够传递这个增量，并相应地增加里程表读数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read_odomter</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"This car has "</span> + str(self.odometer_reading) + <span class="string">" miles on it."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update_odometer</span><span class="params">(self,mileage)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> mileage &gt;= self.odometer_reading:</span><br><span class="line">            self.odometer_reading = mileage</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"You can't roll back an odometer!"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">increment_odometer</span><span class="params">(self,miles)</span>:</span></span><br><span class="line">        <span class="comment">#将里程表读数增加指定的量</span></span><br><span class="line">        self.odometer_reading += miles</span><br><span class="line">        </span><br><span class="line">my_new_car = Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br><span class="line"></span><br><span class="line">my_new_car.update_odometer(<span class="number">6600</span>)</span><br><span class="line">my_new_car.read_odomter()</span><br><span class="line"></span><br><span class="line">my_new_car.increment_odometer(<span class="number">100</span>)</span><br><span class="line">my_new_car.read_odomter()</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br><span class="line">This car has <span class="number">6600</span> miles on it.</span><br><span class="line">This car has <span class="number">6700</span> miles on it.</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-4-继承"><a href="#8-4-继承" class="headerlink" title=" - 8.4 继承 "></a><font color="#FF0000"> - 8.4 继承 </font></h1><p>编写类时，并非总是要从空白开始，如果要编写的类是另一个现成类的特殊版本，可使用<font color="#FF0000">继承</font>，一个类<font color="#FF0000">继承</font>另一个类时，它自动获得另一个类的所有属性和方法；原有的类称为<font color="#FF0000">父类</font>，而新类称为<font color="#FF0000">子类</font>，子类<font color="#FF0000">继承</font>了其父类的所有属性和方法，同时还可以定义自己的属性和方法；继承的通用语法大致如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName1</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name1,name2,name3)</span>:</span></span><br><span class="line">        --snip--</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName2</span><span class="params">(ClassName1)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name1,name2,name3)</span>:</span></span><br><span class="line">        super().__init__(name1,name2,name3)</span><br><span class="line">        --snip--</span><br></pre></td></tr></table></figure>
+<h1 id="8-4-1-子类的方法init"><a href="#8-4-1-子类的方法init" class="headerlink" title=" - 8.4.1 子类的方法init()  "></a><font color="#FF0000"> - 8.4.1 子类的方法<strong>init</strong>()  </font></h1> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span><span class="params">(Car)</span>:</span></span><br><span class="line">    <span class="comment">#电动车的独特之处</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        <span class="comment">#初始化父类的属性</span></span><br><span class="line">        super().__init__(make,model,year)</span><br><span class="line"></span><br><span class="line">my_new_car = ElectricCar(<span class="string">'tesla'</span>,<span class="string">'model s'</span>,<span class="string">'2016'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br></pre></td></tr></table></figure>
+<p>创建子类时，父类必须包含在当前文件中，且位于子类前面，定义了子类 ElectricCar，定义子类时，必须在括号内指定父类名称，方法 <code>__init__()</code>接受创建Car实例所需信息，super() 是一个特殊的函数，帮助Python将父类和子类关联起来，让Python调用 ElectricCar 的父类的方法  <code>__init__()</code>，让 ElectricCar 实例包含父类的所有属性，父类也称为超类（superclass），程序输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2016</span> Tesla Model S</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-4-2-Python-2-7-中的继承"><a href="#8-4-2-Python-2-7-中的继承" class="headerlink" title=" - 8.4.2 Python 2.7 中的继承  "></a><font color="#FF0000"> - 8.4.2 Python 2.7 中的继承  </font></h1><p>在Python 2.7中，ElectricCar类的定义类似于下面这样：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        --snip--</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span><span class="params">(Car)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        super(ElectricCar,self).__init__(make,model,year)</span><br><span class="line">        --snip--</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-4-3-给子类定义属性和方法"><a href="#8-4-3-给子类定义属性和方法" class="headerlink" title=" - 8.4.3 给子类定义属性和方法  "></a><font color="#FF0000"> - 8.4.3 给子类定义属性和方法  </font></h1><p>  让一个类继承另一个类后，可添加区分子类和父类所需的新属性和方法，下面添加一个电动车特有的属性（battery），以及一个描述该属性的方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span><span class="params">(Car)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        super().__init__(make,model,year)</span><br><span class="line">        self.battery_size = <span class="number">80</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">describe_battery</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"This car has a "</span> + str(self.battery_size) + <span class="string">"-KWh battery."</span>)</span><br><span class="line"></span><br><span class="line">my_new_car = ElectricCar(<span class="string">'tesla'</span>,<span class="string">'model s'</span>,<span class="string">'2016'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br><span class="line">my_new_car.describe_battery()</span><br></pre></td></tr></table></figure>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2016</span> Tesla Model S</span><br><span class="line">This car has a <span class="number">80</span>-KWh battery.</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-4-4-重写父类的方法"><a href="#8-4-4-重写父类的方法" class="headerlink" title=" - 8.4.4 重写父类的方法  "></a><font color="#FF0000"> - 8.4.4 重写父类的方法  </font></h1><p>  要重写父类的方法，只需要在子类中定义一个与要重写的父类方法同名的方法即可，这样，Python将不会考虑这个父类的方法，而只关心在子类中定义的相应方法，假设Car类有一个名为 fill_gas_tank() 的方法，对于电动车来说毫无意义，因此可以重写它：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span><span class="params">(Car)</span>:</span></span><br><span class="line">    --snip--</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fill_gas_tank</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"This car doesn't need a gas tank!"</span>)</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-4-5-将实例用作属性"><a href="#8-4-5-将实例用作属性" class="headerlink" title=" - 8.4.5 将实例用作属性  "></a><font color="#FF0000"> - 8.4.5 将实例用作属性  </font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Battery</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#一次模拟电动车电瓶的简单尝试</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,battery_size=<span class="number">70</span>)</span>:</span></span><br><span class="line">        <span class="comment">#初始化电瓶的属性</span></span><br><span class="line">        self.battery_size = battery_size</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">describe_battery</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条描述电瓶容量的消息</span></span><br><span class="line">        print(<span class="string">"This car has a "</span> + str(self.battery_size) + <span class="string">"-KWh battery."</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span><span class="params">(Car)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        super().__init__(make,model,year)</span><br><span class="line">        self.battery = Battery()</span><br><span class="line"></span><br><span class="line">my_new_car = ElectricCar(<span class="string">'tesla'</span>,<span class="string">'model s'</span>,<span class="string">'2016'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br><span class="line">my_new_car.battery.describe_battery()</span><br></pre></td></tr></table></figure>
+<p>输出结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2016</span> Tesla Model S</span><br><span class="line">This car has a <span class="number">70</span>-KWh battery.</span><br></pre></td></tr></table></figure>
+<p>看起来似乎做了多余的工作，但现在我们可以对电瓶添加更多的描述，而且不会导致 ElectricCar 类混乱不堪，下面再给Battery添加一个方法，使其能够根据电瓶容量报告汽车的续航里程：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Battery</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#一次模拟电动车电瓶的简单尝试</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,battery_size=<span class="number">70</span>)</span>:</span></span><br><span class="line">        <span class="comment">#初始化电瓶的属性</span></span><br><span class="line">        self.battery_size = battery_size</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">describe_battery</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条描述电瓶容量的消息</span></span><br><span class="line">        print(<span class="string">"This car has a "</span> + str(self.battery_size) + <span class="string">"-KWh battery."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_range</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条消息，指出电瓶的续航里程</span></span><br><span class="line">        <span class="keyword">if</span> self.battery_size == <span class="number">70</span>:</span><br><span class="line">            range = <span class="number">240</span></span><br><span class="line">        <span class="keyword">elif</span> self.battery_size == <span class="number">90</span>:</span><br><span class="line">            range = <span class="number">280</span></span><br><span class="line">        message = <span class="string">"This car can go approximately "</span> + str(range)</span><br><span class="line">        message += <span class="string">" miles on a full charge."</span></span><br><span class="line">        print(message)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span><span class="params">(Car)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        super().__init__(make,model,year)</span><br><span class="line">        self.battery = Battery()</span><br><span class="line"></span><br><span class="line">my_new_car = ElectricCar(<span class="string">'tesla'</span>,<span class="string">'model s'</span>,<span class="string">'2016'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br><span class="line">my_new_car.battery.describe_battery()</span><br><span class="line">my_new_car.battery.get_range()</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2016</span> Tesla Model S</span><br><span class="line">This car has a <span class="number">70</span>-KWh battery.</span><br><span class="line">This car can go approximately <span class="number">240</span> miles on a full charge.</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-5-导入类"><a href="#8-5-导入类" class="headerlink" title=" - 8.5 导入类  "></a><font color="#FF0000"> - 8.5 导入类  </font></h1><p>Python允许将类储存在模块中，然后在主程序中导入所需的模块</p>
+<h1 id="8-5-1-导入单个类"><a href="#8-5-1-导入单个类" class="headerlink" title=" - 8.5.1 导入单个类  "></a><font color="#FF0000"> - 8.5.1 导入单个类  </font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#car.py</span></span><br><span class="line"><span class="comment">#一个用于表示汽车的类</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        <span class="comment">#初始化描述汽车的属性</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#返回整洁的描述性名称</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read_odomter</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条消息，指出汽车的里程</span></span><br><span class="line">        print(<span class="string">"This car has "</span> + str(self.odometer_reading) + <span class="string">" miles on it."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update_odometer</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#将里程表读数设置为指定的值，拒绝将里程表往回拨</span></span><br><span class="line">        <span class="keyword">if</span> mileage &gt;= self.odometer_reading:</span><br><span class="line">            self.odometer_reading = mileage</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"You can't roll back an odometer!"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">increment_odometer</span><span class="params">(self,miles)</span>:</span></span><br><span class="line">        <span class="comment">#将里程表读数增加指定的量</span></span><br><span class="line">        self.odometer_reading += miles</span><br></pre></td></tr></table></figure>
+<p>创建另一个文件——my_car.py，在其中导入Car类并创建其实例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#my_car.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> car <span class="keyword">import</span> Car</span><br><span class="line"></span><br><span class="line">my_new_car = Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_new_car.get_descriptive_name())</span><br><span class="line"></span><br><span class="line">my_new_car.odometer_reading = <span class="number">23</span></span><br><span class="line">my_new_car.read_odometer()</span><br></pre></td></tr></table></figure></p>
+<p>import语句让Python打开模块car，并导入其中的Car类，输出结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br><span class="line">This car has <span class="number">23</span> miles on it.</span><br></pre></td></tr></table></figure>
+<h1 id="8-5-2-在一个模块中储存多个类"><a href="#8-5-2-在一个模块中储存多个类" class="headerlink" title=" - 8.5.2 在一个模块中储存多个类  "></a><font color="#FF0000"> - 8.5.2 在一个模块中储存多个类  </font></h1><p>将类Battery和ElectricCar都加入到模块car.py中：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#car.py</span></span><br><span class="line"><span class="comment">#一组用于表示燃油汽车和电动汽车的类</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        <span class="comment">#初始化描述汽车的属性</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#返回整洁的描述性名称</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read_odometer</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条消息，指出汽车的里程</span></span><br><span class="line">        print(<span class="string">"This car has "</span> + str(self.odometer_reading) + <span class="string">" miles on it."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update_odometer</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#将里程表读数设置为指定的值，拒绝将里程表往回拨</span></span><br><span class="line">        <span class="keyword">if</span> mileage &gt;= self.odometer_reading:</span><br><span class="line">            self.odometer_reading = mileage</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"You can't roll back an odometer!"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">increment_odometer</span><span class="params">(self,miles)</span>:</span></span><br><span class="line">        <span class="comment">#将里程表读数增加指定的量</span></span><br><span class="line">        self.odometer_reading += miles</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Battery</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#一次模拟电动车电瓶的简单尝试</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,battery_size=<span class="number">70</span>)</span>:</span></span><br><span class="line">        <span class="comment">#初始化电瓶的属性</span></span><br><span class="line">        self.battery_size = battery_size</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">describe_battery</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条描述电瓶容量的消息</span></span><br><span class="line">        print(<span class="string">"This car has a "</span> + str(self.battery_size) + <span class="string">"-KWh battery."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_range</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条消息，指出电瓶的续航里程</span></span><br><span class="line">        <span class="keyword">if</span> self.battery_size == <span class="number">70</span>:</span><br><span class="line">            range = <span class="number">240</span></span><br><span class="line">        <span class="keyword">elif</span> self.battery_size == <span class="number">90</span>:</span><br><span class="line">            range = <span class="number">280</span></span><br><span class="line">        message = <span class="string">"This car can go approximately "</span> + str(range)</span><br><span class="line">        message += <span class="string">" miles on a full charge."</span></span><br><span class="line">        print(message)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span><span class="params">(Car)</span>:</span></span><br><span class="line">    <span class="comment">#模拟电动车的独特之处</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        <span class="comment">#初始化父类的属性，再初始化电动车特有的属性</span></span><br><span class="line">        super().__init__(make,model,year)</span><br><span class="line">        self.battery = Battery()</span><br></pre></td></tr></table></figure></p>
+<p>新建一个my_electric_car.py的文件，导入ElectricCar类，并创建一辆电动车：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#my_electric_car.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> car <span class="keyword">import</span> ElectricCar</span><br><span class="line"></span><br><span class="line">my_tesla = ElectricCar(<span class="string">'tesla'</span>,<span class="string">'model s'</span>,<span class="string">'2016'</span>)</span><br><span class="line"></span><br><span class="line">print(my_tesla.get_descriptive_name())</span><br><span class="line">my_tesla.battery.describe_battery()</span><br><span class="line">my_tesla.battery.get_range()</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2016</span> Tesla Model S</span><br><span class="line">This car has a <span class="number">70</span>-KWh battery.</span><br><span class="line">This car can go approximately <span class="number">240</span> miles on a full charge.</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-5-3-从一个模块中导入多个类"><a href="#8-5-3-从一个模块中导入多个类" class="headerlink" title=" - 8.5.3 从一个模块中导入多个类  "></a><font color="#FF0000"> - 8.5.3 从一个模块中导入多个类  </font></h1><p>  可根据需要在程序文件中导入任意数量的类，假如我们要在同一个程序中创建普通汽车和电动汽车，就需要将类Car和ElectricCar类都导入，多个类之间用逗号进行分隔：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#my_car.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> car <span class="keyword">import</span> Car,ElectricCar</span><br><span class="line"></span><br><span class="line">my_audi = Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_audi.get_descriptive_name())</span><br><span class="line"></span><br><span class="line">my_tesla = ElectricCar(<span class="string">'tesla'</span>,<span class="string">'model s'</span>,<span class="string">'2016'</span>)</span><br><span class="line">print(my_tesla.get_descriptive_name())</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br><span class="line"><span class="number">2016</span> Tesla Model S</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-5-4-导入整个模块"><a href="#8-5-4-导入整个模块" class="headerlink" title=" - 8.5.4 导入整个模块  "></a><font color="#FF0000"> - 8.5.4 导入整个模块  </font></h1><p>导入整个模块后，需要使用句点表示法访问需要的类：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#my_car.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> car</span><br><span class="line"></span><br><span class="line">my_audi = car.Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_audi.get_descriptive_name())</span><br><span class="line"></span><br><span class="line">my_tesla = car.ElectricCar(<span class="string">'tesla'</span>,<span class="string">'model s'</span>,<span class="string">'2016'</span>)</span><br><span class="line">print(my_tesla.get_descriptive_name())</span><br></pre></td></tr></table></figure></p>
+<p>我们导入了整个car模块，需要使用语法 <code>module_name.class_name</code> 访问需要的类，程序输出结果与8.5.3一致：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br><span class="line"><span class="number">2016</span> Tesla Model S</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-5-5-导入模块中的所有类"><a href="#8-5-5-导入模块中的所有类" class="headerlink" title=" - 8.5.5 导入模块中的所有类  "></a><font color="#FF0000"> - 8.5.5 导入模块中的所有类  </font></h1><p>  要导入模块中的所有类，可使用以下语法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure></p>
+<p>这种导入方法是不推荐的，没有明确指出你使用了模块中的哪些类，还可能引发名称方面的困惑，需要从一个模块中导入很多类时，最好导入整个模块，并使用 <code>module_name.class_name</code> 语法来访问类</p>
+<h1 id="8-5-6-在一个模块中导入另一个模块"><a href="#8-5-6-在一个模块中导入另一个模块" class="headerlink" title=" - 8.5.6 在一个模块中导入另一个模块  "></a><font color="#FF0000"> - 8.5.6 在一个模块中导入另一个模块  </font></h1><p>  有时候需要将类分散到多个模块当中，以免模块太大，或者在同一个模块中储存不相关的类，将类储存在多个模块中时，一个模块中的类可能会依赖于另一个模块中的类，这种情况下，我们可以在前一个模块中导入必要的类，以下例子中，将Car类储存在一个模块当中，并将ElectricCar和Battery类储存在另一个模块当中，将第二个模块命名为electric_car.py，并将ElectricCar和Battery类复制到这个模块中：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#electric_car.py</span></span><br><span class="line"><span class="comment">#一组可用于表示电动汽车的类</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> car <span class="keyword">import</span> Car</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Battery</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#一次模拟电动车电瓶的简单尝试</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,battery_size=<span class="number">70</span>)</span>:</span></span><br><span class="line">        <span class="comment">#初始化电瓶的属性</span></span><br><span class="line">        self.battery_size = battery_size</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">describe_battery</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条描述电瓶容量的消息</span></span><br><span class="line">        print(<span class="string">"This car has a "</span> + str(self.battery_size) + <span class="string">"-KWh battery."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_range</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条消息，指出电瓶的续航里程</span></span><br><span class="line">        <span class="keyword">if</span> self.battery_size == <span class="number">70</span>:</span><br><span class="line">            range = <span class="number">240</span></span><br><span class="line">        <span class="keyword">elif</span> self.battery_size == <span class="number">90</span>:</span><br><span class="line">            range = <span class="number">280</span></span><br><span class="line">        message = <span class="string">"This car can go approximately "</span> + str(range)</span><br><span class="line">        message += <span class="string">" miles on a full charge."</span></span><br><span class="line">        print(message)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span><span class="params">(Car)</span>:</span></span><br><span class="line">    <span class="comment">#模拟电动车的独特之处</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        <span class="comment">#初始化父类的属性，再初始化电动车特有的属性</span></span><br><span class="line">        super().__init__(make,model,year)</span><br><span class="line">        self.battery = Battery()</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#car.py</span></span><br><span class="line"><span class="comment">#一个可用于表示汽车的类</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span><span class="params">()</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,make,model,year)</span>:</span></span><br><span class="line">        <span class="comment">#初始化描述汽车的属性</span></span><br><span class="line">        self.make = make</span><br><span class="line">        self.model = model</span><br><span class="line">        self.year = year</span><br><span class="line">        self.odometer_reading = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_descriptive_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#返回整洁的描述性名称</span></span><br><span class="line">        long_name = str(self.year) + <span class="string">' '</span> + self.make + <span class="string">' '</span> +self.model</span><br><span class="line">        <span class="keyword">return</span> long_name.title()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read_odometer</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#打印一条消息，指出汽车的里程</span></span><br><span class="line">        print(<span class="string">"This car has "</span> + str(self.odometer_reading) + <span class="string">" miles on it."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update_odometer</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#将里程表读数设置为指定的值，拒绝将里程表往回拨</span></span><br><span class="line">        <span class="keyword">if</span> mileage &gt;= self.odometer_reading:</span><br><span class="line">            self.odometer_reading = mileage</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"You can't roll back an odometer!"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">increment_odometer</span><span class="params">(self,miles)</span>:</span></span><br><span class="line">        <span class="comment">#将里程表读数增加指定的量</span></span><br><span class="line">        self.odometer_reading += miles</span><br></pre></td></tr></table></figure>
+<p>现在可以分别从每个模块中导入类：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#my_car.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> car <span class="keyword">import</span> Car</span><br><span class="line"><span class="keyword">from</span> electric_car <span class="keyword">import</span> ElectricCar</span><br><span class="line"></span><br><span class="line">my_audi = Car(<span class="string">'audi'</span>,<span class="string">'a9'</span>,<span class="string">'2018'</span>)</span><br><span class="line">print(my_audi.get_descriptive_name())</span><br><span class="line"></span><br><span class="line">my_tesla = ElectricCar(<span class="string">'tesla'</span>,<span class="string">'model s'</span>,<span class="string">'2016'</span>)</span><br><span class="line">print(my_tesla.get_descriptive_name())</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span> Audi A9</span><br><span class="line"><span class="number">2016</span> Tesla Model S</span><br></pre></td></tr></table></figure></p>
+<h1 id="8-6-Python标准库"><a href="#8-6-Python标准库" class="headerlink" title=" - 8.6 Python标准库  "></a><font color="#FF0000"> - 8.6 Python标准库  </font></h1><p>Python标准库是一组模块，安装的Python都包含它，我们可以使用标准库中的任何函数和类，只需要在程序的开头包含一条简单的import语句，下面以模块collections中的一个类——OrderedDict（创建字典并记录其中的键-值对的添加顺序）为例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#favorite_languages.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line">favorite_languages = OrderedDict()</span><br><span class="line"></span><br><span class="line">favorite_languages [<span class="string">'jen'</span>] = <span class="string">'python'</span></span><br><span class="line">favorite_languages [<span class="string">'sarah'</span>] = <span class="string">'c'</span></span><br><span class="line">favorite_languages [<span class="string">'edward'</span>] = <span class="string">'java'</span></span><br><span class="line">favorite_languages [<span class="string">'anly'</span>] = <span class="string">'python'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> name,language <span class="keyword">in</span> favorite_languages.items():</span><br><span class="line">    print(name.title() + <span class="string">"'s favorite languages is "</span> +</span><br><span class="line">          language.title() + <span class="string">"."</span>)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Jen<span class="string">'s favorite languages is Python.</span></span><br><span class="line"><span class="string">Sarah'</span>s favorite languages <span class="keyword">is</span> C.</span><br><span class="line">Edward<span class="string">'s favorite languages is Java.</span></span><br><span class="line"><span class="string">Anly'</span>s favorite languages <span class="keyword">is</span> Python.</span><br></pre></td></tr></table></figure></p>
+
+      </div>
+        
+          <section class='meta' id="footer-meta">
+            
+              <time class="metatag time" itemprop="dateUpdated" datetime="2018-11-14T16:36:49+08:00" content="2018-11-14"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
+                &nbsp;2018-11-14
+              </time>
+            
+            
+                
+                <div class="metatag tags"><a class="tag" href="/tags/类/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>&nbsp;类</a></div> <div class="metatag tags"><a class="tag" href="/tags/继承/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>&nbsp;继承</a></div>
+            
+            
+              
+  <div class='metatag share -mob-share-list'>
+    <i class="left fas fa-share-alt fa-fw" aria-hidden="true"></i>
+    <div class="-mob-share-list share-body">
+      
+        
+          <a class="-mob-share-qq" title="分享给QQ好友" rel="external nofollow noopener noreferrer"
+            
+            href="http://connect.qq.com/widget/shareqq/index.html?url=https://trhx.top/2018/11/10/Python3-Self-study-Notes-C08/&title=Python3 自学笔记 C08 | TRHX'S BLOG&summary="
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qzone" title="分享到QQ空间" rel="external nofollow noopener noreferrer"
+            
+            href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://trhx.top/2018/11/10/Python3-Self-study-Notes-C08/&title=Python3 自学笔记 C08 | TRHX'S BLOG&summary="
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qrcode" title="分享到微信" rel="external nofollow noopener noreferrer"
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-weibo" title="分享到微博" rel="external nofollow noopener noreferrer"
+            
+            href="http://service.weibo.com/share/share.php?url=https://trhx.top/2018/11/10/Python3-Self-study-Notes-C08/&title=Python3 自学笔记 C08 | TRHX'S BLOG&summary="
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qrcode" title="QRcode" rel="external nofollow noopener noreferrer"
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+            
+          </a>
+        
+      
+    </div>
+  </div>
+
+
+            
+          </section>
+        
+
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2018/11/16/Python3-Self-study-Notes-C09/" rel="prev" title="Python3 自学笔记 C09">
+                                  
+                                      Python3 自学笔记 C09
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/文件/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>文件</a> <a class="tag" href="/tags/异常/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>异常</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2018/11/03/Python3-Self-study-Notes-C07/" rel="prev" title="Python3 自学笔记 C07">
+                                    
+                                        Python3 自学笔记 C07
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/函数/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>函数</a> <a class="tag" href="/tags/模块/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>模块</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+
+      
+        
+
+    <div class="recommended_posts">
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;相关文章</h4>
+        <ul>
+            
+                <li><a href="https://trhx.top/2019/01/18/One-computer-deploys-two-or-more-Hexo-blogs/">一台电脑使用两个/多个GitHub账号部署两个/多个Hexo博客</a></li>
+            
+                <li><a href="https://trhx.top/2018/11/16/Python3-Self-study-Notes-C09/">Python3 自学笔记 C09</a></li>
+            
+                <li><a href="https://trhx.top/2018/11/03/Python3-Self-study-Notes-C07/">Python3 自学笔记 C07</a></li>
+            
+                <li><a href="https://trhx.top/2018/10/30/Python3-Self-study-Notes-C06/">Python3 自学笔记 C06</a></li>
+            
+        </ul>
+    </div>
+
+
+      
+
+      
+        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+        
+        
+          <section id="comments">
+            <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTA3MS8xNTU5OA==">
+              <noscript>⚠️  无法加载评论系统，请确保您的网络能够正常访问</noscript>
+            </div>
+          </section>
+        
+        
+      
+    </section>
+  </article>
+
+
+
+<script>
+    window.subData = {
+        title: 'Python3 自学笔记 C08',
+        tools: true
+    }
+</script>
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        <section class='author'>
+  <div class='content material'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://trhx.top/images/trhx.png'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+          <h2>TRHX'S BLOG</h2>
+        
+        
+          <p>求知若饥 虚心若愚</p>
+
+        
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://github.com/TRHX" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/tan-70-56/activities" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-zhihu" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="mailto:&#116;&#114;&#104;&#120;&#64;&#102;&#111;&#120;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-qq" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="http://weibo.com/TRHX1" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-weibo" aria-hidden="true"></i></a>
+          
+        
+      </div>
+    
+  </div>
+  <a href="https://blog.csdn.net/qq_36759224"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://trhx.top/images/Follow_me_on_CSDN.png" alt="Follow me on CSDN"></a>
+
+  <div id="binft" align="center"></div>
+  <script>
+    var binft = function (r) {
+      function t() {
+        return b[Math.floor(Math.random() * b.length)]
+      }  
+      function e() {
+        return String.fromCharCode(94 * Math.random() + 33)
+      }
+      function n(r) {
+        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+          var l = document.createElement("span");
+          l.textContent = e(), l.style.color = t(), n.appendChild(l)
+        }
+        return n
+      }
+      function i() {
+        var t = o[c.skillI];
+        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+      }
+      var l = "",
+      o = ["青青陵上柏，磊磊涧中石。", "人生天地间，忽如远行客。","斗酒相娱乐，聊厚不为薄。", "驱车策驽马，游戏宛与洛。","洛中何郁郁，冠带自相索。","长衢罗夹巷，王侯多第宅。","两宫遥相望，双阙百余尺。","极宴娱心意，戚戚何所迫？"].map(function (r) {
+      return r + ""
+      }),
+      a = 2,
+      g = 1,
+      s = 5,
+      d = 75,
+      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+      c = {
+        text: "",
+        prefixP: -s,
+        skillI: 0,
+        skillP: 0,
+        direction: "forward",
+        delay: a,
+        step: g
+      };
+      i()
+      };
+      binft(document.getElementById('binft'));
+  </script>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class='plain'>
+  
+<header class='material'>
+  <div><i class="fas fa-edit fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;域名转让</div>
+  
+</header>
+
+  <div class='content material'>
+    <p>以下闲置域名低价转让，音译我爱BUG，价格非常美丽，给钱就扔，欢迎骚扰：<br><center>52bug.club<br>52bug.xyz<br>52bug.top</center></p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class='plain'>
+  
+<header class='material'>
+  <div><i class="fas fa-edit fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;今日诗词</div>
+  
+    <a class="rightBtn rotate90" target="_blank"
+    rel="external nofollow noopener noreferrer"
+    href="https://www.jinrishici.com/"
+    title="https://www.jinrishici.com/">
+    <i class="far fa-paper-plane fa-fw"></i></a>
+  
+</header>
+
+  <div class='content material'>
+    <p><img src="https://v2.jinrishici.com/one.svg" alt="今日诗词"></p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class='plain'>
+  
+<header class='material'>
+  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
+  
+    <a class="rightBtn rotate90" target="_blank"
+    rel="external nofollow noopener noreferrer"
+    href="https://xaoxuu.com/wiki/material-x/"
+    title="https://xaoxuu.com/wiki/material-x/">
+    <i class="fas fa-question-circle fa-fw"></i></a>
+  
+</header>
+
+  <div class='content material'>
+    <p>本站使用 <a href="https://xaoxuu.com/wiki/material-x/">Material X</a> 作为主题，喜欢这个主题的朋友可以阅读文档进行安装哦，超喜欢的话还可以安利给身边的朋友哦～<br><br><font color=#FF0000>Tip：电脑端访问本站效果更佳！</font></p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class='category'>
+    
+<header class='material'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+  
+</header>
+
+    <div class='content material'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/BLOG/" href="/categories/BLOG/"><div class='name'>BLOG</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/CDN/" href="/categories/CDN/"><div class='name'>CDN</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class='name'>Python</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/实用教程/" href="/categories/实用教程/"><div class='name'>实用教程</div><div class='badge'>(6)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        
+  <section class='tagcloud'>
+    
+<header class='material'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class='content material'>
+      <a href="/tags/BLOG/" style="font-size: 19px; color: #777">BLOG</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Github-Pages/" style="font-size: 14px; color: #999">Github Pages</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/VMware/" style="font-size: 14px; color: #999">VMware</a> <a href="/tags/if语句/" style="font-size: 14px; color: #999">if语句</a> <a href="/tags/input-函数/" style="font-size: 14px; color: #999">input()函数</a> <a href="/tags/jsDeliver/" style="font-size: 14px; color: #999">jsDeliver</a> <a href="/tags/while循环/" style="font-size: 14px; color: #999">while循环</a> <a href="/tags/主题个性化/" style="font-size: 14px; color: #999">主题个性化</a> <a href="/tags/函数/" style="font-size: 14px; color: #999">函数</a> <a href="/tags/列表/" style="font-size: 14px; color: #999">列表</a> <a href="/tags/变量/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/字典/" style="font-size: 14px; color: #999">字典</a> <a href="/tags/异常/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/技巧/" style="font-size: 14px; color: #999">技巧</a> <a href="/tags/操作列表/" style="font-size: 14px; color: #999">操作列表</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #999">数据类型</a> <a href="/tags/文件/" style="font-size: 14px; color: #999">文件</a> <a href="/tags/模块/" style="font-size: 14px; color: #999">模块</a> <a href="/tags/类/" style="font-size: 14px; color: #999">类</a> <a href="/tags/继承/" style="font-size: 14px; color: #999">继承</a> <a href="/tags/编辑器/" style="font-size: 14px; color: #999">编辑器</a>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class='list'>
+  
+<header class='material'>
+  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
+  
+</header>
+
+  <div class='content material'>
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="http://space.bilibili.com/314463806?/" href="http://space.bilibili.com/314463806?/">
+          <div class='name'>
+            
+              <i class="fas fa-film fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;bilibili
+          </div>
+          
+            <div class='badge'>(博主的主页)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/">
+          <div class='name'>
+            
+              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Material X
+          </div>
+          
+            <div class='badge'>(Hexo博客主题)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://hexo.io/zh-cn/" href="https://hexo.io/zh-cn/">
+          <div class='name'>
+            
+              <i class="fas fa-blog fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Hexo
+          </div>
+          
+            <div class='badge'>(Hexo官网)</div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+
+  <section class='music'>
+    
+<header class='material'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
+  
+    <a class="rightBtn rotate90" target="_blank"
+    rel="external nofollow noopener noreferrer"
+    href="https://music.163.com/#/playlist?id=2415512873"
+    title="https://music.163.com/#/playlist?id=2415512873">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content material'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="2625522030"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        
+  <section class='toc-wrapper'>
+    
+<header class='material'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content material'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#8-1-创建类和使用类"><span class="toc-text"> - 8.1 创建类和使用类  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-2-根据类创建实例"><span class="toc-text">- 8.2 根据类创建实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-3-使用类和实例"><span class="toc-text"> - 8.3 使用类和实例 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-3-1-给属性指定默认值"><span class="toc-text"> - 8.3.1 给属性指定默认值  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-3-2-修改属性的值"><span class="toc-text"> - 8.3.2 修改属性的值  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-4-继承"><span class="toc-text"> - 8.4 继承 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-4-1-子类的方法init"><span class="toc-text"> - 8.4.1 子类的方法init()  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-4-2-Python-2-7-中的继承"><span class="toc-text"> - 8.4.2 Python 2.7 中的继承  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-4-3-给子类定义属性和方法"><span class="toc-text"> - 8.4.3 给子类定义属性和方法  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-4-4-重写父类的方法"><span class="toc-text"> - 8.4.4 重写父类的方法  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-4-5-将实例用作属性"><span class="toc-text"> - 8.4.5 将实例用作属性  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-5-导入类"><span class="toc-text"> - 8.5 导入类  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-5-1-导入单个类"><span class="toc-text"> - 8.5.1 导入单个类  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-5-2-在一个模块中储存多个类"><span class="toc-text"> - 8.5.2 在一个模块中储存多个类  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-5-3-从一个模块中导入多个类"><span class="toc-text"> - 8.5.3 从一个模块中导入多个类  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-5-4-导入整个模块"><span class="toc-text"> - 8.5.4 导入整个模块  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-5-5-导入模块中的所有类"><span class="toc-text"> - 8.5.5 导入模块中的所有类  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-5-6-在一个模块中导入另一个模块"><span class="toc-text"> - 8.5.6 在一个模块中导入另一个模块  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-6-Python标准库"><span class="toc-text"> - 8.6 Python标准库  </span></a></li></ol>
+    </div>
+  </section>
+
+
+      
+    
+  
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="https://github.com/TRHX" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/tan-70-56/activities" class="social fab fa-zhihu flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="mailto:&amp;#116;&amp;#114;&amp;#104;&amp;#120;&amp;#64;&amp;#102;&amp;#111;&amp;#120;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2273902448&amp;site=qq&amp;menu=yes" class="social fab fa-qq flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="http://weibo.com/TRHX1" class="social fab fa-weibo flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+    <!-- 网站运行时间 -->
+    <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
+    <script>
+        var now = new Date(); 
+        function createtime() { 
+            var grt= new Date("08/10/2018 17:38:00");//建站时间
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已勉强存活了 "
+            document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+            document.getElementById("times").style.color="#00ccff";
+        }
+        setInterval("createtime()",250);
+    </script>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <!--<i class="fa fa-user"></i>-->
+    <span id="busuanzi_container_site_uv">UV:<span id="busuanzi_value_site_uv" style="color:#00ccff"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <!--<i class="fa fa-eye"></i>-->
+    <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv" style="color:#00ccff"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <!--<i class="fas fa-chart-area"></i>-->
+    <span class="post-count">Word Count:<a style="color:#00ccff"> 38.5k</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://trhx.top/sitemap.xml" target="_blank">站点地图</a><br>
+    
+  Copyright <i class="far fa-copyright"></i> 2018-2019
+  <a href="http://trhx.top" target="_blank"> TRHX&#39;BLOG </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备19003281号-2</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a> 
+  Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">CC BY-NC-SA 4.0 International</a>
+</footer>
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        const $reveal = $('.reveal');
+    		if ($reveal.length === 0) return;
+    		const sr = ScrollReveal({ distance: 0 });
+    		sr.reveal('.reveal');
+      });
+    </script>
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        Waves.attach('.flat-btn', ['waves-button']);
+        Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+        Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+        Waves.attach('.flat-box', ['waves-block']);
+        Waves.attach('.float-box', ['waves-block', 'waves-float']);
+        Waves.attach('.waves-image');
+        Waves.init();
+      });
+    </script>
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+  
+  
+    <!-- fastclick -->
+    <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body)
+      }, false)
+    </script>
+  
+  
+
+
+  
+  
+  
+    
+      
+      
+        <script type="text/javascript">
+          (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+            if (typeof LivereTower === 'function') { return; }
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+            e.parentNode.insertBefore(j, e);
+          })(document, 'script');
+        </script>
+      
+      
+    
+  
+  
+    <script src="/js/app.js"></script>
+<script src="/js/search.js"></script>
+  
+
+
+
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
+
+<!-- 单击显示文字 
+<script type="text/javascript" src="/js/ClickShowText.js"></script>
+-->
+
+<!-- 浏览器搞笑标题 -->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+
+<!-- 雪花特效 
+<script type="text/javascript" src="/js/snow.js"></script>
+-->
+
+<!-- 网页内容复制提示 
+<script type="text/javascript">
+    document.body.oncopy=function(){alert("TRHX'S BLOG：复制成功！如需转载文章请注意声明原文出处，感谢您的支持o(∩_∩)o！");}
+</script>
+-->
+
+<!-- 动态线条背景
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+-->
+
+<!-- 心知天气插件 -->
+<!-- https://www.seniverse.com/widget/get 
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "0px 0px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "U3A639EE85",
+    "hash": "e6276cdeeaf5b49cabca7dee59b30862"
+});
+tpwidget("show");</script>
+-->
+
+<!-- 鼠标点击烟花爆炸效果 -->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
