@@ -146,8 +146,8 @@
 							</li>
       			
   						<li>
-								<a id="Message Board"
-								 class="nav flat-box" href="/Message Board/">
+								<a id="friends"
+								 class="nav flat-box" href="/friends/">
 									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
 								</a>
 							</li>
@@ -177,6 +177,13 @@
 								<a id="atom.xml"
 								 class="nav flat-box" href="/atom.xml">
 									<i class='fas fa-rss fa-fw'></i>&nbsp;RSS
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="atom.xml"
+								 class="nav flat-box" href="/atom.xml">
+									<i class='fas fa-rss fa-fw'></i>&nbsp;娱乐
 								</a>
 							</li>
       			
@@ -228,7 +235,7 @@
                   </li>
               
                   <li>
-										<a id="Message Board" class="nav flat-box" href="/Message Board/">
+										<a id="friends" class="nav flat-box" href="/friends/">
 											<i class='fas fa-users fa-fw'></i>&nbsp;朋友
 										</a>
                   </li>
@@ -254,6 +261,12 @@
                   <li>
 										<a id="atom.xml" class="nav flat-box" href="/atom.xml">
 											<i class='fas fa-rss fa-fw'></i>&nbsp;RSS
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="atom.xml" class="nav flat-box" href="/atom.xml">
+											<i class='fas fa-rss fa-fw'></i>&nbsp;娱乐
 										</a>
                   </li>
               
@@ -563,12 +576,14 @@
         <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
         
         
-          <section id="comments">
-            <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTA3MS8xNTU5OA==">
-              <noscript>⚠️  无法加载评论系统，请确保您的网络能够正常访问</noscript>
-            </div>
-          </section>
         
+          
+            <section id="comments">
+              <div id="valine_container" class="valine_thread">
+                <i class="fas fa-spinner fa-spin fa-fw"></i>
+              </div>
+            </section>
+          
         
       
     </section>
@@ -1063,17 +1078,38 @@
     
       
       
-        <script type="text/javascript">
-          (function(d, s) {
-            var j, e = d.getElementsByTagName(s)[0];
-            if (typeof LivereTower === 'function') { return; }
-            j = d.createElement(s);
-            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-            j.async = true;
-            e.parentNode.insertBefore(j, e);
-          })(document, 'script');
-        </script>
       
+        
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          
+            
+              <script src="/js/volantis.js"></script>
+            
+          
+          <script>
+          var GUEST_INFO = ['nick','mail','link'];
+          var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+          });
+          var notify = 'false' == true;
+          var verify = 'false' == true;
+          var valine = new Valine();
+          valine.init({
+            el: '#valine_container',
+            notify: notify,
+            verify: verify,
+            guest_info: guest_info,
+            
+            appId: "aJ3jhdiPctRrWPc2eWbHESTg-gzGzoHsz",
+            appKey: "RStUacptcCPGqFk7zmrBUXLM",
+            placeholder: "快来评论吧😀~",
+            pageSize:'10',
+            avatar:'monsterid',
+            lang:'zh-cn',
+            highlight:''
+          })
+          </script>
+        
       
     
   

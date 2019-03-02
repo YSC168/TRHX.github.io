@@ -203,7 +203,7 @@ function(e, t) {
 					head: {
 						nick: "昵称（必填）",
 						mail: "邮箱（必填）",
-						link: "你的博客链接"
+						link: "您的博客链接（选填）"
 					},
 					tips: {
 						comments: "评论",
