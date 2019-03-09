@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://trhx.top/about/index.html</loc>
+    
+    <lastmod>2019-03-09T16:20:01.367Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://trhx.top/friends/index.html</loc>
     
     <lastmod>2019-03-02T01:25:00.532Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://trhx.top/2018/08/15/Build-your-own-independent-blog-using-GithubPages-and-Hexo/</loc>
     
     <lastmod>2019-01-18T12:30:57.913Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://trhx.top/about/index.html</loc>
-    
-    <lastmod>2019-01-18T12:30:54.880Z</lastmod>
     
   </url>
   
