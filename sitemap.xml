@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://trhx.top/about/index.html</loc>
+    <loc>https://trhx.top/friends/index.html</loc>
     
-    <lastmod>2019-03-10T06:47:45.891Z</lastmod>
+    <lastmod>2019-03-11T15:00:54.010Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://trhx.top/friends/index.html</loc>
+    <loc>https://trhx.top/2018/08/15/Build-your-own-independent-blog-using-GithubPages-and-Hexo/</loc>
     
-    <lastmod>2019-03-10T06:45:40.196Z</lastmod>
+    <lastmod>2019-03-11T15:00:47.124Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://trhx.top/about/index.html</loc>
+    
+    <lastmod>2019-03-10T06:47:45.891Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://trhx.top/2018/08/25/Summary-of-Markdown-Grammar-and-Skills/</loc>
     
     <lastmod>2019-01-18T13:20:00.396Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://trhx.top/2018/08/15/Build-your-own-independent-blog-using-GithubPages-and-Hexo/</loc>
-    
-    <lastmod>2019-01-18T12:30:57.913Z</lastmod>
     
   </url>
   
