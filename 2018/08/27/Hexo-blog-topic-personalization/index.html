@@ -47,28 +47,28 @@
 
   
   
-  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-trhx.top@1.0/images/trhx.png"
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png"
    type="image/x-icon"
   
   
   
   >
   
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-trhx.top@1.0/images/icon.png"
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/icon.png"
    type="image/x-icon"
    sizes="32x32"
   
   
   >
   
-  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-trhx.top@1.0/images/trhx.png"
+  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png"
    type="image/png"
    sizes="180x180"
   
   
   >
   
-  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-trhx.top@1.0/images/trhx.png"
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png"
   
   
   
@@ -329,8 +329,8 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install packagename</span><br></pre></td></tr></table></figure>
 <p>打开站点目录下的 <font color="#FF0000">_config.yml</font> 文件，添加如下代码：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">	<span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">	<span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">	<span class="attr">model:</span> </span><br><span class="line">		<span class="attr">use:</span> <span class="string">live2d-widget-model-haruto</span> <span class="comment">#模型选择</span></span><br><span class="line">	<span class="attr">display:</span> </span><br><span class="line">		<span class="attr">position:</span> <span class="string">right</span>  <span class="comment">#模型位置</span></span><br><span class="line">		<span class="attr">width:</span> <span class="number">150</span>       <span class="comment">#模型宽度</span></span><br><span class="line">		<span class="attr">height:</span> <span class="number">300</span>      <span class="comment">#模型高度</span></span><br><span class="line">	<span class="attr">mobile:</span> </span><br><span class="line">		<span class="attr">show:</span> <span class="literal">false</span>      <span class="comment">#是否在手机端显示</span></span><br></pre></td></tr></table></figure></p>
 <p>设置好过后我们就拥有了一个卡通人物<br><img src="https://i.imgur.com/LI7iFxx.png" alt=""></p>
-<h1 id="–-自定义鼠标指针样式"><a href="#–-自定义鼠标指针样式" class="headerlink" title=" – 自定义鼠标指针样式 "></a><font color="#FF0000"> – 自定义鼠标指针样式 </font></h1><p>在 <font color="#FF0000"> \themes\material-x\source\less\_main.less</font> 文件里写入如下代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cursor: url('https://trhx.top/images/mouse.cur'),auto;</span><br></pre></td></tr></table></figure></p>
-<p>不同主题放的地方不同，确保在博客主体CSS文件中即可，其中的鼠标指针链接可替换成自己的，首先尝试加载 <a href="https://trhx.top/images/mouse.cur">https://trhx.top/images/mouse.cur</a> ，如果该文件不存在或由于其他原因无效，那么 auto 会被使用，也就是自动默认效果，图片格式为.ico、.ani、.cur，建议使用.cur，如果使用.ani或者其他格式无效，原因是浏览器兼容问题，请阅读<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property" target="_blank" rel="noopener">参考文档</a>或者参考以下兼容表：</p>
+<h1 id="–-自定义鼠标指针样式"><a href="#–-自定义鼠标指针样式" class="headerlink" title=" – 自定义鼠标指针样式 "></a><font color="#FF0000"> – 自定义鼠标指针样式 </font></h1><p>在 <font color="#FF0000"> \themes\material-x\source\less\_main.less</font> 文件里写入如下代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cursor: url('https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/mouse.cur'),auto;</span><br></pre></td></tr></table></figure></p>
+<p>不同主题放的地方不同，确保在博客主体CSS文件中即可，其中的鼠标指针链接可替换成自己的，首先尝试加载 <a href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/mouse.cur" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/mouse.cur</a> ，如果该文件不存在或由于其他原因无效，那么 auto 会被使用，也就是自动默认效果，图片格式为.ico、.ani、.cur，建议使用.cur，如果使用.ani或者其他格式无效，原因是浏览器兼容问题，请阅读<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property" target="_blank" rel="noopener">参考文档</a>或者参考以下兼容表：</p>
 <table>
 <thead>
 <tr>
@@ -456,8 +456,8 @@
         
           <section class='meta' id="footer-meta">
             
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-16T00:17:54+08:00" content="2019-01-16"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
-                &nbsp;2019-01-16
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-03-12T21:09:57+08:00" content="2019-03-12"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
+                &nbsp;2019-03-12
               </time>
             
             
@@ -473,7 +473,7 @@
         
           <a class="-mob-share-qq" title="分享给QQ好友" rel="external nofollow noopener noreferrer"
             
-            href="http://connect.qq.com/widget/shareqq/index.html?url=https://trhx.top/2018/08/27/Hexo-blog-topic-personalization/&title=Hexo 博客主题个性化 | TRHX'S BLOG&summary="
+            href="http://connect.qq.com/widget/shareqq/index.html?url=https://itrhx.com/2018/08/27/Hexo-blog-topic-personalization/&title=Hexo 博客主题个性化 | TRHX'S BLOG&summary="
             
             >
             
@@ -485,7 +485,7 @@
         
           <a class="-mob-share-qzone" title="分享到QQ空间" rel="external nofollow noopener noreferrer"
             
-            href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://trhx.top/2018/08/27/Hexo-blog-topic-personalization/&title=Hexo 博客主题个性化 | TRHX'S BLOG&summary="
+            href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://itrhx.com/2018/08/27/Hexo-blog-topic-personalization/&title=Hexo 博客主题个性化 | TRHX'S BLOG&summary="
             
             >
             
@@ -507,7 +507,7 @@
         
           <a class="-mob-share-weibo" title="分享到微博" rel="external nofollow noopener noreferrer"
             
-            href="http://service.weibo.com/share/share.php?url=https://trhx.top/2018/08/27/Hexo-blog-topic-personalization/&title=Hexo 博客主题个性化 | TRHX'S BLOG&summary="
+            href="http://service.weibo.com/share/share.php?url=https://itrhx.com/2018/08/27/Hexo-blog-topic-personalization/&title=Hexo 博客主题个性化 | TRHX'S BLOG&summary="
             
             >
             
@@ -602,13 +602,13 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;相关文章</h4>
         <ul>
             
-                <li><a href="https://trhx.top/2018/09/09/VMwarePro-14-Installation-Ubuntu-18.04-Detailed-Tutorial/">VMware Pro 14 安装 Ubuntu 18.04 详细教程</a></li>
+                <li><a href="https://itrhx.com/2018/09/09/VMwarePro-14-Installation-Ubuntu-18.04-Detailed-Tutorial/">VMware Pro 14 安装 Ubuntu 18.04 详细教程</a></li>
             
-                <li><a href="https://trhx.top/2018/08/29/Markdown-Editor/">主流 Markdown 编辑器推荐</a></li>
+                <li><a href="https://itrhx.com/2018/08/29/Markdown-Editor/">主流 Markdown 编辑器推荐</a></li>
             
-                <li><a href="https://trhx.top/2018/08/25/Summary-of-Markdown-Grammar-and-Skills/">Markdown 语法&amp;技巧总结</a></li>
+                <li><a href="https://itrhx.com/2018/08/25/Summary-of-Markdown-Grammar-and-Skills/">Markdown 语法&amp;技巧总结</a></li>
             
-                <li><a href="https://trhx.top/2018/08/15/Build-your-own-independent-blog-using-GithubPages-and-Hexo/">使用 Github Pages 和 Hexo 搭建自己的独立博客</a></li>
+                <li><a href="https://itrhx.com/2018/08/15/Build-your-own-independent-blog-using-GithubPages-and-Hexo/">使用 Github Pages 和 Hexo 搭建自己的独立博客</a></li>
             
         </ul>
     </div>
@@ -655,7 +655,7 @@
   <div class='content material'>
     
       <div class='avatar'>
-        <img class='avatar' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-trhx.top@1.0/images/trhx.png'/>
+        <img class='avatar' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png'/>
       </div>
     
     
@@ -1042,13 +1042,13 @@
     <!--<i class="fa fa-eye"></i>-->
     <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv" style="color:#00ccff"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
     <!--<i class="fas fa-chart-area"></i>-->
-    <span class="post-count">Word Count:<a style="color:#00ccff"> 38.5k</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <span class="post-count">Word Count:<a style="color:#00ccff"> 38.6k</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;
     <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="https://trhx.top/sitemap.xml" target="_blank">站点地图</a><br>
+    <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a><br>
     
   Copyright <i class="far fa-copyright"></i> 2018-2019
-  <a href="http://trhx.top" target="_blank"> TRHX&#39;BLOG </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备19003281号-2</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="http://itrhx.com" target="_blank"> TRHX&#39;BLOG </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <!--<a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备19003281号-2</a>&nbsp;&nbsp;|&nbsp;&nbsp;-->
   Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a> 
   Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">CC BY-NC-SA 4.0 International</a>
