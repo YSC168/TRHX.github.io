@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itrhx.com/2018/08/15/Build-your-own-independent-blog-using-GithubPages-and-Hexo/</loc>
+    
+    <lastmod>2019-03-13T14:18:51.867Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://itrhx.com/friends/index.html</loc>
     
     <lastmod>2019-03-12T15:18:45.579Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://itrhx.com/about/index.html</loc>
     
     <lastmod>2019-03-12T13:23:56.471Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://itrhx.com/2018/08/15/Build-your-own-independent-blog-using-GithubPages-and-Hexo/</loc>
-    
-    <lastmod>2019-03-12T13:22:59.890Z</lastmod>
     
   </url>
   

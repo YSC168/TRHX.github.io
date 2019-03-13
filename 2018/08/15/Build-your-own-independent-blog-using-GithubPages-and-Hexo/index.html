@@ -447,7 +447,14 @@ $ hexo g -d
 <p>首先我们要购买域名，<a href="https://www.aliyun.com" target="_blank" rel="noopener">阿里云</a>，<a href="https://cloud.tencent.com" target="_blank" rel="noopener">腾讯云</a>都可以，也不贵，一年几十块钱，最便宜几块钱也能买到，以阿里云为例，我购买的域名是 <a href="https://itrhx.com">itrhx.com</a>，购买过程就不赘述了，选择阿里云的解析平台，来到阿里云的管理控制台，点击进入域名解析列表或者直接点击域名后面的解析<br><img src="https://i.imgur.com/WNzFja7.png" alt=""></p>
 <p>点击添加记录，需要添加两个记录，两个记录类型都是 <font color="#DC143C">CNAME</font> ，记录值都是填你自己的博客地址（比如我的是：<font color="#DC143C"><a href="http://trhx.github.io" target="_blank" rel="noopener">trhx.github.io</a></font>），第一个主机记录为 <font color="#DC143C">@</font> ，第二个主机记录为 <font color="#DC143C">www</font> ,保存之后域名解析就完成了！</p>
 <p>【注：百度大多数方法是这样的：两个记录类型为 <font color="#DC143C">A</font> ，记录值都为博客的 <font color="#DC143C">IP</font> 地址，<font color="#DC143C">IP</font> 地址可以 <font color="#DC143C">cmd</font> 中输入 <font color="#DC143C">ping 你的博客地址</font> 获得（比如我的：<font color="#DC143C">ping trhx.github.io</font>），但我尝试这种方法并没有成功，目前也不知道具体原因，强调一下，我还是这方面<font color="#DC143C">小白！小白！小白！</font>所以不太懂，欢迎大佬来指点！】<br><img src="https://i.imgur.com/hf7od2h.png" alt=""></p>
-<p>为了使 GitHub 接收我们的域名，还需要在博客的根目录下添加一个名为 <font color="#DC143C">CNAME</font> 的文件（<font color="#DC143C">注意不要加.txt，没有任何后缀名！</font>），这个文件放到 <font color="#DC143C">Hexo</font> 文件夹的 <font color="#DC143C">source</font> 里面，（比如我的是：<font color="#DC143C">E:\TRHX_Blog\Hexo\source</font>），文件里面填写你的域名（<font color="#DC143C">去掉www</font>），比如要填写我的域名，文件里面就放一句话：<font color="#DC143C">itrhx.com</font>，经过以上操作，别人就可以通过 <a href="http://www.itrhx.com" target="_blank" rel="noopener">www.itrhx.com</a> 、<a href="https://itrhx.com">itrhx.com</a> 、<a href="https://trhx.github.io" target="_blank" rel="noopener">trhx.github.io</a> 三个当中任意一个访问我的博客了！你的也一样！</p>
+<p>为了使 GitHub 接收我们的域名，还需要在博客的根目录下添加一个名为 <font color="#DC143C">CNAME</font> 的文件（<font color="#DC143C">注意不要加.txt，没有任何后缀名！</font>），这个文件放到 <font color="#DC143C">Hexo</font> 文件夹的 <font color="#DC143C">source</font> 里面，（比如我的是：<font color="#DC143C">E:\TRHX_Blog\Hexo\source</font>），文件里面填写你的域名（<font color="#DC143C">加不加www都行</font>），比如要填写我的域名，文件里面就写：<font color="#DC143C"><a href="http://www.itrhx.com" target="_blank" rel="noopener">www.itrhx.com</a></font> 或者 <font color="#DC143C">itrhx.com</font>，经过以上操作，别人就可以通过 <a href="http://www.itrhx.com" target="_blank" rel="noopener">www.itrhx.com</a> 、<a href="https://itrhx.com">itrhx.com</a> 、<a href="https://trhx.github.io" target="_blank" rel="noopener">trhx.github.io</a> 三个当中任意一个访问我的博客了！你的也一样！</p>
+<p>有关加不加www的问题有以下区别：</p>
+<blockquote>
+<p>如果你填写的是没有www的，比如 itrhx.com，那么无论是访问 <a href="https://www.itrhx.com" target="_blank" rel="noopener">https://www.itrhx.com</a> 还是 <a href="https://itrhx.com">https://itrhx.com</a> ，都会自动跳转到 <a href="https://itrhx.com">https://itrhx.com</a></p>
+</blockquote>
+<blockquote>
+<p>如果你填写的是带www的，比如 <a href="http://www.itrhx.com" target="_blank" rel="noopener">www.itrhx.com</a> ，那么无论是访问 <a href="https://www.itrhx.com" target="_blank" rel="noopener">https://www.itrhx.com</a> 还是 <a href="https://itrhx.com">https://itrhx.com</a> ，都会自动跳转到 <a href="http://www.itrhx.com" target="_blank" rel="noopener">http://www.itrhx.com</a></p>
+</blockquote>
 <p><img src="https://i.loli.net/2019/03/12/5c87b2837a5e3.png" alt=""></p>
 <p>如果你在其他平台购买域名，或者选择 <a href="https://www.dnspod.cn" target="_blank" rel="noopener">DNSPod</a> 等其他域名解析，操作方法大同小异，遇到问题可自行百度解决！</p>
 <p>参考资料：<a href="https://zhuanlan.zhihu.com/p/27349039" target="_blank" rel="noopener">《推荐几家域名注册服务商》</a>  （By Jelly Bool）<br>　　　　　<a href="http://www.chinaz.com/web/2015/0122/380042.shtml" target="_blank" rel="noopener">《盘点十大免费DNS域名解析服务：稳定、可靠》</a></p>
@@ -457,8 +464,8 @@ $ hexo g -d
         
           <section class='meta' id="footer-meta">
             
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-03-12T21:22:59+08:00" content="2019-03-12"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
-                &nbsp;2019-03-12
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-03-13T22:18:51+08:00" content="2019-03-13"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
+                &nbsp;2019-03-13
               </time>
             
             
@@ -1011,7 +1018,7 @@ $ hexo g -d
     <!--<i class="fa fa-eye"></i>-->
     <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv" style="color:#00ccff"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
     <!--<i class="fas fa-chart-area"></i>-->
-    <span class="post-count">Word Count:<a style="color:#00ccff"> 38.6k</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <span class="post-count">Word Count:<a style="color:#00ccff"> 38.7k</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;
     <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script>&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a><br>
     
