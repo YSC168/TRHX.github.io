@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://itrhx.com/2018/08/29/Markdown-Editor/</loc>
+    <lastmod>2019-04-01</lastmod>
+  </url>  <url>
     <loc>https://itrhx.com/2018/08/27/Hexo-blog-topic-personalization/</loc>
     <lastmod>2019-03-30</lastmod>
   </url>  <url>
@@ -51,8 +54,5 @@
   </url>  <url>
     <loc>https://itrhx.com/2018/09/09/VMwarePro-14-Installation-Ubuntu-18.04-Detailed-Tutorial/</loc>
     <lastmod>2018-09-09</lastmod>
-  </url>  <url>
-    <loc>https://itrhx.com/2018/08/29/Markdown-Editor/</loc>
-    <lastmod>2018-08-30</lastmod>
   </url>
 </urlset>
