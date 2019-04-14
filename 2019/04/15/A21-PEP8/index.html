@@ -18,7 +18,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Category: BLOG | TRHX&#39;S BLOG</title>
+  <title>Python PEP8 代码规范常见问题及解决方法 | TRHX&#39;S BLOG</title>
   
   
   <meta name="description" content="一个大学生用于自学的个人博客">
@@ -267,194 +267,657 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
+<section class='meta'>
+  
+  <div class="meta" id="header-meta">
+    
+      
+          <h1 class="title">Python PEP8 代码规范常见问题及解决方法</h1>
+      
+    
+
+    
+      <time class="metatag time">
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-04-15
+      </time>
+    
+
+    
+      
+    
+    <div class='metatag cats'>
+        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;<a class="categories" href="/categories/Python/">Python</a>
+    </div>
+
+
+    
+
+    
+      
+        <div class="metatag browse busuanzi"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+          &nbsp;<span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </div>
+      
+    
+
+    
+
+  </div>
+</section>
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <hr>
+<p>之前一直用 Python  IDLE 写代码，最近换成 PyCharm 写代码总是会出现波浪号，这才了解到 Python 的 PEP8 代码规范，所以将常见的 PEP8 代码规范问题和解决方法记录一下，学习一下，遇到了再持续更新，<font color="#FF0000">养成良好的习惯，编写规范的代码！</font></p>
+<a id="more"></a>
+<hr>
+<ul>
+<li><p><font color="#FF0000">PEP 8: no newline at end of file</font><br>解决方法：代码末尾需要另起一行，光标移到最后回车即可</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: indentation is not a multiple of four</font><br>解决方法：缩进不是4的倍数，检查缩进</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: over-indented</font><br>解决方法：过度缩进，检查缩进</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: missing whitespace after’,’</font><br>解决方法：逗号后面少了空格，添加空格即可，类似还有分号或者冒号后面少了空格</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: multiple imports on one line</font><br>解决方法：不要在一句 import 中引用多个库，举例：<code>import socket, urllib.error</code>最好写成：<code>import socket</code>   <code>import urllib.error</code></p>
+</li>
+<li><p><font color="#FF0000">PEP 8: blank line at end of line</font><br>解决方法：代码末尾行多了空格，删除空格即可</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: at least two spaces before inline comment</font><br>解决方法：代码与注释之间至少要有两个空格</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: block comment should start with ‘#’</font><br>解决方法：注释要以#加一个空格开始</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: inline comment should start with ‘#’</font><br>解决方法：注释要以#加一个空格开始</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: module level import not at top of file</font><br>解决方法：import不在文件的最上面，可能之前还有其它代码</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: expected 2 blank lines，found 0</font><br>解决方法：需要两条空白行，添加两个空白行即可</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: function name should be lowercase</font><br>解决方法：函数名改成小写即可</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: missing whitespace around operator</font><br>解决方法：操作符（’=’、’&gt;’、’&lt;’等）前后缺少空格，加上即可</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: unexpected spaces around keyword / parameter equals</font><br>解决方法：关键字/参数等号周围出现意外空格，去掉空格即可</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: multiple statements on one line (colon)</font><br>解决方法：多行语句写到一行了，比如：<code>if x == 2: print(&#39;OK&#39;)</code>要分成两行写</p>
+</li>
+<li><p><font color="#FF0000">PEP 8: line too long (82 &gt; 79 characters)</font><br>解决方法：超过了每行的最大长度限制79</p>
+</li>
+</ul>
+<hr>
+<p>如果想要选择性忽略PEP8代码风格的警告信息可以使用以下方法：（养成良好的习惯，编写规范的代码！不推荐忽略！）</p>
+<p>①将鼠标移到出现警告信息的地方，按 <font color="#FF0000">alt+Enter</font>，选择忽略（Ignore）这个错误即可：<br><img src="https://i.loli.net/2019/04/15/5cb36b4fe3237.png" alt="01"><br>②依次选择 <font color="#FF0000">File - Settings - Editor - Inspections</font>，在 Python下找到 <font color="#FF0000">PEP8 coding style violation</font> 选项，在右下角的 <font color="#FF0000">Ignore errors </font>里点击加号可以添加需要忽略的警告信息ID（ID信息见后面附录），例如想要忽略<code>indentation contains mixed spaces and tabs</code>这个警告，只需要添加其ID：<font color="#FF0000">E101</font> 即可<br><img src="https://i.loli.net/2019/04/15/5cb36b53cc09a.png" alt="02"><br>附录：全部警告信息以及对应的ID，官方地址：<a href="https://pep8.readthedocs.io/en/latest/intro.html#error-codes" target="_blank" rel="noopener">https://pep8.readthedocs.io/en/latest/intro.html#error-codes</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">code</th>
+<th style="text-align:center">sample message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#FF0000">E1</font></td>
+<td style="text-align:center"><font color="#FF0000">Indentation</font></td>
+</tr>
+<tr>
+<td style="text-align:center">E101</td>
+<td style="text-align:center">indentation contains mixed spaces and tabs</td>
+</tr>
+<tr>
+<td style="text-align:center">E111</td>
+<td style="text-align:center">indentation is not a multiple of four</td>
+</tr>
+<tr>
+<td style="text-align:center">E112</td>
+<td style="text-align:center">expected an indented block</td>
+</tr>
+<tr>
+<td style="text-align:center">E113</td>
+<td style="text-align:center">unexpected indentation</td>
+</tr>
+<tr>
+<td style="text-align:center">E114</td>
+<td style="text-align:center">indentation is not a multiple of four (comment)</td>
+</tr>
+<tr>
+<td style="text-align:center">E115</td>
+<td style="text-align:center">expected an indented block (comment)</td>
+</tr>
+<tr>
+<td style="text-align:center">E116</td>
+<td style="text-align:center">unexpected indentation (comment)</td>
+</tr>
+<tr>
+<td style="text-align:center">E117</td>
+<td style="text-align:center">over-indented</td>
+</tr>
+<tr>
+<td style="text-align:center">E121 (*^)</td>
+<td style="text-align:center">continuation line under-indented for hanging indent</td>
+</tr>
+<tr>
+<td style="text-align:center">E122 (^)</td>
+<td style="text-align:center">continuation line missing indentation or outdented</td>
+</tr>
+<tr>
+<td style="text-align:center">E123 (*)</td>
+<td style="text-align:center">closing bracket does not match indentation of opening bracket’s line</td>
+</tr>
+<tr>
+<td style="text-align:center">E124 (^)</td>
+<td style="text-align:center">closing bracket does not match visual indentation</td>
+</tr>
+<tr>
+<td style="text-align:center">E125 (^)</td>
+<td style="text-align:center">continuation line with same indent as next logical line</td>
+</tr>
+<tr>
+<td style="text-align:center">E126 (*^)</td>
+<td style="text-align:center">continuation line over-indented for hanging indent</td>
+</tr>
+<tr>
+<td style="text-align:center">E127 (^)</td>
+<td style="text-align:center">continuation line over-indented for visual indent</td>
+</tr>
+<tr>
+<td style="text-align:center">E128 (^)</td>
+<td style="text-align:center">continuation line under-indented for visual indent</td>
+</tr>
+<tr>
+<td style="text-align:center">E129 (^)</td>
+<td style="text-align:center">visually indented line with same indent as next logical line</td>
+</tr>
+<tr>
+<td style="text-align:center">E131 (^)</td>
+<td style="text-align:center">continuation line unaligned for hanging indent</td>
+</tr>
+<tr>
+<td style="text-align:center">E133 (*)</td>
+<td style="text-align:center">closing bracket is missing indentation</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">E2</font></td>
+<td style="text-align:center"><font color="#FF0000">Whitespace</font></td>
+</tr>
+<tr>
+<td style="text-align:center">E201</td>
+<td style="text-align:center">whitespace after ‘(‘</td>
+</tr>
+<tr>
+<td style="text-align:center">E202</td>
+<td style="text-align:center">whitespace before ‘)’</td>
+</tr>
+<tr>
+<td style="text-align:center">E203</td>
+<td style="text-align:center">whitespace before ‘:’</td>
+</tr>
+<tr>
+<td style="text-align:center">E211</td>
+<td style="text-align:center">whitespace before ‘(‘</td>
+</tr>
+<tr>
+<td style="text-align:center">E221</td>
+<td style="text-align:center">multiple spaces before operator</td>
+</tr>
+<tr>
+<td style="text-align:center">E222</td>
+<td style="text-align:center">multiple spaces after operator</td>
+</tr>
+<tr>
+<td style="text-align:center">E223</td>
+<td style="text-align:center">tab before operator</td>
+</tr>
+<tr>
+<td style="text-align:center">E224</td>
+<td style="text-align:center">tab after operator</td>
+</tr>
+<tr>
+<td style="text-align:center">E225</td>
+<td style="text-align:center">missing whitespace around operator</td>
+</tr>
+<tr>
+<td style="text-align:center">E226 (*)</td>
+<td style="text-align:center">missing whitespace around arithmetic operator</td>
+</tr>
+<tr>
+<td style="text-align:center">E227</td>
+<td style="text-align:center">missing whitespace around bitwise or shift operator</td>
+</tr>
+<tr>
+<td style="text-align:center">E228</td>
+<td style="text-align:center">missing whitespace around modulo operator</td>
+</tr>
+<tr>
+<td style="text-align:center">E231</td>
+<td style="text-align:center">missing whitespace after ‘,’, ‘;’, or ‘:’</td>
+</tr>
+<tr>
+<td style="text-align:center">E241 (*)</td>
+<td style="text-align:center">multiple spaces after ‘,’</td>
+</tr>
+<tr>
+<td style="text-align:center">E242 (*)</td>
+<td style="text-align:center">tab after ‘,’</td>
+</tr>
+<tr>
+<td style="text-align:center">E251</td>
+<td style="text-align:center">unexpected spaces around keyword / parameter equals</td>
+</tr>
+<tr>
+<td style="text-align:center">E261</td>
+<td style="text-align:center">at least two spaces before inline comment</td>
+</tr>
+<tr>
+<td style="text-align:center">E262</td>
+<td style="text-align:center">inline comment should start with ‘# ‘</td>
+</tr>
+<tr>
+<td style="text-align:center">E265</td>
+<td style="text-align:center">block comment should start with ‘# ‘</td>
+</tr>
+<tr>
+<td style="text-align:center">E266</td>
+<td style="text-align:center">too many leading ‘#’ for block comment</td>
+</tr>
+<tr>
+<td style="text-align:center">E271</td>
+<td style="text-align:center">multiple spaces after keyword</td>
+</tr>
+<tr>
+<td style="text-align:center">E272</td>
+<td style="text-align:center">multiple spaces before keyword</td>
+</tr>
+<tr>
+<td style="text-align:center">E273</td>
+<td style="text-align:center">tab after keyword</td>
+</tr>
+<tr>
+<td style="text-align:center">E274</td>
+<td style="text-align:center">tab before keyword</td>
+</tr>
+<tr>
+<td style="text-align:center">E275</td>
+<td style="text-align:center">missing whitespace after keyword</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">E3</font></td>
+<td style="text-align:center"><font color="#FF0000">Blank line</font></td>
+</tr>
+<tr>
+<td style="text-align:center">E301</td>
+<td style="text-align:center">expected 1 blank line, found 0</td>
+</tr>
+<tr>
+<td style="text-align:center">E302</td>
+<td style="text-align:center">expected 2 blank lines, found 0</td>
+</tr>
+<tr>
+<td style="text-align:center">E303</td>
+<td style="text-align:center">too many blank lines (3)</td>
+</tr>
+<tr>
+<td style="text-align:center">E304</td>
+<td style="text-align:center">blank lines found after function decorator</td>
+</tr>
+<tr>
+<td style="text-align:center">E305</td>
+<td style="text-align:center">expected 2 blank lines after end of function or class</td>
+</tr>
+<tr>
+<td style="text-align:center">E306</td>
+<td style="text-align:center">expected 1 blank line before a nested definition</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">E4</font></td>
+<td style="text-align:center"><font color="#FF0000">Import</font></td>
+</tr>
+<tr>
+<td style="text-align:center">E401</td>
+<td style="text-align:center">multiple imports on one line</td>
+</tr>
+<tr>
+<td style="text-align:center">E402</td>
+<td style="text-align:center">module level import not at top of file</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">E5</font></td>
+<td style="text-align:center"><font color="#FF0000">Line length</font></td>
+</tr>
+<tr>
+<td style="text-align:center">E501 (^)</td>
+<td style="text-align:center">line too long (82 &gt; 79 characters)</td>
+</tr>
+<tr>
+<td style="text-align:center">E502</td>
+<td style="text-align:center">the backslash is redundant between brackets</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">E7</font></td>
+<td style="text-align:center"><font color="#FF0000">Statement</font></td>
+</tr>
+<tr>
+<td style="text-align:center">E701</td>
+<td style="text-align:center">multiple statements on one line (colon)</td>
+</tr>
+<tr>
+<td style="text-align:center">E702</td>
+<td style="text-align:center">multiple statements on one line (semicolon)</td>
+</tr>
+<tr>
+<td style="text-align:center">E703</td>
+<td style="text-align:center">statement ends with a semicolon</td>
+</tr>
+<tr>
+<td style="text-align:center">E704 (*)</td>
+<td style="text-align:center">multiple statements on one line (def)</td>
+</tr>
+<tr>
+<td style="text-align:center">E711 (^)</td>
+<td style="text-align:center">comparison to None should be ‘if cond is None:’</td>
+</tr>
+<tr>
+<td style="text-align:center">E712 (^)</td>
+<td style="text-align:center">comparison to True should be ‘if cond is True:’ or ‘if cond:’</td>
+</tr>
+<tr>
+<td style="text-align:center">E713</td>
+<td style="text-align:center">test for membership should be ‘not in’</td>
+</tr>
+<tr>
+<td style="text-align:center">E714</td>
+<td style="text-align:center">test for object identity should be ‘is not’</td>
+</tr>
+<tr>
+<td style="text-align:center">E721 (^)</td>
+<td style="text-align:center">do not compare types, use ‘isinstance()’</td>
+</tr>
+<tr>
+<td style="text-align:center">E722</td>
+<td style="text-align:center">do not use bare except, specify exception instead</td>
+</tr>
+<tr>
+<td style="text-align:center">E731</td>
+<td style="text-align:center">do not assign a lambda expression, use a def</td>
+</tr>
+<tr>
+<td style="text-align:center">E741</td>
+<td style="text-align:center">do not use variables named ‘l’, ‘O’, or ‘I’</td>
+</tr>
+<tr>
+<td style="text-align:center">E742</td>
+<td style="text-align:center">do not define classes named ‘l’, ‘O’, or ‘I’</td>
+</tr>
+<tr>
+<td style="text-align:center">E743</td>
+<td style="text-align:center">do not define functions named ‘l’, ‘O’, or ‘I’</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">E9</font></td>
+<td style="text-align:center"><font color="#FF0000">Runtime</font></td>
+</tr>
+<tr>
+<td style="text-align:center">E901</td>
+<td style="text-align:center">SyntaxError or IndentationError</td>
+</tr>
+<tr>
+<td style="text-align:center">E902</td>
+<td style="text-align:center">IOError</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">W1</font></td>
+<td style="text-align:center"><font color="#FF0000">Indentation warning</font></td>
+</tr>
+<tr>
+<td style="text-align:center">W191</td>
+<td style="text-align:center">indentation contains tabs</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">W2</font></td>
+<td style="text-align:center"><font color="#FF0000">Whitespace warning</font></td>
+</tr>
+<tr>
+<td style="text-align:center">W291</td>
+<td style="text-align:center">trailing whitespace</td>
+</tr>
+<tr>
+<td style="text-align:center">W292</td>
+<td style="text-align:center">no newline at end of file</td>
+</tr>
+<tr>
+<td style="text-align:center">W293</td>
+<td style="text-align:center">blank line contains whitespace</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">W3</font></td>
+<td style="text-align:center"><font color="#FF0000">Blank line warning</font></td>
+</tr>
+<tr>
+<td style="text-align:center">W391</td>
+<td style="text-align:center">blank line at end of file</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">W5</font></td>
+<td style="text-align:center"><font color="#FF0000">Line break warning</font></td>
+</tr>
+<tr>
+<td style="text-align:center">W503 (*)</td>
+<td style="text-align:center">line break before binary operator</td>
+</tr>
+<tr>
+<td style="text-align:center">W504 (*)</td>
+<td style="text-align:center">line break after binary operator</td>
+</tr>
+<tr>
+<td style="text-align:center">W505 (*^)</td>
+<td style="text-align:center">doc line too long (82 &gt; 79 characters)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#FF0000">W6</font></td>
+<td style="text-align:center"><font color="#FF0000">Deprecation warning</font></td>
+</tr>
+<tr>
+<td style="text-align:center">W601</td>
+<td style="text-align:center">.has_key() is deprecated, use ‘in’</td>
+</tr>
+<tr>
+<td style="text-align:center">W602</td>
+<td style="text-align:center">deprecated form of raising exception</td>
+</tr>
+<tr>
+<td style="text-align:center">W603</td>
+<td style="text-align:center">‘&lt;&gt;’ is deprecated, use ‘!=’</td>
+</tr>
+<tr>
+<td style="text-align:center">W604</td>
+<td style="text-align:center">backticks are deprecated, use ‘repr()’</td>
+</tr>
+<tr>
+<td style="text-align:center">W605</td>
+<td style="text-align:center">invalid escape sequence ‘x’</td>
+</tr>
+<tr>
+<td style="text-align:center">W606</td>
+<td style="text-align:center">‘async’ and ‘await’ are reserved keywords starting with Python 3.7</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+        
+          <section class='meta' id="footer-meta">
             
-    <script>
-        window.subData= { title:'所有分类 : BLOG'}
-    </script>
-
-
-<section class="post-list">
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        <div class='post-wrapper'>
-          <article class="post reveal ">
-    
-<section class='meta'>
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/02/05/A17-Happy-new-year/">
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-04-15T01:18:43+08:00" content="2019-04-15"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
+                &nbsp;2019-04-15
+              </time>
+            
+            
+                
+                <div class="metatag tags"><a class="tag" href="/tags/Python/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>&nbsp;Python</a></div> <div class="metatag tags"><a class="tag" href="/tags/PEP8/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>&nbsp;PEP8</a></div>
+            
+            
               
-                  新年快乐！
-              
+  <div class='metatag share -mob-share-list'>
+    <i class="left fas fa-share-alt fa-fw" aria-hidden="true"></i>
+    <div class="-mob-share-list share-body">
+      
+        
+          <a class="-mob-share-qq" title="分享给QQ好友" rel="external nofollow noopener noreferrer"
+            
+            href="http://connect.qq.com/widget/shareqq/index.html?url=https://itrhx.com/2019/04/15/A21-PEP8/&title=Python PEP8 代码规范常见问题及解决方法 | TRHX'S BLOG&summary=
+之前一直用 Python  IDLE 写代码，最近换成 PyCharm 写代码总是会出现波浪号，这才了解到 Python 的 PEP8 代码规范，所以将常见的 PEP8 代码规范问题和解决方法记录一下，学习一下，遇到了再持续更新，养成良好的习惯，编写规范的代码！"
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+            
           </a>
-      </h2>
-    
-
-    
-      <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-02-05
-      </time>
-    
-
-    
+        
       
-    
-    <div class='metatag cats'>
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;<a class="categories" href="/categories/BLOG/">BLOG</a>
+        
+          <a class="-mob-share-qzone" title="分享到QQ空间" rel="external nofollow noopener noreferrer"
+            
+            href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://itrhx.com/2019/04/15/A21-PEP8/&title=Python PEP8 代码规范常见问题及解决方法 | TRHX'S BLOG&summary=
+之前一直用 Python  IDLE 写代码，最近换成 PyCharm 写代码总是会出现波浪号，这才了解到 Python 的 PEP8 代码规范，所以将常见的 PEP8 代码规范问题和解决方法记录一下，学习一下，遇到了再持续更新，养成良好的习惯，编写规范的代码！"
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qrcode" title="分享到微信" rel="external nofollow noopener noreferrer"
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-weibo" title="分享到微博" rel="external nofollow noopener noreferrer"
+            
+            href="http://service.weibo.com/share/share.php?url=https://itrhx.com/2019/04/15/A21-PEP8/&title=Python PEP8 代码规范常见问题及解决方法 | TRHX'S BLOG&summary=
+之前一直用 Python  IDLE 写代码，最近换成 PyCharm 写代码总是会出现波浪号，这才了解到 Python 的 PEP8 代码规范，所以将常见的 PEP8 代码规范问题和解决方法记录一下，学习一下，遇到了再持续更新，养成良好的习惯，编写规范的代码！"
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qrcode" title="QRcode" rel="external nofollow noopener noreferrer"
+            
+            >
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+            
+          </a>
+        
+      
+    </div>
+  </div>
+
+
+            
+          </section>
+        
+
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/04/14/A20-VMwarePro15-Installation-of-Deepin15.9-tutorial/" rel="prev" title="VMware Pro 15 安装 Deepin15.9 国产操作系统">
+                                    
+                                        VMware Pro 15 安装 Deepin15.9 国产操作系统
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/VMware/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>VMware</a> <a class="tag" href="/tags/Deepin/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i>Deepin</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+
+      
+        
+
+    <div class="recommended_posts">
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;相关文章</h4>
+        <ul>
+            
+                <li><a href="https://itrhx.com/2019/04/14/A20-VMwarePro15-Installation-of-Deepin15.9-tutorial/">VMware Pro 15 安装 Deepin15.9 国产操作系统</a></li>
+            
+                <li><a href="https://itrhx.com/2019/04/01/A19-Windows-Installation-Pygame/">Windows 系统中 Pygame 的安装</a></li>
+            
+                <li><a href="https://itrhx.com/2019/02/10/A18-Free-CDN-jsDeliver+Github/">免费CDN：jsDeliver+Github</a></li>
+            
+                <li><a href="https://itrhx.com/2019/02/05/A17-Happy-new-year/">新年快乐！</a></li>
+            
+        </ul>
     </div>
 
 
-    
+      
 
-    
-
-    
-
-  </div>
-</section>
-
-    <section class="article typo">
-        祝福的34种语言写法
+      
+        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
         
-            <div class="readmore">
-                <a href="/2019/02/05/A17-Happy-new-year/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
         
-
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/BLOG/"><i class="fas fa-tag fa-fw"></i>BLOG</a>
-                
-            </div>
+          
+            <section id="comments">
+              <div id="valine_container" class="valine_thread">
+                <i class="fas fa-spinner fa-spin fa-fw"></i>
+              </div>
+            </section>
+          
         
+      
     </section>
-</article>
-
-        </div>
-      
-    
-      
-        <div class='post-wrapper'>
-          <article class="post reveal ">
-    
-<section class='meta'>
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2018/08/10/A01-Hello-World/">
-              
-                  Hello World!
-              
-          </a>
-      </h2>
-    
-
-    
-      <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-08-10
-      </time>
-    
-
-    
-      
-    
-    <div class='metatag cats'>
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;<a class="categories" href="/categories/BLOG/">BLOG</a>
-    </div>
-
-
-    
-
-    
-
-    
-
-  </div>
-</section>
-
-    <section class="article typo">
-        Hello World! Never forget why you started, and your mission can be accomplished!
-        
-            <div class="readmore">
-                <a href="/2018/08/10/A01-Hello-World/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/BLOG/"><i class="fas fa-tag fa-fw"></i>BLOG</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-        </div>
-      
-    
-</section>
+  </article>
 
 
 
-<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-
-
+<script>
+    window.subData = {
+        title: 'Python PEP8 代码规范常见问题及解决方法',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -917,6 +1380,42 @@
   
   
   
+    
+      
+      
+      
+        
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          
+            
+              <script src="/js/volantis.js"></script>
+            
+          
+          <script>
+          var GUEST_INFO = ['nick','mail','link'];
+          var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+          });
+          var notify = 'false' == true;
+          var verify = 'false' == true;
+          var valine = new Valine();
+          valine.init({
+            el: '#valine_container',
+            notify: notify,
+            verify: verify,
+            guest_info: guest_info,
+            
+            appId: "aJ3jhdiPctRrWPc2eWbHESTg-gzGzoHsz",
+            appKey: "RStUacptcCPGqFk7zmrBUXLM",
+            placeholder: "快来评论吧😀~",
+            pageSize:'10',
+            avatar:'monsterid',
+            lang:'zh-cn',
+            highlight:''
+          })
+          </script>
+        
+      
     
   
   
