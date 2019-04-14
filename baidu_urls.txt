@@ -1,3 +1,4 @@
+https://itrhx.com/2019/04/14/A20-VMwarePro15-Installation-of-Deepin15.9-tutorial/
 https://itrhx.com/2019/04/01/A19-Windows-Installation-Pygame/
 https://itrhx.com/2019/02/10/A18-Free-CDN-jsDeliver+Github/
 https://itrhx.com/2019/02/05/A17-Happy-new-year/
@@ -11,7 +12,7 @@ https://itrhx.com/2018/10/23/A10-Python3-self-study-notes-C04/
 https://itrhx.com/2018/10/11/A09-Python3-self-study-notes-C03/
 https://itrhx.com/2018/09/15/A08-Python3-self-study-notes-C02/
 https://itrhx.com/2018/09/10/A07-Python3-self-study-notes-C01/
-https://itrhx.com/2018/09/09/A06-VMwarePro14-Installation-of-Ubuntu-18.04-tutorial/
+https://itrhx.com/2018/09/09/A06-VMwarePro14-Installation-of-Ubuntu18.04-tutorial/
 https://itrhx.com/2018/08/29/A05-Markdown-editor-recommendation/
 https://itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/
 https://itrhx.com/2018/08/25/A03-Markdown-grammar-and-techniques/

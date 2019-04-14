@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itrhx.com/"/>
-  <updated>2019-04-01T15:55:32.523Z</updated>
+  <updated>2019-04-14T11:17:36.410Z</updated>
   <id>https://itrhx.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VMware Pro 15 安装 Deepin15.9 国产操作系统</title>
+    <link href="https://itrhx.com/2019/04/14/A20-VMwarePro15-Installation-of-Deepin15.9-tutorial/"/>
+    <id>https://itrhx.com/2019/04/14/A20-VMwarePro15-Installation-of-Deepin15.9-tutorial/</id>
+    <published>2019-04-14T11:05:28.487Z</published>
+    <updated>2019-04-14T11:17:36.410Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://www.deepin.org/" target="_blank" rel="noopener">Deepin</a>是由武汉深之度科技有限公司开发的Linux发行版，个人认为其界面设计非常美观，而且作为国产操作系统，值得我们去体验和支持！</p><hr><h1 id="1-下载安装-VMware-Workstation-Pro-15"><a href="#1-下载安装-VMware-Workstation-Pro-15" class="headerlink" title="1.下载安装 VMware Workstation Pro 15"></a><font color="#FF0000">1.下载安装 VMware Workstation Pro 15</font></h1><p> 进入 <a href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html" target="_blank" rel="noopener">VMware 官网</a>或者在软件商店下载最新版VMware虚拟机并安装<br><img src="https://i.loli.net/2019/04/14/5cb314bfe515d.png" alt="001"></p><h1 id="2-下载-Deepin15-9-系统"><a href="#2-下载-Deepin15-9-系统" class="headerlink" title="2.下载 Deepin15.9 系统"></a><font color="#FF0000">2.下载 Deepin15.9 系统</font></h1><p>  进入 <a href="https://www.deepin.org/" target="_blank" rel="noopener">deepin 官网</a>，下载最新版 deepin 系统镜像<br><img src="https://i.loli.net/2019/04/14/5cb31521444c2.png" alt="002"></p><h1 id="3-在-VMware-中创建虚拟机"><a href="#3-在-VMware-中创建虚拟机" class="headerlink" title="3.在 VMware 中创建虚拟机"></a><font color="#FF0000">3.在 VMware 中创建虚拟机</font></h1><p>打开安装好的 VMware Workstation Pro 15，选择创建新的虚拟机<br><img src="https://i.loli.net/2019/04/14/5cb3154ae3127.png" alt="003"><br>在新建虚拟机向导中选择自定义（高级）：<br><img src="https://i.loli.net/2019/04/14/5cb315615058d.png" alt="004"><br>默认直接下一步，直到出现下图，再选择稍后安装操作系统：<br><img src="https://i.loli.net/2019/04/14/5cb3157cd92ae.png" alt="005"><br>选择客户机操作系统为 Linux ，如果你电脑是32位就选择 Ubuntu 版本，64位就选择 Ubuntu 64 位版本：<br><img src="https://i.loli.net/2019/04/14/5cb3159e47ea6.png" alt="006"><br>更改虚拟机名称及存放位置：<br><img src="https://i.loli.net/2019/04/14/5cb315b5c8603.png" alt="007"><br>接下来为虚拟机指定处理器数量、分配内存（太大了可能会导致卡顿，太小了也不好，推荐内存大小即可）一直选择默认即可，选择磁盘时，选择创建新虚拟磁盘：<br><img src="https://i.loli.net/2019/04/14/5cb315d1633d3.png" alt="008"><br>选择将虚拟磁盘储存为单个文件：<br><img src="https://i.loli.net/2019/04/14/5cb315fc619f0.png" alt="009"><br>默认下一步：<br><img src="https://i.loli.net/2019/04/14/5cb3160f425ee.png" alt="010"><br>点击完成：<br><img src="https://i.loli.net/2019/04/14/5cb3161f8a951.png" alt="011"><br>此时我们就可以在虚拟机左侧“我的计算机”下面看到刚刚创建的虚拟机 Deepin，单击  Deepin，选择“编辑虚拟机设置”， 再选择“CD/DVD(SATA)”，选择“使用ISO映像文件”，点击“浏览”，找到先前我们下载好的 Deepin 15.9 镜像文件，点击“确定”<br><img src="https://i.loli.net/2019/04/14/5cb316373826a.png" alt="012"><br><img src="https://i.loli.net/2019/04/14/5cb3164bb07d8.png" alt="013"></p><h1 id="4-在虚拟机上安装-Deepin-系统"><a href="#4-在虚拟机上安装-Deepin-系统" class="headerlink" title="4.在虚拟机上安装 Deepin 系统"></a><font color="#FF0000">4.在虚拟机上安装 Deepin 系统</font></h1><p>单击 Deepin，选择“开启此虚拟机”<br><img src="https://i.loli.net/2019/04/14/5cb3166619cf7.png" alt="014"><br>接下来就是选择语言、创建用户、选择时区、指定磁盘等过程：<br><img src="https://i.loli.net/2019/04/14/5cb3167c3f12e.png" alt="015"><br><img src="https://i.loli.net/2019/04/14/5cb3169423b50.png" alt="016"><br><img src="https://i.loli.net/2019/04/14/5cb3169fc84d2.png" alt="017"><br><img src="https://i.loli.net/2019/04/14/5cb316b8a0216.png" alt="018"><br>安装完成后：<br><img src="https://i.loli.net/2019/04/14/5cb316ca3d5d9.png" alt="019"><br>可以看见界面还是相当美观的，系统也自带了深度的一些软件，比如深度录屏，深度录音，深度影院，深度计算器等等的一些小工具，作为国产操作系统，个人觉得已经非常优秀了，值得去体验！</p>]]></content>
+    
+    <summary type="html">
+    
+      VMware Pro 15 安装 Deepin 15.9 国产操作系统的详细教程
+    
+    </summary>
+    
+      <category term="实用教程" scheme="https://itrhx.com/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="VMware" scheme="https://itrhx.com/tags/VMware/"/>
+    
+      <category term="Deepin" scheme="https://itrhx.com/tags/Deepin/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 系统中 Pygame 的安装</title>
@@ -320,8 +344,8 @@
   
   <entry>
     <title>VMware Pro 14 安装 Ubuntu 18.04 详细教程</title>
-    <link href="https://itrhx.com/2018/09/09/A06-VMwarePro14-Installation-of-Ubuntu-18.04-tutorial/"/>
-    <id>https://itrhx.com/2018/09/09/A06-VMwarePro14-Installation-of-Ubuntu-18.04-tutorial/</id>
+    <link href="https://itrhx.com/2018/09/09/A06-VMwarePro14-Installation-of-Ubuntu18.04-tutorial/"/>
+    <id>https://itrhx.com/2018/09/09/A06-VMwarePro14-Installation-of-Ubuntu18.04-tutorial/</id>
     <published>2018-09-09T13:14:29.532Z</published>
     <updated>2019-04-01T15:42:57.097Z</updated>
     
