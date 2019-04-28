@@ -1,5 +1,4 @@
 <!--
-
                .@@@@@@@@@@@@@@@@^ .@@@@@@@@@@@\`    .@@@@@.   =@@@@^ .@@@@@@.   .@@@@@^      =@@@@@^         ./@@@@@@@@\.                      =@@@@@@@@@@@].     =@@@@O             ./@@@@@@@O`        .]@@@@@@@@].
                .@@@@@@@@@@@@@@@@^ .@@@@@@@@@@@@@@`  .@@@@@.   =@@@@^  .@@@@@@. .@@@@@^       =@@@@@.       ./@@@@@@@@@@@@`                     =@@@@@@@@@@@@@^    =@@@@O            /@@@@@@@@@@@@.    ./@@@@@@@@@@@/
                .[[[[[\@@@@@[[[[[` .@@@@@...,\@@@@@. .@@@@@.   =@@@@^   .\@@@@\./@@@@^        ,@@@@@.       =@@@@@`..[\@/.                      =@@@@/...\@@@@@    =@@@@O           =@@@@@/.,@@@@@@.  .@@@@@@/..,\/.
@@ -10,8 +9,7 @@
                      =@@@@O       .@@@@@. ,@@@@@^   .@@@@@.   =@@@@^   .@@@@@`,@@@@@^                       ,@@\`...=@@@@@.                    =@@@@^  .,@@@@@^   =@@@@O.........  =@@@@@`../@@@@@.  ,@@@@@@]..=@@@@^
                      =@@@@O       .@@@@@.  ,@@@@@\  .@@@@@.   =@@@@^  ,@@@@@^  ,@@@@@\.                   .@@@@@@@@@@@@@@^                     =@@@@@@@@@@@@@@.   =@@@@@@@@@@@@@.  .\@@@@@@@@@@@@`    ,@@@@@@@@@@@@@^
                      =@@@@O       .@@@@@.   ,@@@@@\ .@@@@@.   =@@@@^ ,@@@@@^    ,@@@@@\.                   .[@@@@@@@@@@[.                      =@@@@@@@@@@@/`     =@@@@@@@@@@@@@.    .\@@@@@@@@`        ,\@@@@@@@@/`
-
--->                                                                          
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +22,9 @@
   <meta name="description" content="一个大学生用于自学的个人博客">
   
 
+  
   <link rel="alternate" href="/atom.xml" title="TRHX'S BLOG">
+  
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,65 +32,31 @@
   <!-- meta -->
   
   
-  <meta name="theme-color" content="#f24e32">
+  <meta name='theme-color' content='#f24e32'>
+  <meta name='msapplication-TileColor' content='#f24e32'>
+  <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>
   
-  <meta name="msapplication-TileColor" content="#f24e32">
-  
-  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/browserconfig.xml">
-  
-  
+
   <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
-
   
   
-  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/favicon.ico"
-   type="image/x-icon"
-  
-  
-  
-  >
-  
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/favicon-32x32.png"
-   type="image/x-icon"
-   sizes="32x32"
-  
-  
-  >
-  
-  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/apple-touch-icon.png"
-   type="image/png"
-   sizes="180x180"
-  
-  
-  >
-  
-  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/trhx.png"
-  
-  
-  
-  
-   color="#f24e32">
-  
-  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@18.12.27/favicon/favicons/site.webmanifest"
-  
-  
-  
-  
-  >
-  
-  
-
-  
-  <link rel="stylesheet" href="/style.css">
+  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/favicon.ico'>
+  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/favicon-32x32.png'>
+  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/apple-touch-icon.png'>
+  <link rel='mask-icon' color='#f24e32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/trhx.png'>
+  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest'>
   
 
   
 
-
+  
+    <link rel="stylesheet" href="/style.css">
+  
 
   <script>
     function setLoadingBarProgress(num) {
@@ -114,12 +80,13 @@
 </head>
 
 <body>
-    <div id="loading-bar-wrapper">
-  <div id="loading-bar" class="material"></div>
-</div>
+  
+  
+  <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header material">
 	<div class='wrapper'>
 		<div class="nav-main container container--flex">
       <a class="logo flat-box" href='/' >
@@ -127,42 +94,85 @@
           TRHX'S BLOG
         
       </a>
-			<div class='menu'>
+			<div class='menu navgation'>
 				<ul class='h-list'>
           
   					
   						<li>
-								<a id="home"
-								 class="nav flat-box" href="/">
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
 									<i class='fas fa-home fa-fw'></i>&nbsp;主页
 								</a>
 							</li>
       			
   						<li>
-								<a id="archives"
-								 class="nav flat-box" href="/archives/">
+								<a class="nav flat-box" href="/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="categories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="archives">
 									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
 								</a>
 							</li>
       			
   						<li>
-								<a id="friends"
-								 class="nav flat-box" href="/friends/">
+								<a class="nav flat-box" href="/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="tags">
+									<i class='fas fa-tags fa-fw'></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/friends/"
+                  
+                  
+                  id="friends">
 									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
 								</a>
 							</li>
       			
   						<li>
-								<a id="https:blog.csdn.netqq_36759224"
-								 class="nav flat-box" href="https://blog.csdn.net/qq_36759224/">
+								<a class="nav flat-box" href="https://blog.csdn.net/qq_36759224/"
+                  
+                  
+                  id="https:blog.csdn.netqq_36759224">
 									<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
 								</a>
 							</li>
       			
   						<li>
-								<a id="about.html"
-								 class="nav flat-box" href="/about.html">
+								<a class="nav flat-box" href="/about.html"
+                  
+                  
+                  id="about.html">
 									<i class='fas fa-user-tie fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://love109.cn/"
+                  
+                  
+                  id="https:love109.cn">
+									<i class='fas fa-heartbeat fa-fw'></i>&nbsp;情侣博客
 								</a>
 							</li>
       			
@@ -174,7 +184,7 @@
 				<div class="m_search">
 					<form name="searchform" class="form u-search-form">
 						<input type="text" class="input u-search-input" placeholder="搜索" />
-						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+						<i class="icon fas fa-search fa-fw"></i>
 					</form>
 				</div>
 			
@@ -190,165 +200,238 @@
 			<a class="logo flat-box"></a>
 			<ul class='switcher h-list'>
 				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
-				<li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
 			</ul>
 		</div>
 	</div>
 </header>
 	<aside class="menu-phone">
     <header>
-		<nav class="menu">
+		<nav class="menu navgation">
       <ul>
+        
           
-              
-                  <li>
-										<a id="home" class="nav flat-box" href="/">
-											<i class='fas fa-home fa-fw'></i>&nbsp;主页
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="archives" class="nav flat-box" href="/archives/">
-											<i class='fas fa-archive fa-fw'></i>&nbsp;归档
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="friends" class="nav flat-box" href="/friends/">
-											<i class='fas fa-users fa-fw'></i>&nbsp;朋友
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="https:blog.csdn.netqq_36759224" class="nav flat-box" href="https://blog.csdn.net/qq_36759224/">
-											<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="about.html" class="nav flat-box" href="/about.html">
-											<i class='fas fa-user-tie fa-fw'></i>&nbsp;关于
-										</a>
-                  </li>
-              
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-home fa-fw'></i>&nbsp;主页
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/categories/"
+                
+                  rel="nofollow"
+                
+                
+                id="categories">
+								<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                
+                id="friends">
+								<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/atom.xml"
+                
+                
+                id="atom.xml">
+								<i class='fas fa-rss fa-fw'></i>&nbsp;RSS
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://blog.csdn.net/qq_36759224/"
+                
+                
+                id="https:blog.csdn.netqq_36759224">
+								<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+							</a>
+            </li>
+          
        
       </ul>
 		</nav>
     </header>
 	</aside>
+<script>setLoadingBarProgress(40);</script>
 
-    <script>setLoadingBarProgress(40);</script>
-    <div class="l_body">
-    <div class='container clearfix'>
-        <div class='l_main'>
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+  <section class="post-list">
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2018/08/10/A01-Hello-World/">
+      Hello World!
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://www.itrhx.com" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>TRHX'BLOG</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-08-10</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/BLOG/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>BLOG</p>
+    </a>
+  </div>
+
+
+          
+        
+          
             
 
-<section class="post-list">
-    
-    
-      
-        <div class='post-wrapper'>
-          <article class="post reveal ">
-    
-<section class='meta'>
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2018/08/10/A01-Hello-World/">
-              
-                  Hello World!
-              
-          </a>
-      </h2>
-    
+          
+        
+          
+            
 
-    
-      <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2018-08-10
-      </time>
-    
-
-    
+          
+        
+      </div>
       
-    
-    <div class='metatag cats'>
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;<a class="categories" href="/categories/BLOG/">BLOG</a>
+        <hr>
+      
     </div>
+  </section>
 
 
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      Hello World! Never forget why you started, and your mission can be accomplished!
+      
+        <div class="readmore">
+          <a href="/2018/08/10/A01-Hello-World/" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
     
-
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/BLOG/" rel="nofollow"><i class="fas fa-tags fa-fw"></i>BLOG</a>
+        
+      </div>
     
-
-    
-
-  </div>
-</section>
-
-    <section class="article typo">
-        Hello World! Never forget why you started, and your mission can be accomplished!
-        
-            <div class="readmore">
-                <a href="/2018/08/10/A01-Hello-World/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/BLOG/"><i class="fas fa-tag fa-fw"></i>BLOG</a>
-                
-            </div>
-        
-    </section>
+  </section>
 </article>
 
-        </div>
+          </div>
+        
       
     
-</section>
-
-
-    <br>
-    <div class="prev-next">
+  </section>
+  
+    
+      <br>
+      <div class="prev-next">
         <div class="prev-next">
-            
-                <a class="prev" rel="prev" href="/page/2/">
-                    <section class="post prev" >
-                        <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
-                    </section>
-                </a>
-            
-            <p class="current">
-                3 / 3
-            </p>
-            
-
+          
+            <a class="prev" rel="prev" href="/page/2/">
+              <section class="post prev" >
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+              </section>
+            </a>
+          
+          <p class="current">
+            3 / 3
+          </p>
+          
         </div>
-    </div>
+      </div>
 
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
 
-
-<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-
-
-
-
-
-        </div>
-        <aside class='l_side'>
-            
   
+
+
+</div>
+<aside class='l_side'>
   
     
+    
       
-      
-        <section class='author'>
-  <div class='content material'>
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
     
       <div class='avatar'>
         <img class='avatar' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/trhx.png'/>
@@ -370,23 +453,43 @@
       <div class="social-wrapper">
         
           
-            <a href="https://github.com/TRHX" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/TRHX"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
           
         
           
-            <a href="https://www.zhihu.com/people/tan-70-56/activities" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-zhihu" aria-hidden="true"></i></a>
+            <a href="https://www.zhihu.com/people/tan-70-56/activities"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
           
         
           
-            <a href="mailto:admin@itrhx.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+            <a href="mailto:admin@itrhx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
           
         
           
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-qq" aria-hidden="true"></i></a>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
           
         
           
-            <a href="/atom.xml" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-rss" aria-hidden="true"></i></a>
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
           
         
       </div>
@@ -436,90 +539,143 @@
   </div>
 </section>
 
+          
+        
       
-    
+        
+          
+          
+            
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
   
-    
-      
-      
-        <section class='plain'>
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
   
-<header class='material'>
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          所有文章
+        </a></li>
+      
+        <li><a class="flat-box" title="https://hexo.io/zh-cn/" href="https://hexo.io/zh-cn/"
+          
+          
+          id="https:hexo.iozh-cn">
+          
+            <i class="fas fa-heading fa-fw" aria-hidden="true"></i>
+          
+          Hexo
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+            rel="nofollow"
+          
+          
+          id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fab fa-themeco fa-fw" aria-hidden="true"></i>
+          
+          Material X
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="http://space.bilibili.com/314463806?/" href="http://space.bilibili.com/314463806?/"
+          
+          
+          id="http:space.bilibili.com314463806?">
+          
+            <i class="fas fa-tv fa-fw" aria-hidden="true"></i>
+          
+          bilibili
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
   <div><i class="fas fa-edit fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;域名转让</div>
   
 </header>
 
-  <div class='content material'>
+  <div class='content pure'>
     <p>以下闲置域名低价转让，音译我爱BUG，价格非常美丽，给钱就扔，欢迎骚扰：<br><center>52bug.club<br>52bug.xyz<br>52bug.top</center></p>
 
   </div>
 </section>
 
-      
-    
-  
-    
-      
-      
-        <section class='plain'>
-  
-<header class='material'>
-  <div><i class="fas fa-edit fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;今日诗词</div>
-  
-    <a class="rightBtn rotate90" target="_blank"
-    rel="external nofollow noopener noreferrer"
-    href="https://www.jinrishici.com/"
-    title="https://www.jinrishici.com/">
-    <i class="far fa-paper-plane fa-fw"></i></a>
-  
-</header>
-
-  <div class='content material'>
-    <p><img src="https://v2.jinrishici.com/one.svg" alt="今日诗词"></p>
-
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        <section class='plain'>
-  
-<header class='material'>
-  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
-  
-    <a class="rightBtn rotate90" target="_blank"
-    rel="external nofollow noopener noreferrer"
-    href="https://xaoxuu.com/wiki/material-x/"
-    title="https://xaoxuu.com/wiki/material-x/">
-    <i class="fas fa-question-circle fa-fw"></i></a>
-  
-</header>
-
-  <div class='content material'>
-    <p>本站使用 <a href="https://xaoxuu.com/wiki/material-x/">Material X</a> 作为主题，喜欢这个主题的朋友可以阅读文档进行安装哦，超喜欢的话还可以安利给身边的朋友哦～<br><br><font color=#FF0000>Tip：电脑端访问本站效果更佳！</font></p>
-
-  </div>
-</section>
-
-      
-    
-  
-    
-      
+          
+        
       
         
-  <section class='category'>
+          
+          
+            
+  <section class='widget category'>
     
-<header class='material'>
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
   
 </header>
 
-    <div class='content material'>
+    <div class='content pure'>
       <ul class="entry">
         
           <li><a class="flat-box" title="/categories/BLOG/" href="/categories/BLOG/"><div class='name'>BLOG</div><div class='badge'>(2)</div></a></li>
@@ -535,105 +691,63 @@
   </section>
 
 
-      
-    
-  
-    
-      
+          
+        
       
         
-  <section class='tagcloud'>
+          
+          
+            
+  <section class='widget tagcloud'>
     
-<header class='material'>
+<header class='pure'>
   <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
   
 </header>
 
-    <div class='content material'>
+    <div class='content pure'>
       <a href="/tags/BLOG/" style="font-size: 19px; color: #777">BLOG</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/Deepin/" style="font-size: 14px; color: #999">Deepin</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Github-Pages/" style="font-size: 14px; color: #999">Github Pages</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/PEP8/" style="font-size: 14px; color: #999">PEP8</a> <a href="/tags/Pygame/" style="font-size: 14px; color: #999">Pygame</a> <a href="/tags/Python/" style="font-size: 19px; color: #777">Python</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/VMware/" style="font-size: 19px; color: #777">VMware</a> <a href="/tags/if语句/" style="font-size: 14px; color: #999">if语句</a> <a href="/tags/input-函数/" style="font-size: 14px; color: #999">input()函数</a> <a href="/tags/jsDeliver/" style="font-size: 14px; color: #999">jsDeliver</a> <a href="/tags/while循环/" style="font-size: 14px; color: #999">while循环</a> <a href="/tags/主题个性化/" style="font-size: 14px; color: #999">主题个性化</a> <a href="/tags/函数/" style="font-size: 14px; color: #999">函数</a> <a href="/tags/列表/" style="font-size: 14px; color: #999">列表</a> <a href="/tags/变量/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/字典/" style="font-size: 14px; color: #999">字典</a> <a href="/tags/异常/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/技巧/" style="font-size: 14px; color: #999">技巧</a> <a href="/tags/操作列表/" style="font-size: 14px; color: #999">操作列表</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #999">数据类型</a> <a href="/tags/文件/" style="font-size: 14px; color: #999">文件</a> <a href="/tags/模块/" style="font-size: 14px; color: #999">模块</a> <a href="/tags/类/" style="font-size: 14px; color: #999">类</a> <a href="/tags/继承/" style="font-size: 14px; color: #999">继承</a> <a href="/tags/编辑器/" style="font-size: 14px; color: #999">编辑器</a>
     </div>
   </section>
 
 
-      
-    
-  
-    
-      
-      
-        <section class='list'>
-  
-<header class='material'>
-  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
-  
-</header>
-
-  <div class='content material'>
-    <ul class="entry">
-      
-        <li><a class="flat-box" title="http://space.bilibili.com/314463806?/" href="http://space.bilibili.com/314463806?/">
-          <div class='name'>
-            
-              <i class="fas fa-film fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;bilibili
-          </div>
           
-            <div class='badge'>(博主的主页)</div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/">
-          <div class='name'>
-            
-              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;Material X
-          </div>
-          
-            <div class='badge'>(Hexo博客主题)</div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="https://hexo.io/zh-cn/" href="https://hexo.io/zh-cn/">
-          <div class='name'>
-            
-              <i class="fas fa-blog fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;Hexo
-          </div>
-          
-            <div class='badge'>(Hexo官网)</div>
-          
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-  
-    
-      
+        
       
         
+          
+          
+            
 
 
-  <section class='music'>
+  <section class='widget music'>
     
-<header class='material'>
-  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;音乐</div>
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
   
-    <a class="rightBtn rotate90" target="_blank"
-    rel="external nofollow noopener noreferrer"
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
     href="https://music.163.com/#/playlist?id=2415512873"
     title="https://music.163.com/#/playlist?id=2415512873">
     <i class="far fa-heart fa-fw"></i></a>
   
 </header>
 
-    <div class='content material'>
+    <div class='content pure'>
       
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
   <div class="aplayer"
@@ -654,53 +768,64 @@
   </section>
 
 
-      
-    
-  
-    
-      
-      
+          
         
-
       
     
+
   
+</aside>
 
-
-        </aside>
-        <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-    </div>
-    <footer id="footer" class="clearfix">
+<footer id="footer" class="clearfix">
+  
   
     <div class="social-wrapper">
       
         
-          <a href="https://github.com/TRHX" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+          <a href="https://github.com/TRHX"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
         
       
         
-          <a href="https://www.zhihu.com/people/tan-70-56/activities" class="social fab fa-zhihu flat-btn" target="_blank" rel="external"></a>
+          <a href="https://www.zhihu.com/people/tan-70-56/activities"
+            class="social fab fa-zhihu flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
         
       
         
-          <a href="mailto:admin@itrhx.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+          <a href="mailto:admin@itrhx.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
         
       
         
-          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2273902448&amp;site=qq&amp;menu=yes" class="social fab fa-qq flat-btn" target="_blank" rel="external"></a>
+          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2273902448&amp;site=qq&amp;menu=yes"
+            class="social fab fa-qq flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
         
       
         
-          <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external"></a>
+          <a href="/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
         
       
     </div>
   
   <br>
   Copyright <i class="far fa-copyright"></i> 2018-2019
-  <a href="http://itrhx.com" target="_blank"> TRHX&#39;BLOG </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://www.itrhx.com" target="_blank"> TRHX&#39;BLOG </a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备19003281号-3</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <!-- 网站运行时间 -->
   <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
@@ -720,62 +845,26 @@
     /*document.getElementById("times").style.color="#0056FF";*/
     }
     setInterval("createtime()",250);
-  </script>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script><br><br>
+  </script><br><br>
+  Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a>
+  Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <!--<i class="fa fa-user"></i>-->
-  <!--<span id="busuanzi_container_site_uv">UV:<span id="busuanzi_value_site_uv" style="color:#0056FF;"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;-->
+  <span id="busuanzi_container_site_uv">UV:<span id="busuanzi_value_site_uv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
   <!--<i class="fa fa-eye"></i>-->
-  <!--<span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv" style="color:#0056FF;"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;-->
+  <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
   <!--<i class="fas fa-chart-area"></i>-->
-  <!--<span class="post-count">Word Count:<a style="color:#0056FF;"> 41.4k</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;-->
-  <!--Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a>-->
-  <!--Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;-->
-  <!--<i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">CC BY-NC-SA 4.0 International</a>-->
-    <div class="github-badge">
-      <a rel="license" href="https://hexo.io/" target="_blank" title="由Hexo强力驱动">
-      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
-    </div>
-    <div class="github-badge">
-      <a rel="license" href="https://github.com/" target="_blank" title="静态网页托管于GitHub">
-      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span></a>
-    </div>
-    <div class="github-badge">
-      <a rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
-      <span class="badge-subject">DNR</span><span class="badge-value bg-pink">Aliyun</span></a>
-    </div>
-    <div class="github-badge">
-      <a rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速">
-      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
-    </div>
-    <div class="github-badge">
-        <a rel="license" href="https://sm.ms/" target="_blank" title="SM.MS提供图床服务">
-        <span class="badge-subject">PictureBed</span><span class="badge-value bg-blueviolet">SM.MS</span></a>
-    </div>
-    <div class="github-badge">
-        <a rel="license" href="https://xaoxuu.com/wiki/material-x/" target="_blank" title="站点使用 Material X 主题，作者：xaoxuu">
-        <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span></a>
-    </div>
-    <div class="github-badge">
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
-        <span class="badge-subject"><i class="fab fa-creative-commons"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
-    </div>
-    <div class="github-badge">
-        <a rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
-        <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
-    </div>
-    <div class="github-badge">
-        <span class="badge-subject">UV</span><span class="badge-value bg-yellow" id="busuanzi_value_site_uv"></span>
-    </div>
-    <div class="github-badge">
-        <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
-    </div>
-    <div class="github-badge">
-        <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">41.4k</span>
-    </div>
+  <span class="post-count">Word Count:41.4k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">BY-NC-SA 4.0</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script>
 </footer>
-    <script>setLoadingBarProgress(80);</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 
   <script>
     var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
@@ -792,109 +881,203 @@
     if(!ROOT.endsWith('/'))ROOT += '/';
   </script>
 
-
-  
-    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        const $reveal = $('.reveal');
-    		if ($reveal.length === 0) return;
-    		const sr = ScrollReveal({ distance: 0 });
-    		sr.reveal('.reveal');
-      });
-    </script>
-  
-  
-    <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        Waves.attach('.flat-btn', ['waves-button']);
-        Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-        Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-        Waves.attach('.flat-box', ['waves-block']);
-        Waves.attach('.float-box', ['waves-block', 'waves-float']);
-        Waves.attach('.waves-image');
-        Waves.init();
-      });
-    </script>
-  
-  
-    <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
-  
-  
-    <!-- fastclick -->
-    <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body)
-      }, false)
-    </script>
-  
-  
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
 
 
-  
-  
-  
-    
-  
-  
-    <script src="/js/app.js"></script>
-<script src="/js/search.js"></script>
-  
-
-
-
-
-
-
-    <script>setLoadingBarProgress(100);</script>
-    <!-- 数字雨 -->
-    <canvas id="canvas" width="1440" height="900" ></canvas>
-    <script type="text/javascript" src="/js/DigitalRain.js"></script>
-    <!-- 十年之约 -->
-    <a target="_blank" href="http://join.foreverblog.cn" style="position:fixed;z-index:999;right:-5px;bottom: 25px;display: inline-block;width: 35px;border-radius: 5px;color:white;font-size:14px;line-height:17px;background: #1BC3FB;box-shadow: 0 0 5px #666;word-wrap: break-word;padding: 10px 6px;border: 2px solid white;">十年之约</a>
-    <!-- 单击显示文字 -->
-    <script type="text/javascript" src="/js/ClickShowText.js"></script>
-    <!-- 浏览器搞笑标题 -->
-    <script type="text/javascript" src="/js/FunnyTitle.js"></script>
-    <!-- 侧边 
-    <a style="position:fixed;z-index:999;left:0;bottom: 260px;display: inline-block;width: 35px;border-radius: 5px;color:white;font-size:14px;line-height:20px;background: #01ADFF;box-shadow: 0 0 5px #666;word-wrap: break-word;padding: 10px 6px;border: 2px solid white;">我只有两样不会，这也不会，那也不会。</a>-->
-    <!-- 背景彩带样式一动态 
-    <script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script>-->
-    <!-- 背景彩带样式二静态 
-    <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>-->
-    <!-- 雪花特效 
-    <script type="text/javascript" src="/js/snow.js"></script>-->
-    <!-- 网页内容复制提示 
-    <script type="text/javascript">
-        document.body.oncopy=function(){alert("TRHX'S BLOG：复制成功！如需转载文章请注意声明原文出处，感谢您的支持o(∩_∩)o！");}
-    </script>-->
-    <!-- 动态线条背景 
-    <script type="text/javascript"
-    color="1,73,255" opacity='1' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-    </script>-->
-    <!-- 心知天气插件
-    https://www.seniverse.com/widget/get 
-    <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
-    <script>tpwidget("init", {
-        "flavor": "bubble",
-        "location": "WX4FBXXFKE4F",
-        "geolocation": "enabled",
-        "position": "top-left",
-        "margin": "0px 0px",
-        "language": "zh-chs",
-        "unit": "c",
-        "theme": "chameleon",
-        "uid": "U3A639EE85",
-        "hash": "e6276cdeeaf5b49cabca7dee59b30862"
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
     });
-    tpwidget("show");</script>
-    -->
-    <!-- 鼠标点击烟花爆炸效果 
-    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/fireworks.js"></script>
-    -->
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/001.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/002.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/003.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/004.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/005.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/006.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/007.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/008.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/009.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/010.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/011.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/012.webp"],
+          {
+            duration: "3000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+          ["https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/001.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/002.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/003.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/004.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/005.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/006.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/007.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/008.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/009.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/010.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/011.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.5/images/background/012.webp"],
+          {
+            duration: "3000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/app.js"></script>
+
+
+  <script src="/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+
+  <!-- 十年之约 -->
+  <a target="_blank" href="http://join.foreverblog.cn" style="position:fixed;z-index:999;right:-5px;bottom: 25px;display: inline-block;width: 35px;border-radius: 5px;color:white;font-size:14px;line-height:17px;background: #1BC3FB;box-shadow: 0 0 5px #666;word-wrap: break-word;padding: 10px 6px;border: 2px solid white;">十年之约</a>
+  <!-- 单击显示文字 -->
+  <script type="text/javascript" src="/js/ClickShowText.js"></script>
+  <!-- 浏览器搞笑标题 -->
+  <script type="text/javascript" src="/js/FunnyTitle.js"></script>
+  <!-- 样式一（鼠标点击更换样式） 
+  <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>-->
+  <!-- 数字雨 
+  <canvas id="canvas" width="1440" height="900" ></canvas>
+  <script type="text/javascript" src="/js/DigitalRain.js"></script>-->
 </body>
 </html>
