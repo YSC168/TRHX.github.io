@@ -82,9 +82,9 @@
       <category term="Python" scheme="https://www.itrhx.com/categories/Python/"/>
     
     
-      <category term="Python" scheme="https://www.itrhx.com/tags/Python/"/>
-    
       <category term="Pygame" scheme="https://www.itrhx.com/tags/Pygame/"/>
+    
+      <category term="Python" scheme="https://www.itrhx.com/tags/Python/"/>
     
   </entry>
   
@@ -432,9 +432,9 @@
       <category term="实用教程" scheme="https://www.itrhx.com/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="主题个性化" scheme="https://www.itrhx.com/tags/%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
-    
       <category term="Hexo" scheme="https://www.itrhx.com/tags/Hexo/"/>
+    
+      <category term="主题个性化" scheme="https://www.itrhx.com/tags/%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
     
   </entry>
   
@@ -480,9 +480,9 @@
       <category term="实用教程" scheme="https://www.itrhx.com/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Hexo" scheme="https://www.itrhx.com/tags/Hexo/"/>
-    
       <category term="Github Pages" scheme="https://www.itrhx.com/tags/Github-Pages/"/>
+    
+      <category term="Hexo" scheme="https://www.itrhx.com/tags/Hexo/"/>
     
   </entry>
   
