@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.itrhx.com/tags/index.html</loc>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
     
-    <lastmod>2019-05-05T16:01:26.324Z</lastmod>
+    <lastmod>2019-05-06T14:28:47.027Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     
-    <lastmod>2019-05-05T15:29:23.372Z</lastmod>
+    <lastmod>2019-05-06T13:15:10.316Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/tags/index.html</loc>
+    
+    <lastmod>2019-05-05T16:01:26.324Z</lastmod>
     
   </url>
   
@@ -89,13 +96,6 @@
     <loc>https://www.itrhx.com/2018/08/29/A05-Markdown-editor-recommendation/</loc>
     
     <lastmod>2019-04-01T14:48:58.188Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
-    
-    <lastmod>2019-03-30T17:00:08.359Z</lastmod>
     
   </url>
   
