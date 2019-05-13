@@ -1,0 +1,1349 @@
+<!--
+               .@@@@@@@@@@@@@@@@^ .@@@@@@@@@@@\`    .@@@@@.   =@@@@^ .@@@@@@.   .@@@@@^      =@@@@@^         ./@@@@@@@@\.                      =@@@@@@@@@@@].     =@@@@O             ./@@@@@@@O`        .]@@@@@@@@].
+               .@@@@@@@@@@@@@@@@^ .@@@@@@@@@@@@@@`  .@@@@@.   =@@@@^  .@@@@@@. .@@@@@^       =@@@@@.       ./@@@@@@@@@@@@`                     =@@@@@@@@@@@@@^    =@@@@O            /@@@@@@@@@@@@.    ./@@@@@@@@@@@/
+               .[[[[[\@@@@@[[[[[` .@@@@@...,\@@@@@. .@@@@@.   =@@@@^   .\@@@@\./@@@@^        ,@@@@@.       =@@@@@`..[\@/.                      =@@@@/...\@@@@@    =@@@@O           =@@@@@/.,@@@@@@.  .@@@@@@/..,\/.
+                     =@@@@O       .@@@@@.   .@@@@@. .@@@@@`.../@@@@^     \@@@@@@@@@`         .@@@@/        =@@@@@@].                           =@@@@^  ./@@@@^    =@@@@O          .@@@@@^   .@@@@@^  /@@@@@.
+                     =@@@@O       .@@@@@]]]/@@@@@/  .@@@@@@@@@@@@@@^      =@@@@@@@`           =@@@^        .\@@@@@@@@@@]                       =@@@@@@@@@@@/.     =@@@@O          =@@@@@.    =@@@@O .@@@@@^  /@@@@@@^
+                     =@@@@O       .@@@@@@@@@@@@@/.  .@@@@@@@@@@@@@@^      /@@@@@@@`           ,@@@.          .\@@@@@@@@@@^                     =@@@@@@@@@@@@@\.   =@@@@O          =@@@@@.    =@@@@O .@@@@@^  O@@@@@@^
+                     =@@@@O       .@@@@@@@@@@@@^    .@@@@@.   =@@@@^    ./@@@@@@@@@`                             .[\@@@@@@.                    =@@@@^    =@@@@^   =@@@@O          .@@@@@^    @@@@@^  @@@@@\  ,[\@@@@^
+                     =@@@@O       .@@@@@. ,@@@@@^   .@@@@@.   =@@@@^   .@@@@@`,@@@@@^                       ,@@\`...=@@@@@.                    =@@@@^  .,@@@@@^   =@@@@O.........  =@@@@@`../@@@@@.  ,@@@@@@]..=@@@@^
+                     =@@@@O       .@@@@@.  ,@@@@@\  .@@@@@.   =@@@@^  ,@@@@@^  ,@@@@@\.                   .@@@@@@@@@@@@@@^                     =@@@@@@@@@@@@@@.   =@@@@@@@@@@@@@.  .\@@@@@@@@@@@@`    ,@@@@@@@@@@@@@^
+                     =@@@@O       .@@@@@.   ,@@@@@\ .@@@@@.   =@@@@^ ,@@@@@^    ,@@@@@\.                   .[@@@@@@@@@@[.                      =@@@@@@@@@@@/`     =@@@@@@@@@@@@@.    .\@@@@@@@@`        ,\@@@@@@@@/`
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Eclipse 通过 JDBC 连接 SQL Server | TRHX&#39;S BLOG</title>
+  
+  
+  <meta name="description" content="Eclipse 与 SQL Server 建立连接, 一个大学生用于自学的个人博客">
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="TRHX'S BLOG">
+  
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name='theme-color' content='#f24e32'>
+  <meta name='msapplication-TileColor' content='#f24e32'>
+  <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.7/images/favicon.ico'>
+  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.7/images/favicon-32x32.png'>
+  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.7/images/apple-touch-icon.png'>
+  <link rel='mask-icon' color='#f24e32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.7/images/mask-icon.png'>
+  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest'>
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?df0bc7c6bdbd80356ba4db429724ccad";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  
+</head>
+
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post half'>
+      
+        
+  <h1 class='title'>TRHX'S BLOG</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="Search..." />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-home fa-fw'></i>&nbsp;主页
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/archives/"
+            
+            
+            id="archives">
+            <i class='fas fa-archive fa-fw'></i>&nbsp;归档
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/"
+            
+            
+            id="friends">
+            <i class='fas fa-users fa-fw'></i>&nbsp;朋友
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="https://blog.csdn.net/qq_36759224/"
+            
+            
+            id="https:blog.csdn.netqq_36759224">
+            <i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/about.html"
+            
+            
+            id="about.html">
+            <i class='fas fa-user-tie fa-fw'></i>&nbsp;关于
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          TRHX'S BLOG
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-home fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="categories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="archives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="tags">
+									<i class='fas fa-tags fa-fw'></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/friends/"
+                  
+                  
+                  id="friends">
+									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://blog.csdn.net/qq_36759224/"
+                  
+                  
+                  id="https:blog.csdn.netqq_36759224">
+									<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://love109.cn/"
+                  
+                  
+                  id="https:love109.cn">
+									<i class='fas fa-heartbeat fa-fw'></i>&nbsp;情侣博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/about.html"
+                  
+                  
+                  id="about.html">
+									<i class='fas fa-user-tie fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-home fa-fw'></i>&nbsp;主页
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/categories/"
+                
+                  rel="nofollow"
+                
+                
+                id="categories">
+								<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                
+                id="friends">
+								<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/atom.xml"
+                
+                
+                id="atom.xml">
+								<i class='fas fa-rss fa-fw'></i>&nbsp;RSS
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://blog.csdn.net/qq_36759224/"
+                
+                
+                id="https:blog.csdn.netqq_36759224">
+								<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2019/05/14/A22-Eclipse-Connects-to-SQL-Server/">
+        Eclipse 通过 JDBC 连接 SQL Server
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://www.itrhx.com" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>TRHX'BLOG</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-05-14</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Java/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Java</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JDBC/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>JDBC</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL-Server-2012/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>SQL Server 2012</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Elicpse/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>Elicpse</p></a></div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <p>本文用到的软件版本以及相关环境：</p>
+<blockquote>
+<p>Eclipse Photon Release (4.8.0)<br>JDK-10.0.2<br>SQL Server 2012</p>
+</blockquote>
+<h1 id="1-配置-SQL-Server-2012"><a href="#1-配置-SQL-Server-2012" class="headerlink" title="1.配置 SQL Server 2012"></a><font color="#FF0000">1.配置 SQL Server 2012</font></h1><p>打开 SQL Server Management Studio，使用 <font color="#FF0000">SQL Server 身份验证</font> 登录：</p>
+<p><a href="https://i.loli.net/2019/05/14/5cd99a7bb18ad84651.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd99a7bb18ad84651.png" alt="001.png"></a></p>
+<p>如果在安装 SQL Server 2012 时选用了Windows身份验证登录方式，则需要重新设置</p>
+<p>登录成功后，打开 SQL Server 配置管理器：</p>
+<p><a href="https://i.loli.net/2019/05/14/5cd99d8740ba967412.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd99d8740ba967412.png" alt="002.png"></a></p>
+<p>在左边找到 SQL Server 网络配置，点击【你的数据库名】的协议，将右边栏的 <font color="#FF0000">Shared Memory、Named Pipes、TCP/IP</font> 全部右键选择<font color="#FF0000">启用</font>：</p>
+<p><a href="https://i.loli.net/2019/05/14/5cd99f247ebc540170.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd99f247ebc540170.png" alt="003.png"></a><br><a href="https://i.loli.net/2019/05/14/5cd99f2480acf79089.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd99f2480acf79089.png" alt="004.png"></a></p>
+<p>双击 <font color="#FF0000">TCP/IP</font>（或者右键选择属性），选择【<font color="#FF0000">IP地址</font>】，将【<font color="#FF0000">IP1</font>】和【<font color="#FF0000">IP10</font>】的【<font color="#FF0000">IP地址</font>】设为 <font color="#FF0000">127.0.0.1</font></p>
+<p><a href="https://i.loli.net/2019/05/14/5cd9a109b123873668.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9a109b123873668.png" alt="005.png"></a></p>
+<p>将所有【<font color="#FF0000">IPx</font>】（<font color="#FF0000">IP1、IP10、IP11、IP12</font>等）的【<font color="#FF0000">已启用</font>】设为<font color="#FF0000">是</font></p>
+<p><a href="https://i.loli.net/2019/05/14/5cd9a109b1f1c49348.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9a109b1f1c49348.png" alt="006.png"></a></p>
+<p>下拉到窗口底部，将 【<font color="#FF0000">IPAll</font>】 中的【<font color="#FF0000">TCP端口</font>】设成 <font color="#FF0000">1433</font>，其余不变</p>
+<p><a href="https://i.loli.net/2019/05/14/5cd9a109cb85c54574.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9a109cb85c54574.png" alt="007.png"></a></p>
+<h1 id="2-开启-Telnet-服务"><a href="#2-开启-Telnet-服务" class="headerlink" title="2.开启 Telnet 服务"></a><font color="#FF0000">2.开启 Telnet 服务</font></h1><p>打开【<font color="#FF0000">控制面板</font>】，选择【<font color="#FF0000">程序</font>】，点击【<font color="#FF0000">启用或关闭 Windows 功能</font>】，找到【<font color="#FF0000">Telnet Client</font>】勾选并保存，Windows 7 或者以下的版本则勾选【<font color="#FF0000">Telnet 服务器</font>】和【<font color="#FF0000">Telnet 客户端</font>】</p>
+<p><a href="https://i.loli.net/2019/05/14/5cd9a35e5002147854.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9a35e5002147854.png" alt="008.png"></a><br><a href="https://i.loli.net/2019/05/14/5cd9a35e6853224669.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9a35e6853224669.png" alt="009.png"></a></p>
+<h1 id="3-测试1433端口是否打开"><a href="#3-测试1433端口是否打开" class="headerlink" title="3.测试1433端口是否打开"></a><font color="#FF0000">3.测试1433端口是否打开</font></h1><p> 运行cmd，输入 telnet 127.0.0.1 1433，若提示连接失败，则说明1433端口没有打开，需要重新进行以上配置，若连接成功，则显示如下：</p>
+<p> <a href="https://i.loli.net/2019/05/14/5cd9a44d788b629103.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9a44d788b629103.png" alt="010.png"></a></p>
+<h1 id="4-下载JDBC"><a href="#4-下载JDBC" class="headerlink" title="4.下载JDBC"></a><font color="#FF0000">4.下载JDBC</font></h1><p> <a href="https://docs.microsoft.com/zh-cn/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-2017" target="_blank" rel="noopener">点击此处</a>下载各个版本JDBC，不同版本的JDBC驱动程序适用的JAR不同，与不同版本的SQL兼容性也不同，具体参考<a href="https://docs.microsoft.com/zh-cn/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix?view=sql-server-2017" target="_blank" rel="noopener">《Microsoft SQL Server JDBC 驱动程序支持矩阵》</a>，比如使用 SQL Server 2012 我们可以下载6.0的版本，下载<font color="#FF0000">sqljdbc_6.0.8112.200_chs.tar.gz</font>文件，解压后可以找到<font color="#FF0000">sqljdbc41.jar</font>与<font color="#FF0000">sqljdbc42.jar</font>文件，使用时要注意自己JDK是哪个版本的，1.80以上的则对应 <font color="#FF0000">sqljdbc42.jar</font> 类库</p>
+<h1 id="5-Eclipse-连接-SQL-Server"><a href="#5-Eclipse-连接-SQL-Server" class="headerlink" title="5.Eclipse 连接 SQL Server"></a><font color="#FF0000">5.Eclipse 连接 SQL Server</font></h1><p>将 sqljdbc41.jar 或者 sqljdbc42.jar 放到一个文件夹下，打开 Eclipse，在需要连接数据库的项目里，右键【<font color="#FF0000">src</font>】，选择【<font color="#FF0000">Build Path</font>】、【<font color="#FF0000">Configure Build Path…</font>】，在弹出的窗口选择【<font color="#FF0000">Libraries</font>】，选择【<font color="#FF0000">Modulepath</font>】，单击【<font color="#FF0000">Add External JARs…</font>】，找到下载的 sqljdbc41.jar 或者 sqljdbc42.jar 文件并打开，然后【<font color="#FF0000">Apply and Close</font>】保存</p>
+<p><a href="https://i.loli.net/2019/05/14/5cd9ad87280b436073.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9ad87280b436073.png" alt="011.png"></a><br><a href="https://i.loli.net/2019/05/14/5cd9aedfa027860186.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9aedfa027860186.png" alt="012.png"></a><br><a href="https://i.loli.net/2019/05/14/5cd9aee0d4eab87329.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9aee0d4eab87329.png" alt="013.png"></a></p>
+<h1 id="6-测试连接"><a href="#6-测试连接" class="headerlink" title="6.测试连接"></a><font color="#FF0000">6.测试连接</font></h1><p>打开 SQL Server 2012，在其中新建数据库 test</p>
+<p><a href="https://i.loli.net/2019/05/14/5cd9b0d579a4e12865.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9b0d579a4e12865.png" alt="014.png"></a></p>
+<p>Eclipse中，在项目下新建一个package，再新建一个class，用于测试数据库的连接：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test;</span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		String driverName=<span class="string">"com.microsoft.sqlserver.jdbc.SQLServerDriver"</span>;</span><br><span class="line">		String dbURL=<span class="string">"jdbc:sqlserver://localhost:1433;DatabaseName=test"</span>;  <span class="comment">//要连接的数据库名</span></span><br><span class="line">		String userName=<span class="string">"sa"</span>;  <span class="comment">//数据库用户名</span></span><br><span class="line">		String userPwd=<span class="string">"000000"</span>;  <span class="comment">//数据库密码</span></span><br><span class="line">		<span class="keyword">try</span></span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(driverName);</span><br><span class="line">			Connection dbConn=DriverManager.getConnection(dbURL,userName,userPwd);</span><br><span class="line">			System.out.println(<span class="string">"连接数据库成功"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">catch</span>(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			System.out.print(<span class="string">"连接失败"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果以上所有操作正确，就能成功连接数据库了：</p>
+<p><a href="https://i.loli.net/2019/05/14/5cd9b0d49c50241278.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd9b0d49c50241278.png" alt="015.png"></a></p>
+
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-05-14T02:30:01+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2019年5月14日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/05/14/A22-Eclipse-Connects-to-SQL-Server/&title=Eclipse 通过 JDBC 连接 SQL Server | TRHX'S BLOG&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/05/14/A22-Eclipse-Connects-to-SQL-Server/&title=Eclipse 通过 JDBC 连接 SQL Server | TRHX'S BLOG&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtElEQVR42u3a0W7jMAwEwP7/T/eAwz1e3F1SSltg/BSkteRRAJEm9fERX59/r+fP+V+Tu56/OXzh4eHhjR791bWZ/vmxXs2VL+vzM+Ph4eHd5u2HTpbseZbnpXkOOS+/x8PDw/tWXhI8nhPfFoOHh4f323nJxMly5Ck7Hh4e3k/m5Zt+zmsLuC3vcK0FDw8PL+adaoC98/M39Pfw8PDwysS3bVNtUur9mP/uxcPDw7vA2xxpyltfSaF2tnxRwMDDw8O7wLuRl7aliryE0Rad8fDw8N7DO9Z8Cu7NDx/kbbY6puHh4eEteLPJ2uS4bbMda3fh4eHhrXl5AHgeqC1AtAl0MvJ/xsTDw8O7zBsOUSbc7Wir8jEeHh7eNd6mmJuTZoXdJPX/IjDg4eHhXeadPQ41K1skKXXR6MLDw8O7xpsVJjYJ9CwsFSEHDw8P7zJv05Lf99/ygJT8JF8UI/Dw8PAWvPZVvy22boJHG7TqM2V4eHh4I15bGpit3LHiQrkoeHh4eDd47dbfptd5wGiPL+TNNjw8PLyzvM1kebvrbPqep9d4eHh4t3nJlDk7WY7oyOmCjYeHh3eDl2zl0RZ8YSHaGaPfEA8PD2/NO1AMLdPx/IDC7MjCgWoKHh4eXpCj5q/6SQtq8z/tcgzjHh4eHt6a1x6lyodug8QsOB07TYaHh4e32C1nafE+yc5T7eJ58PDw8K7xZtMnpd4c3B4pKN4Y8PDw8A7xPstrFhJmW/+BJhkeHh7e+/rvw+NNbWjZFHbbMIOHh4d3lpcEg01JYhZ+2hIJHh4e3vt5+fa9L+kmDbNZAQIPDw/vJ/PyEkPOmAWDL5YGDw8P71t5bXl30/Rqy8cvLXh4eHjXeJumVJJ2bzb3ZFmH8QoPDw9v3ehKGmBJ02uWQLeHwA4cGsDDw8PreH8A0FPaTw9/aMQAAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/05/14/A22-Eclipse-Connects-to-SQL-Server/&title=Eclipse 通过 JDBC 连接 SQL Server | TRHX'S BLOG&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtElEQVR42u3a0W7jMAwEwP7/T/eAwz1e3F1SSltg/BSkteRRAJEm9fERX59/r+fP+V+Tu56/OXzh4eHhjR791bWZ/vmxXs2VL+vzM+Ph4eHd5u2HTpbseZbnpXkOOS+/x8PDw/tWXhI8nhPfFoOHh4f323nJxMly5Ck7Hh4e3k/m5Zt+zmsLuC3vcK0FDw8PL+adaoC98/M39Pfw8PDwysS3bVNtUur9mP/uxcPDw7vA2xxpyltfSaF2tnxRwMDDw8O7wLuRl7aliryE0Rad8fDw8N7DO9Z8Cu7NDx/kbbY6puHh4eEteLPJ2uS4bbMda3fh4eHhrXl5AHgeqC1AtAl0MvJ/xsTDw8O7zBsOUSbc7Wir8jEeHh7eNd6mmJuTZoXdJPX/IjDg4eHhXeadPQ41K1skKXXR6MLDw8O7xpsVJjYJ9CwsFSEHDw8P7zJv05Lf99/ygJT8JF8UI/Dw8PAWvPZVvy22boJHG7TqM2V4eHh4I15bGpit3LHiQrkoeHh4eDd47dbfptd5wGiPL+TNNjw8PLyzvM1kebvrbPqep9d4eHh4t3nJlDk7WY7oyOmCjYeHh3eDl2zl0RZ8YSHaGaPfEA8PD2/NO1AMLdPx/IDC7MjCgWoKHh4eXpCj5q/6SQtq8z/tcgzjHh4eHt6a1x6lyodug8QsOB07TYaHh4e32C1nafE+yc5T7eJ58PDw8K7xZtMnpd4c3B4pKN4Y8PDw8A7xPstrFhJmW/+BJhkeHh7e+/rvw+NNbWjZFHbbMIOHh4d3lpcEg01JYhZ+2hIJHh4e3vt5+fa9L+kmDbNZAQIPDw/vJ/PyEkPOmAWDL5YGDw8P71t5bXl30/Rqy8cvLXh4eHjXeJumVJJ2bzb3ZFmH8QoPDw9v3ehKGmBJ02uWQLeHwA4cGsDDw8PreH8A0FPaTw9/aMQAAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/04/15/A21-PEP8/" rel="prev" title="Python PEP8 代码规范常见问题及解决方法">
+                                    
+                                        Python PEP8 代码规范常见问题及解决方法
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/Python/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>Python</a> <a class="tag" href="/tags/PEP8/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>PEP8</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Eclipse 通过 JDBC 连接 SQL Server',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/trhx.png'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+          <h2>TRHX'S BLOG</h2>
+        
+        
+          <p>求知若饥 虚心若愚</p>
+
+        
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://github.com/TRHX"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/tan-70-56/activities"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:admin@itrhx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+    <div id="binft" align="center"></div>
+    <script>
+      var binft = function (r) {
+        function t() {
+          return b[Math.floor(Math.random() * b.length)]
+        }  
+        function e() {
+          return String.fromCharCode(94 * Math.random() + 33)
+        }
+        function n(r) {
+          for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+            var l = document.createElement("span");
+            l.textContent = e(), l.style.color = t(), n.appendChild(l)
+          }
+          return n
+        }
+        function i() {
+          var t = o[c.skillI];
+          c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+        }
+        var l = "",
+        o = ["业精于勤，荒于嬉；", "行成于思，毁于随。"].map(function (r) {
+        return r + ""
+        }),
+        a = 2,
+        g = 1,
+        s = 5,
+        d = 75,
+        b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+        c = {
+          text: "",
+          prefixP: -s,
+          skillI: 0,
+          skillP: 0,
+          direction: "forward",
+          delay: a,
+          step: g
+        };
+        i()
+        };
+        binft(document.getElementById('binft'));
+    </script>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-配置-SQL-Server-2012"><span class="toc-text">1.配置 SQL Server 2012</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-开启-Telnet-服务"><span class="toc-text">2.开启 Telnet 服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-测试1433端口是否打开"><span class="toc-text">3.测试1433端口是否打开</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-下载JDBC"><span class="toc-text">4.下载JDBC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Eclipse-连接-SQL-Server"><span class="toc-text">5.Eclipse 连接 SQL Server</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-测试连接"><span class="toc-text">6.测试连接</span></a></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          所有文章
+        </a></li>
+      
+        <li><a class="flat-box" title="https://hexo.io/zh-cn/" href="https://hexo.io/zh-cn/"
+          
+          
+          id="https:hexo.iozh-cn">
+          
+            <i class="fas fa-heading fa-fw" aria-hidden="true"></i>
+          
+          Hexo
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+            rel="nofollow"
+          
+          
+          id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fab fa-themeco fa-fw" aria-hidden="true"></i>
+          
+          Material X
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="http://space.bilibili.com/314463806?/" href="http://space.bilibili.com/314463806?/"
+          
+          
+          id="http:space.bilibili.com314463806?">
+          
+            <i class="fas fa-tv fa-fw" aria-hidden="true"></i>
+          
+          bilibili
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-edit fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;域名转让</div>
+  
+</header>
+
+  <div class='content pure'>
+    <p><br>以下闲置域名低价转让，音译我爱BUG，价格非常美丽，给钱就扔，欢迎骚扰：<br><center>52bug.club<br>52bug.xyz<br>52bug.top</center></p>
+
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/BLOG/" href="/categories/BLOG/"><div class='name'>BLOG</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/CDN/" href="/categories/CDN/"><div class='name'>CDN</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Java/" href="/categories/Java/"><div class='name'>Java</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class='name'>Python</div><div class='badge'>(11)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/实用教程/" href="/categories/实用教程/"><div class='name'>实用教程</div><div class='badge'>(7)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/BLOG/" style="font-size: 19px; color: #777">BLOG</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/Deepin/" style="font-size: 14px; color: #999">Deepin</a> <a href="/tags/Elicpse/" style="font-size: 14px; color: #999">Elicpse</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Github-Pages/" style="font-size: 14px; color: #999">Github Pages</a> <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/PEP8/" style="font-size: 14px; color: #999">PEP8</a> <a href="/tags/Pygame/" style="font-size: 14px; color: #999">Pygame</a> <a href="/tags/Python/" style="font-size: 19px; color: #777">Python</a> <a href="/tags/SQL-Server-2012/" style="font-size: 14px; color: #999">SQL Server 2012</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/VMware/" style="font-size: 19px; color: #777">VMware</a> <a href="/tags/if语句/" style="font-size: 14px; color: #999">if语句</a> <a href="/tags/input-函数/" style="font-size: 14px; color: #999">input()函数</a> <a href="/tags/jsDeliver/" style="font-size: 14px; color: #999">jsDeliver</a> <a href="/tags/while循环/" style="font-size: 14px; color: #999">while循环</a> <a href="/tags/主题个性化/" style="font-size: 14px; color: #999">主题个性化</a> <a href="/tags/函数/" style="font-size: 14px; color: #999">函数</a> <a href="/tags/列表/" style="font-size: 14px; color: #999">列表</a> <a href="/tags/变量/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/字典/" style="font-size: 14px; color: #999">字典</a> <a href="/tags/异常/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/技巧/" style="font-size: 14px; color: #999">技巧</a> <a href="/tags/操作列表/" style="font-size: 14px; color: #999">操作列表</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #999">数据类型</a> <a href="/tags/文件/" style="font-size: 14px; color: #999">文件</a> <a href="/tags/模块/" style="font-size: 14px; color: #999">模块</a> <a href="/tags/类/" style="font-size: 14px; color: #999">类</a> <a href="/tags/继承/" style="font-size: 14px; color: #999">继承</a> <a href="/tags/编辑器/" style="font-size: 14px; color: #999">编辑器</a>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/playlist?id=2415512873"
+    title="https://music.163.com/#/playlist?id=2415512873">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="2625522030"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="https://github.com/TRHX"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/tan-70-56/activities"
+            class="social fab fa-zhihu flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:admin@itrhx.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2273902448&amp;site=qq&amp;menu=yes"
+            class="social fab fa-qq flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  Copyright <i class="far fa-copyright"></i> 2018-2019
+  <a href="https://www.itrhx.com" target="_blank"> TRHX&#39;BLOG </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备19003281号-3</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <!-- 网站运行时间 -->
+  <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
+  <script>
+  var now = new Date(); 
+  function createtime() {
+    var grt= new Date("08/10/2018 17:38:00");//建站时间2018-08-10
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = "本站已勉强存活了 "
+    document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    /*document.getElementById("times").style.color="#0056FF";*/
+    }
+    setInterval("createtime()",250);
+  </script><br><br>
+  Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a>
+  Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <!--<i class="fa fa-user"></i>-->
+  <span id="busuanzi_container_site_uv">UV:<span id="busuanzi_value_site_uv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <!--<i class="fa fa-eye"></i>-->
+  <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <!--<i class="fas fa-chart-area"></i>-->
+  <span class="post-count">Word Count:42.2k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">BY-NC-SA 4.0</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script>
+</footer>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/001.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/002.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/003.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/004.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/005.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/006.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/007.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/008.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/009.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/010.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/011.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/012.webp"],
+          {
+            duration: "3000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+          ["https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/001.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/002.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/003.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/004.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/005.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/006.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/007.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/008.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/009.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/010.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/011.webp", "https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.9/images/background/012.webp"],
+          {
+            duration: "3000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-valine@1.3.4/js/valine.min.js"></script>
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'false' == true;
+  var verify = 'false' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "aJ3jhdiPctRrWPc2eWbHESTg-gzGzoHsz",
+    appKey: "RStUacptcCPGqFk7zmrBUXLM",
+    placeholder: "快来评论吧😀~",
+    pageSize:'10',
+    avatar:'monsterid',
+    lang:'zh-cn',
+    highlight:'false'
+  })
+  </script>
+
+
+
+  <script src="/js/app.js"></script>
+
+
+  <script src="/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+  <!-- 十年之约 
+  <a target="_blank" href="http://join.foreverblog.cn" style="position:fixed;z-index:999;right:-5px;bottom: 25px;display: inline-block;width: 35px;border-radius: 5px;color:white;font-size:14px;line-height:17px;background: #1BC3FB;box-shadow: 0 0 5px #666;word-wrap: break-word;padding: 10px 6px;border: 2px solid white;">十年之约</a>-->
+  <!-- 单击显示文字 -->
+  <script type="text/javascript" src="/js/ClickShowText.js"></script>
+  <!-- 浏览器搞笑标题 -->
+  <script type="text/javascript" src="/js/FunnyTitle.js"></script>
+  <!-- 样式一（鼠标点击更换样式） 
+  <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>-->
+  <!-- 数字雨 
+  <canvas id="canvas" width="1440" height="900" ></canvas>
+  <script type="text/javascript" src="/js/DigitalRain.js"></script>-->
+</body>
+</html>
