@@ -464,7 +464,7 @@
 </blockquote>
 <h1 id="1-配置-SQL-Server-2012"><a href="#1-配置-SQL-Server-2012" class="headerlink" title="1.配置 SQL Server 2012"></a><font color="#FF0000">1.配置 SQL Server 2012</font></h1><p>打开 SQL Server Management Studio，使用 <font color="#FF0000">SQL Server 身份验证</font> 登录：</p>
 <p><a href="https://i.loli.net/2019/05/14/5cd99a7bb18ad84651.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd99a7bb18ad84651.png" alt="001.png"></a></p>
-<p>如果在安装 SQL Server 2012 时选用了Windows身份验证登录方式，则需要重新设置</p>
+<p>如果在安装 SQL Server 2012 时选用了Windows身份验证登录方式，则需要重新设置，设置方法参考：<a href="https://blog.csdn.net/qq_36759224/article/details/90204243" target="_blank" rel="noopener">《SQL Server 登录更换【Windows身份验证】为【SQL Server 身份验证】》</a></p>
 <p>登录成功后，打开 SQL Server 配置管理器：</p>
 <p><a href="https://i.loli.net/2019/05/14/5cd99d8740ba967412.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/14/5cd99d8740ba967412.png" alt="002.png"></a></p>
 <p>在左边找到 SQL Server 网络配置，点击【你的数据库名】的协议，将右边栏的 <font color="#FF0000">Shared Memory、Named Pipes、TCP/IP</font> 全部右键选择<font color="#FF0000">启用</font>：</p>
@@ -498,7 +498,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-05-14T02:30:01+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-05-14T13:21:08+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2019年5月14日</p>
