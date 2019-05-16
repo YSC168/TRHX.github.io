@@ -3,9 +3,9 @@ window.onload = function(){
     var canvas = document.getElementById("canvas");
     //获取画布的上下文
     var context =canvas.getContext("2d");
-      var s = window.screen;
-     var W = canvas.width = s.width;
-     var H = canvas.height;
+    var s = window.screen;
+    var W = canvas.width = s.width;
+    var H = canvas.height;
     //获取浏览器屏幕的宽度和高度
     //var W = window.innerWidth;
     //var H = window.innerHeight;
@@ -13,7 +13,7 @@ window.onload = function(){
     canvas.width = W;
     canvas.height = H;
     //每个文字的字体大小
-    var fontSize = 13;
+    var fontSize = 14;
     //计算列
     var colunms = Math.floor(W /fontSize);	
     //记录每列文字的y轴坐标
