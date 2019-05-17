@@ -13,7 +13,7 @@ window.onload = function(){
     canvas.width = W;
     canvas.height = H;
     //每个文字的字体大小
-    var fontSize = 14;
+    var fontSize = 13;
     //计算列
     var colunms = Math.floor(W /fontSize);	
     //记录每列文字的y轴坐标
@@ -23,14 +23,14 @@ window.onload = function(){
         drops.push(0);
     }
     //运动的文字
-    var str ="welcome to www.itrhx.com";
+    var str ="WELCOME TO WWW.ITRHX.COM";
     //4:fillText(str,x,y);原理就是去更改y的坐标位置
     //绘画的函数
     function draw(){
         context.fillStyle = "rgba(238,238,238,.08)";//遮盖层
         context.fillRect(0,0,W,H);
         //给字体设置样式
-        context.font = "700 "+fontSize+"px  微软雅黑";
+        context.font = "700 "+fontSize+"px  Georgia";
         //给字体添加颜色
         context.fillStyle = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"][parseInt(Math.random() * 10)];//randColor();可以rgb,hsl, 标准色，十六进制颜色
         //写入画布中
@@ -53,5 +53,5 @@ window.onload = function(){
         return "rgb("+r+","+g+","+b+")";
     }
     draw();
-    setInterval(draw,30);
+    setInterval(draw,35);
 };
