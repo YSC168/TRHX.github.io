@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/about/index.html</loc>
+    
+    <lastmod>2019-05-18T12:45:05.205Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/404.html</loc>
+    
+    <lastmod>2019-05-18T09:16:28.440Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/05/14/A22-Eclipse-Connects-to-SQL-Server/</loc>
     
     <lastmod>2019-05-14T05:21:08.097Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>https://www.itrhx.com/2019/04/15/A21-PEP8/</loc>
     
     <lastmod>2019-04-29T15:57:20.816Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/404.html</loc>
-    
-    <lastmod>2019-04-29T10:55:52.123Z</lastmod>
     
   </url>
   
