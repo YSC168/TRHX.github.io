@@ -121,29 +121,29 @@
         </li>
       
         <li>
+          <a class="nav home" href="/categories/"
+            
+            
+            id="categories">
+            <i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/tags/"
+            
+            
+            id="tags">
+            <i class='fas fa-tags fa-fw'></i>&nbsp;标签
+          </a>
+        </li>
+      
+        <li>
           <a class="nav home" href="/friends/"
             
             
             id="friends">
             <i class='fas fa-users fa-fw'></i>&nbsp;朋友
-          </a>
-        </li>
-      
-        <li>
-          <a class="nav home" href="https://blog.csdn.net/qq_36759224/"
-            
-            
-            id="https:blog.csdn.netqq_36759224">
-            <i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
-          </a>
-        </li>
-      
-        <li>
-          <a class="nav home" href="/about/"
-            
-            
-            id="about">
-            <i class='fas fa-user-tie fa-fw'></i>&nbsp;关于
           </a>
         </li>
       
@@ -179,17 +179,6 @@
 							</li>
       			
   						<li>
-								<a class="nav flat-box" href="/categories/"
-                  
-                    rel="nofollow"
-                  
-                  
-                  id="categories">
-									<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
-								</a>
-							</li>
-      			
-  						<li>
 								<a class="nav flat-box" href="/archives/"
                   
                     rel="nofollow"
@@ -197,17 +186,6 @@
                   
                   id="archives">
 									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
-								</a>
-							</li>
-      			
-  						<li>
-								<a class="nav flat-box" href="/tags/"
-                  
-                    rel="nofollow"
-                  
-                  
-                  id="tags">
-									<i class='fas fa-tags fa-fw'></i>&nbsp;标签
 								</a>
 							</li>
       			
@@ -230,10 +208,10 @@
 							</li>
       			
   						<li>
-								<a class="nav flat-box" href="https://love109.cn/"
+								<a class="nav flat-box" href="https://www.love109.cn/"
                   
                   
-                  id="https:love109.cn">
+                  id="https:www.love109.cn">
 									<i class='fas fa-heartbeat fa-fw'></i>&nbsp;情侣博客
 								</a>
 							</li>
@@ -294,13 +272,13 @@
             </li>
           
             <li>
-							<a class="nav flat-box" href="/categories/"
+							<a class="nav flat-box" href="/tags/"
                 
                   rel="nofollow"
                 
                 
-                id="categories">
-								<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+                id="tags">
+								<i class='fas fa-tags fa-fw'></i>&nbsp;标签
 							</a>
             </li>
           
@@ -603,8 +581,13 @@
 <p>实现方法：在 <font color="#FF0000">\themes\material-x\layout\layout.ejs</font> 文件的<font color="#FF0000">body</font>前面添加如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 样式一（鼠标点击更换样式） --&gt;</span><br><span class="line">&lt;script src=&quot;https://g.joyinshare.com/hc/ribbon.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 样式二（飘动的彩带） --&gt;</span><br><span class="line">&lt;script src=&quot;https://g.joyinshare.com/hc/piao.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="未完待续……"><a href="#未完待续……" class="headerlink" title="未完待续……"></a><center><font color="#FF0000">未完待续……</font></center></h1><hr>
-
+<h1 id="–-自定义一个不使用主题模板渲染的独立页面"><a href="#–-自定义一个不使用主题模板渲染的独立页面" class="headerlink" title=" – 自定义一个不使用主题模板渲染的独立页面 "></a><font color="#FF0000"> – 自定义一个不使用主题模板渲染的独立页面 </font></h1><p>&nbsp;&nbsp;&nbsp;&nbsp;有时候我们需要新建一个独立的页面，这个页面<font color="#FF0000">不使用主题的渲染，具有自己独立的样式</font>，可以放一些自己的作品，相册什么的，以下就介绍这种独立页面的实现方法。</p>
+<p> <font color="#FF0000">方法一：</font><br> &nbsp;&nbsp;&nbsp;&nbsp;使用 Hexo 提供的跳过渲染配置，在博客根目录的配置文件 <code>_config.yml</code> 里找到 <code>skip_render</code> 关键字，在后面添加想要跳过渲染的页面，比如我们创建 <code>\source\about\index.html</code>， 配置文件填写：<code>skip_render: about\**</code>，那么就表示 <code>\source\about</code> 里所有的文件将跳过渲染，里面的文件将会被直接复制到 public 文件夹，此时就会得到一个独立的 about 页面；官方文档：<a href="https://hexo.io/docs/configuration" target="_blank" rel="noopener">https://hexo.io/docs/configuration</a></p>
+<p><font color="#FF0000">方法二：</font><br> &nbsp;&nbsp;&nbsp;&nbsp;在文章头部的 Front-matter 里添加配置 <code>layout: false</code> 来跳过渲染配置，比如我们要使 about 页面跳过渲染，创建 <code>\source\about\index.md</code>，将这个页面的相关 HTML 代码写进<code>.md</code>文件并保存，然后在 <code>index.md</code> 的头部写入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: false</span><br><span class="line">---</span><br><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line">这里是 HTML 代码</span><br><span class="line"></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>PS：Front-matter 是 <code>.md</code> 文件最上方以 — 分隔的区域，用于指定个别文件的变量，官方文档：<a href="https://hexo.io/docs/front-matter" target="_blank" rel="noopener">https://hexo.io/docs/front-matter</a></p>
+<p>效果可以对比我的<a href="https://www.itrhx.com/">博客主页</a>和<a href="https://www.itrhx.com/about/">关于页面</a></p>
+<hr>
+<h1 id="未完待续……"><a href="#未完待续……" class="headerlink" title="未完待续……"></a><center><font color="#FF0000">未完待续……</font></center></h1>
         </div>
         
           
@@ -615,10 +598,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-05-06T21:15:10+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-05-18T21:29:32+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年5月6日</p>
+    <p>最后更新于 2019年5月18日</p>
   </a>
 </div>
 
@@ -915,7 +898,7 @@
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加评论系统"><span class="toc-text"> – 添加评论系统 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加卡通人物"><span class="toc-text"> – 添加卡通人物 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-自定义鼠标指针样式"><span class="toc-text"> – 自定义鼠标指针样式 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击爱心效果"><span class="toc-text"> – 添加鼠标点击爱心效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击显示字体效果"><span class="toc-text"> – 添加鼠标点击显示字体效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击烟花爆炸效果"><span class="toc-text"> – 添加鼠标点击烟花爆炸效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加彩色滚动变换字体"><span class="toc-text"> – 添加彩色滚动变换字体 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加字数统计和阅读时长"><span class="toc-text"> – 添加字数统计和阅读时长 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加背景音乐"><span class="toc-text"> – 添加背景音乐 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加网站运行时间"><span class="toc-text"> – 添加网站运行时间 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加百度统计"><span class="toc-text"> – 添加百度统计 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-浏览器网页标题恶搞"><span class="toc-text"> – 浏览器网页标题恶搞 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-背景添加动态线条效果"><span class="toc-text"> – 背景添加动态线条效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加人体时钟"><span class="toc-text"> – 添加人体时钟 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加RSS订阅"><span class="toc-text"> – 添加RSS订阅 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加网站雪花飘落效果"><span class="toc-text"> – 添加网站雪花飘落效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加-Fork-me-on-GitHub-效果"><span class="toc-text"> – 添加 Fork me on GitHub 效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加背景动态彩带效果"><span class="toc-text"> – 添加背景动态彩带效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未完待续……"><span class="toc-text">未完待续……</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加评论系统"><span class="toc-text"> – 添加评论系统 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加卡通人物"><span class="toc-text"> – 添加卡通人物 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-自定义鼠标指针样式"><span class="toc-text"> – 自定义鼠标指针样式 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击爱心效果"><span class="toc-text"> – 添加鼠标点击爱心效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击显示字体效果"><span class="toc-text"> – 添加鼠标点击显示字体效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加鼠标点击烟花爆炸效果"><span class="toc-text"> – 添加鼠标点击烟花爆炸效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加彩色滚动变换字体"><span class="toc-text"> – 添加彩色滚动变换字体 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加字数统计和阅读时长"><span class="toc-text"> – 添加字数统计和阅读时长 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加背景音乐"><span class="toc-text"> – 添加背景音乐 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加网站运行时间"><span class="toc-text"> – 添加网站运行时间 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加百度统计"><span class="toc-text"> – 添加百度统计 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-浏览器网页标题恶搞"><span class="toc-text"> – 浏览器网页标题恶搞 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-背景添加动态线条效果"><span class="toc-text"> – 背景添加动态线条效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加人体时钟"><span class="toc-text"> – 添加人体时钟 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加RSS订阅"><span class="toc-text"> – 添加RSS订阅 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加网站雪花飘落效果"><span class="toc-text"> – 添加网站雪花飘落效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加-Fork-me-on-GitHub-效果"><span class="toc-text"> – 添加 Fork me on GitHub 效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加背景动态彩带效果"><span class="toc-text"> – 添加背景动态彩带效果 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-自定义一个不使用主题模板渲染的独立页面"><span class="toc-text"> – 自定义一个不使用主题模板渲染的独立页面 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未完待续……"><span class="toc-text">未完待续……</span></a></li></ol>
     </div>
   </section>
 
@@ -1226,7 +1209,7 @@
   Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <span id="busuanzi_container_site_uv">UV:<span id="busuanzi_value_site_uv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
   <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <span class="post-count">Word Count:42.2k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <span class="post-count">Word Count:42.6k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
   <i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">BY-NC-SA 4.0</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   -->
   <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -1260,7 +1243,7 @@
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">42.2k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">42.6k</span>
     </div>
     <br><br>
 </footer>
