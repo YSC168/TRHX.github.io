@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.itrhx.com/2019/01/18/A16-One-computer-deploys-two-or-more-hexo-blogs/</loc>
+    <lastmod>2019-05-28</lastmod>
+  </url>  <url>
     <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     <lastmod>2019-05-27</lastmod>
   </url>  <url>
@@ -9,9 +12,6 @@
   </url>  <url>
     <loc>https://www.itrhx.com/2019/04/15/A21-PEP8/</loc>
     <lastmod>2019-04-29</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/01/18/A16-One-computer-deploys-two-or-more-hexo-blogs/</loc>
-    <lastmod>2019-04-20</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/04/14/A20-VMwarePro15-Installation-of-Deepin15.9-tutorial/</loc>
     <lastmod>2019-04-14</lastmod>
