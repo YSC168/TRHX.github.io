@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
+    
+    <lastmod>2019-06-11T10:33:22.988Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/01/18/A16-One-computer-deploys-two-or-more-hexo-blogs/</loc>
     
     <lastmod>2019-05-30T03:00:36.006Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://www.itrhx.com/2019/05/14/A22-Eclipse-Connects-to-SQL-Server/</loc>
     
     <lastmod>2019-05-14T05:21:08.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
-    
-    <lastmod>2019-05-07T09:46:11.994Z</lastmod>
     
   </url>
   
