@@ -1,0 +1,134 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>JS代码整理 | TRHX'S BLOG</title>
+  <meta name="keywords" content="Js代码加解密,js代码格式化,js压缩,js解压">
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/bootstrap.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/JSFinishing/clipboard.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/layer.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/layer.css" id="layuicss-layer">
+  <style type="text/css">
+    /*正文样式*/
+    body {
+      font-family: "HanHei SC", "PingHei", "PingFang SC", "微软雅黑", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 13px;
+      line-height: 1.846;
+      color: #666666;
+    }
+    #footer{position:relative;clear:both;padding:10px 20px 40px 0;padding:10px 0;width:100%;text-align:center}#footer address{display:inline-block;padding:2px 10px;color:rgba(0,0,0,.5);font-style:normal}
+    #footer a{color:rgba(0,0,0,.5);cursor:grab}#footer a:hover{border-bottom:1px dotted #00387d;color:#00387d}
+    </style>
+</head>
+<body>
+  <div class="container clearfix" style="padding: 50px 0 0 0;">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="form-inline">
+              <div class="row">
+                <div class="col-xs-6">
+                  <div style="min-height:34px;">
+                    <div class="form-group">
+                      <div id="info" name="info">
+                        <p class="text-success">工具准备就绪</p>
+                      </div>
+                      <span>加密层数:
+                        <span style="color: red" id="deg">0</span> 层</span> | 
+                      <span>处理时间:
+                        <span style="color: blue" id="tme">0</span> 毫秒</span>
+                      <p class="text-danger" id="errmsg"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>
+                    <select id="compresstype" name="compresstype" class="form-control">
+                      <option value="0" selected>普通压缩</option>
+                      <option value="1">加密压缩</option>
+                    </select>
+                    <select id="tabsize" name="tabsize" class="form-control">
+                      <option value="1">制表符缩进</option>
+                      <option value="2">2个空格缩进</option>
+                      <option value="4" selected>4个空格缩进</option>
+                      <option value="8">8个空格缩进</option>
+                    </select>
+                  </p>
+                  <p>
+                    <button class="btn btn-default" id="copycode" type="button" data-clipboard-target="#content" style="color:white;background-color:brown;">复制内容</button>
+                    <button class="btn btn-warning" id="encode" type="button">一键压缩</button>
+                    <button class="btn btn-success" id="decode" type="button">一键解密</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body" style="height:400px;">
+            <textarea style="width:100%;height:100%;" id="content" placeholder="请输入待处理的 js 代码" onfocus="this.select()" rows="15" name="content">
+/*  压缩：选择压缩类型，将代码压缩为更小体积     */
+/*  解密：解密多种编码加密后的代码                      */
+/*  只需要粘贴js代码即可，无需&lt;script&gt;标签        */
+/*  以下是演示代码                                                */
+
+$.ajax({
+      type: "GET",
+      url: "url.php",
+      dataType: "json",
+      cache: false,
+      success: function (data) {
+        alert(data);
+      }
+    });
+</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">工具简介</div>
+      <div class="panel-body">
+        <p>▶ 专门解码解密 eval(function(p,a,c,k,e,r){})、eval(function(p,a,c,k,e,d){}) 、eval(function(h,b,j,f,g,i){}) 等多种编码加密的代码。</p>
+        <p class="text-success">▶ 注：加密前请备份原 JS代码，加密后请测试JS代码能否正常使用。★ <a href="//VisualEditing/">代码在线运行测试工具</a> ★</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    var clipboard = new ClipboardJS('#copycode');
+    clipboard.on('success', function (e) {
+      e.clearSelection();
+      layer.msg('复制成功');
+    });
+    clipboard.on('error', function (e) {
+      e.clearSelection();
+      layer.msg('复制失败');
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/JSFinishing/code_packed.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/JSFinishing/eval_out.js"></script>
+  <footer id="footer" role="contentinfo" style="top:50px;">
+    <address>
+        <div class="copyright">
+            Copyright&nbsp;©&nbsp;2018-2019&nbsp;<a href="https://www.itrhx.com/" target="_blank">TRHX'S BLOG</a>&nbsp;|&nbsp;
+            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/icp.png" class="footer-icon">&nbsp;
+            <a href="http://www.beian.miit.gov.cn/" target="_blank"> 鄂ICP备19003281号-3</a>&nbsp;|&nbsp;
+            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/12377.png" alt=" 12377.png">
+            <a href="http://www.12377.cn/" target="_blank">中国互联网违法和不良信息举报中心</a><br><br>
+            推荐使用1920*1080分辨率、谷歌或者火狐浏览器浏览此页&nbsp;|&nbsp;
+            <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;|&nbsp;
+            <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script>&nbsp;|&nbsp;
+            <a href="https://www.itrhx.com/atom.xml" target="_blank">RSS订阅</a>&nbsp;|&nbsp;
+            <a href="https://996.icu/" target="_blank">996.ICU</a>&nbsp;|&nbsp;
+            <a href="https://www.itrhx.com/friends/" target="_blank">申请友链</a>&nbsp;|&nbsp;
+            Powered By <a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;|&nbsp;
+            Hosted By <a href="https://github.com/" target="_blank">GitHub Pages</a><br><br>
+            部分资料来源于网络，版权属于其合法持有人，只供学习交流之用，非商务用途。如有侵犯您的权益，请及时告知删除。互动交流时请遵守理性，宽容，换位思考的原则。
+        </div>
+    </address>
+  </footer>
+</body>
+</html>
