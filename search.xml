@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[恶意刷留言者——你是什么垃圾？]]></title>
+    <url>%2F2019%2F07%2F26%2FA25-SB%2F</url>
+    <content type="text"><![CDATA[有一种动物，自认为自己技术了得，实则和CXK差不多，以攻击他人为乐，这种动物称为程序员中的垃圾，哦！不，这种动物称不上程序员！ 这个周连续被人刷垃圾评论，具体开始时间不记得了，不想多说什么，太多的文字用在垃圾身上简直是玷污中华上下五千年的文化，只问一句，你是什么垃圾？ 请问你是什么垃圾？]]></content>
+      <categories>
+        <category>BLOG</category>
+      </categories>
+      <tags>
+        <tag>垃圾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一个 JS 脚本实现网站预加载，提升页面加载速度]]></title>
     <url>%2F2019%2F06%2F12%2FA24-Instant.page%2F</url>
     <content type="text"><![CDATA[instant.page 使用即时预加载技术，在用户点击之前预先加载页面。当用户的鼠标悬停在一个链接上超过 65 毫秒时，浏览器会对此页面进行预加载，当用户点击链接后，就从预加载的缓存中直接读取页面内容，从而达到缩短页面加载时间的目的。 以我博客为例，使用了这项技术后，当鼠标在一个链接停留超过 65 毫秒时，Network 里可以看见相关文章已经预加载出来了，而停留时间过短就不会预加载（红色部分，状态为 canceled） 使用方法：将以下HTML代码放在&lt;/ body&gt; 之前即可：1&lt;script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"&gt;&lt;/script&gt; 但是此脚本是官方的，储存在国外服务器，对国内访问不太友好，可以将该JS脚本储存到自己的服务器上，点此获取该JS脚本，然后再根据以下格式在&lt;/ body&gt; 之前引用：1&lt;script src="`存放路径`/instantclick-1.2.2.js" type="module"&gt;&lt;/script&gt; 也可以直接使用我的，使用 jsDeliver CDN 加速，速度还可以：1&lt;script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/instantclick-1.2.2.js" type="module"&gt;&lt;/script&gt; 参考资料：《网站预加载 JS 脚本 instant.page》——by 左岸 ；instant.page官网]]></content>
