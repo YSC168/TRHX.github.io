@@ -455,16 +455,17 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <hr>
-<h4 id="本文有参考《jsDeliver-github使用教程，免费好用的cdn》——-By-hojun"><a href="#本文有参考《jsDeliver-github使用教程，免费好用的cdn》——-By-hojun" class="headerlink" title="本文有参考《jsDeliver+github使用教程，免费好用的cdn》—— By hojun"></a><center><font color="#FF0000">本文有参考</font><a href="https://www.hojun.cn/2019/01/18/jsDeliver-github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84cdn/" target="_blank" rel="noopener">《jsDeliver+github使用教程，免费好用的cdn》</a>—— By hojun</center></h4><hr>
+          <h4 id="本文有参考《jsDeliver-github使用教程，免费好用的cdn》——-By-hojun"><a href="#本文有参考《jsDeliver-github使用教程，免费好用的cdn》——-By-hojun" class="headerlink" title="本文有参考《jsDeliver+github使用教程，免费好用的cdn》—— By hojun"></a><center><font color="#FF0000">本文有参考</font><a href="https://www.hojun.cn/2019/01/18/jsDeliver-github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84cdn/" target="_blank" rel="noopener">《jsDeliver+github使用教程，免费好用的cdn》</a>—— By hojun</center></h4><hr>
 <p>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。——百度百科</p>
 <p>放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDeliver + Github便是免费且好用的CDN，非常适合博客网站使用。</p>
 <hr>
-<h1 id="1、新建Github仓库"><a href="#1、新建Github仓库" class="headerlink" title="1、新建Github仓库 "></a><font color="#FF0000">1、新建Github仓库 </font></h1><p><img src="https://i.loli.net/2019/02/10/5c602f4762efe.png" alt=""></p>
-<h1 id="2、克隆Github仓库到本地"><a href="#2、克隆Github仓库到本地" class="headerlink" title="2、克隆Github仓库到本地 "></a><font color="#FF0000">2、克隆Github仓库到本地 </font></h1><p>  点击 Clone or download，一键复制仓库地址<br> <img src="https://i.loli.net/2019/02/10/5c6030a1a92b1.png" alt=""><br> 在本地目录右键 Git Bash Here，执行以下命令：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 一键复制的仓库地址</span><br></pre></td></tr></table></figure></p>
+<h1 id="1、新建Github仓库"><a href="#1、新建Github仓库" class="headerlink" title="1、新建Github仓库 "></a><font color="#FF0000">1、新建Github仓库 </font></h1><p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/01.png" alt="01"></p>
+<h1 id="2、克隆Github仓库到本地"><a href="#2、克隆Github仓库到本地" class="headerlink" title="2、克隆Github仓库到本地 "></a><font color="#FF0000">2、克隆Github仓库到本地 </font></h1><p>  点击 Clone or download，一键复制仓库地址<br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/04.png" alt="04"></p>
+<p> 在本地目录右键 Git Bash Here，执行以下命令：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 一键复制的仓库地址</span><br></pre></td></tr></table></figure></p>
 <h1 id="3、上传资源"><a href="#3、上传资源" class="headerlink" title="3、上传资源 "></a><font color="#FF0000">3、上传资源 </font></h1><p>  复制需要上传的资源到本地git仓库（注：jsDeliver不支持加载超过20M的资源），在本地git仓库目录下右键 Git Bash Here，执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status                    //查看状态</span><br><span class="line">git add .                     //添加所有文件到暂存区</span><br><span class="line">git commit -m &apos;第一次提交&apos;      //把文件提交到仓库</span><br><span class="line">git push                      //推送至远程仓库</span><br></pre></td></tr></table></figure></p>
-<h1 id="4、发布仓库"><a href="#4、发布仓库" class="headerlink" title="4、发布仓库 "></a><font color="#FF0000">4、发布仓库 </font></h1><p>  点击release发布<br><img src="https://i.loli.net/2019/02/10/5c60343d6d927.png" alt=""><br>  自定义发布版本号<br>  <img src="https://i.loli.net/2019/02/10/5c6034955bae4.png" alt=""></p>
-<h1 id="5、通过jsDeliver引用资源"><a href="#5、通过jsDeliver引用资源" class="headerlink" title="5、通过jsDeliver引用资源 "></a><font color="#FF0000">5、通过jsDeliver引用资源 </font></h1><p>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a><br>例如：<a href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png</a></p>
+<h1 id="4、发布仓库"><a href="#4、发布仓库" class="headerlink" title="4、发布仓库 "></a><font color="#FF0000">4、发布仓库 </font></h1><p>  点击release发布<br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/02.png" alt="02"></p>
+<p>  自定义发布版本号<br>  <img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/03.png" alt="03"></p>
+<h1 id="5、通过jsDeliver引用资源"><a href="#5、通过jsDeliver引用资源" class="headerlink" title="5、通过jsDeliver引用资源 "></a><font color="#FF0000">5、通过jsDeliver引用资源 </font></h1><p>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a><br>例如：<a href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4</a></p>
 
         </div>
         
@@ -476,10 +477,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-12T21:03:31+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-07-31T19:42:10+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年3月12日</p>
+    <p>最后更新于 2019年7月31日</p>
   </a>
 </div>
 
@@ -1146,25 +1147,32 @@
   <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1275909280&web_id=1275909280"></script><br><br>
   <div class="github-badge">
+    <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
     <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span>
   </div>
   <div class="github-badge">
-    <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span>
+    <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages">
+    <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span></a>
   </div>
   <div class="github-badge">
-    <span class="badge-subject">DNR</span><span class="badge-value bg-firebrick">Aliyun</span>
+    <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+    <span class="badge-subject">DNR</span><span class="badge-value bg-blueviolet">Aliyun</span></a>
   </div>
   <div class="github-badge">
-    <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span>
+    <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速">
+    <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
   </div>
   <div class="github-badge">
-    <span class="badge-subject">PictureBed</span><span class="badge-value bg-blueviolet">SM.MS</span>
+      <a style="color: #fff" rel="license" href="https://xaoxuu.com/wiki/material-x/" target="_blank" title="站点使用 Material X 主题，作者：xaoxuu">
+    <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span></a>
   </div>
   <div class="github-badge">
-    <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span>
+    <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+    <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
   </div>
   <div class="github-badge">
-    <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span>
+    <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+    <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
   </div>
   <div class="github-badge">
     <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>
