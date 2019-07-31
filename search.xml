@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[利用 Cloudflare 为 Hexo 博客添加 Https 支持]]></title>
+    <url>%2F2019%2F07%2F31%2FA26-Hexo-add-https%2F</url>
+    <content type="text"><![CDATA[利用 Cloudflare 为 Hexo 博客添加 https 支持 – 前言GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，这种方法就不管用了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，而 Cloudflare 就能完美解决这种尴尬 Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理 – 注册 Cloudflare到 Cloudflare官网 注册账号 – 添加站点添加你的站点，一直下一步即可 如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考《为hexo博客配置个性域名》 –修改DNS点击下一步 Cloudflare 会提供给你两个 DNS 地址 到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效 –开启 HTTPS在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可 关于三种模式 Flexible、Full、Full (Strict) 的区别： Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的 Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书 Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的 至此，我们的域名就支持 https 访问了，但是当用户输入 http://xxxxxx 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了 –重定向强制 HTTPSCloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可 现在我们的 Hexo 博客就实现了全站 HTTPS！]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>HTTPS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[恶意刷留言者——你是什么垃圾？]]></title>
     <url>%2F2019%2F07%2F26%2FA25-SB%2F</url>
     <content type="text"><![CDATA[有一种动物，自认为自己技术了得，实则和CXK差不多，以攻击他人为乐，这种动物称为程序员中的垃圾，哦！不，这种动物称不上程序员！ 这个周连续被人刷垃圾评论，具体开始时间不记得了，不想多说什么，太多的文字用在垃圾身上简直是玷污中华上下五千年的文化，只问一句，你是什么垃圾？ 随便提一句，这家伙连我的情侣博客一起刷的，真是让人大跌眼镜啊，估计自己没女朋友吧，见不得别人好，悲催啊，不知道又是哪个学校，哪个公司，哪个家庭摊上了这种垃圾。 请问你是什么垃圾？垃圾分类，从我做起！]]></content>

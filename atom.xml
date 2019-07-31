@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itrhx.com/"/>
-  <updated>2019-07-26T10:45:07.527Z</updated>
+  <updated>2019-07-31T06:27:02.996Z</updated>
   <id>https://www.itrhx.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用 Cloudflare 为 Hexo 博客添加 Https 支持</title>
+    <link href="https://www.itrhx.com/2019/07/31/A26-Hexo-add-https/"/>
+    <id>https://www.itrhx.com/2019/07/31/A26-Hexo-add-https/</id>
+    <published>2019-07-31T03:48:43.215Z</published>
+    <updated>2019-07-31T06:27:02.996Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>利用 Cloudflare 为 Hexo 博客添加 https 支持</p></blockquote><a id="more"></a><h1 id="–-前言"><a href="#–-前言" class="headerlink" title="– 前言"></a><font color="#FF000">– 前言</font></h1><p>GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，这种方法就不管用了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，而 Cloudflare 就能完美解决这种尴尬</p><p>Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理</p><h1 id="–-注册-Cloudflare"><a href="#–-注册-Cloudflare" class="headerlink" title="– 注册 Cloudflare"></a><font color="#FF000">– 注册 Cloudflare</font></h1><p>到 <a href="https://dash.cloudflare.com/sign-up" target="_blank" rel="noopener">Cloudflare官网</a> 注册账号</p><fancybox><br><img src="https://i.loli.net/2019/07/31/5d411d1f67e1174039.png" alt="01.png"><br></fancybox><h1 id="–-添加站点"><a href="#–-添加站点" class="headerlink" title="– 添加站点"></a><font color="#FF000">– 添加站点</font></h1><p>添加你的站点，一直下一步即可</p><fancybox><br><img src="https://i.loli.net/2019/07/31/5d411eec730bf15293.png" alt="02.png"><br><img src="https://i.loli.net/2019/07/31/5d411fd6ebdc365635.png" alt="03.png"><br></fancybox><br>如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考<a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo_font_270" target="_blank" rel="noopener">《为hexo博客配置个性域名》</a><br><fancybox><br><img src="https://i.loli.net/2019/07/31/5d411fd64f32157232.png" alt="04.png"><br></fancybox><h1 id="–修改DNS"><a href="#–修改DNS" class="headerlink" title="–修改DNS"></a><font color="#FF000">–修改DNS</font></h1><p>点击下一步 Cloudflare 会提供给你两个 DNS 地址</p><fancybox><br><img src="https://i.loli.net/2019/07/31/5d411fd6e030833657.png" alt="05.png"><br></fancybox><br>到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效<br><fancybox><br><img src="https://i.loli.net/2019/07/31/5d4121286e97074695.png" alt="08.png"><br><img src="https://i.loli.net/2019/07/31/5d4121280aa5659001.png" alt="09.png"><br><img src="https://i.loli.net/2019/07/31/5d4121284290b60800.png" alt="10.png"><br></fancybox><h1 id="–开启-HTTPS"><a href="#–开启-HTTPS" class="headerlink" title="–开启 HTTPS"></a><font color="#FF000">–开启 HTTPS</font></h1><p>在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可</p><fancybox><br><img src="https://i.loli.net/2019/07/31/5d412706e6c0b65841.png" alt="07.png"><br></fancybox><p>关于三种模式 Flexible、Full、Full (Strict) 的区别：</p><ul><li><p>Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的</p></li><li><p>Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书</p></li><li><p>Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的</p></li></ul><p>至此，我们的域名就支持 https 访问了，但是当用户输入 <a href="http://xxxxxx" target="_blank" rel="noopener">http://xxxxxx</a> 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了</p><h1 id="–重定向强制-HTTPS"><a href="#–重定向强制-HTTPS" class="headerlink" title="–重定向强制 HTTPS"></a><font color="#FF000">–重定向强制 HTTPS</font></h1><p>Cloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可</p><fancybox><br><img src="https://i.loli.net/2019/07/31/5d412ca3a6d8b48731.png" alt="06.png"><br></fancybox><p>现在我们的 Hexo 博客就实现了全站 HTTPS！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;利用 Cloudflare 为 Hexo 博客添加 https 支持&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://www.itrhx.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.itrhx.com/tags/Hexo/"/>
+    
+      <category term="HTTPS" scheme="https://www.itrhx.com/tags/HTTPS/"/>
+    
+  </entry>
   
   <entry>
     <title>恶意刷留言者——你是什么垃圾？</title>
@@ -459,30 +485,6 @@
       <category term="数据类型" scheme="https://www.itrhx.com/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
       <category term="变量" scheme="https://www.itrhx.com/tags/%E5%8F%98%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VMware Pro 14 安装 Ubuntu 18.04 详细教程</title>
-    <link href="https://www.itrhx.com/2018/09/09/A06-VMwarePro14-Installation-of-Ubuntu18.04-tutorial/"/>
-    <id>https://www.itrhx.com/2018/09/09/A06-VMwarePro14-Installation-of-Ubuntu18.04-tutorial/</id>
-    <published>2018-09-09T13:14:29.532Z</published>
-    <updated>2019-06-12T14:48:01.022Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-下载安装-VMware-Workstation-Pro-14"><a href="#1-下载安装-VMware-Workstation-Pro-14" class="headerlink" title="1.下载安装 VMware Workstation Pro 14"></a><font color="#FF0000">1.下载安装 VMware Workstation Pro 14</font></h1><p> 进入 <a href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html" target="_blank" rel="noopener">VMware 官网</a>或者在软件商店下载最新版VMware虚拟机并安装</p><p> <img src="https://i.loli.net/2019/04/01/5ca22c11d6af6.png" alt="01"></p><h1 id="2-下载-Ubuntu-18-04-系统"><a href="#2-下载-Ubuntu-18-04-系统" class="headerlink" title="2.下载 Ubuntu 18.04 系统"></a><font color="#FF0000">2.下载 Ubuntu 18.04 系统</font></h1><p>  进入 <a href="https://www.ubuntu.com/" target="_blank" rel="noopener">Ubuntu 官网</a>，下载最新版 Ubuntu 系统镜像</p><p><img src="https://i.loli.net/2019/04/01/5ca22c21bc04e.png" alt="02"><br><img src="https://i.loli.net/2019/04/01/5ca22c4931bb8.png" alt="03"></p><h1 id="3-在-VMware-中创建虚拟机"><a href="#3-在-VMware-中创建虚拟机" class="headerlink" title="3.在 VMware 中创建虚拟机"></a><font color="#FF0000">3.在 VMware 中创建虚拟机</font></h1><p>打开安装好的 VMware Workstation Pro 14，选择创建新的虚拟机<br><img src="https://i.loli.net/2019/04/01/5ca22c5e2be03.png" alt="04"></p><p>在新建虚拟机向导中选择自定义（高级）<br><img src="https://i.loli.net/2019/04/01/5ca22c6a836dc.png" alt="05"></p><p>默认直接下一步，直到出现下图，再选择稍后安装操作系统<br><img src="https://i.loli.net/2019/04/01/5ca22c7692315.png" alt="06"></p><p>选择客户机操作系统为 Linux ，如果你电脑是32位就选择 Ubuntu 版本，64位就选择 Ubuntu 64 位版本<br><img src="https://i.loli.net/2019/04/01/5ca22c845c906.png" alt="07"></p><p>更改虚拟机名称及存放位置<br><img src="https://i.loli.net/2019/04/01/5ca22c9be2b92.png" alt="08"></p><p>为虚拟机指定处理器数量，默认即可<br><img src="https://i.loli.net/2019/04/01/5ca22caa9b5d8.png" alt="09"></p><p>为虚拟机分配内存，太大了可能会导致卡顿，太小了也不好，推荐内存大小即可<br><img src="https://i.loli.net/2019/04/01/5ca22cceb46fd.png" alt="10"></p><p>以下均选择默认即可<br><img src="https://i.loli.net/2019/04/01/5ca22ce4ea0c7.png" alt="11"><br><img src="https://i.loli.net/2019/04/01/5ca22cf399ce0.png" alt="12"><br><img src="https://i.loli.net/2019/04/01/5ca22cffbfbdb.png" alt="13"><br><img src="https://i.loli.net/2019/04/01/5ca22d09d1258.png" alt="14"></p><p>选择创建新虚拟磁盘<br><img src="https://i.loli.net/2019/04/01/5ca22d1bbcb26.png" alt="15"></p><p>选择将虚拟磁盘储存为单个文件<br><img src="https://i.loli.net/2019/04/01/5ca22d2ab09c1.png" alt="16"></p><p>默认下一步<br><img src="https://i.loli.net/2019/04/01/5ca22d3880b59.png" alt="17"></p><p>点击完成<br><img src="https://i.loli.net/2019/04/01/5ca22d4de7822.png" alt="18"></p><p>此时我们就可以在虚拟机左侧“我的计算机”下面看到刚刚创建的虚拟机 Ubuntu 64 位，单击 Ubuntu 64 位，选择“编辑虚拟机设置”， 再选择“CD/DVD(SATA)”，选择“使用ISO映像文件”，点击“浏览”，找到先前我们下载好的 Ubuntu 64 位镜像文件，点击“确定”<br><img src="https://i.loli.net/2019/04/01/5ca22d5b39578.png" alt="19"><br><img src="https://i.loli.net/2019/04/01/5ca22d6962235.png" alt="20"></p><h1 id="4-在虚拟机上安装-Ubuntu-系统"><a href="#4-在虚拟机上安装-Ubuntu-系统" class="headerlink" title="4.在虚拟机上安装 Ubuntu 系统"></a><font color="#FF0000">4.在虚拟机上安装 Ubuntu 系统</font></h1><p>单击 Ubuntu 64 位，选择“开启此虚拟机”<br><img src="https://i.loli.net/2019/04/01/5ca22d7a11429.png" alt="21"></p><p>来到欢迎界面，选择好语言，点击“安装 Ubuntu”<br><img src="https://i.loli.net/2019/04/01/5ca22d868e089.png" alt="22"></p><p>选择键盘布局为“汉语”<br><img src="https://i.loli.net/2019/04/01/5ca22d91e75fb.png" alt="23"></p><p>更新和其他软件默认选择即可<br><img src="https://i.loli.net/2019/04/01/5ca22d9fb74c5.png" alt="24"></p><p>安装类型选择“清除整个磁盘并安装 Ubuntu”，PS: 因为我们是新安装的系统，且在虚拟机中，所以可以选择清除整个磁盘，这个操作不会清除你原来电脑里面的东西<br><img src="https://i.loli.net/2019/04/01/5ca22dab51a3f.png" alt="25"><br><img src="https://i.loli.net/2019/04/01/5ca22dbbe18ba.png" alt="26"></p><p>地区随便，在中国就行，默认即可<br><img src="https://i.loli.net/2019/04/01/5ca22dcf419c2.png" alt="27"></p><p>之后设置计算机名，密码<br><img src="https://i.loli.net/2019/04/01/5ca22dde29a6d.png" alt="28"></p><p>点击继续稍等一会就安装完成啦<br><img src="https://i.loli.net/2019/04/01/5ca22df0415af.png" alt="29"></p><hr><h1 id="安装过程中可能会出现的一些问题"><a href="#安装过程中可能会出现的一些问题" class="headerlink" title="安装过程中可能会出现的一些问题"></a><center><font color="#FF0000" size="7">安装过程中可能会出现的一些问题</font></center></h1><hr><h1 id="1-在虚拟机上安装-Ubuntu-系统的过程中卡死不动"><a href="#1-在虚拟机上安装-Ubuntu-系统的过程中卡死不动" class="headerlink" title=" 1.在虚拟机上安装 Ubuntu 系统的过程中卡死不动"></a><font color="#FF0000"> 1.在虚拟机上安装 Ubuntu 系统的过程中卡死不动</font></h1><p> 解决方法：关闭网络，重新安装即可</p><hr><h1 id="2-Ubuntu-不能全屏显示"><a href="#2-Ubuntu-不能全屏显示" class="headerlink" title=" 2.Ubuntu 不能全屏显示"></a><font color="#FF0000"> 2.Ubuntu 不能全屏显示</font></h1><p>解决方法：<br>方法①：安装 open-vm-tools：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install <span class="keyword">open</span>-<span class="keyword">vm</span>-tools</span><br></pre></td></tr></table></figure><p>然后执行：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install <span class="keyword">open</span>-<span class="keyword">vm</span>*</span><br></pre></td></tr></table></figure><p>重启即可全屏显示</p><p>方法②：在终端输入<code>xrandr</code>，并回车，我们就可以看到很多可以修改的分辨率，选择好分辨率后，比如我们要修改分辨率为 1920x1440 ，则在终端输入 <code>xrandr -s 1920x1440</code>，回车即可，注意 1920x1440 中间是<font color="#FF0000">小写字母 x</font>，本人亲测此方法并不是很完美，不能完全适应屏幕<br><img src="https://i.loli.net/2019/04/01/5ca22dfc9d771.png" alt="30"></p><p>方法③：安装 VMware Tools：<br>1、进入 Ubuntu 系统后，点击虚拟机上的【虚拟机】—＞【安装 VMware Tools】，回到桌面即可看到一个 VMware Tools 的 图标<br>2、复制 VMwareTools-10.0.10-4301679.tar.gz（版本根据自己的实际情况而定）到 home 目录下， 用命令 <code>tar -xzvf  VMwareTools-10.0.10-4301679.tar.gz</code> 进行解压<br>3、解压后 cd vmware_tools_distrib，打开终端<br>4、输入“sudo ./vmware-install.pl”，输入用户密码后开始安装<br>5、接下来会有很多地方需要你按 Enter或者 Yes<br>6、当你看到出现 <code>—the vmware team</code> 的字样后就可以关闭窗口了，此时窗口就会自动全屏了，如果没有全屏，重启过后就可以了<br>7、若还没有全屏显示，则将虚拟机的【查看】—&gt;【自动调整大小】—&gt;【自适应客户机】，都选上，即可实现全屏</p>]]></content>
-    
-    <summary type="html">
-    
-      VMware Pro 14 安装 Ubuntu 18.04 的详细教程以及一些在安装过程中可能遇到的问题
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://www.itrhx.com/categories/Linux/"/>
-    
-    
-      <category term="VMware" scheme="https://www.itrhx.com/tags/VMware/"/>
-    
-      <category term="Ubuntu" scheme="https://www.itrhx.com/tags/Ubuntu/"/>
     
   </entry>
   
