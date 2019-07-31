@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
+    <lastmod>2019-07-31</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2018/08/25/A03-Markdown-grammar-and-techniques/</loc>
+    <lastmod>2019-07-31</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2018/08/15/A02-Build-blog-with-GithubPages-and-Hexo/</loc>
+    <lastmod>2019-07-31</lastmod>
+  </url>  <url>
     <loc>https://www.itrhx.com/2019/07/31/A26-Hexo-add-https/</loc>
     <lastmod>2019-07-31</lastmod>
   </url>  <url>
@@ -56,15 +65,6 @@
     <lastmod>2019-06-12</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/08/29/A05-Markdown-editor-recommendation/</loc>
-    <lastmod>2019-06-12</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
-    <lastmod>2019-06-12</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/08/25/A03-Markdown-grammar-and-techniques/</loc>
-    <lastmod>2019-06-12</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/08/15/A02-Build-blog-with-GithubPages-and-Hexo/</loc>
     <lastmod>2019-06-12</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/08/10/A01-Hello-World/</loc>
