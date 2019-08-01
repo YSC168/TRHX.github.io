@@ -16,12 +16,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Hello World! | TRHX&#39;S BLOG</title>
+  <title>Eclipse 通过 JDBC 连接 SQL Server | TRHX&#39;S BLOG</title>
   
   <meta name="keywords" content="大学生 软件工程 Java Python">
   
   
-  <meta name="description" content="Hello World! Never forget why you started, and your mission can be accomplished!, 一个大学生用于自学的个人博客">
+  <meta name="description" content="Eclipse 与 SQL Server 建立连接, 一个大学生用于自学的个人博客">
   
 
   
@@ -365,8 +365,8 @@
         
   
     <h1 class="title">
-      <a href="/2018/08/10/A01-hello-world/">
-        Hello World!
+      <a href="/2019/05/14/A22-eclipse-connects-to-sql/">
+        Eclipse 通过 JDBC 连接 SQL Server
       </a>
     </h1>
   
@@ -395,7 +395,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-08-10</p>
+    <p>2019-05-14</p>
   </a>
 </div>
 
@@ -405,9 +405,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/BLOG/' rel="nofollow">
+    <a href='/categories/Java/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>BLOG</p>
+      <p>Java</p>
     </a>
   </div>
 
@@ -417,7 +417,7 @@
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/BLOG/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>BLOG</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JDBC/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>JDBC</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL-Server-2012/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>SQL Server 2012</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Elicpse/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>Elicpse</p></a></div>
 
 
           
@@ -455,17 +455,35 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <hr>
+          <p>本文用到的软件版本以及相关环境：</p>
 <blockquote>
-<p>人类的幸福和欢乐在于奋斗，而最有价值的是为理想而奋斗！ ———  苏格拉底</p>
+<p>Eclipse Photon Release (4.8.0)<br>JDK-10.0.2<br>SQL Server 2012</p>
 </blockquote>
-<blockquote>
-<p>Human happiness and joy lie in struggle, and what is most valuable is striving for ideals! ———   Socrates</p>
-</blockquote>
-<hr>
-<iframe frameborder="0" width="840" height="500" src="https://v.qq.com/txp/iframe/player.html?vid=m0768lhl5uh" allowfullscreen="true"></iframe>
-
-<iframe frameborder="0" width="840" height="500" src="https://v.qq.com/txp/iframe/player.html?vid=a0371nd7kqt" allowfullscreen="true"></iframe>
+<h1 id="1-配置-SQL-Server-2012"><a href="#1-配置-SQL-Server-2012" class="headerlink" title="1.配置 SQL Server 2012"></a><font color="#FF0000">1.配置 SQL Server 2012</font></h1><p>打开 SQL Server Management Studio，使用 <font color="#FF0000">SQL Server 身份验证</font> 登录：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/001.png" alt="001.png"></p>
+<p>如果在安装 SQL Server 2012 时选用了Windows身份验证登录方式，则需要重新设置，设置方法参考：<a href="https://blog.csdn.net/qq_36759224/article/details/90204243" target="_blank" rel="noopener">《SQL Server 登录更换【Windows身份验证】为【SQL Server 身份验证】》</a></p>
+<p>登录成功后，打开 SQL Server 配置管理器：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/002.png" alt="002.png"></p>
+<p>在左边找到 SQL Server 网络配置，点击【你的数据库名】的协议，将右边栏的 <font color="#FF0000">Shared Memory、Named Pipes、TCP/IP</font> 全部右键选择<font color="#FF0000">启用</font>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/003.png" alt="003.png"><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/004.png" alt="004.png"></p>
+<p>双击 <font color="#FF0000">TCP/IP</font>（或者右键选择属性），选择【<font color="#FF0000">IP地址</font>】，将【<font color="#FF0000">IP1</font>】和【<font color="#FF0000">IP10</font>】的【<font color="#FF0000">IP地址</font>】设为 <font color="#FF0000">127.0.0.1</font></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/005.png" alt="005.png"></p>
+<p>将所有【<font color="#FF0000">IPx</font>】（<font color="#FF0000">IP1、IP10、IP11、IP12</font>等）的【<font color="#FF0000">已启用</font>】设为<font color="#FF0000">是</font></p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/006.png" alt="006.png"></p>
+<p>下拉到窗口底部，将 【<font color="#FF0000">IPAll</font>】 中的【<font color="#FF0000">TCP端口</font>】设成 <font color="#FF0000">1433</font>，其余不变</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/007.png" alt="007.png"></p>
+<h1 id="2-开启-Telnet-服务"><a href="#2-开启-Telnet-服务" class="headerlink" title="2.开启 Telnet 服务"></a><font color="#FF0000">2.开启 Telnet 服务</font></h1><p>打开【<font color="#FF0000">控制面板</font>】，选择【<font color="#FF0000">程序</font>】，点击【<font color="#FF0000">启用或关闭 Windows 功能</font>】，找到【<font color="#FF0000">Telnet Client</font>】勾选并保存，Windows 7 或者以下的版本则勾选【<font color="#FF0000">Telnet 服务器</font>】和【<font color="#FF0000">Telnet 客户端</font>】</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/008.png" alt="008.png"><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/009.png" alt="009.png"></p>
+<h1 id="3-测试1433端口是否打开"><a href="#3-测试1433端口是否打开" class="headerlink" title="3.测试1433端口是否打开"></a><font color="#FF0000">3.测试1433端口是否打开</font></h1><p> 运行cmd，输入 telnet 127.0.0.1 1433，若提示连接失败，则说明1433端口没有打开，需要重新进行以上配置，若连接成功，则显示如下：</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/010.png" alt="010.png"></p>
+<h1 id="4-下载JDBC"><a href="#4-下载JDBC" class="headerlink" title="4.下载JDBC"></a><font color="#FF0000">4.下载JDBC</font></h1><p> <a href="https://docs.microsoft.com/zh-cn/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-2017" target="_blank" rel="noopener">点击此处</a>下载各个版本JDBC，不同版本的JDBC驱动程序适用的JAR不同，与不同版本的SQL兼容性也不同，具体参考<a href="https://docs.microsoft.com/zh-cn/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix?view=sql-server-2017" target="_blank" rel="noopener">《Microsoft SQL Server JDBC 驱动程序支持矩阵》</a>，比如使用 SQL Server 2012 我们可以下载6.0的版本，下载<font color="#FF0000">sqljdbc_6.0.8112.200_chs.tar.gz</font>文件，解压后可以找到<font color="#FF0000">sqljdbc41.jar</font>与<font color="#FF0000">sqljdbc42.jar</font>文件，使用时要注意自己JDK是哪个版本的，1.80以上的则对应 <font color="#FF0000">sqljdbc42.jar</font> 类库</p>
+<h1 id="5-Eclipse-连接-SQL-Server"><a href="#5-Eclipse-连接-SQL-Server" class="headerlink" title="5.Eclipse 连接 SQL Server"></a><font color="#FF0000">5.Eclipse 连接 SQL Server</font></h1><p>将 sqljdbc41.jar 或者 sqljdbc42.jar 放到一个文件夹下，打开 Eclipse，在需要连接数据库的项目里，右键【<font color="#FF0000">src</font>】，选择【<font color="#FF0000">Build Path</font>】、【<font color="#FF0000">Configure Build Path…</font>】，在弹出的窗口选择【<font color="#FF0000">Libraries</font>】，选择【<font color="#FF0000">Modulepath</font>】，单击【<font color="#FF0000">Add External JARs…</font>】，找到下载的 sqljdbc41.jar 或者 sqljdbc42.jar 文件并打开，然后【<font color="#FF0000">Apply and Close</font>】保存</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/011.png" alt="011.png"><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/012.png" alt="012.png"><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/013.png" alt="013.png"></p>
+<h1 id="6-测试连接"><a href="#6-测试连接" class="headerlink" title="6.测试连接"></a><font color="#FF0000">6.测试连接</font></h1><p>打开 SQL Server 2012，在其中新建数据库 test</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/014.png" alt="014.png"></p>
+<p>Eclipse中，在项目下新建一个package，再新建一个class，用于测试数据库的连接：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test;</span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		String driverName=<span class="string">"com.microsoft.sqlserver.jdbc.SQLServerDriver"</span>;</span><br><span class="line">		String dbURL=<span class="string">"jdbc:sqlserver://localhost:1433;DatabaseName=test"</span>;  <span class="comment">//要连接的数据库名</span></span><br><span class="line">		String userName=<span class="string">"sa"</span>;  <span class="comment">//数据库用户名</span></span><br><span class="line">		String userPwd=<span class="string">"000000"</span>;  <span class="comment">//数据库密码</span></span><br><span class="line">		<span class="keyword">try</span></span><br><span class="line">		&#123;</span><br><span class="line">			Class.forName(driverName);</span><br><span class="line">			Connection dbConn=DriverManager.getConnection(dbURL,userName,userPwd);</span><br><span class="line">			System.out.println(<span class="string">"连接数据库成功"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">catch</span>(Exception e)</span><br><span class="line">		&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			System.out.print(<span class="string">"连接失败"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果以上所有操作正确，就能成功连接数据库了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A22/015.png" alt="015.png"></p>
 
         </div>
         
@@ -477,10 +495,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-06-12T22:46:25+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-01T14:46:58+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年6月12日</p>
+    <p>最后更新于 2019年8月1日</p>
   </a>
 </div>
 
@@ -494,7 +512,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2018/08/10/A01-hello-world/&title=Hello World! | TRHX'S BLOG&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql/&title=Eclipse 通过 JDBC 连接 SQL Server | TRHX'S BLOG&summary="
           
           >
           
@@ -506,7 +524,7 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2018/08/10/A01-hello-world/&title=Hello World! | TRHX'S BLOG&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql/&title=Eclipse 通过 JDBC 连接 SQL Server | TRHX'S BLOG&summary="
           
           >
           
@@ -516,7 +534,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS27DMAxF0ex/0y7QUYs2yrukEsDU1ShwbMfHA0b8PB7xur7X3yM/j1/Ltb52fXzbkiFDxm0Zyc8/u/X6/NqD1l6NDBkyTmDkt6td+44IKUOGDBnr213xyl8KfQUyZMiQsd6i0eQ2P0eGDBkyOklscqRTGftQLi5DhowbMmhj4JOf39jfkCFDxk0YF1z5ffp9RvBUMmTIGM1YJ5m1hmUtvNItKZgHkSFDxs0ZeWksHxfrpLh5o/Tp/4YMGTLGMXYV/fPgmwdl+uJkyJBxJoM+VgdAG5xRf0OGDBkjGDR9zYcw6INunhaRIUPGOAYtk3U2kf0S2z+fZciQMZqxK7DSZkP+bb5VlSFDxlQGTTt3lfU7gxov+hsyZMgYxwA1OTjalfA6aa0MGTLOYfQ3eZ2gWRvRiKqGMmTIGMSgRfkcT8Puhq2hDBkyRjNogIvGSePA3W9LyJAhYzaDDmbRViUNnbX0WIYMGbMZFJAX5mqDqnmQjVJZGTJkjGDUHqWWjtJgCl6KDBkyDmDQn6EhshOs1/eUIUPGCYy8fJYUxfaOX+AGgwwZMoYyLrjopq1WpMvD/a+qoQwZMoYyaJirnZ+X8GjyLEOGjHMYedpZG7DYNYTx4loZMmQcwKBBszOiUQvloD0gQ4aMgxm0WNYZGkvKeTJkyJCxZtQCbtIQpdtHGTJknMOojUf0k9t85CLqxMqQIWMoo1Pop01K2hDtb09lyJBxc8YXRVwD8br6vEAAAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aQU4DMQwF0N7/0iCxQoKEbzupRuhlhYqa8ZtF4tp+veL18bV+fvJ9rb6Vf3e/5+opBxYeHh5eK/TVWgWa8H6GVd0h/+5yHzw8PLxrvGTr5AH7KyG5PPZ75jHj4eHhPYGX/zcH5OkyHh4e3n/i5RWAHgYPDw/vmbxqQPlBn5Rxk0Lw9VoLHh4eXsyrNsCe8PfF/h4eHh7eoKs+aVBNXmKv6fVLtHh4eHgXeHnDqVeWzRtjvaGEfVR4eHh47+HlD8iP5l6gZcZqBzw8PLyjvH2BNX9wzqu2zZIdlq8SDw8P7wJvXgs9lWRXE/EcjIeHh3eDN2m9nyrdVo/1Qsx4eHh4F3hVQHKs94q/k2JEE4yHh4fX4vVCrB7f1eGAXgF3mVLj4eHhHeLtBwXykYLePtVCcP50PDw8vPfw8kZX8phes786dhBVWfDw8PCO8pKiQ7XMuj/ie+WMXrMNDw8P7wZvcgTnYU3GsKr7/PGLAQ8PD+8Qr3qHlO+c4ufJmFd0keDh4eFd4PW2y0sP1TT9RoMNDw8P7ywvKQo0j+PiS6kOXUXlDzw8PLxrvMkR3BsOqDax8heEh4eHd5uXlBiqQ1T5ANaNcsYSj4eHh3eUlwdRLbb2LoPJPnh4eHjv5O3T5XzoKn9wfiWMEnc8PDy8o7zegd67DKol2skIFx4eHt57ePPUdjImVb1CopeCh4eHd4GXJ8G9cHtpem/06jXJ8fHw8PBi3kdxVdtRvTddHVBYFjXw8PDwLvDylfz47z24WnTI48HDw8O7x5sE2hurOnsx/HH94OHh4V3jNcuj8fDBpCjcu8Dw8PDwnsCrFm2rgDyNzj/Bw8PDew6vNwSQN8YmiXszpcbDw8Mr8qrFiF7yfTYdj64HPDw8vAu8eWl1H1ZyxOfg5NooLzw8PLyU9wnpVV6TZNiapwAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -526,7 +544,7 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2018/08/10/A01-hello-world/&title=Hello World! | TRHX'S BLOG&summary="
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql/&title=Eclipse 通过 JDBC 连接 SQL Server | TRHX'S BLOG&summary="
           
           >
           
@@ -536,7 +554,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS27DMAxF0ex/0y7QUYs2yrukEsDU1ShwbMfHA0b8PB7xur7X3yM/j1/Ltb52fXzbkiFDxm0Zyc8/u/X6/NqD1l6NDBkyTmDkt6td+44IKUOGDBnr213xyl8KfQUyZMiQsd6i0eQ2P0eGDBkyOklscqRTGftQLi5DhowbMmhj4JOf39jfkCFDxk0YF1z5ffp9RvBUMmTIGM1YJ5m1hmUtvNItKZgHkSFDxs0ZeWksHxfrpLh5o/Tp/4YMGTLGMXYV/fPgmwdl+uJkyJBxJoM+VgdAG5xRf0OGDBkjGDR9zYcw6INunhaRIUPGOAYtk3U2kf0S2z+fZciQMZqxK7DSZkP+bb5VlSFDxlQGTTt3lfU7gxov+hsyZMgYxwA1OTjalfA6aa0MGTLOYfQ3eZ2gWRvRiKqGMmTIGMSgRfkcT8Puhq2hDBkyRjNogIvGSePA3W9LyJAhYzaDDmbRViUNnbX0WIYMGbMZFJAX5mqDqnmQjVJZGTJkjGDUHqWWjtJgCl6KDBkyDmDQn6EhshOs1/eUIUPGCYy8fJYUxfaOX+AGgwwZMoYyLrjopq1WpMvD/a+qoQwZMoYyaJirnZ+X8GjyLEOGjHMYedpZG7DYNYTx4loZMmQcwKBBszOiUQvloD0gQ4aMgxm0WNYZGkvKeTJkyJCxZtQCbtIQpdtHGTJknMOojUf0k9t85CLqxMqQIWMoo1Pop01K2hDtb09lyJBxc8YXRVwD8br6vEAAAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aQU4DMQwF0N7/0iCxQoKEbzupRuhlhYqa8ZtF4tp+veL18bV+fvJ9rb6Vf3e/5+opBxYeHh5eK/TVWgWa8H6GVd0h/+5yHzw8PLxrvGTr5AH7KyG5PPZ75jHj4eHhPYGX/zcH5OkyHh4e3n/i5RWAHgYPDw/vmbxqQPlBn5Rxk0Lw9VoLHh4eXsyrNsCe8PfF/h4eHh7eoKs+aVBNXmKv6fVLtHh4eHgXeHnDqVeWzRtjvaGEfVR4eHh47+HlD8iP5l6gZcZqBzw8PLyjvH2BNX9wzqu2zZIdlq8SDw8P7wJvXgs9lWRXE/EcjIeHh3eDN2m9nyrdVo/1Qsx4eHh4F3hVQHKs94q/k2JEE4yHh4fX4vVCrB7f1eGAXgF3mVLj4eHhHeLtBwXykYLePtVCcP50PDw8vPfw8kZX8phes786dhBVWfDw8PCO8pKiQ7XMuj/ie+WMXrMNDw8P7wZvcgTnYU3GsKr7/PGLAQ8PD+8Qr3qHlO+c4ufJmFd0keDh4eFd4PW2y0sP1TT9RoMNDw8P7ywvKQo0j+PiS6kOXUXlDzw8PLxrvMkR3BsOqDax8heEh4eHd5uXlBiqQ1T5ANaNcsYSj4eHh3eUlwdRLbb2LoPJPnh4eHjv5O3T5XzoKn9wfiWMEnc8PDy8o7zegd67DKol2skIFx4eHt57ePPUdjImVb1CopeCh4eHd4GXJ8G9cHtpem/06jXJ8fHw8PBi3kdxVdtRvTddHVBYFjXw8PDwLvDylfz47z24WnTI48HDw8O7x5sE2hurOnsx/HH94OHh4V3jNcuj8fDBpCjcu8Dw8PDwnsCrFm2rgDyNzj/Bw8PDew6vNwSQN8YmiXszpcbDw8Mr8qrFiF7yfTYdj64HPDw8vAu8eWl1H1ZyxOfg5NooLzw8PLyU9wnpVV6TZNiapwAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -562,21 +580,40 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/2018/08/15/A02-hexo-blog/" rel="prev" title="使用 Github Pages 和 Hexo 搭建自己的独立博客">
+                                <a href="/2019/06/12/A23-beian/" rel="prev" title="网站ICP备案和公安备案流程">
                                   
-                                      使用 Github Pages 和 Hexo 搭建自己的独立博客
+                                      网站ICP备案和公安备案流程
                                   
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/Github-Pages/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>Github Pages</a> <a class="tag" href="/tags/Hexo/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>Hexo</a>
+                                    <a class="tag" href="/tags/ICP备案/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>ICP备案</a> <a class="tag" href="/tags/公安备案/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>公安备案</a>
                                 </h6>
                             
                         </span>
                     </section>
                 
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/04/15/A21-PEP8/" rel="prev" title="Python PEP8 代码规范常见问题及解决方法">
+                                    
+                                        Python PEP8 代码规范常见问题及解决方法
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/Python/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>Python</a> <a class="tag" href="/tags/PEP8/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>PEP8</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
             </div>
         
@@ -615,7 +652,7 @@
 
   <script>
     window.subData = {
-      title: 'Hello World!',
+      title: 'Eclipse 通过 JDBC 连接 SQL Server',
       tools: true
     }
   </script>
@@ -739,6 +776,20 @@
           
           
             
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-配置-SQL-Server-2012"><span class="toc-text">1.配置 SQL Server 2012</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-开启-Telnet-服务"><span class="toc-text">2.开启 Telnet 服务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-测试1433端口是否打开"><span class="toc-text">3.测试1433端口是否打开</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-下载JDBC"><span class="toc-text">4.下载JDBC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Eclipse-连接-SQL-Server"><span class="toc-text">5.Eclipse 连接 SQL Server</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-测试连接"><span class="toc-text">6.测试连接</span></a></li></ol>
+    </div>
+  </section>
+
 
           
         

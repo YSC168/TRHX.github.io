@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql/</loc>
+    
+    <lastmod>2019-08-01T06:46:58.234Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/08/01/A27-image-hosting/</loc>
     
     <lastmod>2019-08-01T06:40:43.108Z</lastmod>
@@ -16,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2019/02/10/A18-free-cdn-jsDeliver+github/</loc>
+    <loc>https://www.itrhx.com/2019/02/10/A18-free-cdn/</loc>
     
     <lastmod>2019-08-01T01:32:35.150Z</lastmod>
     
@@ -30,7 +37,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2019/07/31/A26-hexo-add-https/</loc>
+    <loc>https://www.itrhx.com/2019/07/31/A26-hexo-add-https-1/</loc>
     
     <lastmod>2019-07-31T12:55:36.659Z</lastmod>
     
@@ -44,23 +51,16 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2019/06/12/A24-instant.page/</loc>
+    <loc>https://www.itrhx.com/2019/06/12/A24-instant.page-1/</loc>
     
     <lastmod>2019-07-31T12:41:50.811Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2019/06/12/A23-website-approve/</loc>
+    <loc>https://www.itrhx.com/2019/06/12/A23-beian/</loc>
     
     <lastmod>2019-07-31T12:39:41.924Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql-server/</loc>
-    
-    <lastmod>2019-07-31T12:28:15.037Z</lastmod>
     
   </url>
   
@@ -310,7 +310,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2018/08/10/A01-hello-world/</loc>
+    <loc>https://www.itrhx.com/2018/08/10/A01-hello-world-1/</loc>
     
     <lastmod>2019-06-12T14:46:25.231Z</lastmod>
     
@@ -331,7 +331,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2019/02/05/A17-happy-new-year/</loc>
+    <loc>https://www.itrhx.com/2019/02/05/A17-happy-new-year-1/</loc>
     
     <lastmod>2019-04-01T16:34:14.610Z</lastmod>
     

@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title><![CDATA[利用 Cloudflare 为 Hexo 博客添加 Https 支持]]></title>
-    <url>%2F2019%2F07%2F31%2FA26-hexo-add-https%2F</url>
+    <url>%2F2019%2F07%2F31%2FA26-hexo-add-https-1%2F</url>
     <content type="text"><![CDATA[利用 Cloudflare 为 Hexo 博客添加 https 支持 – 前言GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，这种方法就不管用了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，而 Cloudflare 就能完美解决这种尴尬 Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理 – 注册 Cloudflare到 Cloudflare官网 注册账号 – 添加站点添加你的站点，一直下一步即可 如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考《为hexo博客配置个性域名》 –修改DNS点击下一步 Cloudflare 会提供给你两个 DNS 地址 到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效 –开启 HTTPS在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可 关于三种模式 Flexible、Full、Full (Strict) 的区别： Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的 Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书 Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的 至此，我们的域名就支持 https 访问了，但是当用户输入 http://xxxxxx 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了 –重定向强制 HTTPSCloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可 现在我们的 Hexo 博客就实现了全站 HTTPS！]]></content>
       <categories>
         <category>Hexo</category>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <title><![CDATA[一个 JS 脚本实现网站预加载，提升页面加载速度]]></title>
-    <url>%2F2019%2F06%2F12%2FA24-instant.page%2F</url>
+    <url>%2F2019%2F06%2F12%2FA24-instant.page-1%2F</url>
     <content type="text"><![CDATA[instant.page 使用即时预加载技术，在用户点击之前预先加载页面。当用户的鼠标悬停在一个链接上超过 65 毫秒时，浏览器会对此页面进行预加载，当用户点击链接后，就从预加载的缓存中直接读取页面内容，从而达到缩短页面加载时间的目的。 以我博客为例，使用了这项技术后，当鼠标在一个链接停留超过 65 毫秒时，Network 里可以看见相关文章已经预加载出来了，而停留时间过短就不会预加载（红色部分，状态为 canceled） 使用方法：将以下HTML代码放在&lt;/ body&gt; 之前即可：1&lt;script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"&gt;&lt;/script&gt; 但是此脚本是官方的，储存在国外服务器，对国内访问不太友好，可以将该JS脚本储存到自己的服务器上，点此获取该JS脚本，然后再根据以下格式在&lt;/ body&gt; 之前引用：1&lt;script src="`存放路径`/instantclick-1.2.2.js" type="module"&gt;&lt;/script&gt; 也可以直接使用我的，使用 jsDeliver CDN 加速，速度还可以：1&lt;script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/instantclick-1.2.2.js" type="module"&gt;&lt;/script&gt; 参考资料：《网站预加载 JS 脚本 instant.page》——by 左岸 ；instant.page官网]]></content>
       <categories>
         <category>WEB前端</category>
@@ -50,7 +50,7 @@
   </entry>
   <entry>
     <title><![CDATA[网站ICP备案和公安备案流程]]></title>
-    <url>%2F2019%2F06%2F12%2FA23-website-approve%2F</url>
+    <url>%2F2019%2F06%2F12%2FA23-beian%2F</url>
     <content type="text"><![CDATA[网站备案分为ICP备案和公安备案 ICP备案：ICP备案的目的就是为了防止在网上从事非法的网站经营活动，打击不良互联网信息的传播，如果网站不备案的话，很有可能被查处以后关停。根据中华人民共和国信息产业部第十二次部务会议审议通过的《非经营性互联网信息服务备案管理办法》条例，在中华人民共和国境内提供非经营性互联网信息服务，应当办理备案。未经备案，不得在中华人民共和国境内从事非经营性互联网信息服务。而对于没有备案的网站将予以罚款或关闭。 公安备案：网站备案是根据国家法律法规需要网站的所有者向国家有关部门申请的备案，公安局备案是其中一种。公安局备案一般按照各地公安机关指定的地点和方式进行，操作流程会比ICP备案流程简单，主要是已登记为主。 以百度官网为例，其中京公安网备11000002000001就是公安备案，京ICP证030173号就是ICP备案 – ICP备案 一般在域名服务商那里都会有代备案系统，下面以阿里云为例，进入备案系统： 1、填写信息验证备案类型备案主办单位填写，个人就选个人，企业就选企业，按照实际信息填写： 2、产品验证对搭建备案网站的云服务器进行验证，如果你在阿里云购买了相关产品，就选择相应的产品类型和实例进行验证，也可以勾选已有备案服务号，填写服务号进行验证，备案服务号可以通过备案控制台进行申请，具体操作可以参考官方文档《申请备案服务号》，也有的小伙伴没有在任何地方购买过服务器等相关产品，比如单纯搭建一个 Github Pages + Hexo 轻量级的个人博客，这种博客没有后端，不需要服务器，但是要备案怎么办？这种情况也好解决，去某宝买一个服务号就行了。 3、填写网站信息填写网站信息以及办理备案的个人或者单位的真实信息，在填写网站名称的时候要特别注意！特别注意！特别注意！不满足要求的话是会被打回的！不能使用姓名、地名、成语、不能包含公司、组织等企业性质的词语……具体要求可以参考官方文档《填写主体信息和网站信息》。 4、上传资料根据要求，上传证件照片或证件彩色扫描件。身份证好说，拍好了上传就行了，注意《网站备案信息真实性核验单》需要你下载并打印在一张A4纸上，使用黑色签字笔填写，不能涂改，具体可参照所给的示例进行填写，填写完成后再拍照上传。企业网站类似，提交备案后会在一个工作日内进行初审。 5、人脸核验或幕布拍照核验根据不同地域管局要求及核验平台的支持情况，使用人脸识别进行核验，或者申请专用幕布进行幕布拍照核验 地区 核验要求 上海、福建地区用户 需使用阿里云APP进行人脸核验。如果使用PC端发起的备案申请，请根据界面提示下载阿里云APP进行人脸核验。 广东、辽宁、安徽、重庆地区用户 首次备案、新增网站：支持使用阿里云APP进行人脸核验或通过阿里云备案平台（PC端）进行幕布拍照核验。其他备案类型：需通过阿里云备案平台（PC端）进行幕布拍照核验。 其他地区用户 通过阿里云备案平台（PC端）进行幕布拍照核验。 以幕布拍照核验为例，如果你没有阿里云的幕布，就需要申请幕布（免费的），邮寄很快，大约两三天就到了，等收到幕布后，按照要求进行拍照，一定要仔细阅读拍照说明！一定要仔细阅读拍照说明！一定要仔细阅读拍照说明！不合格依旧会被打回！拍照完成后上传即可。 6、提交管局、短信核验当照片审核通过后，就会提交到管局，工信部要求部分省市成为手机号码短信核验试点省市，相应省市的用户在阿里云备案平台提交备案申请且初审完成后，会收到工信部发送的核验短信，短信包含验证码和验证地址，需要在收到短信的24小时内完成短信核验，备案申请才能进入管局审核。需短信核验省份： 2017年12月18日起：天津、甘肃、西藏、宁夏、海南、新疆、青海被列为试点省份。 2018年9月10日起：浙江、四川、福建、陕西、重庆、广西、云南被列为试点省份。 2018年9月24日起：山东、河南、安徽、湖南、山西、黑龙江、内蒙古、湖北被列为试点省份。 7、ICP备案完成整个备案过程中会有阿里云的客服打电话给你，进行信息确认，备案申请信息成功提交管局系统后，管局审核一般为 3 - 20 个工作日（亲测很快，不到一个周就通过了），审核通过后会收到阿里云的邮件通知。 – 公安备案 公安备案个人觉得比ICP备案还要麻烦，自己在公安备案的时候，最开始申请了一个月也没给我处理（大概是地方原因，所在的市比较小，估计都没几个人办过网站，网警也不太负责），与ICP备案最大的不同，如果你是交互式网站的话，公安备案是需要你去公安机关当面审核的，这也是比较麻烦的一点。 1、用户注册、登录登录全国互联网安全管理服务平台，选择联网备案登录，注册账号并登录 2、新办网站备案申请点击新办网站申请，按实填写网站开办主体，上传身份证正反照和手持身份证件照。 3、填写网站基本信息按实填写网站基本信息，需要注意的地方： IP：IP地址为阿里云/腾讯云的公网IP地址，请不要填写内网IP。 域名证书：以阿里云为例，进入【域名控制台】，点击域名后面的【管理】，选择【域名证书下载】即可，其它服务商类似。 网络接入/域名注册服务商：若办理公安备案的域名是通过阿里云完成的工信部备案，则按照以下填写：网络接入服务商： 接入商所属地区管辖：境内 接入商所属区域 ：浙江省 杭州市 滨江区 名称：阿里云计算有限公司 网站接入方式：租赁虚拟空间 域名注册服务商： 域名商所属地区管辖：境内 域名服务商所属区域：浙江省 杭州市 余杭区 名称：阿里云计算有限公司（原万网） 也可以通过点击后面的查询网络接入\域名注册服务商直接选择相应服务商，其他服务商类似 服务类型：交互式服务指：为互联网用户提供信息发布、交流互动等服务，包括但不限于论坛、博客、微博、网络购物、网上支付等服务类型，此项选择是否提供互联网交互服务将会直接影响到后面是否需要去公安局当面核验，若选择是，当地网警会打电话叫你去公安局当面核验，还需要填写《交互式服务安全检查表》等各种文件，总之是比较麻烦的，个人小网站，博客什么的建议选择否，选择www服务，这样的话不用去当面核验，审核下来也比较快，企业单位用户建议选择交互式。 其他信息如实填写即可！ 4、填写网站负责人信息填写网站安全负责人和网站应急联络人相关信息，网站应急联络人直接勾选同主体负责人后会自动填入。 5、同意责任书并提交审核《互联网信息服务单位网络安全责任告知书》有30秒的强制阅读时间，建议认真阅读一下告知书的内容。然后勾选我已阅读，点击提交即可。随后可以看到审核状态，不同地区政策有所不同，会有当地的网警联系网站负责人的，审核通过后记得在网站首页底部张贴公安机关核发的备案图标！]]></content>
       <categories>
         <category>WEB前端</category>
@@ -62,7 +62,7 @@
   </entry>
   <entry>
     <title><![CDATA[Eclipse 通过 JDBC 连接 SQL Server]]></title>
-    <url>%2F2019%2F05%2F14%2FA22-eclipse-connects-to-sql-server%2F</url>
+    <url>%2F2019%2F05%2F14%2FA22-eclipse-connects-to-sql%2F</url>
     <content type="text"><![CDATA[本文用到的软件版本以及相关环境： Eclipse Photon Release (4.8.0)JDK-10.0.2SQL Server 2012 1.配置 SQL Server 2012打开 SQL Server Management Studio，使用 SQL Server 身份验证 登录： 如果在安装 SQL Server 2012 时选用了Windows身份验证登录方式，则需要重新设置，设置方法参考：《SQL Server 登录更换【Windows身份验证】为【SQL Server 身份验证】》 登录成功后，打开 SQL Server 配置管理器： 在左边找到 SQL Server 网络配置，点击【你的数据库名】的协议，将右边栏的 Shared Memory、Named Pipes、TCP/IP 全部右键选择启用： 双击 TCP/IP（或者右键选择属性），选择【IP地址】，将【IP1】和【IP10】的【IP地址】设为 127.0.0.1 将所有【IPx】（IP1、IP10、IP11、IP12等）的【已启用】设为是 下拉到窗口底部，将 【IPAll】 中的【TCP端口】设成 1433，其余不变 2.开启 Telnet 服务打开【控制面板】，选择【程序】，点击【启用或关闭 Windows 功能】，找到【Telnet Client】勾选并保存，Windows 7 或者以下的版本则勾选【Telnet 服务器】和【Telnet 客户端】 3.测试1433端口是否打开 运行cmd，输入 telnet 127.0.0.1 1433，若提示连接失败，则说明1433端口没有打开，需要重新进行以上配置，若连接成功，则显示如下： 4.下载JDBC 点击此处下载各个版本JDBC，不同版本的JDBC驱动程序适用的JAR不同，与不同版本的SQL兼容性也不同，具体参考《Microsoft SQL Server JDBC 驱动程序支持矩阵》，比如使用 SQL Server 2012 我们可以下载6.0的版本，下载sqljdbc_6.0.8112.200_chs.tar.gz文件，解压后可以找到sqljdbc41.jar与sqljdbc42.jar文件，使用时要注意自己JDK是哪个版本的，1.80以上的则对应 sqljdbc42.jar 类库 5.Eclipse 连接 SQL Server将 sqljdbc41.jar 或者 sqljdbc42.jar 放到一个文件夹下，打开 Eclipse，在需要连接数据库的项目里，右键【src】，选择【Build Path】、【Configure Build Path…】，在弹出的窗口选择【Libraries】，选择【Modulepath】，单击【Add External JARs…】，找到下载的 sqljdbc41.jar 或者 sqljdbc42.jar 文件并打开，然后【Apply and Close】保存 6.测试连接打开 SQL Server 2012，在其中新建数据库 test Eclipse中，在项目下新建一个package，再新建一个class，用于测试数据库的连接：12345678910111213141516171819202122package test;import java.sql.*;public class Main &#123; public static void main(String [] args) &#123; String driverName="com.microsoft.sqlserver.jdbc.SQLServerDriver"; String dbURL="jdbc:sqlserver://localhost:1433;DatabaseName=test"; //要连接的数据库名 String userName="sa"; //数据库用户名 String userPwd="000000"; //数据库密码 try &#123; Class.forName(driverName); Connection dbConn=DriverManager.getConnection(dbURL,userName,userPwd); System.out.println("连接数据库成功"); &#125; catch(Exception e) &#123; e.printStackTrace(); System.out.print("连接失败"); &#125; &#125; &#125; 如果以上所有操作正确，就能成功连接数据库了：]]></content>
       <categories>
         <category>Java</category>
@@ -111,7 +111,7 @@
   </entry>
   <entry>
     <title><![CDATA[免费CDN：jsDeliver+Github]]></title>
-    <url>%2F2019%2F02%2F10%2FA18-free-cdn-jsDeliver%2Bgithub%2F</url>
+    <url>%2F2019%2F02%2F10%2FA18-free-cdn%2F</url>
     <content type="text"><![CDATA[本文有参考《jsDeliver+github使用教程，免费好用的cdn》—— By hojun CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。——百度百科 放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDeliver + Github便是免费且好用的CDN，非常适合博客网站使用。 1、新建Github仓库 2、克隆Github仓库到本地 点击 Clone or download，一键复制仓库地址 在本地目录右键 Git Bash Here，执行以下命令： 1git clone 一键复制的仓库地址 3、上传资源 复制需要上传的资源到本地git仓库（注：jsDeliver不支持加载超过20M的资源），在本地git仓库目录下右键 Git Bash Here，执行以下命令：1234git status //查看状态git add . //添加所有文件到暂存区git commit -m &apos;第一次提交&apos; //把文件提交到仓库git push //推送至远程仓库 4、发布仓库 点击release发布 自定义发布版本号 5、通过jsDeliver引用资源 使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径例如：https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png&nbsp;&nbsp;&nbsp;&nbsp;https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css&nbsp;&nbsp;&nbsp;&nbsp;https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4 注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下： // 加载任何Github发布、提交或分支https://cdn.jsdelivr.net/gh/user/repo@version/file // 加载 jQuery v3.2.1https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js // 使用版本范围而不是特定版本https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.jshttps://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js // 完全省略该版本以获取最新版本https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js // 将“.min”添加到任何JS/CSS文件中以获取缩小版本，如果不存在，将为会自动生成https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js // 在末尾添加 / 以获取资源目录列表https://cdn.jsdelivr.net/gh/jquery/jquery/]]></content>
       <categories>
         <category>CDN</category>
@@ -123,7 +123,7 @@
   </entry>
   <entry>
     <title><![CDATA[新年快乐！]]></title>
-    <url>%2F2019%2F02%2F05%2FA17-happy-new-year%2F</url>
+    <url>%2F2019%2F02%2F05%2FA17-happy-new-year-1%2F</url>
     <content type="text"><![CDATA[C printf(&quot;2019，祝大家&quot;); C++ cout&lt;&lt;&quot;一帆风顺&quot;; C# System.Console.WriteLine(&quot;二龙腾飞&quot;) VB Msg(&quot;三羊开泰&quot;) VC MessageBox(&quot;四季平安&quot;); Java System.out.println(&quot;五福临门&quot;); JavaScript alert(&quot;六六大顺&quot;) PHP echo &quot;七星高照&quot;; Python print(&quot;八方来财&quot;) Html &lt;br/&gt;九运当头&lt;br/&gt; Objectivec NSLog(@&quot;十全十美&quot;); QBasic Print &quot;阖家幸福&quot; Asp Response.Write &quot;心想事成&quot; Ruby puts &quot;财源广进&quot; VBScript MsgBox &quot;幸福安康&quot; XML &lt;TextView android:text=&quot;大展宏图&quot; /&gt; LUA print(&quot;学业有成&quot;) Delphi ShowMessage(&#39;万事如意&#39;); shell echo 步步高升 perl print &#39;鸿案齐眉&#39; LISP (format t &quot;身体健康~%&quot;) powerBuilder messagebox（&quot;龙马精神&quot;) COBOL DISPLAY &#39;笑口常开&#39; aswing JOptionPane.showMessageDialog(&quot;happy&quot;,&quot;好运连连&quot;) Android Toast.makeText(getApplicationContext(),&quot;年年有余&quot;,Toast.LENGTH_SHORT).show() flex Alert.show(&quot;大吉大利&quot;); Foxpro ?[家庭幸福！] iapp tw(&quot;瑞气盈门&quot;) DOS批处理 echo 鹏程万里 易语言 调试输出(“万事亨通”) Clojure (println &quot;年年有今昔&quot;) verilog/systemverilog/e $display(&quot;岁岁有今朝&quot;) as trace(&quot;祝大家新年快乐！&quot;);]]></content>
       <categories>
         <category>BLOG</category>
@@ -312,7 +312,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hello World!]]></title>
-    <url>%2F2018%2F08%2F10%2FA01-hello-world%2F</url>
+    <url>%2F2018%2F08%2F10%2FA01-hello-world-1%2F</url>
     <content type="text"><![CDATA[人类的幸福和欢乐在于奋斗，而最有价值的是为理想而奋斗！ ——— 苏格拉底 Human happiness and joy lie in struggle, and what is most valuable is striving for ideals! ——— Socrates]]></content>
       <categories>
         <category>BLOG</category>
