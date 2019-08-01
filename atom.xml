@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itrhx.com/"/>
-  <updated>2019-07-31T12:55:36.659Z</updated>
+  <updated>2019-08-01T06:10:26.079Z</updated>
   <id>https://www.itrhx.com/</id>
   
   <author>
@@ -17,9 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Github+jsDelivr+PicGo 打造稳定快速、高效免费图床</title>
+    <link href="https://www.itrhx.com/2019/08/01/A27-image-hosting/"/>
+    <id>https://www.itrhx.com/2019/08/01/A27-image-hosting/</id>
+    <published>2019-07-31T16:02:08.497Z</published>
+    <updated>2019-08-01T06:10:26.079Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/ImageHosting.png" alt="ImageHosting"><br></fancybox><a id="more"></a><h1 id="–-前言"><a href="#–-前言" class="headerlink" title="– 前言"></a><font color="#FF000">– 前言</font></h1><p>图床是个啥东西就不用过多介绍了，先来对比一下各路图床：</p><blockquote><ul><li>微博图床：以前用的人比较多，从2019年4月开始开启了防盗链，凉凉</li><li>SM.MS：运营四年多了，也变得越来越慢了，到了晚上直接打不开图片，速度堪忧</li><li>其他小众图床：随时有挂掉的风险</li><li>Imgur等国外图床：国内访问速度太慢，随时有被墙的风险</li><li>大厂储存服务：例如七牛云、又拍云、腾讯云COS、阿里云OSS等，操作繁琐，又是实名认证又是域名备案的，麻烦，而且还要花钱（有钱又不怕麻烦的当我没说）</li></ul></blockquote><p>因此，GitHub图床是个不错的选择，利用jsDelivr CDN加速访问（jsDelivr 是一个免费开源的 CDN 解决方案），PicGo工具一键上传，操作简单高效，GitHub和jsDelivr都是大厂，不用担心跑路问题，不用担心速度和容量问题，而且完全免费，可以说是目前免费图床的最佳解决方案！</p><h1 id="–-新建GitHub仓库"><a href="#–-新建GitHub仓库" class="headerlink" title="– 新建GitHub仓库"></a><font color="#FF000">– 新建GitHub仓库</font></h1><p>登录/注册GitHub，新建一个仓库，填写好仓库名，仓库描述，根据需求选择是否为仓库初始化一个README.md描述文件</p><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/01.png" alt="01"><br></fancybox><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/02.png" alt="02"><br></fancybox><h1 id="–-生成一个Token"><a href="#–-生成一个Token" class="headerlink" title="– 生成一个Token"></a><font color="#FF000">– 生成一个Token</font></h1><p>在主页依次选择【Settings】-【Developer settings】-【Personal access tokens】-【Generate new token】，填写好描述，勾选【repo】，然后点击【Generate token】生成一个Token，注意这个Token只会显示一次，自己先保存下来，或者等后面配置好PicGo后再关闭此网页</p><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/03.png" alt="03"><br></fancybox><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/04.png" alt="04"><br></fancybox><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/05.png" alt="05"><br></fancybox><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/06.png" alt="06"><br></fancybox><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/07.png" alt="07"><br></fancybox><h1 id="–-配置PicGo"><a href="#–-配置PicGo" class="headerlink" title="– 配置PicGo"></a><font color="#FF000">– 配置PicGo</font></h1><p>前往<a href="https://github.com/Molunerfinn/picgo/releases" target="_blank" rel="noopener">下载PicGo</a>，安装好后开始配置图床</p><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/08.png" alt="08"><br></fancybox><blockquote><ul><li>设定仓库名：按照【用户名/图床仓库名】的格式填写</li><li>设定分支名：【master】</li><li>设定Token：粘贴之前生成的【Token】</li><li>指定存储路径：填写想要储存的路径，如【ITRHX-PIC/】，这样就会在仓库下创建一个名为ITRHX-PIC的文件夹，图片将会储存在此文件夹中</li><li>设定自定义域名：它的的作用是，在图片上传后，PicGo会按照【自定义域名+上传的图片名】的方式生成访问链接，放到粘贴板上，因为我们要使用jsDelivr加速访问，所以可以设置为【<a href="https://cdn.jsdelivr.net/gh/用户名/图床仓库名" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/用户名/图床仓库名</a> 】，关于jsDelivr是如何引用资源的可以参考<a href="https://www.itrhx.com/2019/02/10/A18-Free-CDN-jsDeliver+Github/">《免费CDN：jsDeliver+Github》</a></li></ul></blockquote><h1 id="–-进行高效创作"><a href="#–-进行高效创作" class="headerlink" title="– 进行高效创作"></a><font color="#FF000">– 进行高效创作</font></h1><p>配置好PicGo后，我们就可以进行高效创作了，将图片拖拽到上传区，将会自动上传并复制访问链接，将链接粘贴到博文中就行了，访问速度杠杠的，此外PicGo还有相册功能，可以对已上传的图片进行删除，修改链接等快捷操作，PicGo还可以生成不同格式的链接、支持批量上传、快捷键上传、自定义链接格式、上传前重命名等，更多功能自己去探索吧！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;fancybox&gt;&lt;br&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/ImageHosting.png&quot; alt=&quot;ImageHosting&quot;&gt;&lt;br&gt;&lt;/fancybox&gt;
+    
+    </summary>
+    
+      <category term="图床" scheme="https://www.itrhx.com/categories/%E5%9B%BE%E5%BA%8A/"/>
+    
+    
+      <category term="图床" scheme="https://www.itrhx.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+      <category term="PicGo" scheme="https://www.itrhx.com/tags/PicGo/"/>
+    
+      <category term="jsDelivr" scheme="https://www.itrhx.com/tags/jsDelivr/"/>
+    
+  </entry>
+  
+  <entry>
     <title>利用 Cloudflare 为 Hexo 博客添加 Https 支持</title>
-    <link href="https://www.itrhx.com/2019/07/31/A26-Hexo-add-https/"/>
-    <id>https://www.itrhx.com/2019/07/31/A26-Hexo-add-https/</id>
+    <link href="https://www.itrhx.com/2019/07/31/A26-hexo-add-https/"/>
+    <id>https://www.itrhx.com/2019/07/31/A26-hexo-add-https/</id>
     <published>2019-07-31T03:48:43.215Z</published>
     <updated>2019-07-31T12:55:36.659Z</updated>
     
@@ -66,8 +92,8 @@
   
   <entry>
     <title>一个 JS 脚本实现网站预加载，提升页面加载速度</title>
-    <link href="https://www.itrhx.com/2019/06/12/A24-Instant.page/"/>
-    <id>https://www.itrhx.com/2019/06/12/A24-Instant.page/</id>
+    <link href="https://www.itrhx.com/2019/06/12/A24-instant.page/"/>
+    <id>https://www.itrhx.com/2019/06/12/A24-instant.page/</id>
     <published>2019-06-12T11:36:25.822Z</published>
     <updated>2019-07-31T12:41:50.811Z</updated>
     
@@ -90,8 +116,8 @@
   
   <entry>
     <title>网站ICP备案和公安备案流程</title>
-    <link href="https://www.itrhx.com/2019/06/12/A23-Website-Approve/"/>
-    <id>https://www.itrhx.com/2019/06/12/A23-Website-Approve/</id>
+    <link href="https://www.itrhx.com/2019/06/12/A23-website-approve/"/>
+    <id>https://www.itrhx.com/2019/06/12/A23-website-approve/</id>
     <published>2019-06-11T18:00:35.073Z</published>
     <updated>2019-07-31T12:39:41.924Z</updated>
     
@@ -114,8 +140,8 @@
   
   <entry>
     <title>Eclipse 通过 JDBC 连接 SQL Server</title>
-    <link href="https://www.itrhx.com/2019/05/14/A22-Eclipse-Connects-to-SQL-Server/"/>
-    <id>https://www.itrhx.com/2019/05/14/A22-Eclipse-Connects-to-SQL-Server/</id>
+    <link href="https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql-server/"/>
+    <id>https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql-server/</id>
     <published>2019-05-13T18:16:12.379Z</published>
     <updated>2019-07-31T12:28:15.037Z</updated>
     
@@ -164,8 +190,8 @@
   
   <entry>
     <title>VMware Pro 15 安装 Deepin15.9 国产操作系统</title>
-    <link href="https://www.itrhx.com/2019/04/14/A20-VMwarePro15-Installation-of-Deepin15.9-tutorial/"/>
-    <id>https://www.itrhx.com/2019/04/14/A20-VMwarePro15-Installation-of-Deepin15.9-tutorial/</id>
+    <link href="https://www.itrhx.com/2019/04/14/A20-install-deepin15.9/"/>
+    <id>https://www.itrhx.com/2019/04/14/A20-install-deepin15.9/</id>
     <published>2019-04-14T11:05:28.487Z</published>
     <updated>2019-07-31T12:18:47.788Z</updated>
     
@@ -188,8 +214,8 @@
   
   <entry>
     <title>Windows 系统中 Pygame 的安装</title>
-    <link href="https://www.itrhx.com/2019/04/01/A19-Windows-Installation-Pygame/"/>
-    <id>https://www.itrhx.com/2019/04/01/A19-Windows-Installation-Pygame/</id>
+    <link href="https://www.itrhx.com/2019/04/01/A19-install-pygame/"/>
+    <id>https://www.itrhx.com/2019/04/01/A19-install-pygame/</id>
     <published>2019-04-01T15:40:36.090Z</published>
     <updated>2019-07-31T12:12:47.820Z</updated>
     
@@ -212,12 +238,12 @@
   
   <entry>
     <title>免费CDN：jsDeliver+Github</title>
-    <link href="https://www.itrhx.com/2019/02/10/A18-Free-CDN-jsDeliver+Github/"/>
-    <id>https://www.itrhx.com/2019/02/10/A18-Free-CDN-jsDeliver+Github/</id>
+    <link href="https://www.itrhx.com/2019/02/10/A18-free-cdn-jsDeliver+github/"/>
+    <id>https://www.itrhx.com/2019/02/10/A18-free-cdn-jsDeliver+github/</id>
     <published>2019-02-10T14:31:31.283Z</published>
-    <updated>2019-07-31T11:42:10.808Z</updated>
+    <updated>2019-08-01T01:32:35.150Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="本文有参考《jsDeliver-github使用教程，免费好用的cdn》——-By-hojun"><a href="#本文有参考《jsDeliver-github使用教程，免费好用的cdn》——-By-hojun" class="headerlink" title="本文有参考《jsDeliver+github使用教程，免费好用的cdn》—— By hojun"></a><center><font color="#FF0000">本文有参考</font><a href="https://www.hojun.cn/2019/01/18/jsDeliver-github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84cdn/" target="_blank" rel="noopener">《jsDeliver+github使用教程，免费好用的cdn》</a>—— By hojun</center></h4><hr><p>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。——百度百科</p><p>放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDeliver + Github便是免费且好用的CDN，非常适合博客网站使用。</p><hr><h1 id="1、新建Github仓库"><a href="#1、新建Github仓库" class="headerlink" title="1、新建Github仓库 "></a><font color="#FF0000">1、新建Github仓库 </font></h1><p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/01.png" alt="01"></p><h1 id="2、克隆Github仓库到本地"><a href="#2、克隆Github仓库到本地" class="headerlink" title="2、克隆Github仓库到本地 "></a><font color="#FF0000">2、克隆Github仓库到本地 </font></h1><p>  点击 Clone or download，一键复制仓库地址<br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/04.png" alt="04"></p><p> 在本地目录右键 Git Bash Here，执行以下命令：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 一键复制的仓库地址</span><br></pre></td></tr></table></figure></p><h1 id="3、上传资源"><a href="#3、上传资源" class="headerlink" title="3、上传资源 "></a><font color="#FF0000">3、上传资源 </font></h1><p>  复制需要上传的资源到本地git仓库（注：jsDeliver不支持加载超过20M的资源），在本地git仓库目录下右键 Git Bash Here，执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status                    //查看状态</span><br><span class="line">git add .                     //添加所有文件到暂存区</span><br><span class="line">git commit -m &apos;第一次提交&apos;      //把文件提交到仓库</span><br><span class="line">git push                      //推送至远程仓库</span><br></pre></td></tr></table></figure></p><h1 id="4、发布仓库"><a href="#4、发布仓库" class="headerlink" title="4、发布仓库 "></a><font color="#FF0000">4、发布仓库 </font></h1><p>  点击release发布<br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/02.png" alt="02"></p><p>  自定义发布版本号<br>  <img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/03.png" alt="03"></p><h1 id="5、通过jsDeliver引用资源"><a href="#5、通过jsDeliver引用资源" class="headerlink" title="5、通过jsDeliver引用资源 "></a><font color="#FF0000">5、通过jsDeliver引用资源 </font></h1><p>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a><br>例如：<a href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4</a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="本文有参考《jsDeliver-github使用教程，免费好用的cdn》——-By-hojun"><a href="#本文有参考《jsDeliver-github使用教程，免费好用的cdn》——-By-hojun" class="headerlink" title="本文有参考《jsDeliver+github使用教程，免费好用的cdn》—— By hojun"></a><center><font color="#FF0000">本文有参考</font><a href="https://www.hojun.cn/2019/01/18/jsDeliver-github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84cdn/" target="_blank" rel="noopener">《jsDeliver+github使用教程，免费好用的cdn》</a>—— By hojun</center></h4><hr><p>CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。——百度百科</p><p>放在Github的资源在国内加载速度比较慢，因此需要使用CDN加速来优化网站打开速度，jsDeliver + Github便是免费且好用的CDN，非常适合博客网站使用。</p><hr><h1 id="1、新建Github仓库"><a href="#1、新建Github仓库" class="headerlink" title="1、新建Github仓库 "></a><font color="#FF0000">1、新建Github仓库 </font></h1><p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/01.png" alt="01"></p><h1 id="2、克隆Github仓库到本地"><a href="#2、克隆Github仓库到本地" class="headerlink" title="2、克隆Github仓库到本地 "></a><font color="#FF0000">2、克隆Github仓库到本地 </font></h1><p>  点击 Clone or download，一键复制仓库地址<br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/04.png" alt="04"></p><p> 在本地目录右键 Git Bash Here，执行以下命令：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 一键复制的仓库地址</span><br></pre></td></tr></table></figure></p><h1 id="3、上传资源"><a href="#3、上传资源" class="headerlink" title="3、上传资源 "></a><font color="#FF0000">3、上传资源 </font></h1><p>  复制需要上传的资源到本地git仓库（注：jsDeliver不支持加载超过20M的资源），在本地git仓库目录下右键 Git Bash Here，执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status                    //查看状态</span><br><span class="line">git add .                     //添加所有文件到暂存区</span><br><span class="line">git commit -m &apos;第一次提交&apos;      //把文件提交到仓库</span><br><span class="line">git push                      //推送至远程仓库</span><br></pre></td></tr></table></figure></p><h1 id="4、发布仓库"><a href="#4、发布仓库" class="headerlink" title="4、发布仓库 "></a><font color="#FF0000">4、发布仓库 </font></h1><p>  点击release发布<br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/02.png" alt="02"></p><p>  自定义发布版本号<br>  <img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/03.png" alt="03"></p><h1 id="5、通过jsDeliver引用资源"><a href="#5、通过jsDeliver引用资源" class="headerlink" title="5、通过jsDeliver引用资源 "></a><font color="#FF0000">5、通过jsDeliver引用资源 </font></h1><p>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a><br>例如：<a href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4</a></p><p>注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：</p><ul><li><p>// 加载任何Github发布、提交或分支<br><a href="https://cdn.jsdelivr.net/gh/user/repo@version/file" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/user/repo@version/file</a></p></li><li><p>// 加载 jQuery v3.2.1<br><a href="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js</a></p></li><li><p>// 使用版本范围而不是特定版本<br><a href="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js</a><br><a href="https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js</a></p></li><li><p>// 完全省略该版本以获取最新版本<br><a href="https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js</a></p></li><li><p>// 将“.min”添加到任何JS/CSS文件中以获取缩小版本，如果不存在，将为会自动生成<br><a href="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js</a></p></li><li><p>// 在末尾添加 / 以获取资源目录列表<br><a href="https://cdn.jsdelivr.net/gh/jquery/jquery/" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/jquery/jquery/</a></p></li></ul>]]></content>
     
     <summary type="html">
     
@@ -236,8 +262,8 @@
   
   <entry>
     <title>新年快乐！</title>
-    <link href="https://www.itrhx.com/2019/02/05/A17-Happy-new-year/"/>
-    <id>https://www.itrhx.com/2019/02/05/A17-Happy-new-year/</id>
+    <link href="https://www.itrhx.com/2019/02/05/A17-happy-new-year/"/>
+    <id>https://www.itrhx.com/2019/02/05/A17-happy-new-year/</id>
     <published>2019-02-04T17:18:06.030Z</published>
     <updated>2019-04-01T16:34:14.610Z</updated>
     
@@ -258,8 +284,8 @@
   
   <entry>
     <title>一台电脑使用两个/多个GitHub账号部署两个/多个Hexo博客</title>
-    <link href="https://www.itrhx.com/2019/01/18/A16-One-computer-deploys-two-or-more-hexo-blogs/"/>
-    <id>https://www.itrhx.com/2019/01/18/A16-One-computer-deploys-two-or-more-hexo-blogs/</id>
+    <link href="https://www.itrhx.com/2019/01/18/A16-deploy-two-or-more-hexo-blogs/"/>
+    <id>https://www.itrhx.com/2019/01/18/A16-deploy-two-or-more-hexo-blogs/</id>
     <published>2019-01-18T11:42:54.900Z</published>
     <updated>2019-07-31T11:28:36.564Z</updated>
     
@@ -282,8 +308,8 @@
   
   <entry>
     <title>Python3 自学笔记 C09</title>
-    <link href="https://www.itrhx.com/2018/11/16/A15-Python3-self-study-notes-C09/"/>
-    <id>https://www.itrhx.com/2018/11/16/A15-Python3-self-study-notes-C09/</id>
+    <link href="https://www.itrhx.com/2018/11/16/A15-Python3-study-notes-C09/"/>
+    <id>https://www.itrhx.com/2018/11/16/A15-Python3-study-notes-C09/</id>
     <published>2018-11-15T16:37:26.503Z</published>
     <updated>2019-06-12T14:48:49.558Z</updated>
     
@@ -306,8 +332,8 @@
   
   <entry>
     <title>Python3 自学笔记 C08</title>
-    <link href="https://www.itrhx.com/2018/11/10/A14-Python3-self-study-notes-C08/"/>
-    <id>https://www.itrhx.com/2018/11/10/A14-Python3-self-study-notes-C08/</id>
+    <link href="https://www.itrhx.com/2018/11/10/A14-Python3-study-notes-C08/"/>
+    <id>https://www.itrhx.com/2018/11/10/A14-Python3-study-notes-C08/</id>
     <published>2018-11-10T11:51:55.481Z</published>
     <updated>2019-06-12T14:48:47.339Z</updated>
     
@@ -330,8 +356,8 @@
   
   <entry>
     <title>Python3 自学笔记 C07</title>
-    <link href="https://www.itrhx.com/2018/11/03/A13-Python3-self-study-notes-C07/"/>
-    <id>https://www.itrhx.com/2018/11/03/A13-Python3-self-study-notes-C07/</id>
+    <link href="https://www.itrhx.com/2018/11/03/A13-Python3-study-notes-C07/"/>
+    <id>https://www.itrhx.com/2018/11/03/A13-Python3-study-notes-C07/</id>
     <published>2018-11-03T14:08:10.447Z</published>
     <updated>2019-06-12T14:48:42.277Z</updated>
     
@@ -354,8 +380,8 @@
   
   <entry>
     <title>Python3 自学笔记 C06</title>
-    <link href="https://www.itrhx.com/2018/10/30/A12-Python3-self-study-notes-C06/"/>
-    <id>https://www.itrhx.com/2018/10/30/A12-Python3-self-study-notes-C06/</id>
+    <link href="https://www.itrhx.com/2018/10/30/A12-Python3-study-notes-C06/"/>
+    <id>https://www.itrhx.com/2018/10/30/A12-Python3-study-notes-C06/</id>
     <published>2018-10-30T05:38:20.264Z</published>
     <updated>2019-06-12T14:48:40.271Z</updated>
     
@@ -378,8 +404,8 @@
   
   <entry>
     <title>Python3 自学笔记 C05</title>
-    <link href="https://www.itrhx.com/2018/10/27/A11-Python3-self-study-notes-C05/"/>
-    <id>https://www.itrhx.com/2018/10/27/A11-Python3-self-study-notes-C05/</id>
+    <link href="https://www.itrhx.com/2018/10/27/A11-Python3-study-notes-C05/"/>
+    <id>https://www.itrhx.com/2018/10/27/A11-Python3-study-notes-C05/</id>
     <published>2018-10-27T10:46:22.942Z</published>
     <updated>2019-06-12T14:48:34.639Z</updated>
     
@@ -400,8 +426,8 @@
   
   <entry>
     <title>Python3 自学笔记 C04</title>
-    <link href="https://www.itrhx.com/2018/10/23/A10-Python3-self-study-notes-C04/"/>
-    <id>https://www.itrhx.com/2018/10/23/A10-Python3-self-study-notes-C04/</id>
+    <link href="https://www.itrhx.com/2018/10/23/A10-Python3-study-notes-C04/"/>
+    <id>https://www.itrhx.com/2018/10/23/A10-Python3-study-notes-C04/</id>
     <published>2018-10-23T14:52:48.396Z</published>
     <updated>2019-06-12T14:48:32.351Z</updated>
     
@@ -422,8 +448,8 @@
   
   <entry>
     <title>Python3 自学笔记 C03</title>
-    <link href="https://www.itrhx.com/2018/10/11/A09-Python3-self-study-notes-C03/"/>
-    <id>https://www.itrhx.com/2018/10/11/A09-Python3-self-study-notes-C03/</id>
+    <link href="https://www.itrhx.com/2018/10/11/A09-Python3-study-notes-C03/"/>
+    <id>https://www.itrhx.com/2018/10/11/A09-Python3-study-notes-C03/</id>
     <published>2018-10-11T14:49:52.286Z</published>
     <updated>2019-06-12T14:48:28.432Z</updated>
     
@@ -444,8 +470,8 @@
   
   <entry>
     <title>Python3 自学笔记 C02</title>
-    <link href="https://www.itrhx.com/2018/09/15/A08-Python3-self-study-notes-C02/"/>
-    <id>https://www.itrhx.com/2018/09/15/A08-Python3-self-study-notes-C02/</id>
+    <link href="https://www.itrhx.com/2018/09/15/A08-Python3-study-notes-C02/"/>
+    <id>https://www.itrhx.com/2018/09/15/A08-Python3-study-notes-C02/</id>
     <published>2018-09-14T17:41:46.929Z</published>
     <updated>2019-06-12T14:48:22.944Z</updated>
     
@@ -461,30 +487,6 @@
     
     
       <category term="列表" scheme="https://www.itrhx.com/tags/%E5%88%97%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python3 自学笔记 C01</title>
-    <link href="https://www.itrhx.com/2018/09/10/A07-Python3-self-study-notes-C01/"/>
-    <id>https://www.itrhx.com/2018/09/10/A07-Python3-self-study-notes-C01/</id>
-    <published>2018-09-10T15:55:00.947Z</published>
-    <updated>2019-06-12T14:48:19.055Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center><font color="#4094C7" size="4">Python3 自学笔记第一章【变量和简单数据类型】</font></center><hr><h1 id="1-1变量的命名和使用"><a href="#1-1变量的命名和使用" class="headerlink" title=" - 1.1变量的命名和使用 "></a><font color="#FF0000"> - 1.1变量的命名和使用 </font></h1><blockquote><p>变量名只能包含字母、数字和下划线。变量名可以字母或者下划线打头，但不能以数字开头，例如，可以将变量命名为message_1，但不能将其命名为1_message</p></blockquote><blockquote><p>变量名不能包含空格，但可使用下划线来分割其中的单词，例如，变量名greeting_message可行，但变量名greeting message会引发错误</p></blockquote><blockquote><p>不要将Python关键字和函数名用作变量名，即不要使用Python保留用于特殊用途的单词，如print</p></blockquote><blockquote><p>变量名应既简短又具有描述性，例如，name比n好，student_name比s_n好，name_length比length_of_persons_name好</p></blockquote><blockquote><p>慎用小写字母l和大写字母O，因为它们可能被人看错成数字1和0</p></blockquote><h1 id="1-2字符串"><a href="#1-2字符串" class="headerlink" title=" - 1.2字符串 "></a><font color="#FF0000"> - 1.2字符串 </font></h1><p> 字符串就是一系列字符，在Python中，用引号括起来的都是字符串，其中的引号可以是单引号也可以双引号：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"This is a string."</span></span><br><span class="line"><span class="string">'This is also a string.'</span></span><br></pre></td></tr></table></figure><p>这种灵活性让我们能够在字符串中包含引号和撇号：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'I told my friend,"Python is my favorite language!"'</span></span><br><span class="line"><span class="string">"The language 'Python' is named er Monty Python,not the snake."</span></span><br><span class="line"><span class="string">"One of Python's strengths is i diverse and supportive community."</span></span><br></pre></td></tr></table></figure><h1 id="1-2-1使用方法修改字符串的大小写"><a href="#1-2-1使用方法修改字符串的大小写" class="headerlink" title=" - 1.2.1使用方法修改字符串的大小写"></a><font color="#FF0000"> - 1.2.1使用方法修改字符串的大小写</font></h1><p>三种处理方法如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title()     <span class="comment">#将字符串每个单词的首字母都改为大写</span></span><br><span class="line">upper()     <span class="comment">#将字符串的每个字母都改为大写</span></span><br><span class="line">lower()     <span class="comment">#将字符串的每个字母都改为小写</span></span><br></pre></td></tr></table></figure></p><p>例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">"I love you!"</span></span><br><span class="line">print(name.title())</span><br><span class="line">print(name.upper())</span><br><span class="line">print(name.lower())</span><br></pre></td></tr></table></figure></p><p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I Love You!</span><br><span class="line">I LOVE YOU!</span><br><span class="line">i love you!</span><br></pre></td></tr></table></figure></p><h1 id="1-2-2合并（拼接）字符串"><a href="#1-2-2合并（拼接）字符串" class="headerlink" title=" - 1.2.2合并（拼接）字符串"></a><font color="#FF0000"> - 1.2.2合并（拼接）字符串</font></h1><p>Python使用加号（+）来合并字符串，举例说明：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">first_name = <span class="string">"I"</span></span><br><span class="line">second_name = <span class="string">"love"</span></span><br><span class="line">third_name = <span class="string">"python"</span></span><br><span class="line">full_name = first_name + <span class="string">" "</span> + second_name + <span class="string">" "</span> + third_time</span><br><span class="line">print(full_name.title() + <span class="string">"!"</span>)</span><br></pre></td></tr></table></figure><p>输出结果如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I Love Python!</span><br></pre></td></tr></table></figure><h1 id="1-2-3使用制表符或换行符来添加空白"><a href="#1-2-3使用制表符或换行符来添加空白" class="headerlink" title=" - 1.2.3使用制表符或换行符来添加空白"></a><font color="#FF0000"> - 1.2.3使用制表符或换行符来添加空白</font></h1><p>添加横向制表符：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">"\tPython"</span>)</span><br><span class="line">    Python</span><br></pre></td></tr></table></figure><p>添加换行符：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;print(<span class="string">"C\nC++\nPython\nJavaScript"</span>)</span><br><span class="line">C</span><br><span class="line">C++</span><br><span class="line">Python</span><br><span class="line">JavaScript</span><br></pre></td></tr></table></figure><center><font color="#FF0000"> 附表：Python转义符 </font><br><br><img src="https://i.imgur.com/Do9ja5A.png" alt=""><br><br></center><h1 id="1-2-4删除空白"><a href="#1-2-4删除空白" class="headerlink" title=" - 1.2.4删除空白"></a><font color="#FF0000"> - 1.2.4删除空白</font></h1><p>在Python中可用 lstrip()、rstrip()、strip() 分别删除字符串开头、结尾、全部的空白，举例说明：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;message = <span class="string">' python '</span></span><br><span class="line">&gt;&gt;&gt;message</span><br><span class="line"><span class="string">' python '</span></span><br><span class="line">&gt;&gt;&gt;message.lstrip()</span><br><span class="line"><span class="string">'python '</span></span><br><span class="line">&gt;&gt;&gt;message.rstrip()</span><br><span class="line"><span class="string">' python'</span></span><br><span class="line">&gt;&gt;&gt;message.strip()</span><br><span class="line"><span class="string">'python'</span></span><br></pre></td></tr></table></figure><p>如果要永久删除字符串中的空白，必须将删除操作的结果存回到变量中：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;message = <span class="string">' python '</span></span><br><span class="line">&gt;&gt;&gt;message = message.strip()</span><br><span class="line">&gt;&gt;&gt;message</span><br><span class="line"><span class="string">'python'</span></span><br></pre></td></tr></table></figure><h1 id="1-3数字"><a href="#1-3数字" class="headerlink" title=" - 1.3数字"></a><font color="#FF0000"> - 1.3数字</font></h1><p>在编程中，经常使用数字来记录游戏得分、表示可视化数据、储存Web应用信息等。Python根据数字的用法以不同的方式处理它们</p><h1 id="1-3-1整数"><a href="#1-3-1整数" class="headerlink" title=" - 1.3.1整数"></a><font color="#FF0000"> - 1.3.1整数</font></h1><p>在Python中，可对整数执行加（+）减（-）乘（*）除（/）乘方（**）运算，同时也支持运算次序：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="number">3</span> + <span class="number">2</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> - <span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> * <span class="number">2</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> \ <span class="number">2</span></span><br><span class="line"><span class="number">1.5</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> ** <span class="number">2</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> ** <span class="number">3</span></span><br><span class="line"><span class="number">27</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">2</span> + <span class="number">3</span> * <span class="number">4</span></span><br><span class="line"><span class="number">14</span></span><br><span class="line">&gt;&gt;&gt;(<span class="number">2</span> + <span class="number">3</span>) * <span class="number">4</span></span><br><span class="line"><span class="number">20</span></span><br></pre></td></tr></table></figure><h1 id="1-3-2浮点数"><a href="#1-3-2浮点数" class="headerlink" title=" - 1.3.2浮点数"></a><font color="#FF0000"> - 1.3.2浮点数</font></h1><p>Python将带小数点的数字都称为浮点数：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="number">0.1</span> + <span class="number">0.1</span></span><br><span class="line"><span class="number">0.2</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">2</span> * <span class="number">0.2</span></span><br><span class="line"><span class="number">0.4</span></span><br></pre></td></tr></table></figure><p>需要注意的是，结果包含的小数位可能是不确定的，就现在而言，暂时忽略多余的小数位即可：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="number">0.2</span> + <span class="number">0.1</span></span><br><span class="line"><span class="number">0.30000000000000004</span></span><br><span class="line">&gt;&gt;&gt;<span class="number">3</span> * <span class="number">0.1</span></span><br><span class="line"><span class="number">0.30000000000000004</span></span><br></pre></td></tr></table></figure><h1 id="1-3-3使用函数-str-避免错误"><a href="#1-3-3使用函数-str-避免错误" class="headerlink" title=" - 1.3.3使用函数 str() 避免错误"></a><font color="#FF0000"> - 1.3.3使用函数 str() 避免错误</font></h1><p>错误例子：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">"Happy "</span> + age + <span class="string">"rd Birthday!"</span></span><br><span class="line">print(message)</span><br></pre></td></tr></table></figure><p>运行时会报错：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"birthday.py"</span>, line <span class="number">2</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    message = <span class="string">"Happy "</span> + age + <span class="string">"rd Birthday!"</span></span><br><span class="line">TypeError: must be str, <span class="keyword">not</span> int</span><br></pre></td></tr></table></figure><p>这是一个类型错误，意味着Python无法识别我们使用的信息。在这个例子中，Python发现我们使用了一个值为整数（int）的变量，但它不知道该如何解读这个值，这个变量表示的可能是数值23，也可能是字符2和3。像上面这样的字符串中使用整数时，需要显式地指出我们希望Python将这个整数用作字符串。为此，可调用函数 str()，它让Python将非字符串值表示为字符串：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">"Happy "</span> + str(age) + <span class="string">"rd Birthday!"</span></span><br><span class="line">print(message)</span><br></pre></td></tr></table></figure><p>输出结果如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Happy <span class="number">23</span>rd Birthday!</span><br></pre></td></tr></table></figure><h1 id="1-4注释"><a href="#1-4注释" class="headerlink" title=" - 1.4注释"></a><font color="#FF0000"> - 1.4注释</font></h1><p>注释让我们能够使用自然语言在程序中添加说明，Python中注释有三种方法：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello Python!"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#这是单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="string">'''这是多行注释</span></span><br><span class="line"><span class="string">这是多行注释'''</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""这也是多行注释</span></span><br><span class="line"><span class="string">这也是多行注释"""</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      Python3 【变量和简单数据类型】
-    
-    </summary>
-    
-      <category term="Python3" scheme="https://www.itrhx.com/categories/Python3/"/>
-    
-    
-      <category term="数据类型" scheme="https://www.itrhx.com/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-      <category term="变量" scheme="https://www.itrhx.com/tags/%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   
