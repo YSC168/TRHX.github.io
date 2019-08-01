@@ -16,12 +16,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Hello World! | TRHX&#39;S BLOG</title>
+  <title>利用 Cloudflare 为 Hexo 博客添加 Https 支持 | TRHX&#39;S BLOG</title>
   
   <meta name="keywords" content="大学生 软件工程 Java Python">
   
   
-  <meta name="description" content="Hello World! Never forget why you started, and your mission can be accomplished!, 一个大学生用于自学的个人博客">
+  <meta name="description" content="一个大学生用于自学的个人博客">
   
 
   
@@ -365,8 +365,8 @@
         
   
     <h1 class="title">
-      <a href="/2018/08/10/A01-hello-world-1/">
-        Hello World!
+      <a href="/2019/07/31/A26-hexo-add-https/">
+        利用 Cloudflare 为 Hexo 博客添加 Https 支持
       </a>
     </h1>
   
@@ -395,7 +395,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-08-10</p>
+    <p>2019-07-31</p>
   </a>
 </div>
 
@@ -405,9 +405,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/BLOG/' rel="nofollow">
+    <a href='/categories/Hexo/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>BLOG</p>
+      <p>Hexo</p>
     </a>
   </div>
 
@@ -417,7 +417,7 @@
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/BLOG/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>BLOG</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Hexo/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>Hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTTPS/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>HTTPS</p></a></div>
 
 
           
@@ -455,17 +455,38 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <hr>
-<blockquote>
-<p>人类的幸福和欢乐在于奋斗，而最有价值的是为理想而奋斗！ ———  苏格拉底</p>
+          <blockquote>
+<p>利用 Cloudflare 为 Hexo 博客添加 https 支持</p>
 </blockquote>
-<blockquote>
-<p>Human happiness and joy lie in struggle, and what is most valuable is striving for ideals! ———   Socrates</p>
-</blockquote>
-<hr>
-<iframe frameborder="0" width="840" height="500" src="https://v.qq.com/txp/iframe/player.html?vid=m0768lhl5uh" allowfullscreen="true"></iframe>
+<a id="more"></a>
+<h1 id="–-前言"><a href="#–-前言" class="headerlink" title="– 前言"></a><font color="#FF000">– 前言</font></h1><p>GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，这种方法就不管用了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，而 Cloudflare 就能完美解决这种尴尬</p>
+<p>Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理</p>
+<h1 id="–-注册-Cloudflare"><a href="#–-注册-Cloudflare" class="headerlink" title="– 注册 Cloudflare"></a><font color="#FF000">– 注册 Cloudflare</font></h1><p>到 <a href="https://dash.cloudflare.com/sign-up" target="_blank" rel="noopener">Cloudflare官网</a> 注册账号</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/01.png" alt="01.png"><br></fancybox>
 
-<iframe frameborder="0" width="840" height="500" src="https://v.qq.com/txp/iframe/player.html?vid=a0371nd7kqt" allowfullscreen="true"></iframe>
+<h1 id="–-添加站点"><a href="#–-添加站点" class="headerlink" title="– 添加站点"></a><font color="#FF000">– 添加站点</font></h1><p>添加你的站点，一直下一步即可</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/02.png" alt="02.png"><br></fancybox><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/03.png" alt="03.png"><br></fancybox><br>如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考<a href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo_font_270" target="_blank" rel="noopener">《为hexo博客配置个性域名》</a><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/04.png" alt="04.png"><br></fancybox>
+
+<h1 id="–修改DNS"><a href="#–修改DNS" class="headerlink" title="–修改DNS"></a><font color="#FF000">–修改DNS</font></h1><p>点击下一步 Cloudflare 会提供给你两个 DNS 地址</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/05.png" alt="05.png"><br></fancybox><br>到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效<br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/08.png" alt="08.png"><br></fancybox><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/09.png" alt="09.png"><br></fancybox><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/10.png" alt="10.png"><br></fancybox>
+
+<h1 id="–开启-HTTPS"><a href="#–开启-HTTPS" class="headerlink" title="–开启 HTTPS"></a><font color="#FF000">–开启 HTTPS</font></h1><p>在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/07.png" alt="07.png"><br></fancybox>
+
+<p>关于三种模式 Flexible、Full、Full (Strict) 的区别：</p>
+<ul>
+<li><p>Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的</p>
+</li>
+<li><p>Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书</p>
+</li>
+<li><p>Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的</p>
+</li>
+</ul>
+<p>至此，我们的域名就支持 https 访问了，但是当用户输入 <a href="http://xxxxxx" target="_blank" rel="noopener">http://xxxxxx</a> 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了</p>
+<h1 id="–重定向强制-HTTPS"><a href="#–重定向强制-HTTPS" class="headerlink" title="–重定向强制 HTTPS"></a><font color="#FF000">–重定向强制 HTTPS</font></h1><p>Cloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/06.png" alt="06.png"><br></fancybox>
+
+<p>现在我们的 Hexo 博客就实现了全站 HTTPS！</p>
 
         </div>
         
@@ -477,10 +498,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-06-12T22:46:25+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-07-31T20:55:36+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年6月12日</p>
+    <p>最后更新于 2019年7月31日</p>
   </a>
 </div>
 
@@ -494,7 +515,9 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2018/08/10/A01-hello-world-1/&title=Hello World! | TRHX'S BLOG&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/07/31/A26-hexo-add-https/&title=利用 Cloudflare 为 Hexo 博客添加 Https 支持 | TRHX'S BLOG&summary=
+利用 Cloudflare 为 Hexo 博客添加 https 支持
+"
           
           >
           
@@ -506,7 +529,9 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2018/08/10/A01-hello-world-1/&title=Hello World! | TRHX'S BLOG&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/07/31/A26-hexo-add-https/&title=利用 Cloudflare 为 Hexo 博客添加 Https 支持 | TRHX'S BLOG&summary=
+利用 Cloudflare 为 Hexo 博客添加 https 支持
+"
           
           >
           
@@ -516,7 +541,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aW24CMRAEQO5/aXKABOgeL5HWLn9FYHm3iDTyPB6PeD1frGTn+z3J55ctDAyM2zKeb9erB7z65PfJyf7kuR9+IAwMjAMYryJY8sgW3z7r/X4MDAyM9eCYBN/kuRgYGBjtcd9IRGcBGgMD4xxGHi7zslrO+9dcHAMD44aMPBT+/99f6W9gYGDcivEsV07N259tIe+PczAwMLZm5AHuqlJa3s6sL5oYGBibMt6PR7QDEzm7TXQ/FPUwMDC2ZrRJY5te5qMYyYt+4GFgYBzGaJsEeYCejXQ8Zr8xBgbGFox88DRvQ6684mVjFhgYGAcwkitau38WoKM0GAMD4xjG7NLWBs2kYdk2RzEwMM5kJA/IxzLyduYwNGNgYBzAWElHZ22D9qWHzUsMDIwtGCuNgdngaYuJmpcYGBhbM9oHz4prs6Le8IaLgYGxNaN9xeTblZ156ouBgbE3o11tAa69brZJLAYGxmmMvKyfNyZnIxTJznrwAgMD4+aMWSROBsVWUty6OYqBgXEMY70EljCShLb9FgMD4zRGe5lrL5ormXRxt8XAwNiC8SxXnmoW2XNcUIv+DxgYGNsxZi2BttyfpLvJdbA9BwMDYydGGy5nJbP8qteOXGBgYJzDuLaU1o52rV8cMTAwMGZjW7MAnZ/zyF8IAwPjSEZ7yWt/jvZkDAyMExht4awtk82aml8pt2FgYNyQMRtxWB8my0+4rKmJgYFxP8YP4Za8Ks5Lw1YAAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aS67jMAwEwNz/0pkT2OmmngewVFoFQSKrvCD40ecTr+/tuv/l1W73T/k8sTAwMF7LSI6Yf3N/6ARw9ZQfLwgDA+MARvv4e8b9UWb7/DgzBgYGxm261u6QwDAwMDCeY7SF6Hq6iYGBcQ4jKWJXwmLegHu8FsfAwHghYxYW/8/nR+YbGBgYr2J8y5UPCfLB5Hd5YWBg7M3IA1zSGlvZrQ24GBgY5zCSoJmUlO1B87Fo9EsMDIytGetBc/YKkkZ//SIwMDA2ZbQXRpOU7rlxZp1pYmBgbMFoQ2fLWDlicc0CAwPjGEZbrM6o7fCyuGCBgYGxKaNtn/1t9bzy9MsiFgMDY1NG/pg2aK634aJ/YWBgHMDID7Reas7Sx2h4iYGBcRijLWJXdmhD7eUMFgMDY2tGe8GiCIVxitmWsj9ut2FgYGzEmDXF2oC4EqyLQIyBgbEpY3ZtaxYQ84K5LoMxMDC2ZiQtsHattOqSM1zuiYGBcQCjLWWTErT9pm3b/UHTDQMD41WM/MJEGxBnjHqkioGBcQBjvbCcjQE+5br8FwYGxqaMWYE6C6Ozpl6UtmJgYGzNaMNcy5uRZikmBgbG3oy6sRUfceWiRv2+MTAwDmCsB768STcbSESXLTAwMDBus8u2iG0L40cCLgYGxtaMNsnLA/GwhMbAwDiAMbvglSeIs6HmI+02DAyMFzLavKvFzAYMjww1MTAw3sf4B7KeapjCkVRZAAAAAElFTkSuQmCC'>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -526,7 +551,9 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2018/08/10/A01-hello-world-1/&title=Hello World! | TRHX'S BLOG&summary="
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/07/31/A26-hexo-add-https/&title=利用 Cloudflare 为 Hexo 博客添加 Https 支持 | TRHX'S BLOG&summary=
+利用 Cloudflare 为 Hexo 博客添加 https 支持
+"
           
           >
           
@@ -536,7 +563,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aW24CMRAEQO5/aXKABOgeL5HWLn9FYHm3iDTyPB6PeD1frGTn+z3J55ctDAyM2zKeb9erB7z65PfJyf7kuR9+IAwMjAMYryJY8sgW3z7r/X4MDAyM9eCYBN/kuRgYGBjtcd9IRGcBGgMD4xxGHi7zslrO+9dcHAMD44aMPBT+/99f6W9gYGDcivEsV07N259tIe+PczAwMLZm5AHuqlJa3s6sL5oYGBibMt6PR7QDEzm7TXQ/FPUwMDC2ZrRJY5te5qMYyYt+4GFgYBzGaJsEeYCejXQ8Zr8xBgbGFox88DRvQ6684mVjFhgYGAcwkitau38WoKM0GAMD4xjG7NLWBs2kYdk2RzEwMM5kJA/IxzLyduYwNGNgYBzAWElHZ22D9qWHzUsMDIwtGCuNgdngaYuJmpcYGBhbM9oHz4prs6Le8IaLgYGxNaN9xeTblZ156ouBgbE3o11tAa69brZJLAYGxmmMvKyfNyZnIxTJznrwAgMD4+aMWSROBsVWUty6OYqBgXEMY70EljCShLb9FgMD4zRGe5lrL5ormXRxt8XAwNiC8SxXnmoW2XNcUIv+DxgYGNsxZi2BttyfpLvJdbA9BwMDYydGGy5nJbP8qteOXGBgYJzDuLaU1o52rV8cMTAwMGZjW7MAnZ/zyF8IAwPjSEZ7yWt/jvZkDAyMExht4awtk82aml8pt2FgYNyQMRtxWB8my0+4rKmJgYFxP8YP4Za8Ks5Lw1YAAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aS67jMAwEwNz/0pkT2OmmngewVFoFQSKrvCD40ecTr+/tuv/l1W73T/k8sTAwMF7LSI6Yf3N/6ARw9ZQfLwgDA+MARvv4e8b9UWb7/DgzBgYGxm261u6QwDAwMDCeY7SF6Hq6iYGBcQ4jKWJXwmLegHu8FsfAwHghYxYW/8/nR+YbGBgYr2J8y5UPCfLB5Hd5YWBg7M3IA1zSGlvZrQ24GBgY5zCSoJmUlO1B87Fo9EsMDIytGetBc/YKkkZ//SIwMDA2ZbQXRpOU7rlxZp1pYmBgbMFoQ2fLWDlicc0CAwPjGEZbrM6o7fCyuGCBgYGxKaNtn/1t9bzy9MsiFgMDY1NG/pg2aK634aJ/YWBgHMDID7Reas7Sx2h4iYGBcRijLWJXdmhD7eUMFgMDY2tGe8GiCIVxitmWsj9ut2FgYGzEmDXF2oC4EqyLQIyBgbEpY3ZtaxYQ84K5LoMxMDC2ZiQtsHattOqSM1zuiYGBcQCjLWWTErT9pm3b/UHTDQMD41WM/MJEGxBnjHqkioGBcQBjvbCcjQE+5br8FwYGxqaMWYE6C6Ozpl6UtmJgYGzNaMNcy5uRZikmBgbG3oy6sRUfceWiRv2+MTAwDmCsB768STcbSESXLTAwMDBus8u2iG0L40cCLgYGxtaMNsnLA/GwhMbAwDiAMbvglSeIs6HmI+02DAyMFzLavKvFzAYMjww1MTAw3sf4B7KeapjCkVRZAAAAAElFTkSuQmCC'>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -562,21 +589,40 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/2018/08/15/A02-hexo-blog/" rel="prev" title="使用 Github Pages 和 Hexo 搭建自己的独立博客">
+                                <a href="/2019/08/01/A27-image-hosting/" rel="prev" title="Github+jsDelivr+PicGo 打造稳定快速、高效免费图床">
                                   
-                                      使用 Github Pages 和 Hexo 搭建自己的独立博客
+                                      Github+jsDelivr+PicGo 打造稳定快速、高效免费图床
                                   
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/Github-Pages/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>Github Pages</a> <a class="tag" href="/tags/Hexo/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>Hexo</a>
+                                    <a class="tag" href="/tags/图床/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>图床</a> <a class="tag" href="/tags/PicGo/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>PicGo</a> <a class="tag" href="/tags/jsDelivr/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>jsDelivr</a>
                                 </h6>
                             
                         </span>
                     </section>
                 
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/07/26/A25-SB/" rel="prev" title="恶意刷留言者——你是什么垃圾？">
+                                    
+                                        恶意刷留言者——你是什么垃圾？
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/垃圾/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>垃圾</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
             </div>
         
@@ -615,7 +661,7 @@
 
   <script>
     window.subData = {
-      title: 'Hello World!',
+      title: '利用 Cloudflare 为 Hexo 博客添加 Https 支持',
       tools: true
     }
   </script>
@@ -739,6 +785,20 @@
           
           
             
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#–-前言"><span class="toc-text">– 前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-注册-Cloudflare"><span class="toc-text">– 注册 Cloudflare</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–-添加站点"><span class="toc-text">– 添加站点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–修改DNS"><span class="toc-text">–修改DNS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–开启-HTTPS"><span class="toc-text">–开启 HTTPS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#–重定向强制-HTTPS"><span class="toc-text">–重定向强制 HTTPS</span></a></li></ol>
+    </div>
+  </section>
+
 
           
         

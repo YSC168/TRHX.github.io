@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title><![CDATA[利用 Cloudflare 为 Hexo 博客添加 Https 支持]]></title>
-    <url>%2F2019%2F07%2F31%2FA26-hexo-add-https-1%2F</url>
+    <url>%2F2019%2F07%2F31%2FA26-hexo-add-https%2F</url>
     <content type="text"><![CDATA[利用 Cloudflare 为 Hexo 博客添加 https 支持 – 前言GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，这种方法就不管用了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，而 Cloudflare 就能完美解决这种尴尬 Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理 – 注册 Cloudflare到 Cloudflare官网 注册账号 – 添加站点添加你的站点，一直下一步即可 如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考《为hexo博客配置个性域名》 –修改DNS点击下一步 Cloudflare 会提供给你两个 DNS 地址 到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效 –开启 HTTPS在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可 关于三种模式 Flexible、Full、Full (Strict) 的区别： Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的 Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书 Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的 至此，我们的域名就支持 https 访问了，但是当用户输入 http://xxxxxx 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了 –重定向强制 HTTPSCloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可 现在我们的 Hexo 博客就实现了全站 HTTPS！]]></content>
       <categories>
         <category>Hexo</category>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <title><![CDATA[一个 JS 脚本实现网站预加载，提升页面加载速度]]></title>
-    <url>%2F2019%2F06%2F12%2FA24-instant.page-1%2F</url>
+    <url>%2F2019%2F06%2F12%2FA24-instant.page%2F</url>
     <content type="text"><![CDATA[instant.page 使用即时预加载技术，在用户点击之前预先加载页面。当用户的鼠标悬停在一个链接上超过 65 毫秒时，浏览器会对此页面进行预加载，当用户点击链接后，就从预加载的缓存中直接读取页面内容，从而达到缩短页面加载时间的目的。 以我博客为例，使用了这项技术后，当鼠标在一个链接停留超过 65 毫秒时，Network 里可以看见相关文章已经预加载出来了，而停留时间过短就不会预加载（红色部分，状态为 canceled） 使用方法：将以下HTML代码放在&lt;/ body&gt; 之前即可：1&lt;script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"&gt;&lt;/script&gt; 但是此脚本是官方的，储存在国外服务器，对国内访问不太友好，可以将该JS脚本储存到自己的服务器上，点此获取该JS脚本，然后再根据以下格式在&lt;/ body&gt; 之前引用：1&lt;script src="`存放路径`/instantclick-1.2.2.js" type="module"&gt;&lt;/script&gt; 也可以直接使用我的，使用 jsDeliver CDN 加速，速度还可以：1&lt;script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/instantclick-1.2.2.js" type="module"&gt;&lt;/script&gt; 参考资料：《网站预加载 JS 脚本 instant.page》——by 左岸 ；instant.page官网]]></content>
       <categories>
         <category>WEB前端</category>
@@ -123,7 +123,7 @@
   </entry>
   <entry>
     <title><![CDATA[新年快乐！]]></title>
-    <url>%2F2019%2F02%2F05%2FA17-happy-new-year-1%2F</url>
+    <url>%2F2019%2F02%2F05%2FA17-happy-new-year%2F</url>
     <content type="text"><![CDATA[C printf(&quot;2019，祝大家&quot;); C++ cout&lt;&lt;&quot;一帆风顺&quot;; C# System.Console.WriteLine(&quot;二龙腾飞&quot;) VB Msg(&quot;三羊开泰&quot;) VC MessageBox(&quot;四季平安&quot;); Java System.out.println(&quot;五福临门&quot;); JavaScript alert(&quot;六六大顺&quot;) PHP echo &quot;七星高照&quot;; Python print(&quot;八方来财&quot;) Html &lt;br/&gt;九运当头&lt;br/&gt; Objectivec NSLog(@&quot;十全十美&quot;); QBasic Print &quot;阖家幸福&quot; Asp Response.Write &quot;心想事成&quot; Ruby puts &quot;财源广进&quot; VBScript MsgBox &quot;幸福安康&quot; XML &lt;TextView android:text=&quot;大展宏图&quot; /&gt; LUA print(&quot;学业有成&quot;) Delphi ShowMessage(&#39;万事如意&#39;); shell echo 步步高升 perl print &#39;鸿案齐眉&#39; LISP (format t &quot;身体健康~%&quot;) powerBuilder messagebox（&quot;龙马精神&quot;) COBOL DISPLAY &#39;笑口常开&#39; aswing JOptionPane.showMessageDialog(&quot;happy&quot;,&quot;好运连连&quot;) Android Toast.makeText(getApplicationContext(),&quot;年年有余&quot;,Toast.LENGTH_SHORT).show() flex Alert.show(&quot;大吉大利&quot;); Foxpro ?[家庭幸福！] iapp tw(&quot;瑞气盈门&quot;) DOS批处理 echo 鹏程万里 易语言 调试输出(“万事亨通”) Clojure (println &quot;年年有今昔&quot;) verilog/systemverilog/e $display(&quot;岁岁有今朝&quot;) as trace(&quot;祝大家新年快乐！&quot;);]]></content>
       <categories>
         <category>BLOG</category>
@@ -312,7 +312,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hello World!]]></title>
-    <url>%2F2018%2F08%2F10%2FA01-hello-world-1%2F</url>
+    <url>%2F2018%2F08%2F10%2FA01-hello-world%2F</url>
     <content type="text"><![CDATA[人类的幸福和欢乐在于奋斗，而最有价值的是为理想而奋斗！ ——— 苏格拉底 Human happiness and joy lie in struggle, and what is most valuable is striving for ideals! ——— Socrates]]></content>
       <categories>
         <category>BLOG</category>
