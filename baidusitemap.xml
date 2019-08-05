@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.itrhx.com/2019/06/12/A23-beian/</loc>
+    <lastmod>2019-08-05</lastmod>
+  </url>  <url>
     <loc>https://www.itrhx.com/2019/08/01/A27-image-hosting/</loc>
-    <lastmod>2019-08-01</lastmod>
+    <lastmod>2019-08-05</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql/</loc>
     <lastmod>2019-08-01</lastmod>
@@ -23,9 +26,6 @@
     <lastmod>2019-07-31</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/06/12/A24-instant.page/</loc>
-    <lastmod>2019-07-31</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/06/12/A23-beian/</loc>
     <lastmod>2019-07-31</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/04/15/A21-PEP8/</loc>
