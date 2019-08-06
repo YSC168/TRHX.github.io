@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/about/index.html</loc>
+    
+    <lastmod>2019-08-06T16:18:03.210Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/index.html</loc>
+    
+    <lastmod>2019-08-06T16:14:50.523Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/piano/index.html</loc>
+    
+    <lastmod>2019-08-06T16:04:52.856Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/gobang/index.html</loc>
+    
+    <lastmod>2019-08-06T16:03:36.233Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/PacMan/index.html</loc>
+    
+    <lastmod>2019-08-06T16:02:58.163Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/cat/index.html</loc>
+    
+    <lastmod>2019-08-06T16:01:45.938Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/thumbnail/index.html</loc>
+    
+    <lastmod>2019-08-06T16:00:23.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/2048/index.html</loc>
+    
+    <lastmod>2019-08-06T15:59:05.133Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/CSSFinishing/index.html</loc>
+    
+    <lastmod>2019-08-06T15:25:56.120Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/06/12/A23-beian/</loc>
     
     <lastmod>2019-08-05T16:52:28.618Z</lastmod>
@@ -12,13 +75,6 @@
     <loc>https://www.itrhx.com/2019/08/01/A27-image-hosting/</loc>
     
     <lastmod>2019-08-05T16:48:51.563Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/about/index.html</loc>
-    
-    <lastmod>2019-08-05T16:08:40.956Z</lastmod>
     
   </url>
   
@@ -128,13 +184,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/index.html</loc>
-    
-    <lastmod>2019-07-27T13:49:19.360Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/404.html</loc>
     
     <lastmod>2019-06-24T14:10:28.727Z</lastmod>
@@ -149,30 +198,9 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/thumbnail/index.html</loc>
-    
-    <lastmod>2019-06-24T13:54:29.711Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/box/resume/index.html</loc>
     
     <lastmod>2019-06-24T13:53:42.352Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/box/piano/index.html</loc>
-    
-    <lastmod>2019-06-24T13:53:19.557Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/box/PacMan/index.html</loc>
-    
-    <lastmod>2019-06-24T13:52:35.068Z</lastmod>
     
   </url>
   
@@ -198,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/gobang/index.html</loc>
-    
-    <lastmod>2019-06-24T13:48:58.870Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/box/element/index.html</loc>
     
     <lastmod>2019-06-24T13:47:18.230Z</lastmod>
@@ -219,30 +240,9 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/CSSFinishing/index.html</loc>
-    
-    <lastmod>2019-06-24T13:44:55.582Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/box/cat/index.html</loc>
-    
-    <lastmod>2019-06-24T13:43:21.174Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/box/ASCII/index.html</loc>
     
     <lastmod>2019-06-24T13:41:33.911Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/box/2048/index.html</loc>
-    
-    <lastmod>2019-06-24T13:39:38.483Z</lastmod>
     
   </url>
   

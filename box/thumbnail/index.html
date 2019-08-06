@@ -13,7 +13,16 @@
         <link href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/thumbnail/css/style.css" rel="stylesheet">
         <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/thumbnail/js/getform.js"></script>
     </head>
-<body class="ami">
+<body class="ami" ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+	<script>
+		document.onkeydown = function () {
+			if (window.event && window.event.keyCode == 123) {
+				event.keyCode = 0;
+				event.returnValue = false;
+				return false;
+			}
+		};
+	</script>
     <div class="wrapper">
         <section class="display">
             <div class="mobile ui-draggable"><div class="trim"><iframe src="" id="mobile"></iframe></div></div>

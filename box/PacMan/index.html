@@ -24,7 +24,16 @@
     #footer a{color:rgba(255, 255, 255, 0.5);cursor:grab}#footer a:hover{border-bottom:1px dotted #00387d;color:#00387d}
 </style>
 </head>
-<body>
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+	<script>
+		document.onkeydown = function () {
+			if (window.event && window.event.keyCode == 123) {
+				event.keyCode = 0;
+				event.returnValue = false;
+				return false;
+			}
+		};
+	</script>
 <div class="wrapper">
 	<canvas id="canvas" width="960" height="640">不支持画布</canvas>
 	<p>【按空格键开始、暂停或继续游戏，方向键移动吃豆人】</p>		

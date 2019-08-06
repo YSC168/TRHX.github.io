@@ -7,13 +7,22 @@
     <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/cat/translateelement.css">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/favicon.ico">
     <style>
-        body {background-color: #eeeeee;background-image: url("https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/background/013.webp")}
-        #catch-the-cat {width: 100%;margin-top: 32px;text-align: center;}
+        body {background-color: #eeeeee}
+        #catch-the-cat {width: 100%;text-align: center;}
         #footer{position:relative;clear:both;padding:10px 20px 40px 0;padding:10px 0;width:100%;text-align:center}#footer address{display:inline-block;padding:2px 10px;color:rgba(0,0,0,.5);font-style:normal}
         #footer a{color:rgba(0,0,0,.5);cursor:grab}#footer a:hover{border-bottom:1px dotted #00387d;color:#00387d}
     </style>
 </head>
-<body>
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+	<script>
+		document.onkeydown = function () {
+			if (window.event && window.event.keyCode == 123) {
+				event.keyCode = 0;
+				event.returnValue = false;
+				return false;
+			}
+		};
+	</script>
     <h1 style="text-align:center;margin-top:32px;">游戏：《圈小猫》</h1><br>
     <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/cat/phaser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/cat/catch-the-cat.js"></script>

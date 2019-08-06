@@ -40,7 +40,16 @@
         #footer a{color:rgba(0,0,0,.5);cursor:grab}#footer a:hover{border-bottom:1px dotted #00387d;color:#00387d}
 	</style>
 </head>
-<body>
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+	<script>
+		document.onkeydown = function () {
+			if (window.event && window.event.keyCode == 123) {
+				event.keyCode = 0;
+				event.returnValue = false;
+				return false;
+			}
+		};
+	</script>
 	<h3 id="result-wrap">人机五子棋对弈</h3>
 	<canvas id="chess" width="450px" height="450px"></canvas>
 	<div class="btn-wrap">

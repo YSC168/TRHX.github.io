@@ -11,7 +11,24 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/2048/showanimation2048.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/2048/main2048.js"></script>
 </head>
-<body>
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+	<script>
+		document.onkeydown = function () {
+			if (window.event && window.event.keyCode == 123) {
+				event.keyCode = 0;
+				event.returnValue = false;
+				return false;
+			}
+		};
+	</script>
+    <script>
+    document.onkeydown = function(ev){
+      var e = ev || event;
+      if(e.keyCode == 40){
+            return false;
+      }
+    }
+    </script>
     <header>
         <h1>2048</h1>
         <a style="font-size:20px;color:white;background-color:rgb(100,167,233);border-radius:6px;padding:3px 8px 8px 8px;">使用方向键操作</a>
