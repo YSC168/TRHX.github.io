@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS]]></title>
+    <url>%2F2019%2F08%2F11%2FA28-hexo-add-https%2F</url>
+    <content type="text"><![CDATA[利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS HTTP（超文本传输协议），是一个基于请求与响应，无状态的，应用层的协议，常基于TCP/IP协议传输数据，互联网上应用最为广泛的一种网络协议，所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。 HTTPS（超文本传输安全协议），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。它是一个URI scheme（抽象标识符体系），句法类同http:体系。用于安全的HTTP数据传输。 目前大多数基于 GitHub Pages 的 Hexo 博客都是利用 CloudFlare 的 CDN 中转来启用 HTTPS 的，实现方法可以参考我的文章：《利用Cloudflare为基于GitHub Pages的Hexo博客添加HTTPS支持》，这样的做法确实可以起到开启HTTPS的目的，但是这样做也有弊端，你会发现 CDN 中转，国外访问的话，可以起到加速的作用，但是国内访问反而速度降低了，还不如直接连接GitHub呢 其实 GitHub 官方是支持自定义域名开启 HTTPS 的，之前我和大多数人一样，以为只有 GitHub Pages 自带的域名（xxx.github.io）才能开启 HTTPS，直到有一天我发现了官方在2018年5月1日发表的博客：《Custom domains on GitHub Pages gain support for HTTPS》，大概讲的意思就是从8月份开始， GitHub Pages 上的自定义域名也能开启 HTTPS 了，下面就具体介绍一下如何实现 如果你以前域名的记录类型是 CNAME 方式，那么就不需要做任何更改如果你以前域名的记录类型是 A 方式，那么就需要把记录值指向以下IP地址： 185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153 修改好记录值后，我们需要再次来到你博客的 GitHub 仓库，在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】，注意，如果此时你不能勾选，请删除【Custom domain】里面你的域名并点击【Save】保存，刷新网页后就可以勾选了，然后在把域名填进去并保存即可，短时间可能会出现不安全的提示，这是因为加密证书大概一个小时左右才会生效，等一会儿就好了 最后贴一个我的域名解析，可作为参考：]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>HTTPS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Github+jsDelivr+PicGo 打造稳定快速、高效免费图床]]></title>
     <url>%2F2019%2F08%2F01%2FA27-image-hosting%2F</url>
     <content type="text"><![CDATA[– 前言图床是个啥东西就不用过多介绍了，先来对比一下各路图床： 微博图床：以前用的人比较多，从2019年4月开始开启了防盗链，凉凉 SM.MS：运营四年多了，也变得越来越慢了，到了晚上直接打不开图片，速度堪忧 其他小众图床：随时有挂掉的风险 Imgur等国外图床：国内访问速度太慢，随时有被墙的风险 大厂储存服务：例如七牛云、又拍云、腾讯云COS、阿里云OSS等，操作繁琐，又是实名认证又是域名备案的，麻烦，而且还要花钱（有钱又不怕麻烦的当我没说） 因此，GitHub图床是个不错的选择，利用jsDelivr CDN加速访问（jsDelivr 是一个免费开源的 CDN 解决方案），PicGo工具一键上传，操作简单高效，GitHub和jsDelivr都是大厂，不用担心跑路问题，不用担心速度和容量问题，而且完全免费，可以说是目前免费图床的最佳解决方案！ – 新建GitHub仓库登录/注册GitHub，新建一个仓库，填写好仓库名，仓库描述，根据需求选择是否为仓库初始化一个README.md描述文件 – 生成一个Token在主页依次选择【Settings】-【Developer settings】-【Personal access tokens】-【Generate new token】，填写好描述，勾选【repo】，然后点击【Generate token】生成一个Token，注意这个Token只会显示一次，自己先保存下来，或者等后面配置好PicGo后再关闭此网页 – 配置PicGo前往下载PicGo，安装好后开始配置图床 设定仓库名：按照【用户名/图床仓库名】的格式填写 设定分支名：【master】 设定Token：粘贴之前生成的【Token】 指定存储路径：填写想要储存的路径，如【ITRHX-PIC/】，这样就会在仓库下创建一个名为ITRHX-PIC的文件夹，图片将会储存在此文件夹中 设定自定义域名：它的的作用是，在图片上传后，PicGo会按照【自定义域名+上传的图片名】的方式生成访问链接，放到粘贴板上，因为我们要使用jsDelivr加速访问，所以可以设置为【https://cdn.jsdelivr.net/gh/用户名/图床仓库名 】，关于jsDelivr是如何引用资源的可以参考《免费CDN：jsDeliver+Github》 – 进行高效创作配置好PicGo后，我们就可以进行高效创作了，将图片拖拽到上传区，将会自动上传并复制访问链接，将链接粘贴到博文中就行了，访问速度杠杠的，此外PicGo还有相册功能，可以对已上传的图片进行删除，修改链接等快捷操作，PicGo还可以生成不同格式的链接、支持批量上传、快捷键上传、自定义链接格式、上传前重命名等，更多功能自己去探索吧！]]></content>
@@ -14,15 +26,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[利用 Cloudflare 为 Hexo 博客添加 Https 支持]]></title>
+    <title><![CDATA[利用Cloudflare为基于GitHub Pages的Hexo博客添加HTTPS支持]]></title>
     <url>%2F2019%2F07%2F31%2FA26-hexo-add-https%2F</url>
-    <content type="text"><![CDATA[利用 Cloudflare 为 Hexo 博客添加 https 支持 – 前言GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，这种方法就不管用了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，而 Cloudflare 就能完美解决这种尴尬 Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理 – 注册 Cloudflare到 Cloudflare官网 注册账号 – 添加站点添加你的站点，一直下一步即可 如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考《为hexo博客配置个性域名》 –修改DNS点击下一步 Cloudflare 会提供给你两个 DNS 地址 到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效 –开启 HTTPS在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可 关于三种模式 Flexible、Full、Full (Strict) 的区别： Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的 Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书 Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的 至此，我们的域名就支持 https 访问了，但是当用户输入 http://xxxxxx 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了 –重定向强制 HTTPSCloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可 现在我们的 Hexo 博客就实现了全站 HTTPS！]]></content>
+    <content type="text"><![CDATA[利用Cloudflare为基于GitHub Pages的Hexo博客添加HTTPS支持 HTTP（超文本传输协议），是一个基于请求与响应，无状态的，应用层的协议，常基于TCP/IP协议传输数据，互联网上应用最为广泛的一种网络协议，所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。 HTTPS（超文本传输安全协议），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。它是一个URI scheme（抽象标识符体系），句法类同http:体系。用于安全的HTTP数据传输。 – 前言GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，就比较复杂了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，从2018年5月1日起，GitHub官方也支持自定义域名开启https了，实现方法可参考我的文章：《利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS》，另外一种方法就是利用 Cloudflare 的 CDN 中转来启用 HTTPS，这种方法的弊端就是国内访问速度可能会变慢，本文主要讲述这种方法 Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理 – 注册 Cloudflare到 Cloudflare官网 注册账号 – 添加站点添加你的站点，一直下一步即可 如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考《为hexo博客配置个性域名》 –修改DNS点击下一步 Cloudflare 会提供给你两个 DNS 地址 到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效 –开启 HTTPS在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可 关于三种模式 Flexible、Full、Full (Strict) 的区别： Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的 Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书 Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的 至此，我们的域名就支持 https 访问了，但是当用户输入 http://xxxxxx 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了 –重定向强制 HTTPSCloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可 现在我们的 Hexo 博客就实现了全站 HTTPS！]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>HTTPS</tag>
         <tag>Hexo</tag>
+        <tag>HTTPS</tag>
       </tags>
   </entry>
   <entry>
