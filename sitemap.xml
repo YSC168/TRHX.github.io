@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/box/index.html</loc>
+    
+    <lastmod>2019-08-17T12:14:12.130Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
+    
+    <lastmod>2019-08-17T11:54:47.343Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/comments/index.html</loc>
+    
+    <lastmod>2019-08-17T11:54:10.224Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/about/index.html</loc>
+    
+    <lastmod>2019-08-17T11:52:55.466Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/08/11/A28-hexo-add-https/</loc>
     
     <lastmod>2019-08-11T14:28:10.635Z</lastmod>
@@ -12,34 +40,6 @@
     <loc>https://www.itrhx.com/2019/07/31/A26-hexo-add-https/</loc>
     
     <lastmod>2019-08-11T14:20:49.341Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
-    
-    <lastmod>2019-08-08T11:10:04.215Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/about/index.html</loc>
-    
-    <lastmod>2019-08-07T15:44:13.086Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/comments/index.html</loc>
-    
-    <lastmod>2019-08-06T17:35:32.413Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/box/index.html</loc>
-    
-    <lastmod>2019-08-06T16:24:44.506Z</lastmod>
     
   </url>
   
