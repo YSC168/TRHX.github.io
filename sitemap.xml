@@ -2,9 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2018/09/10/A07-Python3-basic-C01/</loc>
+    
+    <lastmod>2019-08-19T02:51:25.266Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/09/15/A08-Python3-basic-C02/</loc>
+    
+    <lastmod>2019-08-19T02:51:20.792Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/10/11/A09-Python3-basic-C03/</loc>
+    
+    <lastmod>2019-08-19T02:51:17.103Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/10/23/A10-Python3-basic-C04/</loc>
+    
+    <lastmod>2019-08-19T02:51:13.312Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/10/27/A11-Python3-basic-C05/</loc>
+    
+    <lastmod>2019-08-19T02:51:08.689Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/10/30/A12-Python3-basic-C06/</loc>
+    
+    <lastmod>2019-08-19T02:51:00.073Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/11/03/A13-Python3-basic-C07/</loc>
+    
+    <lastmod>2019-08-19T02:50:53.074Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/11/10/A14-Python3-basic-C08/</loc>
+    
+    <lastmod>2019-08-19T02:50:47.277Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/08/19/A29-Python3-spider-C01/</loc>
     
-    <lastmod>2019-08-18T17:12:10.712Z</lastmod>
+    <lastmod>2019-08-19T02:50:25.675Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/11/16/A15-Python3-basic-C09/</loc>
+    
+    <lastmod>2019-08-19T02:50:19.676Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/04/01/A19-install-pygame/</loc>
+    
+    <lastmod>2019-08-19T02:50:01.654Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/04/15/A21-PEP8/</loc>
+    
+    <lastmod>2019-08-19T02:49:55.094Z</lastmod>
     
   </url>
   
@@ -156,23 +233,9 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2019/04/15/A21-PEP8/</loc>
-    
-    <lastmod>2019-07-31T12:21:18.778Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/2019/04/14/A20-install-deepin15.9/</loc>
     
     <lastmod>2019-07-31T12:18:47.788Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/04/01/A19-install-pygame/</loc>
-    
-    <lastmod>2019-07-31T12:12:47.820Z</lastmod>
     
   </url>
   
@@ -264,69 +327,6 @@
     <loc>https://www.itrhx.com/box/ASCII/index.html</loc>
     
     <lastmod>2019-06-24T13:41:33.911Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/11/16/A15-Python3-study-notes-C09/</loc>
-    
-    <lastmod>2019-06-12T14:48:49.558Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/11/10/A14-Python3-study-notes-C08/</loc>
-    
-    <lastmod>2019-06-12T14:48:47.339Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/11/03/A13-Python3-study-notes-C07/</loc>
-    
-    <lastmod>2019-06-12T14:48:42.277Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/10/30/A12-Python3-study-notes-C06/</loc>
-    
-    <lastmod>2019-06-12T14:48:40.271Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/10/27/A11-Python3-study-notes-C05/</loc>
-    
-    <lastmod>2019-06-12T14:48:34.639Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/10/23/A10-Python3-study-notes-C04/</loc>
-    
-    <lastmod>2019-06-12T14:48:32.351Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/10/11/A09-Python3-study-notes-C03/</loc>
-    
-    <lastmod>2019-06-12T14:48:28.432Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/09/15/A08-Python3-study-notes-C02/</loc>
-    
-    <lastmod>2019-06-12T14:48:22.944Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/09/10/A07-Python3-study-notes-C01/</loc>
-    
-    <lastmod>2019-06-12T14:48:19.055Z</lastmod>
     
   </url>
   
