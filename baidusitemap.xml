@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.itrhx.com/2018/09/10/A07-Python3-basic-C01/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/09/15/A08-Python3-basic-C02/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/10/11/A09-Python3-basic-C03/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/10/23/A10-Python3-basic-C04/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/10/27/A11-Python3-basic-C05/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/10/30/A12-Python3-basic-C06/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/11/03/A13-Python3-basic-C07/</loc>
+    <loc>https://www.itrhx.com/2018/11/16/A15-Python3-basic-C09/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/11/10/A14-Python3-basic-C08/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
-    <loc>https://www.itrhx.com/2019/08/19/A29-Python3-spider-C01/</loc>
+    <loc>https://www.itrhx.com/2018/11/03/A13-Python3-basic-C07/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
-    <loc>https://www.itrhx.com/2018/11/16/A15-Python3-basic-C09/</loc>
+    <loc>https://www.itrhx.com/2018/10/30/A12-Python3-basic-C06/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2018/10/27/A11-Python3-basic-C05/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2018/10/23/A10-Python3-basic-C04/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2018/10/11/A09-Python3-basic-C03/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2018/09/15/A08-Python3-basic-C02/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2018/09/10/A07-Python3-basic-C01/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/19/A30-Python3-spider-C02/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/19/A29-Python3-spider-C01/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/04/01/A19-install-pygame/</loc>

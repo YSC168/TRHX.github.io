@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS | TRHX&#39;S BLOG</title>
+  <title>Tag: requests | TRHX&#39;S BLOG</title>
   
   <meta name="keywords" content="大学生 软件工程 Java Python">
   
@@ -83,7 +83,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover post half'>
+    <cover class='cover  half'>
       
         
   <h1 class='title'>TRHX'S BLOG</h1>
@@ -343,12 +343,25 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      <div class='l_main'>
-  
-
-  
-    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
       
+<div class='l_main'>
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
 
 
   <section class='meta'>
@@ -357,13 +370,11 @@
     <div class="meta" id="header-meta">
       
         
-  
-    <h1 class="title">
-      <a href="/2019/08/11/A28-hexo-add-https/">
-        利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS
-      </a>
-    </h1>
-  
+  <h2 class="title">
+    <a href="/2019/08/19/A30-Python3-spider-C02/">
+      Python3爬虫学习笔记 C02
+    </a>
+  </h2>
 
 
       
@@ -389,7 +400,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-08-11</p>
+    <p>2019-08-19</p>
   </a>
 </div>
 
@@ -399,9 +410,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/Hexo/' rel="nofollow">
+    <a href='/categories/Python3-学习笔记/Python3-爬虫/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Hexo</p>
+      <p>Python3 学习笔记&nbsp;/&nbsp;Python3 爬虫</p>
     </a>
   </div>
 
@@ -410,27 +421,11 @@
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Hexo/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>Hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTTPS/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>HTTPS</p></a></div>
-
 
           
         
           
             
-  
-    <div class="new-meta-item browse busuanzi">
-      <a class='notlink'>
-        <i class="fas fa-eye" aria-hidden="true"></i>
-        <p>
-          <span id="busuanzi_value_page_pv">
-            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
-          </span>
-        </p>
-      </a>
-    </div>
-  
-
 
           
         
@@ -447,210 +442,48 @@
   </section>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          <blockquote>
-<p>利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS</p>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+<center><font color="#1BC3FB" size="4">Python3 爬虫学习笔记第二章 ——【基本库 requests 的使用】</font></center>
 </blockquote>
-<a id="more"></a>
-<hr>
-<blockquote>
-<p>HTTP（超文本传输协议），是一个基于请求与响应，无状态的，应用层的协议，常基于TCP/IP协议传输数据，互联网上应用最为广泛的一种网络协议，所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。</p>
-</blockquote>
-<blockquote>
-<p>HTTPS（超文本传输安全协议），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。它是一个URI scheme（抽象标识符体系），句法类同http:体系。用于安全的HTTP数据传输。</p>
-</blockquote>
-<hr>
-<p>目前大多数基于 GitHub Pages 的 Hexo 博客都是利用 CloudFlare 的 CDN 中转来启用 HTTPS 的，实现方法可以参考我的文章：<a href="https://www.itrhx.com/2019/07/31/A26-hexo-add-https/">《利用Cloudflare为基于GitHub Pages的Hexo博客添加HTTPS支持》</a>，这样的做法确实可以起到开启HTTPS的目的，但是这样做也有弊端，你会发现 CDN 中转，国外访问的话，可以起到加速的作用，但是国内访问反而速度降低了，还不如直接连接GitHub呢</p>
-<p>其实 GitHub 官方是支持自定义域名开启 HTTPS 的，之前我和大多数人一样，以为只有 GitHub Pages 自带的域名（xxx.github.io）才能开启 HTTPS，直到有一天我发现了官方在2018年5月1日发表的博客：<a href="https://github.blog/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener">《Custom domains on GitHub Pages gain support for HTTPS》</a>，大概讲的意思就是从8月份开始， GitHub Pages 上的自定义域名也能开启 HTTPS 了，下面就具体介绍一下如何实现</p>
-<p>如果你以前域名的记录类型是 CNAME 方式，那么就不需要做任何更改<br>如果你以前域名的记录类型是 A 方式，那么就需要把记录值指向以下IP地址：</p>
-<ul>
-<li>185.199.108.153</li>
-<li>185.199.109.153</li>
-<li>185.199.110.153</li>
-<li>185.199.111.153</li>
-</ul>
-<p>修改好记录值后，我们需要再次来到你博客的 GitHub 仓库，在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】，注意，如果此时你不能勾选，请删除【Custom domain】里面你的域名并点击【Save】保存，刷新网页后就可以勾选了，然后在把域名填进去并保存即可，短时间可能会出现不安全的提示，这是因为加密证书大概一个小时左右才会生效，等一会儿就好了</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A28/01.png" alt="01"><br></fancybox><br>最后贴一个我的域名解析，可作为参考：<br><br><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A28/02.png" alt="02"><br></fancybox>
+      
+        <div class="readmore">
+          <a href="/2019/08/19/A30-Python3-spider-C02/" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
         </div>
-        
-          
-
-
-  <section class='meta' id="footer-meta">
-    <hr>
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-11T22:28:10+08:00">
-  <a class='notlink'>
-    <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年8月11日</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
-          
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/08/11/A28-hexo-add-https/&title=利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS | TRHX'S BLOG&summary=
-利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
-          
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/08/11/A28-hexo-add-https/&title=利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS | TRHX'S BLOG&summary=
-利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aMRLDIAxEUd//0k6bIsCulmRi8akyHhPzKDQg6brkcb8N/c3R+/PnyleKAwYMGI9l3NMx+sDoyXxZCmD0lcUGwYAB4wDGPCyOljgPlMrn51QjZMOAAQOGsER3cfO5MGDAgJEz9COjcvesHSVhwIBxGkO5xCp49/g437Kv3MVhwIDxQEYtLP7m91fqGzBgwHgU4zaHfVyTQ20yYMCA0ZvhHvISTF4MWGwNDBgwWjM2vFpiK+UE900YMGB0Zbgtp3oxoJZuK24EDBgwWjOSA5zb9rqrkLAt9sOAAePvGXoIS9q8akuMukVgwIDRlKEsK2kUcwui+gbBgAHjBIZ+BTX+Wga4wfrDcxgwYBzA0IOdG4jzNJw0CwYMGK0ZtbaJ+eLcJrD8Og0DBozeDD2J5oZL5dhXC7WLGiwMGDBaM/Yuzs2GRaUFGDBgHMDQl54ULPcm8hbpNhgwYDRiJAn9BO9S7aImDBgw2jH0CUqzhduWUQvudtYQBgwYjRj6scxtp6gt1NhKGDBgHMBwG7bclovalVg/SsKAAeMERi2w5qWFyxzDWTBgwGjKuM2xC6ks1Lg2w4ABozXDDXMJsrYpbkECBgwYXRl2YisIu7tmLdJtMGDAaMpIAl+t5Fk79hWbLWDAgHEYw724Kkn/WvnT6BmBAQPGYQy36Kg80YPs4hILAwaM1oykJJkk2pJmCxgwYJzDcFsckgPcrtJCsagJAwaM5zFeax4sunncJrAAAAAASUVORK5CYII='>
-        
-          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
-        
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
-          
-          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/08/11/A28-hexo-add-https/&title=利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS | TRHX'S BLOG&summary=
-利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aMRLDIAxEUd//0k6bIsCulmRi8akyHhPzKDQg6brkcb8N/c3R+/PnyleKAwYMGI9l3NMx+sDoyXxZCmD0lcUGwYAB4wDGPCyOljgPlMrn51QjZMOAAQOGsER3cfO5MGDAgJEz9COjcvesHSVhwIBxGkO5xCp49/g437Kv3MVhwIDxQEYtLP7m91fqGzBgwHgU4zaHfVyTQ20yYMCA0ZvhHvISTF4MWGwNDBgwWjM2vFpiK+UE900YMGB0Zbgtp3oxoJZuK24EDBgwWjOSA5zb9rqrkLAt9sOAAePvGXoIS9q8akuMukVgwIDRlKEsK2kUcwui+gbBgAHjBIZ+BTX+Wga4wfrDcxgwYBzA0IOdG4jzNJw0CwYMGK0ZtbaJ+eLcJrD8Og0DBozeDD2J5oZL5dhXC7WLGiwMGDBaM/Yuzs2GRaUFGDBgHMDQl54ULPcm8hbpNhgwYDRiJAn9BO9S7aImDBgw2jH0CUqzhduWUQvudtYQBgwYjRj6scxtp6gt1NhKGDBgHMBwG7bclovalVg/SsKAAeMERi2w5qWFyxzDWTBgwGjKuM2xC6ks1Lg2w4ABozXDDXMJsrYpbkECBgwYXRl2YisIu7tmLdJtMGDAaMpIAl+t5Fk79hWbLWDAgHEYw724Kkn/WvnT6BmBAQPGYQy36Kg80YPs4hILAwaM1oykJJkk2pJmCxgwYJzDcFsckgPcrtJCsagJAwaM5zFeax4sunncJrAAAAAASUVORK5CYII='>
-        
-          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
-        
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
-        
       
     </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/requests/" rel="nofollow"><i class="fas fa-tags fa-fw"></i>requests</a>
+        
+          <a href="/tags/爬虫/" rel="nofollow"><i class="fas fa-tags fa-fw"></i>爬虫</a>
+        
+      </div>
+    
   </section>
+</article>
 
-
+          </div>
         
-        
-            <div class="prev-next">
-                
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/2019/08/19/A29-Python3-spider-C01/" rel="prev" title="Python3 爬虫学习笔记 C01">
-                                  
-                                      Python3 爬虫学习笔记 C01
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/爬虫/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>爬虫</a> <a class="tag" href="/tags/urllib/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>urllib</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/2019/08/01/A27-image-hosting/" rel="prev" title="Github+jsDelivr+PicGo 打造稳定快速、高效免费图床">
-                                    
-                                        Github+jsDelivr+PicGo 打造稳定快速、高效免费图床
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/图床/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>图床</a> <a class="tag" href="/tags/PicGo/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>PicGo</a> <a class="tag" href="/tags/jsDelivr/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>jsDelivr</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-            </div>
-        
-      </section>
-    </article>
+      
+    
+  </section>
   
-
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  <article class="post white-box comments">
-    <section class="article typo">
-      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
-      
-      
-      
-        <section id="comments">
-          <div id="gitalk-container"></div>
-        </section>
-      
-      
-    </section>
-  </article>
-
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
 
   
 
 
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-
-  <script>
-    window.subData = {
-      title: '利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS',
-      tools: true
-    }
-  </script>
-
-
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -1308,24 +1141,6 @@
 
 
 
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: "d19a84b9d9a2ddb2c6b9",
-      clientSecret: "cec9feae5129a6106edc68ce06d167be8eb06021",
-      repo: "trhx.github.io",
-      owner: "trhx",
-      admin: "trhx",
-      
-        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
-      
-      distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-    gitalk.render('gitalk-container');
-  </script>
 
 
 
