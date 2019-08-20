@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
+    
+    <lastmod>2019-08-20T11:27:54.128Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/comments/index.html</loc>
     
     <lastmod>2019-08-20T10:09:35.771Z</lastmod>
@@ -110,13 +117,6 @@
     <loc>https://www.itrhx.com/box/index.html</loc>
     
     <lastmod>2019-08-17T12:14:12.130Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
-    
-    <lastmod>2019-08-17T11:54:47.343Z</lastmod>
     
   </url>
   
