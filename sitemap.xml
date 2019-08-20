@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/comments/index.html</loc>
+    
+    <lastmod>2019-08-20T10:09:35.771Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     
-    <lastmod>2019-08-20T07:08:23.939Z</lastmod>
+    <lastmod>2019-08-20T07:12:18.108Z</lastmod>
     
   </url>
   
@@ -110,13 +117,6 @@
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
     <lastmod>2019-08-17T11:54:47.343Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/comments/index.html</loc>
-    
-    <lastmod>2019-08-17T11:54:10.224Z</lastmod>
     
   </url>
   
