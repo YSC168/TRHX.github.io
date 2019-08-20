@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
+    <lastmod>2019-08-20</lastmod>
+  </url>  <url>
     <loc>https://www.itrhx.com/2018/11/16/A15-Python3-basic-C09/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
@@ -53,9 +56,6 @@
     <lastmod>2019-08-05</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql/</loc>
-    <lastmod>2019-08-01</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     <lastmod>2019-08-01</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/02/10/A18-free-cdn/</loc>
