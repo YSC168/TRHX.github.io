@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.itrhx.com/2019/08/22/A33-selenium/</loc>
+    <lastmod>2019-08-22</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/22/A32-Python3-spider-C04/</loc>
+    <lastmod>2019-08-22</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/22/A34-UserAgent/</loc>
+    <lastmod>2019-08-22</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/19/A29-Python3-spider-C01/</loc>
+    <lastmod>2019-08-22</lastmod>
+  </url>  <url>
     <loc>https://www.itrhx.com/2019/08/20/A31-Python3-spider-C03/</loc>
-    <lastmod>2019-08-20</lastmod>
+    <lastmod>2019-08-22</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/19/A30-Python3-spider-C02/</loc>
+    <lastmod>2019-08-22</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     <lastmod>2019-08-20</lastmod>
@@ -32,12 +47,6 @@
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/09/10/A07-Python3-basic-C01/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/08/19/A30-Python3-spider-C02/</loc>
-    <lastmod>2019-08-19</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/08/19/A29-Python3-spider-C01/</loc>
     <lastmod>2019-08-19</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/04/01/A19-install-pygame/</loc>
