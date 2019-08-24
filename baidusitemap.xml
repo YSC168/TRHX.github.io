@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.itrhx.com/2019/08/23/A35-Python3-spider-C05/</loc>
-    <lastmod>2019-08-23</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/08/23/A33-selenium/</loc>
-    <lastmod>2019-08-22</lastmod>
+    <lastmod>2019-08-24</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/23/A32-Python3-spider-C04/</loc>
-    <lastmod>2019-08-22</lastmod>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/23/A33-selenium/</loc>
+    <lastmod>2019-08-24</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/23/A34-UserAgent/</loc>
-    <lastmod>2019-08-22</lastmod>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/24/A36-Python3-spider-C06/</loc>
+    <lastmod>2019-08-24</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/23/A29-Python3-spider-C01/</loc>
     <lastmod>2019-08-22</lastmod>
