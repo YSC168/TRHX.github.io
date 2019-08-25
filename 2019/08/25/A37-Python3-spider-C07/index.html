@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Python3 基础学习笔记 C06 | TRHX&#39;S BLOG</title>
+  <title>Python3 爬虫学习笔记 C07 | TRHX&#39;S BLOG</title>
   
   <meta name="keywords" content="大学生 软件工程 Java Python">
   
@@ -360,8 +360,8 @@
         
   
     <h1 class="title">
-      <a href="/2018/10/30/A12-Python3-basic-C06/">
-        Python3 基础学习笔记 C06
+      <a href="/2019/08/25/A37-Python3-spider-C07/">
+        Python3 爬虫学习笔记 C07
       </a>
     </h1>
   
@@ -390,7 +390,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-10-30</p>
+    <p>2019-08-25</p>
   </a>
 </div>
 
@@ -400,9 +400,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/Python3-学习笔记/Python3-基础/' rel="nofollow">
+    <a href='/categories/Python3-学习笔记/Python3-爬虫/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Python3 学习笔记&nbsp;/&nbsp;Python3 基础</p>
+      <p>Python3 学习笔记&nbsp;/&nbsp;Python3 爬虫</p>
     </a>
   </div>
 
@@ -412,7 +412,7 @@
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/input-函数/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>input()函数</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/while循环/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>while循环</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/爬虫/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>爬虫</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/lxml/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>lxml</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/XPath/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>XPath</p></a></div>
 
 
           
@@ -451,64 +451,316 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           <blockquote>
-<center><font color="#1BC3FB" size="4">Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】</font></center>
+<center><font color="#1BC3FB" size="4">Python3 爬虫学习笔记第七章 —— 【解析库 lxml】</font></center>
 </blockquote>
 <a id="more"></a>
-<hr>
-<h1 id="6-1-函数-input-的工作原理"><a href="#6-1-函数-input-的工作原理" class="headerlink" title=" - 6.1 函数 input() 的工作原理 "></a><font color="#FF0000"> - 6.1 函数 input() 的工作原理 </font></h1><p> 函数 input() 让程序暂停运行，等待用户输入一些文本。获取用户输入后，Python将其储存在一个变量当中，以方便你使用；函数 input() 返回为 string 类型</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">message = input(<span class="string">"Please tell me your name:"</span>)</span><br><span class="line">print(<span class="string">"Hello , "</span> + message + <span class="string">"!"</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Please tell me your name:anliy</span><br><span class="line">Hello , anliy!</span><br></pre></td></tr></table></figure>
-<p>进阶：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">"Please tell me your name so that we can personalize the messages you see."</span></span><br><span class="line">message += <span class="string">"\nWhat's your first name?"</span></span><br><span class="line">name = input(message)</span><br><span class="line">print(<span class="string">"\nHello , "</span> + name + <span class="string">"!"</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Please tell me your name so that we can personalize the messages you see.</span><br><span class="line">What<span class="string">'s your first name?trhx</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Hello , trhx!</span></span><br></pre></td></tr></table></figure>
-<h1 id="6-1-1-使用-int-来获取数值输入"><a href="#6-1-1-使用-int-来获取数值输入" class="headerlink" title=" - 6.1.1 使用 int() 来获取数值输入 "></a><font color="#FF0000"> - 6.1.1 使用 int() 来获取数值输入 </font></h1><p> 使用函数 input() 时，Python会将用户输入解读为字符串：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = input(<span class="string">"How old are you?"</span>)</span><br><span class="line">How old are you?19</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age</span><br><span class="line"><span class="string">'19'</span></span><br></pre></td></tr></table></figure>
-<p>为了解决这个问题，可以使用函数 int() ，它让Python将输入视为数值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = input(<span class="string">"How old are you?"</span>)</span><br><span class="line">How old are you?19</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = int(age)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age</span><br><span class="line"><span class="number">19</span></span><br></pre></td></tr></table></figure>
+<h1 id="【7-1】关于-lxml"><a href="#【7-1】关于-lxml" class="headerlink" title="【7.1】关于 lxml"></a><font color="#ff0000">【7.1】关于 lxml</font></h1><p> lxml 是 Python 的一个解析库，支持 HTML 和 XML 的解析，支持 XPath 解析方式，解析效率非常高，使用前需要用命令 <code>pip3 install lxml</code> 安装 lxml 库</p>
+<h1 id="【7-2】使用-XPath"><a href="#【7-2】使用-XPath" class="headerlink" title="【7.2】使用  XPath"></a><font color="#ff0000">【7.2】使用  XPath</font></h1><p> XPath（XML Path Language）即 XML 路径语言， lxml 解析库使用的正是 XPath 语法，最初是用来搜寻 XML 文档的，是一门在 XML 文档中查找信息的语言，它同样适用于 HTML 文档的搜索</p>
+<p>  XPath 常用规则</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">表达式</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">nodename</td>
+<td style="text-align:center">选取此节点的所有子节点</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">从当前节点选取直接子节点</td>
+</tr>
+<tr>
+<td style="text-align:center">//</td>
+<td style="text-align:center">从当前节点选取子孙节点</td>
+</tr>
+<tr>
+<td style="text-align:center">.</td>
+<td style="text-align:center">选取当前节点</td>
+</tr>
+<tr>
+<td style="text-align:center">..</td>
+<td style="text-align:center">选取当前节点的父节点</td>
+</tr>
+<tr>
+<td style="text-align:center">@</td>
+<td style="text-align:center">选取属性</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">通配符，选择所有元素节点与元素名</td>
+</tr>
+<tr>
+<td style="text-align:center">@*</td>
+<td style="text-align:center">选取所有属性</td>
+</tr>
+<tr>
+<td style="text-align:center">[@attrib]</td>
+<td style="text-align:center">选取具有给定属性的所有元素</td>
+</tr>
+<tr>
+<td style="text-align:center">[@attrib=’value’]</td>
+<td style="text-align:center">选取给定属性具有给定值的所有元素</td>
+</tr>
+<tr>
+<td style="text-align:center">[tag]</td>
+<td style="text-align:center">选取所有具有指定元素的直接子节点</td>
+</tr>
+<tr>
+<td style="text-align:center">[tag=’text’]</td>
+<td style="text-align:center">选取所有具有指定元素并且文本内容是text节点</td>
+</tr>
+</tbody>
+</table>
+<p> 浏览器插件 XPath Helper，在线验证 XPath，谷歌商店下载地址：<a href="https://chrome.google.com/webstore/detail/hgimnogjllphhhkhlmebbmlgjoejdpjl" target="_blank" rel="noopener">https://chrome.google.com/webstore/detail/hgimnogjllphhhkhlmebbmlgjoejdpjl</a></p>
+<p> XPath 基本使用方法：首先使用代码 <code>from lxml import etree</code>导入库，然后将 HTML 文档变成一个对象，再调用对象的方法去查找指定的节点，方法有两种：<code>tree = etree.parse()</code> 为本地文件查找，<code>tree = etree.HTML()</code> 为网络文件查找，再使用语句 <code>tree.xpath()</code> 查找指定节点。</p>
+<h1 id="【7-3】查找所有节点"><a href="#【7-3】查找所有节点" class="headerlink" title="【7.3】查找所有节点"></a><font color="#ff0000">【7.3】查找所有节点</font></h1><p> 新建一个 xpath.html 本地文件，内容如下：<br> <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>xpath测试<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"song"</span>&gt;</span></span><br><span class="line">    火药</span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span>&gt;</span>指南针<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span>&gt;</span>印刷术<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">    造纸术</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tang"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"balove"</span>&gt;</span>停车坐爱枫林晚，霜叶红于二月花。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"hua"</span>&gt;</span>商女不知亡国恨，隔江犹唱后庭花。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"love"</span> <span class="attr">name</span>=<span class="string">"yang"</span>&gt;</span>一骑红尘妃子笑，无人知是荔枝来。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"bei"</span>&gt;</span>葡萄美酒夜光杯，欲饮琵琶马上催。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com/"</span>&gt;</span>百度一下<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"balucy"</span>&gt;</span>寻寻觅觅冷冷清清，凄凄惨惨戚戚。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"lily"</span>&gt;</span>咋暖还寒时候，最难将息。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"lilei"</span>&gt;</span>三杯两盏淡酒。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>怎敌他晚来风急。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>雁过也，正伤心，却是旧时相识。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>爱情三十六计<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>什么是爱情<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>查找所有节点：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//*'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>使用 <code>*</code> 代表匹配所有节点，整个 xpath.html 文件中的所有节点都会被获取到，返回形式是一个列表，每个元素是 Element 类型，其后跟了节点的名称，如 html、body、div、ul、li、a 等，所有节点都包含在列表中，输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&lt;Element html at <span class="number">0x1a836a34508</span>&gt;, &lt;Element head at <span class="number">0x1a836a344c8</span>&gt;, &lt;Element meta at <span class="number">0x1a836a345c8</span>&gt;, &lt;Element title at <span class="number">0x1a836a34608</span>&gt;, &lt;Element body at <span class="number">0x1a836a34648</span>&gt;, &lt;Element div at <span class="number">0x1a836a346c8</span>&gt;, &lt;Element b at <span class="number">0x1a836a34708</span>&gt;, &lt;Element b at <span class="number">0x1a836a34748</span>&gt;, &lt;Element div at <span class="number">0x1a836a34788</span>&gt;, &lt;Element ul at <span class="number">0x1a836a34688</span>&gt;, &lt;Element li at <span class="number">0x1a836a347c8</span>&gt;, &lt;Element li at <span class="number">0x1a836a34808</span>&gt;, &lt;Element li at <span class="number">0x1a836a34848</span>&gt;, &lt;Element li at <span class="number">0x1a836a34888</span>&gt;, &lt;Element li at <span class="number">0x1a836a348c8</span>&gt;, &lt;Element a at <span class="number">0x1a836a34908</span>&gt;, &lt;Element ol at <span class="number">0x1a836a34948</span>&gt;, &lt;Element li at <span class="number">0x1a836a34988</span>&gt;, &lt;Element li at <span class="number">0x1a836a349c8</span>&gt;, &lt;Element li at <span class="number">0x1a836a34a08</span>&gt;, &lt;Element li at <span class="number">0x1a836a34a48</span>&gt;, &lt;Element li at <span class="number">0x1a836a34a88</span>&gt;, &lt;Element li at <span class="number">0x1a836a34ac8</span>&gt;, &lt;Element li at <span class="number">0x1a836a34b08</span>&gt;]</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-4】查找子节点"><a href="#【7-4】查找子节点" class="headerlink" title="【7.4】查找子节点"></a><font color="#ff0000">【7.4】查找子节点</font></h1><p> 通过 <font color="#ff0000">/</font> 或 <font color="#ff0000">//</font> 即可查找元素的子节点或子孙节点：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//ul/li'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>选择 ul 节点的所有<font color="#ff0000">直接</font> li 子节点：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&lt;Element li at <span class="number">0x2a094d044c8</span>&gt;, &lt;Element li at <span class="number">0x2a094d045c8</span>&gt;, &lt;Element li at <span class="number">0x2a094d04608</span>&gt;, &lt;Element li at <span class="number">0x2a094d04648</span>&gt;, &lt;Element li at <span class="number">0x2a094d04688</span>&gt;]</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-5】查找父节点"><a href="#【7-5】查找父节点" class="headerlink" title="【7.5】查找父节点"></a><font color="#ff0000">【7.5】查找父节点</font></h1><p> 知道了子节点，也可以用 <font color="#ff0000">..</font> 或者 <font color="#ff0000">parent::</font> 查找其父节点<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//ol/../@class'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//ol/parent::*/@class'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<p>先查找到 ol 节点，随后获取其父节点以及其 class 属性：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'tang'</span>]</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-6】属性匹配"><a href="#【7-6】属性匹配" class="headerlink" title="【7.6】属性匹配"></a><font color="#ff0000">【7.6】属性匹配</font></h1><p> 有时候 HTML 包含多个相同名的节点，而节点的属性是不一样的，此时可以用 <font color="#ff0000">@</font> 符号进行属性过滤<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//li[@class="balucy"]'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>xpath.html 文件中，只有一个 class 为 balucy 的节点：<code>&lt;li class=&quot;balucy&quot;&gt;寻寻觅觅冷冷清清，凄凄惨惨戚戚。&lt;/li&gt;</code>，运行以上代码将返回一个该元素：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&lt;Element li at <span class="number">0x16e53aa54c8</span>&gt;]</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-7】文本获取"><a href="#【7-7】文本获取" class="headerlink" title="【7.7】文本获取"></a><font color="#ff0000">【7.7】文本获取</font></h1><p> 使用 text() 方法即可提取节点中的文本：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//li[@class="balucy"]/text()'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'寻寻觅觅冷冷清清，凄凄惨惨戚戚。'</span>]</span><br></pre></td></tr></table></figure></p>
+<p>再次观察 xpath.html 文件中的 <code>&lt;ol&gt;&lt;/ol&gt;</code>这一部分：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li class="balucy"&gt;寻寻觅觅冷冷清清，凄凄惨惨戚戚。&lt;/li&gt;</span><br><span class="line">    &lt;li class="lily"&gt;咋暖还寒时候，最难将息。&lt;/li&gt;</span><br><span class="line">    &lt;li class="lilei"&gt;三杯两盏淡酒。&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;怎敌他晚来风急。&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;雁过也，正伤心，却是旧时相识。&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;爱情三十六计&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;什么是爱情&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure></p>
+<p>如果我们想要提取 <code>&lt;li&gt;</code> 节点里面所有的文本，就可以使用 <code>html.xpath(&#39;//ol/li/text()&#39;)</code> 语句：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//ol/li/text()'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'寻寻觅觅冷冷清清，凄凄惨惨戚戚。'</span>, <span class="string">'咋暖还寒时候，最难将息。'</span>, <span class="string">'三杯两盏淡酒。'</span>, <span class="string">'怎敌他晚来风急。'</span>, <span class="string">'雁过也，正伤心，却是旧时相识。'</span>, <span class="string">'爱情三十六计'</span>, <span class="string">'什么是爱情'</span>]</span><br></pre></td></tr></table></figure></p>
+<p>同样还有另一种方法，使用 <code>html.xpath(&#39;//ol//text()&#39;)</code> 语句，<code>//</code> 将会选取所有子孙节点的文本，<code>&lt;ol&gt;</code> 和 <code>&lt;li&gt;</code> 节点下的换行符也将被提取出来：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//ol//text()'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'\n        '</span>, <span class="string">'寻寻觅觅冷冷清清，凄凄惨惨戚戚。'</span>, <span class="string">'\n        '</span>, <span class="string">'咋暖还寒时候，最难将息。'</span>, <span class="string">'\n        '</span>, <span class="string">'三杯两盏淡酒。'</span>, <span class="string">'\n        '</span>, <span class="string">'怎敌他晚来风急。'</span>, <span class="string">'\n        '</span>, <span class="string">'雁过也，正伤心，却是旧时相识。'</span>, <span class="string">'\n        '</span>, <span class="string">'爱情三十六计'</span>, <span class="string">'\n        '</span>, <span class="string">'什么是爱情'</span>, <span class="string">'\n    '</span>]</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-8】属性获取"><a href="#【7-8】属性获取" class="headerlink" title="【7.8】属性获取"></a><font color="#ff0000">【7.8】属性获取</font></h1><p> 与属性匹配一样，属性获取仍然使用 <font color="#ff0000">@</font>：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">html = etree.parse(<span class="string">'./xpath.html'</span>)</span><br><span class="line">result = html.xpath(<span class="string">'//ul/li[5]/a/@href'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p> 获取 href 属性：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'http://www.baidu.com/'</span>]</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-9】一个属性包含多个值的匹配"><a href="#【7-9】一个属性包含多个值的匹配" class="headerlink" title="【7.9】一个属性包含多个值的匹配"></a><font color="#ff0000">【7.9】一个属性包含多个值的匹配</font></h1><p>某个节点的某个属性可能有多个值，例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"li li-first"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"link.html"</span>&gt;</span>first item<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>li 节点的 class 属性有 li 和 li-first 两个值，如果使用 <code>html.xpath(&#39;//li[@class=&quot;li&quot;]</code> 语句，将无法成功匹配，这时就需要使用<font color="#ff0000"> contains</font> 方法了，第一个参数传入属性名称，第二个参数传入属性值，只要此属性包含所传入的属性值，就可以完成匹配了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line">text = <span class="string">'''  </span></span><br><span class="line"><span class="string">&lt;li class="li li-first"&gt;&lt;a href="link.html"&gt;first item&lt;/a&gt;&lt;/li&gt;  </span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">html = etree.HTML(text)</span><br><span class="line">result = html.xpath(<span class="string">'//li[contains(@class, "li")]/a/text()'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'first item'</span>]</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-10】多个属性匹配一个节点"><a href="#【7-10】多个属性匹配一个节点" class="headerlink" title="【7.10】多个属性匹配一个节点"></a><font color="#ff0000">【7.10】多个属性匹配一个节点</font></h1><p>XPath 还可以根据多个属性来确定一个节点，这时就需要同时匹配多个属性。此时可以使用运算符 and 来连接：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line">text = <span class="string">'''  </span></span><br><span class="line"><span class="string">&lt;li class="li" name="item"&gt;&lt;a href="link.html"&gt;first item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">html = etree.HTML(text)</span><br><span class="line">result = html.xpath(<span class="string">'//li[@class="li" and @name="item"]/a/text()'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'first item'</span>]</span><br></pre></td></tr></table></figure></p>
+<p>示例中运用了运算符 and 来连接，此外常见的运算符如下：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>实例</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>or</td>
+<td>或</td>
+<td>age=19 or age=20</td>
+<td>如果 age 是 19 或者 20，则返回 true。如果 age 是其他值，则返回 false</td>
+</tr>
+<tr>
+<td>and</td>
+<td>与</td>
+<td>age&gt;19 and age&lt;21</td>
+<td>如果 age 大于 19 且小于 21，则返回 true。如果 age 是其他值，则返回 false</td>
+</tr>
+<tr>
+<td>mod</td>
+<td>计算除法的余数</td>
+<td>5 mod 2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>&#124;</td>
+<td>计算两个节点集</td>
+<td>//book &#124; //cd</td>
+<td>返回所有拥有 book 和 cd 元素的节点集</td>
+</tr>
+<tr>
+<td>+</td>
+<td>加法</td>
+<td>10 + 5</td>
+<td>15</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减法</td>
+<td>10 - 5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘法</td>
+<td>10 * 5</td>
+<td>50</td>
+</tr>
+<tr>
+<td>div</td>
+<td>除法</td>
+<td>10 div 5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>=</td>
+<td>等于</td>
+<td>age=19</td>
+<td>如果 age 是 19，则返回 true。如果 age 不是 19，则返回 false</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不等于</td>
+<td>age!=19</td>
+<td>如果 age 不是 19，则返回 true。如果 age 是 19，则返回 false</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+<td>age&lt;19</td>
+<td>如果 age 小于 19，则返回 true。如果 age 不小于 19，则返回 false</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于或等于</td>
+<td>age&lt;=19</td>
+<td>如果 age 小于等于 19，则返回 true。如果 age 大于 19，则返回 false</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+<td>age&gt;19</td>
+<td>如果 age 大于 19，则返回 true。如果 age 不大于 19，则返回 false</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于或等于</td>
+<td>age&gt;=19</td>
+<td>如果 age 大于等于 19，则返回 true。如果 age 小于 19，则返回 false</td>
+</tr>
+</tbody>
+</table>
+<h1 id="【7-11】按顺序选择节点"><a href="#【7-11】按顺序选择节点" class="headerlink" title="【7.11】按顺序选择节点"></a><font color="#ff0000">【7.11】按顺序选择节点</font></h1><p>某些属性可能同时匹配了多个节点，如果要选择其中几个节点，可以利用中括号传入索引的方法获取特定次序的节点<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">text = <span class="string">'''</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">    &lt;ul&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-0"&gt;&lt;a href="link1.html"&gt;first item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-1"&gt;&lt;a href="link2.html"&gt;second item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-inactive"&gt;&lt;a href="link3.html"&gt;third item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-1"&gt;&lt;a href="link4.html"&gt;fourth item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-0"&gt;&lt;a href="link5.html"&gt;fifth item&lt;/a&gt;</span></span><br><span class="line"><span class="string">    &lt;/ul&gt;</span></span><br><span class="line"><span class="string"> &lt;/div&gt;</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">html = etree.HTML(text)</span><br><span class="line">result = html.xpath(<span class="string">'//li[1]/a/text()'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[last()]/a/text()'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[position()&lt;3]/a/text()'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[last()-2]/a/text()'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>li[1]：选取第一个 li 节点；</li>
+<li>li[last()]：选取最后一个 li 节点；</li>
+<li>position()&lt;3：选取位置小于 3 的 li 节点；</li>
+<li>li[last()-2]：选取倒数第三个 li 节点</li>
+</ul>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'first item'</span>]</span><br><span class="line">[<span class="string">'fifth item'</span>]</span><br><span class="line">[<span class="string">'first item'</span>, <span class="string">'second item'</span>]</span><br><span class="line">[<span class="string">'third item'</span>]</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-12】节点轴选择"><a href="#【7-12】节点轴选择" class="headerlink" title="【7.12】节点轴选择"></a><font color="#ff0000">【7.12】节点轴选择</font></h1><p>节点轴选择：获取子元素、兄弟元素、父元素、祖先元素等<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">text = <span class="string">'''</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">    &lt;ul&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-0"&gt;&lt;a href="link1.html"&gt;&lt;span&gt;first item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-1"&gt;&lt;a href="link2.html"&gt;second item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-inactive"&gt;&lt;a href="link3.html"&gt;third item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-1"&gt;&lt;a href="link4.html"&gt;fourth item&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">         &lt;li class="item-0"&gt;&lt;a href="link5.html"&gt;fifth item&lt;/a&gt;</span></span><br><span class="line"><span class="string">     &lt;/ul&gt;</span></span><br><span class="line"><span class="string"> &lt;/div&gt;</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">html = etree.HTML(text)</span><br><span class="line">result = html.xpath(<span class="string">'//li[1]/ancestor::*'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[1]/ancestor::div'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[1]/attribute::*'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[1]/child::a[@href="link1.html"]'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[1]/descendant::span'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[1]/following::*[2]'</span>)</span><br><span class="line">print(result)</span><br><span class="line">result = html.xpath(<span class="string">'//li[1]/following-sibling::*'</span>)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[&lt;Element html at <span class="number">0x1d3749e9548</span>&gt;, &lt;Element body at <span class="number">0x1d3749e94c8</span>&gt;, &lt;Element div at <span class="number">0x1d3749e9488</span>&gt;, &lt;Element ul at <span class="number">0x1d3749e9588</span>&gt;]</span><br><span class="line">[&lt;Element div at <span class="number">0x1d3749e9488</span>&gt;]</span><br><span class="line">[<span class="string">'item-0'</span>]</span><br><span class="line">[&lt;Element a at <span class="number">0x1d3749e9588</span>&gt;]</span><br><span class="line">[&lt;Element span at <span class="number">0x1d3749e9488</span>&gt;]</span><br><span class="line">[&lt;Element a at <span class="number">0x1d3749e9588</span>&gt;]</span><br><span class="line">[&lt;Element li at <span class="number">0x1d3749e94c8</span>&gt;, &lt;Element li at <span class="number">0x1d3749e95c8</span>&gt;, &lt;Element li at <span class="number">0x1d3749e9608</span>&gt;, &lt;Element li at <span class="number">0x1d3749e9648</span>&gt;]</span><br></pre></td></tr></table></figure></p>
+<p>基本语法：轴名称::节点测试[谓语]</p>
+<p>轴名称对应的结果：</p>
+<table>
+<thead>
+<tr>
+<th>轴名称</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ancestor</td>
+<td>选取当前节点的所有先辈（父、祖父等）</td>
+</tr>
+<tr>
+<td>ancestor-or-self</td>
+<td>选取当前节点的所有先辈（父、祖父等）以及当前节点本身</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>选取当前节点的所有属性</td>
+</tr>
+<tr>
+<td>child</td>
+<td>选取当前节点的所有子元素</td>
+</tr>
+<tr>
+<td>descendant</td>
+<td>选取当前节点的所有后代元素（子、孙等）</td>
+</tr>
+<tr>
+<td>descendant-or-self</td>
+<td>选取当前节点的所有后代元素（子、孙等）以及当前节点本身</td>
+</tr>
+<tr>
+<td>following</td>
+<td>选取文档中当前节点的结束标签之后的所有节点</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>选取当前节点的所有命名空间节点</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>选取当前节点的父节点</td>
+</tr>
+<tr>
+<td>preceding</td>
+<td>选取文档中当前节点的开始标签之前的所有节点</td>
+</tr>
+<tr>
+<td>preceding-sibling</td>
+<td>选取当前节点之前的所有同级节点</td>
+</tr>
+<tr>
+<td>self</td>
+<td>选取当前节点</td>
+</tr>
+</tbody>
+</table>
 <p>实例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">age = input(<span class="string">"Please tell me your age:"</span>)</span><br><span class="line">age = int(age)</span><br><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    print(<span class="string">"You are old enough to go to the Internet bar!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"You are not old enough to go to Internet bar!"</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Please tell me your age:<span class="number">17</span></span><br><span class="line">You are <span class="keyword">not</span> old enough to go to Internet bar!</span><br></pre></td></tr></table></figure>
-<h1 id="6-1-2-求模运算符"><a href="#6-1-2-求模运算符" class="headerlink" title=" - 6.1.2 求模运算符 "></a><font color="#FF0000"> - 6.1.2 求模运算符 </font></h1><p> 处理数值信息时，求模运算符（%）是一个很有用的工具，它将两个数相除并返回余数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">4</span> % <span class="number">3</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">5</span> % <span class="number">3</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">8</span> % <span class="number">2</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">7</span> % <span class="number">3</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h1 id="6-1-3-在-Python-2-7-中获取输入"><a href="#6-1-3-在-Python-2-7-中获取输入" class="headerlink" title=" - 6.1.3 在 Python 2.7 中获取输入 "></a><font color="#FF0000"> - 6.1.3 在 Python 2.7 中获取输入 </font></h1><p> 如果使用 Python 2.7，应该使用函数 <code>raw_input()</code> 来提示用户输入，这个函数与 Python 3 中的 <code>input()</code> 一样，也将输入解读为字符串；Python 2.7 也包含函数 <code>input()</code>，但它将用户输入解读为Python代码，并尝试运行它们</p>
-<h1 id="6-2-while-循环"><a href="#6-2-while-循环" class="headerlink" title=" - 6.2 while 循环 "></a><font color="#FF0000"> - 6.2 while 循环 </font></h1><p>  for 循环用于针对集合中的每一个元素的一个代码块，而 while 循环不断地运行，直到指定的条件不满足为止</p>
-<h1 id="6-2-1-使用-while-循环"><a href="#6-2-1-使用-while-循环" class="headerlink" title=" - 6.2.1 使用 while 循环 "></a><font color="#FF0000"> - 6.2.1 使用 while 循环 </font></h1><p> 一个简单的 while 循环：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> num &lt; <span class="number">5</span>:</span><br><span class="line">    print(num)</span><br><span class="line">    num += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
-<h1 id="6-2-2-让用户选择退出循环"><a href="#6-2-2-让用户选择退出循环" class="headerlink" title=" - 6.2.2 让用户选择退出循环 "></a><font color="#FF0000"> - 6.2.2 让用户选择退出循环 </font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">"\nTell me something, and I will repeat it back to you:"</span></span><br><span class="line">prompt += <span class="string">"\nEnter 'quit' to end the program."</span></span><br><span class="line">message = <span class="string">" "</span></span><br><span class="line"><span class="keyword">while</span> message != <span class="string">'quit'</span>:</span><br><span class="line">    message = input(prompt)</span><br><span class="line">    print(message)</span><br></pre></td></tr></table></figure>
-<p>运行程序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Tell me something, <span class="keyword">and</span> I will repeat it back to you:</span><br><span class="line">Enter <span class="string">'quit'</span> to end the program.Hello everyone!</span><br><span class="line">Hello everyone!</span><br><span class="line"></span><br><span class="line">Tell me something, <span class="keyword">and</span> I will repeat it back to you:</span><br><span class="line">Enter <span class="string">'quit'</span> to end the program.Hello again!</span><br><span class="line">Hello again!</span><br><span class="line"></span><br><span class="line">Tell me something, <span class="keyword">and</span> I will repeat it back to you:</span><br><span class="line">Enter <span class="string">'quit'</span> to end the program.quit</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
-<h1 id="6-2-3-使用标志"><a href="#6-2-3-使用标志" class="headerlink" title=" - 6.2.3 使用标志 "></a><font color="#FF0000"> - 6.2.3 使用标志 </font></h1><p> 在要求很多条件都满足才继续运行的程序中，可以定义一个变量，用于判断整个程序是否处于活动状态，这个变量称为<font color="#FF0000">标志</font></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">"\nTell me something, and I will repeat it back to you:"</span></span><br><span class="line">prompt += <span class="string">"\nEnter 'quit' to end the program."</span></span><br><span class="line">active = <span class="keyword">True</span></span><br><span class="line"><span class="keyword">while</span> active:</span><br><span class="line">    message = input(prompt)</span><br><span class="line">    <span class="keyword">if</span> message == <span class="string">'quit'</span>:</span><br><span class="line">        active = <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(message)</span><br></pre></td></tr></table></figure>
-<p>运行结果与6.2.2一致</p>
-<h1 id="6-2-4-使用-break-退出循环"><a href="#6-2-4-使用-break-退出循环" class="headerlink" title=" - 6.2.4 使用 break 退出循环 "></a><font color="#FF0000"> - 6.2.4 使用 break 退出循环 </font></h1><p> 要立即退出 while 循环，不再运行循环中余下的代码，也不管条件测试的结果如何，可使用 break 语句，break 语句用于控制程序流程，可使用它来控制哪些代码将执行，哪些代码不执行</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">"\nPlease enter the name of a city you have visited:"</span></span><br><span class="line">prompt += <span class="string">"\nEnter 'quit' when you are finished."</span></span><br><span class="line">active = <span class="keyword">True</span></span><br><span class="line"><span class="keyword">while</span> active:</span><br><span class="line">    city = input(prompt)</span><br><span class="line">    <span class="keyword">if</span> city == <span class="string">'quit'</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"I'd love to go to "</span> + city.title() + <span class="string">"!"</span>)</span><br></pre></td></tr></table></figure>
-<p>运行程序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Please enter the name of a city you have visited:</span><br><span class="line">Enter <span class="string">'quit'</span> when you are finished.Shanghai</span><br><span class="line">I<span class="string">'d love to go to Shanghai!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Please enter the name of a city you have visited:</span></span><br><span class="line"><span class="string">Enter '</span>quit<span class="string">' when you are finished.Beijing</span></span><br><span class="line"><span class="string">I'</span>d love to go to Beijing!</span><br><span class="line"></span><br><span class="line">Please enter the name of a city you have visited:</span><br><span class="line">Enter <span class="string">'quit'</span> when you are finished.quit</span><br></pre></td></tr></table></figure>
-<p>在任何Python循环中都可以使用break语句，例如，可以使用break语句来退出遍历列表或字典</p>
-<h1 id="6-2-5-在循环中使用-continue"><a href="#6-2-5-在循环中使用-continue" class="headerlink" title=" - 6.2.5 在循环中使用 continue "></a><font color="#FF0000"> - 6.2.5 在循环中使用 continue </font></h1><p> 要返回到循环开头，并根据条件测试结果决定是否继续执行循环，可使用 continue 语句，它不像 break 语句那样不再执行余下的代码并退出整个循环，例如，从1到10只打印其中奇数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number =<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> number &lt; <span class="number">10</span>:</span><br><span class="line">    number += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> number % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    print(number)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="6-3-使用-while-循环来处理列表和字典"><a href="#6-3-使用-while-循环来处理列表和字典" class="headerlink" title=" - 6.3 使用 while 循环来处理列表和字典 "></a><font color="#FF0000"> - 6.3 使用 while 循环来处理列表和字典 </font></h1><p>for循环是一种遍历列表的有效方式，但在for循环中不应修改列表，否则将导致Python难以跟踪其中的元素，要在遍历列表的同时对其进行修改，可使用while循环</p>
-<h1 id="6-3-1-在列表之间移动元素"><a href="#6-3-1-在列表之间移动元素" class="headerlink" title=" - 6.3.1 在列表之间移动元素 "></a><font color="#FF0000"> - 6.3.1 在列表之间移动元素 </font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">unconfirmed_users = [<span class="string">'alice'</span> , <span class="string">'brian'</span> , <span class="string">'candace'</span>]</span><br><span class="line">confirmed_users = []</span><br><span class="line"><span class="keyword">while</span> unconfirmed_users:</span><br><span class="line">    current_user = unconfirmed_users.pop()</span><br><span class="line">    print(<span class="string">"Verifying user: "</span> + current_user.title())</span><br><span class="line">    confirmed_users.append(current_user)</span><br><span class="line">print(<span class="string">"\nThe following users have been confirmed:"</span>)</span><br><span class="line"><span class="keyword">for</span> confirmed_user <span class="keyword">in</span> confirmed_users:</span><br><span class="line">    print(confirmed_user.title())</span><br></pre></td></tr></table></figure>
-<p> 首先创建一个未验证用户列表，其中包含用户Alice、Brian和Candace，还创建了一个空列表，用于存储已验证的用户，程序中的 while 循环将不断地运行，直到列表 unconfirmed_users 变成空的。在这个循环中，函数pop() 以每次一个的方式从列表 unconfirmed_users 末尾删除未验证的用户。由于Candace位于列表 unconfirmed_users 的末尾，因此其名字将首先被删除、存储到变量 current_user 中并加入到列表 confirmed_users 中。接下来是Brian，然后是Alice</p>
-<p>为模拟用户验证过程，我们打印一条验证消息并将用户加入到已验证用户列表中。未验证用户列表越来越短，而已验证用户列表越来越长。未验证用户列表为空后结束循环，再打印已验证用户列表：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Verifying user: Candace</span><br><span class="line">Verifying user: Brian</span><br><span class="line">Verifying user: Alice</span><br><span class="line"></span><br><span class="line">The following users have been confirmed:</span><br><span class="line">Candace</span><br><span class="line">Brian</span><br><span class="line">Alice</span><br></pre></td></tr></table></figure>
-<h1 id="6-3-2-删除包含特定值的所有列表元素"><a href="#6-3-2-删除包含特定值的所有列表元素" class="headerlink" title=" - 6.3.2 删除包含特定值的所有列表元素 "></a><font color="#FF0000"> - 6.3.2 删除包含特定值的所有列表元素 </font></h1><p> 可以使用方法 remove() 来删除列表中特定的值，但如果要删除的值在列表中出现了多次，方法 remove() 就不管用了，如果要删除列表中所有包含特定值的元素则可以使用 while 循环：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">'alice'</span> , <span class="string">'candace'</span> , <span class="string">'alice'</span> , <span class="string">'brian'</span> , <span class="string">'alix'</span> , <span class="string">'candace'</span> , <span class="string">'heliy'</span>]</span><br><span class="line">print(names)</span><br><span class="line"><span class="keyword">while</span> <span class="string">'candace'</span> <span class="keyword">in</span> names:</span><br><span class="line">    names.remove(<span class="string">'candace'</span>)</span><br><span class="line">print(names)</span><br></pre></td></tr></table></figure>
-<p> 输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'alice'</span>, <span class="string">'candace'</span>, <span class="string">'alice'</span>, <span class="string">'brian'</span>, <span class="string">'alix'</span>, <span class="string">'candace'</span>, <span class="string">'heliy'</span>]</span><br><span class="line">[<span class="string">'alice'</span>, <span class="string">'alice'</span>, <span class="string">'brian'</span>, <span class="string">'alix'</span>, <span class="string">'heliy'</span>]</span><br></pre></td></tr></table></figure>
-<p>使用方法 remove() 做对比：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">'alice'</span> , <span class="string">'candace'</span> , <span class="string">'alice'</span> , <span class="string">'brian'</span> , <span class="string">'alix'</span> , <span class="string">'candace'</span> , <span class="string">'heliy'</span>]</span><br><span class="line">print(names)</span><br><span class="line">names.remove(<span class="string">'candace'</span>)</span><br><span class="line">print(names)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'alice'</span>, <span class="string">'candace'</span>, <span class="string">'alice'</span>, <span class="string">'brian'</span>, <span class="string">'alix'</span>, <span class="string">'candace'</span>, <span class="string">'heliy'</span>]</span><br><span class="line">[<span class="string">'alice'</span>, <span class="string">'alice'</span>, <span class="string">'brian'</span>, <span class="string">'alix'</span>, <span class="string">'candace'</span>, <span class="string">'heliy'</span>]</span><br></pre></td></tr></table></figure>
-<h1 id="6-3-3-使用用户输入来填充字典"><a href="#6-3-3-使用用户输入来填充字典" class="headerlink" title=" - 6.3.3 使用用户输入来填充字典 "></a><font color="#FF0000"> - 6.3.3 使用用户输入来填充字典 </font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">responses = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置一个标志，指出调查是否继续</span></span><br><span class="line">polling_active = <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> polling_active:</span><br><span class="line">    <span class="comment">#提示输入被调查者的姓名和回答</span></span><br><span class="line">    name = input(<span class="string">"\nWhat's your name?"</span>)</span><br><span class="line">    response = input(<span class="string">"What kind of fruit do you like?"</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#将答卷储存在字典中</span></span><br><span class="line">    responses[name] = response</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#询问是否还有其他人要参与回答</span></span><br><span class="line">    repeat = input(<span class="string">"Would you like to let another person respond?(Yes/No)"</span>)</span><br><span class="line">    <span class="keyword">if</span> repeat == <span class="string">'No'</span>:</span><br><span class="line">        polling_active = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#调查结束，显示结果</span></span><br><span class="line">print(<span class="string">"\n------ Poll Results ------"</span>)</span><br><span class="line"><span class="keyword">for</span> name , response <span class="keyword">in</span> responses.items():</span><br><span class="line">    print(name + <span class="string">" like "</span> + response + <span class="string">"."</span>)</span><br></pre></td></tr></table></figure>
-<p>运行程序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">What<span class="string">'s your name?TRHX</span></span><br><span class="line"><span class="string">What kind of fruit do you like?apple</span></span><br><span class="line"><span class="string">Would you like to let another person respond?(Yes/No)Yes</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">What's your name?TRHXCC</span><br><span class="line">What kind of fruit do you like?banana</span><br><span class="line">Would you like to let another person respond?(Yes/No)No</span><br><span class="line"></span><br><span class="line">------ Poll Results ------</span><br><span class="line">TRHX like apple.</span><br><span class="line">TRHXCC like banana.</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>例子</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>child::book</td>
+<td>选取所有属于当前节点的子元素的 book 节点</td>
+</tr>
+<tr>
+<td>attribute::lang</td>
+<td>选取当前节点的 lang 属性</td>
+</tr>
+<tr>
+<td>child::*</td>
+<td>选取当前节点的所有子元素</td>
+</tr>
+<tr>
+<td>attribute::*</td>
+<td>选取当前节点的所有属性</td>
+</tr>
+<tr>
+<td>child::text()</td>
+<td>选取当前节点的所有文本子节点</td>
+</tr>
+<tr>
+<td>child::node()</td>
+<td>选取当前节点的所有子节点</td>
+</tr>
+<tr>
+<td>descendant::book</td>
+<td>选取当前节点的所有 book 后代</td>
+</tr>
+<tr>
+<td>ancestor::book</td>
+<td>选择当前节点的所有 book 先辈</td>
+</tr>
+<tr>
+<td>ancestor-or-self::book</td>
+<td>选取当前节点的所有 book 先辈以及当前节点（如果此节点是 book 节点）</td>
+</tr>
+<tr>
+<td>child::*/child::price</td>
+<td>选取当前节点的所有 price 孙节点</td>
+</tr>
+</tbody>
+</table>
+
         </div>
         
           
@@ -519,10 +771,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-19T19:50:00+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-25T19:42:16+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年8月19日</p>
+    <p>最后更新于 2019年8月25日</p>
   </a>
 </div>
 
@@ -536,8 +788,8 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2018/10/30/A12-Python3-basic-C06/&title=Python3 基础学习笔记 C06 | TRHX'S BLOG&summary=
-Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/08/25/A37-Python3-spider-C07/&title=Python3 爬虫学习笔记 C07 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第七章 —— 【解析库 lxml】
 "
           
           >
@@ -550,8 +802,8 @@ Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2018/10/30/A12-Python3-basic-C06/&title=Python3 基础学习笔记 C06 | TRHX'S BLOG&summary=
-Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/08/25/A37-Python3-spider-C07/&title=Python3 爬虫学习笔记 C07 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第七章 —— 【解析库 lxml】
 "
           
           >
@@ -562,7 +814,7 @@ Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqElEQVR42u3aS5bCMAwEQO5/aeYAQGhJFpNFZcXj47iysE1Lj0d8PV+u109fXyefXv8q+e2BCw8PD2889U9D5+9UH8fk7tf3wsPDw9vjXS/W19+5Zny8cQCebzB4eHh49+FNjryFZb14Lzw8PLx78nrT6k0xeY2Hh4f3X7zeVPIj8mTqP8pa8PDw8Gqn1h9N9yz7cH0PDw8PbxwK5OWovLiVhLz5BvBltnh4eHgLvHzBncQK+fjJ3fN54uHh4W3zkuU7//78ZNsLKd58Ew8PD2+BV12Ik6N2voVMmhKaAS4eHh7emJdPtLdh5ODqVhEh8fDw8I7yqsX7Xmm/F2qMWgHw8PDw1njVglMv5O01BOTjFApgeHh4eEd5eRiaLOh5G0HvnUKAgoeHh3eU14sYNkpW1RA5etx4eHh4C7y84JQv69VwtjpC+YCOh4eHd5SXH2fzAOLUU8+D4I+j4eHh4S3zqqFtfoyuxhnHLjw8PLwFXtKTVT1q98r/88asKKXGw8PDG/NOLfHJaL3tIQ9z34yJh4eHt8DLm6J6rVcbZbBCGIGHh4e3xss3g2SZnsS4vbs3twQ8PDy8Aa/aHHCqKar3fjXIwMPDwzvLOxWe5g+iWujq/T/Aw8PD2+NtNBbMJ9oryJVniIeHhzfgNXPfQ48mD3+r/VR4eHh4v+FVI9rekj1Bllu78PDw8NZ4eTtUHkxMwtnq9hD1RODh4eGNec/iNZlW77icH6ALBTA8PDy8Aa8XLvRChHxa1XCkFyvj4eHhTXjVoXsH8Xns2yuM4eHh4e3xqgFuL8bd2LW+PHo8PDy8G/AmpalJaFstjOHh4eHdh9eLG65HzueQNCLg4eHh/YZXLXrlr5Plvlq+ykMKPDw8vA1e9Q9/NWDNl/izjwAPDw9vgfcH7bVzqB4kpcQAAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACt0lEQVR42u3a0W4qMQwEUP7/p9vXKxW4M3aCWunsE2pZmrOV4jD24xFfXy+uf3/76nVy7/uf//zkwxceHh7eoaUnC33Pa3/7HtY+ODw8PLzbvFc7arKI2XWq/PzHgoeHh/cLeO1GPwMkB248PDy8v8KbHZffl4T9Y8XDw8P7PG9/nE3+cB495PHEsawFDw8Pr8sBHmc369uvr/T38PDw8NZd9X27a/P4DsTEeHh4eBd4+YLa8YL80JwchdsgAw8PD+82L2k1bUrIppE2CyDw8PDwbvM2MejmroQx+4To/4aHh4c34uWbbL7pv9/K2yP7LKrAw8PDu8dr2/+bgYP8kW2GtOq6hIeHhzdabd7QmoULbcHIg4a6AYaHh4e35p3afM/GuAmp6Ozh4eHhHeW1R+TNn2xHDTZRchHp4uHh4ZW8NkrYHHaTB7EpS9HQAB4eHt4hXtvCb5v97ZDWJoN9Uhjw8PDwjvKS29rNehNMXBn5wsPDw7vA23xEvt23Ta9NAwwPDw/vHi8/NOcRwGxxbYmKCgweHh7eBV4SLuRDA6di2XxXL8IIPDw8vKO8TdyQTyi0B+7ZIyu+MeDh4eGNeJu4dhPFziLgfKDhSX8PDw8P7xCvftO6YLRjWBswHh4e3md4+WBBe6Ruj8UtLCoMeHh4eId4bfv/UV6zcas2enj5fjw8PLzLvE2Df9ZIaw/cdQSMh4eHd403O7Duxws2JScKSvDw8PCO8r7KK48YktLSDmYlgwVP+nt4eHh4R3mzQKGND9rCM7v3QD3Bw8PDi3n7YtAOUbUn3vzT6oM1Hh4e3oLXbuizEas6KRndhYeHh/fbeO3iZjHHphQVy8LDw8P7CC9vd7VjB8kaonEBPDw8vI/w9kHALK5t722P+Hh4eHg3eAe+8Acbfb2hx4/vwIWHh4eX8r4BvFnkKYZYsNIAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -572,8 +824,8 @@ Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2018/10/30/A12-Python3-basic-C06/&title=Python3 基础学习笔记 C06 | TRHX'S BLOG&summary=
-Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/08/25/A37-Python3-spider-C07/&title=Python3 爬虫学习笔记 C07 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第七章 —— 【解析库 lxml】
 "
           
           >
@@ -584,7 +836,7 @@ Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqElEQVR42u3aS5bCMAwEQO5/aeYAQGhJFpNFZcXj47iysE1Lj0d8PV+u109fXyefXv8q+e2BCw8PD2889U9D5+9UH8fk7tf3wsPDw9vjXS/W19+5Zny8cQCebzB4eHh49+FNjryFZb14Lzw8PLx78nrT6k0xeY2Hh4f3X7zeVPIj8mTqP8pa8PDw8Gqn1h9N9yz7cH0PDw8PbxwK5OWovLiVhLz5BvBltnh4eHgLvHzBncQK+fjJ3fN54uHh4W3zkuU7//78ZNsLKd58Ew8PD2+BV12Ik6N2voVMmhKaAS4eHh7emJdPtLdh5ODqVhEh8fDw8I7yqsX7Xmm/F2qMWgHw8PDw1njVglMv5O01BOTjFApgeHh4eEd5eRiaLOh5G0HvnUKAgoeHh3eU14sYNkpW1RA5etx4eHh4C7y84JQv69VwtjpC+YCOh4eHd5SXH2fzAOLUU8+D4I+j4eHh4S3zqqFtfoyuxhnHLjw8PLwFXtKTVT1q98r/88asKKXGw8PDG/NOLfHJaL3tIQ9z34yJh4eHt8DLm6J6rVcbZbBCGIGHh4e3xss3g2SZnsS4vbs3twQ8PDy8Aa/aHHCqKar3fjXIwMPDwzvLOxWe5g+iWujq/T/Aw8PD2+NtNBbMJ9oryJVniIeHhzfgNXPfQ48mD3+r/VR4eHh4v+FVI9rekj1Bllu78PDw8NZ4eTtUHkxMwtnq9hD1RODh4eGNec/iNZlW77icH6ALBTA8PDy8Aa8XLvRChHxa1XCkFyvj4eHhTXjVoXsH8Xns2yuM4eHh4e3xqgFuL8bd2LW+PHo8PDy8G/AmpalJaFstjOHh4eHdh9eLG65HzueQNCLg4eHh/YZXLXrlr5Plvlq+ykMKPDw8vA1e9Q9/NWDNl/izjwAPDw9vgfcH7bVzqB4kpcQAAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACt0lEQVR42u3a0W4qMQwEUP7/p9vXKxW4M3aCWunsE2pZmrOV4jD24xFfXy+uf3/76nVy7/uf//zkwxceHh7eoaUnC33Pa3/7HtY+ODw8PLzbvFc7arKI2XWq/PzHgoeHh/cLeO1GPwMkB248PDy8v8KbHZffl4T9Y8XDw8P7PG9/nE3+cB495PHEsawFDw8Pr8sBHmc369uvr/T38PDw8NZd9X27a/P4DsTEeHh4eBd4+YLa8YL80JwchdsgAw8PD+82L2k1bUrIppE2CyDw8PDwbvM2MejmroQx+4To/4aHh4c34uWbbL7pv9/K2yP7LKrAw8PDu8dr2/+bgYP8kW2GtOq6hIeHhzdabd7QmoULbcHIg4a6AYaHh4e35p3afM/GuAmp6Ozh4eHhHeW1R+TNn2xHDTZRchHp4uHh4ZW8NkrYHHaTB7EpS9HQAB4eHt4hXtvCb5v97ZDWJoN9Uhjw8PDwjvKS29rNehNMXBn5wsPDw7vA23xEvt23Ta9NAwwPDw/vHi8/NOcRwGxxbYmKCgweHh7eBV4SLuRDA6di2XxXL8IIPDw8vKO8TdyQTyi0B+7ZIyu+MeDh4eGNeJu4dhPFziLgfKDhSX8PDw8P7xCvftO6YLRjWBswHh4e3md4+WBBe6Ruj8UtLCoMeHh4eId4bfv/UV6zcas2enj5fjw8PLzLvE2Df9ZIaw/cdQSMh4eHd403O7Duxws2JScKSvDw8PCO8r7KK48YktLSDmYlgwVP+nt4eHh4R3mzQKGND9rCM7v3QD3Bw8PDi3n7YtAOUbUn3vzT6oM1Hh4e3oLXbuizEas6KRndhYeHh/fbeO3iZjHHphQVy8LDw8P7CC9vd7VjB8kaonEBPDw8vI/w9kHALK5t722P+Hh4eHg3eAe+8Acbfb2hx4/vwIWHh4eX8r4BvFnkKYZYsNIAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -606,40 +858,21 @@ Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/2018/11/03/A13-Python3-basic-C07/" rel="prev" title="Python3 基础学习笔记 C07">
-                                  
-                                      Python3 基础学习笔记 C07
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/函数/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>函数</a> <a class="tag" href="/tags/模块/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>模块</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2018/10/27/A11-Python3-basic-C05/" rel="prev" title="Python3 基础学习笔记 C05">
+                                <a href="/2019/08/24/A36-Python3-spider-C06/" rel="prev" title="Python3 爬虫学习笔记 C06">
                                     
-                                        Python3 基础学习笔记 C05
+                                        Python3 爬虫学习笔记 C06
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/字典/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>字典</a>
+                                    <a class="tag" href="/tags/爬虫/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>爬虫</a> <a class="tag" href="/tags/正则表达式/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>正则表达式</a>
                                 </h6>
                             
                         </span>
@@ -682,7 +915,7 @@ Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
 
   <script>
     window.subData = {
-      title: 'Python3 基础学习笔记 C06',
+      title: 'Python3 爬虫学习笔记 C07',
       tools: true
     }
   </script>
@@ -824,7 +1057,7 @@ Python3 基础学习笔记第六章 —— 【用户输入和 while 循环】
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#6-1-函数-input-的工作原理"><span class="toc-text"> - 6.1 函数 input() 的工作原理 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-1-1-使用-int-来获取数值输入"><span class="toc-text"> - 6.1.1 使用 int() 来获取数值输入 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-1-2-求模运算符"><span class="toc-text"> - 6.1.2 求模运算符 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-1-3-在-Python-2-7-中获取输入"><span class="toc-text"> - 6.1.3 在 Python 2.7 中获取输入 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-2-while-循环"><span class="toc-text"> - 6.2 while 循环 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-2-1-使用-while-循环"><span class="toc-text"> - 6.2.1 使用 while 循环 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-2-2-让用户选择退出循环"><span class="toc-text"> - 6.2.2 让用户选择退出循环 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-2-3-使用标志"><span class="toc-text"> - 6.2.3 使用标志 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-2-4-使用-break-退出循环"><span class="toc-text"> - 6.2.4 使用 break 退出循环 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-2-5-在循环中使用-continue"><span class="toc-text"> - 6.2.5 在循环中使用 continue </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-3-使用-while-循环来处理列表和字典"><span class="toc-text"> - 6.3 使用 while 循环来处理列表和字典 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-3-1-在列表之间移动元素"><span class="toc-text"> - 6.3.1 在列表之间移动元素 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-3-2-删除包含特定值的所有列表元素"><span class="toc-text"> - 6.3.2 删除包含特定值的所有列表元素 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-3-3-使用用户输入来填充字典"><span class="toc-text"> - 6.3.3 使用用户输入来填充字典 </span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-1】关于-lxml"><span class="toc-text">【7.1】关于 lxml</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-2】使用-XPath"><span class="toc-text">【7.2】使用  XPath</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-3】查找所有节点"><span class="toc-text">【7.3】查找所有节点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-4】查找子节点"><span class="toc-text">【7.4】查找子节点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-5】查找父节点"><span class="toc-text">【7.5】查找父节点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-6】属性匹配"><span class="toc-text">【7.6】属性匹配</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-7】文本获取"><span class="toc-text">【7.7】文本获取</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-8】属性获取"><span class="toc-text">【7.8】属性获取</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-9】一个属性包含多个值的匹配"><span class="toc-text">【7.9】一个属性包含多个值的匹配</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-10】多个属性匹配一个节点"><span class="toc-text">【7.10】多个属性匹配一个节点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-11】按顺序选择节点"><span class="toc-text">【7.11】按顺序选择节点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-12】节点轴选择"><span class="toc-text">【7.12】节点轴选择</span></a></li></ol>
     </div>
   </section>
 
