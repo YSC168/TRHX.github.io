@@ -1,0 +1,1917 @@
+               <!--@@@@@@@@@@@@@^ .@@@@@@@@@@@\`    .@@@@@.   =@@@@^ .@@@@@@.   .@@@@@^      =@@@@@^         ./@@@@@@@@\.                      =@@@@@@@@@@@].     =@@@@O             ./@@@@@@@O`        .]@@@@@@@@].
+               .@@@@@@@@@@@@@@@@^ .@@@@@@@@@@@@@@`  .@@@@@.   =@@@@^  .@@@@@@. .@@@@@^       =@@@@@.       ./@@@@@@@@@@@@`                     =@@@@@@@@@@@@@^    =@@@@O            /@@@@@@@@@@@@.    ./@@@@@@@@@@@/
+               .[[[[[\@@@@@[[[[[` .@@@@@...,\@@@@@. .@@@@@.   =@@@@^   .\@@@@\./@@@@^        ,@@@@@.       =@@@@@`..[\@/.                      =@@@@/...\@@@@@    =@@@@O           =@@@@@/.,@@@@@@.  .@@@@@@/..,\/.
+                     =@@@@O       .@@@@@.   .@@@@@. .@@@@@`.../@@@@^     \@@@@@@@@@`         .@@@@/        =@@@@@@].                           =@@@@^  ./@@@@^    =@@@@O          .@@@@@^   .@@@@@^  /@@@@@.
+                     =@@@@O       .@@@@@]]]/@@@@@/  .@@@@@@@@@@@@@@^      =@@@@@@@`           =@@@^        .\@@@@@@@@@@]                       =@@@@@@@@@@@/.     =@@@@O          =@@@@@.    =@@@@O .@@@@@^  /@@@@@@^
+                     =@@@@O       .@@@@@@@@@@@@@/.  .@@@@@@@@@@@@@@^      /@@@@@@@`           ,@@@.          .\@@@@@@@@@@^                     =@@@@@@@@@@@@@\.   =@@@@O          =@@@@@.    =@@@@O .@@@@@^  O@@@@@@^
+                     =@@@@O       .@@@@@@@@@@@@^    .@@@@@.   =@@@@^    ./@@@@@@@@@`                             .[\@@@@@@.                    =@@@@^    =@@@@^   =@@@@O          .@@@@@^    @@@@@^  @@@@@\  ,[\@@@@^
+                     =@@@@O       .@@@@@. ,@@@@@^   .@@@@@.   =@@@@^   .@@@@@`,@@@@@^                       ,@@\`...=@@@@@.                    =@@@@^  .,@@@@@^   =@@@@O.........  =@@@@@`../@@@@@.  ,@@@@@@]..=@@@@^
+                     =@@@@O       .@@@@@.  ,@@@@@\  .@@@@@.   =@@@@^  ,@@@@@^  ,@@@@@\.                   .@@@@@@@@@@@@@@^                     =@@@@@@@@@@@@@@.   =@@@@@@@@@@@@@.  .\@@@@@@@@@@@@`    ,@@@@@@@@@@@@@^
+                     =@@@@O       .@@@@@.   ,@@@@@\ .@@@@@.   =@@@@^ ,@@@@@^    ,@@@@@\.                   .[@@@@@@@@@@[.                      =@@@@@@@@@@@/`     =@@@@@@@@@@@@@.    .\@@@@@@@@`        ,\@@@@@@-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Python3 爬虫学习笔记 C08 | TRHX&#39;S BLOG</title>
+  
+  <meta name="keywords" content="大学生 软件工程 Java Python">
+  
+  
+  <meta name="description" content="一个大学生用于自学的个人博客">
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="TRHX'S BLOG">
+  
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name='theme-color' content='#f24e32'>
+  <meta name='msapplication-TileColor' content='#f24e32'>
+  <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/images/favicon.ico'>
+  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/images/favicon-32x32.png'>
+  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/images/apple-touch-icon.png'>
+  <link rel='mask-icon' color='#f24e32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/images/mask-icon.png'>
+  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest'>
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/css/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?df0bc7c6bdbd80356ba4db429724ccad";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  
+</script>
+</head>
+
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post half'>
+      
+        
+  <h1 class='title'>TRHX'S BLOG</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="Search..." />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-home fa-fw'></i>&nbsp;主页
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/categories/"
+            
+            
+            id="categories">
+            <i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/tags/"
+            
+            
+            id="tags">
+            <i class='fas fa-tags fa-fw'></i>&nbsp;标签
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/"
+            
+            
+            id="friends">
+            <i class='fas fa-users fa-fw'></i>&nbsp;朋友
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/comments/"
+            
+            
+            id="comments">
+            <i class='fas fa-comments fa-fw'></i>&nbsp;留言
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          TRHX'S BLOG
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-home fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="archives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/friends/"
+                  
+                  
+                  id="friends">
+									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/comments/"
+                  
+                  
+                  id="comments">
+									<i class='fas fa-comments fa-fw'></i>&nbsp;留言
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/about/"
+                  
+                  
+                    target="_blank"
+                  
+                  id="about">
+									<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/box/"
+                  
+                  
+                    target="_blank"
+                  
+                  id="box">
+									<i class='fas fa-tools fa-fw'></i>&nbsp;百宝箱
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://mi.aliyun.com/shop/40012"
+                  
+                  
+                    target="_blank"
+                  
+                  id="https:mi.aliyun.comshop40012">
+									<i class='fas fa-link fa-fw'></i>&nbsp;米店
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-home fa-fw'></i>&nbsp;主页
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/tags/"
+                
+                  rel="nofollow"
+                
+                
+                id="tags">
+								<i class='fas fa-tags fa-fw'></i>&nbsp;标签
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                
+                id="friends">
+								<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://mi.aliyun.com/shop/40012"
+                
+                
+                id="https:mi.aliyun.comshop40012">
+								<i class='fas fa-link fa-fw'></i>&nbsp;米店
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/comments/"
+                
+                
+                id="comments">
+								<i class='fas fa-comments fa-fw'></i>&nbsp;留言
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://blog.csdn.net/qq_36759224"
+                
+                
+                id="https:blog.csdn.netqq_36759224">
+								<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2019/08/26/A38-Python3-spider-C08/">
+        Python3 爬虫学习笔记 C08
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://www.itrhx.com" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>TRHX'BLOG</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-08-26</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Python3-学习笔记/Python3-爬虫/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Python3 学习笔记&nbsp;/&nbsp;Python3 爬虫</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/爬虫/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>爬虫</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Beautiful-Soup/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>Beautiful Soup</p></a></div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <blockquote>
+<center><font color="#1BC3FB" size="4">Python3 爬虫学习笔记第七章 —— 【解析库 Beautiful Soup】</font></center>
+</blockquote>
+<a id="more"></a>
+<h1 id="【7-1】关于-Beautiful-Soup"><a href="#【7-1】关于-Beautiful-Soup" class="headerlink" title="【7.1】关于 Beautiful Soup"></a><font color="#ff0000">【7.1】关于 Beautiful Soup</font></h1><p>Beautiful Soup 可以从 HTML 或者 XML 文件中提取数据，Beautiful Soup 可以提供一些简单的、Python 式的函数用来处理导航、搜索、修改分析树等，它借助网页的结构和属性等特性来解析网页，lxml 只会局部遍历，而 Beautiful Soup 是基于 HTML DOM 的，会载入整个文档，解析整个 DOM 树，因此时间和内存开销都会大很多，所以性能要低于lxml</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">抓取工具</th>
+<th style="text-align:center">速度</th>
+<th style="text-align:center">使用难度</th>
+<th style="text-align:center">安装难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">正则</td>
+<td style="text-align:center">最快</td>
+<td style="text-align:center">困难</td>
+<td style="text-align:center">无（内置）</td>
+</tr>
+<tr>
+<td style="text-align:center">lxml</td>
+<td style="text-align:center">快</td>
+<td style="text-align:center">简单</td>
+<td style="text-align:center">一般</td>
+</tr>
+<tr>
+<td style="text-align:center">BeautifulSoup</td>
+<td style="text-align:center">慢</td>
+<td style="text-align:center">最简单</td>
+<td style="text-align:center">简单</td>
+</tr>
+</tbody>
+</table>
+<h1 id="【7-2】Beautiful-Soup-的基本使用"><a href="#【7-2】Beautiful-Soup-的基本使用" class="headerlink" title="【7.2】Beautiful Soup 的基本使用"></a><font color="#ff0000">【7.2】Beautiful Soup 的基本使用</font></h1><p>需要使用命令 <code>pip install bs4</code> 安装库，Beautiful Soup 在解析时依赖解析器，除了支持 Python 标准库中的 HTML 解析器外，还支持一些第三方解析器：</p>
+<table>
+<thead>
+<tr>
+<th>解析器</th>
+<th>使用方法</th>
+<th>优势</th>
+<th>劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python 标准库</td>
+<td>BeautifulSoup(markup, “html.parser”)</td>
+<td>Python 的内置标准库、执行速度适中 、文档容错能力强</td>
+<td>Python 2.7.3 or 3.2.2) 前的版本中文容错能力差</td>
+</tr>
+<tr>
+<td>LXML HTML 解析器</td>
+<td>BeautifulSoup(markup, “lxml”)</td>
+<td>速度快、文档容错能力强</td>
+<td>需要安装 C 语言库</td>
+</tr>
+<tr>
+<td>LXML XML 解析器</td>
+<td>BeautifulSoup(markup, “xml”)</td>
+<td>速度快、唯一支持 XML 的解析器</td>
+<td>需要安装 C 语言库</td>
+</tr>
+<tr>
+<td>html5lib</td>
+<td>BeautifulSoup(markup, “html5lib”)</td>
+<td>最好的容错性、以浏览器的方式解析文档、生成 HTML5 格式的文档</td>
+<td>速度慢、不依赖外部扩展</td>
+</tr>
+</tbody>
+</table>
+<p>基本使用：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(<span class="string">'&lt;p&gt;Hello&lt;/p&gt;'</span>, <span class="string">'lxml'</span>)</span><br><span class="line"><span class="comment"># soup = BeautifulSoup(open('soup.html', encoding='utf8'), 'lxml')</span></span><br><span class="line">print(soup.p.string)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-3】节点选择器"><a href="#【7-3】节点选择器" class="headerlink" title="【7.3】节点选择器"></a><font color="#ff0000">【7.3】节点选择器</font></h1><p>直接调用节点的名称就可以选择节点元素，再调用 string 属性就可以得到节点内的文本</p>
+<h2 id="【7-3-1】元素选择"><a href="#【7-3-1】元素选择" class="headerlink" title="【7.3.1】元素选择"></a><font color="#ff0000">【7.3.1】元素选择</font></h2><p>新建 <code>soup.html</code> 文件：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span> /&gt;</span><br><span class="line">    &lt;title&gt;测试bs4&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    甄姬</span><br><span class="line">    &lt;p&gt;百里守约&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;李白&lt;/p&gt;</span><br><span class="line">    太乙真人</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class="song"&gt;</span><br><span class="line">    &lt;p&gt;李清照&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;王安石&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;苏轼&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;柳宗元&lt;/p&gt;</span><br><span class="line">    &lt;a href="http://www.song.com/" title="赵匡义" target="_self"&gt;宋朝是最强大的王朝，不是军队的强大，而是经济很强大，国民都很有钱。&lt;/a&gt;</span><br><span class="line">    &lt;img src=<span class="string">"http://www.baidu.com/meinv.jpg"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;a href="" class="du"&gt;总为浮云能蔽日，长安不见使人愁&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class="tang"&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="http://www.baidu.com" title="qing"&gt;清明时节雨纷纷，路上行人欲断魂，借问酒家何处有，牧童遥指杏花村。&lt;/a&gt; &lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="http://www.163.com" title="qin"&gt;秦时明月汉时关，万里长征人未还，但使龙城飞将在，不教胡马度阴山。&lt;/a&gt; &lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="http://www.126.com" alt="qi"&gt;岐王宅里寻常见，崔九堂前几度闻，正是江南好风景，落花时节又逢君。&lt;/a&gt; &lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="http://www.sina.com" class="du"&gt;杜甫&lt;/a&gt; &lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;b&gt;唐朝&lt;/b&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;i&gt;宋朝&lt;/i&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="http://www.haha.com" id="feng"&gt;凤凰台上凤凰游，凤去台空江自流，吴宫花草埋幽径，晋代衣冠成古丘。&lt;/a&gt; &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(open(<span class="string">'soup.html'</span>, encoding=<span class="string">'utf8'</span>), <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.title)</span><br><span class="line">print(type(soup.title))</span><br><span class="line">print(soup.title.string)</span><br><span class="line">print(soup.head)</span><br><span class="line">print(soup.p)</span><br></pre></td></tr></table></figure>
+<p>依次查找 title、head、p 节点。输出结果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;测试bs4&lt;/title&gt;</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">bs4</span>.<span class="title">element</span>.<span class="title">Tag</span>'&gt;</span></span><br><span class="line"><span class="class">测试<span class="title">bs4</span></span></span><br><span class="line"><span class="class">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">&lt;meta charset="utf-8"/&gt;</span><br><span class="line">&lt;title&gt;测试bs4&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;p&gt;百里守约&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="【7-3-2】提取信息"><a href="#【7-3-2】提取信息" class="headerlink" title="【7.3.2】提取信息"></a><font color="#ff0000">【7.3.2】提取信息</font></h2><ul>
+<li>string 属性：获取节点包含的文本值（如果标签里面还有标签，那么string获取到的结果为None）</li>
+<li>text 属性：获取节点包含的文本值</li>
+<li>get_text() 属性：获取节点包含的文本值</li>
+<li>name 属性：获取节点的名称</li>
+<li>attrs ：获取所有属性</li>
+<li>attrs[‘属性名’] ：获取指定属性</li>
+</ul>
+<p>依然以 soup.html 为例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(open(<span class="string">'soup.html'</span>, encoding=<span class="string">'utf8'</span>), <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.title)</span><br><span class="line">print(soup.title.text)</span><br><span class="line">print(soup.title.get_text())</span><br><span class="line">print(soup.title.string)</span><br><span class="line">print(soup.div.string)</span><br><span class="line">print(soup.div.text)</span><br><span class="line">print(soup.title.name)</span><br><span class="line">print(soup.a[<span class="string">'href'</span>])  <span class="comment"># 获取href属性</span></span><br><span class="line">print(soup.a[<span class="string">'title'</span>])  <span class="comment"># 获取title属性</span></span><br><span class="line">print(soup.a[<span class="string">'target'</span>])  <span class="comment"># 获取target属性</span></span><br><span class="line">print(soup.a.attrs)  <span class="comment"># 获取所有属性</span></span><br><span class="line">print(soup.a.attrs[<span class="string">'href'</span>])  <span class="comment"># 获取href属性</span></span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;测试bs4&lt;/title&gt;</span><br><span class="line">测试bs4</span><br><span class="line">测试bs4</span><br><span class="line">测试bs4</span><br><span class="line"><span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">    甄姬</span><br><span class="line">    百里守约</span><br><span class="line">李白</span><br><span class="line">    太乙真人</span><br><span class="line"></span><br><span class="line">title</span><br><span class="line">http://www.song.com/</span><br><span class="line">赵匡义</span><br><span class="line">_self</span><br><span class="line">&#123;<span class="string">'href'</span>: <span class="string">'http://www.song.com/'</span>, <span class="string">'title'</span>: <span class="string">'赵匡义'</span>, <span class="string">'target'</span>: <span class="string">'_self'</span>&#125;</span><br><span class="line">http://www.song.com/</span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-3-3】嵌套选择"><a href="#【7-3-3】嵌套选择" class="headerlink" title="【7.3.3】嵌套选择"></a><font color="#ff0000">【7.3.3】嵌套选择</font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;This is a demo&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.head.title)</span><br><span class="line">print(type(soup.head.title))</span><br><span class="line">print(soup.head.title.string)</span><br></pre></td></tr></table></figure>
+<p>获取 head 节点里面的 title 节点，输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;This is a demo&lt;/title&gt;</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">bs4</span>.<span class="title">element</span>.<span class="title">Tag</span>'&gt;</span></span><br><span class="line"><span class="class"><span class="title">This</span> <span class="title">is</span> <span class="title">a</span> <span class="title">demo</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="【7-3-4】关联选择"><a href="#【7-3-4】关联选择" class="headerlink" title="【7.3.4】关联选择"></a><font color="#ff0000">【7.3.4】关联选择</font></h1><ul>
+<li>contents 属性：获取某个节点元素的直接子节点</li>
+<li>children 属性：遍历某个节点元素的子节点</li>
+<li>descendants 属性：获取某个节点元素所有的子孙节点</li>
+<li>parent 属性：获取某个节点元素的父节点</li>
+<li>parents 属性：获取某个节点元素所有的祖先节点</li>
+<li>next_sibling 属性：获取节点的下一个兄弟元素</li>
+<li>previous_sibling 属性：获取节点的上一个兄弟元素</li>
+<li>next_siblings 属性：获取某个节点所有后面的兄弟元素</li>
+<li>previous_siblings 属性：获取某个节点所有前面的兄弟元素</li>
+</ul>
+<font color="#ff0000">contents 属性应用示例</font>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/elsie" class="sister" id="link1"&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/lacie" class="sister" id="link2"&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/tillie" class="sister" id="link3"&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.p.contents)</span><br></pre></td></tr></table></figure>
+<p>获取 p 节点元素的直接子节点，输出结果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">['\n            Once upon a time there were three little sisters; and their names were\n            ', &lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;</span><br><span class="line">&lt;span&gt;Elsie&lt;/span&gt;</span><br><span class="line">&lt;/a&gt;, '\n', &lt;a class="sister" href="http://example.com/lacie" id="link2"&gt;Lacie&lt;/a&gt;, ' \n            and\n            ', &lt;a class="sister" href="http://example.com/tillie" id="link3"&gt;Tillie&lt;/a&gt;, '\n            and they lived at the bottom of a well.\n        ']</span><br></pre></td></tr></table></figure></p>
+<font color="#ff0000">children 属性应用示例：</font>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/elsie" class="sister" id="link1"&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/lacie" class="sister" id="link2"&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/tillie" class="sister" id="link3"&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.p.children)</span><br><span class="line"><span class="keyword">for</span> i, child <span class="keyword">in</span> enumerate(soup.p.children):</span><br><span class="line">    print(i, child)</span><br></pre></td></tr></table></figure>
+<p>遍历 p 节点元素的子节点，输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;list_iterator object at <span class="number">0x00000228E3C205F8</span>&gt;</span><br><span class="line"><span class="number">0</span> </span><br><span class="line">            Once upon a time there were three little sisters; <span class="keyword">and</span> their names were</span><br><span class="line">            </span><br><span class="line">1 &lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;</span><br><span class="line">&lt;span&gt;Elsie&lt;/span&gt;</span><br><span class="line">&lt;/a&gt;</span><br><span class="line"><span class="number">2</span> </span><br><span class="line"></span><br><span class="line">3 &lt;a class="sister" href="http://example.com/lacie" id="link2"&gt;Lacie&lt;/a&gt;</span><br><span class="line"><span class="number">4</span>  </span><br><span class="line">            <span class="keyword">and</span></span><br><span class="line">            </span><br><span class="line">5 &lt;a class="sister" href="http://example.com/tillie" id="link3"&gt;Tillie&lt;/a&gt;</span><br><span class="line"><span class="number">6</span> </span><br><span class="line">            <span class="keyword">and</span> they lived at the bottom of a well.</span><br></pre></td></tr></table></figure></p>
+<font color="#ff0000">descendants 属性应用示例：</font><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/elsie" class="sister" id="link1"&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/lacie" class="sister" id="link2"&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/tillie" class="sister" id="link3"&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.p.descendants)</span><br><span class="line"><span class="keyword">for</span> i, child <span class="keyword">in</span> enumerate(soup.p.descendants):</span><br><span class="line">    print(i, child)</span><br></pre></td></tr></table></figure><br><br>获取 p 节点元素所有的子孙节点，输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object descendants at <span class="number">0x0000018404A4C3B8</span>&gt;</span><br><span class="line"><span class="number">0</span> </span><br><span class="line">            Once upon a time there were three little sisters; <span class="keyword">and</span> their names were</span><br><span class="line">            </span><br><span class="line">1 &lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;</span><br><span class="line">&lt;span&gt;Elsie&lt;/span&gt;</span><br><span class="line">&lt;/a&gt;</span><br><span class="line"><span class="number">2</span> </span><br><span class="line"></span><br><span class="line">3 &lt;span&gt;Elsie&lt;/span&gt;</span><br><span class="line"><span class="number">4</span> Elsie</span><br><span class="line"><span class="number">5</span> </span><br><span class="line"></span><br><span class="line"><span class="number">6</span> </span><br><span class="line"></span><br><span class="line">7 &lt;a class="sister" href="http://example.com/lacie" id="link2"&gt;Lacie&lt;/a&gt;</span><br><span class="line"><span class="number">8</span> Lacie</span><br><span class="line"><span class="number">9</span>  </span><br><span class="line">            <span class="keyword">and</span></span><br><span class="line">            </span><br><span class="line">10 &lt;a class="sister" href="http://example.com/tillie" id="link3"&gt;Tillie&lt;/a&gt;</span><br><span class="line"><span class="number">11</span> Tillie</span><br><span class="line"><span class="number">12</span> </span><br><span class="line">            <span class="keyword">and</span> they lived at the bottom of a well.</span><br></pre></td></tr></table></figure><br><br><font color="#ff0000">parent 属性应用示例：</font><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;</span></span><br><span class="line"><span class="string">        &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line"><span class="string">    &lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/elsie" class="sister" id="link1"&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">    &lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.a.parent)</span><br></pre></td></tr></table></figure><br><br>获取 a 节点元素的父节点，输出结果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class="story"&gt;</span><br><span class="line">            Once upon a time there were three little sisters; <span class="keyword">and</span> their names were</span><br><span class="line">            &lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;</span><br><span class="line">&lt;span&gt;Elsie&lt;/span&gt;</span><br><span class="line">&lt;/a&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure><br><br><font color="#ff0000">parents 属性应用示例：</font><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/elsie" class="sister" id="link1"&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(type(soup.a.parents))</span><br><span class="line">print(list(enumerate(soup.a.parents)))</span><br></pre></td></tr></table></figure><br><br>获取 a 节点元素所有的祖先节点，输出结果：<br><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">generator</span>'&gt;</span></span><br><span class="line"><span class="class">[<span class="params">(<span class="number">0</span>, &lt;p class=<span class="string">"story"</span>&gt;</span></span></span><br><span class="line"><span class="class"><span class="params">&lt;a class=<span class="string">"sister"</span> href=<span class="string">"http://example.com/elsie"</span> id=<span class="string">"link1"</span>&gt;</span></span></span><br><span class="line"><span class="class"><span class="params">&lt;span&gt;Elsie&lt;/span&gt;</span></span></span><br><span class="line"><span class="class"><span class="params">&lt;/a&gt;</span></span></span><br><span class="line">&lt;/p&gt;), (1, &lt;body&gt;</span><br><span class="line">&lt;p class="story"&gt;</span><br><span class="line">&lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;</span><br><span class="line">&lt;span&gt;Elsie&lt;/span&gt;</span><br><span class="line">&lt;/a&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;), (2, &lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p class="story"&gt;</span><br><span class="line">&lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;</span><br><span class="line">&lt;span&gt;Elsie&lt;/span&gt;</span><br><span class="line">&lt;/a&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;&lt;/html&gt;), (3, &lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p class="story"&gt;</span><br><span class="line">&lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;</span><br><span class="line">&lt;span&gt;Elsie&lt;/span&gt;</span><br><span class="line">&lt;/a&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;&lt;/html&gt;)]</span><br></pre></td></tr></table></figure><br><br><font color="#ff0000">next_sibling、previous_sibling、next_siblings、previous_siblings 属性应用示例：</font>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">"""</span></span><br><span class="line"><span class="string">&lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">        &lt;p class="story"&gt;</span></span><br><span class="line"><span class="string">            Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/elsie" class="sister" id="link1"&gt;</span></span><br><span class="line"><span class="string">                &lt;span&gt;Elsie&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            Hello</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/lacie" class="sister" id="link2"&gt;Lacie&lt;/a&gt; </span></span><br><span class="line"><span class="string">            and</span></span><br><span class="line"><span class="string">            &lt;a href="http://example.com/tillie" class="sister" id="link3"&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"><span class="string">            and they lived at the bottom of a well.</span></span><br><span class="line"><span class="string">        &lt;/p&gt;</span></span><br><span class="line"><span class="string">    &lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">'lxml'</span>)</span><br><span class="line">print(<span class="string">'Next Sibling'</span>, soup.a.next_sibling)</span><br><span class="line">print(<span class="string">'Prev Sibling'</span>, soup.a.previous_sibling)</span><br><span class="line">print(<span class="string">'Next Siblings'</span>, list(enumerate(soup.a.next_siblings)))</span><br><span class="line">print(<span class="string">'Prev Siblings'</span>, list(enumerate(soup.a.previous_siblings)))</span><br></pre></td></tr></table></figure>
+<p>next_sibling 和 previous_sibling 分别获取 a 节点的下一个和上一个兄弟元素，next_siblings 和 previous_siblings 则分别返回 a 节点后面和前面的兄弟节点，输出结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Next Sibling </span><br><span class="line">            Hello</span><br><span class="line">            </span><br><span class="line">Prev Sibling </span><br><span class="line">            Once upon a time there were three little sisters; <span class="keyword">and</span> their names were</span><br><span class="line">            </span><br><span class="line">Next Siblings [(0, '\n            Hello\n            '), (1, &lt;a class="sister" href="http://example.com/lacie" id="link2"&gt;Lacie&lt;/a&gt;), (2, ' \n            and\n            '), (3, &lt;a class="sister" href="http://example.com/tillie" id="link3"&gt;Tillie&lt;/a&gt;), (4, '\n            and they lived at the bottom of a well.\n        ')]</span><br><span class="line">Prev Siblings [(<span class="number">0</span>, <span class="string">'\n            Once upon a time there were three little sisters; and their names were\n            '</span>)]</span><br></pre></td></tr></table></figure>
+<h1 id="【7-4】方法选择器"><a href="#【7-4】方法选择器" class="headerlink" title="【7.4】方法选择器"></a><font color="#ff0000">【7.4】方法选择器</font></h1><p>节点选择器直接调用节点的名称就可以选择节点元素，如果进行比较复杂的选择的话，方法选择器是一个不错的选择，它更灵活，常见的方法有 find_all、find 等，调用它们，直接传入相应的参数，就可以灵活查询了。</p>
+<h2 id="【7-4-1】find-all-方法"><a href="#【7-4-1】find-all-方法" class="headerlink" title="【7.4.1】find_all() 方法"></a><font color="#ff0000">【7.4.1】find_all() 方法</font></h2><p>find_all 方法可以查询所有符合条件的元素，给它传入一些属性或文本来得到符合条件的元素。find_all 方法的 API：<code>find_all(name , attrs , recursive , text , **kwargs)</code><br>新建 soup.html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>测试bs4<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    甄姬</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>百里守约<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>李白<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    太乙真人</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"song"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>李清照<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>王安石<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>苏轼<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>柳宗元<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.song.com/"</span> <span class="attr">title</span>=<span class="string">"赵匡义"</span> <span class="attr">target</span>=<span class="string">"_self"</span>&gt;</span>宋朝是最强大的王朝，不是军队的强大，而是经济很强大，国民都很有钱。<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.baidu.com/meinv.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"du"</span>&gt;</span>总为浮云能蔽日，长安不见使人愁<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tang"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">title</span>=<span class="string">"qing"</span>&gt;</span>清明时节雨纷纷，路上行人欲断魂，借问酒家何处有，牧童遥指杏花村。<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.163.com"</span> <span class="attr">title</span>=<span class="string">"qin"</span>&gt;</span>秦时明月汉时关，万里长征人未还，但使龙城飞将在，不教胡马度阴山。<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.126.com"</span> <span class="attr">name</span>=<span class="string">"qi"</span>&gt;</span>岐王宅里寻常见，崔九堂前几度闻，正是江南好风景，落花时节又逢君。<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.sina.com"</span> <span class="attr">class</span>=<span class="string">"du"</span>&gt;</span>杜甫<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>唐朝<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>宋朝<span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.haha.com"</span> <span class="attr">id</span>=<span class="string">"feng"</span>&gt;</span>凤凰台上凤凰游，凤去台空江自流，吴宫花草埋幽径，晋代衣冠成古丘。<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>示例代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(open(<span class="string">'soup.html'</span>, encoding=<span class="string">'utf8'</span>), <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.find_all(<span class="string">'a'</span>), <span class="string">'\n'</span>)</span><br><span class="line">print(soup.find_all(<span class="string">'a'</span>)[<span class="number">1</span>], <span class="string">'\n'</span>)</span><br><span class="line">print(soup.find_all(<span class="string">'a'</span>)[<span class="number">1</span>].text, <span class="string">'\n'</span>)</span><br><span class="line">print(soup.find_all([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'i'</span>]), <span class="string">'\n'</span>)</span><br><span class="line">print(soup.find_all(<span class="string">'a'</span>, limit=<span class="number">2</span>), <span class="string">'\n'</span>)</span><br><span class="line">print(soup.find_all(title=<span class="string">'qing'</span>), <span class="string">'\n'</span>)</span><br><span class="line">print(soup.find_all(attrs=&#123;<span class="string">'id'</span>: <span class="string">'feng'</span>&#125;), <span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[&lt;a href="http://www.song.com/" target="_self" title="赵匡义"&gt;宋朝是最强大的王朝，不是军队的强大，而是经济很强大，国民都很有钱。&lt;/a&gt;, &lt;a class="du" href=""&gt;总为浮云能蔽日，长安不见使人愁&lt;/a&gt;, &lt;a href="http://www.baidu.com" title="qing"&gt;清明时节雨纷纷，路上行人欲断魂，借问酒家何处有，牧童遥指杏花村。&lt;/a&gt;, &lt;a href="http://www.163.com" title="qin"&gt;秦时明月汉时关，万里长征人未还，但使龙城飞将在，不教胡马度阴山。&lt;/a&gt;, &lt;a href="http://www.126.com" name="qi"&gt;岐王宅里寻常见，崔九堂前几度闻，正是江南好风景，落花时节又逢君。&lt;/a&gt;, &lt;a class="du" href="http://www.sina.com"&gt;杜甫&lt;/a&gt;, &lt;a href="http://www.haha.com" id="feng"&gt;凤凰台上凤凰游，凤去台空江自流，吴宫花草埋幽径，晋代衣冠成古丘。&lt;/a&gt;] </span><br><span class="line"></span><br><span class="line">&lt;a class="du" href=""&gt;总为浮云能蔽日，长安不见使人愁&lt;/a&gt; </span><br><span class="line"></span><br><span class="line">总为浮云能蔽日，长安不见使人愁 </span><br><span class="line"></span><br><span class="line">[&lt;a href="http://www.song.com/" target="_self" title="赵匡义"&gt;宋朝是最强大的王朝，不是军队的强大，而是经济很强大，国民都很有钱。&lt;/a&gt;, &lt;a class="du" href=""&gt;总为浮云能蔽日，长安不见使人愁&lt;/a&gt;, &lt;a href="http://www.baidu.com" title="qing"&gt;清明时节雨纷纷，路上行人欲断魂，借问酒家何处有，牧童遥指杏花村。&lt;/a&gt;, &lt;a href="http://www.163.com" title="qin"&gt;秦时明月汉时关，万里长征人未还，但使龙城飞将在，不教胡马度阴山。&lt;/a&gt;, &lt;a href="http://www.126.com" name="qi"&gt;岐王宅里寻常见，崔九堂前几度闻，正是江南好风景，落花时节又逢君。&lt;/a&gt;, &lt;a class="du" href="http://www.sina.com"&gt;杜甫&lt;/a&gt;, &lt;b&gt;唐朝&lt;/b&gt;, &lt;i&gt;宋朝&lt;/i&gt;, &lt;a href="http://www.haha.com" id="feng"&gt;凤凰台上凤凰游，凤去台空江自流，吴宫花草埋幽径，晋代衣冠成古丘。&lt;/a&gt;] </span><br><span class="line"></span><br><span class="line">[&lt;a href="http://www.song.com/" target="_self" title="赵匡义"&gt;宋朝是最强大的王朝，不是军队的强大，而是经济很强大，国民都很有钱。&lt;/a&gt;, &lt;a class="du" href=""&gt;总为浮云能蔽日，长安不见使人愁&lt;/a&gt;] </span><br><span class="line"></span><br><span class="line">[&lt;a href="http://www.baidu.com" title="qing"&gt;清明时节雨纷纷，路上行人欲断魂，借问酒家何处有，牧童遥指杏花村。&lt;/a&gt;] </span><br><span class="line"></span><br><span class="line">[&lt;a href="http://www.haha.com" id="feng"&gt;凤凰台上凤凰游，凤去台空江自流，吴宫花草埋幽径，晋代衣冠成古丘。&lt;/a&gt;]</span><br></pre></td></tr></table></figure></p>
+<h2 id="【7-4-2】find-方法"><a href="#【7-4-2】find-方法" class="headerlink" title="【7.4.2】find() 方法"></a><font color="#ff0000">【7.4.2】find() 方法</font></h2><p>find() 方法使用方法与 find_all() 方法相同，不同的是，find 方法返回的是单个元素，也就是第一个匹配的元素，而 find_all 返回的是所有匹配的元素组成的列表<br>特别的：</p>
+<ul>
+<li><p>find_parents 和 find_parent：前者返回所有祖先节点，后者返回直接父节点。</p>
+</li>
+<li><p>find_next_siblings 和 find_next_sibling：前者返回后面所有的兄弟节点，后者返回后面第一个兄弟节点。</p>
+</li>
+<li><p>find_previous_siblings 和 find_previous_sibling：前者返回前面所有的兄弟节点，后者返回前面第一个兄弟节点。</p>
+</li>
+<li><p>find_all_next 和 find_next：前者返回节点后所有符合条件的节点，后者返回第一个符合条件的节点。</p>
+</li>
+<li><p>find_all_previous 和 find_previous：前者返回节点前所有符合条件的节点，后者返回第一个符合条件的节点。</p>
+</li>
+</ul>
+<h1 id="【7-5】CSS-选择器"><a href="#【7-5】CSS-选择器" class="headerlink" title="【7.5】CSS 选择器"></a><font color="#ff0000">【7.5】CSS 选择器</font></h1><p>使用 CSS 选择器，只需要调用 select 方法，传入相应的 CSS 选择器即可<br>新建 soup.html 文件：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tang"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">title</span>=<span class="string">"qing"</span>&gt;</span>清明时节雨纷纷，路上行人欲断魂，借问酒家何处有，牧童遥指杏花村。<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.163.com"</span> <span class="attr">title</span>=<span class="string">"qin"</span>&gt;</span>秦时明月汉时关，万里长征人未还，但使龙城飞将在，不教胡马度阴山。<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.126.com"</span> <span class="attr">name</span>=<span class="string">"qi"</span>&gt;</span>岐王宅里寻常见，崔九堂前几度闻，正是江南好风景，落花时节又逢君。<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.sina.com"</span> <span class="attr">class</span>=<span class="string">"du"</span>&gt;</span>杜甫<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.haha.com"</span> <span class="attr">id</span>=<span class="string">"feng"</span>&gt;</span>凤凰台上凤凰游，凤去台空江自流，吴宫花草埋幽径，晋代衣冠成古丘。<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>通过 CSS 选择器依次选择 class=”tang” 的 div 节点下的 a 节点、id 为 feng 的节点以及其 href 元素：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(open(<span class="string">'soup.html'</span>, encoding=<span class="string">'utf8'</span>), <span class="string">'lxml'</span>)</span><br><span class="line">print(soup.select(<span class="string">'li'</span>), <span class="string">'\n'</span>)</span><br><span class="line">print(soup.select(<span class="string">'.tang &gt; ul &gt; li &gt; a'</span>)[<span class="number">2</span>], <span class="string">'\n'</span>)</span><br><span class="line">print(soup.select(<span class="string">'#feng'</span>)[<span class="number">0</span>].text, <span class="string">'\n'</span>)</span><br><span class="line">print(soup.select(<span class="string">'#feng'</span>)[<span class="number">0</span>][<span class="string">'href'</span>], <span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[&lt;li&gt;&lt;a href="http://www.baidu.com" title="qing"&gt;清明时节雨纷纷，路上行人欲断魂，借问酒家何处有，牧童遥指杏花村。&lt;/a&gt; &lt;/li&gt;, &lt;li&gt;&lt;a href="http://www.163.com" title="qin"&gt;秦时明月汉时关，万里长征人未还，但使龙城飞将在，不教胡马度阴山。&lt;/a&gt; &lt;/li&gt;, &lt;li&gt;&lt;a href="http://www.126.com" name="qi"&gt;岐王宅里寻常见，崔九堂前几度闻，正是江南好风景，落花时节又逢君。&lt;/a&gt; &lt;/li&gt;, &lt;li&gt;&lt;a class="du" href="http://www.sina.com"&gt;杜甫&lt;/a&gt; &lt;/li&gt;, &lt;li&gt;&lt;a href="http://www.haha.com" id="feng"&gt;凤凰台上凤凰游，凤去台空江自流，吴宫花草埋幽径，晋代衣冠成古丘。&lt;/a&gt; &lt;/li&gt;] </span><br><span class="line"></span><br><span class="line">&lt;a href="http://www.126.com" name="qi"&gt;岐王宅里寻常见，崔九堂前几度闻，正是江南好风景，落花时节又逢君。&lt;/a&gt; </span><br><span class="line"></span><br><span class="line">凤凰台上凤凰游，凤去台空江自流，吴宫花草埋幽径，晋代衣冠成古丘。 </span><br><span class="line"></span><br><span class="line">http://www.haha.com</span><br></pre></td></tr></table></figure></p>
+<p>附表：CSS 选择器，来源：<a href="https://www.w3school.com.cn/cssref/css_selectors.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/cssref/css_selectors.asp</a></p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>例子</th>
+<th>例子描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.class</td>
+<td>.intro</td>
+<td>选择 class=”intro” 的所有元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>#id</td>
+<td>#firstname</td>
+<td>选择 id=”firstname” 的所有元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>*</td>
+<td>*</td>
+<td>选择所有元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>element</td>
+<td>p</td>
+<td>选择所有 <p> 元素</p></td>
+<td>1</td>
+</tr>
+<tr>
+<td>element,element</td>
+<td>div,p</td>
+<td>选择所有 <div> 元素和所有 <p> 元素</p></div></td>
+<td>1</td>
+</tr>
+<tr>
+<td>element element</td>
+<td>div p</td>
+<td>选择 <div> 元素内部的所有 <p> 元素</p></div></td>
+<td>1</td>
+</tr>
+<tr>
+<td>element&gt;element</td>
+<td>div&gt;p</td>
+<td>选择父元素为 <div> 元素的所有 <p> 元素</p></div></td>
+<td>2</td>
+</tr>
+<tr>
+<td>element+element</td>
+<td>div+p</td>
+<td>选择紧接在 <div> 元素之后的所有 <p> 元素</p></div></td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attribute]</td>
+<td>[target]</td>
+<td>选择带有 target 属性所有元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attribute=value]</td>
+<td>[target=_blank]</td>
+<td>选择 target=”_blank” 的所有元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attribute~=value]</td>
+<td>[title~=flower]</td>
+<td>选择 title 属性包含单词 “flower” 的所有元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attribute</td>
+<td>=value]</td>
+<td>[lang</td>
+<td>=en]</td>
+<td>选择 lang 属性值以 “en” 开头的所有元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:link</td>
+<td>a:link</td>
+<td>选择所有未被访问的链接</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:visited</td>
+<td>a:visited</td>
+<td>选择所有已被访问的链接</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:active</td>
+<td>a:active</td>
+<td>选择活动链接</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>a:hover</td>
+<td>选择鼠标指针位于其上的链接</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>input:focus</td>
+<td>选择获得焦点的 input 元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:first-letter</td>
+<td>p:first-letter</td>
+<td>选择每个 <p> 元素的首字母</p></td>
+<td>1</td>
+</tr>
+<tr>
+<td>:first-line</td>
+<td>p:first-line</td>
+<td>选择每个 <p> 元素的首行</p></td>
+<td>1</td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>p:first-child</td>
+<td>选择属于父元素的第一个子元素的每个 <p> 元素</p></td>
+<td>2</td>
+</tr>
+<tr>
+<td>:before</td>
+<td>p:before</td>
+<td>在每个 <p> 元素的内容之前插入内容</p></td>
+<td>2</td>
+</tr>
+<tr>
+<td>:after</td>
+<td>p:after</td>
+<td>在每个 <p> 元素的内容之后插入内容</p></td>
+<td>2</td>
+</tr>
+<tr>
+<td>:lang(language)</td>
+<td>p:lang(it)</td>
+<td>选择带有以 “it” 开头的 lang 属性值的每个 <p> 元素</p></td>
+<td>2</td>
+</tr>
+<tr>
+<td>element1~element2</td>
+<td>p~ul</td>
+<td>选择前面有 <p> 元素的每个 <ul> 元素</ul></p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attribute^=value]</td>
+<td>a[src^=”https”]</td>
+<td>选择其 src 属性值以 “https” 开头的每个 <a> 元素</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attribute$=value]</td>
+<td>a[src$=”.pdf”]</td>
+<td>选择其 src 属性以 “.pdf” 结尾的所有 <a> 元素</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attribute*=value]</td>
+<td>a[src*=”abc”]</td>
+<td>选择其 src 属性中包含 “abc” 子串的每个 <a> 元素</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:first-of-type</td>
+<td>p:first-of-type</td>
+<td>选择属于其父元素的首个 <p> 元素的每个 </p><p> 元素</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:last-of-type</td>
+<td>p:last-of-type</td>
+<td>选择属于其父元素的最后 <p> 元素的每个 </p><p> 元素</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:only-of-type</td>
+<td>p:only-of-type</td>
+<td>选择属于其父元素唯一的 <p> 元素的每个 </p><p> 元素</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:only-child</td>
+<td>p:only-child</td>
+<td>选择属于其父元素的唯一子元素的每个 <p> 元素</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-child(n)</td>
+<td>p:nth-child(2)</td>
+<td>选择属于其父元素的第二个子元素的每个 <p> 元素</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-last-child(n)</td>
+<td>p:nth-last-child(2)</td>
+<td>同上，从最后一个子元素开始计数</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-of-type(n)</td>
+<td>p:nth-of-type(2)</td>
+<td>选择属于其父元素第二个 <p> 元素的每个 </p><p> 元素</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-last-of-type(n)</td>
+<td>p:nth-last-of-type(2)</td>
+<td>同上，但是从最后一个子元素开始计数</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>p:last-child</td>
+<td>选择属于其父元素最后一个子元素每个 <p> 元素</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:root</td>
+<td>:root</td>
+<td>选择文档的根元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:empty</td>
+<td>p:empty</td>
+<td>选择没有子元素的每个 <p> 元素（包括文本节点）</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>:target</td>
+<td>#news:target</td>
+<td>选择当前活动的 #news 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>input:enabled</td>
+<td>选择每个启用的 <input> 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>input:disabled</td>
+<td>选择每个禁用的 <input> 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>input:checked</td>
+<td>选择每个被选中的 <input> 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:not(selector)</td>
+<td>:not(p)</td>
+<td>选择非 <p> 元素的每个元素</p></td>
+<td>3</td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>::selection</td>
+<td>选择被用户选取的元素部分</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h1 id="【7-6】附表：Beautiful-Soup-库-soup-对象常用属性与方法"><a href="#【7-6】附表：Beautiful-Soup-库-soup-对象常用属性与方法" class="headerlink" title="【7.6】附表：Beautiful Soup 库 soup 对象常用属性与方法"></a><font color="#ff0000">【7.6】附表：Beautiful Soup 库 soup 对象常用属性与方法</font></h1><table>
+<thead>
+<tr>
+<th>基本元素</th>
+<th>说明</th>
+<th>返回类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tag</td>
+<td>soup.a</td>
+<td>bs4.element.Tag</td>
+</tr>
+<tr>
+<td>name</td>
+<td>soup.a.name</td>
+<td>str</td>
+</tr>
+<tr>
+<td>attrs</td>
+<td>soup.a.attrs</td>
+<td>dict</td>
+</tr>
+<tr>
+<td>contents</td>
+<td>子节点</td>
+<td>list</td>
+</tr>
+<tr>
+<td>children</td>
+<td>遍历子节点</td>
+<td>list_iterator</td>
+</tr>
+<tr>
+<td>descendants</td>
+<td>遍历所有子孙节点</td>
+<td>generator</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>返回父亲标签</td>
+<td>bs4.element.Tag</td>
+</tr>
+<tr>
+<td>parents</td>
+<td>上行遍历父辈标签</td>
+<td>generator</td>
+</tr>
+<tr>
+<td>prettify()</td>
+<td>添加/n</td>
+<td>str</td>
+</tr>
+<tr>
+<td>find_all(name,attr)</td>
+<td>soup.find_all(‘a’)/([‘a’,‘b’])/(True)/(‘p’,‘course’)/(id=‘link1’)/(string=‘python’)</td>
+<td>bs4.element.ResultSet</td>
+</tr>
+<tr>
+<td>find()</td>
+<td>soup.find(‘a’)/返回第一个a标签</td>
+<td>bs4.element.Tag</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-26T22:03:12+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2019年8月26日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/08/26/A38-Python3-spider-C08/&title=Python3 爬虫学习笔记 C08 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第七章 —— 【解析库 Beautiful Soup】
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/08/26/A38-Python3-spider-C08/&title=Python3 爬虫学习笔记 C08 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第七章 —— 【解析库 Beautiful Soup】
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACr0lEQVR42u3aQWrEMAwF0Ln/pafQfTJfktUJ9GVVaBPruWAJya9X/Lx/n+rPV7+9X+XqO8kXmg8eHh5eK/Sr5yq4fLGrd5Og7+O5jxkPDw9vm5cng+Qv8ySRpJY8zeDh4eE9jZcEen9MV7eput14eHh4T+P1iukqO99KPDw8vO/ykhI2aSLkrdjJtq70WvDw8PBi3t4AbO/nR8z38PDw/iXv3XquEkAy3KomiVGceHh4eAu8+0DnSWLSjKhezCrc5MLDw8Mb8PIx//0RX92C5PtJYviwIh4eHt4yr1dAVwdpyW97Vxk+FNN4eHh4h3inPlq9MpWPynpDODw8PLzv8pIWQK/RkF8vyKnlxICHh4d3qKSeNx2qI7HefYAPq+Dh4eGt8aqj/WrTIVmlOn6L1sLDw8Nb4DVfiI/p3l2GHF/4H+Lh4eEd4uVBJC3aeYGeb1D0NTw8PLwFXh7iqcN93vLIR2h4eHh4e7weoDlnG4+7quM3PDw8vLO8+dWovODuFc29ARgeHh7eHm/StJ00fydbOYkKDw8Pb4OXvJAfzb3h2aTdHG0uHh4e3piXH75Rb6N4ZPcK66SUx8PDw9vgJQdu0uTN36oO2yYNCzw8PLw9XrXFcDgvBZvVHL/h4eHhLfCSoPNkkG9EUl6fqo3x8PDwNnjVI74XykZLoszAw8PDO8TrDbQm4eaHe3V2V8h7eHh4eGNeNejqgV4doTWL48nCeHh4eDFsMog61cjI01Lh0hUeHh7eAm+ePHpDr97G9Yp7PDw8vA1engzycdckzeQVctI0wcPDw9vjVY/43mKnRl95uxkPDw/vabxJvzS/oDAZmOHh4eF9l5f85eQ6wuQLeHh4eH/Py1sGybvVgz6/oFAeceHh4eEt8KoDsF4pnBTl1ZbEvJGBh4eHV+T9ACRMnHH8HueZAAAAAElFTkSuQmCC'>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/08/26/A38-Python3-spider-C08/&title=Python3 爬虫学习笔记 C08 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第七章 —— 【解析库 Beautiful Soup】
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACr0lEQVR42u3aQWrEMAwF0Ln/pafQfTJfktUJ9GVVaBPruWAJya9X/Lx/n+rPV7+9X+XqO8kXmg8eHh5eK/Sr5yq4fLGrd5Og7+O5jxkPDw9vm5cng+Qv8ySRpJY8zeDh4eE9jZcEen9MV7eput14eHh4T+P1iukqO99KPDw8vO/ykhI2aSLkrdjJtq70WvDw8PBi3t4AbO/nR8z38PDw/iXv3XquEkAy3KomiVGceHh4eAu8+0DnSWLSjKhezCrc5MLDw8Mb8PIx//0RX92C5PtJYviwIh4eHt4yr1dAVwdpyW97Vxk+FNN4eHh4h3inPlq9MpWPynpDODw8PLzv8pIWQK/RkF8vyKnlxICHh4d3qKSeNx2qI7HefYAPq+Dh4eGt8aqj/WrTIVmlOn6L1sLDw8Nb4DVfiI/p3l2GHF/4H+Lh4eEd4uVBJC3aeYGeb1D0NTw8PLwFXh7iqcN93vLIR2h4eHh4e7weoDlnG4+7quM3PDw8vLO8+dWovODuFc29ARgeHh7eHm/StJ00fydbOYkKDw8Pb4OXvJAfzb3h2aTdHG0uHh4e3piXH75Rb6N4ZPcK66SUx8PDw9vgJQdu0uTN36oO2yYNCzw8PLw9XrXFcDgvBZvVHL/h4eHhLfCSoPNkkG9EUl6fqo3x8PDwNnjVI74XykZLoszAw8PDO8TrDbQm4eaHe3V2V8h7eHh4eGNeNejqgV4doTWL48nCeHh4eDFsMog61cjI01Lh0hUeHh7eAm+ePHpDr97G9Yp7PDw8vA1engzycdckzeQVctI0wcPDw9vjVY/43mKnRl95uxkPDw/vabxJvzS/oDAZmOHh4eF9l5f85eQ6wuQLeHh4eH/Py1sGybvVgz6/oFAeceHh4eEt8KoDsF4pnBTl1ZbEvJGBh4eHV+T9ACRMnHH8HueZAAAAAElFTkSuQmCC'>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/08/25/A37-Python3-spider-C07/" rel="prev" title="Python3 爬虫学习笔记 C07">
+                                    
+                                        Python3 爬虫学习笔记 C07
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/爬虫/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>爬虫</a> <a class="tag" href="/tags/lxml/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>lxml</a> <a class="tag" href="/tags/XPath/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>XPath</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+        <section id="comments">
+          <div id="gitalk-container"></div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Python3 爬虫学习笔记 C08',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/images/trhx.png'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+          <h2>TRHX'S BLOG</h2>
+        
+        
+          <p>求知若饥 虚心若愚</p>
+
+        
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://github.com/TRHX"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://csdn.itrhx.com/"
+              class="social fab fa-cuttlefish flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/tan-70-56/activities"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-4uNl4e-mZCHkp6Wk9GckJI"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+    <!-- 彩色滚动字体-->
+    <div id="binft" align="center"></div>
+    <script>
+      var binft = function (r) {
+        function t() {
+          return b[Math.floor(Math.random() * b.length)]
+        }  
+        function e() {
+          return String.fromCharCode(94 * Math.random() + 33)
+        }
+        function n(r) {
+          for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+            var l = document.createElement("span");
+            l.textContent = e(), l.style.color = t(), n.appendChild(l)
+          }
+          return n
+        }
+        function i() {
+          var t = o[c.skillI];
+          c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+        }
+        var l = "",
+        o = ["业精于勤，荒于嬉；", "行成于思，毁于随。"].map(function (r) {
+        return r + ""
+        }),
+        a = 2,
+        g = 1,
+        s = 5,
+        d = 75,
+        b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+        c = {
+          text: "",
+          prefixP: -s,
+          skillI: 0,
+          skillP: 0,
+          direction: "forward",
+          delay: a,
+          step: g
+        };
+        i()
+        };
+        binft(document.getElementById('binft'));
+    </script>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-1】关于-Beautiful-Soup"><span class="toc-text">【7.1】关于 Beautiful Soup</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-2】Beautiful-Soup-的基本使用"><span class="toc-text">【7.2】Beautiful Soup 的基本使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-3】节点选择器"><span class="toc-text">【7.3】节点选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【7-3-1】元素选择"><span class="toc-text">【7.3.1】元素选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【7-3-2】提取信息"><span class="toc-text">【7.3.2】提取信息</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-3-3】嵌套选择"><span class="toc-text">【7.3.3】嵌套选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-3-4】关联选择"><span class="toc-text">【7.3.4】关联选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-4】方法选择器"><span class="toc-text">【7.4】方法选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【7-4-1】find-all-方法"><span class="toc-text">【7.4.1】find_all() 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【7-4-2】find-方法"><span class="toc-text">【7.4.2】find() 方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-5】CSS-选择器"><span class="toc-text">【7.5】CSS 选择器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【7-6】附表：Beautiful-Soup-库-soup-对象常用属性与方法"><span class="toc-text">【7.6】附表：Beautiful Soup 库 soup 对象常用属性与方法</span></a></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          所有文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/archives/" href="/archives/"
+          
+          
+          id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/atom.xml" href="/atom.xml"
+          
+            rel="nofollow"
+          
+          
+          id="atom.xml">
+          
+            <i class="fas fa-rss fa-fw" aria-hidden="true"></i>
+          
+          RSS订阅
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="/comments/" href="/comments/"
+          
+            rel="nofollow"
+          
+          
+            target="_blank"
+          
+          id="comments">
+          
+            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+          
+          留言板
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于博主
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-handshake fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;欢迎光临</div>
+  
+</header>
+
+  <div class='content pure'>
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script>var getOSAndBrowser=function(){var os=navigator.platform;var userAgent=navigator.userAgent;var info="";var tempArray="";if(os.indexOf("Win")>-1){if(userAgent.indexOf("Windows NT 5.0")>-1){info+="Win2000"}else if(userAgent.indexOf("Windows NT 5.1")>-1){info+="WinXP"}else if(userAgent.indexOf("Windows NT 5.2")>-1){info+="Win2003"}else if(userAgent.indexOf("Windows NT 6.0")>-1){info+="WindowsVista"}else if(userAgent.indexOf("Windows NT 6.1")>-1||userAgent.indexOf("Windows 7")>-1){info+="Win7"}else if(userAgent.indexOf("Windows NT 6.2")>-1||userAgent.indexOf("Windows 8")>-1){info+="Win8"}else if(userAgent.indexOf("Windows NT 6.3")>-1||userAgent.indexOf("Windows 8.1")>-1){info+="Win8.1"}else if(userAgent.indexOf("Windows NT 10.0")>-1||userAgent.indexOf("Windows 10")>-1){info+="Win10"}else{info+="Other"}}else if(os.indexOf("Mac")>-1){info+="Mac"}else if(os.indexOf("X11")>-1){info+="Unix"}else if(os.indexOf("Linux")>-1){info+="Linux"}else{info+="Other"}info+="/";var isOpera=userAgent.indexOf("Opera")>-1;var isIE=userAgent.indexOf("compatible")>-1&&userAgent.indexOf("MSIE")>-1&&!isOpera;var isEdge=userAgent.toLowerCase().indexOf("edge")>-1&&!isIE;var isIE11=(userAgent.toLowerCase().indexOf("trident")>-1&&userAgent.indexOf("rv")>-1);if(/[Ff]irefox(\/\d+\.\d+)/.test(userAgent)){tempArray=/([Ff]irefox)\/(\d+\.\d+)/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else if(isIE){var version="";var reIE=new RegExp("MSIE (\\d+\\.\\d+);");reIE.test(userAgent);var fIEVersion=parseFloat(RegExp["$1"]);if(fIEVersion==7){version="IE7"}else if(fIEVersion==8){version="IE8"}else if(fIEVersion==9){version="IE9"}else if(fIEVersion==10){version="IE10"}else{version="0"}info+=version}else if(isEdge){info+="Edge"}else if(isIE11){info+="IE11"}else if(/[Cc]hrome\/\d+/.test(userAgent)){tempArray=/([Cc]hrome)\/(\d+)/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else if(/[Vv]ersion\/\d+\.\d+\.\d+(\.\d)* *[Ss]afari/.test(userAgent)){tempArray=/[Vv]ersion\/(\d+\.\d+\.\d+)(\.\d)* *([Ss]afari)/.exec(userAgent);info+=tempArray[3]+tempArray[1]}else if(/[Oo]pera.+[Vv]ersion\/\d+\.\d+/.test(userAgent)){tempArray=/([Oo]pera).+[Vv]ersion\/(\d+)\.\d+/.exec(userAgent);info+=tempArray[1]+tempArray[2]}else{info+="unknown"}return info};document.write("热烈欢迎来自"+returnCitySN["cname"]+"的朋友");document.write("<br>您的 IP 是："+returnCitySN["cip"]);document.write("<br>您使用的是："+getOSAndBrowser());</script>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-marked-alt fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;访客地图</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+      target="_blank"
+    
+    href="https://www.revolvermaps.com/"
+    title="https://www.revolvermaps.com/">
+    <i class="fas fa-info-circle fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <center><script type="text/javascript" src="//rf.revolvermaps.com/0/0/4.js?i=5eyl60h41k1&amp;m=6&amp;h=122&amp;c=ff0000&amp;r=30" async="async"></script></center>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;QQ交流群</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+      target="_blank"
+    
+    href="https://jq.qq.com/?_wv=1027&k=5F6HRuG"
+    title="https://jq.qq.com/?_wv=1027&k=5F6HRuG">
+    <i class="fas fa-paper-plane fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <p><a href="https://jq.qq.com/?_wv=1027&k=5F6HRuG" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/images/group.png"></a></p>
+
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/BLOG/" href="/categories/BLOG/"><div class='name'>BLOG</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/CDN/" href="/categories/CDN/"><div class='name'>CDN</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Hexo/" href="/categories/Hexo/"><div class='name'>Hexo</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Java/" href="/categories/Java/"><div class='name'>Java</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class='name'>Linux</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Markdown/" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python3-学习笔记/" href="/categories/Python3-学习笔记/"><div class='name'>Python3 学习笔记</div><div class='badge'>(21)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/Python3-基础/" href="/categories/Python3-学习笔记/Python3-基础/"><div class='name'>Python3 基础</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/Python3-爬虫/" href="/categories/Python3-学习笔记/Python3-爬虫/"><div class='name'>Python3 爬虫</div><div class='badge'>(8)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/Python3-经验/" href="/categories/Python3-学习笔记/Python3-经验/"><div class='name'>Python3 经验</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/WEB前端/" href="/categories/WEB前端/"><div class='name'>WEB前端</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/图床/" href="/categories/图床/"><div class='name'>图床</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/BLOG/" style="font-size: 16.5px; color: #888">BLOG</a> <a href="/tags/Beautiful-Soup/" style="font-size: 14px; color: #999">Beautiful Soup</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/Deepin/" style="font-size: 14px; color: #999">Deepin</a> <a href="/tags/Elicpse/" style="font-size: 14px; color: #999">Elicpse</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Github-Pages/" style="font-size: 14px; color: #999">Github Pages</a> <a href="/tags/HTTPS/" style="font-size: 16.5px; color: #888">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 21.5px; color: #666">Hexo</a> <a href="/tags/ICP备案/" style="font-size: 14px; color: #999">ICP备案</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS-预加载/" style="font-size: 14px; color: #999">JS 预加载</a> <a href="/tags/Markdown/" style="font-size: 16.5px; color: #888">Markdown</a> <a href="/tags/Material-X/" style="font-size: 14px; color: #999">Material X</a> <a href="/tags/PEP8/" style="font-size: 14px; color: #999">PEP8</a> <a href="/tags/PicGo/" style="font-size: 14px; color: #999">PicGo</a> <a href="/tags/Pygame/" style="font-size: 14px; color: #999">Pygame</a> <a href="/tags/Python/" style="font-size: 16.5px; color: #888">Python</a> <a href="/tags/SQL-Server-2012/" style="font-size: 14px; color: #999">SQL Server 2012</a> <a href="/tags/Selenium/" style="font-size: 19px; color: #777">Selenium</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/User-Agent/" style="font-size: 14px; color: #999">User-Agent</a> <a href="/tags/VMware/" style="font-size: 16.5px; color: #888">VMware</a> <a href="/tags/XPath/" style="font-size: 14px; color: #999">XPath</a> <a href="/tags/if语句/" style="font-size: 14px; color: #999">if语句</a> <a href="/tags/input-函数/" style="font-size: 14px; color: #999">input()函数</a> <a href="/tags/instant-page/" style="font-size: 14px; color: #999">instant.page</a> <a href="/tags/jsDeliver/" style="font-size: 14px; color: #999">jsDeliver</a> <a href="/tags/jsDelivr/" style="font-size: 14px; color: #999">jsDelivr</a> <a href="/tags/lxml/" style="font-size: 14px; color: #999">lxml</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/spfk/" style="font-size: 14px; color: #999">spfk</a> <a href="/tags/urllib/" style="font-size: 14px; color: #999">urllib</a> <a href="/tags/while循环/" style="font-size: 14px; color: #999">while循环</a> <a href="/tags/主题个性化/" style="font-size: 14px; color: #999">主题个性化</a> <a href="/tags/公安备案/" style="font-size: 14px; color: #999">公安备案</a> <a href="/tags/函数/" style="font-size: 14px; color: #999">函数</a> <a href="/tags/列表/" style="font-size: 14px; color: #999">列表</a> <a href="/tags/变量/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/图床/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/垃圾/" style="font-size: 14px; color: #999">垃圾</a> <a href="/tags/字典/" style="font-size: 14px; color: #999">字典</a> <a href="/tags/异常/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/技巧/" style="font-size: 14px; color: #999">技巧</a> <a href="/tags/操作列表/" style="font-size: 14px; color: #999">操作列表</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #999">数据类型</a> <a href="/tags/文件/" style="font-size: 14px; color: #999">文件</a> <a href="/tags/无界面浏览器/" style="font-size: 14px; color: #999">无界面浏览器</a> <a href="/tags/模块/" style="font-size: 14px; color: #999">模块</a> <a href="/tags/正则表达式/" style="font-size: 14px; color: #999">正则表达式</a> <a href="/tags/爬虫/" style="font-size: 24px; color: #555">爬虫</a> <a href="/tags/类/" style="font-size: 14px; color: #999">类</a> <a href="/tags/继承/" style="font-size: 14px; color: #999">继承</a> <a href="/tags/编辑器/" style="font-size: 14px; color: #999">编辑器</a>
+    </div>
+  </section>
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/playlist?id=2415512873"
+    title="https://music.163.com/#/playlist?id=2415512873">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="2625522030"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="https://github.com/TRHX"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="http://csdn.itrhx.com/"
+            class="social fab fa-cuttlefish flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/tan-70-56/activities"
+            class="social fab fa-zhihu flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=-4uNl4e-mZCHkp6Wk9GckJI"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2273902448&amp;site=qq&amp;menu=yes"
+            class="social fab fa-qq flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  Copyright <i class="far fa-copyright"></i> 2018-2019
+  <a href="https://www.itrhx.com/" target="_blank"> TRHX&#39;BLOG </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/icp.png">
+  <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <!-- 网站运行时间 -->
+  <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
+  <script>
+  var now = new Date(); 
+  function createtime() {
+    var grt= new Date("08/10/2018 17:38:00");//建站时间2018-08-10
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = "本站已勉强存活了 "
+    document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    /*document.getElementById("times").style.color="#0056FF";*/
+    }
+    setInterval("createtime()",250);
+  </script>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <!--
+  Powered by <a href="https://hexo.io/zh-cn/" target="_blank" class="codename">Hexo</a>
+  Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <span id="busuanzi_container_site_uv">UV:<span id="busuanzi_value_site_uv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <span class="post-count">Word Count:71.8k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">BY-NC-SA 4.0</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  -->
+  <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://tongji.baidu.com/" target="_blank">站长统计</a><br><br>
+  <div class="github-badge">
+    <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+    <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+  </div>
+  <div class="github-badge">
+    <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages">
+    <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span></a>
+  </div>
+  <div class="github-badge">
+    <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+    <span class="badge-subject">DNR</span><span class="badge-value bg-blueviolet">Aliyun</span></a>
+  </div>
+  <div class="github-badge">
+    <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速">
+    <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+  </div>
+  <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://xaoxuu.com/wiki/material-x/" target="_blank" title="站点使用 Material X 主题，作者：xaoxuu">
+    <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span></a>
+  </div>
+  <div class="github-badge">
+    <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+    <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+  </div>
+  <div class="github-badge">
+    <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+    <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+  </div>
+  <div class="github-badge">
+    <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>
+  </div>
+  <div class="github-badge">
+    <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
+  </div>
+  <div class="github-badge">
+    <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">71.8k</span>
+  </div>
+</footer>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/images/background/017.webp"],
+          {
+            duration: "5000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+          ["https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/images/background/017.webp"],
+          {
+            duration: "5000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: "d19a84b9d9a2ddb2c6b9",
+      clientSecret: "cec9feae5129a6106edc68ce06d167be8eb06021",
+      repo: "trhx.github.io",
+      owner: "trhx",
+      admin: "trhx",
+      
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+      
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+    gitalk.render('gitalk-container');
+  </script>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+  <!-- 十年之约 
+  <a target="_blank" href="http://join.foreverblog.cn" style="position:fixed;z-index:999;right:-5px;bottom: 25px;display: inline-block;width: 35px;border-radius: 5px;color:white;font-size:14px;line-height:17px;background: #1BC3FB;box-shadow: 0 0 5px #666;word-wrap: break-word;padding: 10px 6px;border: 2px solid white;">十年之约</a>-->
+  <!-- 单击显示文字 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/ClickShowText.js"></script>
+  <!-- 浏览器搞笑标题 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/FunnyTitle.js"></script>
+  <!-- 样式一（鼠标点击更换样式） 
+  <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>-->
+  <!-- 样式二（飘动的彩带） 
+  <script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script>-->
+  <!-- 数字雨 
+  <canvas id="canvas" width="1440" height="900" ></canvas>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/DigitalRain.js"></script>-->
+  <!--动态线条背景
+  <script type="text/javascript" color="27,195,251" opacity='0.7' zIndex="-5" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>-->
+  <!-- 速度优化脚本 -->
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/instantclick-1.2.2.js" type="module"></script>
+  <!-- 悟空 -->
+  <div id="wukong"><marquee direction="right"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.3/images/wukong.gif"></marquee></div>
+</body>
+</html>
