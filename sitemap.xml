@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
+    <loc>https://www.itrhx.com/2019/09/03/A40-Python3-spider-C10/</loc>
     
-    <lastmod>2019-08-30T05:34:12.548Z</lastmod>
+    <lastmod>2019-09-03T16:00:14.237Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2019/08/26/A38-Python3-spider-C08/</loc>
+    <loc>https://www.itrhx.com/2019/02/10/A18-free-cdn/</loc>
     
-    <lastmod>2019-08-27T11:01:20.814Z</lastmod>
+    <lastmod>2019-09-03T15:47:36.680Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.itrhx.com/2019/08/27/A39-Python3-spider-C09/</loc>
     
-    <lastmod>2019-08-27T10:58:37.296Z</lastmod>
+    <lastmod>2019-09-02T15:40:22.089Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/08/26/A38-Python3-spider-C08/</loc>
+    
+    <lastmod>2019-09-02T15:40:14.729Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
+    
+    <lastmod>2019-08-30T05:34:12.548Z</lastmod>
     
   </url>
   
@@ -271,13 +285,6 @@
     <loc>https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql/</loc>
     
     <lastmod>2019-08-01T06:46:58.234Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/02/10/A18-free-cdn/</loc>
-    
-    <lastmod>2019-08-01T01:32:35.150Z</lastmod>
     
   </url>
   

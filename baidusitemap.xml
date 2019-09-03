@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.itrhx.com/2019/08/26/A38-Python3-spider-C08/</loc>
-    <lastmod>2019-08-27</lastmod>
+    <loc>https://www.itrhx.com/2019/09/03/A40-Python3-spider-C10/</loc>
+    <lastmod>2019-09-03</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/02/10/A18-free-cdn/</loc>
+    <lastmod>2019-09-03</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/27/A39-Python3-spider-C09/</loc>
-    <lastmod>2019-08-27</lastmod>
+    <lastmod>2019-09-02</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/08/26/A38-Python3-spider-C08/</loc>
+    <lastmod>2019-09-02</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/25/A37-Python3-spider-C07/</loc>
     <lastmod>2019-08-25</lastmod>
@@ -83,9 +89,6 @@
     <lastmod>2019-08-05</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/05/14/A22-eclipse-connects-to-sql/</loc>
-    <lastmod>2019-08-01</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/02/10/A18-free-cdn/</loc>
     <lastmod>2019-08-01</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/09/09/A06-install-ubuntu18.04/</loc>
