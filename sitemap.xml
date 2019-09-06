@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
+    
+    <lastmod>2019-09-06T08:31:19.239Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/09/05/A42-Python3-spider-C12/</loc>
     
     <lastmod>2019-09-05T15:12:35.272Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://www.itrhx.com/2019/08/26/A38-Python3-spider-C08/</loc>
     
     <lastmod>2019-09-02T15:40:14.729Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
-    
-    <lastmod>2019-08-30T05:34:12.548Z</lastmod>
     
   </url>
   
