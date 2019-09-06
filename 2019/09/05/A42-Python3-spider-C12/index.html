@@ -462,11 +462,12 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           <blockquote>
-<center><font color="#1BC3FB" size="4">Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通图形验证码】</font></center>
+<center><font color="#1BC3FB" size="4">Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列 — 图形验证码】</font></center>
 </blockquote>
 <a id="more"></a>
 <h1 id="【12-1】关于普通图形验证码"><a href="#【12-1】关于普通图形验证码" class="headerlink" title="【12.1】关于普通图形验证码"></a><font color="#ff0000">【12.1】关于普通图形验证码</font></h1><p>普通图形验证码一般由四位纯数字、纯字母或者字母数字组合构成，是最常见的验证码，也是最简单的验证码，利用 tesserocr 或者 pytesseract 库即可识别此类验证码，前提是已经安装好 Tesseract-OCR 软件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A42/01.png" alt=""></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A42/01.png" alt="01"><br></fancybox>
+
 <h1 id="【12-2】tesserocr-库识别验证码"><a href="#【12-2】tesserocr-库识别验证码" class="headerlink" title="【12.2】tesserocr 库识别验证码"></a><font color="#ff0000">【12.2】tesserocr 库识别验证码</font></h1><p>简单示例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tesserocr</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">image = Image.open(<span class="string">'code.png'</span>)</span><br><span class="line">result = tesserocr.image_to_text(image)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
 <p>新建一个 Image 对象，调用 tesserocr 的 <code>image_to_text()</code> 方法，传入 Image 对象即可完成识别，另一种方法：</p>
@@ -515,10 +516,12 @@
 <p>示例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">image = Image.open(<span class="string">'code.png'</span>)</span><br><span class="line">image = image.convert(<span class="string">'L'</span>)</span><br><span class="line">image.show()</span><br><span class="line">result = pytesseract.image_to_string(image)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
 <p>Image 对象的 <code>convert()</code> 方法参数传入 L，即可将图片转化为灰度图像，转换前后对比：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A42/02.png" alt=""></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A42/02.png" alt="02"><br></fancybox>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">image = Image.open(<span class="string">'code.png'</span>)</span><br><span class="line">image = image.convert(<span class="string">'1'</span>)</span><br><span class="line">image.show()</span><br><span class="line">result = pytesseract.image_to_string(image)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
 <p>Image 对象的 <code>convert()</code> 方法参数传入 1，即可将图片进行二值化处理，处理前后对比：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A42/03.png" alt=""></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A42/03.png" alt="03"><br></fancybox>
+
 <h1 id="【12-5】tesserocr-与-pytesserocr-相关资料"><a href="#【12-5】tesserocr-与-pytesserocr-相关资料" class="headerlink" title="【12.5】tesserocr 与 pytesserocr 相关资料"></a><font color="#ff0000">【12.5】tesserocr 与 pytesserocr 相关资料</font></h1><ul>
 <li><p>tesserocr GitHub：<a href="https://github.com/sirfz/tesserocr" target="_blank" rel="noopener">https://github.com/sirfz/tesserocr</a></p>
 </li>
@@ -548,10 +551,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-05T23:12:35+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-07T03:58:49+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年9月5日</p>
+    <p>最后更新于 2019年9月7日</p>
   </a>
 </div>
 
@@ -566,7 +569,7 @@
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
           href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/09/05/A42-Python3-spider-C12/&title=Python3 爬虫学习笔记 C12 | TRHX'S BLOG&summary=
-Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通图形验证码】
+Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列 — 图形验证码】
 "
           
           >
@@ -580,7 +583,7 @@ Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通�
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
           href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/09/05/A42-Python3-spider-C12/&title=Python3 爬虫学习笔记 C12 | TRHX'S BLOG&summary=
-Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通图形验证码】
+Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列 — 图形验证码】
 "
           
           >
@@ -602,7 +605,7 @@ Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通�
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
           href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/09/05/A42-Python3-spider-C12/&title=Python3 爬虫学习笔记 C12 | TRHX'S BLOG&summary=
-Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通图形验证码】
+Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列 — 图形验证码】
 "
           
           >
@@ -634,6 +637,25 @@ Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通�
         
         
             <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2019/09/07/A43-Python3-spider-C13/" rel="prev" title="Python3 爬虫学习笔记 C13">
+                                  
+                                      Python3 爬虫学习笔记 C13
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/爬虫/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>爬虫</a> <a class="tag" href="/tags/滑动验证码/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>滑动验证码</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
                 
                     <section class="next">
@@ -1044,11 +1066,11 @@ Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通�
         
           <li><a class="flat-box" title="/categories/Markdown/" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badge'>(2)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/Python3-学习笔记/" href="/categories/Python3-学习笔记/"><div class='name'>Python3 学习笔记</div><div class='badge'>(25)</div></a></li>
+          <li><a class="flat-box" title="/categories/Python3-学习笔记/" href="/categories/Python3-学习笔记/"><div class='name'>Python3 学习笔记</div><div class='badge'>(26)</div></a></li>
         
           <li><a class="flat-box child" title="/categories/Python3-学习笔记/Python3-基础/" href="/categories/Python3-学习笔记/Python3-基础/"><div class='name'>Python3 基础</div><div class='badge'>(9)</div></a></li>
         
-          <li><a class="flat-box child" title="/categories/Python3-学习笔记/Python3-爬虫/" href="/categories/Python3-学习笔记/Python3-爬虫/"><div class='name'>Python3 爬虫</div><div class='badge'>(12)</div></a></li>
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/Python3-爬虫/" href="/categories/Python3-学习笔记/Python3-爬虫/"><div class='name'>Python3 爬虫</div><div class='badge'>(13)</div></a></li>
         
           <li><a class="flat-box child" title="/categories/Python3-学习笔记/Python3-经验/" href="/categories/Python3-学习笔记/Python3-经验/"><div class='name'>Python3 经验</div><div class='badge'>(4)</div></a></li>
         
@@ -1085,7 +1107,7 @@ Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通�
 </header>
 
     <div class='content pure'>
-      <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/BLOG/" style="font-size: 16.5px; color: #888">BLOG</a> <a href="/tags/Beautiful-Soup/" style="font-size: 14px; color: #999">Beautiful Soup</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/Deepin/" style="font-size: 14px; color: #999">Deepin</a> <a href="/tags/Elicpse/" style="font-size: 14px; color: #999">Elicpse</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Github-Pages/" style="font-size: 14px; color: #999">Github Pages</a> <a href="/tags/HTTPS/" style="font-size: 16.5px; color: #888">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 21.5px; color: #666">Hexo</a> <a href="/tags/ICP备案/" style="font-size: 14px; color: #999">ICP备案</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS-预加载/" style="font-size: 14px; color: #999">JS 预加载</a> <a href="/tags/Markdown/" style="font-size: 16.5px; color: #888">Markdown</a> <a href="/tags/Material-X/" style="font-size: 14px; color: #999">Material X</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #999">MongoDB</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/PEP8/" style="font-size: 14px; color: #999">PEP8</a> <a href="/tags/PicGo/" style="font-size: 14px; color: #999">PicGo</a> <a href="/tags/Pygame/" style="font-size: 14px; color: #999">Pygame</a> <a href="/tags/Python/" style="font-size: 16.5px; color: #888">Python</a> <a href="/tags/SQL-Server-2012/" style="font-size: 14px; color: #999">SQL Server 2012</a> <a href="/tags/Selenium/" style="font-size: 19px; color: #777">Selenium</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/User-Agent/" style="font-size: 14px; color: #999">User-Agent</a> <a href="/tags/VMware/" style="font-size: 16.5px; color: #888">VMware</a> <a href="/tags/XPath/" style="font-size: 14px; color: #999">XPath</a> <a href="/tags/if语句/" style="font-size: 14px; color: #999">if语句</a> <a href="/tags/input-函数/" style="font-size: 14px; color: #999">input()函数</a> <a href="/tags/instant-page/" style="font-size: 14px; color: #999">instant.page</a> <a href="/tags/jsDelivr/" style="font-size: 16.5px; color: #888">jsDelivr</a> <a href="/tags/lxml/" style="font-size: 14px; color: #999">lxml</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/spfk/" style="font-size: 14px; color: #999">spfk</a> <a href="/tags/urllib/" style="font-size: 14px; color: #999">urllib</a> <a href="/tags/while循环/" style="font-size: 14px; color: #999">while循环</a> <a href="/tags/主题个性化/" style="font-size: 14px; color: #999">主题个性化</a> <a href="/tags/公安备案/" style="font-size: 14px; color: #999">公安备案</a> <a href="/tags/函数/" style="font-size: 14px; color: #999">函数</a> <a href="/tags/列表/" style="font-size: 14px; color: #999">列表</a> <a href="/tags/变量/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/图床/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/图形验证码/" style="font-size: 14px; color: #999">图形验证码</a> <a href="/tags/垃圾/" style="font-size: 14px; color: #999">垃圾</a> <a href="/tags/字典/" style="font-size: 14px; color: #999">字典</a> <a href="/tags/异常/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/技巧/" style="font-size: 14px; color: #999">技巧</a> <a href="/tags/操作列表/" style="font-size: 14px; color: #999">操作列表</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #999">数据类型</a> <a href="/tags/文件/" style="font-size: 14px; color: #999">文件</a> <a href="/tags/文件储存/" style="font-size: 14px; color: #999">文件储存</a> <a href="/tags/无界面浏览器/" style="font-size: 14px; color: #999">无界面浏览器</a> <a href="/tags/模块/" style="font-size: 14px; color: #999">模块</a> <a href="/tags/正则表达式/" style="font-size: 14px; color: #999">正则表达式</a> <a href="/tags/爬虫/" style="font-size: 24px; color: #555">爬虫</a> <a href="/tags/类/" style="font-size: 14px; color: #999">类</a> <a href="/tags/继承/" style="font-size: 14px; color: #999">继承</a> <a href="/tags/编辑器/" style="font-size: 14px; color: #999">编辑器</a>
+      <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/BLOG/" style="font-size: 16.5px; color: #888">BLOG</a> <a href="/tags/Beautiful-Soup/" style="font-size: 14px; color: #999">Beautiful Soup</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/Deepin/" style="font-size: 14px; color: #999">Deepin</a> <a href="/tags/Elicpse/" style="font-size: 14px; color: #999">Elicpse</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Github-Pages/" style="font-size: 14px; color: #999">Github Pages</a> <a href="/tags/HTTPS/" style="font-size: 16.5px; color: #888">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 21.5px; color: #666">Hexo</a> <a href="/tags/ICP备案/" style="font-size: 14px; color: #999">ICP备案</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS-预加载/" style="font-size: 14px; color: #999">JS 预加载</a> <a href="/tags/Markdown/" style="font-size: 16.5px; color: #888">Markdown</a> <a href="/tags/Material-X/" style="font-size: 14px; color: #999">Material X</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #999">MongoDB</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/PEP8/" style="font-size: 14px; color: #999">PEP8</a> <a href="/tags/PicGo/" style="font-size: 14px; color: #999">PicGo</a> <a href="/tags/Pygame/" style="font-size: 14px; color: #999">Pygame</a> <a href="/tags/Python/" style="font-size: 16.5px; color: #888">Python</a> <a href="/tags/SQL-Server-2012/" style="font-size: 14px; color: #999">SQL Server 2012</a> <a href="/tags/Selenium/" style="font-size: 19px; color: #777">Selenium</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/User-Agent/" style="font-size: 14px; color: #999">User-Agent</a> <a href="/tags/VMware/" style="font-size: 16.5px; color: #888">VMware</a> <a href="/tags/XPath/" style="font-size: 14px; color: #999">XPath</a> <a href="/tags/if语句/" style="font-size: 14px; color: #999">if语句</a> <a href="/tags/input-函数/" style="font-size: 14px; color: #999">input()函数</a> <a href="/tags/instant-page/" style="font-size: 14px; color: #999">instant.page</a> <a href="/tags/jsDelivr/" style="font-size: 16.5px; color: #888">jsDelivr</a> <a href="/tags/lxml/" style="font-size: 14px; color: #999">lxml</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/spfk/" style="font-size: 14px; color: #999">spfk</a> <a href="/tags/urllib/" style="font-size: 14px; color: #999">urllib</a> <a href="/tags/while循环/" style="font-size: 14px; color: #999">while循环</a> <a href="/tags/主题个性化/" style="font-size: 14px; color: #999">主题个性化</a> <a href="/tags/公安备案/" style="font-size: 14px; color: #999">公安备案</a> <a href="/tags/函数/" style="font-size: 14px; color: #999">函数</a> <a href="/tags/列表/" style="font-size: 14px; color: #999">列表</a> <a href="/tags/变量/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/图床/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/图形验证码/" style="font-size: 14px; color: #999">图形验证码</a> <a href="/tags/垃圾/" style="font-size: 14px; color: #999">垃圾</a> <a href="/tags/字典/" style="font-size: 14px; color: #999">字典</a> <a href="/tags/异常/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/技巧/" style="font-size: 14px; color: #999">技巧</a> <a href="/tags/操作列表/" style="font-size: 14px; color: #999">操作列表</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #999">数据类型</a> <a href="/tags/文件/" style="font-size: 14px; color: #999">文件</a> <a href="/tags/文件储存/" style="font-size: 14px; color: #999">文件储存</a> <a href="/tags/无界面浏览器/" style="font-size: 14px; color: #999">无界面浏览器</a> <a href="/tags/模块/" style="font-size: 14px; color: #999">模块</a> <a href="/tags/正则表达式/" style="font-size: 14px; color: #999">正则表达式</a> <a href="/tags/滑动验证码/" style="font-size: 14px; color: #999">滑动验证码</a> <a href="/tags/爬虫/" style="font-size: 24px; color: #555">爬虫</a> <a href="/tags/类/" style="font-size: 14px; color: #999">类</a> <a href="/tags/继承/" style="font-size: 14px; color: #999">继承</a> <a href="/tags/编辑器/" style="font-size: 14px; color: #999">编辑器</a>
     </div>
   </section>
 
@@ -1221,7 +1243,7 @@ Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通�
   Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <span id="busuanzi_container_site_uv">UV:<span id="busuanzi_value_site_uv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
   <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <span class="post-count">Word Count:80.4k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <span class="post-count">Word Count:83.7k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
   <i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">BY-NC-SA 4.0</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   -->
   <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -1261,7 +1283,7 @@ Python3 爬虫学习笔记第十二章 —— 【验证码对抗系列—普通�
     <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
   </div>
   <div class="github-badge">
-    <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">80.4k</span>
+    <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">83.7k</span>
   </div>
 </footer>
 

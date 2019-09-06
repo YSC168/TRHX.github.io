@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Python3 基础学习笔记 C04 | TRHX&#39;S BLOG</title>
+  <title>Tag: 滑动验证码 | TRHX&#39;S BLOG</title>
   
   <meta name="keywords" content="大学生 软件工程 Java Python">
   
@@ -84,7 +84,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover post half'>
+    <cover class='cover  half'>
       
         
   <h1 class='title'>TRHX'S BLOG</h1>
@@ -355,12 +355,25 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      <div class='l_main'>
-  
-
-  
-    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
       
+<div class='l_main'>
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
 
 
   <section class='meta'>
@@ -369,13 +382,11 @@
     <div class="meta" id="header-meta">
       
         
-  
-    <h1 class="title">
-      <a href="/2018/10/24/A10-Python3-basic-C04/">
-        Python3 基础学习笔记 C04
-      </a>
-    </h1>
-  
+  <h2 class="title">
+    <a href="/2019/09/07/A43-Python3-spider-C13/">
+      Python3 爬虫学习笔记 C13
+    </a>
+  </h2>
 
 
       
@@ -401,7 +412,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-10-24</p>
+    <p>2019-09-07</p>
   </a>
 </div>
 
@@ -411,9 +422,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/Python3-学习笔记/Python3-基础/' rel="nofollow">
+    <a href='/categories/Python3-学习笔记/Python3-爬虫/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Python3 学习笔记&nbsp;/&nbsp;Python3 基础</p>
+      <p>Python3 学习笔记&nbsp;/&nbsp;Python3 爬虫</p>
     </a>
   </div>
 
@@ -422,27 +433,11 @@
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/if语句/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>if语句</p></a></div>
-
 
           
         
           
             
-  
-    <div class="new-meta-item browse busuanzi">
-      <a class='notlink'>
-        <i class="fas fa-eye" aria-hidden="true"></i>
-        <p>
-          <span id="busuanzi_value_page_pv">
-            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
-          </span>
-        </p>
-      </a>
-    </div>
-  
-
 
           
         
@@ -459,242 +454,48 @@
   </section>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          <blockquote>
-<center><font color="#1BC3FB" size="4">Python3 基础学习笔记第四章 —— 【if语句】</font></center>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+<center><font color="#1BC3FB" size="4">Python3 爬虫学习笔记第十三章 —— 【验证码对抗系列 — 滑动验证码】</font></center>
 </blockquote>
-<a id="more"></a>
-<hr>
-<h1 id="4-1-一个简单的数列"><a href="#4-1-一个简单的数列" class="headerlink" title=" - 4.1 一个简单的数列 "></a><font color="#FF0000"> - 4.1 一个简单的数列 </font></h1><p> 给定一个汽车列表，将其中每一辆汽车的名称打印出来，要求打印 ‘bmw’ 时所有字母都要大写，其余名称只需要首字母大写：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'audi'</span> , <span class="string">'bmw'</span> , <span class="string">'subaru'</span> , <span class="string">'toyota'</span>]</span><br><span class="line"><span class="keyword">for</span> car <span class="keyword">in</span> cars:</span><br><span class="line">	<span class="keyword">if</span> car == <span class="string">'bmw'</span>:</span><br><span class="line">	print(car.upper())</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(car.title())</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Audi</span><br><span class="line">BMW</span><br><span class="line">Subaru</span><br><span class="line">Toyota</span><br></pre></td></tr></table></figure>
-<h1 id="4-1-1-检查特定值是否包含在列表当中"><a href="#4-1-1-检查特定值是否包含在列表当中" class="headerlink" title=" - 4.1.1 检查特定值是否包含在列表当中 "></a><font color="#FF0000"> - 4.1.1 检查特定值是否包含在列表当中 </font></h1><blockquote>
-<p> 要判断特定的值是否已包含在列表当中，可使用关键字 <font color="#FF0000">in</font></p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">user_names = [<span class="string">'andia'</span> , <span class="string">'david'</span> , <span class="string">'liwa'</span>]</span><br><span class="line">user = <span class="string">'andia'</span></span><br><span class="line"><span class="keyword">if</span> user <span class="keyword">in</span> user_names:</span><br><span class="line">	print(user.title() + <span class="string">"is in user_name."</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Andiais <span class="keyword">in</span> user_name.</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>要判断特定的值是否不包含在列表当中，可使用关键字 <font color="#FF0000"> not in</font></p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">user_names = [<span class="string">'andia'</span> , <span class="string">'david'</span> , <span class="string">'liwa'</span>]</span><br><span class="line">user = <span class="string">'kivle'</span></span><br><span class="line"><span class="keyword">if</span> user <span class="keyword">not</span> <span class="keyword">in</span> user_names:</span><br><span class="line">	print(user.title() + <span class="string">"is not in user_name."</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Kivleis <span class="keyword">not</span> <span class="keyword">in</span> user_name.</span><br></pre></td></tr></table></figure>
-<h1 id="4-2-if-else-语句"><a href="#4-2-if-else-语句" class="headerlink" title=" - 4.2 if-else 语句 "></a><font color="#FF0000"> - 4.2 if-else 语句 </font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">age = input(<span class="string">"请输入你的年龄查看是否可以去网吧："</span>)</span><br><span class="line"><span class="keyword">if</span> int(age) &gt;= <span class="number">18</span>:</span><br><span class="line">    print(<span class="string">"You are old enough to go to the net bar!"</span>)</span><br><span class="line">    print(<span class="string">"You should go to net bar less,study more!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"You are too young to go to the net bar!"</span>)</span><br><span class="line">    print(<span class="string">"Wait until you are 18 to go to the net bar!"</span>)</span><br></pre></td></tr></table></figure>
-<p>分别输入19和15，输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入你的年龄查看是否可以去网吧：<span class="number">19</span></span><br><span class="line">You are old enough to go to the net bar!</span><br><span class="line">You should go to net bar less,study more!</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入你的年龄查看是否可以去网吧：<span class="number">15</span></span><br><span class="line">You are too young to go to the net bar!</span><br><span class="line">Wait until you are <span class="number">18</span> to go to the net bar!</span><br></pre></td></tr></table></figure>
-<h1 id="4-3-if-elif-else-结构"><a href="#4-3-if-elif-else-结构" class="headerlink" title=" - 4.3 if-elif-else 结构 "></a><font color="#FF0000"> - 4.3 if-elif-else 结构 </font></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">12</span></span><br><span class="line"><span class="keyword">if</span> age &lt; <span class="number">4</span>:</span><br><span class="line">	price = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> age &lt; <span class="number">18</span>:</span><br><span class="line">	price = <span class="number">5</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	price = <span class="number">10</span></span><br><span class="line">print(<span class="string">"Your admission cost is $"</span> + str(price) + <span class="string">"."</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your admission cost <span class="keyword">is</span> $<span class="number">5.</span></span><br></pre></td></tr></table></figure>
-<h1 id="4-3-1-使用多个-elif-代码块"><a href="#4-3-1-使用多个-elif-代码块" class="headerlink" title=" - 4.3.1 使用多个 elif 代码块 "></a><font color="#FF0000"> - 4.3.1 使用多个 elif 代码块 </font></h1> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">20</span></span><br><span class="line"><span class="keyword">if</span> age &lt; <span class="number">4</span>:</span><br><span class="line">	price = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> age &lt; <span class="number">18</span>:</span><br><span class="line">	price = <span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> age &lt; <span class="number">65</span>:</span><br><span class="line">	price = <span class="number">15</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	price = <span class="number">10</span></span><br><span class="line">print(<span class="string">"Your admission cost is $"</span> + str(price) + <span class="string">"."</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your admission cost <span class="keyword">is</span> $<span class="number">15.</span></span><br></pre></td></tr></table></figure>
-<h1 id="4-3-2-省略-else-代码块"><a href="#4-3-2-省略-else-代码块" class="headerlink" title=" - 4.3.2 省略 else 代码块 "></a><font color="#FF0000"> - 4.3.2 省略 else 代码块 </font></h1><p> Python并不要求 if-elif 结构后面必须有 else 代码块：<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">20</span></span><br><span class="line"><span class="keyword">if</span> age &lt; <span class="number">4</span>:</span><br><span class="line">	price = <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> age &lt; <span class="number">18</span>:</span><br><span class="line">	price = <span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> age &lt; <span class="number">65</span>:</span><br><span class="line">	price = <span class="number">15</span></span><br><span class="line"><span class="keyword">elif</span> age &gt;= <span class="number">65</span>:</span><br><span class="line">	price = <span class="number">10</span></span><br><span class="line">print(<span class="string">"Your admission cost is $"</span> + str(price) + <span class="string">"."</span>)</span><br></pre></td></tr></table></figure></p>
-<p>输出结果仍与3.3.1一样</p>
-<h1 id="4-4-测试多个条件"><a href="#4-4-测试多个条件" class="headerlink" title=" - 4.4 测试多个条件 "></a><font color="#FF0000"> - 4.4 测试多个条件 </font></h1><p> if-elif-else结构功能强大，但仅适用于只有一个条件满足的情况：遇到通过了的测试后，Python就会跳过余下的测试：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> names = [<span class="string">'Zhangshan'</span> , <span class="string">'Wanger'</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">'Zhangshan'</span> <span class="keyword">in</span> names:</span><br><span class="line">    print(<span class="string">"Zhangshan is here!"</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">'Wanger'</span> <span class="keyword">in</span> names:</span><br><span class="line">    print(<span class="string">"Wanger is here!"</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">'Xiaoming'</span> <span class="keyword">in</span> names:</span><br><span class="line">    print(<span class="string">"Xiaoming is here!"</span>)</span><br><span class="line">print(<span class="string">"All the students are here!"</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Zhangshan <span class="keyword">is</span> here!</span><br><span class="line">Wanger <span class="keyword">is</span> here!</span><br><span class="line">All the students are here!</span><br></pre></td></tr></table></figure>
-<p>相同的程序，如果使用 if-elif-else 结构，代码将不能正确运行：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">'Zhangshan'</span> , <span class="string">'Wanger'</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">'Zhangshan'</span> <span class="keyword">in</span> names:</span><br><span class="line">    print(<span class="string">"Zhangshan is here!"</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="string">'Wanger'</span> <span class="keyword">in</span> names:</span><br><span class="line">    print(<span class="string">"Wanger is here!"</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="string">'Xiaoming'</span> <span class="keyword">in</span> names:</span><br><span class="line">    print(<span class="string">"Xiaoming is here!"</span>)</span><br><span class="line">print(<span class="string">"All the students are here!"</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Zhangshan <span class="keyword">is</span> here!</span><br><span class="line">All the students are here!</span><br></pre></td></tr></table></figure></p>
-<font color="#FF000">总之，如果我们只想执行一个代码块，就使用 if-elif-else 结构；如果要运行多个代码块，就必须使用一系列独立的 if 语句！</font>
-
-<h1 id="4-5-使用-if-语句处理列表"><a href="#4-5-使用-if-语句处理列表" class="headerlink" title=" - 4.5 使用 if 语句处理列表 "></a><font color="#FF0000"> - 4.5 使用 if 语句处理列表 </font></h1><h1 id="4-5-1-检查特殊元素"><a href="#4-5-1-检查特殊元素" class="headerlink" title=" - 4.5.1 检查特殊元素"></a><font color="#FF0000"> - 4.5.1 检查特殊元素</font></h1><p>对3.4例子改版，加入姓名 ‘Xiaoming’，当检索到Xiaoming时告诉他，他妈妈叫他回家吃饭<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">'Zhangshan'</span> , <span class="string">'Wanger'</span> , <span class="string">'Xiaoming'</span>]</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">    <span class="keyword">if</span> name == <span class="string">'Xiaoming'</span>:</span><br><span class="line">        print(<span class="string">"Xiaoming,Your mother told you to go home for dinner!"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(name +<span class="string">"is here!"</span>)</span><br><span class="line">print(<span class="string">"All the students are here!"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Zhangshanis here!</span><br><span class="line">Wangeris here!</span><br><span class="line">Xiaoming,Your mother told you to go home <span class="keyword">for</span> dinner!</span><br><span class="line">All the students are here!</span><br></pre></td></tr></table></figure>
-<h1 id="4-5-2-确定列表不是空的"><a href="#4-5-2-确定列表不是空的" class="headerlink" title=" - 4.5.2 确定列表不是空的"></a><font color="#FF0000"> - 4.5.2 确定列表不是空的</font></h1><p>  在检索姓名前检查姓名是否为空，不为空则打印出所有姓名，为空则提示没有姓名：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">names = []</span><br><span class="line"><span class="keyword">if</span> names:</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">        print(name +<span class="string">" is here!"</span>)</span><br><span class="line">    print(<span class="string">"All the students are here!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"There is no students!"</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">There <span class="keyword">is</span> no students!</span><br></pre></td></tr></table></figure>
-<font color="#FF000">在if语句中将列表名用在条件表达式中时，Python将在列表至少包含一个元素时返回Ture，并在列表为空时返回False</font>
-
-<h1 id="4-5-3-使用多个列表"><a href="#4-5-3-使用多个列表" class="headerlink" title=" - 4.5.3 使用多个列表"></a><font color="#FF0000"> - 4.5.3 使用多个列表</font></h1><p>  两个列表names_1和names_2，要求输出既在names_2中又在names_1中的元素：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">names_1 = [<span class="string">'Zhangshan'</span> , <span class="string">'Liyang'</span>  , <span class="string">'Wanger'</span> , <span class="string">'Tangyang'</span> , <span class="string">'Xiaoming'</span>]</span><br><span class="line">names_2 = [<span class="string">'Liyang'</span> , <span class="string">'Zhangwei'</span> , <span class="string">'Tangyang'</span>]</span><br><span class="line"><span class="keyword">for</span> names <span class="keyword">in</span> names_2:</span><br><span class="line">    <span class="keyword">if</span> names <span class="keyword">in</span> names_1:</span><br><span class="line">        print(names +<span class="string">" is here!"</span>)</span><br><span class="line">print(<span class="string">"All the students are here!"</span>)</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Liyang <span class="keyword">is</span> here!</span><br><span class="line">Tangyang <span class="keyword">is</span> here!</span><br><span class="line">All the students are here!</span><br></pre></td></tr></table></figure>
+      
+        <div class="readmore">
+          <a href="/2019/09/07/A43-Python3-spider-C13/" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
         </div>
-        
-          
-
-
-  <section class='meta' id="footer-meta">
-    <hr>
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-19T19:49:53+08:00">
-  <a class='notlink'>
-    <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年8月19日</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
-          
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2018/10/24/A10-Python3-basic-C04/&title=Python3 基础学习笔记 C04 | TRHX'S BLOG&summary=
-Python3 基础学习笔记第四章 —— 【if语句】
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
-          
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2018/10/24/A10-Python3-basic-C04/&title=Python3 基础学习笔记 C04 | TRHX'S BLOG&summary=
-Python3 基础学习笔记第四章 —— 【if语句】
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3aQY7bWgwEwLn/pfOBrIJ8yO4m37OzKK2M8VhWaSHSTf78xMev38f/X7/+y5/H038mZ3j92QMHHh4e3ujSn44NID/D61v59C2vrxkPDw/vNi8pBrMveA1uAW2BwcPDw/sub9Zwz7rcWXuNh4eH96/x8mPWRs8KDB4eHt63eHmDu7kRSZHYtON4eHh4n+FtBmDfev2h+R4eHh5eGQq0j+xNIdmMux6vFg8PD+8CL1+imq0L7Mf/yY14Uzbw8PDwjvLyODW/xNudbbG2hYeHh3eBl7S/7e/9GyO0VRyMh4eHd4GXBwqbcCF5oLclIVnPwsPDw7vBaxntOD9frsqD4GHtwsPDw1vzZmFEPrhqQ+G8VETv4uHh4X2Ed7aEtOfJ/xKVEzw8PLxrvHZgnycceZHIo4ok2sDDw8P7Fi8/UR4ctDHxZlkBDw8P7zYvDws24//2W4bTvP0X4+Hh4b18YreBQrsKUDTBNw48PDy8j8DaQGEVtsZtd76GVaTUeHh4eCPeZqC1CTJmNzRZdzg2r8PDw8N74M0WBdqot6Um538zqMPDw8O7xkuC1PaR3Ya5s3WEN1Q8PDy8C7y2aU4wm2HYsaWB2W8CPDw8vJiXt7x58Hpq0FU00E/XiYeHh3eUN3u457AcfzZK/tnULjw8PLyY19aTdvQ1KyerxhoPDw/vAi/5wCx4zS93tlxVBBx4eHh4R3ntoKttgjfhbBtbPNY9PDw8vGu8doiVhAWz29Q204/XhoeHh3eBVz9qg3fbsHV2W0+VEDw8PLwZ79SpT61ezda/okgCDw8P7ygvedznMWsbPeyXtN6k1Hh4eHhf4uVjs9nlbhr3A4UBDw8P7xovGZu1kW4bMRSRBx4eHt41XhsftG3xDDMrLXh4eHi3eZuf+vnp8hWBPfLYfA8PDw/v7+M/wgVzqBZV64kAAAAASUVORK5CYII='>
-        
-          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
-        
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
-          
-          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2018/10/24/A10-Python3-basic-C04/&title=Python3 基础学习笔记 C04 | TRHX'S BLOG&summary=
-Python3 基础学习笔记第四章 —— 【if语句】
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3aQY7bWgwEwLn/pfOBrIJ8yO4m37OzKK2M8VhWaSHSTf78xMev38f/X7/+y5/H038mZ3j92QMHHh4e3ujSn44NID/D61v59C2vrxkPDw/vNi8pBrMveA1uAW2BwcPDw/sub9Zwz7rcWXuNh4eH96/x8mPWRs8KDB4eHt63eHmDu7kRSZHYtON4eHh4n+FtBmDfev2h+R4eHh5eGQq0j+xNIdmMux6vFg8PD+8CL1+imq0L7Mf/yY14Uzbw8PDwjvLyODW/xNudbbG2hYeHh3eBl7S/7e/9GyO0VRyMh4eHd4GXBwqbcCF5oLclIVnPwsPDw7vBaxntOD9frsqD4GHtwsPDw1vzZmFEPrhqQ+G8VETv4uHh4X2Ed7aEtOfJ/xKVEzw8PLxrvHZgnycceZHIo4ok2sDDw8P7Fi8/UR4ctDHxZlkBDw8P7zYvDws24//2W4bTvP0X4+Hh4b18YreBQrsKUDTBNw48PDy8j8DaQGEVtsZtd76GVaTUeHh4eCPeZqC1CTJmNzRZdzg2r8PDw8N74M0WBdqot6Um538zqMPDw8O7xkuC1PaR3Ya5s3WEN1Q8PDy8C7y2aU4wm2HYsaWB2W8CPDw8vJiXt7x58Hpq0FU00E/XiYeHh3eUN3u457AcfzZK/tnULjw8PLyY19aTdvQ1KyerxhoPDw/vAi/5wCx4zS93tlxVBBx4eHh4R3ntoKttgjfhbBtbPNY9PDw8vGu8doiVhAWz29Q204/XhoeHh3eBVz9qg3fbsHV2W0+VEDw8PLwZ79SpT61ezda/okgCDw8P7ygvedznMWsbPeyXtN6k1Hh4eHhf4uVjs9nlbhr3A4UBDw8P7xovGZu1kW4bMRSRBx4eHt41XhsftG3xDDMrLXh4eHi3eZuf+vnp8hWBPfLYfA8PDw/v7+M/wgVzqBZV64kAAAAASUVORK5CYII='>
-        
-          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
-        
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
-        
       
     </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/爬虫/" rel="nofollow"><i class="fas fa-tags fa-fw"></i>爬虫</a>
+        
+          <a href="/tags/滑动验证码/" rel="nofollow"><i class="fas fa-tags fa-fw"></i>滑动验证码</a>
+        
+      </div>
+    
   </section>
+</article>
 
-
+          </div>
         
-        
-            <div class="prev-next">
-                
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/2018/10/27/A11-Python3-basic-C05/" rel="prev" title="Python3 基础学习笔记 C05">
-                                  
-                                      Python3 基础学习笔记 C05
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/字典/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>字典</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/2018/10/11/A09-Python3-basic-C03/" rel="prev" title="Python3 基础学习笔记 C03">
-                                    
-                                        Python3 基础学习笔记 C03
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/操作列表/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>操作列表</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-            </div>
-        
-      </section>
-    </article>
+      
+    
+  </section>
   
-
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  <article class="post white-box comments">
-    <section class="article typo">
-      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
-      
-      
-      
-        <section id="comments">
-          <div id="gitalk-container"></div>
-        </section>
-      
-      
-    </section>
-  </article>
-
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
 
   
 
 
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-
-  <script>
-    window.subData = {
-      title: 'Python3 基础学习笔记 C04',
-      tools: true
-    }
-  </script>
-
-
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -821,20 +622,6 @@ Python3 基础学习笔记第四章 —— 【if语句】
           
           
             
-  <section class='widget toc-wrapper'>
-    
-<header class='pure'>
-  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
-  
-    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
-  
-</header>
-
-    <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#4-1-一个简单的数列"><span class="toc-text"> - 4.1 一个简单的数列 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-1-1-检查特定值是否包含在列表当中"><span class="toc-text"> - 4.1.1 检查特定值是否包含在列表当中 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-2-if-else-语句"><span class="toc-text"> - 4.2 if-else 语句 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-3-if-elif-else-结构"><span class="toc-text"> - 4.3 if-elif-else 结构 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-3-1-使用多个-elif-代码块"><span class="toc-text"> - 4.3.1 使用多个 elif 代码块 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-3-2-省略-else-代码块"><span class="toc-text"> - 4.3.2 省略 else 代码块 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-4-测试多个条件"><span class="toc-text"> - 4.4 测试多个条件 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-5-使用-if-语句处理列表"><span class="toc-text"> - 4.5 使用 if 语句处理列表 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-5-1-检查特殊元素"><span class="toc-text"> - 4.5.1 检查特殊元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-5-2-确定列表不是空的"><span class="toc-text"> - 4.5.2 确定列表不是空的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-5-3-使用多个列表"><span class="toc-text"> - 4.5.3 使用多个列表</span></a></li></ol>
-    </div>
-  </section>
-
 
           
         
@@ -1347,24 +1134,6 @@ Python3 基础学习笔记第四章 —— 【if语句】
 
 
 
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: "d19a84b9d9a2ddb2c6b9",
-      clientSecret: "cec9feae5129a6106edc68ce06d167be8eb06021",
-      repo: "trhx.github.io",
-      owner: "trhx",
-      admin: "trhx",
-      
-        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
-      
-      distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-    gitalk.render('gitalk-container');
-  </script>
 
 
 
