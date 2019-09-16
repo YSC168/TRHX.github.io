@@ -506,10 +506,13 @@
 <p>若出现以下提示，则证明配置成功：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Coding 提示: Hello XXX, You<span class="string">'ve connected to Coding.net via SSH. This is a personal key.</span></span><br><span class="line"><span class="string">XXX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个个人公钥</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="3-配置-config-yml"><a href="#3-配置-config-yml" class="headerlink" title="3.配置 _config.yml"></a><font color="#ff0000">3.配置 _config.yml</font></h1><p>进入你的项目，在右下角有选择连接方式，选择 SSH 方式（HTTPS 方式也可以，但是这种方式有时候可能连接不上，SSH 连接不容易出问题），一键复制，然后打开你本地博客根目录的 <code>_config.yml</code> 文件，找到 <code>deploy</code> 关键字，添加 coding 地址：<code>coding: git@git.dev.tencent.com:user_name/user_name.git</code>，也就是刚刚复制的 SSH 地址，添加完成后执行命令 <code>hexo g -d</code> 将博客部署到 Coding Pages 和 GitHub Pages</p>
+<h1 id="3-配置-config-yml"><a href="#3-配置-config-yml" class="headerlink" title="3.配置 _config.yml"></a><font color="#ff0000">3.配置 _config.yml</font></h1><p>进入你的项目，在右下角有选择连接方式，选择 SSH 方式（HTTPS 方式也可以，但是这种方式有时候可能连接不上，SSH 连接不容易出问题），一键复制，然后打开你本地博客根目录的 <code>_config.yml</code> 文件，找到 <code>deploy</code> 关键字，添加 coding 地址：<code>coding: git@git.dev.tencent.com:user_name/user_name.git</code>，也就是刚刚复制的 SSH 地址</p>
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/05.jpg" alt="05"><br></fancybox>
 
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/06.jpg" alt="06"><br></fancybox>
+
+<p>添加完成后先执行命令 <code>hexo clean</code> 清理一下缓存，然后执行命令 <code>hexo g -d</code> 将博客双线部署到 Coding Pages 和 GitHub Pages，如下图所示表示部署成功：</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/13.jpg" alt="13"><br></fancybox>
 
 <h1 id="4-开启-Coding-Pages"><a href="#4-开启-Coding-Pages" class="headerlink" title="4.开启 Coding Pages"></a><font color="#ff0000">4.开启 Coding Pages</font></h1><p>进入你的项目，在代码栏下选择 Pages 服务，一键开启 Coding Pages，等待几秒后刷新网页即可看到已经开启的 Coding Pages，到目前为止，你就可以通过 xxxx.coding.me（比如我的是 trhx.coding.me）访问你的 Coding Pages 页面了</p>
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/07.jpg" alt="07"><br></fancybox>
@@ -538,7 +541,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-16T14:37:06+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-16T14:48:01+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2019年9月16日</p>
@@ -1194,7 +1197,7 @@
   Theme <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> by <a href="https://xaoxuu.com/" target="_blank" class="codename">xaoxuu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <span id="busuanzi_container_site_uv">UV:<span id="busuanzi_value_site_uv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
   <span id="busuanzi_container_site_pv">PV:<span id="busuanzi_value_site_pv"></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <span class="post-count">Word Count:95.7k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <span class="post-count">Word Count:95.8k</span>&nbsp;&nbsp;|&nbsp;&nbsp;
   <i class="fab fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可" target="_blank">BY-NC-SA 4.0</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   -->
   <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -1234,7 +1237,7 @@
     <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
   </div>
   <div class="github-badge">
-    <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">95.7k</span>
+    <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">95.8k</span>
   </div>
 </footer>
 
