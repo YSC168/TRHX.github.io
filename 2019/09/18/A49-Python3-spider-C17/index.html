@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Python3 爬虫学习笔记 C09 | TRHX&#39;S BLOG</title>
+  <title>Python3 爬虫学习笔记 C17 | TRHX&#39;S BLOG</title>
   
   <meta name="keywords" content="大学生 软件工程 Java Python">
   
@@ -374,15 +374,15 @@
   <section class='meta'>
     
     
-      <a title='Python3 爬虫学习笔记 C09' href='/2019/08/27/A39-Python3-spider-C09/'><img class='thumbnail' src='https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/spider.png'></a>
+      <a title='Python3 爬虫学习笔记 C17' href='/2019/09/18/A49-Python3-spider-C17/'><img class='thumbnail' src='https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/spider.png'></a>
     
     <div class="meta" id="header-meta">
       
         
   
     <h1 class="title">
-      <a href="/2019/08/27/A39-Python3-spider-C09/">
-        Python3 爬虫学习笔记 C09
+      <a href="/2019/09/18/A49-Python3-spider-C17/">
+        Python3 爬虫学习笔记 C17
       </a>
     </h1>
   
@@ -411,7 +411,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-08-27</p>
+    <p>2019-09-18</p>
   </a>
 </div>
 
@@ -433,7 +433,7 @@
           
             
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/爬虫/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>爬虫</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/文件储存/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>文件储存</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/爬虫/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>爬虫</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/pyspider/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>pyspider</p></a></div>
 
 
           
@@ -472,147 +472,148 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           <blockquote>
-<center><font color="#1BC3FB" size="4">Python3 爬虫学习笔记第九章 —— 【文件储存】</font></center>
+<center><font color="#1BC3FB" size="4">Python3 爬虫学习笔记第十七章 —— 【爬虫框架 pyspider — 基本使用】</font></center>
 </blockquote>
 <a id="more"></a>
-<p>用解析器解析出数据之后，还需要对数据进行保存。保存的形式多种多样，最简单的形式是直接保存为文本文件，如 TXT、JSON、CSV 等。</p>
-<h1 id="【9-1】TXT-文本存储"><a href="#【9-1】TXT-文本存储" class="headerlink" title="【9.1】TXT 文本存储"></a><font color="#ff0000">【9.1】TXT 文本存储</font></h1><p>TXT 文本存储的优点：操作非常简单，TXT 文本几乎兼容任何平台；缺点：不利于检索。</p>
-<h2 id="【9-1-1】基本示例"><a href="#【9-1-1】基本示例" class="headerlink" title="【9.1.1】基本示例"></a><font color="#ff0000">【9.1.1】基本示例</font></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">"https://blog.csdn.net/qq_36759224"</span></span><br><span class="line"></span><br><span class="line">request = requests.get(url, headers=headers)</span><br><span class="line">tree = etree.HTML(request.text)</span><br><span class="line">title_list = tree.xpath(<span class="string">'//h4/a/text()'</span>)</span><br><span class="line"><span class="keyword">for</span> title <span class="keyword">in</span> title_list:</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'blog.txt'</span>, <span class="string">'a'</span>, encoding=<span class="string">'utf8'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(title)</span><br></pre></td></tr></table></figure>
-<p>代码实现了我的 CSDN 博客首页所有博文标题的爬取，利用 requests 请求库发送请求，获取响应，用 XPath 获取每一篇博文的标题，然后写入 blog.txt 文件中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">帝都的凛冬</span><br><span class="line">    最新屏蔽 CSDN 广告方法，专注阅读学习！      </span><br><span class="line">    使用Github Pages和Hexo搭建自己的独立博客【超级详细的小白教程】      </span><br><span class="line">    Python3 爬虫学习笔记 C08【解析库 Beautiful Soup】      </span><br><span class="line">    Python3 爬虫学习笔记 C07 【解析库 lxml】      </span><br><span class="line">    Python3 爬虫学习笔记 C06 【正则表达式】      </span><br><span class="line">    Python3 爬虫学习笔记 C05 【Selenium + 无界面浏览器】      </span><br><span class="line">    Python3 已经安装相关库，Pycharm 仍然报错 ModuleNotFoundError: No module named &apos;xxxxxx&apos; 的解决办法      </span><br><span class="line">    Windows/Android/iOS 等常见 User-Agent 大全      </span><br><span class="line">    Selenium 显式等待条件及其含义      </span><br><span class="line">    Python3 爬虫学习笔记 C04 【自动化测试工具 Selenium】      </span><br><span class="line">    Python3 爬虫学习笔记 C03 【Ajax 数据爬取】      </span><br><span class="line">    Python3 爬虫学习笔记 C02 【基本库 requests 的使用】      </span><br><span class="line">    Python3 爬虫学习笔记 C01 【基本库 urllib 的使用】      </span><br><span class="line">    利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS      </span><br><span class="line">    光学字符识别 Tesseract-OCR 的下载、安装和基本用法      </span><br><span class="line">    Github+jsDelivr+PicGo 打造稳定快速、高效免费图床      </span><br><span class="line">    利用Cloudflare为基于GitHub Pages的Hexo博客添加HTTPS支持      </span><br><span class="line">    Python 中 if __name__ == &apos;__main__&apos;: 的理解      </span><br><span class="line">    Hexo 博客本地预览报错：Error: listen EADDRINUSE 0.0.0.0:4000      </span><br><span class="line">    谷歌浏览器检查更新时出错：无法启动更新检查（错误代码为 3: 0x80080005 -- system level）</span><br></pre></td></tr></table></figure>
-<h2 id="【9-1-2】打开方式"><a href="#【9-1-2】打开方式" class="headerlink" title="【9.1.2】打开方式"></a><font color="#ff0000">【9.1.2】打开方式</font></h2><p>open() 方法的第二个参数为打开方式，不同的打开方式如下：</p>
-<table>
-<thead>
-<tr>
-<th>读写方式</th>
-<th>可否读写</th>
-<th>若文件不存在</th>
-<th>写入方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r</td>
-<td>读取</td>
-<td>报错</td>
-<td>不可写入</td>
-</tr>
-<tr>
-<td>rb</td>
-<td>以二进制方式读取</td>
-<td>报错</td>
-<td>不可写入</td>
-</tr>
-<tr>
-<td>r+</td>
-<td>读取 + 写入</td>
-<td>报错</td>
-<td>覆盖写入</td>
-</tr>
-<tr>
-<td>rb+</td>
-<td>以二进制方式读取+写入</td>
-<td>报错</td>
-<td>覆盖写入</td>
-</tr>
-<tr>
-<td>w</td>
-<td>写入</td>
-<td>创建</td>
-<td>覆盖写入</td>
-</tr>
-<tr>
-<td>wb</td>
-<td>以二进制方式写入</td>
-<td>创建</td>
-<td>覆盖写入</td>
-</tr>
-<tr>
-<td>w+</td>
-<td>读取 + 写入</td>
-<td>创建</td>
-<td>覆盖写入</td>
-</tr>
-<tr>
-<td>wb+</td>
-<td>以二进制方式读取+写入</td>
-<td>创建</td>
-<td>覆盖写入</td>
-</tr>
-<tr>
-<td>a</td>
-<td>写入</td>
-<td>创建</td>
-<td>附加写入</td>
-</tr>
-<tr>
-<td>ab</td>
-<td>以二进制方式写入</td>
-<td>创建</td>
-<td>附加写入</td>
-</tr>
-<tr>
-<td>a+</td>
-<td>读取 + 写入</td>
-<td>创建</td>
-<td>附加写入</td>
-</tr>
-<tr>
-<td>ab+</td>
-<td>以二进制方式读取+写入</td>
-<td>创建</td>
-<td>附加写入</td>
-</tr>
-</tbody>
-</table>
-<h1 id="【9-2】JSON-文件存储"><a href="#【9-2】JSON-文件存储" class="headerlink" title="【9.2】JSON 文件存储"></a><font color="#ff0000">【9.2】JSON 文件存储</font></h1><p>JSON，全称为 JavaScript Object Notation, 即 JavaScript 对象标记，它通过对象和数组的组合来表示数据，构造简洁但是结构化程度非常高，是一种轻量级的数据交换格式。</p>
-<h2 id="【9-2-1】对象和数组"><a href="#【9-2-1】对象和数组" class="headerlink" title="【9.2.1】对象和数组"></a><font color="#ff0000">【9.2.1】对象和数组</font></h2><p>在 JavaScript 语言中，一切都是对象。因此，任何支持的类型都可以通过 JSON 来表示，例如字符串、数字、对象、数组等，但是对象和数组是比较特殊且常用的两种类型</p>
+<hr>
+<h1 id="【17-1】初识-pyspider"><a href="#【17-1】初识-pyspider" class="headerlink" title="【17.1】初识 pyspider"></a><font color="#ff0000">【17.1】初识 pyspider</font></h1><p>pyspider 是由国人 Binux 编写的一个 Python 爬虫框架</p>
 <ul>
-<li><p>对象：它在 JavaScript 中是使用花括号 {} 包裹起来的内容，数据结构为 {key1：value1, key2：value2, …} 的键值对结构。在面向对象的语言中，key 为对象的属性，value 为对应的值。键名可以使用整数和字符串来表示。值的类型可以是任意类型。</p>
+<li>GitHub：<a href="https://github.com/binux/pyspider" target="_blank" rel="noopener">https://github.com/binux/pyspider</a> </li>
+<li>官方文档（英文）：<a href="http://docs.pyspider.org/" target="_blank" rel="noopener">http://docs.pyspider.org/</a></li>
+<li>非官方文档（中文）：<a href="http://book.crifan.com/books/python_spider_pyspider/website/" target="_blank" rel="noopener">http://book.crifan.com/books/python_spider_pyspider/website/</a></li>
+<li>非官方文档（中文）：<a href="https://www.cntofu.com/book/156/index.md" target="_blank" rel="noopener">https://www.cntofu.com/book/156/index.md</a></li>
+</ul>
+<p>pyspider 特性：</p>
+<ul>
+<li>python 脚本控制，可以使用任何 html 解析包（内置 pyquery）</li>
+<li>WEB 界面编写调试脚本，起停脚本，监控执行状态，查看活动历史，获取结果产出</li>
+<li>支持 MySQL、MongoDB、Redis、SQLite、Elasticsearch、PostgreSQL</li>
+<li>对接了 PhantomJS，支持抓取 JavaScript 的页面</li>
+<li>组件可替换，支持单机和分布式部署，支持 Docker 部署</li>
+<li>提供优先级控制、失败重试、定时抓取等功能</li>
+</ul>
+<p>Windows 系统安装 pyspider：</p>
+<p>使用命令 <code>pip install pyspider</code> 安装，若报 PyCurl 相关错误，可访问 <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycurl" target="_blank" rel="noopener">https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycurl</a> 下载对应 wheel 文件并使用命令 <code>pip install whl文件名</code> 安装即可</p>
+<p>如果要爬取 JavaScrip 渲染的页面，还要下载 PhantomJS，并将 PhantomJS 的路径配置到环境变量里，或者直接复制到 Python 安装目录的 Scripts 文件夹，需要用到数据库储存的话，同样要安装好相应的数据库</p>
+<p>准备就绪后，使用 <code>pyspider all</code> 命令可启动 pyspider，浏览器打开：<a href="http://localhost:5000/" target="_blank" rel="noopener">http://localhost:5000/</a> 可以看到 pyspider 的 WebUI 管理界面</p>
+<hr>
+<h1 id="【17-2】使用-pyspider"><a href="#【17-2】使用-pyspider" class="headerlink" title="【17.2】使用 pyspider"></a><font color="#ff0000">【17.2】使用 pyspider</font></h1><hr>
+<h2 id="【17-2-1】主界面"><a href="#【17-2-1】主界面" class="headerlink" title="【17.2.1】主界面"></a><font color="#1BC3FB">【17.2.1】主界面</font></h2><p>当成功创建了一个爬虫项目后，主界面如下所示：</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/01.png" alt="01"><br></fancybox>
+
+<ul>
+<li><p><font color="#ff0000">Recent Active Tasks</font>：查看最近活动的任务，会跳转到一个页面有列表显示</p>
 </li>
-<li><p>数组：数组在 JavaScript 中是方括号 [] 包裹起来的内容，数据结构为 [“java”, “javascript”, “vb”, …] 的索引结构。在 JavaScript 中，数组是一种比较特殊的数据类型，它也可以像对象那样使用键值对，但还是索引用得多。同样，值的类型可以是任意类型。</p>
+<li><p><font color="#ff0000">Create</font>：创建一个新的爬虫项目</p>
+</li>
+<li><p><font color="#ff0000">group</font>：定义项目的分组，以方便管理，若 group 设置为 delete，则该项目将会在24小时之后删除</p>
+</li>
+<li><p><font color="#ff0000">project name</font>：爬虫项目名称</p>
+</li>
+<li><p><font color="#ff0000">status</font>：项目状态，各状态如下：<br> <font color="#1BC3FB">TODO</font>：一个爬虫项目刚刚创建时的状态，此状态下可以编辑 Python 代码<br> <font color="#1BC3FB">STOP</font>：中止项目的运行<br> <font color="#1BC3FB">CHECKING</font>：当一个运行中的项目被编辑时项目状态会被自动设置成此状态并中止运行<br> <font color="#1BC3FB">DEBUG</font>：会运行爬虫，顾名思义找 BUG，一般来说用于调试阶段<br> <font color="#1BC3FB">RUNNING</font>：运行爬虫项目<br> <font color="#1BC3FB">PAUSED</font>：项目暂停运行，默认没有这个状态，但是当你在运行过程中突然断网就会出现此状态</p>
+</li>
+<li><p><font color="#ff0000">rate/burst</font>：当前的爬取速率，rate 代表 1 秒发出多少个请求，burst 相当于流量控制中的令牌桶算法的令牌数，rate 和 burst 设置的越大，爬取速率越快，速率的设定需要考虑本机性能和爬取过快被封的问题</p>
+</li>
+<li><p><font color="#ff0000">avg time</font>：任务平均时间</p>
+</li>
+<li><p><font color="#ff0000">process</font>：5m、1h、1d 分别指的是最近 5 分、1 小时、1 天内的请求情况，all 代表所有的请求情况，请求由不同颜色表示，蓝色的代表等待被执行的请求，绿色的代表成功的请求，黄色的代表请求失败后等待重试的请求，红色的代表失败次数过多而被忽略的请求</p>
+</li>
+<li><p><font color="#ff0000">actions</font>：对爬虫项目的操作，各操作如下：<br> <font color="#1BC3FB">Run</font>：立即执行任务，需要 status 为 RUNNING 或者 DEBUG 状态；假如在配置的调度执行时间内已经执行过，再点 run 是无效的，需要删除 task.db 里的数据才行<br> <font color="#1BC3FB">Active Tasks</font>：查看当前爬虫项目的活动任务<br> <font color="#1BC3FB">Results</font>：查看项目运行结果</p>
 </li>
 </ul>
-<p>示例：一个 JSON 对象</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[&#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"TRH"</span>,</span><br><span class="line">    <span class="attr">"gender"</span>: <span class="string">"male"</span>,</span><br><span class="line">    <span class="attr">"birthday"</span>: <span class="string">"1999-01-25"</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"XXX"</span>,</span><br><span class="line">    <span class="attr">"gender"</span>: <span class="string">"female"</span>,</span><br><span class="line">    <span class="attr">"birthday"</span>: <span class="string">"1999-10-18"</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
-<h2 id="【9-2-2】读取-JSON"><a href="#【9-2-2】读取-JSON" class="headerlink" title="【9.2.2】读取 JSON"></a><font color="#ff0000">【9.2.2】读取 JSON</font></h2><p>Python 里面的 JSON 库可以实现对 JSON 文件的读写操作，调用 JSON 库的 loads 方法将 JSON 文本字符串转为 JSON 对象、 dumps() 方法将 JSON 对象转为文本字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">str = <span class="string">'''</span></span><br><span class="line"><span class="string">[&#123;</span></span><br><span class="line"><span class="string">    "name": "TRH",</span></span><br><span class="line"><span class="string">    "gender": "male",</span></span><br><span class="line"><span class="string">    "birthday": "1999-01-25"</span></span><br><span class="line"><span class="string">&#125;, &#123;</span></span><br><span class="line"><span class="string">     "name": "XXX",</span></span><br><span class="line"><span class="string">    "gender": "female",</span></span><br><span class="line"><span class="string">    "birthday": "1999-10-18"</span></span><br><span class="line"><span class="string">&#125;]</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">data = json.loads(str)</span><br><span class="line">print(data)</span><br><span class="line">print(data[<span class="number">0</span>][<span class="string">'name'</span>])</span><br><span class="line">print(data[<span class="number">0</span>].get(<span class="string">'name'</span>))</span><br><span class="line">print(data[<span class="number">0</span>].get(<span class="string">'age'</span>))</span><br><span class="line">print(data[<span class="number">0</span>].get(<span class="string">'age'</span>, <span class="number">25</span>))</span><br></pre></td></tr></table></figure>
-<p>使用 loads 方法将字符串转为 JSON 对象，通过索引来获取对应的内容，获取键值时有两种方式，一种是中括号加键名，另一种是通过 get 方法传入键名。使用 get 方法，如果键名不存在，则不会报错，会返回 None，get 方法还可以传入第二个参数（即默认值），尝试获取一个原字典中不存在的键名，此时默认会返回 None。如果传入第二个参数（即默认值），那么在不存在的情况下返回该默认值。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="string">'name'</span>: <span class="string">'TRH'</span>, <span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'birthday'</span>: <span class="string">'1999-01-25'</span>&#125;, &#123;<span class="string">'name'</span>: <span class="string">'XXX'</span>, <span class="string">'gender'</span>: <span class="string">'female'</span>, <span class="string">'birthday'</span>: <span class="string">'1999-10-18'</span>&#125;]</span><br><span class="line">TRH</span><br><span class="line">TRH</span><br><span class="line"><span class="keyword">None</span></span><br><span class="line"><span class="number">25</span></span><br></pre></td></tr></table></figure>
-<h2 id="【9-2-3】写入-JSON-文件"><a href="#【9-2-3】写入-JSON-文件" class="headerlink" title="【9.2.3】写入 JSON 文件"></a><font color="#ff0000">【9.2.3】写入 JSON 文件</font></h2><p>调用 dumps 方法可以将 JSON 对象转化为字符串，然后再调用文件的 write 方法即可写入文本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">data = [&#123;</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'TRH'</span>,</span><br><span class="line">    <span class="string">'gender'</span>: <span class="string">'male'</span>,</span><br><span class="line">    <span class="string">'birthday'</span>: <span class="string">'1999-01-25'</span></span><br><span class="line">&#125;]</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.json'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    fp.write(json.dumps(data))</span><br></pre></td></tr></table></figure>
-<p>data.json 文件：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="attr">"name"</span>: <span class="string">"TRH"</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>, <span class="attr">"birthday"</span>: <span class="string">"1999-01-25"</span>&#125;]</span><br></pre></td></tr></table></figure>
-<p>添加参数 indent（代表缩进字符个数），将会格式化输出：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">data = [&#123;</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'TRH'</span>,</span><br><span class="line">    <span class="string">'gender'</span>: <span class="string">'male'</span>,</span><br><span class="line">    <span class="string">'birthday'</span>: <span class="string">'1999-01-25'</span></span><br><span class="line">&#125;]</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.json'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> file:</span><br><span class="line">    file.write(json.dumps(data, indent=<span class="number">2</span>))</span><br></pre></td></tr></table></figure></p>
-<p>输出结果：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"TRH"</span>,</span><br><span class="line">    <span class="attr">"gender"</span>: <span class="string">"male"</span>,</span><br><span class="line">    <span class="attr">"birthday"</span>: <span class="string">"1999-01-25"</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>如果 JSON 中包含中文字符，需要指定参数 ensure_ascii 为 False，另外还要规定文件输出的编码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">data = [&#123;</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'小明'</span>,</span><br><span class="line">    <span class="string">'gender'</span>: <span class="string">'男'</span>,</span><br><span class="line">    <span class="string">'birthday'</span>: <span class="string">'1999年01月25日'</span></span><br><span class="line">&#125;]</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.json'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> file:</span><br><span class="line">    file.write(json.dumps(data, indent=<span class="number">2</span>, ensure_ascii=<span class="keyword">False</span>))</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"小明"</span>,</span><br><span class="line">    <span class="attr">"gender"</span>: <span class="string">"男"</span>,</span><br><span class="line">    <span class="attr">"birthday"</span>: <span class="string">"1999年01月25日"</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<h1 id="【9-3】CSV-文本存储"><a href="#【9-3】CSV-文本存储" class="headerlink" title="【9.3】CSV 文本存储"></a><font color="#ff0000">【9.3】CSV 文本存储</font></h1><p>CSV（Comma-Separated Values）是逗号分隔值或字符分隔值的文件格式，其文件以纯文本的形式储存表格数据（数字和文本），CSV 文件的行与行之间用换行符分隔，列与列之间用逗号分隔</p>
-<h2 id="【9-3-1】写入"><a href="#【9-3-1】写入" class="headerlink" title="【9.3.1】写入"></a><font color="#ff0000">【9.3.1】写入</font></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.csv'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> csvfile:</span><br><span class="line">    writer = csv.writer(csvfile)</span><br><span class="line">    writer.writerow([<span class="string">'id'</span>, <span class="string">'name'</span>, <span class="string">'age'</span>])</span><br><span class="line">    writer.writerow([<span class="string">'10001'</span>, <span class="string">'TRHX'</span>, <span class="number">20</span>])</span><br><span class="line">    writer.writerow([<span class="string">'10002'</span>, <span class="string">'Bob'</span>, <span class="number">22</span>])</span><br><span class="line">    writer.writerow([<span class="string">'10003'</span>, <span class="string">'Jordan'</span>, <span class="number">21</span>])</span><br></pre></td></tr></table></figure>
-<p>打开 data.csv 文件，调用 CSV 库的 writer 方法初始化写入对象，然后调用 writerow 方法传入每行的数据即可完成写入，用 Excel 打开 data.csv 文件将是表格形式</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">id,name,age</span><br><span class="line"></span><br><span class="line"><span class="number">10001</span>,TRHX,<span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="number">10002</span>,Bob,<span class="number">22</span></span><br><span class="line"></span><br><span class="line"><span class="number">10003</span>,Jordan,<span class="number">21</span></span><br></pre></td></tr></table></figure>
-<p>列与列之间的分隔符是可以修改的，只需要传入 delimiter 参数即可：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.csv'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> csvfile:</span><br><span class="line">    writer = csv.writer(csvfile, delimiter=<span class="string">' '</span>)</span><br><span class="line">    writer.writerow([<span class="string">'id'</span>, <span class="string">'name'</span>, <span class="string">'age'</span>])</span><br><span class="line">    writer.writerow([<span class="string">'10001'</span>, <span class="string">'TRHX'</span>, <span class="number">20</span>])</span><br><span class="line">    writer.writerow([<span class="string">'10002'</span>, <span class="string">'Bob'</span>, <span class="number">22</span>])</span><br><span class="line">    writer.writerow([<span class="string">'10003'</span>, <span class="string">'Jordan'</span>, <span class="number">21</span>])</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">id name age</span><br><span class="line"></span><br><span class="line"><span class="number">10001</span> TRHX <span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="number">10002</span> Bob <span class="number">22</span></span><br><span class="line"></span><br><span class="line"><span class="number">10003</span> Jordan <span class="number">21</span></span><br></pre></td></tr></table></figure>
-<p>调用 writerows 方法也可以同时写入多行，此时参数就需要为二维列表：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.csv'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> csvfile:</span><br><span class="line">    writer = csv.writer(csvfile, delimiter=<span class="string">' '</span>)</span><br><span class="line">    writer.writerow([<span class="string">'id'</span>, <span class="string">'name'</span>, <span class="string">'age'</span>])</span><br><span class="line">    writer.writerows([[<span class="string">'10001'</span>, <span class="string">'TRHX'</span>, <span class="number">20</span>], [<span class="string">'10002'</span>, <span class="string">'Bob'</span>, <span class="number">22</span>], [<span class="string">'10003'</span>, <span class="string">'Jordan'</span>, <span class="number">21</span>]])</span><br></pre></td></tr></table></figure>
-<p>输出结果仍与原来的一样</p>
-<p>此外 CSV 库中也提供了字典的写入方式：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.csv'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> csvfile:</span><br><span class="line">    fieldnames = [<span class="string">'id'</span>, <span class="string">'name'</span>, <span class="string">'age'</span>]</span><br><span class="line">    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)</span><br><span class="line">    writer.writeheader()</span><br><span class="line">    writer.writerow(&#123;<span class="string">'id'</span>: <span class="string">'10001'</span>, <span class="string">'name'</span>: <span class="string">'TRHX'</span>, <span class="string">'age'</span>: <span class="number">20</span>&#125;)</span><br><span class="line">    writer.writerow(&#123;<span class="string">'id'</span>: <span class="string">'10002'</span>, <span class="string">'name'</span>: <span class="string">'Bob'</span>, <span class="string">'age'</span>: <span class="number">22</span>&#125;)</span><br><span class="line">    writer.writerow(&#123;<span class="string">'id'</span>: <span class="string">'10003'</span>, <span class="string">'name'</span>: <span class="string">'Jordan'</span>, <span class="string">'age'</span>: <span class="number">21</span>&#125;)</span><br></pre></td></tr></table></figure>
-<p>首先定义 3 个字段，用 fieldnames 表示，然后将其传给 DictWriter 来初始化一个字典写入对象，接着可以调用 writeheader 方法先写入头信息，然后再调用 writerow 方法传入相应字典即可</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">id,name,age</span><br><span class="line"></span><br><span class="line"><span class="number">10001</span>,TRHX,<span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="number">10002</span>,Bob,<span class="number">22</span></span><br><span class="line"></span><br><span class="line"><span class="number">10003</span>,Jordan,<span class="number">21</span></span><br></pre></td></tr></table></figure>
-<h2 id="【9-3-2】读取"><a href="#【9-3-2】读取" class="headerlink" title="【9.3.2】读取"></a><font color="#ff0000">【9.3.2】读取</font></h2><p>有写入方法，同样也可以使用 csv 库来读取 CSV 文件：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data.csv'</span>, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> csvfile:</span><br><span class="line">    reader = csv.reader(csvfile)</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> reader:</span><br><span class="line">        print(row)</span><br></pre></td></tr></table></figure>
-<p>构造 Reader 对象，遍历输出每行的内容，每一行都是一个列表形式。（如果 CSV 文件中包含中文的话，还需要指定文件编码）读取结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'id'</span>, <span class="string">'name'</span>, <span class="string">'age'</span>]</span><br><span class="line">[<span class="string">'10001'</span>, <span class="string">'TRHX'</span>, <span class="string">'20'</span>]</span><br><span class="line">[<span class="string">'10002'</span>, <span class="string">'Bob'</span>, <span class="string">'22'</span>]</span><br><span class="line">[<span class="string">'10003'</span>, <span class="string">'Jordan'</span>, <span class="string">'21'</span>]</span><br></pre></td></tr></table></figure>
-<p>此外，还可以利用 pandas 的 read_csv 方法将数据从 CSV 中读取出来（pandas 是基于NumPy 的一种工具，该工具是为了解决数据分析任务而创建的。Pandas 纳入了大量库和一些标准的数据模型，提供了高效地操作大型数据集所需的工具）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">'data.csv'</span>)</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
-<p>读取结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">      id    name  age</span><br><span class="line"><span class="number">0</span>  <span class="number">10001</span>    TRHX   <span class="number">20</span></span><br><span class="line"><span class="number">1</span>  <span class="number">10002</span>     Bob   <span class="number">22</span></span><br><span class="line"><span class="number">2</span>  <span class="number">10003</span>  Jordan   <span class="number">21</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="【17-2-2】项目界面"><a href="#【17-2-2】项目界面" class="headerlink" title="【17.2.2】项目界面"></a><font color="#1BC3FB">【17.2.2】项目界面</font></h2><p>创建一个爬虫项目，界面如下所示：</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/02.png" alt="02"><br></fancybox>
+
+<ul>
+<li><font color="#ff0000">创建项目</font>：点击 Create 即可新建一个爬虫项目</li>
+<li><font color="#ff0000">Project Name</font>：爬虫项目名称</li>
+<li><font color="#ff0000">Start URL(s)</font> ：爬虫入口地址，选填，可在项目中更改</li>
+</ul>
+<p>项目创建完成进入调试界面：</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/03.png" alt="03"><br></fancybox>
+
+<ul>
+<li><p><font color="#ff0000">调试界面右边</font>：编写代码的区域</p>
+</li>
+<li><p><font color="#ff0000">调试界面左边</font>：调试的区域，用于执行代码，显示输出信息等用途</p>
+</li>
+<li><p><font color="#ff0000">run</font>：单步调试爬虫程序，点击就可运行当前任务</p>
+</li>
+<li><p><font color="#ff0000">&lt; &gt; 箭头</font>：上一步、下一步，用于调试过程中切换到上一步骤或者下一步骤</p>
+</li>
+<li><p><font color="#ff0000">save</font>：保存当前代码，当代码变更后只有保存了再运行才能得到最新结果</p>
+</li>
+<li><p><font color="#ff0000">enable css selector helper</font>： CSS 选择器辅助程序</p>
+</li>
+<li><p><font color="#ff0000">web</font>：页面预览</p>
+</li>
+<li><p><font color="#ff0000">html</font>：可以查看页面源代码</p>
+</li>
+<li><p><font color="#ff0000">follows</font>：表示爬取请求，点击可查看所有的请求</p>
+</li>
+</ul>
+<p>在新建一个爬虫项目的时候，pyspider 已经自动生成了如下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- encoding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># Created on 2019-09-17 21:18:13</span></span><br><span class="line"><span class="comment"># Project: 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pyspider.libs.base_handler <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Handler</span><span class="params">(BaseHandler)</span>:</span></span><br><span class="line">    crawl_config = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">    @every(minutes=24 * 60)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">on_start</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.crawl(<span class="string">'__START_URL__'</span>, callback=self.index_page)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @config(age=10 * 24 * 60 * 60)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">index_page</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="keyword">for</span> each <span class="keyword">in</span> response.doc(<span class="string">'a[href^="http"]'</span>).items():</span><br><span class="line">            self.crawl(each.attr.href, callback=self.detail_page)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @config(priority=2)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detail_page</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">"url"</span>: response.url,</span><br><span class="line">            <span class="string">"title"</span>: response.doc(<span class="string">'title'</span>).text(),</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><font color="#ff0000">class Handler()：</font>pyspider 爬虫的主类，可以在此处定义爬取、解析、存储的逻辑。整个爬虫的功能只需要一个 Handler 即可完成</p>
+</li>
+<li><p><font color="#ff0000">crawl_config 属性：</font>项目的所有爬取配置将会统一定义到这里，如定义 headers、设置代理等，配置之后全局生效</p>
+</li>
+<li><p><font color="#ff0000">on_start() 方法：</font>爬取入口，初始的爬取请求会在这里产生，该方法通过调用 <code>crawl()</code> 方法即可新建一个爬取请求，第一个参数是爬取的 URL，另一个参数 <code>callback</code> 指定了这个页面爬取成功后用哪个方法进行解析，默认指定为 <code>index_page()</code> 方法，即如果这个 URL 对应的页面爬取成功了，那 Response 将交给 <code>index_page()</code> 方法解析</p>
+</li>
+<li><p><font color="#ff0000">index_page() 方法：</font>接收 Response 参数，Response 对接了 pyquery。直接调用 <code>doc()</code> 方法传入相应的 CSS 选择器，就可以像 pyquery 一样解析此页面，代码中默认是 <code>a[href^=&quot;http&quot;]</code>，即解析页面的所有链接，然后将链接遍历，再次调用了 <code>crawl()</code> 方法生成了新的爬取请求，同时再指定了 callback 为 detail_page，表示这些页面爬取成功了就调用 <code>detail_page()</code> 方法解析。<code>index_page()</code> 实现了两个功能，一是将爬取的结果进行解析，二是生成新的爬取请求</p>
+</li>
+<li><p><font color="#ff0000">detail_page() 方法：</font>同样接收 Response 作为参数。<code>detail_page()</code> 抓取的就是详情页的信息，就不会生成新的请求，只对 Response 对象做解析，解析之后将结果以字典的形式返回。当然也可以进行后续处理，如将结果保存到数据库等操作</p>
+</li>
+</ul>
+<p>PS：pyspider 默认的 web 预览页面窗口较小，可以找到 pyspider 文件夹有个 debug.min.css 文件（如：E:\Python\Lib\site-packages\pyspider\webui\static\debug.min.css），搜索 iframe，将原样式：<code>iframe{border-width:0;width:100%}</code> 改为 <code>iframe{border-width:0;width:100%;height:400px !important}</code> 即可，清除浏览器缓存后就会生效！</p>
+<hr>
+<h1 id="【17-3】使用-pyspider-爬取去哪儿网"><a href="#【17-3】使用-pyspider-爬取去哪儿网" class="headerlink" title="【17.3】使用 pyspider 爬取去哪儿网"></a><font color="#ff0000">【17.3】使用 pyspider 爬取去哪儿网</font></h1><p>爬取地址：<a href="http://travel.qunar.com/travelbook/list.htm" target="_blank" rel="noopener">http://travel.qunar.com/travelbook/list.htm</a><br>爬取目标：去哪儿网旅游攻略，发帖作者、标题、正文等</p>
+<hr>
+<h2 id="【17-3-1】爬取首页"><a href="#【17-3-1】爬取首页" class="headerlink" title="【17.3.1】爬取首页"></a><font color="#1BC3FB">【17.3.1】爬取首页</font></h2><p>创建一个名为 qunar 的爬虫项目，Start URL 设置为 <a href="http://travel.qunar.com/travelbook/list.htm" target="_blank" rel="noopener">http://travel.qunar.com/travelbook/list.htm</a> ，点击 run 出现一个爬取请求</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/04.png" alt="04"><br></fancybox>
+
+<p>左边调试区域出现以下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"process"</span>: &#123;</span><br><span class="line">    <span class="string">"callback"</span>: <span class="string">"on_start"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"project"</span>: <span class="string">"qunar"</span>,</span><br><span class="line">  <span class="string">"taskid"</span>: <span class="string">"data:,on_start"</span>,</span><br><span class="line">  <span class="string">"url"</span>: <span class="string">"data:,on_start"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>callback 为 on_start，表示此时执行了 <code>on_start()</code> 方法。在 <code>on_start()</code> 方法中，利用 <code>crawl()</code> 方法即可生成一个爬取请求，点击 index_page 链接后面的箭头会出现许多新的爬取请求，即首页所包含的所有链接</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/05.png" alt="05"><br></fancybox>
+
+<p>此时左边调试区域代码变为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"fetch"</span>: &#123;&#125;,</span><br><span class="line">  <span class="string">"process"</span>: &#123;</span><br><span class="line">    <span class="string">"callback"</span>: <span class="string">"index_page"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"project"</span>: <span class="string">"qunar"</span>,</span><br><span class="line">  <span class="string">"schedule"</span>: &#123;</span><br><span class="line">    <span class="string">"age"</span>: <span class="number">864000</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"taskid"</span>: <span class="string">"73a789f99528a2bdc3ab83a13902962a"</span>,</span><br><span class="line">  <span class="string">"url"</span>: <span class="string">"http://travel.qunar.com/travelbook/list.htm"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>callback 变为了 index_page，表示此时执行了 <code>index_page()</code> 方法。传入 <code>index_page()</code> 方法的 response 参数为刚才生成的第一个爬取请求的 response 对象，然后调用 <code>doc()</code> 方法，传入提取所有 a 节点的 CSS 选择器，获取 a 节点的属性 href，实现了页面所有链接的提取，随后遍历所有链接，调用 <code>crawl()</code> 方法，把每个链接构造成新的爬取请求，可以看到 follows 新生成了 229 个爬取请求。点击 web 按钮可以直接预览当前页面，点击 html 按钮可以查看此页面源代码</p>
+<hr>
+<h2 id="【17-3-2】信息匹配"><a href="#【17-3-2】信息匹配" class="headerlink" title="【17.3.2】信息匹配"></a><font color="#1BC3FB">【17.3.2】信息匹配</font></h2><p>代码 <code>for each in response.doc(&#39;a[href^=&quot;http&quot;]&#39;).items():</code> 实现了对整个页面链接的获取，我们需要提取网页的攻略的标题，内容等信息，那么直接替换 <code>doc()</code> 方法里的匹配语句即可，pyspider 提供了非常方便的 CSS 选择器，点击 <code>enable css selector helper</code> 按钮后，选择要匹配的信息并点击，再点击箭头 add to editor 即可得到匹配语句</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/06.png" alt="06"><br></fancybox>
+
+<p>完成了 CSS 选择器的替换，点击 <code>save</code> 保存，再次点击 <code>run</code> 重新执行 <code>index_page()</code> 方法，可以看到 follows 变为了 10 个，即抓取到了 10 篇攻略</p>
+<hr>
+<h2 id="【17-3-3】抓取下一页数据"><a href="#【17-3-3】抓取下一页数据" class="headerlink" title="【17.3.3】抓取下一页数据"></a><font color="#1BC3FB">【17.3.3】抓取下一页数据</font></h2><p>每一页只有 10 篇攻略，想要爬取所有页面的攻略，必须要得到下一页的数据，优化 <code>index_page()</code> 方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@config(age=10 * 24 * 60 * 60)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index_page</span><span class="params">(self, response)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> response.doc(<span class="string">'li &gt; .tit &gt; a'</span>).items():</span><br><span class="line">        self.crawl(each.attr.href, callback=self.detail_page)</span><br><span class="line">    next = response.doc(<span class="string">'.next'</span>).attr.href</span><br><span class="line">    self.crawl(next, callback=self.index_page)</span><br></pre></td></tr></table></figure>
+<p>匹配下一页按钮，获取下一页按钮的 URL 并赋值给 next，将该 URL 传给 <code>crawl()</code> 方法，指定回调函数为 <code>index_page()</code> 方法，这样会再次调用 <code>index_page()</code> 方法，提取下一页的攻略标题</p>
+<hr>
+<h2 id="【17-3-4】抓取JS渲染数据"><a href="#【17-3-4】抓取JS渲染数据" class="headerlink" title="【17.3.4】抓取JS渲染数据"></a><font color="#1BC3FB">【17.3.4】抓取JS渲染数据</font></h2><p>随便点击一个获取到的攻略，预览该页面，可以观察到头图一直在加载中，切换到 html 查看源代码页面，可以观察到没有 img 节点，那么此处就是后期经过 JavaScript 渲染后才出现的</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/07.png" alt="07"><br></fancybox>
+
+<p>针对 JavaScript 渲染页面，可以通过 PhantomJS 来实现，具体到 pyspider 中，只需要在 <code>index_page()</code> 的 <code>crawl()</code> 抓取方法中添加一个参数 <code>fetch_type</code> 即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@config(age=10 * 24 * 60 * 60)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index_page</span><span class="params">(self, response)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> response.doc(<span class="string">'li &gt; .tit &gt; a'</span>).items():</span><br><span class="line">        self.crawl(each.attr.href, callback=self.detail_page, fetch_type=<span class="string">'js'</span>)</span><br><span class="line">    next = response.doc(<span class="string">'.next'</span>).attr.href</span><br><span class="line">    self.crawl(next, callback=self.index_page)</span><br></pre></td></tr></table></figure>
+<p>保存之后再次运行即可看到正常页面</p>
+<hr>
+<h2 id="【17-3-5】抓取所有数据"><a href="#【17-3-5】抓取所有数据" class="headerlink" title="【17.3.5】抓取所有数据"></a><font color="#1BC3FB">【17.3.5】抓取所有数据</font></h2><p>改写 <code>detail_page()</code> 方法，同样通过 CSS 选择器提取 URL、标题、日期、作者、正文、图片等信息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@config(priority=2)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">detail_page</span><span class="params">(self, response)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="string">'url'</span>: response.url,</span><br><span class="line">        <span class="string">'title'</span>: response.doc(<span class="string">'#booktitle'</span>).text(),</span><br><span class="line">        <span class="string">'date'</span>: response.doc(<span class="string">'.when .data'</span>).text(),</span><br><span class="line">        <span class="string">'day'</span>: response.doc(<span class="string">'.howlong .data'</span>).text(),</span><br><span class="line">        <span class="string">'who'</span>: response.doc(<span class="string">'.who .data'</span>).text(),</span><br><span class="line">        <span class="string">'text'</span>: response.doc(<span class="string">'#b_panel_schedule'</span>).text(),</span><br><span class="line">        <span class="string">'image'</span>: response.doc(<span class="string">'.cover_img'</span>).attr.src</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="【17-3-6】启动爬虫项目"><a href="#【17-3-6】启动爬虫项目" class="headerlink" title="【17.3.6】启动爬虫项目"></a><font color="#1BC3FB">【17.3.6】启动爬虫项目</font></h2><p>该爬虫项目完整代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- encoding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># Created on 2019-09-18 09:48:29</span></span><br><span class="line"><span class="comment"># Project: qunar</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pyspider.libs.base_handler <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Handler</span><span class="params">(BaseHandler)</span>:</span></span><br><span class="line">    crawl_config = &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">    @every(minutes=24 * 60)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">on_start</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.crawl(<span class="string">'http://travel.qunar.com/travelbook/list.htm'</span>, callback=self.index_page)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @config(age=10 * 24 * 60 * 60)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">index_page</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="keyword">for</span> each <span class="keyword">in</span> response.doc(<span class="string">'li &gt; .tit &gt; a'</span>).items():</span><br><span class="line">            self.crawl(each.attr.href, callback=self.detail_page, fetch_type=<span class="string">'js'</span>)</span><br><span class="line">        next = response.doc(<span class="string">'.next'</span>).attr.href</span><br><span class="line">        self.crawl(next, callback=self.index_page)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @config(priority=2)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detail_page</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">'url'</span>: response.url,</span><br><span class="line">            <span class="string">'title'</span>: response.doc(<span class="string">'#booktitle'</span>).text(),</span><br><span class="line">            <span class="string">'date'</span>: response.doc(<span class="string">'.when .data'</span>).text(),</span><br><span class="line">            <span class="string">'day'</span>: response.doc(<span class="string">'.howlong .data'</span>).text(),</span><br><span class="line">            <span class="string">'who'</span>: response.doc(<span class="string">'.who .data'</span>).text(),</span><br><span class="line">            <span class="string">'text'</span>: response.doc(<span class="string">'#b_panel_schedule'</span>).text(),</span><br><span class="line">            <span class="string">'image'</span>: response.doc(<span class="string">'.cover_img'</span>).attr.src</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p>保存代码后，回到主界面，将项目 status 修改为 RUNNING ，点击 actions 的 run 按钮即可启动爬虫</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/08.png" alt="08"><br></fancybox>
+
+<p>点击 Active Tasks，即可查看最近请求的详细状况：</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/09.png" alt="09"><br></fancybox>
+
+<p>点击 Results，即可查看所有的爬取结果：</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A49/10.png" alt="10"><br></fancybox>
+
+<p>另外，右上角还可以选择 JSON、CSV 格式</p>
 
         </div>
         
@@ -624,10 +625,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-14T01:19:10+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-18T14:33:48+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年9月14日</p>
+    <p>最后更新于 2019年9月18日</p>
   </a>
 </div>
 
@@ -641,8 +642,8 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/08/27/A39-Python3-spider-C09/&title=Python3 爬虫学习笔记 C09 | TRHX'S BLOG&summary=
-Python3 爬虫学习笔记第九章 —— 【文件储存】
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/09/18/A49-Python3-spider-C17/&title=Python3 爬虫学习笔记 C17 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第十七章 —— 【爬虫框架 pyspider — 基本使用】
 "
           
           >
@@ -655,8 +656,8 @@ Python3 爬虫学习笔记第九章 —— 【文件储存】
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/08/27/A39-Python3-spider-C09/&title=Python3 爬虫学习笔记 C09 | TRHX'S BLOG&summary=
-Python3 爬虫学习笔记第九章 —— 【文件储存】
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/09/18/A49-Python3-spider-C17/&title=Python3 爬虫学习笔记 C17 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第十七章 —— 【爬虫框架 pyspider — 基本使用】
 "
           
           >
@@ -667,7 +668,7 @@ Python3 爬虫学习笔记第九章 —— 【文件储存】
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACvElEQVR42u3aMW7DQAwEQP//00kbILC9S94ZLkZVkFgyR8WRIfl4xNfPn+vvb/K7/l/PPrP5xuGFh4eHtwi9DeL/c5Kgn931Gvb6+U9jw8PDw7vGS8Ldn8PJC0peTRIzHh4e3vfw8hA3gDbB4OHh4X0zLw8lfyn5a8XDw8P7Hl5bzs4CzVsPeXviWK8FDw8Pr+sDPM4e1rd/vjLfw8PDwzvacm3bBG0o+aFfRIuHh4d3gXdvfSovmpPX0RbxeHh4eJ/h7Vem8mWpvE08a0Dg4eHh3eO1R3k+Btu0d/NU8ebzeHh4eBd4yeh9U/Lmo6nZ+K0egOHh4eGtefmxPksJr592Y0HhsQkIDw8PL+blfYtT61az0VqbJPDw8PBu8PaNhrbU3rR082RT1Pt4eHh4JS9pFuRB5KVz+1rbdYGneQ8PDw9vzds0UvMyur1389dhYwIPDw+v5LXNgv3xvVnqqpMWHh4e3gXeqZHVJsEUi1PlWgMeHh7eWV67NpqnkGRM1aaN+sl4eHh4F3h5Ad2Or2aLCLMlsDcJBg8PD+8ybzZeytu1s+FZW9zj4eHh3eYV5enLENvCelNMDxsTeHh4eId47ZApP6xvNIvbxjEeHh7ePV5yECfJoE05ObUF4+Hh4X2S1y5d5YtZsxexah/j4eHhXeNtiuC84G7vylsP0eoVHh4e3gVe3szND/HZc9pFgXqzDA8PD+8QbzbIP7sE0D7/zefx8PDwjvJ+ymvTZk3K6LxlHP0VDw8P7wKvPXDbEJOCOE88+QCsvvDw8PBKXjt2mgWdp5ZZa+NptHh4eHjXeO1yQPIFbYE7y2DR0hUeHh7eF/BmY/7ZQlUeT9GlxsPDw/sgb79MkIzH2kWBeqcMDw8Pb81rGwF5s6Adhs1+forEw8PDu8Db/MM/+30bUJJgDsz38PDw8N7f9QsPAA0Bjrc+kgAAAABJRU5ErkJggg=='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACs0lEQVR42u3aMXLjQAwEQP3/077UicgZgOtj0IxUKolC01ULGMDnE18/v67f77Tf/Xaf6/fbX6wvPDw8vEXobRDXoSQhtnfLY8bDw8M7zft2ol6/zh/TTRBxCsljxsPDw3sP79thnd+zTRt5eY2Hh4f3Tl5y0LePo01IeHh4eG/gbY7sTSLZ/NbDvRY8PDy8rg/wefawPv36yHwPDw8Pbz1Vnw29ZqHkh34RLR4eHt4BXh5KPpSaPYjrGNpGBh4eHt7/5eXBbZLHsw0IPDw8vHO8PNB2OWCTGPJUcfN5PDw8vAO82XpTfutZKdymougPg4eHh/cQb1Yc55jkk5smxc2/BHh4eHiHeckBnaeHvGhuH2XRnsDDw8M7xqv7vsG4q4W1RXwx+sLDw8N7lNeuQ82aCLN1rjbC4coXHh4e3oI3K6Nb8OYh5sOwokuNh4eHV/JmBXF+QCfsTTF9U5Tj4eHh/QmvbcvuR1ybVkK0DYGHh4d3gDc77meLWfnQazMAw8PDwzvHa39+Fu6mZG/bIsWUDw8PD2/NaxntKlU74mpXsqJmLh4eHt6jvLa83qSTfTFddB7w8PDwDvBmjHY5YDYkyxsfRTx4eHh4a16+HDC72nWB9ls3KQQPDw/vMC8pspPWatuWnS1mRa0QPDw8vGO8tv26KaPzJsXsnqteCx4eHl7M2w/v2wQzK7iTEV3xHwMeHh7egpe3SjfD/llCahsfdQ7Bw8PDi3mzEVd7NCfv5K2N4mHh4eHhHeDNhlhte6Jtws6++9iMDg8PDy/gbZJBO/7Pf/c6nRQPGg8PD+8Yrz3Q8+ZFOyrb91fw8PDw3sabjco2C1Wz8h0PDw/vPbxZcTwbreUt42jpCg8PD+9R3qYR8Pft2iI2PDw8vAO8TZtglgDagPLy/YldLTw8PLyL6x+RtOQpyRk7ZAAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -677,8 +678,8 @@ Python3 爬虫学习笔记第九章 —— 【文件储存】
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/08/27/A39-Python3-spider-C09/&title=Python3 爬虫学习笔记 C09 | TRHX'S BLOG&summary=
-Python3 爬虫学习笔记第九章 —— 【文件储存】
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/09/18/A49-Python3-spider-C17/&title=Python3 爬虫学习笔记 C17 | TRHX'S BLOG&summary=
+Python3 爬虫学习笔记第十七章 —— 【爬虫框架 pyspider — 基本使用】
 "
           
           >
@@ -689,7 +690,7 @@ Python3 爬虫学习笔记第九章 —— 【文件储存】
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACvElEQVR42u3aMW7DQAwEQP//00kbILC9S94ZLkZVkFgyR8WRIfl4xNfPn+vvb/K7/l/PPrP5xuGFh4eHtwi9DeL/c5Kgn931Gvb6+U9jw8PDw7vGS8Ldn8PJC0peTRIzHh4e3vfw8hA3gDbB4OHh4X0zLw8lfyn5a8XDw8P7Hl5bzs4CzVsPeXviWK8FDw8Pr+sDPM4e1rd/vjLfw8PDwzvacm3bBG0o+aFfRIuHh4d3gXdvfSovmpPX0RbxeHh4eJ/h7Vem8mWpvE08a0Dg4eHh3eO1R3k+Btu0d/NU8ebzeHh4eBd4yeh9U/Lmo6nZ+K0egOHh4eGtefmxPksJr592Y0HhsQkIDw8PL+blfYtT61az0VqbJPDw8PBu8PaNhrbU3rR082RT1Pt4eHh4JS9pFuRB5KVz+1rbdYGneQ8PDw9vzds0UvMyur1389dhYwIPDw+v5LXNgv3xvVnqqpMWHh4e3gXeqZHVJsEUi1PlWgMeHh7eWV67NpqnkGRM1aaN+sl4eHh4F3h5Ad2Or2aLCLMlsDcJBg8PD+8ybzZeytu1s+FZW9zj4eHh3eYV5enLENvCelNMDxsTeHh4eId47ZApP6xvNIvbxjEeHh7ePV5yECfJoE05ObUF4+Hh4X2S1y5d5YtZsxexah/j4eHhXeNtiuC84G7vylsP0eoVHh4e3gVe3szND/HZc9pFgXqzDA8PD+8QbzbIP7sE0D7/zefx8PDwjvJ+ymvTZk3K6LxlHP0VDw8P7wKvPXDbEJOCOE88+QCsvvDw8PBKXjt2mgWdp5ZZa+NptHh4eHjXeO1yQPIFbYE7y2DR0hUeHh7eF/BmY/7ZQlUeT9GlxsPDw/sgb79MkIzH2kWBeqcMDw8Pb81rGwF5s6Adhs1+forEw8PDu8Db/MM/+30bUJJgDsz38PDw8N7f9QsPAA0Bjrc+kgAAAABJRU5ErkJggg=='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACs0lEQVR42u3aMXLjQAwEQP3/077UicgZgOtj0IxUKolC01ULGMDnE18/v67f77Tf/Xaf6/fbX6wvPDw8vEXobRDXoSQhtnfLY8bDw8M7zft2ol6/zh/TTRBxCsljxsPDw3sP79thnd+zTRt5eY2Hh4f3Tl5y0LePo01IeHh4eG/gbY7sTSLZ/NbDvRY8PDy8rg/wefawPv36yHwPDw8Pbz1Vnw29ZqHkh34RLR4eHt4BXh5KPpSaPYjrGNpGBh4eHt7/5eXBbZLHsw0IPDw8vHO8PNB2OWCTGPJUcfN5PDw8vAO82XpTfutZKdymougPg4eHh/cQb1Yc55jkk5smxc2/BHh4eHiHeckBnaeHvGhuH2XRnsDDw8M7xqv7vsG4q4W1RXwx+sLDw8N7lNeuQ82aCLN1rjbC4coXHh4e3oI3K6Nb8OYh5sOwokuNh4eHV/JmBXF+QCfsTTF9U5Tj4eHh/QmvbcvuR1ybVkK0DYGHh4d3gDc77meLWfnQazMAw8PDwzvHa39+Fu6mZG/bIsWUDw8PD2/NaxntKlU74mpXsqJmLh4eHt6jvLa83qSTfTFddB7w8PDwDvBmjHY5YDYkyxsfRTx4eHh4a16+HDC72nWB9ls3KQQPDw/vMC8pspPWatuWnS1mRa0QPDw8vGO8tv26KaPzJsXsnqteCx4eHl7M2w/v2wQzK7iTEV3xHwMeHh7egpe3SjfD/llCahsfdQ7Bw8PDi3mzEVd7NCfv5K2N4mHh4eHhHeDNhlhte6Jtws6++9iMDg8PDy/gbZJBO/7Pf/c6nRQPGg8PD+8Yrz3Q8+ZFOyrb91fw8PDw3sabjco2C1Wz8h0PDw/vPbxZcTwbreUt42jpCg8PD+9R3qYR8Pft2iI2PDw8vAO8TZtglgDagPLy/YldLTw8PLyL6x+RtOQpyRk7ZAAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -711,40 +712,21 @@ Python3 爬虫学习笔记第九章 —— 【文件储存】
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/2019/09/03/A40-Python3-spider-C10/" rel="prev" title="Python3 爬虫学习笔记 C10">
-                                  
-                                      Python3 爬虫学习笔记 C10
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/爬虫/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>爬虫</a> <a class="tag" href="/tags/MySQL/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>MySQL</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/08/26/A38-Python3-spider-C08/" rel="prev" title="Python3 爬虫学习笔记 C08">
+                                <a href="/2019/09/17/A48-submit-search-engine-inclusion/" rel="prev" title="Hexo 博客提交百度、谷歌搜索引擎收录">
                                     
-                                        Python3 爬虫学习笔记 C08
+                                        Hexo 博客提交百度、谷歌搜索引擎收录
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/tags/爬虫/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>爬虫</a> <a class="tag" href="/tags/Beautiful-Soup/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>Beautiful Soup</a>
+                                    <a class="tag" href="/tags/Hexo/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>Hexo</a> <a class="tag" href="/tags/SEO/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>SEO</a>
                                 </h6>
                             
                         </span>
@@ -787,7 +769,7 @@ Python3 爬虫学习笔记第九章 —— 【文件储存】
 
   <script>
     window.subData = {
-      title: 'Python3 爬虫学习笔记 C09',
+      title: 'Python3 爬虫学习笔记 C17',
       tools: true
     }
   </script>
@@ -929,7 +911,7 @@ Python3 爬虫学习笔记第九章 —— 【文件储存】
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#【9-1】TXT-文本存储"><span class="toc-text">【9.1】TXT 文本存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【9-1-1】基本示例"><span class="toc-text">【9.1.1】基本示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【9-1-2】打开方式"><span class="toc-text">【9.1.2】打开方式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【9-2】JSON-文件存储"><span class="toc-text">【9.2】JSON 文件存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【9-2-1】对象和数组"><span class="toc-text">【9.2.1】对象和数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【9-2-2】读取-JSON"><span class="toc-text">【9.2.2】读取 JSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【9-2-3】写入-JSON-文件"><span class="toc-text">【9.2.3】写入 JSON 文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【9-3】CSV-文本存储"><span class="toc-text">【9.3】CSV 文本存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【9-3-1】写入"><span class="toc-text">【9.3.1】写入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【9-3-2】读取"><span class="toc-text">【9.3.2】读取</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#【17-1】初识-pyspider"><span class="toc-text">【17.1】初识 pyspider</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【17-2】使用-pyspider"><span class="toc-text">【17.2】使用 pyspider</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【17-2-1】主界面"><span class="toc-text">【17.2.1】主界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【17-2-2】项目界面"><span class="toc-text">【17.2.2】项目界面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【17-3】使用-pyspider-爬取去哪儿网"><span class="toc-text">【17.3】使用 pyspider 爬取去哪儿网</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【17-3-1】爬取首页"><span class="toc-text">【17.3.1】爬取首页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【17-3-2】信息匹配"><span class="toc-text">【17.3.2】信息匹配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【17-3-3】抓取下一页数据"><span class="toc-text">【17.3.3】抓取下一页数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【17-3-4】抓取JS渲染数据"><span class="toc-text">【17.3.4】抓取JS渲染数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【17-3-5】抓取所有数据"><span class="toc-text">【17.3.5】抓取所有数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【17-3-6】启动爬虫项目"><span class="toc-text">【17.3.6】启动爬虫项目</span></a></li></ol></li></ol>
     </div>
   </section>
 
