@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/about/index.html</loc>
+    
+    <lastmod>2019-09-19T08:40:50.396Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
+    
+    <lastmod>2019-09-19T07:24:46.575Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/09/18/A49-Python3-spider-C17/</loc>
     
     <lastmod>2019-09-18T06:33:48.414Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://www.itrhx.com/2019/09/17/A48-submit-search-engine-inclusion/</loc>
     
     <lastmod>2019-09-17T08:11:15.999Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
-    
-    <lastmod>2019-09-16T06:48:01.165Z</lastmod>
     
   </url>
   
@@ -362,13 +369,6 @@
     <loc>https://www.itrhx.com/box/index.html</loc>
     
     <lastmod>2019-08-17T12:14:12.130Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/about/index.html</loc>
-    
-    <lastmod>2019-08-17T11:52:55.466Z</lastmod>
     
   </url>
   
