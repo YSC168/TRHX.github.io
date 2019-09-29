@@ -1,0 +1,18 @@
+<% if (showCover == true) { %>
+  <div class="cover-wrapper">
+    <cover class='cover <%- page.layout %> <%- is_home() ? theme.cover.height : "half" %>'>
+      <% if (theme.cover.scheme == 'search') { %>
+        <%- partial('../_cover/search') %>
+      <% } %>
+      <br>
+      <!-- Hitokoto 一言 -->
+      <p id="hitokoto"></p>
+			<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+			<script src="https://v1.hitokoto.cn/?c=g&encode=js&select=%23hitokoto" defer></script>
+    </cover>
+    <%- partial('header', null, {cache: false, path: path}) %>
+  </div>
+<% } else { %>
+  <%- partial('header', null, {cache: false, path: path}) %>
+<% } %>
