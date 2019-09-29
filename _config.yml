@@ -86,6 +86,16 @@ deploy:
   branch: master
 - type: baidu_url_submitter
 
+# 博客备份
+backup:
+  type: git
+  theme: material-x-1.2.1
+  message: Back up my www.itrhx.com blog
+  repository:
+    github: git@github.com:TRHX/TRHX.github.io.git,backup
+    coding: git@git.dev.tencent.com:TRHX/TRHX.git,backup
+
+# 提交百度搜索
 baidu_url_submit:
   count: 200
   host: www.itrhx.com
@@ -103,15 +113,6 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
-
-# 博客备份
-backup:
-  type: git
-  theme: material-x-1.2.1
-  message: Back up my www.itrhx.com blog
-  repository:
-    github: git@github.com:TRHX/TRHX.github.io.git,backup
-    coding: git@git.dev.tencent.com:TRHX/TRHX.git,backup
 
 live2d:
   enable: false
