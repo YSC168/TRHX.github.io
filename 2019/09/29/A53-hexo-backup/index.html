@@ -14,12 +14,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: 技巧 | TRHX&#39;S BLOG</title>
+  <title>使用 Hexo-Git-Backup 插件备份你的 Hexo 博客 | TRHX&#39;S BLOG</title>
   
   <meta name="keywords" content="Python爬虫 数据分析 数据可视化 web前端 Java Python HTML 软件工程 大学生 hexo GitHubPages CodingPages">
   
   
-  <meta name="description" content="一个大学生用于自学的个人博客；主攻Python爬虫、WEB前端；求知若饥，虚心若愚；记录毕生所学！">
+  <meta name="description" content="一键备份博客数据，再也不怕数据丢失了！, 一个大学生用于自学的个人博客；主攻Python爬虫、WEB前端；求知若饥，虚心若愚；记录毕生所学！">
   
 
   
@@ -98,7 +98,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover  half'>
+    <cover class='cover post half'>
       
         
   <img class='logo' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/logo.png'/>
@@ -375,40 +375,29 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      
-<div class='l_main'>
+      <div class='l_main'>
   
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
+
   
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
     
     
-      <a title='Markdown 语法&技巧总结' href='/2018/08/25/A03-markdown/'><img class='thumbnail' src='https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/markdown.png'></a>
+      <a title='使用 Hexo-Git-Backup 插件备份你的 Hexo 博客' href='/2019/09/29/A53-hexo-backup/'><img class='thumbnail' src='https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/hexo.png'></a>
     
     <div class="meta" id="header-meta">
       
         
-  <h2 class="title">
-    <a href="/2018/08/25/A03-markdown/">
-      Markdown 语法&技巧总结
-    </a>
-  </h2>
+  
+    <h1 class="title">
+      <a href="/2019/09/29/A53-hexo-backup/">
+        使用 Hexo-Git-Backup 插件备份你的 Hexo 博客
+      </a>
+    </h1>
+  
 
 
       
@@ -434,7 +423,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-08-25</p>
+    <p>2019-09-29</p>
   </a>
 </div>
 
@@ -444,9 +433,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/Markdown/' rel="nofollow">
+    <a href='/categories/Hexo/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Markdown</p>
+      <p>Hexo</p>
     </a>
   </div>
 
@@ -455,11 +444,27 @@
         
           
             
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Hexo/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>Hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/备份/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>备份</p></a></div>
+
 
           
         
           
             
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
 
           
         
@@ -476,46 +481,189 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      在写博客的时候遇到的 Markdown 各种方法技巧或者语法记录下来，方便查阅【持续更新】
-      
-        <div class="readmore">
-          <a href="/2018/08/25/A03-markdown/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <p>欢迎关注我的 CSDN 专栏：<a href="https://blog.csdn.net/qq_36759224/article/category/9285510" target="_blank" rel="noopener">《个人博客搭建：Hexo+Github Pages》</a>，从搭建到美化一条龙，帮你解决 Hexo 常见问题！</p>
+<hr>
+<p>由于 Hexo 博客是静态托管的，所有的原始数据都保存在本地，如果哪一天电脑坏了，或者是误删了本地数据，那就是叫天天不应叫地地不灵了，此时定时备份就显得比较重要了，常见的备份方法有：打包数据保存到U盘、云盘或者其他地方，但是早就有大神开发了备份插件：<a href="https://github.com/coneycode/hexo-git-backup" target="_blank" rel="noopener">hexo-git-backup</a> ，只需要一个命令就可以将所有数据包括主题文件备份到 github 了</p>
+<p>首先进入你博客目录，输入命令 <code>hexo version</code> 查看 Hexo 版本，如图所示，我的版本是 3.7.1：</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A53/01.png" alt="01"><br></fancybox>
+
+<p>安装备份插件，如果你的 Hexo 版本是 2.x.x，则使用以下命令安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-git-backup@0.0.91 --save</span><br></pre></td></tr></table></figure>
+<p>如果你的 Hexo 版本是 3.x.x，则使用以下命令安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure>
+<p>到 Hexo 博客根目录的 <code>_config.yml</code> 配置文件里添加以下配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">backup:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  theme: material-x-1.2.1</span><br><span class="line">  message: Back up my www.itrhx.com blog</span><br><span class="line">  repository:</span><br><span class="line">    github: git@github.com:TRHX/TRHX.github.io.git,backup</span><br><span class="line">    coding: git@git.dev.tencent.com:TRHX/TRHX.git,backup</span><br></pre></td></tr></table></figure>
+<p>参数解释：</p>
+<ul>
+<li>theme：你要备份的主题名称</li>
+<li>message：自定义提交信息</li>
+<li>repository：仓库名，注意仓库地址后面要添加一个分支名，比如我就创建了一个 backup 分支</li>
+</ul>
+<p>最后使用以下命令备份你的博客：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo backup</span><br></pre></td></tr></table></figure>
+<p>或者使用以下简写命令也可以：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>备份成功后可以在你的仓库分支下看到备份的原始文件：</p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A53/02.png" alt="02"><br></fancybox>
+
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A53/03.png" alt="03"><br></fancybox>
+
         </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-29T18:08:04+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2019年9月29日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2019/09/29/A53-hexo-backup/&title=使用 Hexo-Git-Backup 插件备份你的 Hexo 博客 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2019/09/29/A53-hexo-backup/&title=使用 Hexo-Git-Backup 插件备份你的 Hexo 博客 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3aW3LDMAxDUe9/084C3CgAyGQq6uqr0/FDxx+ISOm65HE/xvP/z+vfPWf95Hf3NgwYMGBsy7iX4/n69dTXVJehzA0GDBjnMNbhmD1aD9P1u5TghgEDBozKNdliEQYMGDAyhj7pjKG/BQYMGGcy9GKyEsduofuVWhwGDBgbMty4/OXfX9nfgAEDxlaM2xzr8F3HblfI/nEXDBgwRjOyLUxlOZiRsqfBgAHjHIbepu8qaN1C1+gawoABYygji1Rl21KftH7vh98NGDBgDGXo7XsX2XvMwugIwoABYwRD3yB0m2v6olAP1rBrCAMGjHEMffHntvVdsN50gwEDxmxGpYhVFnB2dMrPaavFYcCAsQnDbfq71yitNLcYDn9DYMCAsSEjK2KzqC01/defAAYMGKMZ2bZB/YBFFrv6Z4IBA8Ykhm0yo9bdCnU/EwwYME5gdG0xumyluLXbcDBgwDiAoW9YKmWnu7XZUMTCgAFjNMNtimXHuSqruBIGBgwYIxjK4VT9gJc+aWUBahwsgwEDxjGMLAT1IL6FETYHYcCAMZpRaaK5EZwtBPVCGgYMGPMYtzn0ablLRn2xeOl5DwMGjBGMSry606psMOjFNgwYMKYy9JDtWoe6JbGxMQADBozRDD0o3UMVetPNjX4YMGDAcAM3O8hVL3phwIABQ1muZaHpfrIPb4EBA8YBjKyIrYR15bBFcy0OAwaMf8/IIjI7MFEBNGxqwoABYz/GC+8wUJbJlunuAAAAAElFTkSuQmCC'>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2019/09/29/A53-hexo-backup/&title=使用 Hexo-Git-Backup 插件备份你的 Hexo 博客 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3aW3LDMAxDUe9/084C3CgAyGQq6uqr0/FDxx+ISOm65HE/xvP/z+vfPWf95Hf3NgwYMGBsy7iX4/n69dTXVJehzA0GDBjnMNbhmD1aD9P1u5TghgEDBozKNdliEQYMGDAyhj7pjKG/BQYMGGcy9GKyEsduofuVWhwGDBgbMty4/OXfX9nfgAEDxlaM2xzr8F3HblfI/nEXDBgwRjOyLUxlOZiRsqfBgAHjHIbepu8qaN1C1+gawoABYygji1Rl21KftH7vh98NGDBgDGXo7XsX2XvMwugIwoABYwRD3yB0m2v6olAP1rBrCAMGjHEMffHntvVdsN50gwEDxmxGpYhVFnB2dMrPaavFYcCAsQnDbfq71yitNLcYDn9DYMCAsSEjK2KzqC01/defAAYMGKMZ2bZB/YBFFrv6Z4IBA8Ykhm0yo9bdCnU/EwwYME5gdG0xumyluLXbcDBgwDiAoW9YKmWnu7XZUMTCgAFjNMNtimXHuSqruBIGBgwYIxjK4VT9gJc+aWUBahwsgwEDxjGMLAT1IL6FETYHYcCAMZpRaaK5EZwtBPVCGgYMGPMYtzn0ablLRn2xeOl5DwMGjBGMSry606psMOjFNgwYMKYy9JDtWoe6JbGxMQADBozRDD0o3UMVetPNjX4YMGDAcAM3O8hVL3phwIABQ1muZaHpfrIPb4EBA8YBjKyIrYR15bBFcy0OAwaMf8/IIjI7MFEBNGxqwoABYz/GC+8wUJbJlunuAAAAAElFTkSuQmCC'>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/Markdown/" rel="nofollow"><i class="fas fa-tags fa-fw"></i>Markdown</a>
-        
-          <a href="/tags/技巧/" rel="nofollow"><i class="fas fa-tags fa-fw"></i>技巧</a>
-        
-      </div>
-    
   </section>
-</article>
 
-          </div>
+
         
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/09/28/A52-pyspider-combat-douban/" rel="prev" title="Python3 爬虫实战 — 豆瓣电影TOP250">
+                                    
+                                        Python3 爬虫实战 — 豆瓣电影TOP250
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/爬虫/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>爬虫</a> <a class="tag" href="/tags/豆瓣电影/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>豆瓣电影</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
       
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+      
+      
+        <section id="comments">
+          <div id="gitalk-container"></div>
+        </section>
+      
+      
+    </section>
+  </article>
+
 
   
 
 
-    
-  
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '使用 Hexo-Git-Backup 插件备份你的 Hexo 博客',
+      tools: true
+    }
+  </script>
+
+
 </div>
 <aside class='l_side'>
   
@@ -1145,6 +1293,24 @@
 
 
 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: "d19a84b9d9a2ddb2c6b9",
+      clientSecret: "cec9feae5129a6106edc68ce06d167be8eb06021",
+      repo: "trhx.github.io",
+      owner: "trhx",
+      admin: "trhx",
+      
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+      
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+    gitalk.render('gitalk-container');
+  </script>
 
 
 

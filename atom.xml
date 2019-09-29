@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.itrhx.com/"/>
-  <updated>2019-09-28T09:12:23.502Z</updated>
+  <updated>2019-09-29T10:08:04.045Z</updated>
   <id>https://www.itrhx.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Hexo-Git-Backup 插件备份你的 Hexo 博客</title>
+    <link href="https://www.itrhx.com/2019/09/29/A53-hexo-backup/"/>
+    <id>https://www.itrhx.com/2019/09/29/A53-hexo-backup/</id>
+    <published>2019-09-29T10:02:15.603Z</published>
+    <updated>2019-09-29T10:08:04.045Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>欢迎关注我的 CSDN 专栏：<a href="https://blog.csdn.net/qq_36759224/article/category/9285510" target="_blank" rel="noopener">《个人博客搭建：Hexo+Github Pages》</a>，从搭建到美化一条龙，帮你解决 Hexo 常见问题！</p><hr><p>由于 Hexo 博客是静态托管的，所有的原始数据都保存在本地，如果哪一天电脑坏了，或者是误删了本地数据，那就是叫天天不应叫地地不灵了，此时定时备份就显得比较重要了，常见的备份方法有：打包数据保存到U盘、云盘或者其他地方，但是早就有大神开发了备份插件：<a href="https://github.com/coneycode/hexo-git-backup" target="_blank" rel="noopener">hexo-git-backup</a> ，只需要一个命令就可以将所有数据包括主题文件备份到 github 了</p><p>首先进入你博客目录，输入命令 <code>hexo version</code> 查看 Hexo 版本，如图所示，我的版本是 3.7.1：</p><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A53/01.png" alt="01"><br></fancybox><p>安装备份插件，如果你的 Hexo 版本是 2.x.x，则使用以下命令安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-git-backup@0.0.91 --save</span><br></pre></td></tr></table></figure><p>如果你的 Hexo 版本是 3.x.x，则使用以下命令安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure><p>到 Hexo 博客根目录的 <code>_config.yml</code> 配置文件里添加以下配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">backup:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  theme: material-x-1.2.1</span><br><span class="line">  message: Back up my www.itrhx.com blog</span><br><span class="line">  repository:</span><br><span class="line">    github: git@github.com:TRHX/TRHX.github.io.git,backup</span><br><span class="line">    coding: git@git.dev.tencent.com:TRHX/TRHX.git,backup</span><br></pre></td></tr></table></figure><p>参数解释：</p><ul><li>theme：你要备份的主题名称</li><li>message：自定义提交信息</li><li>repository：仓库名，注意仓库地址后面要添加一个分支名，比如我就创建了一个 backup 分支</li></ul><p>最后使用以下命令备份你的博客：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo backup</span><br></pre></td></tr></table></figure><p>或者使用以下简写命令也可以：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure><p>备份成功后可以在你的仓库分支下看到备份的原始文件：</p><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A53/02.png" alt="02"><br></fancybox><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A53/03.png" alt="03"><br></fancybox>]]></content>
+    
+    <summary type="html">
+    
+      一键备份博客数据，再也不怕数据丢失了！
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://www.itrhx.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.itrhx.com/tags/Hexo/"/>
+    
+      <category term="备份" scheme="https://www.itrhx.com/tags/%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>Python3 爬虫实战 — 豆瓣电影TOP250</title>
@@ -539,32 +563,6 @@
       <category term="爬虫" scheme="https://www.itrhx.com/tags/%E7%88%AC%E8%99%AB/"/>
     
       <category term="User-Agent" scheme="https://www.itrhx.com/tags/User-Agent/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Selenium 显式等待条件及其含义</title>
-    <link href="https://www.itrhx.com/2019/08/23/A33-selenium/"/>
-    <id>https://www.itrhx.com/2019/08/23/A33-selenium/</id>
-    <published>2019-08-23T01:28:22.478Z</published>
-    <updated>2019-09-24T12:47:18.475Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table><thead><tr><th>等待条件</th><th>含义</th></tr></thead><tbody><tr><td>title_is</td><td>标题是某内容</td></tr><tr><td>title_contains</td><td>标题包含某内容</td></tr><tr><td>presence_of_element_located</td><td>节点加载出，传入定位元组，如 (By.ID, ‘p’)</td></tr><tr><td>visibility_of_element_located</td><td>节点可见，传入定位元组</td></tr><tr><td>visibility_of</td><td>可见，传入节点对象</td></tr><tr><td>presence_of_all_elements_located</td><td>所有节点加载出</td></tr><tr><td>text_to_be_present_in_element</td><td>某个节点文本包含某文字</td></tr><tr><td>text_to_be_present_in_element_value</td><td>某个节点值包含某文字</td></tr><tr><td>frame_to_be_available_and_switch_to_it frame</td><td>加载并切换</td></tr><tr><td>invisibility_of_element_located</td><td>节点不可见</td></tr><tr><td>element_to_be_clickable</td><td>节点可点击</td></tr><tr><td>staleness_of</td><td>判断一个节点是否仍在 DOM，可判断页面是否已经刷新</td></tr><tr><td>element_to_be_selected</td><td>节点可选择，传节点对象</td></tr><tr><td>element_located_to_be_selected</td><td>节点可选择，传入定位元组</td></tr><tr><td>element_selection_state_to_be</td><td>传入节点对象以及状态，相等返回 True，否则返回 False</td></tr><tr><td>element_located_selection_state_to_be</td><td>传入定位元组以及状态，相等返回 True，否则返回 False</td></tr><tr><td>alert_is_present</td><td>是否出现 Alert</td></tr></tbody></table><p>更多等待条件极其用法介绍：<a href="https://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions" target="_blank" rel="noopener">https://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions</a></p><p>Selenium 的使用：<a href="https://www.itrhx.com/2019/08/22/A32-Python3-spider-C04/">https://www.itrhx.com/2019/08/22/A32-Python3-spider-C04/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      Selenium 显式等待条件及其含义附表
-    
-    </summary>
-    
-      <category term="Python3 学习笔记" scheme="https://www.itrhx.com/categories/Python3-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="学习经验" scheme="https://www.itrhx.com/categories/Python3-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-      <category term="爬虫" scheme="https://www.itrhx.com/tags/%E7%88%AC%E8%99%AB/"/>
-    
-      <category term="Selenium" scheme="https://www.itrhx.com/tags/Selenium/"/>
     
   </entry>
   
