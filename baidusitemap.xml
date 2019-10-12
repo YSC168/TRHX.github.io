@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.itrhx.com/2019/10/09/A54-pyspider-anjuke/</loc>
-    <lastmod>2019-10-09</lastmod>
+    <loc>https://www.itrhx.com/2019/09/28/A52-pyspider-doubantop250/</loc>
+    <lastmod>2019-10-12</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/10/12/A55-pyspider-hupu/</loc>
+    <lastmod>2019-10-12</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/09/24/A51-pyspider-maoyantop100/</loc>
-    <lastmod>2019-10-09</lastmod>
+    <lastmod>2019-10-12</lastmod>
   </url>  <url>
-    <loc>https://www.itrhx.com/2019/09/28/A52-pyspider-doubantop250/</loc>
-    <lastmod>2019-10-09</lastmod>
+    <loc>https://www.itrhx.com/2019/10/09/A54-pyspider-anjuke/</loc>
+    <lastmod>2019-10-12</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/27/A39-Python3-spider-C09/</loc>
     <lastmod>2019-10-09</lastmod>
