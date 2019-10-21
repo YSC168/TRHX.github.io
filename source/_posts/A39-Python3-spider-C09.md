@@ -243,7 +243,29 @@ id,name,age
 10003,Jordan,21
 ```
 
-列与列之间的分隔符是可以修改的，只需要传入 delimiter 参数即可：
+默认每一行之间是有一行空格的，可以使用参数 `newline` 来去除空行：
+
+```python
+import csv
+
+with open('data.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['id', 'name', 'age'])
+    writer.writerow(['10001', 'TRHX', 20])
+    writer.writerow(['10002', 'Bob', 22])
+    writer.writerow(['10003', 'Jordan', 21])
+```
+
+输出结果：
+
+```python
+id,name,age
+10001,TRHX,20
+10002,Bob,22
+10003,Jordan,21
+```
+
+列与列之间的分隔符是可以修改的，只需要传入 `delimiter` 参数即可：
 
 ```python
 import csv
@@ -268,7 +290,7 @@ id name age
 10003 Jordan 21
 ```
 
-调用 writerows 方法也可以同时写入多行，此时参数就需要为二维列表：
+调用 `writerows` 方法也可以同时写入多行，此时参数就需要为二维列表：
 
 ```python
 import csv

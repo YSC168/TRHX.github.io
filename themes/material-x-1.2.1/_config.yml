@@ -4,11 +4,11 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/css/style.css
+      style: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/js/app.js
-      search: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/js/app.js
+      search: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/js/volantis.min.js
 
 
 
@@ -33,12 +33,12 @@ music:
   mode: circulation # random （随机） single （单曲） circulation （列表循环） order （列表）
   server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
   type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
-  id: 2625522030    # 歌曲/专辑/歌单 ID
+  id: 3019271605    # 歌曲/专辑/歌单 ID
   volume: 0.7       # 音量, 0~1
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/bitmap.gif
+avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/bitmap.gif
 
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
@@ -50,8 +50,8 @@ backstretch:
   duration: 5000 # 持续时间（毫秒）
   fade: 1500     # 渐变（毫秒）
   images:
-    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/background/017.webp
-    - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/background/021.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/background/017.webp
+    - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/background/021.webp
 
 
 ############################### 自定义 ###############################
@@ -60,7 +60,7 @@ cover:
   scheme: search    # 后期将会提供多种封面方案
   # height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
   # title: "TRHX'S BLOG"
-  logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
+  logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
   search_placeholder: '世界之大，探索一下！'
   # 主页封面菜单
   features:
@@ -147,7 +147,7 @@ body: [article, comments]
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
   - widget: author
-    avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
+    avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/trhx.png
     title: TRHX'S BLOG
     body: 一入IT深似海，从此学习无绝期
     social: true
@@ -195,7 +195,7 @@ sidebar:
   - widget: plain
     icon: fas fa-comments
     title: 交流群组
-    body: '<img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/hexoisthebest">Telegram 交流群</a>'
+    body: '<img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/hexoisthebest">Telegram 交流群</a>'
 #  - widget: list
 #    icon: fas fa-link
 #    title: 特别链接
@@ -229,12 +229,12 @@ sidebar:
     title: "最近在听"
     more:
       icon: far fa-heart
-      url: https://music.163.com/#/playlist?id=2415512873
+      url: https://music.163.com/#/user/home?id=1379654769
       rel: external nofollow noopener noreferrer
       target: _blank
     server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
     type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
-    id: 2625522030     # 歌曲/专辑/歌单 ID
+    id: 3019271605     # 歌曲/专辑/歌单 ID
 
 # 社交信息
 social:

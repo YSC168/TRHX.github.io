@@ -10,24 +10,29 @@ thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/com
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 ---
 
-爬取时间：2019-09-27
-爬取难度：★★☆☆☆☆
-请求链接：[豆瓣电影 Top 250](https://movie.douban.com/top250) 以及每部电影详情页
-爬取目标：爬取榜单上每一部电影详情页的数据，保存为 CSV 文件；下载所有电影海报到本地
-涉及知识：请求库 requests、解析库 lxml、Xpath 语法、正则表达式、CSV 和二进制数据储存、列表操作
+> 爬取时间：2019-09-27
+> 爬取难度：★★☆☆☆☆
+> 请求链接：https://movie.douban.com/top250 以及每部电影详情页
+> 爬取目标：爬取榜单上每一部电影详情页的数据，保存为 CSV 文件；下载所有电影海报到本地
+> 涉及知识：请求库 requests、解析库 lxml、Xpath 语法、正则表达式、CSV 和二进制数据储存、列表操作
+> 完整代码：https://github.com/TRHX/Python3-Spider-Practice/tree/master/douban-top250
+> 其他爬虫实战代码合集（持续更新）：https://github.com/TRHX/Python3-Spider-Practice
+> 爬虫实战专栏（持续更新）：https://itrhx.blog.csdn.net/article/category/9351278
 
 ---
 
 <!--more-->
 
-# <font color=#FF0000>【1x00】循环爬取首页</font>
+# <font color=#FF0000>【1x00】循环爬取网页模块</font>
 
 观察豆瓣电影 Top 250，请求地址为：https://movie.douban.com/top250
 
 每页展示25条电影信息，照例翻页观察 url 的变化：
 
 第一页：https://movie.douban.com/top250
+
 第二页：https://movie.douban.com/top250?start=25&filter=
+
 第三页：https://movie.douban.com/top250?start=50&filter=
 
 一共有10页，每次改变的是 start 的值，利用一个 for 循环，从 0 到 250 每隔 25 取一个值拼接到 url，实现循环爬取每一页，由于我们的目标是进入每一部电影的详情页，然后爬取详情页的内容，所以我们可以使用 Xpath 提取每一页每部电影详情页的 URL，将其赋值给 `m_urls`，并返回 `m_urls`，`m_urls` 是一个列表，列表元素就是电影详情页的 URL
@@ -203,15 +208,19 @@ with open(poster_path, "wb")as f:
 
 ---
 
-# <font color=#FF0000>【5x00】程序不足的地方</font>
-
-程序不足的地方：豆瓣电影有反爬机制，当程序爬取到大约 150 条数据的时候，IP 就会被封掉，第二天 IP 才会解封，可以考虑综合使用多个代理、多个 User-Agent、随机时间暂停等方法进行爬取
-
----
-
-# <font color=#FF0000>【6x00】完整代码</font>
+# <font color=#FF0000>【5x00】完整代码</font>
 
 ```python
+# =============================================
+# --*-- coding: utf-8 --*--
+# @Time    : 2019-09-27
+# @Author  : TRHX
+# @Blog    : www.itrhx.com
+# @CSDN    : https://blog.csdn.net/qq_36759224
+# @FileName: douban.py
+# @Software: PyCharm
+# =============================================
+
 import requests
 from lxml import etree
 import csv
@@ -331,7 +340,7 @@ if __name__ == '__main__':
 
 ---
 
-# <font color=#FF0000>【7x00】数据截图</font>
+# <font color=#FF0000>【6x00】数据截图</font>
 
 <fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A52/03.png)
@@ -340,3 +349,9 @@ if __name__ == '__main__':
 <fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A52/04.png)
 </fancybox>
+
+---
+
+# <font color=#FF0000>【7x00】程序不足的地方</font>
+
+程序不足的地方：豆瓣电影有反爬机制，当程序爬取到大约 150 条数据的时候，IP 就会被封掉，第二天 IP 才会解封，可以考虑综合使用多个代理、多个 User-Agent、随机时间暂停等方法进行爬取

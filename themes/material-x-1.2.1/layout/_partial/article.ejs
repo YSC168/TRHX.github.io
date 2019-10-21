@@ -29,7 +29,7 @@
                                 <%
                                 var items = [];
                                 post.prev.tags.each(function(item){
-                                    items.push('<a class="tag" href="'+url_for(item.path)+'"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>' + item.name + '</a>');
+                                    items.push('<a class="tag" href="'+url_for(item.path)+'"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;' + item.name + '</a>');
                                 });
                                 %>
                                 <h6 class="tags">
@@ -56,7 +56,7 @@
                                 <%
                                 var items = [];
                                 post.next.tags.each(function(item){
-                                    items.push('<a class="tag" href="'+url_for(item.path)+'"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>' + item.name + '</a>');
+                                    items.push('<a class="tag" href="'+url_for(item.path)+'"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;' + item.name + '</a>');
                                 });
                                 %>
                                 <h6 class="tags">

@@ -4,6 +4,9 @@
   line-height: @lineheight_base;
   word-break: break-all;
   word-wrap: break-word;
+  @media (max-width: @on_phone) {
+    font-size: @fontsize_base_phone;
+  }
   img {
     position: relative;
     margin: 0 auto;
@@ -62,7 +65,7 @@
     list-style: initial;
     padding-left: 10px;
     margin-left: 10px;
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
     &.center{
       justify-content: center;
     }

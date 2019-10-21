@@ -28,21 +28,14 @@ links:
       - 人工智能
       - 人生感悟
 
-    - name: 欧阳博客
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/5658.png
-      url: https://5658.pw/
-      backgroundColor: '#967ADC'
-      textColor: '#fff'
-      tags:
-      - 三分孤独，七分狂傲
-
     - name: shansan
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/shansan.jpeg
-      url: https://shansan.top/
+      url: https://shan333.cn/
       backgroundColor: '#A47366'
       textColor: '#fff'
       tags:
       - C++
+      - Python
 
     - name: yue_luo‘s Blog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yueluo.png
@@ -58,7 +51,7 @@ links:
       backgroundColor: '#B96948'
       textColor: '#fff'
       tags:
-      - 生信
+      - 生物信息
       - Python
 
     - name: 一去二三遥
@@ -87,14 +80,15 @@ links:
       textColor: '#fff'
       tags:
       - iOS
+      - 前端
 
     - name: 清酒踏月
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/lkxin.png
       url: https://www.lkxin.cn/
-      backgroundColor: '#FE7472'
+      backgroundColor: '#967ADC'
       textColor: '#fff'
       tags:
-      - 技术
+      - 网络技术
       - 前端
 
     - name: Mark's blog
@@ -121,7 +115,9 @@ links:
       backgroundColor: '#53AECA'
       textColor: '#fff'
       tags:
-      - 今日事 今日畢
+      - Android
+      - Java
+      - 前端
 
     - name: attack204
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/attack204.png
@@ -148,7 +144,8 @@ links:
       backgroundColor: '#E9535B'
       textColor: '#fff'
       tags:
-      - 技术
+      - Python
+      - JavaScript
       - 二次元
 
     - name: asplun
@@ -165,8 +162,8 @@ links:
       backgroundColor: '#8FB0C7'
       textColor: '#fff'
       tags:
-      - 人工智能
-      - 人生感悟
+      - 前端
+      - 摄影
 
     - name: Tohot
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/tohot.jpg
@@ -183,7 +180,8 @@ links:
       backgroundColor: '#34A853'
       textColor: '#fff'
       tags:
-      - 心念所囚即为牢笼·心念所驻即为坚城
+      - 海员
+      - 技术分享
 
     - name: 漫道求索
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yangyufeng96.jpg
@@ -227,7 +225,7 @@ links:
       backgroundColor: '#696969'
       textColor: '#fff'
       tags:
-      - 念念不忘，必有回响
+      - 机器学习
 
     - name: Mohen's blog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/mcmohen.jpg
@@ -251,7 +249,7 @@ links:
     - name: Steven_MengのBlog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/stevenmhy.png
       url: https://stevenmhy.tk/
-      backgroundColor: '#71BCFF'
+      backgroundColor: '#F4606C'
       textColor: '#fff'
       tags:
       - 蒟蒻
@@ -263,7 +261,8 @@ links:
       backgroundColor: '#34A853'
       textColor: '#fff'
       tags:
-      - 一个非常爱吃土豆的程序猿
+      - JAVA工程师
+      - Python
 
     - name: Sublime’s NoteBook
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/sublimerui.jpg
@@ -274,6 +273,44 @@ links:
       - 前端
       - 嵌入式
       - 蒟蒻
+
+    - name: Singularity
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/singularity2u.jpg
+      url: https://www.singularity2u.top/
+      backgroundColor: '#0086F1'
+      textColor: '#fff'
+      tags:
+      - ACM
+
+    - name: 暗部精英
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/anbujingying.jpg
+      url: https://anbujingying.coding.me/
+      backgroundColor: '#53AECA'
+      textColor: '#fff'
+      tags:
+      - 蒟蒻
+      - C++
+      - HTML
+
+    - name: 刘向洋
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/liuxiangyang.jpg
+      url: https://liuxiangyang.space/
+      backgroundColor: '#E1524C'
+      textColor: '#fff'
+      tags:
+      - 运维
+      - python
+      - Linux
+
+    - name: 松林羊
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/andus.png
+      url: http://www.andus.top
+      backgroundColor: '#696969'
+      textColor: '#fff'
+      tags:
+      - DevOps
+      - Java
+      - 前端
 
   - group: 虐狗博主
     icon: fas fa-heartbeat
@@ -332,7 +369,7 @@ links:
     - name: 中国博客联盟
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/zgboke.png
       url: https://zgboke.org/
-      backgroundColor: '#53AECA'
+      backgroundColor: '#34A853'
       textColor: '#fff'
       tags:
       - 中国博客联盟
@@ -340,7 +377,7 @@ links:
     - name: 一站之星
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/izstar.png
       url: https://www.izstar.cn/
-      backgroundColor: '#3F51B5'
+      backgroundColor: '#F7474F'
       textColor: '#fff'
       tags:
       - 一站之星，学生党博客之家！
@@ -351,7 +388,7 @@ links:
     - name: QQ交流群
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/groups.jpg
       url: https://jq.qq.com/?_wv=1027&k=5F6HRuG
-      backgroundColor: '#04A8DF'
+      backgroundColor: '#0086F1'
       textColor: '#fff'
       tags:
       - Hugo&Hexo博客群（技术交流）
@@ -359,7 +396,7 @@ links:
     - name: Telegram交流群
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/groups.jpg
       url: https://t.me/hexoisthebest
-      backgroundColor: '#04A8DF'
+      backgroundColor: '#967ADC'
       textColor: '#fff'
       tags:
       - Hexo&Hugo博客（迫真TG分群）
@@ -372,13 +409,16 @@ links:
 
 ---
 
-* 海内存知己，天涯若比邻！相见即是缘分，欢迎各位大佬留言互换友链！
-* 互换友链前请先添加本站点为友链！
-* 必须要有名称、头像链接、至少一个标签或者一个简介哦～
-* 一段时间内无法访问贵站将会被分组到【404 NOT FOUND】，请及时恢复站点！
+> * 海内存知己，天涯若比邻！相见即是缘分，欢迎各位大佬留言互换友链！
+> * <font color=#FF0000>互换友链前请先添加本站点为友链！若单方面删除本站友链，本站将不再保留贵站友链！</font>
+> * 一段时间内无法访问贵站将会被分组到【404 NOT FOUND】，请及时恢复站点！
+> * 留言请告诉我你的名称、主页、头像、标签或者简介哦～
+> * 如果想定制你的卡片颜色，也可以留言告诉我哦～（十六进制颜色码，如：#FF0000）
+
+---
 
 > 名称：TRHX'S BLOG
 > 主页：https://www.itrhx.com/
 > 头像：https://www.itrhx.com/images/trhx.png
 > 标签：Python、爬虫、前端
-> 简介：求知若饥 虚心若愚
+> 简介：求知若饥，虚心若愚！

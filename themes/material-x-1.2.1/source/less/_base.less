@@ -68,7 +68,7 @@ fancybox{
     .title, .logo{
       font-size: @fontsize_h1*3;
       line-height: @fontsize_h1*3.3;
-      margin-top: ~"calc(28vh - 2*@{gap})";
+      margin-top: ~"calc(28vh - 1*@{gap})";
       text-align: center;
       font-weight: bold;
     }
@@ -112,6 +112,11 @@ fancybox{
         left: @iconMargin+1px;
         font-size: @fontsize_base;
         color: fade(@color_text_main, 60%);
+        @media(max-width: @on_phone){
+          font-size: @fontsize_base * 0.8;
+          height: @searchbar_height_cover * 0.8;
+          line-height: @searchbar_height_cover * 0.8;
+        }
       }
       .input {
         display: block;
@@ -126,6 +131,8 @@ fancybox{
         padding-left: @iconW + @iconMargin;
         @media(max-width: @on_phone){
           padding-left: @iconW + @iconMargin;
+          font-size: @fontsize_base * 0.8;
+          height: @searchbar_height_cover * 0.8;
         }
         border-radius: @height_navbar;
         background: @color_bg_code_block;
