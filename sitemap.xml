@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/comments/index.html</loc>
+    
+    <lastmod>2019-11-02T05:07:34.600Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
     <lastmod>2019-10-25T13:08:11.944Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://www.itrhx.com/2019/09/24/A51-pyspider-maoyantop100/</loc>
     
     <lastmod>2019-10-21T04:00:20.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/comments/index.html</loc>
-    
-    <lastmod>2019-10-12T17:34:29.652Z</lastmod>
     
   </url>
   
