@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
+    
+    <lastmod>2019-11-25T16:48:06.672Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
     <lastmod>2019-11-25T16:10:29.727Z</lastmod>
@@ -327,13 +334,6 @@
     <loc>https://www.itrhx.com/2019/08/01/A27-image-hosting/</loc>
     
     <lastmod>2019-09-19T16:22:48.078Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
-    
-    <lastmod>2019-09-19T07:24:46.575Z</lastmod>
     
   </url>
   
