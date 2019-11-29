@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     
-    <lastmod>2019-11-25T16:48:06.672Z</lastmod>
+    <lastmod>2019-11-29T12:58:04.082Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
-    <lastmod>2019-11-25T16:10:29.727Z</lastmod>
+    <lastmod>2019-11-29T11:41:20.309Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
+    
+    <lastmod>2019-11-25T16:48:06.672Z</lastmod>
     
   </url>
   
@@ -341,13 +348,6 @@
     <loc>https://www.itrhx.com/2019/09/17/A48-submit-search-engine-inclusion/</loc>
     
     <lastmod>2019-09-17T08:11:15.999Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
-    
-    <lastmod>2019-09-13T17:30:19.078Z</lastmod>
     
   </url>
   
