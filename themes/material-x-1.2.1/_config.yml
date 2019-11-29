@@ -40,13 +40,16 @@ music:
 # 友链页头像占位图
 avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/bitmap.gif
 
+# 字数统计
+word_count: True
+
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
 updated_date_format: 'll' # 文章更新日期的格式
 
 # 幻灯片
 backstretch:
-  position: cover  # cover: 封面背景   full: 整个网页背景
+  position: full  # cover: 封面背景   full: 整个网页背景
   duration: 5000 # 持续时间（毫秒）
   fade: 1500     # 渐变（毫秒）
   images:
@@ -58,7 +61,7 @@ backstretch:
 # page的封面
 cover:
   scheme: search    # 后期将会提供多种封面方案
-  # height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
+  height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
   # title: "TRHX'S BLOG"
   logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
   search_placeholder: '世界之大，探索一下！'
@@ -138,7 +141,7 @@ menu_mobile:
 # 其中，title只在header中有效，music和thumbnail无需在这里设置，文章中有则显示
 # 如果tags放置在meta.header中，那么在post列表中不显示（因为卡片下方已经有了）
 meta:
-  header: [title, author, date, categories, tags, counter, top]
+  header: [title, author, date, categories, tags, counter, word, top]
   footer: [updated, share]
 
 # 主体元素，你也可以在页面的Front-matter中设置

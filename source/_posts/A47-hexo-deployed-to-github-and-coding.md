@@ -113,12 +113,12 @@ XXX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个
 
 正确的做法是：<font color=#ff0000>先去域名 DNS 把 GitHub 的解析暂停掉，然后再重新申请 SSL 证书</font>，大约十秒左右就能申请成功，然后开启强制 HTTPS 访问
 
-这里也建议同时绑定有 www 前缀后没有 www 前缀的，然后在域名 DNS 添加一个 CNAME 或者 A 记录，记录值为 @，这样不管用户是否输入 www 前缀都可以访问了
+这里也建议同时绑定有 www 前缀后没有 www 前缀的，然后设置其中一个为【首选】，另一个设置【跳转至首选】，这样不管用户是否输入 www 前缀都可以访问了
 
 在博客资源引用的时候也要注意所有资源的 URL 必须是以 https:// 开头，不然浏览器依旧会提示不安全！
 
 <fancybox>
-![11](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/11.jpg)
+![11_1](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/11_1.png)
 </fancybox>
 
 至此，我们的 Hexo 博客就成功双线部署到 Coding Pages 和 GitHub Pages 了，并且也实现了全站 HPPTS，最后来一张 GitHub Pages 和 Coding Pages 在国内的速度对比图，可以明显看到速度的提升

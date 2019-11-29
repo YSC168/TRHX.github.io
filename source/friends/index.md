@@ -284,7 +284,7 @@ links:
 
     - name: 暗部精英
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/anbujingying.jpg
-      url: https://anbujingying.coding.me/
+      url: https://dsanying.coding.me/
       backgroundColor: '#53AECA'
       textColor: '#fff'
       tags:
@@ -304,13 +304,82 @@ links:
 
     - name: 松林羊
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/andus.png
-      url: http://www.andus.top
-      backgroundColor: '#696969'
+      url: http://www.andus.top/
+      backgroundColor: '#CEAF91'
       textColor: '#fff'
       tags:
       - DevOps
       - Java
       - 前端
+
+    - name: 小丁的个人博客
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/tding.jpg
+      url: https://tding.top/
+      backgroundColor: '#696969'
+      textColor: '#fff'
+      tags:
+      - 世间所有的相遇，都是久别重逢
+
+    - name: 拾柴者博客
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/scpro.jpg
+      url: http://www.scpro.cn/
+      backgroundColor: '#71BCFF'
+      textColor: '#fff'
+      tags:
+      - Java
+      - 技术分享
+
+    - name: KAYGB
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/kaygb.png
+      url: https://kaygb.top/
+      backgroundColor: '#967ADC'
+      textColor: '#fff'
+      tags:
+      - 前端
+      - PHP
+
+    - name: 黑猫
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/blackcat.png
+      url: https://www.blackcat.top/
+      backgroundColor: '#CEAF91'
+      textColor: '#fff'
+      tags:
+      - Java
+
+    - name: 过客~励む
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yafine-blog.jpg
+      url: https://yafine-blog.cn/
+      backgroundColor: '#34A853'
+      textColor: '#fff'
+      tags:
+      - 你现在的努力,是为了以后有更多的选择.
+
+    - name: 残梦
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/2662419405.jpg
+      url: https://2662419405.github.io
+      backgroundColor: '#FBBC05'
+      textColor: '#fff'
+      tags:
+      - 前端
+      - JS 
+      
+    - name: Whoisec
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/whoisec.jpg
+      url: https://whoisec.com/
+      backgroundColor: '#1E90FF'
+      textColor: '#fff'
+      tags:
+      - WEB安全
+      - 渗透测试
+
+    - name: 碎月の小屋
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/suiyuebaobao.png
+      url: https://blog.suiyuebaobao.com/
+      backgroundColor: '#E1524C'
+      textColor: '#fff'
+      tags:
+      - 心存美好，则无可恼之事；心存善良，则无可恨之人；心若简单，世间纷扰皆成空。
+
 
   - group: 虐狗博主
     icon: fas fa-heartbeat
@@ -414,6 +483,10 @@ links:
 > * 一段时间内无法访问贵站将会被分组到【404 NOT FOUND】，请及时恢复站点！
 > * 留言请告诉我你的名称、主页、头像、标签或者简介哦～
 > * 如果想定制你的卡片颜色，也可以留言告诉我哦～（十六进制颜色码，如：#FF0000）
+
+---
+
+> * **<font size=4px color=#FF0000>由于目前友链数过多，所以暂时只接受建站时间大于三个月且拥有独立域名的博客！</font>**
 
 ---
 

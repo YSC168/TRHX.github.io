@@ -4,11 +4,11 @@
 
 # Site
 title: TRHX'S BLOG
-# logo: images/567.png
+# logo: images/logo.png
 subtitle: 一入 IT 深似海 从此学习无绝期
-description: 一个大学生用于自学的个人博客；主攻Python爬虫、WEB前端；求知若饥，虚心若愚；记录毕生所学！
+description: TRHX 的个人博客；主攻 Python、爬虫、WEB前端、大数据、数据分析、数据可视化；求知若饥，虚心若愚，一入 IT 深似海，从此学习无绝期，记录毕生所学！
 keywords: Python爬虫 数据分析 数据可视化 web前端 Java Python HTML 软件工程 大学生 hexo GitHubPages CodingPages
-author: TRHX'BLOG
+author: TRHX
 language: zh-CN
 timezone:
 
@@ -160,5 +160,5 @@ gitalk:
   clientID: d19a84b9d9a2ddb2c6b9
   clientSecret: cec9feae5129a6106edc68ce06d167be8eb06021
   repo: trhx.github.io
-  owner: trhx
-  admin: [trhx]
+  owner: TRHX
+  admin: [TRHX]
