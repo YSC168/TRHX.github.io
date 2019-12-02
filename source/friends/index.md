@@ -238,7 +238,7 @@ links:
 
     - name: Yinux's Blog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/codingpy.png
-      url: https://www.codingpy.cn/
+      url: https://www.yinuxy.com/
       backgroundColor: '#967ADC'
       textColor: '#fff'
       tags:

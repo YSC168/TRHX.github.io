@@ -24,9 +24,9 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 > - SM.MS：运营四年多了，也变得越来越慢了，到了晚上直接打不开图片，速度堪忧
 > - 其他小众图床：随时有挂掉的风险
 > - Imgur等国外图床：国内访问速度太慢，随时有被墙的风险
-> - 大厂储存服务：例如七牛云、又拍云、腾讯云COS、阿里云OSS等，操作繁琐，又是实名认证又是域名备案的，麻烦，而且还要花钱（有钱又不怕麻烦的当我没说）
+> - 大厂储存服务：例如七牛云、又拍云、腾讯云COS、阿里云OSS等，容量限制，操作繁琐，又是实名认证又是域名备案的，麻烦，而且还要花钱（有钱又不怕麻烦的当我没说）
 
-因此，GitHub图床是个不错的选择，利用jsDelivr CDN加速访问（jsDelivr 是一个免费开源的 CDN 解决方案），PicGo工具一键上传，操作简单高效，GitHub和jsDelivr都是大厂，不用担心跑路问题，不用担心速度和容量问题，而且完全免费，可以说是目前免费图床的最佳解决方案！
+因此，GitHub 图床是个不错的选择，利用 jsDelivr CDN 加速访问（jsDelivr 是一个免费开源的 CDN 解决方案），PicGo 工具一键上传，操作简单高效，GitHub 和 jsDelivr 都是大厂，不用担心跑路问题，不用担心速度和容量问题，而且完全免费，可以说是目前免费图床的最佳解决方案！
 
 ---
 
@@ -76,9 +76,11 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 
 - <font color=#FF000>设定Token：</font>粘贴之前生成的【Token】
 
-- <font color=#FF000>指定存储路径：</font>填写想要储存的路径，如【ITRHX-PIC/】，这样就会在仓库下创建一个名为ITRHX-PIC的文件夹，图片将会储存在此文件夹中
+- <font color=#FF000>指定存储路径：</font>填写想要储存的路径，如【ITRHX-PIC/】，这样就会在仓库下创建一个名为 ITRHX-PIC 的文件夹，图片将会储存在此文件夹中
 
-- <font color=#FF000>设定自定义域名：</font>它的的作用是，在图片上传后，PicGo会按照【自定义域名+上传的图片名】的方式生成访问链接，放到粘贴板上，因为我们要使用jsDelivr加速访问，所以可以设置为【https://cdn.jsdelivr.net/gh/用户名/图床仓库名 】，关于jsDelivr是如何引用资源的可以参考我的另一篇博客：[《免费CDN：jsDeliver+Github》](https://www.itrhx.com/2019/02/10/A18-free-cdn/)
+- <font color=#FF000>设定自定义域名：</font>它的作用是，在图片上传后，PicGo 会按照【自定义域名+储存路径+上传的图片名】的方式生成访问链接，并放到粘贴板上，因为我们要使用 jsDelivr 加速访问，所以可以设置为【https://cdn.jsdelivr.net/gh/用户名/图床仓库名 】，上传完毕后，我们就可以通过【https://cdn.jsdelivr.net/gh/用户名/图床仓库名/图片路径 】加速访问我们的图片了，比如上图的图片链接为：https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A27/08.png
+
+关于 jsDelivr 具体是如何引用资源的可以参考我的另一篇博客：[《免费CDN：jsDelivr+Github》](https://www.itrhx.com/2019/02/10/A18-free-cdn/)
 
 ---
 

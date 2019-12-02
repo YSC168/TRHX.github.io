@@ -4,11 +4,11 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/css/style.css
+      style: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/js/app.js
-      search: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/js/app.js
+      search: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/js/volantis.min.js
 
 
 
@@ -38,10 +38,10 @@ music:
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/bitmap.gif
+avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/images/bitmap.gif
 
-# 字数统计
-word_count: True
+# 文章字数统计、阅读时长
+word_count: true
 
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
@@ -53,17 +53,17 @@ backstretch:
   duration: 5000 # 持续时间（毫秒）
   fade: 1500     # 渐变（毫秒）
   images:
-    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/background/017.webp
-    - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/background/021.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/images/background/017.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/images/background/021.webp
 
 
 ############################### 自定义 ###############################
 # page的封面
 cover:
   scheme: search    # 后期将会提供多种封面方案
-  height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
+  height: full      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
   # title: "TRHX'S BLOG"
-  logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
+  logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
   search_placeholder: '世界之大，探索一下！'
   # 主页封面菜单
   features:
@@ -141,7 +141,7 @@ menu_mobile:
 # 其中，title只在header中有效，music和thumbnail无需在这里设置，文章中有则显示
 # 如果tags放置在meta.header中，那么在post列表中不显示（因为卡片下方已经有了）
 meta:
-  header: [title, author, date, categories, tags, counter, word, top]
+  header: [title, author, date, categories, tags, counter, wordcount, top]
   footer: [updated, share]
 
 # 主体元素，你也可以在页面的Front-matter中设置
@@ -150,7 +150,7 @@ body: [article, comments]
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
   - widget: author
-    avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/trhx.png
+    avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/images/trhx.png
     title: TRHX'S BLOG
     body: 一入IT深似海，从此学习无绝期
     social: true
@@ -198,7 +198,7 @@ sidebar:
   - widget: plain
     icon: fas fa-comments
     title: 交流群组
-    body: '<img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.1/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/hexoisthebest">Telegram 交流群</a>'
+    body: '<img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.2.2/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/hexoisthebest">Telegram 交流群</a>'
 #  - widget: list
 #    icon: fas fa-link
 #    title: 特别链接
