@@ -480,7 +480,7 @@
       <a class='notlink'>
         <i class="fas fa-keyboard" aria-hidden="true"></i>
         <p>字数统计:</p>
-        <p>7,863字</p>
+        <p>7,938字</p>
       </a>
     </div>
     <div class="new-meta-item readtime">
@@ -623,6 +623,7 @@
 <hr>
 <h1 id="【08】添加字数统计和阅读时长"><a href="#【08】添加字数统计和阅读时长" class="headerlink" title=" 【08】添加字数统计和阅读时长 "></a><font color="#FF0000"> 【08】添加字数统计和阅读时长 </font></h1><p>先在博客目录下执行以下命令安装 <font color="#FF0000">hexo-wordcount</font> 插件：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm i --save hexo-wordcount</span><br></pre></td></tr></table></figure>
+<p>注意：在 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" rel="noopener">Material X</a> 主题中，字数统计和阅读时长的功能我已提交 PR，在最新版本中，只需要安装插件后，在主题 <code>config.yml</code> 配置文件里，将 <code>word_count</code> 关键字设置为 <code>true</code> 即可，对于旧版本，可以通过以下方法实现：</p>
 <p>以 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" rel="noopener">Material X</a> 主题（版本 1.2.1）为例，在 <font color="#FF0000">\themes\material-x\layout\_meta</font> 目录下创建 <font color="#FF0000">word.ejs</font> 文件，在 <font color="#FF0000">word.ejs</font> 文件中写入以下代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span>(isPostList || !isPostList)&#123; %&gt;</span><br><span class="line">  &lt;% <span class="keyword">if</span> (theme.word_count &amp;&amp; !post.no_word_count) &#123; %&gt;</span><br><span class="line">    &lt;div style=<span class="string">"margin-right: 10px;"</span>&gt;</span><br><span class="line">      &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-time"</span>&gt;</span><br><span class="line">        &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-icon"</span>&gt;</span><br><span class="line">          &lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-keyboard"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line">          &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-text"</span>&gt;  字数统计: <span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">          &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-count"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">wordcount</span>(<span class="attr">post.content</span>) %&gt;</span>字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">        &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>span&gt;</span><br><span class="line">      &amp;nbsp; | &amp;nbsp;</span><br><span class="line">      &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-time"</span>&gt;</span><br><span class="line">        &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-icon"</span>&gt;</span><br><span class="line">          &lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-hourglass-half"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line">          &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-text"</span>&gt;  阅读时长≈&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">          &lt;span class="post-count"&gt;&lt;%= min2read(post.content) %&gt;分&lt;/</span>span&gt;</span><br><span class="line">        &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>span&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;% &#125; %&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
 <p>然后在主题的配置文件 <font color="#FF0000">_config.yml</font> 找到 <font color="#FF0000">meta</font> 关键字，将 <font color="#FF0000">word</font> 填入 <font color="#FF0000">header</font> 中：</p>
@@ -796,10 +797,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-12-07T15:19:51+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-12-08T00:08:09+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年12月7日</p>
+    <p>最后更新于 2019年12月8日</p>
   </a>
 </div>
 
@@ -1513,7 +1514,7 @@
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">126.0k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">126.1k</span>
     </div>
 </footer>
 
