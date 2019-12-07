@@ -97,7 +97,7 @@ XXX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个
 </fancybox>
 
 # <font color=#ff0000>5.绑定域名并开启 HPPTS</font>
-首先在你的域名 DNS 设置中添加一条 CNAME 记录指向 xxxx.coding.me，解析路线选择默认，将 GitHub 的解析路线改为境外，这样境外访问就会走 GitHub，境内就会走 Coding，也有人说阿里云是智能解析，自动分配路线，如果解析路线都是默认，境外访问同样会智能选择走 GitHub，境内走 Coding，我没有验证过，有兴趣的可以自己试试，我的解析如下图所示：
+首先在你的域名 DNS 设置中添加一条 `CNAME` 记录指向 `xxxx.coding.me`，解析路线选择 `默认`，将 GitHub 的解析路线改为 `境外`，这样境外访问就会走 GitHub，境内就会走 Coding，也有人说阿里云是智能解析，自动分配路线，如果解析路线都是默认，境外访问同样会智能选择走 GitHub，境内走 Coding，我没有验证过，有兴趣的可以自己试试，我的解析如下图所示：
 
 <fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/09.jpg)
@@ -113,9 +113,13 @@ XXX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个
 
 正确的做法是：<font color=#ff0000>先去域名 DNS 把 GitHub 的解析暂停掉，然后再重新申请 SSL 证书</font>，大约十秒左右就能申请成功，然后开启强制 HTTPS 访问
 
-这里也建议同时绑定有 www 前缀后没有 www 前缀的，然后设置其中一个为【首选】，另一个设置【跳转至首选】，这样不管用户是否输入 www 前缀都可以访问了
+这里也建议同时绑定有 www 前缀和没有 www 前缀的，如果要绑定没有 www 前缀的，首先要去域名 DNS 添加一个 `A` 记录，主机记录为 `@`，记录值为你博客 IP 地址，IP 地址可以在 cmd 命令行 ping 一下得到，然后在 Coding Pages 中设置其中一个为【首选】，另一个设置【跳转至首选】，这样不管用户是否输入 www 前缀都会跳到有 www 前缀的了
 
 在博客资源引用的时候也要注意所有资源的 URL 必须是以 https:// 开头，不然浏览器依旧会提示不安全！
+
+<fancybox>
+![13](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/13.png)
+</fancybox>
 
 <fancybox>
 ![11_1](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/11_1.png)

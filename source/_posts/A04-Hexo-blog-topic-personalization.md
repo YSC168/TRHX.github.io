@@ -12,9 +12,17 @@ thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/hex
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 ---
 
-&ensp;&ensp;&ensp;&ensp;<font color=#4094C7>本文将讲述一些博客主题的美化、实用功能的添加，</font><font color=#FF0000>不同主题可能方法有些不同</font><font color=#4094C7>（本文以作者 [luuman](https://luuman.github.io/Home/H1/index.html) 的 [spfk](https://github.com/luuman/hexo-theme-spfk) 主题和作者 [xaoxuu](https://xaoxuu.com/) 的 [Material X](https://xaoxuu.com/wiki/material-x/) 主题为例），本文章会不定时进行更新。文章涉及有关参考资料、教程、链接如有侵权请联系我删除！</font>
+本文将讲述一些博客主题的美化、实用功能的添加，本文以作者 [luuman](https://luuman.github.io/Home/H1/index.html) 的 [spfk](https://github.com/luuman/hexo-theme-spfk) 主题和作者 [xaoxuu](https://xaoxuu.com/) 的 [Material X](https://xaoxuu.com/wiki/material-x/) 主题为例，文章会不定时进行更新。文章涉及有关参考资料、教程、链接如有侵权请联系我删除！
 
-&ensp;&ensp;&ensp;&ensp;<font color=#4094C7>本文在CSDN的链接：[《Hexo 博客优化之博客美化》](https://blog.csdn.net/qq_36759224/article/details/85420403)、[《Hexo 博客优化之实用功能添加》](https://blog.csdn.net/qq_36759224/article/details/85010191)，对您有帮助就点个赞吧❤️</font>
+本文在CSDN的链接：[《Hexo 博客优化之博客美化》](https://itrhx.blog.csdn.net/article/details/85420403)、[《Hexo 博客优化之实用功能添加》](https://itrhx.blog.csdn.net/article/details/85010191)，Hexo 博客专栏，从前期搭建到后期美化，帮您解决常见问题：[《Github/Coding Pages + Hexo》](https://itrhx.blog.csdn.net/category_9285510.html)，对您有帮助就点个赞吧❤️
+
+**请注意：**不同主题可能方法有些不同，相同主题不同版本，配置方法也有所差异！
+
+**博客美化前提条件：**有一定的前端基础，了解 HTML、CSS、JS，了解 CSS 预处理语言 Sass、Less、Stylus，搞懂 hexo 的目录结构。
+
+**博客美化通用步骤：**选定主题，认真阅读主题文档，分析主题目录结构，了解每个文件是对应网页哪个部分的，认真阅读美化教程，美化教程本质上只为你提供核心代码和思路，具体代码要添加到哪个地方，需要你自己搞懂主题结构，添加到需要的、合适的位置！
+
+**博客美化终极奥秘：**创作第一，体验第二，避免繁杂，简洁为上！
 
 ---
 
@@ -24,19 +32,29 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 
 进入[来必力官网](https://livere.com)，注册一个账号（注册时可能需要翻墙）
 
+<fancybox>
 ![001](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/001.png)  
+</fancybox>
 
 注册完毕之后，登录，进入安装页面，选择 City 免费版安装，安装之后你会得到一段代码
 
+<fancybox>
 ![002](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/002.png)
+</fancybox>
 
+<fancybox>
 ![003](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/003.png)
+</fancybox>
 
+<fancybox>
 ![004](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/004.png)
+</fancybox>
 
 我们打开主题文件下的 <font color=#FF0000>_config.yml</font> 文件，添加如下代码：
 
-![005](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/005.png) 
+<fancybox>
+![005](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/005.png)
+</fancybox>
 
 在 <font color=#FF0000>\themes\hexo-theme-spfk\layout\\_partial\comments</font> 文件夹下新建一个 <font color=#FF0000>livere.ejs</font> 的文件，在里面填写来必力提供的代码：
 
@@ -63,11 +81,15 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 
 打开 <font color=#FF0000>\themes\hexo-theme-spfk\layout\\_partial\article.ejs </font>文件，在适当位置添加如下红框中的代码：
 
-![006](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/006.png)  
+<fancybox>
+![006](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/006.png)
+</fancybox>
 
 完成以上操作之后，我们就可以使用来必力评论系统了
 
-![007](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/007.png)  
+<fancybox>
+![007](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/007.png)
+</fancybox>
 
 ---
 
@@ -87,24 +109,27 @@ $ npm install --save hexo-helper-live2d
 $ npm install packagename
 ```
 
-打开站点目录下的 <font color=#FF0000>_config.yml</font> 文件，添加如下代码：  
+打开站点目录下的 <font color=#FF0000>_config.yml</font> 文件，添加如下代码：
+
 ``` yaml
 live2d:
-	enable: true
-	scriptFrom: local
-	model: 
-		use: live2d-widget-model-haruto #模型选择
-	display: 
-		position: right  #模型位置
-		width: 150       #模型宽度
-		height: 300      #模型高度
-	mobile: 
-		show: false      #是否在手机端显示
+  enable: true
+  scriptFrom: local
+  model:
+    use: live2d-widget-model-haruto #模型选择
+  display:
+    position: right  #模型位置
+    width: 150       #模型宽度
+    height: 300      #模型高度
+  mobile:
+    show: false      #是否在手机端显示
 ```
 
 设置好过后我们就拥有了一个卡通人物
 
+<fancybox>
 ![008](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/008.png)
+</fancybox>
 
 ---
 
@@ -137,7 +162,7 @@ body {
 
 # <font color=#FF0000> 【04】添加鼠标点击爱心效果 </font>
 
-在<font color=#FF0000> /themes/hexo-theme-spfk/source/js</font> 下新建文件 <font color=#FF0000>love.js</font>，在 <font color=#FF0000>love.js</font> 文件中添加以下代码：
+在<font color=#FF0000> \themes\hexo-theme-spfk\source\js</font> 下新建文件 <font color=#FF0000>love.js</font>，在 <font color=#FF0000>love.js</font> 文件中添加以下代码：
 
 ``` JS
 !function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
@@ -152,7 +177,9 @@ body {
 
 完成以上操作后，当我们点击鼠标的时候就可以看见爱心的特效了
 
+<fancybox>
 ![009](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/009.png)
+</fancybox>
 
 ---
 
@@ -183,10 +210,10 @@ jQuery(document).ready(function($) {
             "top": y - 180,
             "opacity": 0
         },
-			3000,
-			function() {
-			    $i.remove();
-			});
+      3000,
+      function() {
+          $i.remove();
+      });
     });
     setTimeout('delay()', 2000);
 });
@@ -205,7 +232,9 @@ function delay() {
 
 最终实现效果如下：
 
+<fancybox>
 ![010](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/010.png)
+</fancybox>
 
 ---
 
@@ -227,7 +256,9 @@ function delay() {
 
 最终效果：
 
+<fancybox>
 ![011](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/011.gif)
+</fancybox>
 
 ---
 
@@ -282,7 +313,9 @@ function delay() {
 
 最终效果：
 
+<fancybox>
 ![012](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/012.gif)
+</fancybox>
 
 ---
 
@@ -336,7 +369,9 @@ word_count: true
 
 效果图：
 
+<fancybox>
 ![036](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/036.png)
+</fancybox>
 
 ---
 
@@ -364,7 +399,9 @@ word_count: true
 
 然后在 <font color=#FF0000>\themes\hexo-theme-spfk\layout\\_partial\article.ejs</font> 中适当位置添加以下代码：
 
+<fancybox>
 ![013](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/013.png)
+</fancybox>
 
 最后在主题目录下的 <font color=#FF0000>_config.yml</font> 添加以下配置
 
@@ -374,9 +411,13 @@ word_count: true
 
 如果显示的位置不好，可以自行更改其位置，成功配置后的效果如下：
 
+<fancybox>
 ![014](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/014.png)
+</fancybox>
 
+<fancybox>
 ![015](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/015.png)
+</fancybox>
 
 另外：要在博客底部显示所有文章的总字数，可以[点击此处](https://www.npmjs.com/package/hexo-wordcount)，根据你博客底部文件的类型选择相应的代码放在适当的位置即可，前提是要安装好 <font color=#FF0000>hexo-wordcount</font> 插件，例如我使用 [Material X](https://xaoxuu.com/wiki/material-x/) 主题，在 <font color=#FF0000>\themes\material-x\layout\\_partial</font> 目录下的 <font color=#FF0000>footer.ejs</font> 文件中添加如下代码：
 
@@ -387,7 +428,9 @@ word_count: true
 
 实现效果如下：
 
+<fancybox>
 ![016](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/016.png)
+</fancybox>
 
 ---
 
@@ -395,17 +438,25 @@ word_count: true
 
 打开网页版[网易云音乐](https://music.163.com/)，选择你准备添加的背景音乐，点击生成外链播放器，前提是要有版权，不然是无法生成外链播放器的，复制底下的HTML代码
 
+<fancybox>
 ![017](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/017.png)
+</fancybox>
 
+<fancybox>
 ![018](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/018.png)
+</fancybox>
 
 然后将此代码放到你想要放的地方，比如放在博客的左侧，则打开 <font color=#FF0000>\themes\hexo-theme-spfk\layout\\_partial\left-col.ejs</font> 文件，将复制的HTML代码粘贴进去，再进行适当的位置设置让播放器更美观，其中 <font color=#FF0000>auto=1</font> 表示打开网页自动播放音乐，<font color=#FF0000>auto=0</font> 表示关闭自动播放音乐
 
+<fancybox>
 ![019](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/019.png)
+</fancybox>
 
 最后效果如下：
 
+<fancybox>
 ![020](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/020.png)
+</fancybox>
 
 这种网易云音乐外链的方式有很多局限性，因此推荐使用<font color=#FF0000>aplayer</font>，GitHub地址为：https://github.com/MoePlayer/APlayer ，参考教程：[《hexo上的aplayer应用》](https://blog.yleao.com/2018/0902/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A8.html)
 
@@ -438,7 +489,9 @@ setInterval("createtime()",250);
 
 最后效果如下：
 
+<fancybox>
 ![021](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/021.png)
+</fancybox>
 
 ---
 
@@ -448,23 +501,33 @@ setInterval("createtime()",250);
 
 访问[百度统计首页](https://tongji.baidu.com)，注册一个账号后登陆，添加你的博客网站
 
+<fancybox>
 ![022](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/022.png)
+</fancybox>
 
 接着点击代码获取，复制该代码
 
+<fancybox>
 ![023](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/023.png)
+</fancybox>
 
 然后到目录 <font color=#FF0000>\Hexo\themes\hexo-theme-spfk\layout\\_partial</font> 下新建一个 <font color=#FF0000>baidu-analytics.ejs</font> 文件，里面粘贴你刚刚复制的代码
 
+<fancybox>
 ![024](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/024.png)
+</fancybox>
 
 修改主题文件夹下的 <font color=#FF0000>_config.yml</font> 文件，将你的key（图中涂掉部分）填写进去：
 
+<fancybox>
 ![025](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/025.png)
+</fancybox>
 
 所有操作完成后可以在百度统计管理页面检查代码是否安装成功，如果代码安装正确，一般20分钟后，可以查看网站分析数据
 
+<fancybox>
 ![026](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/026.png)
+</fancybox>
 
 另外推荐：[友盟](https://web.umeng.com/main.php?c=user&a=index)，2010年4月在北京成立，安全、可靠、公正、第三方的网站流量统计分析系统
 
@@ -503,9 +566,13 @@ setInterval("createtime()",250);
 
 再次部署博客后就可以看见标题搞笑的效果了：
 
+<fancybox>
 ![027](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/027.png)
+</fancybox>
 
+<fancybox>
 ![028](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/028.png)
+</fancybox>
 
 ---
 
@@ -529,7 +596,9 @@ color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 
 最终实现效果：
 
+<fancybox>
 ![029](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/029.png)
+</fancybox>
 
 ---
 
@@ -537,7 +606,9 @@ color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 
 无意中发现了个有趣的人体时钟 HONE HONE CLOCK，作者是个日本人，[点击此处](http://chabudai.org/blog/)访问作者博客，[点击此处](http://chabudai.org/blog/?p=59)在作者原博客上查看动态样式，[点击此处](http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf)查看动态大图，如果你的博客上有合适的地方，加上一个人体时钟会很有趣的
 
+<fancybox>
 ![030](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/030.png)
+</fancybox>
 
 实现代码：
 
@@ -550,6 +621,7 @@ color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 ```
 
 其他网页小挂件推荐：
+
 - http://abowman.com/ 里面有很多有趣的小挂件，可以养养鱼、龟、狗、仓鼠等各式各样的虚拟宠物，能根据你的鼠标指针位置移动，直接复制代码就可以用
 - http://www.revolvermaps.com/ 它提供网站访客地理信息，可以以2D、3D等形式显示
 - http://www.amazingcounters.com/ 免费网站计数器，有非常多的样式供你选择，可以设置计数器初始数值，可以设置按访问量计数，也可以按独立访问者计数
@@ -594,9 +666,13 @@ rss: /atom.xml
 
 样式一和样式二分别如下：
 
+<fancybox>
 ![031样式一](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/031.png)
+</fancybox>
 
+<fancybox>
 ![032样式二](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/032.png)
+</fancybox>
 
 实现方法：在 <font color=#FF0000>\Hexo\themes\hexo-theme-spfk\source\js</font> 目录下新建一个 <font color=#FF0000>snow.js</font> 文件，粘贴以下代码：
 
@@ -798,7 +874,9 @@ snow.start();
 
 效果图：
 
+<fancybox>
 ![033](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/033.png)
+</fancybox>
 
 [点击此处](https://blog.github.com/2008-12-19-github-ribbons/)可以查看更多样式，将相应样式的代码复制到你想要放的地方就OK了，代码里的链接也要替换成你的，更多创意，比如 Follow me on CSDN ，只需要用PS改掉图片里的文字，替换掉相应链接即可
 
@@ -808,7 +886,9 @@ snow.start();
 
 样式一是鼠标点击后彩带自动更换样式，样式二是飘动的彩带：
 
+<fancybox>
 ![034](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/034.png)
+</fancybox>
 
 实现方法：在 <font color=#FF0000>\themes\material-x\layout\layout.ejs</font> 文件的<font color=#FF0000>body</font>前面添加如下代码：
 
@@ -913,7 +993,9 @@ canvas {
 
 最终效果：
 
+<fancybox>
 ![035](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/035.png)
+</fancybox>
 
 代码来源：http://www.lxl8800.cn/Main/Resource
 
@@ -924,7 +1006,7 @@ canvas {
 &nbsp;&nbsp;&nbsp;&nbsp;有时候我们需要新建一个独立的页面，这个页面<font color=#FF0000>不使用主题的渲染，具有自己独立的样式</font>，可以放一些自己的作品，相册什么的，以下就介绍这种独立页面的实现方法。
 
 <font color=#FF0000>方法一：</font>
- 
+
 &nbsp;&nbsp;&nbsp;&nbsp;使用 Hexo 提供的跳过渲染配置，在博客根目录的配置文件 `_config.yml` 里找到 `skip_render` 关键字，在后面添加想要跳过渲染的页面，比如我们创建 `\source\about\index.html`， 配置文件填写：`skip_render: about\**`，那么就表示 `\source\about` 里所有的文件将跳过渲染，里面的文件将会被直接复制到 public 文件夹，此时就会得到一个独立的 about 页面；官方文档：https://hexo.io/docs/configuration
 
 <font color=#FF0000>方法二：</font>
@@ -951,8 +1033,7 @@ PS：Front-matter 是 `.md` 文件最上方以 --- 分隔的区域，用于指�
 
 # <font color=#FF0000>【21】更改本地预览端口号</font>
 
-hexo博客在执行 `hexo s` 进行本地预览的时候，默认端口号是4000，当该端口号被占用时会报错 `Error: listen EADDRINUSE 0.0.0.0:4000
-` ，此时可以关闭占用该端口的进程，也可以更换端口号，更换端口号可以通过以下两种方法实现：
+hexo博客在执行 `hexo s` 进行本地预览的时候，默认端口号是4000，当该端口号被占用时会报错 `Error: listen EADDRINUSE 0.0.0.0:4000` ，此时可以关闭占用该端口的进程，也可以更换端口号，更换端口号可以通过以下两种方法实现：
 
 方法一：在根目录的 `_config.yml` 配置文件内加上如下代码更改 `hexo s` 运行时的端口号：
 
