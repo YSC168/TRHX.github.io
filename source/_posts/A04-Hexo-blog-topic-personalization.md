@@ -327,6 +327,8 @@ function delay() {
 $ npm i --save hexo-wordcount
 ```
 
+注意：在 [Material X](https://xaoxuu.com/wiki/material-x/) 主题中，字数统计和阅读时长的功能我已提交 PR，在最新版本中，只需要安装插件后，在主题 `config.yml` 配置文件里，将 `word_count` 关键字设置为 `true` 即可，对于旧版本，可以通过以下方法实现：
+
 以 [Material X](https://xaoxuu.com/wiki/material-x/) 主题（版本 1.2.1）为例，在 <font color=#FF0000>\themes\material-x\layout\\_meta</font> 目录下创建 <font color=#FF0000>word.ejs</font> 文件，在 <font color=#FF0000>word.ejs</font> 文件中写入以下代码：
 
 ```JS

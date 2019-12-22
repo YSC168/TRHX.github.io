@@ -6,7 +6,7 @@ music:
   id: 30953009
 
 layout: links     # 必须
-title: 朋友   # 可选，这是友链页的标题
+title: 小伙伴们   # 可选，这是友链页的标题
 links:
   - group: 技术大佬
     icon: fas fa-user-tie
@@ -37,14 +37,6 @@ links:
       - C++
       - Python
 
-    - name: yue_luo‘s Blog
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yueluo.png
-      url: https://www.yueluo.xyz/
-      backgroundColor: '#71BCFF'
-      textColor: '#fff'
-      tags:
-      - Android
-
     - name: ZJohnson海马体
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/zjohnson.jpg
       url: http://www.zjohnson.top/
@@ -53,25 +45,6 @@ links:
       tags:
       - 生物信息
       - Python
-
-    - name: 一去二三遥
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/moonster.jpg
-      url: https://www.moonster.top/
-      backgroundColor: '#F8474F'
-      textColor: '#fff'
-      tags:
-      - Java
-      - C++
-      - 摄影
-
-    - name: 悲伤的橘子树
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/fankekeke.jpg
-      url: http://fankekeke.club/
-      backgroundColor: '#696969'
-      textColor: '#fff'
-      tags:
-      - Java
-      - SpringBoot
 
     - name: xaoxuu’s blog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/xaoxuu.png
@@ -99,15 +72,6 @@ links:
       tags:
       - Linux
       - Python3
-
-    - name: Hussar
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/hussar118.jpg
-      url: http://www.hussar118.com/
-      backgroundColor: '#9C9C9C'
-      textColor: '#fff'
-      tags:
-      - 渗透测试
-      - 网络攻防
 
     - name: JerryC
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/jerryc.png
@@ -183,15 +147,6 @@ links:
       - 海员
       - 技术分享
 
-    - name: 漫道求索
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yangyufeng96.jpg
-      url: https://yangyufeng96.github.io/yyfblog/
-      backgroundColor: '#91999C'
-      textColor: '#fff'
-      tags:
-      - 前端开发
-      - 大数据可视化
-
     - name: LarsCheng’s Blog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/larscheng.gif
       url: https://larscheng.coding.me/
@@ -221,7 +176,7 @@ links:
 
     - name: 人生地里的地瓜
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/l-zhe.jpg
-      url: https://www.l-zhe.com/
+      url: http://www.l-zhe.com/
       backgroundColor: '#696969'
       textColor: '#fff'
       tags:
@@ -264,15 +219,15 @@ links:
       - JAVA工程师
       - Python
 
-    - name: Sublime’s NoteBook
+    - name: 果子小酱
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/sublimerui.jpg
       url: https://sublimerui.top/
       backgroundColor: '#8FB0C7'
       textColor: '#fff'
       tags:
-      - 前端
+      - Python
+      - Web
       - 嵌入式
-      - 蒟蒻
 
     - name: Singularity
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/singularity2u.jpg
@@ -356,13 +311,21 @@ links:
 
     - name: 残梦
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/2662419405.jpg
-      url: https://2662419405.github.io
+      url: https://shtodream.cn/
       backgroundColor: '#FBBC05'
       textColor: '#fff'
       tags:
       - 前端
       - JS 
-      
+
+    - name: 碎月の小屋
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/suiyuebaobao.png
+      url: https://blog.suiyuebaobao.com/
+      backgroundColor: '#E1524C'
+      textColor: '#fff'
+      tags:
+      - 碎月の小屋
+
     - name: Whoisec
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/whoisec.jpg
       url: https://whoisec.com/
@@ -371,15 +334,6 @@ links:
       tags:
       - WEB安全
       - 渗透测试
-
-    - name: 碎月の小屋
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/suiyuebaobao.png
-      url: https://blog.suiyuebaobao.com/
-      backgroundColor: '#E1524C'
-      textColor: '#fff'
-      tags:
-      - 心存美好，则无可恼之事；心存善良，则无可恨之人；心若简单，世间纷扰皆成空。
-
 
   - group: 虐狗博主
     icon: fas fa-heartbeat
@@ -432,6 +386,46 @@ links:
       tags:
       - 记录一路上的琐碎陈杂
 
+
+  - group: 404 NOT FOUND
+    icon: fas fa-unlink
+    items:
+    - name: yue_luo‘s Blog
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yueluo.png
+      url: https://www.yueluo.xyz/
+      backgroundColor: '#71BCFF'
+      textColor: '#fff'
+      tags:
+      - Android
+
+    - name: 一去二三遥
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/moonster.jpg
+      url: https://www.moonster.top/
+      backgroundColor: '#F8474F'
+      textColor: '#fff'
+      tags:
+      - Java
+      - C++
+      - 摄影
+
+    - name: 悲伤的橘子树
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/fankekeke.jpg
+      url: http://fankekeke.club/
+      backgroundColor: '#696969'
+      textColor: '#fff'
+      tags:
+      - Java
+      - SpringBoot
+
+    - name: Hussar
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/hussar118.jpg
+      url: http://www.hussar118.com/
+      backgroundColor: '#9C9C9C'
+      textColor: '#fff'
+      tags:
+      - 渗透测试
+      - 网络攻防
+
   - group: 特别链接
     icon: fas fa-link
     items:
@@ -450,6 +444,14 @@ links:
       textColor: '#fff'
       tags:
       - 一站之星，学生党博客之家！
+
+    - name: 十年之约
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/LOVE-LINKS/foreverblog.jpg
+      url: https://www.foreverblog.cn/
+      backgroundColor: '#187BC3'
+      textColor: '#fff'
+      tags:
+      - 一个人的寂寞，一群人的狂欢。
 
   - group: 交流群组
     icon: fas fa-users
