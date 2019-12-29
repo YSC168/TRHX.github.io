@@ -136,9 +136,9 @@ path: atom.xml
 limit: 20
 
 # 网页标签图标
-favicon: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/favicon.ico
+favicon: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon.ico
 # 作者头像
-avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/trhx.png
+avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png
 
 # 全局导入
 import:
@@ -147,10 +147,10 @@ import:
   - "<meta name='msapplication-TileColor' content='#f24e32'>"
   - "<meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>"
   link:
-  - "<link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/favicon.ico'>"
-  - "<link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/favicon-32x32.png'>"
-  - "<link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/apple-touch-icon.png'>"
-  - "<link rel='mask-icon' color='#f24e32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/safari-pinned-tab.svg'>"
+  - "<link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon.ico'>"
+  - "<link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon-32x32.png'>"
+  - "<link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/apple-touch-icon.png'>"
+  - "<link rel='mask-icon' color='#f24e32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/safari-pinned-tab.svg'>"
   - "<link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-favicon@19.9.7/site.webmanifest'>"
 
 baidu_analytics_key: df0bc7c6bdbd80356ba4db429724ccad

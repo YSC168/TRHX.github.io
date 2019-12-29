@@ -7,7 +7,7 @@ layout: false
 <head>
 	<meta charset="utf-8" />
 	<title>五子棋 | TRHX'S BLOG</title>
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/favicon.ico"type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon.ico"type="image/x-icon">
 	<style type='text/css'>
 		canvas {
 			display: block;
@@ -386,9 +386,9 @@ layout: false
     <address>
         <div class="copyright" style="font-size: 13px;">
             Copyright&nbsp;©&nbsp;2018-2019&nbsp;<a href="https://www.itrhx.com/" target="_blank">TRHX'S BLOG</a>&nbsp;|&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/icp.png" class="footer-icon">&nbsp;
+            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/icp.png" class="footer-icon">&nbsp;
             <a href="http://www.beian.miit.gov.cn/" target="_blank"> 鄂ICP备19003281号-3</a>&nbsp;|&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/12377.png" alt=" 12377.png">
+            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/12377.png" alt=" 12377.png">
             <a href="http://www.12377.cn/" target="_blank">中国互联网违法和不良信息举报中心</a><br><br>
             推荐使用1920*1080分辨率、谷歌或者火狐浏览器浏览此页&nbsp;|&nbsp;
             <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;|&nbsp;

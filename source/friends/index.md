@@ -491,7 +491,7 @@ links:
 <!--<img src="https://ws234.com/demo/ip/" div align=left>
 ![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.8/images/friends.gif)-->
 
-![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/logo3.png)
+![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/logo3.png)
 
 ---
 

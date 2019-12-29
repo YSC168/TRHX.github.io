@@ -8,6 +8,7 @@ tags:
 description: Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS
 thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/hexo.png
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
+icons: [fas fa-heading]
 ---
 > 部署到 Coding Pages 的好处：国内访问速度更快，可以提交百度收录（GitHub 禁止了百度的爬取）
 

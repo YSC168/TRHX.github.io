@@ -7,6 +7,7 @@ tags:
 thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/hexo.png
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 description: 一键备份博客数据，再也不怕数据丢失了！
+icons: [fas fa-heading]
 ---
 
 欢迎关注我的 CSDN 专栏：[《个人博客搭建：Hexo+Github Pages》](https://blog.csdn.net/qq_36759224/article/category/9285510)，从搭建到美化一条龙，帮你解决 Hexo 常见问题！

@@ -7,7 +7,7 @@ layout: false
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/favicon.ico"type="image/x-icon">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon.ico"type="image/x-icon">
 <title>3D元素周期表 | TRHX'S BLOG</title>
 <style>
 html, body {
@@ -95,10 +95,10 @@ button:active {
 </style>
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/games/element/three.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/games/element/tween.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/games/element/TrackballControls.js" ></script>
-<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/games/element/CSS3DRenderer.js" ></script>
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/games/element/three.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/games/element/tween.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/games/element/TrackballControls.js" ></script>
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/games/element/CSS3DRenderer.js" ></script>
 
 <div id="container"></div>
 <div id="menu">

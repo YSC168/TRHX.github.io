@@ -6,6 +6,7 @@ tags:
  - Hexo
 thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/hexo.png
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
+icons: [fas fa-heading]
 ---
 > 利用Cloudflare为基于GitHub Pages的Hexo博客添加HTTPS支持
 

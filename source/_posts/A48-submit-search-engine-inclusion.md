@@ -7,6 +7,7 @@ tags:
 description:  网站 SEO 优化，Hexo 博客提交百度、谷歌搜索引擎收录
 thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/hexo.png
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
+icons: [fas fa-heading]
 ---
 
 # <font color=#ff0000>● 写在前面（必看）</font>

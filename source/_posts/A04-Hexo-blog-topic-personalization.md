@@ -10,6 +10,7 @@ tags:
 description: Hexo 博客主题的美化，添加一些实用功能，定制你的专属博客【持续更新】
 thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/hexo.png
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
+icons: [fas fa-heading]
 ---
 
 本文将讲述一些博客主题的美化、实用功能的添加，本文以作者 [luuman](https://luuman.github.io/Home/H1/index.html) 的 [spfk](https://github.com/luuman/hexo-theme-spfk) 主题和作者 [xaoxuu](https://xaoxuu.com/) 的 [Material X](https://xaoxuu.com/wiki/material-x/) 主题为例，文章会不定时进行更新。文章涉及有关参考资料、教程、链接如有侵权请联系我删除！
@@ -537,43 +538,43 @@ setInterval("createtime()",250);
 
 # <font color=#FF0000>【12】浏览器网页标题恶搞</font>
 
-当用户访问你的博客时点击到了其他网页，我们可以恶搞一下网页标题，呼唤用户回来，首先在目录 <font color=#FF0000>\Hexo\themes\hexo-theme-spfk\source\js</font> 下新建一个 <font color=#FF0000>FunnyTitle.js</font> 文件，在里面填写如下代码：
+当用户访问你的博客时点击到了其他网页，我们可以恶搞一下网页标题，呼唤用户回来，首先在目录 <font color=#FF0000>\themes\material-x\source\js</font> 下新建一个 <font color=#FF0000>FunnyTitle.js</font> 文件，在里面填写如下代码：
 
-``` JS
-<!--浏览器搞笑标题-->
- var OriginTitle = document.title;
- var titleTime;
- document.addEventListener('visibilitychange', function () {
-     if (document.hidden) {
-         $('[rel="icon"]').attr('href', "/img/trhx2.png");
-         document.title = 'ヽ(●-`Д´-)ノ你丑你就走！';
-         clearTimeout(titleTime);
-     }
-     else {
-         $('[rel="icon"]').attr('href', "/img/trhx2.png");
-         document.title = 'ヾ(Ő∀Ő3)ノ你帅就回来！' + OriginTitle;
-         titleTime = setTimeout(function () {
-             document.title = OriginTitle;
-         }, 2000);
-     }
- });
+```javascript
+// 浏览器搞笑标题
+var OriginTitle = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        $('[rel="icon"]').attr('href', "/funny.ico");
+        document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
+        clearTimeout(titleTime);
+    }
+    else {
+        $('[rel="icon"]').attr('href', "/favicon.ico");
+        document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
+        titleTime = setTimeout(function () {
+            document.title = OriginTitle;
+        }, 2000);
+    }
+});
 ```
 
-然后在 <font color=#FF0000>\Hexo\themes\hexo-theme-spfk\layout\layout.ejs</font> 文件中添加如下代码：
+其中 `funny.ico` 是用户切换到其他标签后你网站的图标，`favicon.ico` 是正常图标，然后在 <font color=#FF0000>\themes\material-x\layout\layout.ejs</font> 文件中添加如下代码：
 
-``` html
+```xml
 <!--浏览器搞笑标题-->
-<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
 ```
 
 再次部署博客后就可以看见标题搞笑的效果了：
 
 <fancybox>
-![027](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/027.png)
+![027](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/027_1.png)
 </fancybox>
 
 <fancybox>
-![028](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/028.png)
+![028](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/028_1.png)
 </fancybox>
 
 ---
