@@ -6,7 +6,7 @@ layout: false
 <head>
 <meta charset="utf8">
 <title>吃豆人 | TRHX'S BLOG</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/images/favicon.ico"type="image/x-icon">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/favicon.ico"type="image/x-icon">
 <style>
 	body{background-color: #000}
 	*{padding:0;margin:0;}
@@ -28,28 +28,19 @@ layout: false
 </style>
 </head>
 <body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
-	<script>
-		document.onkeydown = function () {
-			if (window.event && window.event.keyCode == 123) {
-				event.keyCode = 0;
-				event.returnValue = false;
-				return false;
-			}
-		};
-	</script>
 <div class="wrapper">
 	<canvas id="canvas" width="960" height="640">不支持画布</canvas>
 	<p>【按空格键开始、暂停或继续游戏，方向键移动吃豆人】</p>		
 </div>
-<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/PacMan/game.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/PacMan/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/games/PacMan/game.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/games/PacMan/index.js"></script>
 <footer id="footer" role="contentinfo" style="top:80px;">
     <address>
         <div class="copyright" style="font-size: 13px;">
             Copyright&nbsp;©&nbsp;2018-2019&nbsp;<a href="https://www.itrhx.com/" target="_blank">TRHX'S BLOG</a>&nbsp;|&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/icp.png" class="footer-icon">&nbsp;
+            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/icp.png" class="footer-icon">&nbsp;
             <a href="http://www.beian.miit.gov.cn/" target="_blank"> 鄂ICP备19003281号-3</a>&nbsp;|&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/12377.png" alt=" 12377.png">
+            <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/12377.png" alt=" 12377.png">
             <a href="http://www.12377.cn/" target="_blank">中国互联网违法和不良信息举报中心</a><br><br>
             推荐使用1920*1080分辨率、谷歌或者火狐浏览器浏览此页&nbsp;|&nbsp;
             <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;|&nbsp;
@@ -64,5 +55,15 @@ layout: false
     </address>
   </footer>
 </body>
+<script>
+    document.onkeydown=function (e){
+            var currKey=0,evt=e||window.event;
+            currKey=evt.keyCode||evt.which||evt.charCode;
+            if (currKey == 123) {
+                window.event.cancelBubble = true;
+                window.event.returnValue = false;
+            }
+        }
+</script>
 </html>
 {% endraw %}

@@ -7,13 +7,13 @@ layout: false
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>网页版钢琴 | TRHX'S BLOG</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/favicon.ico">
     <meta name="description"content="网页版电子钢琴，试试用键盘弹奏一曲？" />
-    <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/piano/piano.js"></script>
-    <link href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/box/piano/piano.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/games/piano/piano.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/games/piano/piano.css" type="text/css" rel="stylesheet">
 
 </head>
-<body>
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
     <div id="all">
         <h1 style="width:100%;text-align:center;">网页版钢琴</h1>
         <!--主要代码-->
@@ -41,9 +41,9 @@ layout: false
         <address>
             <div class="copyright" style="font-size:13px;">
                 Copyright&nbsp;©&nbsp;2018-2019&nbsp;<a href="https://www.itrhx.com/" target="_blank">TRHX'S BLOG</a>&nbsp;|&nbsp;
-                <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/icp.png" class="footer-icon">&nbsp;
+                <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/icp.png" class="footer-icon">&nbsp;
                 <a href="http://www.beian.miit.gov.cn/" target="_blank"> 鄂ICP备19003281号-3</a>&nbsp;|&nbsp;
-                <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/12377.png" alt=" 12377.png">
+                <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/12377.png" alt=" 12377.png">
                 <a href="http://www.12377.cn/" target="_blank">中国互联网违法和不良信息举报中心</a><br><br>
                 推荐使用1920*1080分辨率、谷歌或者火狐浏览器浏览此页&nbsp;|&nbsp;
                 <a href="https://itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;|&nbsp;
@@ -58,5 +58,15 @@ layout: false
         </address>
     </footer>
 </body>
+<script>
+    document.onkeydown=function (e){
+            var currKey=0,evt=e||window.event;
+            currKey=evt.keyCode||evt.which||evt.charCode;
+            if (currKey == 123) {
+                window.event.cancelBubble = true;
+                window.event.returnValue = false;
+            }
+        }
+</script>
 </html>
 {% endraw %}

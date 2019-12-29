@@ -210,14 +210,13 @@ links:
       - 蒟蒻
       - 二次元
 
-    - name: 土豆先生
+    - name: 我爱吃土豆
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/wangzhijuno.png
-      url: https://wangzhijuno.com/
+      url: https://itudo.cn/
       backgroundColor: '#34A853'
       textColor: '#fff'
       tags:
-      - JAVA工程师
-      - Python
+      - 一个爱吃土豆的程序员
 
     - name: 果子小酱
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/sublimerui.jpg
@@ -334,6 +333,22 @@ links:
       tags:
       - WEB安全
       - 渗透测试
+
+    - name: Niko
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/nikoyu.png
+      url: https://nikoyu.asia/
+      backgroundColor: '#8FB0C7'
+      textColor: '#fff'
+      tags:
+      - 人生苦短,及时行乐
+
+    - name: Emil’s blog
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/hvnobug.png
+      url: https://blog.hvnobug.com/
+      backgroundColor: '#967ADB'
+      textColor: '#fff'
+      tags:
+      - 一个分享IT技术的小站
 
   - group: 虐狗博主
     icon: fas fa-heartbeat
@@ -476,7 +491,7 @@ links:
 <!--<img src="https://ws234.com/demo/ip/" div align=left>
 ![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.8/images/friends.gif)-->
 
-![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/logo3.png)
+![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.3/images/logo3.png)
 
 ---
 
