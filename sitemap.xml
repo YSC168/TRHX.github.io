@@ -2,79 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.itrhx.com/box/about/index.html</loc>
-    
-    <lastmod>2019-12-29T06:05:42.020Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/box/index.html</loc>
-    
-    <lastmod>2019-12-29T06:05:28.627Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
-    <lastmod>2019-12-28T17:20:25.036Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/about/index.html</loc>
-    
-    <lastmod>2019-12-28T17:06:10.746Z</lastmod>
+    <lastmod>2019-12-29T06:57:39.408Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.itrhx.com/comments/index.html</loc>
     
-    <lastmod>2019-12-28T17:04:37.315Z</lastmod>
+    <lastmod>2019-12-29T06:57:18.321Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/piano/index.html</loc>
+    <loc>https://www.itrhx.com/about/index.html</loc>
     
-    <lastmod>2019-12-28T16:49:09.375Z</lastmod>
+    <lastmod>2019-12-29T06:56:58.232Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/PacMan/index.html</loc>
+    <loc>https://www.itrhx.com/box/index.html</loc>
     
-    <lastmod>2019-12-28T16:48:28.818Z</lastmod>
+    <lastmod>2019-12-29T06:55:50.937Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.itrhx.com/games/gobang/index.html</loc>
     
-    <lastmod>2019-12-28T16:48:17.193Z</lastmod>
+    <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    <loc>https://www.itrhx.com/games/piano/index.html</loc>
     
-    <lastmod>2019-12-28T16:46:28.495Z</lastmod>
+    <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/cat/index.html</loc>
+    <loc>https://www.itrhx.com/games/PacMan/index.html</loc>
     
-    <lastmod>2019-12-28T16:45:48.145Z</lastmod>
+    <lastmod>2019-12-29T06:55:50.753Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.itrhx.com/games/2048/index.html</loc>
     
-    <lastmod>2019-12-28T16:44:41.325Z</lastmod>
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/games/cat/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/about/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
+    
+    <lastmod>2019-12-29T06:45:48.997Z</lastmod>
     
   </url>
   
@@ -96,13 +103,6 @@
     <loc>https://www.itrhx.com/2019/08/01/A27-image-hosting/</loc>
     
     <lastmod>2019-12-02T13:41:52.022Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
-    
-    <lastmod>2019-11-23T12:12:18.777Z</lastmod>
     
   </url>
   

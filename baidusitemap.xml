@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
+    <lastmod>2019-12-29</lastmod>
+  </url>  <url>
     <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     <lastmod>2019-12-07</lastmod>
   </url>  <url>
@@ -9,9 +12,6 @@
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/01/A27-image-hosting/</loc>
     <lastmod>2019-12-02</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
-    <lastmod>2019-11-23</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/11/15/A59-pyspider-guazi/</loc>
     <lastmod>2019-11-14</lastmod>
