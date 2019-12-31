@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.itrhx.com/2018/09/13/A07-Python3-basic-C01/</loc>
-    <lastmod>2019-12-29</lastmod>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
+    <lastmod>2019-12-31</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/23/A23-beian/</loc>
+    <lastmod>2019-12-31</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2018/09/13/A07-Python3-basic-C01/</loc>
     <lastmod>2019-12-29</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
@@ -23,9 +26,6 @@
     <lastmod>2019-12-29</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/09/29/A53-hexo-backup/</loc>
-    <lastmod>2019-12-29</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     <lastmod>2019-12-29</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/11/A28-hexo-add-https/</loc>
