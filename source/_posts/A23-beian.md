@@ -4,8 +4,8 @@ tags:
   - ICP备案
   - 公安备案
 categories:
-  - WEB前端
-  - Hexo
+  - [WEB前端]
+  - [Hexo]
 description: 为了规范互联网信息服务活动，促进互联网信息服务健康有序发展，国家相关部门要求在国内的所有网站都必须备案(使用海外服务器则不需要备案)，未备案的域名不能使用国内服务器。部分推广平台也需要备案才可以开通。
 thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/NationalEmblem.png
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png

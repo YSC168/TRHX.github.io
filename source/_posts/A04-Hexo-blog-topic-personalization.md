@@ -224,7 +224,15 @@ function delay() {
 }
 ```
 
-其中的社会主义核心价值观可以根据你自己的创意替换为其他文字，然后在 <font color=#FF0000>\themes\hexo-theme-spfk\layout\layout.ejs</font> 文件末尾添加以下代码：
+其中的社会主义核心价值观可以根据你自己的创意替换为其他文字
+
+如果想要每次点击显示的文字为不同颜色，可以将其中 `color` 值进行如下更改：
+
+```js
+"color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+```
+
+然后在 <font color=#FF0000>\themes\hexo-theme-spfk\layout\layout.ejs</font> 文件末尾添加以下代码：
 
 ``` html
 <!--单击显示文字-->

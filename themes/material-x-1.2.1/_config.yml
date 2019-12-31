@@ -4,11 +4,11 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/css/style.css
+      style: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/js/app.js
-      search: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/js/app.js
+      search: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/js/volantis.min.js
 
 
 
@@ -38,7 +38,7 @@ music:
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/bitmap.gif
+avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/bitmap.gif
 
 # 文章字数统计、阅读时长
 word_count: true
@@ -53,8 +53,9 @@ backstretch:
   duration: 5000 # 持续时间（毫秒）
   fade: 1500     # 渐变（毫秒）
   images:
-    - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/background/022.webp
-    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/background/021.webp
+    - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/background/023.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/background/022.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/background/021.webp
 
 
 ############################### 自定义 ###############################
@@ -63,7 +64,7 @@ cover:
   scheme: search    # 后期将会提供多种封面方案
   height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
   # title: "TRHX'S BLOG"
-  logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
+  logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
   search_placeholder: '世界之大，探索一下！'
   # 主页封面菜单
   features:
@@ -147,7 +148,7 @@ body: [article, comments]
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
   - widget: author
-    avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png
+    avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/trhx.png
     title: TRHX'S BLOG
     body: Stay Hungry, Stay Foolish!
     social: true
@@ -183,7 +184,7 @@ sidebar:
   - widget: plain
     icon: fas fa-map-marked-alt
     title: 访客地图
-    body: '<center><script type="text/javascript" src="//rf.revolvermaps.com/0/0/4.js?i=5eyl60h41k1&amp;m=6&amp;h=122&amp;c=ff0000&amp;r=30" async="async"></script></center>'
+    body: '<div style="position: relative;"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/4.js?i=5eyl60h41k1&amp;m=6&amp;h=122&amp;c=ff0000&amp;r=30" async="async"></script></div>'
     more:
       icon: fas fa-info-circle
       url: https://www.revolvermaps.com/
@@ -191,7 +192,7 @@ sidebar:
   - widget: plain
     icon: fas fa-comments
     title: 交流群组
-    body: '<img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/hexoisthebest">Telegram 交流群</a>'
+    body: '<img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/hexoisthebest">Telegram 交流群</a>'
 #  - widget: list
 #    icon: fas fa-link
 #    title: 特别链接
