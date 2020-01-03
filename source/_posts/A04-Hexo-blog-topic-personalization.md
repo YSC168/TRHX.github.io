@@ -1,6 +1,5 @@
 ---
 title: Hexo 博客主题个性化
-top: true
 categories: Hexo
 tags:
  - 主题个性化

@@ -1,6 +1,5 @@
 ---
 title: 利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS
-top: true
 categories: Hexo
 tags:
  - HTTPS
