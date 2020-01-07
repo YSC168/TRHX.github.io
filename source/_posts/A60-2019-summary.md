@@ -5,7 +5,7 @@ tags: 年终总结
 categories: BLOG
 music:
   enable: true
-  autoplay: true
+  autoplay: false
   server: netease
   type: song
   id: 413829859

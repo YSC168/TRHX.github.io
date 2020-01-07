@@ -341,6 +341,15 @@ links:
       tags:
       - 一个分享IT技术的小站
 
+    - name: BOHC!
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/BOHC!.gif
+      url: https://hewanyue.com/
+      backgroundColor: '#BEBEBE'
+      textColor: '#fff'
+      tags:
+      - DEVOPS
+      - 技术交流
+
   - group: 虐狗博主
     icon: fas fa-heartbeat
     items:
