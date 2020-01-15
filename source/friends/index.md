@@ -301,7 +301,7 @@ links:
 
     - name: 残梦
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/2662419405.jpg
-      url: https://shtodream.cn/
+      url: https://sunhang.top/
       backgroundColor: '#FBBC05'
       textColor: '#fff'
       tags:

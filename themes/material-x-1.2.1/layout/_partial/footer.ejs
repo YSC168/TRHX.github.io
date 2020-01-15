@@ -20,9 +20,9 @@
     <%}%>
     <br>
     Copyright <i class="far fa-copyright"></i> 2018-<%= date(new Date(), 'YYYY') %>
-    <a href="https://www.itrhx.com/" target="_blank"> <%= config.author || config.title %> </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://www.itrhx.com/" target="_blank"> <%= config.title %> </a>丨
     <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/icp.png">
-    <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a> 丨
     <!-- 网站运行时间 -->
     <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
     <script>
@@ -36,13 +36,13 @@
       mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
       seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
       snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-      document.getElementById("timeDate").innerHTML = "本站已勉强存活了 "
+      document.getElementById("timeDate").innerHTML = "本站已在风雨中度过了 "
       document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
       /*document.getElementById("times").style.color="#0056FF";*/
       }
       setInterval("createtime()",250);
-    </script>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="https://www.itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    </script>丨
+    <a href="/sitemap.xml" target="_blank">站点地图</a>丨
     <a href="https://tongji.baidu.com/web/welcome/ico?s=df0bc7c6bdbd80356ba4db429724ccad" target="_blank">站长统计</a><br><br>
     <div class="github-badge">
       <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">

@@ -7,6 +7,9 @@
         <div class="article-entry" itemprop="articleBody">
           <%- post.content %>
         </div>
+        <% if (theme.reward.enable && post.layout == 'post' && post.reward != false){ %>
+          <%- partial('reward') %>
+        <% } %>
         <% if(post.layout == 'post'){ %>
           <%- partial('meta', {post: post, position: 'footer'}) %>
         <% } %>
