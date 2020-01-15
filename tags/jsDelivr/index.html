@@ -84,7 +84,7 @@
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.7/css/style.css">
   
 
   <script>
@@ -701,15 +701,55 @@
     
       <div class='text'>
         
-          <h2>TRHX'S BLOG</h2>
+          <h2>๑۩ﺴ&nbsp;&nbsp;TRHX&nbsp;&nbsp;ﺴ۩๑</h2>
         
-        
-          <p>Stay Hungry, Stay Foolish!</p>
-
         
         
       </div>
     
+    <!-- 彩色滚动字体 -->
+    <div id="binft" align="center"></div>
+    <script>
+      var binft = function (r) {
+        function t() {
+          return b[Math.floor(Math.random() * b.length)]
+        }  
+        function e() {
+          return String.fromCharCode(94 * Math.random() + 33)
+        }
+        function n(r) {
+          for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+            var l = document.createElement("span");
+            l.textContent = e(), l.style.color = t(), n.appendChild(l)
+          }
+          return n
+        }
+        function i() {
+          var t = o[c.skillI];
+          c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+        }
+        var l = "",
+        o = ["Stay Hungry, Stay Foolish!"].map(function (r) {
+        return r + ""
+        }),
+        a = 2,
+        g = 1,
+        s = 5,
+        d = 75,
+        b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+        c = {
+          text: "",
+          prefixP: -s,
+          skillI: 0,
+          skillP: 0,
+          direction: "forward",
+          delay: a,
+          step: g
+        };
+        i()
+        };
+        binft(document.getElementById('binft'));
+    </script>
     
       <div class="social-wrapper">
         
@@ -755,49 +795,6 @@
         
       </div>
     
-    <!-- 彩色滚动字体-->
-    <div id="binft" align="center"></div>
-    <script>
-      var binft = function (r) {
-        function t() {
-          return b[Math.floor(Math.random() * b.length)]
-        }  
-        function e() {
-          return String.fromCharCode(94 * Math.random() + 33)
-        }
-        function n(r) {
-          for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-            var l = document.createElement("span");
-            l.textContent = e(), l.style.color = t(), n.appendChild(l)
-          }
-          return n
-        }
-        function i() {
-          var t = o[c.skillI];
-          c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
-        }
-        var l = "",
-        o = ["业精于勤，荒于嬉；", "行成于思，毁于随。"].map(function (r) {
-        return r + ""
-        }),
-        a = 2,
-        g = 1,
-        s = 5,
-        d = 75,
-        b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
-        c = {
-          text: "",
-          prefixP: -s,
-          skillI: 0,
-          skillP: 0,
-          direction: "forward",
-          delay: a,
-          step: g
-        };
-        i()
-        };
-        binft(document.getElementById('binft'));
-    </script>
   </div>
 </section>
 
@@ -954,7 +951,7 @@
 </header>
 
   <div class='content pure'>
-    <p><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/hexoisthebest">Telegram 交流群</a></p>
+    <p><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/joinchat/Mro2h0uVt0DpDvOofWG65A">Telegram 交流群</a></p>
 
   </div>
 </section>
@@ -1151,9 +1148,9 @@
     
     <br>
     Copyright <i class="far fa-copyright"></i> 2018-2020
-    <a href="https://www.itrhx.com/" target="_blank"> TRHX </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://www.itrhx.com/" target="_blank"> TRHX&#39;S BLOG </a>丨
     <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/icp.png">
-    <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a> 丨
     <!-- 网站运行时间 -->
     <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
     <script>
@@ -1167,13 +1164,13 @@
       mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
       seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
       snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-      document.getElementById("timeDate").innerHTML = "本站已勉强存活了 "
+      document.getElementById("timeDate").innerHTML = "本站已在风雨中度过了 "
       document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
       /*document.getElementById("times").style.color="#0056FF";*/
       }
       setInterval("createtime()",250);
-    </script>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="https://www.itrhx.com/sitemap.xml" target="_blank">站点地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    </script>丨
+    <a href="/sitemap.xml" target="_blank">站点地图</a>丨
     <a href="https://tongji.baidu.com/web/welcome/ico?s=df0bc7c6bdbd80356ba4db429724ccad" target="_blank">站长统计</a><br><br>
     <div class="github-badge">
       <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
