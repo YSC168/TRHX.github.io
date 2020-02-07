@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
+    
+    <lastmod>2020-02-07T07:34:41.017Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/01/18/A16-deploy-two-or-more-hexo-blogs/</loc>
+    
+    <lastmod>2020-02-07T07:30:20.946Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
     
     <lastmod>2020-02-07T05:48:55.197Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>https://www.itrhx.com/2019-nCoV/index.html</loc>
     
     <lastmod>2020-01-31T08:10:39.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
-    
-    <lastmod>2019-12-31T15:53:21.779Z</lastmod>
     
   </url>
   
@@ -68,13 +75,6 @@
     <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
     
     <lastmod>2019-12-29T07:21:04.675Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/01/18/A16-deploy-two-or-more-hexo-blogs/</loc>
-    
-    <lastmod>2019-12-29T07:20:49.831Z</lastmod>
     
   </url>
   
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
+    <loc>https://www.itrhx.com/games/piano/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/piano/index.html</loc>
+    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     

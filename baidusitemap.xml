@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
+    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
     <lastmod>2020-02-07</lastmod>
   </url>  <url>
-    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
-    <lastmod>2019-12-31</lastmod>
+    <loc>https://www.itrhx.com/2019/01/18/A16-deploy-two-or-more-hexo-blogs/</loc>
+    <lastmod>2020-02-07</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
+    <lastmod>2020-02-07</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     <lastmod>2019-12-31</lastmod>
@@ -23,9 +26,6 @@
     <lastmod>2019-12-29</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
-    <lastmod>2019-12-29</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/01/18/A16-deploy-two-or-more-hexo-blogs/</loc>
     <lastmod>2019-12-29</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/07/31/A26-hexo-add-https/</loc>
