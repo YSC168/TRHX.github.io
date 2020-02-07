@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
+    
+    <lastmod>2020-02-07T05:13:39.398Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
     <lastmod>2020-02-06T17:16:26.616Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://www.itrhx.com/2019-nCoV/index.html</loc>
     
     <lastmod>2020-01-31T08:10:39.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
-    
-    <lastmod>2020-01-10T13:44:57.082Z</lastmod>
     
   </url>
   
