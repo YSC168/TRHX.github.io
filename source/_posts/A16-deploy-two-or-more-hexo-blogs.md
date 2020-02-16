@@ -9,7 +9,7 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 icons: [fas fa-heading]
 ---
 
-![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A16/01.png)
+![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A16/01.jpg)
 
 由于个人原因需要在一台电脑上部署两个Hexo博客，本来以为挺简单，没想到问题重重，首先是一个GitHub账号只能搭建一个Hexo博客，因此就需要使用其他GitHub账号；其次是一台电脑绑定两个GitHub账号，则需要两对公钥，在处理第二个问题时遇到的问题比较多，因为对这方面一窍不通，还是小白，所以折腾了一下午才解决，网上好多教程我都看不懂，觉得不（自）够（己）详（太）细（笨），因此详细记录一下
 

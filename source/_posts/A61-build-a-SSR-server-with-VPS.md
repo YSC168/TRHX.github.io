@@ -28,7 +28,7 @@ VPS（Virtual Private Server）即虚拟专用服务器技术，在购买 VPS �
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A61/02.png)
 </fancybox>
 
-充值完毕之后，点击左侧 Products，选择服务器，一共有16个地区的，选择不同地区的服务器，最后的网速也有差别，那如何选择一个速度最优的呢？很简单，你可以一次性选择多个服务器，都部署上去，搭建完毕之后，测试其速度，选择最快的，最后再把其他的都删了，可能你会想，部署多个，那费用岂不是很贵，这里注意，虽然写的是多少钱一个月，而实际上它是按照小时计费的，从你部署之后开始计费，$5/月 ≈ $0.00694/小时，你部署完毕再删掉，这段时间的费用很低，可以忽略不计，一般来说，日本和新加坡的比较快一点，也有人说日本和新加坡服务器的端口封得比较多，容易搭建失败，具体可以自己测试一下，还有就是，只有部分地区的服务器有$2.5/月、$3.5/月的套餐，其中$2.5/月的只支持 IPv6，可以根据自己情况选择，最后操作系统建议选择 CentOS 7 x64 的，后面还有个 Enable IPv6 的选项，对 IPv6 有需求的话可以勾上，其他选项就可以不用管了。
+充值完毕之后，点击左侧 Products，选择服务器，一共有16个地区的，选择不同地区的服务器，最后的网速也有差别，那如何选择一个速度最优的呢？很简单，你可以一次性选择多个服务器，都部署上去，搭建完毕之后，测试其速度，选择最快的，最后再把其他的都删了，可能你会想，部署多个，那费用岂不是很贵，这里注意，虽然写的是多少钱一个月，而实际上它是按照小时计费的，从你部署之后开始计费，$5/月 ≈ $0.00694/小时，你部署完毕再删掉，这段时间的费用很低，可以忽略不计，一般来说，日本和新加坡的比较快一点，也有人说日本和新加坡服务器的端口封得比较多，容易搭建失败，具体可以自己测试一下，还有就是，只有部分地区的服务器有$2.5/月、$3.5/月的套餐，其中$2.5/月的只支持 IPv6，可以根据自己情况选择，<font color=#FF0000>最后操作系统建议选择 CentOS 7 x64 的，不然有可能搭建失败，</font>后面还有个 Enable IPv6 的选项，对 IPv6 有需求的话可以勾上，其他选项就可以不用管了。
 
 <fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A61/03.png)
@@ -149,7 +149,9 @@ yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.
 # <font color=#FF0000>使用 SSR</font>
 
 常见的工具有 ShadowsocksR、SSTap（原本是个游戏加速器，现在已经停止维护，但 GitHub 上仍然可以找到）等。
-ShadowsocksR 官网：[https://shadowsocks.org/](https://shadowsocks.org/)
+
+Shadowsocks 官网：[https://shadowsocks.org/](https://shadowsocks.org/)
+ShadowsocksR 下载地址：[https://github.com/Anankke/SSRR-Windows](https://github.com/Anankke/SSRR-Windows)
 SSTap GitHub 地址：[https://github.com/FQrabbit/SSTap-Rule](https://github.com/FQrabbit/SSTap-Rule)
 
 不管什么工具，用法都是一样的，添加一个新的代理服务器，服务器 IP、端口、密码、加密方式等等这些信息保持一致就行了。然后就可以愉快地科学上网了！

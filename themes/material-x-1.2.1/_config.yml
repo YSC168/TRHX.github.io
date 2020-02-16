@@ -47,7 +47,7 @@ word_count: true
 reward:
   enable: true
   reward_comment: 您的喜欢是作者写作最大的动力！❤️
-  PayPalLink: https://www.paypal.me/
+  PayPalLink: https://paypal.me/trhx
   AliPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.7/images/reward/AliPayQR.png
   WeChatPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.7/images/reward/WeChatQR.png
   QQPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.7/images/reward/QQPayQR.png
@@ -58,13 +58,13 @@ updated_date_format: 'll' # 文章更新日期的格式
 
 # 幻灯片
 backstretch:
-  position: full  # cover: 封面背景   full: 整个网页背景
+  position: cover  # cover: 封面背景   full: 整个网页背景
   duration: 5000 # 持续时间（毫秒）
   fade: 1500     # 渐变（毫秒）
   images:
     #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/background/023.webp
-    - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/background/022.webp
-    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/background/021.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/background/022.webp
+    - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.6/images/background/021.webp
 
 
 ############################### 自定义 ###############################
@@ -119,6 +119,10 @@ menu_desktop:
     icon: fas fa-link
     url: https://mi.aliyun.com/shop/40012
     target: _blank
+  - name: 肺炎疫情图
+    icon: fas fa-heart
+    url: 2019-nCoV/
+    target: _blank
 
 # 手机端导航菜单（从右上角的按钮点击展开）
 menu_mobile:
@@ -143,6 +147,9 @@ menu_mobile:
   - name: CSDN
     icon: fab fa-cuttlefish
     url: https://itrhx.blog.csdn.net/
+  - name: 肺炎疫情图
+    icon: fas fa-heart
+    url: 2019-nCoV/
 
 # 默认的meta信息，文章中没有配置则按照这里的配置来显示，设置为false则不显示
 # 其中，title只在header中有效，music和thumbnail无需在这里设置，文章中有则显示
@@ -235,7 +242,7 @@ sidebar:
     title: "最近在听"
     more:
       icon: far fa-heart
-      url: https://music.163.com/#/user/home?id=1379654769
+      url: https://music.163.com/#/user/home?id=3019271605
       rel: external nofollow noopener noreferrer
       target: _blank
     server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
