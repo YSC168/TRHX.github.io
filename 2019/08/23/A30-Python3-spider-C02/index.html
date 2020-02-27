@@ -601,6 +601,7 @@
 <p>永久等待：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 两种方法实现</span></span><br><span class="line"><span class="comment"># r = requests.get('https://www.itrhx.com')</span></span><br><span class="line">r = requests.get(<span class="string">'https://www.itrhx.com'</span>, timeout=<span class="keyword">None</span>)</span><br><span class="line">print(r.status_code)</span><br></pre></td></tr></table></figure></p>
 
         </div>
+        <hr /><br>
         
           <div class="img_container"><a href="https://www.courseduck.com/programming/python/" target="_blank"><img src="https://www.courseduck.com/global/images/Python_header.jpg" class="img-responsive" alt="CourseDuck Python Banner"></a></div>
         
@@ -1343,8 +1344,10 @@ Python3 爬虫学习笔记第二章 ——【基本库 requests 的使用】
     <br>
     Copyright <i class="far fa-copyright"></i> 2018-2020
     <a href="https://www.itrhx.com/" target="_blank"> TRHX&#39;S BLOG </a>丨
-    <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/images/icp.png">
-    <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a> 丨
+    <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.9/images/icp.png" style="width:18px;height:18px;margin-bottom:-2px" alt="ICP">
+    <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a>丨
+    <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.9/images/moeicp.png" style="width:18px;height:18px;margin-bottom:-3px" alt="MOE ICP">
+    <a href="https://icp.gov.moe/" target="_blank">萌ICP备20202022号</a>丨
     <!-- 网站运行时间 -->
     <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
     <script>
@@ -1358,13 +1361,13 @@ Python3 爬虫学习笔记第二章 ——【基本库 requests 的使用】
       mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
       seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
       snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-      document.getElementById("timeDate").innerHTML = "本站已在风雨中度过了 "
+      document.getElementById("timeDate").innerHTML = "本站已运行 "
       document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
       /*document.getElementById("times").style.color="#0056FF";*/
       }
       setInterval("createtime()",250);
     </script>丨
-    <a href="/sitemap.xml" target="_blank">站点地图</a>丨
+    <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
     <a href="https://tongji.baidu.com/web/welcome/ico?s=df0bc7c6bdbd80356ba4db429724ccad" target="_blank">百度统计</a>丨
     <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275909280'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275909280%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><br><br>
     <div class="github-badge">
