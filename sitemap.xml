@@ -4,7 +4,21 @@
   <url>
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
-    <lastmod>2020-02-09T06:17:50.554Z</lastmod>
+    <lastmod>2020-02-27T12:05:19.591Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/index.html</loc>
+    
+    <lastmod>2020-02-27T12:02:54.700Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/comments/index.html</loc>
+    
+    <lastmod>2020-02-27T11:40:10.042Z</lastmod>
     
   </url>
   
@@ -114,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/comments/index.html</loc>
-    
-    <lastmod>2019-12-29T06:57:18.321Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/about/index.html</loc>
     
     <lastmod>2019-12-29T06:56:58.232Z</lastmod>
@@ -128,21 +135,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/index.html</loc>
-    
-    <lastmod>2019-12-29T06:55:50.937Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
+    <loc>https://www.itrhx.com/games/piano/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/piano/index.html</loc>
+    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
@@ -156,13 +156,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/about/index.html</loc>
-    
-    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/games/2048/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
@@ -170,14 +163,21 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    <loc>https://www.itrhx.com/games/cat/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/cat/index.html</loc>
+    <loc>https://www.itrhx.com/box/about/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
