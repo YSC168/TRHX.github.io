@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2019-nCoV/index.html</loc>
+    
+    <lastmod>2020-02-28T07:15:35.270Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
     <lastmod>2020-02-27T12:05:19.591Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
     
     <lastmod>2020-02-07T05:48:55.197Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019-nCoV/index.html</loc>
-    
-    <lastmod>2020-01-31T08:10:39.289Z</lastmod>
     
   </url>
   
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
+    <loc>https://www.itrhx.com/games/piano/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/piano/index.html</loc>
+    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
@@ -156,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/about/index.html</loc>
+    <loc>https://www.itrhx.com/games/2048/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/2048/index.html</loc>
+    <loc>https://www.itrhx.com/box/about/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
