@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.itrhx.com/2019-nCoV/index.html</loc>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
     
-    <lastmod>2020-02-28T07:25:47.215Z</lastmod>
+    <lastmod>2020-03-01T07:55:59.919Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
+    <loc>https://www.itrhx.com/2019-nCoV/index.html</loc>
     
-    <lastmod>2020-02-27T12:05:19.591Z</lastmod>
+    <lastmod>2020-02-28T07:25:47.215Z</lastmod>
     
   </url>
   
@@ -156,7 +156,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/about/index.html</loc>
+    <loc>https://www.itrhx.com/games/2048/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
@@ -170,14 +177,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/2048/index.html</loc>
-    
-    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    <loc>https://www.itrhx.com/box/about/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
