@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/about/index.html</loc>
+    
+    <lastmod>2020-03-02T05:42:14.094Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
     <lastmod>2020-03-01T07:55:59.919Z</lastmod>
@@ -128,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/about/index.html</loc>
-    
-    <lastmod>2019-12-29T06:56:58.232Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/games/gobang/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
@@ -163,13 +163,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
-    
-    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/games/cat/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
@@ -178,6 +171,13 @@
   
   <url>
     <loc>https://www.itrhx.com/box/about/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
