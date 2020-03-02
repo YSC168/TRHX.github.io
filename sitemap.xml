@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
+    
+    <lastmod>2020-03-02T08:02:23.404Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/about/index.html</loc>
     
     <lastmod>2020-03-02T05:42:14.094Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://www.itrhx.com/2019/01/18/A16-deploy-two-or-more-hexo-blogs/</loc>
     
     <lastmod>2020-02-07T07:30:20.946Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
-    
-    <lastmod>2020-02-07T05:48:55.197Z</lastmod>
     
   </url>
   
@@ -156,13 +156,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/2048/index.html</loc>
-    
-    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/games/cat/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
@@ -170,14 +163,21 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/about/index.html</loc>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    <loc>https://www.itrhx.com/games/2048/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/about/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
