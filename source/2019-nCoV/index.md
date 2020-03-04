@@ -49,9 +49,9 @@ layout: false
 </style>
 
 <body>
-    <h2>TRHX'S BLOG丨新冠肺炎实时疫情图（数据来源：腾讯新闻）</h2>
+    <h2>TRHX'S BLOG丨新冠肺炎实时疫情图（数据来源：新浪新闻）</h2>
     <h3>相关链接：<a href="https://wuhan2020.kaiyuanshe.cn/" target="_blank">武汉新型冠状病毒防疫信息收集平台</a> 丨 <a href="http://nav.werty.cn/" target="_blank">2019-nCoV 疫情信息导航网站</a></h3>
-    <iframe src="https://news.qq.com/zt2020/page/feiyan.htm" frameborder="0" width="100%" height="100%" allowtransparency="yes"></iframe>
+    <iframe src="https://news.sina.cn/zt_d/yiqing0121" frameborder="0" width="100%" height="100%" allowtransparency="yes"></iframe>
 </body>
 
 </html>

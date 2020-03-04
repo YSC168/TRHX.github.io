@@ -275,7 +275,7 @@ SSTap GitHub 地址：[https://github.com/FQrabbit/SSTap-Rule](https://github.co
 ```
 
 ```bash
-firewall-cmd –reload
+firewall-cmd --reload
 ```
 
 完成之后，我们新加的这几个端口就可以使用了

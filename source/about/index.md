@@ -41,18 +41,18 @@ layout: false
 			<table>
 				<tr>
 					<td><i class="fa fa-user-tie fa-fw"></i> 江湖名称：TRHX</td>
-					<td><i class="fa fa-map-marker-alt fa-fw"></i> 常驻之地：中国 | 湖北 | 武汉</td>
+					<td><i class="fa fa-map-marker-alt fa-fw"></i> 常驻之地：China~丨湖北丨武汉</td>
 				</tr>
 				<tr>
 					<td><i class="fa fa-birthday-cake fa-fw"></i> 初度之辰：1999</td>
-					<td><i class="fas fa-biking fa-fw"></i> 兴趣爱好：骑游 | 编程 | 剪辑</td>
+					<td><i class="fas fa-code"></i> 擅长领域：Python丨爬虫丨前端</td>
 				</tr>
 			</table>
 		</div>
 	</div>
 	<div class="mdui-container">
 		<div class="showarea-2">
-			<h3>技能 | Skill</h3>
+			<h3>技能丨Skill</h3>
 			<div>
 				<section class="skill">
 					<div class="item">
@@ -84,7 +84,7 @@ layout: false
 							PYTHON
 						</div>
 						<div class="progress">
-							<span class="blue" style="width: 75%;"><span>75%</span></span>
+							<span class="blue" style="width: 80%;"><span>80%</span></span>
 						</div>
 					</div>
 					<div class="item">
@@ -107,25 +107,25 @@ layout: false
 			</div>
 		</div>
 		<div class="showarea-3">
-			<h3>简介 | Introduction</h3>
-			<p>● 学历：在校本科软件工程大三学生；</p>
-			<p>● 现况：自学Python中，网络爬虫方向；</p>
-			<p>● 目标：优秀前端 or 网络爬虫工程师；</p>
+			<h3>简介丨Introduction</h3>
+			<p>● 学历：武汉某本科，软件工程专业大三学生；</p>
+			<p>● 现况：自学 Python 中，网络爬虫方向；</p>
+			<p>● 目标：优秀前端工程师 or 网络爬虫工程师；</p>
 			<p>● 博客：好记性不如烂笔头，记录学习过程；</p>
-			<p>● 兴趣：公路党，四轮承载的是肉体，两轮承载的是灵魂！</p>
+			<p>● 兴趣：酷爱编程，业余公路自行车手，WOT 玩家；</p>
 			<p>● 其他：虽然很菜，但是在努力学习中！</p>
 		</div>
 	</div>
 	<div class="mdui-container">
 		<div class="showarea-4">
-			<h3>联系我 | Contact me</h3>
+			<h3>联系我丨Contact me</h3>
 			<a href="https://www.itrhx.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/about/icon/hexo.png" class="icon" title="个人博客"></a>
 			<a href="https://github.com/TRHX" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/about/icon/github.png" class="icon"
 					title="GitHub"></a>
 			<a href="https://itrhx.blog.csdn.net/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/about/icon/csdn.png" class="icon"
 					title="CSDN"></a>
 			<a href="https://www.cnblogs.com/TRHX/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/about/icon/cnblogs.png" class="icon" title="博客园"></a>
-			<a href="https://www.zhihu.com/people/tan-70-56/activities" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/about/icon/zhihu.png"
+			<a href="https://www.zhihu.com/people/itrhx" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/about/icon/zhihu.png"
 					class="icon" title="知乎"></a>
 			<a href="https://music.163.com/#/user/home?id=1379654769" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/about/icon/netease.png"
 					class="icon" title="网易云音乐"></a>
@@ -143,7 +143,7 @@ layout: false
 		</div>
 	</div>
 	<footer id="footer">
-		Copyright © 2018-2019 <a href="https://www.itrhx.com/" target="_blank">TRHX'S BLOG</a>. All rights reserved.
+		Copyright © 2018-2020 <a href="https://www.itrhx.com/" target="_blank">TRHX'S BLOG</a>. All rights reserved.
 	</footer>
 	<canvas id="sakura"></canvas>
 	<script>

@@ -38,8 +38,6 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- Google Adsense -->
-  <!--<script data-ad-client="ca-pub-1913211097936916" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
   <!-- meta -->
   <% if (config.import && config.import.meta){ %>
   <% (config.import.meta||[]).forEach(function(item){ %>
@@ -49,13 +47,13 @@
   <meta name="360-site-verification" content="d98acd5dccc92e495179410dd58186be" />
   <!-- 360自动收录 -->
   <script>
-    (function(){
-    var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
-    document.write('<script src="' + src + '" id="sozz"><\/script>');
+    (function () {
+      var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+      document.write('<script src="' + src + '" id="sozz"><\/script>');
     })();
   </script>
   <!-- sogou -->
-  <meta name="sogou_site_verification" content="l0yGeAV56W"/>
+  <meta name="sogou_site_verification" content="l0yGeAV56W" />
   <!-- link -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <% if (theme.nodewaves == true) { %>
@@ -72,38 +70,39 @@
   <% } %>
 
   <% if (theme.info && theme.info.cdn && theme.info.cdn.css && theme.info.cdn.css.style) { %>
-    <%- css(theme.info.cdn.css.style) %>
+  <%- css(theme.info.cdn.css.style) %>
   <% } else { %>
-    <%- css('style.css') %>
+  <%- css('style.css') %>
   <% } %>
 
   <script>
     function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
+      document.getElementById('loading-bar').style.width = num + "%";
     }
   </script>
 
   <% if (config.google_analytics_key) { %>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<%- config.google_analytics_key %>"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '<%- config.google_analytics_key %>');
-    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%- config.google_analytics_key %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '<%- config.google_analytics_key %>');
+  </script>
   <% } %>
   <% if (config.baidu_analytics_key) { %>
-    <!-- ba -->
-    <script>
+  <!-- ba -->
+  <script>
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?<%= config.baidu_analytics_key %>";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-    </script>
+  </script>
   <% } %>
-</script>
+  <!-- Google Adsense -->
+  <script data-ad-client="ca-pub-1913211097936916" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>

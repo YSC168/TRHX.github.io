@@ -5,6 +5,8 @@ music:
   type: song
   id: 30953009
 
+comments: false
+
 layout: links     # 必须
 title: 小伙伴们   # 可选，这是友链页的标题
 links:
@@ -396,6 +398,39 @@ links:
       tags:
       - 一个手无缚机（手机）之力的书生小站~
 
+    - name: 覃浩的博客
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/zhengyuanyuan520.jpg
+      url: https://www.zhengyuanyuan520.com/
+      backgroundColor: '#FBBC05'
+      textColor: '#fff'
+      tags:
+      - Java
+      - 计算机网络
+
+    - name: R 喵呜的小窝
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/rshow.jpg
+      url: http://rshow.top/
+      backgroundColor: '#7C5246'
+      textColor: '#fff'
+      tags:
+      - FE Node
+
+    - name: HCLonely
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/hclonely.jpg
+      url: https://blog.hclonely.com/
+      backgroundColor: '#E94335'
+      textColor: '#fff'
+      tags:
+      - 一个懒人的博客
+
+    - name: ChrAlpha 的幻想乡
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/chralpha.jpg
+      url: https://chralpha.com/
+      backgroundColor: '#34A853'
+      textColor: '#fff'
+      tags:
+      - 愿明天又是更好的一天~
+
   - group: 虐狗博主
     icon: fas fa-heartbeat
     items:
@@ -414,22 +449,6 @@ links:
       textColor: '#fff'
       tags:
       - 记录爱情❤️记录生活
-    
-    - name: 晨哥❤️芸霄的小窝
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/fengyunxiao.png
-      url: https://www.fengyunxiao.cn/
-      backgroundColor: '#FF69B4'
-      textColor: '#fff'
-      tags:
-      - 晨哥❤️芸霄的小窝！
-
-    - name: 王小帅 & 江小美
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/tianluogz.jpg
-      url: https://www.tianluogz.com/
-      backgroundColor: '#FF69B4'
-      textColor: '#fff'
-      tags:
-      - Record Our Story With Words.
 
     - name: 爱情小站❤️TYF&HY
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/tyfhy.jpg
@@ -439,85 +458,16 @@ links:
       tags:
       - 记录一路上的琐碎陈杂
 
-    - name: 木子博客
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/muuzi.jpg
-      url: https://muuzi.cn/
-      backgroundColor: '#FF69B4'
-      textColor: '#fff'
-      tags:
-      - 用生活记录我们的爱！
-
-  - group: 特别链接
-    icon: fas fa-link
-    items:
-    - name: 中国博客联盟
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/zgboke.png
-      url: https://zgboke.org/
-      backgroundColor: '#34A853'
-      textColor: '#fff'
-      tags:
-      - 中国博客联盟
-
-    - name: 一站之星
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/izstar.png
-      url: https://www.izstar.cn/
-      backgroundColor: '#34A853'
-      textColor: '#fff'
-      tags:
-      - 一站之星，学生党博客之家！
-
-    - name: 十年之约
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/LOVE-LINKS/foreverblog.jpg
-      url: https://www.foreverblog.cn/
-      backgroundColor: '#34A853'
-      textColor: '#fff'
-      tags:
-      - 一个人的寂寞，一群人的狂欢。
-
-    - name: 暗盾安全
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/heikeblog.png
-      url: https://bbs.heikeblog.com/
-      backgroundColor: '#34A853'
-      textColor: '#fff'
-      tags:
-      - 网络安全学习交流论坛
-
-  - group: 交流群组
-    icon: fas fa-users
-    items:
-    - name: QQ交流群
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/groups.jpg
-      url: https://jq.qq.com/?_wv=1027&k=5F6HRuG
-      backgroundColor: '#0086F1'
-      textColor: '#fff'
-      tags:
-      - Hugo&Hexo博客群（技术交流）
-
-    - name: Telegram交流群
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/groups.jpg
-      url: https://t.me/hexoisthebest
-      backgroundColor: '#0086F1'
-      textColor: '#fff'
-      tags:
-      - Hexo&Hugo博客（迫真TG分群）
-
----
-<!--<img src="https://ws234.com/demo/ip/" div align=left>
-![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.8/images/friends.gif)-->
-
-![](https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/logo3.png)
 
 ---
 
-> * 海内存知己，天涯若比邻！相见即是缘分，欢迎各位大佬留言互换友链！
-> * <font color=#FF0000>互换友链前请先添加本站点为友链！若单方面删除本站友链，本站将不再保留贵站友链！</font>
-> * 一段时间内无法访问贵站将会被分组到【404 NOT FOUND】，请及时恢复站点！
-> * 留言请告诉我你的名称、主页、头像、标签或者简介哦～
-> * 如果想定制你的卡片颜色，也可以留言告诉我哦～（十六进制颜色码，如：#FF0000）
+<a href="https://www.courseduck.com/programming/python/" target="_blank"><img src="https://www.courseduck.com/global/images/Python_header.jpg" alt="CourseDuck Python"></a>
 
----
+<a href="https://bbs.heikeblog.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/images/bbsheikeblog.png" alt="暗盾安全"></a>
 
-> * **<font size=4px color=#FF0000>由于目前友链数过多，所以暂时只接受建站时间大于三个月且拥有独立域名的博客！</font>**
+<a href="https://www.foreverblog.cn/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/images/foreverblog.png" alt="十年之约"></a>
+
+<a href="https://www.itrhx.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/images/logo3.png" alt="TRHX'S BLOG"></a>
 
 ---
 
@@ -526,3 +476,5 @@ links:
 > 头像：https://www.itrhx.com/images/trhx.png
 > 标签：Python、爬虫、前端
 > 简介：求知若饥，虚心若愚！
+
+> **<font size=4px color=#FF0000>由于目前友链数过多，所以暂停交换友链，敬请见谅！</font>**
