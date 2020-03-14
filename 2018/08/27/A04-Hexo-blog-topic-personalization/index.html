@@ -545,14 +545,14 @@
 <hr>
 <h1 id="【01】添加评论系统"><a href="#【01】添加评论系统" class="headerlink" title=" 【01】添加评论系统 "></a><font color="#FF0000"> 【01】添加评论系统 </font></h1><p>主流的评论系统有很多，比如：网易云跟帖、多说、友言、畅言、来必力（LiveRe）、Disqus、Valine、Gitment等等，目前网易云跟帖、多说、友言都已经关闭了，还有些可能需要翻墙，比较麻烦，百度了一下，最后还是选择了来必力评论系统</p>
 <p>进入<a href="https://livere.com" target="_blank" rel="noopener">来必力官网</a>，注册一个账号（注册时可能需要翻墙）</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/001.png" alt="001"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/001.jpg" alt="001"><br></fancybox>
 
 <p>注册完毕之后，登录，进入安装页面，选择 City 免费版安装，安装之后你会得到一段代码</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/002.png" alt="002"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/002.jpg" alt="002"><br></fancybox>
 
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/003.png" alt="003"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/003.jpg" alt="003"><br></fancybox>
 
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/004.png" alt="004"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/004.jpg" alt="004"><br></fancybox>
 
 <p>我们打开主题文件下的 <font color="#FF0000">_config.yml</font> 文件，添加如下代码：</p>
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/005.png" alt="005"><br></fancybox>
@@ -560,10 +560,10 @@
 <p>在 <font color="#FF0000">\themes\hexo-theme-spfk\layout\_partial\comments</font> 文件夹下新建一个 <font color="#FF0000">livere.ejs</font> 的文件，在里面填写来必力提供的代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 来必力City版安装代码 --&gt;</span><br><span class="line">&lt;div id=<span class="string">"lv-container"</span> data-id=<span class="string">"city"</span> data-uid=<span class="string">"这里是你的uid"</span>&gt;</span><br><span class="line">	&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">		(<span class="function"><span class="keyword">function</span>(<span class="params">d, s</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> j, e = d.getElementsByTagName(s)[<span class="number">0</span>];</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> LivereTower === <span class="string">'function'</span>) &#123; <span class="keyword">return</span>; &#125;</span><br><span class="line">    </span><br><span class="line">        j = d.createElement(s);</span><br><span class="line">        j.src = <span class="string">'https://cdn-city.livere.com/js/embed.dist.js'</span>;</span><br><span class="line">        j.async = <span class="literal">true</span>;</span><br><span class="line">    </span><br><span class="line">        e.parentNode.insertBefore(j, e);</span><br><span class="line">        &#125;)(<span class="built_in">document</span>, <span class="string">'script'</span>);</span><br><span class="line">	&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;noscript&gt;为正常使用来必力评论功能请激活JavaScript&lt;/</span>noscript&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;!-- City版安装代码已完成 --&gt;</span></span><br></pre></td></tr></table></figure>
 <p>打开 <font color="#FF0000">\themes\hexo-theme-spfk\layout\_partial\article.ejs </font>文件，在适当位置添加如下红框中的代码：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/006.png" alt="006"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/006.jpg" alt="006"><br></fancybox>
 
 <p>完成以上操作之后，我们就可以使用来必力评论系统了</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/007.png" alt="007"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/007.jpg" alt="007"><br></fancybox>
 
 <hr>
 <h1 id="【02】添加卡通人物"><a href="#【02】添加卡通人物" class="headerlink" title=" 【02】添加卡通人物 "></a><font color="#FF000"> 【02】添加卡通人物 </font></h1><p>我在逛别人博客的时候偶然发现右下角居然有一个萌萌的卡通人物，还能根据你鼠标位置摇头，瞬间被吸引到了，赶紧也给自己博客添加一个吧！<a href="https://github.com/EYHN/hexo-helper-live2d" target="_blank" rel="noopener">点击此处</a>进入该项目地址  </p>
@@ -574,7 +574,7 @@
 <p>打开站点目录下的 <font color="#FF0000">_config.yml</font> 文件，添加如下代码：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  scriptFrom:</span> <span class="string">local</span></span><br><span class="line"><span class="attr">  model:</span></span><br><span class="line"><span class="attr">    use:</span> <span class="string">live2d-widget-model-haruto</span> <span class="comment">#模型选择</span></span><br><span class="line"><span class="attr">  display:</span></span><br><span class="line"><span class="attr">    position:</span> <span class="string">right</span>  <span class="comment">#模型位置</span></span><br><span class="line"><span class="attr">    width:</span> <span class="number">150</span>       <span class="comment">#模型宽度</span></span><br><span class="line"><span class="attr">    height:</span> <span class="number">300</span>      <span class="comment">#模型高度</span></span><br><span class="line"><span class="attr">  mobile:</span></span><br><span class="line"><span class="attr">    show:</span> <span class="literal">false</span>      <span class="comment">#是否在手机端显示</span></span><br></pre></td></tr></table></figure>
 <p>设置好过后我们就拥有了一个卡通人物</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/008.png" alt="008"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/008.jpg" alt="008"><br></fancybox>
 
 <hr>
 <h1 id="【03】自定义鼠标指针样式"><a href="#【03】自定义鼠标指针样式" class="headerlink" title=" 【03】自定义鼠标指针样式 "></a><font color="#FF0000"> 【03】自定义鼠标指针样式 </font></h1><p>在 <font color="#FF0000"> \themes\material-x\source\less\_base.less</font> 文件 body 样式里写入如下代码：</p>
@@ -623,7 +623,7 @@
 <p>在 <font color="#FF0000">\themes\hexo-theme-spfk\layout\layout.ejs</font> 文件末尾添加以下代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面点击小红心 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/love.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>完成以上操作后，当我们点击鼠标的时候就可以看见爱心的特效了</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/009.png" alt="009"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/009.jpg" alt="009"><br></fancybox>
 
 <hr>
 <h1 id="【05】添加鼠标点击显示字体效果"><a href="#【05】添加鼠标点击显示字体效果" class="headerlink" title=" 【05】添加鼠标点击显示字体效果 "></a><font color="#FF0000"> 【05】添加鼠标点击显示字体效果 </font></h1><p>在<font color="#FF0000"> \themes\hexo-theme-spfk\source\js</font> 下新建文件 <font color="#FF0000">click_show_text.js</font>，在 <font color="#FF0000">click_show_text.js</font> 文件中添加以下代码：</p>
@@ -667,12 +667,12 @@
 <p>同样的，以 <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank" rel="noopener">spfk</a> 主题为例，在 <font color="#FF0000">\themes\hexo-theme-spfk\layout\_partial\post</font> 目录下创建 <font color="#FF0000">word.ejs</font> 文件，在 <font color="#FF0000">word.ejs</font> 文件中写入以下代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=<span class="string">"margin-top:10px;"</span>&gt;</span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-time"</span>&gt;</span><br><span class="line">      &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-icon"</span>&gt;</span><br><span class="line">        &lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-keyboard-o"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line">        &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-text"</span>&gt;  字数统计: <span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">        &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-count"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">wordcount</span>(<span class="attr">post.content</span>) %&gt;</span>字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>span&gt;</span><br><span class="line">    &amp;nbsp; | &amp;nbsp;</span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-time"</span>&gt;</span><br><span class="line">      &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-icon"</span>&gt;</span><br><span class="line">        &lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"fa fa-hourglass-half"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line">        &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-meta-item-text"</span>&gt;  阅读时长: <span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">        &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-count"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">min2read</span>(<span class="attr">post.content</span>) %&gt;</span>分<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">      &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>span&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
 <p>然后在 <font color="#FF0000">\themes\hexo-theme-spfk\layout\_partial\article.ejs</font> 中适当位置添加以下代码：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/013.png" alt="013"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/013.jpg" alt="013"><br></fancybox>
 
 <p>最后在主题目录下的 <font color="#FF0000">_config.yml</font> 添加以下配置</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">word_count:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>如果显示的位置不好，可以自行更改其位置，成功配置后的效果如下：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/014.png" alt="014"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/014.jpg" alt="014"><br></fancybox>
 
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/015.png" alt="015"><br></fancybox>
 
@@ -683,15 +683,15 @@
 
 <hr>
 <h1 id="【09】添加背景音乐"><a href="#【09】添加背景音乐" class="headerlink" title=" 【09】添加背景音乐 "></a><font color="#FF0000"> 【09】添加背景音乐 </font></h1><p>打开网页版<a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>，选择你准备添加的背景音乐，点击生成外链播放器，前提是要有版权，不然是无法生成外链播放器的，复制底下的HTML代码</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/017.png" alt="017"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/017.jpg" alt="017"><br></fancybox>
 
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/018.png" alt="018"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/018.jpg" alt="018"><br></fancybox>
 
 <p>然后将此代码放到你想要放的地方，比如放在博客的左侧，则打开 <font color="#FF0000">\themes\hexo-theme-spfk\layout\_partial\left-col.ejs</font> 文件，将复制的HTML代码粘贴进去，再进行适当的位置设置让播放器更美观，其中 <font color="#FF0000">auto=1</font> 表示打开网页自动播放音乐，<font color="#FF0000">auto=0</font> 表示关闭自动播放音乐</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/019.png" alt="019"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/019.jpg" alt="019"><br></fancybox>
 
 <p>最后效果如下：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/020.png" alt="020"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/020.jpg" alt="020"><br></fancybox>
 
 <p>这种网易云音乐外链的方式有很多局限性，因此推荐使用<font color="#FF0000">aplayer</font>，GitHub地址为：<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">https://github.com/MoePlayer/APlayer</a> ，参考教程：<a href="https://blog.yleao.com/2018/0902/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A8.html" target="_blank" rel="noopener">《hexo上的aplayer应用》</a></p>
 <hr>
@@ -703,19 +703,19 @@
 <hr>
 <h1 id="【11】添加百度统计"><a href="#【11】添加百度统计" class="headerlink" title=" 【11】添加百度统计 "></a><font color="#FF0000"> 【11】添加百度统计 </font></h1><p>百度统计是百度推出的一款免费的专业网站流量分析工具，能够告诉用户访客是如何找到并浏览用户的网站，在网站上做了些什么，非常有趣，接下来我们把百度统计添加到自己博客当中</p>
 <p>访问<a href="https://tongji.baidu.com" target="_blank" rel="noopener">百度统计首页</a>，注册一个账号后登陆，添加你的博客网站</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/022.png" alt="022"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/022.jpg" alt="022"><br></fancybox>
 
 <p>接着点击代码获取，复制该代码</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/023.png" alt="023"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/023.jpg" alt="023"><br></fancybox>
 
 <p>然后到目录 <font color="#FF0000">\Hexo\themes\hexo-theme-spfk\layout\_partial</font> 下新建一个 <font color="#FF0000">baidu-analytics.ejs</font> 文件，里面粘贴你刚刚复制的代码</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/024.png" alt="024"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/024.jpg" alt="024"><br></fancybox>
 
 <p>修改主题文件夹下的 <font color="#FF0000">_config.yml</font> 文件，将你的key（图中涂掉部分）填写进去：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/025.png" alt="025"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/025.jpg" alt="025"><br></fancybox>
 
 <p>所有操作完成后可以在百度统计管理页面检查代码是否安装成功，如果代码安装正确，一般20分钟后，可以查看网站分析数据</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/026.png" alt="026"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/026.jpg" alt="026"><br></fancybox>
 
 <p>另外推荐：<a href="https://web.umeng.com/main.php?c=user&amp;a=index" target="_blank" rel="noopener">友盟</a>，2010年4月在北京成立，安全、可靠、公正、第三方的网站流量统计分析系统</p>
 <hr>
@@ -724,9 +724,9 @@
 <p>其中 <code>funny.ico</code> 是用户切换到其他标签后你网站的图标，<code>favicon.ico</code> 是正常图标，然后在 <font color="#FF0000">\themes\material-x\layout\layout.ejs</font> 文件中添加如下代码：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--浏览器搞笑标题--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/FunnyTitle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>再次部署博客后就可以看见标题搞笑的效果了：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/027_1.png" alt="027"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/027.jpg" alt="027"><br></fancybox>
 
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/028_1.png" alt="028"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/028.jpg" alt="028"><br></fancybox>
 
 <hr>
 <h1 id="【13】背景添加动态线条效果"><a href="#【13】背景添加动态线条效果" class="headerlink" title="【13】背景添加动态线条效果 "></a><font color="#FF0000">【13】背景添加动态线条效果 </font></h1><p>在 <font color="#FF0000">\Hexo\themes\hexo-theme-spfk\layout\layout.ejs</font> 文件中添加如下代码：</p>
@@ -739,7 +739,7 @@
 <li>zIndex：表示背景的z-index属性，css属性用于控制所在层的位置，默认：-1</li>
 </ul>
 <p>最终实现效果：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/029.png" alt="029"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/029.jpg" alt="029"><br></fancybox>
 
 <hr>
 <h1 id="【14】添加人体时钟"><a href="#【14】添加人体时钟" class="headerlink" title="【14】添加人体时钟 "></a><font color="#FF0000">【14】添加人体时钟 </font></h1><p>无意中发现了个有趣的人体时钟 HONE HONE CLOCK，作者是个日本人，<a href="http://chabudai.org/blog/" target="_blank" rel="noopener">点击此处</a>访问作者博客，<a href="http://chabudai.org/blog/?p=59" target="_blank" rel="noopener">点击此处</a>在作者原博客上查看动态样式，<a href="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf" target="_blank" rel="noopener">点击此处</a>查看动态大图，如果你的博客上有合适的地方，加上一个人体时钟会很有趣的</p>
@@ -764,9 +764,9 @@
 <p>至此，RSS订阅功能添加完成</p>
 <hr>
 <h1 id="【16】添加网站雪花飘落效果"><a href="#【16】添加网站雪花飘落效果" class="headerlink" title="【16】添加网站雪花飘落效果 "></a><font color="#FF0000">【16】添加网站雪花飘落效果 </font></h1><p>样式一和样式二分别如下：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/031.png" alt="031样式一"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/031.jpg" alt="031样式一"><br></fancybox>
 
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/032.png" alt="032样式二"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/032.jpg" alt="032样式二"><br></fancybox>
 
 <p>实现方法：在 <font color="#FF0000">\Hexo\themes\hexo-theme-spfk\source\js</font> 目录下新建一个 <font color="#FF0000">snow.js</font> 文件，粘贴以下代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*样式一*/</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">	$.fn.snow = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> $flake = $(<span class="string">'&lt;div id="snowbox" /&gt;'</span>).css(&#123;<span class="string">'position'</span>: <span class="string">'absolute'</span>,<span class="string">'z-index'</span>:<span class="string">'9999'</span>, <span class="string">'top'</span>: <span class="string">'-50px'</span>&#125;).html(<span class="string">'&amp;#10052;'</span>),</span><br><span class="line">	documentHeight 	= $(<span class="built_in">document</span>).height(),</span><br><span class="line">	documentWidth	= $(<span class="built_in">document</span>).width(),</span><br><span class="line">	defaults = &#123;</span><br><span class="line">		minSize		: <span class="number">10</span>,</span><br><span class="line">		maxSize		: <span class="number">20</span>,</span><br><span class="line">		newOn		: <span class="number">1000</span>,</span><br><span class="line">		flakeColor	: <span class="string">"#AFDAEF"</span> <span class="comment">/* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */</span></span><br><span class="line">	&#125;,</span><br><span class="line">	options	= $.extend(&#123;&#125;, defaults, options);</span><br><span class="line">	<span class="keyword">var</span> interval= setInterval( <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> startPositionLeft = <span class="built_in">Math</span>.random() * documentWidth - <span class="number">100</span>,</span><br><span class="line">	startOpacity = <span class="number">0.5</span> + <span class="built_in">Math</span>.random(),</span><br><span class="line">	sizeFlake = options.minSize + <span class="built_in">Math</span>.random() * options.maxSize,</span><br><span class="line">	endPositionTop = documentHeight - <span class="number">200</span>,</span><br><span class="line">	endPositionLeft = startPositionLeft - <span class="number">500</span> + <span class="built_in">Math</span>.random() * <span class="number">500</span>,</span><br><span class="line">	durationFall = documentHeight * <span class="number">10</span> + <span class="built_in">Math</span>.random() * <span class="number">5000</span>;</span><br><span class="line">	$flake.clone().appendTo(<span class="string">'body'</span>).css(&#123;</span><br><span class="line">		left: startPositionLeft,</span><br><span class="line">		opacity: startOpacity,</span><br><span class="line">		<span class="string">'font-size'</span>: sizeFlake,</span><br><span class="line">		color: options.flakeColor</span><br><span class="line">	&#125;).animate(&#123;</span><br><span class="line">		top: endPositionTop,</span><br><span class="line">		left: endPositionLeft,</span><br><span class="line">		opacity: <span class="number">0.2</span></span><br><span class="line">	&#125;,durationFall,<span class="string">'linear'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		$(<span class="keyword">this</span>).remove()</span><br><span class="line">	&#125;);</span><br><span class="line">	&#125;, options.newOn);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)(jQuery);</span><br><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $.fn.snow(&#123; </span><br><span class="line">	    minSize: <span class="number">5</span>, <span class="comment">/* 定义雪花最小尺寸 */</span></span><br><span class="line">	    maxSize: <span class="number">50</span>,<span class="comment">/* 定义雪花最大尺寸 */</span></span><br><span class="line">	    newOn: <span class="number">300</span>  <span class="comment">/* 定义密集程度，数字越小越密集 */</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -778,12 +778,12 @@
 <p>原文链接：<a href="https://ihuan.me/2172.html" target="_blank" rel="noopener">《分享两种圣诞节雪花特效JS代码(网站下雪效果)》</a></p>
 <hr>
 <h1 id="【17】添加-Fork-me-on-GitHub-效果"><a href="#【17】添加-Fork-me-on-GitHub-效果" class="headerlink" title="【17】添加 Fork me on GitHub 效果 "></a><font color="#FF0000">【17】添加 Fork me on GitHub 效果 </font></h1><p>效果图：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/033.png" alt="033"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/033.jpg" alt="033"><br></fancybox>
 
 <p><a href="https://blog.github.com/2008-12-19-github-ribbons/" target="_blank" rel="noopener">点击此处</a>可以查看更多样式，将相应样式的代码复制到你想要放的地方就OK了，代码里的链接也要替换成你的，更多创意，比如 Follow me on CSDN ，只需要用PS改掉图片里的文字，替换掉相应链接即可</p>
 <hr>
 <h1 id="【18】添加背景动态彩带效果"><a href="#【18】添加背景动态彩带效果" class="headerlink" title="【18】添加背景动态彩带效果 "></a><font color="#FF0000">【18】添加背景动态彩带效果 </font></h1><p>样式一是鼠标点击后彩带自动更换样式，样式二是飘动的彩带：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/034.png" alt="034"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/034.jpg" alt="034"><br></fancybox>
 
 <p>实现方法：在 <font color="#FF0000">\themes\material-x\layout\layout.ejs</font> 文件的<font color="#FF0000">body</font>前面添加如下代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 样式一（鼠标点击更换样式） --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://g.joyinshare.com/hc/ribbon.min.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -796,7 +796,7 @@
 <p>然后在主题的 <font color="#FF0000">layout.ejs</font> 文件中引入即可：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 数字雨 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"1440"</span> <span class="attr">height</span>=<span class="string">"900"</span> &gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/DigitalRain.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>最终效果：</p>
-<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/035.png" alt="035"><br></fancybox>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/035.jpg" alt="035"><br></fancybox>
 
 <p>代码来源：<a href="http://www.lxl8800.cn/Main/Resource" target="_blank" rel="noopener">http://www.lxl8800.cn/Main/Resource</a></p>
 <hr>
@@ -903,10 +903,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-12-31T23:41:01+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-14T13:37:41+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2019年12月31日</p>
+    <p>最后更新于 2020年3月14日</p>
   </a>
 </div>
 
