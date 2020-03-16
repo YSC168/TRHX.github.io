@@ -1,6 +1,5 @@
 ---
 title: 2019年总结【跨越今天，更不平凡】
-top: true
 tags: 年终总结
 categories: BLOG
 music:

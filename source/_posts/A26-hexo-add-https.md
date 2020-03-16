@@ -27,42 +27,42 @@ Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全
 # <font color=#FF000>-- 注册 Cloudflare</font>
 到 [Cloudflare官网](https://dash.cloudflare.com/sign-up) 注册账号
 <fancybox>
-![01.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/01.png)
+![01.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/01.jpg)
 </fancybox>
 
 # <font color=#FF000>-- 添加站点</font>
 添加你的站点，一直下一步即可
 <fancybox>
-![02.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/02.png)
+![02.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/02.jpg)
 </fancybox>
 <fancybox>
-![03.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/03.png)
+![03.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/03.jpg)
 </fancybox>
 如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考[《为hexo博客配置个性域名》](https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo_font_270)
 <fancybox>
-![04.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/04.png)
+![04.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/04.jpg)
 </fancybox>
 
 # <font color=#FF000>--修改DNS</font>
 点击下一步 Cloudflare 会提供给你两个 DNS 地址
 <fancybox>
-![05.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/05.png)
+![05.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/05.jpg)
 </fancybox>
 到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效
 <fancybox>
-![08.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/08.png)
+![08.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/08.jpg)
 </fancybox>
 <fancybox>
-![09.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/09.png)
+![09.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/09.jpg)
 </fancybox>
 <fancybox>
-![10.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/10.png)
+![10.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/10.jpg)
 </fancybox>
 
 # <font color=#FF000>--开启 HTTPS</font>
 在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可
 <fancybox>
-![07.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/07.png)
+![07.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/07.jpg)
 </fancybox>
 
 关于三种模式 Flexible、Full、Full (Strict) 的区别：
@@ -79,7 +79,7 @@ Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全
 Cloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可
 
 <fancybox>
-![06.png](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/06.png)
+![06.jpg](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A26/06.jpg)
 </fancybox>
 
 现在我们的 Hexo 博客就实现了全站 HTTPS！

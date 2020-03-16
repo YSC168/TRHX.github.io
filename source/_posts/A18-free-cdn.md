@@ -17,11 +17,11 @@ CDN的全称是Content Delivery Network，即内容分发网络。CDN是构建�
 
 ---
 # <font color=#FF0000>1、新建Github仓库 </font>
-![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/01.png)
+![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/01.jpg)
 
 # <font color=#FF0000>2、克隆Github仓库到本地 </font>
   点击 Clone or download，一键复制仓库地址
-![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/04.png)
+![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/04.jpg)
 
  在本地目录右键 Git Bash Here，执行以下命令：
  ```git
@@ -39,10 +39,10 @@ git push                      //推送至远程仓库
 
 # <font color=#FF0000>4、发布仓库 </font>
   点击release发布
-![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/02.png)
+![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/02.jpg)
 
   自定义发布版本号
-  ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/03.png)
+  ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A18/03.jpg)
 
 # <font color=#FF0000>5、通过jsDelivr引用资源 </font>
 使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径

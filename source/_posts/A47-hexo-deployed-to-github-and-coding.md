@@ -1,5 +1,5 @@
 ---
-title: Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS
+title: Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HTTPS
 categories: Hexo
 tags:
  - Hexo

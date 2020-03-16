@@ -9,6 +9,7 @@ categories:
 thumbnail: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/spider.png
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 ---
+
 > <center><font color=#1BC3FB size=4>Python3 爬虫学习笔记第十章 —— 【MySQL数据储存】</font></center>
 
 <!--more-->
@@ -187,7 +188,7 @@ db.close()
 `commit()` 方法的作用是实现数据插入，是真正将语句提交到数据库执行的方法，使用 `try except` 语句实现异常处理，如果执行失败，则调用 `rollback()` 方法执行数据回滚，保证原数据不被破坏，使用查询语句可以看到已经插入的数据：
 
 <fancybox>
-![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A40/01.png)
+![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A40/01.jpg)
 </fancybox>
 
 进阶操作：将需要插入的数据构造成一个字典，这样的做法可以让插入方法无需改动，只需要传入一个动态变化的字典就行了，改写原来的代码如下：
@@ -356,5 +357,5 @@ db.close()
 
 在命令行中使用 ` SELECT * FROM article;` 命令可以查看到数据已经成功获取并储存到了数据库中：
 <fancybox>
-![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A40/02.png)
+![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A40/02.jpg)
 </fancybox>

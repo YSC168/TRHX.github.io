@@ -30,13 +30,13 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 ``` html
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32405683&auto=1&height=66"></iframe>
 ```
-![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A03/02.png)
-![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A03/03.png)
+![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A03/02.jpg)
+![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A03/03.jpg)
 
 # <font color=#FF0000> -- 插入视频 </font>
 
 高考毕业了我们为下一届的学弟学妹们录制高考加油视频，我担任后期制作，在这里就以该视频为例٩(๑❛ᴗ❛๑)۶，在腾讯视频播放页面找到分享按钮，复制该视频的通用代码（其他视频播放平台也一样）,粘贴到文章中对应位置即可，可根据情况调整视频播放器的大小
-![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A03/04.png)
+![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A03/04.jpg)
 
 ``` html
 <iframe frameborder="0" width="840"  height="500" src="https://v.qq.com/txp/iframe/player.html?vid=x0643zvgtf7" allowFullScreen="true"></iframe>

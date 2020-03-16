@@ -15,7 +15,7 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 > 随便提一句，这家伙连我的情侣博客一起刷的，真是让人大跌眼镜啊，估计自己没女朋友吧，见不得别人好，悲催啊，不知道又是哪个学校，哪个公司，哪个家庭摊上了这种垃圾。
 
 <fancybox>
-![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A25/01.png)
+![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A25/01.jpg)
 </fancybox>
 
 <fancybox>

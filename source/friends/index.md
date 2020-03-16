@@ -22,7 +22,7 @@ links:
       - 一个好奇的博客
 
     - name: xaoxuu’s blog
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/xaoxuu.png
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/xaoxuu.jpg
       url: https://xaoxuu.com/
       backgroundColor: '#34A853'
       textColor: '#fff'
@@ -40,7 +40,7 @@ links:
       - Python
 
     - name: 番茄酱の萌化小屋
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/kurumi.png
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/kurumi.jpg
       url: https://i.kurumi.ink/
       backgroundColor: '#E94335'
       textColor: '#fff'
@@ -50,7 +50,7 @@ links:
       - 二次元
 
     - name: attack204
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/attack204.png
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/attack204.jpg
       url: http://attack204.com/
       backgroundColor: '#967ADC'
       textColor: '#fff'
@@ -105,7 +105,7 @@ links:
       - Python3
 
     - name: JerryC
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/jerryc.png
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/jerryc.jpg
       url: http://jerryc.me/
       backgroundColor: '#FBBC05'
       textColor: '#fff'
@@ -202,7 +202,7 @@ links:
       - 蒟蒻
 
     - name: Yinux's Blog
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/codingpy.png
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yinuxy.jpg
       url: https://www.yinuxy.com/
       backgroundColor: '#7C5246'
       textColor: '#fff'
@@ -344,7 +344,7 @@ links:
       - 人生苦短,及时行乐
 
     - name: Emil’s blog
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/hvnobug.png
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/hvnobug.jpg
       url: https://blog.hvnobug.com/
       backgroundColor: '#7C5246'
       textColor: '#fff'
@@ -369,16 +369,13 @@ links:
       - Java
       - 前端
 
-    - name: 空梦博客
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/kmbk0.png
-      url: https://kmbk0.top/
-      backgroundColor: '#008B8B'
+    - name: 优客-blog
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/youke0.png
+      url: http://youke0.xyz/
+      backgroundColor: '#708090'
       textColor: '#fff'
       tags:
-      - Web
-      - Java
-      - 框架
-      - 码农
+      - 一定要比从前的自己更加优秀！
 
     - name: 高高编程小屋
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/frogfrog.jpg

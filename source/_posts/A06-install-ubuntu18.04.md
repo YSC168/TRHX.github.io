@@ -11,25 +11,25 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
  # <font color=#FF0000>1.下载安装 VMware Workstation Pro 14</font>
  进入 [VMware 官网](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)或者在软件商店下载最新版VMware虚拟机并安装
  
- ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/01.png
+ ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/01.jpg
 )
  
   # <font color=#FF0000>2.下载 Ubuntu 18.04 系统</font>
   进入 [Ubuntu 官网](https://www.ubuntu.com/)，下载最新版 Ubuntu 系统镜像
   
-![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/02.png
+![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/02.jpg
 )
-![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/03.png
+![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/03.jpg
 )
 
 # <font color=#FF0000>3.在 VMware 中创建虚拟机</font>
 
 打开安装好的 VMware Workstation Pro 14，选择创建新的虚拟机
-![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/04.png
+![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/04.jpg
 )
 
 在新建虚拟机向导中选择自定义（高级）
-![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/05.png
+![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/05.jpg
 )
 
 默认直接下一步，直到出现下图，再选择稍后安装操作系统
@@ -66,35 +66,35 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 ![18](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/18.png)
 
 此时我们就可以在虚拟机左侧“我的计算机”下面看到刚刚创建的虚拟机 Ubuntu 64 位，单击 Ubuntu 64 位，选择“编辑虚拟机设置”， 再选择“CD/DVD(SATA)”，选择“使用ISO映像文件”，点击“浏览”，找到先前我们下载好的 Ubuntu 64 位镜像文件，点击“确定”
-![19](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/19.png)
+![19](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/19.jpg)
 ![20](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/20.png)
 
 # <font color=#FF0000>4.在虚拟机上安装 Ubuntu 系统</font>
 
 单击 Ubuntu 64 位，选择“开启此虚拟机”
-![21](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/21.png)
+![21](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/21.jpg)
 
 来到欢迎界面，选择好语言，点击“安装 Ubuntu”
-![22](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/22.png)
+![22](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/22.jpg)
 
 选择键盘布局为“汉语”
-![23](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/23.png)
+![23](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/23.jpg)
 
 更新和其他软件默认选择即可
-![24](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/24.png)
+![24](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/24.jpg)
 
 安装类型选择“清除整个磁盘并安装 Ubuntu”，PS: 因为我们是新安装的系统，且在虚拟机中，所以可以选择清除整个磁盘，这个操作不会清除你原来电脑里面的东西
-![25](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/25.png)
-![26](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/26.png)
+![25](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/25.jpg)
+![26](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/26.jpg)
 
 地区随便，在中国就行，默认即可
-![27](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/27.png)
+![27](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/27.jpg)
 
 之后设置计算机名，密码
-![28](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/28.png)
+![28](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/28.jpg)
 
 点击继续稍等一会就安装完成啦
-![29](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/29.png)
+![29](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/29.jpg)
 
 ----------
 
@@ -123,7 +123,7 @@ sudo apt-get install open-vm*
 重启即可全屏显示
 
 方法②：在终端输入`xrandr`，并回车，我们就可以看到很多可以修改的分辨率，选择好分辨率后，比如我们要修改分辨率为 1920x1440 ，则在终端输入 `xrandr -s 1920x1440`，回车即可，注意 1920x1440 中间是<font color=#FF0000>小写字母 x</font>，本人亲测此方法并不是很完美，不能完全适应屏幕
-![30](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/30.png)
+![30](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A06/30.jpg)
 
 方法③：安装 VMware Tools：
 1、进入 Ubuntu 系统后，点击虚拟机上的【虚拟机】—＞【安装 VMware Tools】，回到桌面即可看到一个 VMware Tools 的 图标

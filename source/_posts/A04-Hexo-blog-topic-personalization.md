@@ -1,5 +1,6 @@
 ---
 title: Hexo 博客主题个性化
+top: true
 categories: Hexo
 tags:
  - 主题个性化
@@ -33,21 +34,21 @@ icons: [fas fa-heading]
 进入[来必力官网](https://livere.com)，注册一个账号（注册时可能需要翻墙）
 
 <fancybox>
-![001](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/001.png)  
+![001](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/001.jpg)  
 </fancybox>
 
 注册完毕之后，登录，进入安装页面，选择 City 免费版安装，安装之后你会得到一段代码
 
 <fancybox>
-![002](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/002.png)
+![002](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/002.jpg)
 </fancybox>
 
 <fancybox>
-![003](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/003.png)
+![003](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/003.jpg)
 </fancybox>
 
 <fancybox>
-![004](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/004.png)
+![004](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/004.jpg)
 </fancybox>
 
 我们打开主题文件下的 <font color=#FF0000>_config.yml</font> 文件，添加如下代码：
@@ -82,13 +83,13 @@ icons: [fas fa-heading]
 打开 <font color=#FF0000>\themes\hexo-theme-spfk\layout\\_partial\article.ejs </font>文件，在适当位置添加如下红框中的代码：
 
 <fancybox>
-![006](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/006.png)
+![006](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/006.jpg)
 </fancybox>
 
 完成以上操作之后，我们就可以使用来必力评论系统了
 
 <fancybox>
-![007](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/007.png)
+![007](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/007.jpg)
 </fancybox>
 
 ---
@@ -128,7 +129,7 @@ live2d:
 设置好过后我们就拥有了一个卡通人物
 
 <fancybox>
-![008](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/008.png)
+![008](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/008.jpg)
 </fancybox>
 
 ---
@@ -178,7 +179,7 @@ body {
 完成以上操作后，当我们点击鼠标的时候就可以看见爱心的特效了
 
 <fancybox>
-![009](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/009.png)
+![009](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/009.jpg)
 </fancybox>
 
 ---
@@ -410,7 +411,7 @@ word_count: true
 然后在 <font color=#FF0000>\themes\hexo-theme-spfk\layout\\_partial\article.ejs</font> 中适当位置添加以下代码：
 
 <fancybox>
-![013](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/013.png)
+![013](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/013.jpg)
 </fancybox>
 
 最后在主题目录下的 <font color=#FF0000>_config.yml</font> 添加以下配置
@@ -422,7 +423,7 @@ word_count: true
 如果显示的位置不好，可以自行更改其位置，成功配置后的效果如下：
 
 <fancybox>
-![014](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/014.png)
+![014](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/014.jpg)
 </fancybox>
 
 <fancybox>
@@ -449,23 +450,23 @@ word_count: true
 打开网页版[网易云音乐](https://music.163.com/)，选择你准备添加的背景音乐，点击生成外链播放器，前提是要有版权，不然是无法生成外链播放器的，复制底下的HTML代码
 
 <fancybox>
-![017](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/017.png)
+![017](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/017.jpg)
 </fancybox>
 
 <fancybox>
-![018](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/018.png)
+![018](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/018.jpg)
 </fancybox>
 
 然后将此代码放到你想要放的地方，比如放在博客的左侧，则打开 <font color=#FF0000>\themes\hexo-theme-spfk\layout\\_partial\left-col.ejs</font> 文件，将复制的HTML代码粘贴进去，再进行适当的位置设置让播放器更美观，其中 <font color=#FF0000>auto=1</font> 表示打开网页自动播放音乐，<font color=#FF0000>auto=0</font> 表示关闭自动播放音乐
 
 <fancybox>
-![019](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/019.png)
+![019](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/019.jpg)
 </fancybox>
 
 最后效果如下：
 
 <fancybox>
-![020](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/020.png)
+![020](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/020.jpg)
 </fancybox>
 
 这种网易云音乐外链的方式有很多局限性，因此推荐使用<font color=#FF0000>aplayer</font>，GitHub地址为：https://github.com/MoePlayer/APlayer ，参考教程：[《hexo上的aplayer应用》](https://blog.yleao.com/2018/0902/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A8.html)
@@ -512,31 +513,31 @@ setInterval("createtime()",250);
 访问[百度统计首页](https://tongji.baidu.com)，注册一个账号后登陆，添加你的博客网站
 
 <fancybox>
-![022](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/022.png)
+![022](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/022.jpg)
 </fancybox>
 
 接着点击代码获取，复制该代码
 
 <fancybox>
-![023](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/023.png)
+![023](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/023.jpg)
 </fancybox>
 
 然后到目录 <font color=#FF0000>\Hexo\themes\hexo-theme-spfk\layout\\_partial</font> 下新建一个 <font color=#FF0000>baidu-analytics.ejs</font> 文件，里面粘贴你刚刚复制的代码
 
 <fancybox>
-![024](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/024.png)
+![024](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/024.jpg)
 </fancybox>
 
 修改主题文件夹下的 <font color=#FF0000>_config.yml</font> 文件，将你的key（图中涂掉部分）填写进去：
 
 <fancybox>
-![025](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/025.png)
+![025](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/025.jpg)
 </fancybox>
 
 所有操作完成后可以在百度统计管理页面检查代码是否安装成功，如果代码安装正确，一般20分钟后，可以查看网站分析数据
 
 <fancybox>
-![026](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/026.png)
+![026](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/026.jpg)
 </fancybox>
 
 另外推荐：[友盟](https://web.umeng.com/main.php?c=user&a=index)，2010年4月在北京成立，安全、可靠、公正、第三方的网站流量统计分析系统
@@ -577,11 +578,11 @@ document.addEventListener('visibilitychange', function () {
 再次部署博客后就可以看见标题搞笑的效果了：
 
 <fancybox>
-![027](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/027_1.png)
+![027](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/027.jpg)
 </fancybox>
 
 <fancybox>
-![028](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/028_1.png)
+![028](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/028.jpg)
 </fancybox>
 
 ---
@@ -607,7 +608,7 @@ color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 最终实现效果：
 
 <fancybox>
-![029](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/029.png)
+![029](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/029.jpg)
 </fancybox>
 
 ---
@@ -677,11 +678,11 @@ rss: /atom.xml
 样式一和样式二分别如下：
 
 <fancybox>
-![031样式一](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/031.png)
+![031样式一](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/031.jpg)
 </fancybox>
 
 <fancybox>
-![032样式二](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/032.png)
+![032样式二](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/032.jpg)
 </fancybox>
 
 实现方法：在 <font color=#FF0000>\Hexo\themes\hexo-theme-spfk\source\js</font> 目录下新建一个 <font color=#FF0000>snow.js</font> 文件，粘贴以下代码：
@@ -885,7 +886,7 @@ snow.start();
 效果图：
 
 <fancybox>
-![033](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/033.png)
+![033](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/033.jpg)
 </fancybox>
 
 [点击此处](https://blog.github.com/2008-12-19-github-ribbons/)可以查看更多样式，将相应样式的代码复制到你想要放的地方就OK了，代码里的链接也要替换成你的，更多创意，比如 Follow me on CSDN ，只需要用PS改掉图片里的文字，替换掉相应链接即可
@@ -897,7 +898,7 @@ snow.start();
 样式一是鼠标点击后彩带自动更换样式，样式二是飘动的彩带：
 
 <fancybox>
-![034](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/034.png)
+![034](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/034.jpg)
 </fancybox>
 
 实现方法：在 <font color=#FF0000>\themes\material-x\layout\layout.ejs</font> 文件的<font color=#FF0000>body</font>前面添加如下代码：
@@ -1004,7 +1005,7 @@ canvas {
 最终效果：
 
 <fancybox>
-![035](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/035.png)
+![035](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A04/035.jpg)
 </fancybox>
 
 代码来源：http://www.lxl8800.cn/Main/Resource

@@ -96,10 +96,13 @@ with open('favicon.ico', 'wb') as f:
 
 ## <font color=#FF0000> 【2.3.3】 添加 headers</font>
 headers 的作用：部分页面禁止 Python 爬虫对其进行爬取，而添加 headers 就可以模拟成浏览器取访问网站，实现数据的爬取，headers 可以在任意网页 F12 检查控制台里面找到，headers 最重要的是 "User-Agent" 字段
+
 <fancybox>
-![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A30/Snipaste_2019-08-19_17-10-11.png)
+![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A30/1.png)
 </fancybox>
+
 以为例知乎，只有加了 headers 才能正常爬取，否则会返回 400 Bad Request 没有任何数据
+
 ```python
 import requests
 
@@ -110,6 +113,7 @@ print(r.text)
 ```
 
 # <font color=#FF0000> 【2.4】 requests 构建 POST 请求</font>
+
 示例：
 ```python
 import requests
@@ -118,7 +122,9 @@ data = {'name': 'TRHX', 'age': '20'}
 r = requests.post("http://httpbin.org/post", data=data)
 print(r.text)
 ```
+
 输出结果：
+
 ```python
 {
   "args": {}, 
@@ -141,7 +147,9 @@ print(r.text)
   "url": "https://httpbin.org/post"
 }
 ```
+
 有关 POST 和 GET 两种请求的一些区别：
+
 - POST 更加安全，不会作为 URL 的一部分，不会被缓存，保存在服务器日志、以及浏览器浏览记录中；
 - POST 发送的数据更大，GET 有 URL 长度限制；
 - POST 可以发送更多的数据类型，GET 只能发送 ASCII 字符；
@@ -150,8 +158,11 @@ print(r.text)
 - POST 用数据的修改和写入，GET 一般用于搜索排序和筛选之类的操作。
 
 # <font color=#FF0000> 【2.5】 requests 高级用法</font>
+
 ## <font color=#FF0000> 【2.5.1】 上传文件</font>
+
 示例：
+
 ```python
 import requests
 
@@ -159,7 +170,9 @@ files = {'file': open('test.png', 'rb')}
 r = requests.post('http://httpbin.org/post', files=files)
 print(r.text)
 ```
+
 输出结果：
+
 ```python
 {
   "args": {}, 
@@ -183,7 +196,9 @@ print(r.text)
 ```
 
 ## <font color=#FF0000> 【2.5.2】 使用 Cookies</font>
+
 对于需要登录后才能获取数据的网页，可以将账号登录的 Cookies 添加到 headers 来实现网页登录爬取，Cookies 可以抓包获取，代码示例：
+
 ```python
 import requests
 
@@ -197,6 +212,7 @@ print(r.text)
 ```
 
 ## <font color=#FF0000> 【2.5.3】 会话维持</font>
+
 - 背景介绍：利用 get() 或者 post() 方法来模拟网页请求，相当于是不同的会话，可以理解为用两个浏览器打开了不同的网页；
 
 - 运用场景：首先使用 post() 方法登录网页，然后再使用 get() 方法请求某个页面信息，如果不利用会话维持，将无法获取页面数据
@@ -204,6 +220,7 @@ print(r.text)
 - 维持方法：①两次请求设置一样的 cookies，缺点：繁琐；②使用 Session 对象。
 
  Session 对象使用示例：
+
  ```python
  import requests
 
@@ -212,7 +229,9 @@ s.get('http://httpbin.org/cookies/set/number/123456789')
 r = s.get('http://httpbin.org/cookies')
 print(r.text)
 ```
+
 输出结果成功获取到设置的 cookies：
+
 ```python
 {
   "cookies": {
@@ -222,13 +241,17 @@ print(r.text)
 ```
 
 ## <font color=#FF0000> 【2.5.4】 SSL 证书验证</font>
+
 > SSL 证书是数字证书的一种，由受信任的数字证书颁发机构 CA 在验证服务器身份后颁发，具有服务器身份验证和数据传输加密功能，网站带有 HTTPS 就表明有 SSL 证书
 
 requests 提供了证书验证的功能。当发送 HTTP 请求的时候，它会检查 SSL 证书，verify 参数可以控制是否检查此证书。如果不加 verify 参数，默认为 True，会自动验证。当一个页面的 SSL 证书没有被官方机构认证时，打开页面就会提示“您的连接不是私密连接”，如果没有设置 verify 参数，将会报以下错误：
+
 ```python
 requests.exceptions.SSLError: ("bad handshake: Error([('SSL routines', 'tls_process_server_certificate', 'certificate verify failed')],)",)
 ```
+
 设置 verify 参数代码示例：
+
 ```python
 import requests
 
@@ -237,8 +260,10 @@ print(response.text)
 ```
 
 ## <font color=#FF0000> 【2.5.5】 设置代理</font>
+
 为什么要设置代理：某些网页有反爬虫机制，频繁请求网页就会出现验证码等，还有可能直接封掉 IP，导致爬取失败；这种情况下就可以设置 proxies 参数。
 示例：
+
 ```python
 import requests
 
@@ -249,9 +274,11 @@ proxies = {
 
 requests.get('https://www.itrhx.com', proxies=proxies)
 ```
+
 免费代理可在[西刺代理](https://www.xicidaili.com/)找到
 
 ## <font color=#FF0000> 【2.5.6】 超时设置</font>
+
 与 urllib.request.urlopen() 类似，requests 也可以设置 timeout 参数，请求分为两个阶段：连接和读取
 
 设置连接和读取时间总和：
@@ -262,14 +289,18 @@ import requests
 r = requests.get('https://www.itrhx.com', timeout=1)
 print(r.status_code)
 ```
+
 分别设置连接和读取时间：
+
 ```python
 import requests
 
 r = requests.get('https://www.itrhx.com', timeout=(5, 10))
 print(r.status_code)
 ```
+
 永久等待：
+
 ```python
 import requests
 
