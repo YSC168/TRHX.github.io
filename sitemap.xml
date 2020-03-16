@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
+    
+    <lastmod>2020-03-16T09:21:56.239Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
+    
+    <lastmod>2020-03-16T09:21:52.219Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
     
     <lastmod>2020-03-14T08:00:06.127Z</lastmod>
@@ -93,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
-    
-    <lastmod>2020-03-14T05:37:41.803Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/2018/08/25/A03-markdown/</loc>
     
     <lastmod>2020-03-14T05:26:44.635Z</lastmod>
@@ -145,13 +152,6 @@
     <loc>https://www.itrhx.com/comments/index.html</loc>
     
     <lastmod>2020-02-27T11:40:10.042Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
-    
-    <lastmod>2020-02-07T07:34:41.017Z</lastmod>
     
   </url>
   
@@ -219,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/about/index.html</loc>
+    <loc>https://www.itrhx.com/games/2048/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/2048/index.html</loc>
+    <loc>https://www.itrhx.com/games/cat/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
@@ -240,7 +240,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/cat/index.html</loc>
+    <loc>https://www.itrhx.com/box/about/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
