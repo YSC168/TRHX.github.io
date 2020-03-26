@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
+    
+    <lastmod>2020-03-26T13:43:41.004Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
     
     <lastmod>2020-03-16T09:21:56.239Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
     
     <lastmod>2020-03-14T08:00:06.127Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
-    
-    <lastmod>2020-03-14T07:55:33.386Z</lastmod>
     
   </url>
   
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
+    <loc>https://www.itrhx.com/games/piano/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/piano/index.html</loc>
+    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
@@ -226,7 +226,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    <loc>https://www.itrhx.com/games/2048/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
@@ -240,7 +240,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/2048/index.html</loc>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
