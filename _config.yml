@@ -82,7 +82,7 @@ deploy:
 - type: git
   repository:
     github: git@github.com:TRHX/TRHX.github.io.git
-    coding: git@git.dev.tencent.com:TRHX/TRHX.git
+    coding: git@e.coding.net:TRHX/TRHX.git
   branch: master
 - type: baidu_url_submitter
 
@@ -93,7 +93,7 @@ backup:
   message: Back up my www.itrhx.com blog
   repository:
     github: git@github.com:TRHX/TRHX.github.io.git,backup
-    coding: git@git.dev.tencent.com:TRHX/TRHX.git,backup
+    coding: git@e.coding.net:TRHX/TRHX.git,backup
 
 # 提交百度搜索
 baidu_url_submit:
