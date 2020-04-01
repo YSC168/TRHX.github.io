@@ -293,3 +293,7 @@ SSR 常用命令：
 状态：`/etc/init.d/shadowsocks status`
 卸载：`./shadowsocks-all.sh uninstall`
 更改配置参数：`vim /etc/shadowsocks-r/config.json`
+
+---
+
+我的博客即将同步至腾讯云+社区，邀请大家一同入驻：https://cloud.tencent.com/developer/support-plan?invite_code=mpa02hyz07v5
