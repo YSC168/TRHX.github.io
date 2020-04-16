@@ -507,7 +507,7 @@
       <a class='notlink'>
         <i class="fas fa-keyboard" aria-hidden="true"></i>
         <p>字数统计:</p>
-        <p>1,363字</p>
+        <p>1,465字</p>
       </a>
     </div>
     <div class="new-meta-item readtime">
@@ -567,11 +567,13 @@
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/04.jpg" alt="04"><br></fancybox>
 
 <p>添加公钥后，我们可以右键 <code>Get Bash</code>，输入以下命令来检查是否配置成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@git.coding.net</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@e.coding.net</span><br></pre></td></tr></table></figure>
 <p>若出现以下提示，则证明配置成功：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Coding 提示: Hello XXX, You<span class="string">'ve connected to Coding.net via SSH. This is a personal key.</span></span><br><span class="line"><span class="string">XXX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个个人公钥</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="3-配置-config-yml"><a href="#3-配置-config-yml" class="headerlink" title="3.配置 _config.yml"></a><font color="#ff0000">3.配置 _config.yml</font></h1><p>进入你的项目，在右下角有选择连接方式，选择 SSH 方式（HTTPS 方式也可以，但是这种方式有时候可能连接不上，SSH 连接不容易出问题），一键复制，然后打开你本地博客根目录的 <code>_config.yml</code> 文件，找到 <code>deploy</code> 关键字，添加 coding 地址：<code>coding: git@git.dev.tencent.com:user_name/user_name.git</code>，也就是刚刚复制的 SSH 地址</p>
+<h1 id="3-配置-config-yml"><a href="#3-配置-config-yml" class="headerlink" title="3.配置 _config.yml"></a><font color="#ff0000">3.配置 _config.yml</font></h1><p>进入你的项目，在右下角有选择连接方式，选择 SSH 方式（HTTPS 方式也可以，但是这种方式有时候可能连接不上，SSH 连接不容易出问题），一键复制，然后打开你本地博客根目录的 <code>_config.yml</code> 文件，找到 <code>deploy</code> 关键字，添加 coding 地址：<code>coding: git@git.dev.tencent.com:user_name/user_name.git</code>，也就是刚刚复制的 SSH 地址。</p>
+<font color="#ff0000"><strong>【2020.04.06 更新】coding 地址格式现在有所改变，类似于 <a href="mailto:`git@e.coding.net" target="_blank" rel="noopener">`git@e.coding.net</a>:TRHX/TRHX.git`，记住去仓库复制你自己的即可。</strong></font>
+
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/05.jpg" alt="05"><br></fancybox>
 
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/06.jpg" alt="06"><br></fancybox>
@@ -580,11 +582,15 @@
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/13.jpg" alt="13"><br></fancybox>
 
 <h1 id="4-开启-Coding-Pages"><a href="#4-开启-Coding-Pages" class="headerlink" title="4.开启 Coding Pages"></a><font color="#ff0000">4.开启 Coding Pages</font></h1><p>进入你的项目，在代码栏下选择 Pages 服务，一键开启 Coding Pages，等待几秒后刷新网页即可看到已经开启的 Coding Pages，到目前为止，你就可以通过 xxxx.coding.me（比如我的是 trhx.coding.me）访问你的 Coding Pages 页面了</p>
+<font color="#ff0000"><strong>【2020.04.06 更新】coding 分配的域名现在有所改变，类似于 <code>https://p51l67.coding-pages.com</code></strong></font>
+
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/07.jpg" alt="07"><br></fancybox>
 
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/08.jpg" alt="08"><br></fancybox>
 
 <h1 id="5-绑定域名并开启-HPPTS"><a href="#5-绑定域名并开启-HPPTS" class="headerlink" title="5.绑定域名并开启 HPPTS"></a><font color="#ff0000">5.绑定域名并开启 HPPTS</font></h1><p>首先在你的域名 DNS 设置中添加一条 <code>CNAME</code> 记录指向 <code>xxxx.coding.me</code>，解析路线选择 <code>默认</code>，将 GitHub 的解析路线改为 <code>境外</code>，这样境外访问就会走 GitHub，境内就会走 Coding，也有人说阿里云是智能解析，自动分配路线，如果解析路线都是默认，境外访问同样会智能选择走 GitHub，境内走 Coding，我没有验证过，有兴趣的可以自己试试，我的解析如下图所示：</p>
+<font color="#ff0000"><strong>【2020.04.06 更新】coding 分配的域名现在有所改变，类似于 <code>https://p51l67.coding-pages.com</code>，请注意解析当中记录值的填写。</strong></font>
+
 <fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/09.jpg" alt="09"><br></fancybox>
 
 <p>然后点击静态 Pages 应用右上角的设置，进入设置页面，这里要注意，如果你之前已经部署到了 GitHub Pages 并开启了 HTTPS，那么直接在设置页面绑定你自己的域名，SSL/TLS 安全证书就会显示申请错误，如下图所示，没有申请到 SSL 证书，当你访问你的网站时，浏览器就会提示不是安全连接</p>
@@ -687,10 +693,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-14T16:00:06+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-06T20:04:00+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年3月14日</p>
+    <p>最后更新于 2020年4月6日</p>
   </a>
 </div>
 
@@ -1310,7 +1316,7 @@
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">130.4k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">130.5k</span>
     </div>
 </footer>
 

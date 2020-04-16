@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/comments/index.html</loc>
+    
+    <lastmod>2020-04-16T04:39:29.101Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
+    
+    <lastmod>2020-04-06T12:04:00.052Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
     
     <lastmod>2020-03-31T09:27:43.584Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
     
     <lastmod>2020-03-16T09:21:52.219Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
-    
-    <lastmod>2020-03-14T08:00:06.127Z</lastmod>
     
   </url>
   
@@ -149,13 +156,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/comments/index.html</loc>
-    
-    <lastmod>2020-02-27T11:40:10.042Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/2019/01/18/A16-deploy-two-or-more-hexo-blogs/</loc>
     
     <lastmod>2020-02-07T07:30:20.946Z</lastmod>
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
+    <loc>https://www.itrhx.com/games/piano/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/piano/index.html</loc>
+    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
@@ -219,14 +219,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/about/index.html</loc>
-    
-    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/games/2048/index.html</loc>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
@@ -240,7 +233,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    <loc>https://www.itrhx.com/box/about/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/games/2048/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
