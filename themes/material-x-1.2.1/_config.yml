@@ -166,7 +166,7 @@ sidebar:
   - widget: author
     avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/trhx.png
     title: ๑۩ﺴ&nbsp;&nbsp;TRHX&nbsp;&nbsp;ﺴ۩๑
-    #body: Stay Hungry, Stay Foolish!
+    # body: Stay Hungry, Stay Foolish!
     social: true
   - widget: toc
 #  - widget: grid

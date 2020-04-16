@@ -57,7 +57,7 @@ PS：公钥储存位置一般在 <font color=#ff0000>C:\Users\用户名\\.ssh</f
 添加公钥后，我们可以右键 `Get Bash`，输入以下命令来检查是否配置成功：
 
 ```bash
-ssh -T git@git.coding.net
+ssh -T git@e.coding.net
 ```
 
 若出现以下提示，则证明配置成功：
@@ -70,7 +70,9 @@ XXX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个
 ---
 
 # <font color=#ff0000>3.配置 _config.yml</font>
-进入你的项目，在右下角有选择连接方式，选择 SSH 方式（HTTPS 方式也可以，但是这种方式有时候可能连接不上，SSH 连接不容易出问题），一键复制，然后打开你本地博客根目录的 `_config.yml` 文件，找到 `deploy` 关键字，添加 coding 地址：`coding: git@git.dev.tencent.com:user_name/user_name.git`，也就是刚刚复制的 SSH 地址
+进入你的项目，在右下角有选择连接方式，选择 SSH 方式（HTTPS 方式也可以，但是这种方式有时候可能连接不上，SSH 连接不容易出问题），一键复制，然后打开你本地博客根目录的 `_config.yml` 文件，找到 `deploy` 关键字，添加 coding 地址：`coding: git@git.dev.tencent.com:user_name/user_name.git`，也就是刚刚复制的 SSH 地址。
+
+<font color=#ff0000>**【2020.04.06 更新】coding 地址格式现在有所改变，类似于 `git@e.coding.net:TRHX/TRHX.git`，记住去仓库复制你自己的即可。**</font>
 
 <fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/05.jpg)
@@ -89,6 +91,8 @@ XXX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个
 # <font color=#ff0000>4.开启 Coding Pages</font>
 进入你的项目，在代码栏下选择 Pages 服务，一键开启 Coding Pages，等待几秒后刷新网页即可看到已经开启的 Coding Pages，到目前为止，你就可以通过 xxxx.coding.me（比如我的是 trhx.coding.me）访问你的 Coding Pages 页面了
 
+<font color=#ff0000>**【2020.04.06 更新】coding 分配的域名现在有所改变，类似于 `https://p51l67.coding-pages.com`**</font>
+
 <fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/07.jpg)
 </fancybox>
@@ -99,6 +103,8 @@ XXX，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个
 
 # <font color=#ff0000>5.绑定域名并开启 HPPTS</font>
 首先在你的域名 DNS 设置中添加一条 `CNAME` 记录指向 `xxxx.coding.me`，解析路线选择 `默认`，将 GitHub 的解析路线改为 `境外`，这样境外访问就会走 GitHub，境内就会走 Coding，也有人说阿里云是智能解析，自动分配路线，如果解析路线都是默认，境外访问同样会智能选择走 GitHub，境内走 Coding，我没有验证过，有兴趣的可以自己试试，我的解析如下图所示：
+
+<font color=#ff0000>**【2020.04.06 更新】coding 分配的域名现在有所改变，类似于 `https://p51l67.coding-pages.com`，请注意解析当中记录值的填写。**</font>
 
 <fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A47/09.jpg)
