@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
+    
+    <lastmod>2020-04-26T04:01:45.694Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
+    
+    <lastmod>2020-04-26T03:59:23.151Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/comments/index.html</loc>
     
     <lastmod>2020-04-16T04:39:29.101Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>https://www.itrhx.com/friends/index.html</loc>
     
     <lastmod>2020-03-26T13:43:41.004Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
-    
-    <lastmod>2020-03-16T09:21:56.239Z</lastmod>
     
   </url>
   
@@ -128,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
-    
-    <lastmod>2020-03-14T05:24:47.844Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/about/index.html</loc>
     
     <lastmod>2020-03-02T05:42:14.094Z</lastmod>
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/piano/index.html</loc>
+    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/gobang/index.html</loc>
+    <loc>https://www.itrhx.com/games/piano/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.754Z</lastmod>
     
@@ -226,7 +226,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    <loc>https://www.itrhx.com/games/2048/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
@@ -240,7 +240,7 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/2048/index.html</loc>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
