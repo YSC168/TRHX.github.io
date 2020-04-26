@@ -19,6 +19,8 @@ icons: [fas fa-heading]
 
 <!-- more -->
 
+> 加入 Hexo 博客交流群：924812033，有问题互相交流学习！<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=4bb493ed9bd2ff3682bed3389fbb9ff0963528688d8f5ac5dadc1f1dc735b9fb"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo 博客交流群" title="Hexo 博客交流群"></a>
+
 # <font color=#FF000>-- 前言</font>
 > 首先感谢您能访问我的博客：[TRHX'S BLOG](https://trhx.github.io)
 

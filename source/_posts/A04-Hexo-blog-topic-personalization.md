@@ -13,6 +13,10 @@ avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png
 icons: [fas fa-heading]
 ---
 
+加入 Hexo 博客交流群：924812033，有问题互相交流学习！<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=4bb493ed9bd2ff3682bed3389fbb9ff0963528688d8f5ac5dadc1f1dc735b9fb"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo 博客交流群" title="Hexo 博客交流群"></a>
+
+> <font color=#FF0000> ** 原 Material X 主题现已改名为 Volantis，部分教程可能已失效，失效请留言告知，谢谢！** </font>
+
 本文将讲述一些博客主题的美化、实用功能的添加，本文以作者 [luuman](https://luuman.github.io/Home/H1/index.html) 的 [spfk](https://github.com/luuman/hexo-theme-spfk) 主题和作者 [xaoxuu](https://xaoxuu.com/) 的 [Material X](https://xaoxuu.com/wiki/material-x/) 主题为例，文章会不定时进行更新。文章涉及有关参考资料、教程、链接如有侵权请联系我删除！
 
 本文在CSDN的链接：[《Hexo 博客优化之博客美化》](https://itrhx.blog.csdn.net/article/details/85420403)、[《Hexo 博客优化之实用功能添加》](https://itrhx.blog.csdn.net/article/details/85010191)，Hexo 博客专栏，从前期搭建到后期美化，帮您解决常见问题：[《Github/Coding Pages + Hexo》](https://itrhx.blog.csdn.net/category_9285510.html)，对您有帮助就点个赞吧❤️
