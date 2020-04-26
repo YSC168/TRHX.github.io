@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
+    
+    <lastmod>2020-04-26T15:44:15.380Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
     
     <lastmod>2020-04-26T04:01:45.694Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
     
     <lastmod>2020-03-31T09:27:43.584Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
-    
-    <lastmod>2020-03-26T13:43:41.004Z</lastmod>
     
   </url>
   
