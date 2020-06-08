@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.itrhx.com/2019/08/01/A27-image-hosting/</loc>
+    <lastmod>2020-06-08</lastmod>
+  </url>  <url>
     <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
     <lastmod>2020-04-26</lastmod>
   </url>  <url>
@@ -20,9 +23,6 @@
     <lastmod>2020-03-14</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/08/23/A30-Python3-spider-C02/</loc>
-    <lastmod>2020-03-14</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/08/01/A27-image-hosting/</loc>
     <lastmod>2020-03-14</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/07/31/A26-hexo-add-https/</loc>
