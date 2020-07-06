@@ -1,0 +1,1873 @@
+<!--      　　　___           ___           ___           ___           ___                    ___           ___       ___           ___     
+　　　　　　   /\  \         /\  \         /\__\         |\__\         /\  \                  /\  \         /\__\     /\  \         /\  \    
+  　　　　　　 \:\  \       /::\  \       /:/  /         |:|  |       /::\  \                /::\  \       /:/  /    /::\  \       /::\  \   
+          　　  \:\  \     /:/\:\  \     /:/__/          |:|  |      /:/\ \  \              /:/\:\  \     /:/  /    /:/\:\  \     /:/\:\  \  
+          　　  /::\  \   /::\~\:\  \   /::\  \ ___      |:|__|__   _\:\~\ \  \            /::\~\:\__\   /:/  /    /:/  \:\  \   /:/  \:\  \ 
+          　　 /:/\:\__\ /:/\:\ \:\__\ /:/\:\  /\__\ ____/::::\__\ /\ \:\ \ \__\          /:/\:\ \:|__| /:/__/    /:/__/ \:\__\ /:/__/_\:\__\
+        　　  /:/  \/__/ \/_|::\/:/  / \/__\:\/:/  / \::::/~~/~    \:\ \:\ \/__/          \:\~\:\/:/  / \:\  \    \:\  \ /:/  / \:\  /\ \/__/
+        　　 /:/  /         |:|::/  /       \::/  /   ~~|:|~~|      \:\ \:\__\             \:\ \::/  /   \:\  \    \:\  /:/  /   \:\ \:\__\  
+        　　 \/__/          |:|\/__/        /:/  /      |:|  |       \:\/:/  /              \:\/:/  /     \:\  \    \:\/:/  /     \:\/:/  /  
+        　　                |:|  |         /:/  /       |:|  |        \::/  /                \::/__/       \:\__\    \::/  /       \::/  /   
+        　　                 \|__|         \/__/         \|__|         \/__/                  ~~            \/__/     \/__/         \/__/    
+
+   ┌───┐   ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐  ┌───┬───┬───┐
+   │ Esc  │   │  F1  │  F2  │  F3  │  F4  │   │  F5  │  F6  │  F7  │  F8  │   │  F9  │ F10  │ F11  │ F12  │  │ P/S  │ S L  │ P/B  │
+   └───┘   └───┴───┴───┴───┘   └───┴───┴───┴───┘   └───┴───┴───┴───┘  └───┴───┴───┘
+   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐ ┌───┬───┬───┐
+   │ ~ `  │ ! 1  │ @ 2  │ # 3  │ $ 4  │ % 5  │ ^ 6  │ & 7  │ * 8  │ ( 9  │ ) 0  │ _ -  │ + =  │    BacSp     │ │ Ins  │ Hom  │ PUp  │
+   ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤ ├───┼───┼───┤
+   │   Tab    │  Q   │  W   │  E   │  R   │  T   │  Y   │  U   │  I   │  O   │  P   │ { [  │ } ]  │   | \    │ │ Del  │ End  │ PDn  │
+   ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤ └───┴───┴───┘
+   │    Caps    │  A   │  S   │  D   │  F   │  G   │  H   │  J   │  K   │  L   │ : ;  │ " '  │     Enter      │
+   ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤         ┌───┐
+   │     Shift      │  Z   │  X   │  C   │  V   │  B   │  N   │  M   │ < ,  │ > .  │ ? /  │       Shift        │         │  ↑  │
+   ├─────┬──┴─┬─┴──┬┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤ ┌───┼───┼───┐
+   │   Ctrl   │        │  Alt   │                     Space                    │   Alt  │   Fn   │   ＝   │  Ctrl  │ │  ←  │  ↓  │  →  │
+   └─────┴────┴────┴───────────────────────┴────┴────┴────┴────┘ └───┴───┴───┘
+
+              写字楼里写字间，写字间里程序员；程序人员写程序，又拿程序换酒钱。酒醒只在网上坐，酒醉还来网下眠；酒醉酒醒日复日，网上网下年复年。
+              但愿老死电脑间，不愿鞠躬老板前；奔驰宝马贵者趣，公交自行程序员。别人笑我忒疯癫，我笑自己命太贱；不见满街漂亮妹，哪个归得程序员？
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作 | TRHX&#39;S BLOG</title>
+  
+  <meta name="keywords" content="Python爬虫,数据分析,数据可视化,web前端,Java,Python,HTML,软件工程,大学生,hexo,GitHubPages,CodingPages">
+  
+  
+  <meta name="description" content="Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作。, TRHX 的个人博客；主攻 Python、爬虫、WEB前端、大数据、数据分析、数据可视化；求知若饥，虚心若愚，一入 IT 深似海，从此学习无绝期，记录毕生所学！">
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="TRHX'S BLOG">
+  
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name='theme-color' content='#f24e32'>
+  <meta name='msapplication-TileColor' content='#f24e32'>
+  <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>
+  
+  <!-- 360 -->
+  <meta name="360-site-verification" content="d98acd5dccc92e495179410dd58186be" />
+  <!-- 360自动收录 -->
+  <script>
+    (function () {
+      var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+      document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+  </script>
+  <!-- sogou -->
+  <meta name="sogou_site_verification" content="l0yGeAV56W" />
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon.ico'>
+  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon-32x32.png'>
+  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/apple-touch-icon.png'>
+  <link rel='mask-icon' color='#f24e32' href='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/safari-pinned-tab.svg'>
+  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-favicon@19.9.7/site.webmanifest'>
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/favicon.ico">
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/css/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width = num + "%";
+    }
+  </script>
+
+  
+  
+  <!-- ba -->
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?df0bc7c6bdbd80356ba4db429724ccad";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  
+  <!-- Google Adsense -->
+  <!--<script data-ad-client="ca-pub-1913211097936916" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+</head>
+<body>
+  
+  
+<div class="cover-wrapper">
+  <cover class='cover post half'>
+    
+    
+  <img class='logo' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/logo.png'/>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="世界之大，探索一下！" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-home fa-fw'></i>&nbsp;主页
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/categories/"
+            
+            
+            id="categories">
+            <i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/tags/"
+            
+            
+            id="tags">
+            <i class='fas fa-tags fa-fw'></i>&nbsp;标签
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/"
+            
+            
+            id="friends">
+            <i class='fas fa-users fa-fw'></i>&nbsp;朋友
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/comments/"
+            
+            
+            id="comments">
+            <i class='fas fa-comments fa-fw'></i>&nbsp;留言
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+    
+    <br>
+    <!-- Hitokoto 一言 -->
+    <!--<p id="hitokoto"></p>
+			<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+      <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>-->
+    <!-- 打字特效 -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <div style="text-align: center;font-weight: bold;color: #1BC3FB;">
+      <span id="subtitle"></span>
+      <span id="typed-cursor"></span>
+    </div>
+    <script>
+      var typed = new Typed("#subtitle", { strings: ["Live a good life, write some good code !!!", "愿自己的努力终将获得回报。", "花开不是为了花落，而是为了开的更加灿烂。", "没有伞的孩子必须努力奔跑！", "欲望以提升热忱，毅力以磨平高山。", "如果放弃太早，你永远都不知道自己会错过什么。", "没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生。"], startDelay: 1000, typeSpeed: 100, loop: !0, backSpeed: 60, backDelay: 2000, showCursor: !0 })
+    </script>
+  </cover>
+  <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          TRHX'S BLOG
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-home fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/"
+                  
+                  
+                  id="archives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/friends/"
+                  
+                  
+                  id="friends">
+									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/comments/"
+                  
+                  
+                  id="comments">
+									<i class='fas fa-comments fa-fw'></i>&nbsp;留言
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/about/"
+                  
+                  
+                    target="_blank"
+                  
+                  id="about">
+									<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/box/"
+                  
+                  
+                    target="_blank"
+                  
+                  id="box">
+									<i class='fas fa-tools fa-fw'></i>&nbsp;百宝箱
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://mi.aliyun.com/shop/40012"
+                  
+                  
+                    target="_blank"
+                  
+                  id="https:mi.aliyun.comshop40012">
+									<i class='fas fa-link fa-fw'></i>&nbsp;米店
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="http://cov.itrhx.com/"
+                  
+                  
+                    target="_blank"
+                  
+                  id="http:cov.itrhx.com">
+									<i class='fas fa-heart fa-fw'></i>&nbsp;肺炎疫情图
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-home fa-fw'></i>&nbsp;主页
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/archives/"
+                
+                
+                id="archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                
+                id="friends">
+								<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/comments/"
+                
+                
+                id="comments">
+								<i class='fas fa-comments fa-fw'></i>&nbsp;留言
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://mi.aliyun.com/shop/40012"
+                
+                
+                id="https:mi.aliyun.comshop40012">
+								<i class='fas fa-link fa-fw'></i>&nbsp;米店
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/box/"
+                
+                
+                id="box">
+								<i class='fas fa-tools fa-fw'></i>&nbsp;百宝箱
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://itrhx.blog.csdn.net/"
+                
+                
+                id="https:itrhx.blog.csdn.net">
+								<i class='fab fa-cuttlefish fa-fw'></i>&nbsp;CSDN
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="http://cov.itrhx.com/"
+                
+                
+                id="http:cov.itrhx.com">
+								<i class='fas fa-heart fa-fw'></i>&nbsp;肺炎疫情图
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+</div>
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+      <a title='Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作' href='/2020/06/13/A80-Pandas-02/'><img class='thumbnail' src='https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/thumbnail/pandas.png'></a>
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2020/06/13/A80-Pandas-02/">
+        Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://www.itrhx.com" rel="nofollow">
+      
+        <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.9/images/trhx.png">
+      
+      <p>TRHX</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-06-13</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Python-数据分析/Pandas/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Python 数据分析&nbsp;/&nbsp;Pandas</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item wordcount">
+      <a class='notlink'>
+        <i class="fas fa-keyboard" aria-hidden="true"></i>
+        <p>字数统计:</p>
+        <p>5,831字</p>
+      </a>
+    </div>
+    <div class="new-meta-item readtime">
+      <a class='notlink'>
+        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+        <p>阅读时长≈</p>
+        <p>30分</p>
+      </a>
+    </div>
+  
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <p>Pandas 系列文章：</p>
+<ul>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106676693" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（一）：认识 Pandas 及其 Series、DataFrame 对象</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106698307" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106743778" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（三）：算术运算与缺失值的处理</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106758103" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（四）：函数应用、映射、排序和层级索引</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106788501" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（五）：统计计算与统计描述</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106804881" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（六）：GroupBy 数据分裂、应用与合并</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106830112" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（七）：合并数据集</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106900748" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（八）：数据重塑、重复数据处理与数据替换</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106947061" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（九）：时间序列</a></li>
+<li><a href="https://itrhx.blog.csdn.net/article/details/106963135" target="_blank" rel="noopener">Python 数据分析三剑客之 Pandas（十）：数据读写</a></li>
+</ul>
+<hr>
+<p>另有 NumPy、Matplotlib 系列文章已更新完毕，欢迎关注：</p>
+<ul>
+<li>NumPy 系列文章：<a href="https://itrhx.blog.csdn.net/category_9780393.html" target="_blank" rel="noopener">https://itrhx.blog.csdn.net/category_9780393.html</a></li>
+<li>Matplotlib 系列文章：<a href="https://itrhx.blog.csdn.net/category_9780418.html" target="_blank" rel="noopener">https://itrhx.blog.csdn.net/category_9780418.html</a></li>
+</ul>
+<hr>
+<p>推荐学习资料与网站：</p>
+<ul>
+<li>NumPy 官方中文网：<a href="https://www.numpy.org.cn/" target="_blank" rel="noopener">https://www.numpy.org.cn/</a></li>
+<li>Pandas 官方中文网：<a href="https://www.pypandas.cn/" target="_blank" rel="noopener">https://www.pypandas.cn/</a></li>
+<li>Matplotlib 官方中文网：<a href="https://www.matplotlib.org.cn/" target="_blank" rel="noopener">https://www.matplotlib.org.cn/</a></li>
+<li>NumPy、Matplotlib、Pandas 速查表：<a href="https://github.com/TRHX/Python-quick-reference-table" target="_blank" rel="noopener">https://github.com/TRHX/Python-quick-reference-table</a></li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">这里是一段防爬虫文本，请读者忽略。</span></span><br><span class="line"><span class="string">本文原创首发于</span> <span class="string">CSDN，作者</span> <span class="string">TRHX。</span></span><br><span class="line"><span class="string">博客首页：https://itrhx.blog.csdn.net/</span></span><br><span class="line"><span class="string">本文链接：https://itrhx.blog.csdn.net/article/details/106698307</span></span><br><span class="line"><span class="string">未经授权，禁止转载！恶意转载，后果自负！尊重原创，远离剽窃！</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="【1】Index-索引对象"><a href="#【1】Index-索引对象" class="headerlink" title="【1】Index 索引对象"></a><font color="#FF0000">【1】Index 索引对象</font></h1><p> Series 和 DataFrame 中的索引都是 Index 对象，为了保证数据的安全，索引对象是不可变的，如果尝试更改索引就会报错；常见的 Index 种类有：索引（Index），整数索引（Int64Index），层级索引（MultiIndex），时间戳类型（DatetimeIndex）。</p>
+<p>一下代码演示了 Index 索引对象和其不可变的性质：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">1</span>, <span class="number">5</span>, <span class="number">-8</span>, <span class="number">2</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index</span><br><span class="line">Index([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], dtype=<span class="string">'object'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(obj.index)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">pandas</span>.<span class="title">core</span>.<span class="title">indexes</span>.<span class="title">base</span>.<span class="title">Index</span>'&gt;</span></span><br><span class="line">&gt;&gt;&gt; obj.index[0] = 'e'</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#28&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    obj.index[<span class="number">0</span>] = <span class="string">'e'</span></span><br><span class="line">  File <span class="string">"C:\Users\...\base.py"</span>, line <span class="number">3909</span>, <span class="keyword">in</span> __setitem__</span><br><span class="line">    <span class="keyword">raise</span> TypeError(<span class="string">"Index does not support mutable operations"</span>)</span><br><span class="line">TypeError: Index does <span class="keyword">not</span> support mutable operations</span><br></pre></td></tr></table></figure>
+<table><tr><td bgcolor="#FFA500"><font size="5" color="#fff">index 索引对象常用属性</font></td></tr></table>
+
+<p>官方文档：<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.html" target="_blank" rel="noopener">https://pandas.pydata.org/docs/reference/api/pandas.Index.html</a></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>转置</td>
+</tr>
+<tr>
+<td>array</td>
+<td>index 的数组形式，常见<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.array.html" target="_blank" rel="noopener">官方文档</a></td>
+</tr>
+<tr>
+<td>dtype</td>
+<td>返回基础数据的 dtype 对象</td>
+</tr>
+<tr>
+<td>hasnans</td>
+<td>是否有 NaN（缺失值）</td>
+</tr>
+<tr>
+<td>inferred_type</td>
+<td>返回一个字符串，表示 index 的类型</td>
+</tr>
+<tr>
+<td>is_monotonic</td>
+<td>判断 index 是否是递增的</td>
+</tr>
+<tr>
+<td>is_monotonic_decreasing</td>
+<td>判断 index 是否单调递减</td>
+</tr>
+<tr>
+<td>is_monotonic_increasing</td>
+<td>判断 index 是否单调递增</td>
+</tr>
+<tr>
+<td>is_unique</td>
+<td>index 是否没有重复值</td>
+</tr>
+<tr>
+<td>nbytes</td>
+<td>返回 index 中的字节数</td>
+</tr>
+<tr>
+<td>ndim</td>
+<td>index 的维度</td>
+</tr>
+<tr>
+<td>nlevels</td>
+<td>Number of levels.</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>返回一个元组，表示 index 的形状</td>
+</tr>
+<tr>
+<td>size</td>
+<td>index 的大小</td>
+</tr>
+<tr>
+<td>values</td>
+<td>返回 index 中的值 / 数组</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">1</span>, <span class="number">5</span>, <span class="number">-8</span>, <span class="number">2</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index</span><br><span class="line">Index([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], dtype=<span class="string">'object'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.array</span><br><span class="line">&lt;PandasArray&gt;</span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line">Length: <span class="number">4</span>, dtype: object</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.dtype</span><br><span class="line">dtype(<span class="string">'O'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.hasnans</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.inferred_type</span><br><span class="line"><span class="string">'string'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.is_monotonic</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.is_monotonic_decreasing</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.is_monotonic_increasing</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.is_unique</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.nbytes</span><br><span class="line"><span class="number">16</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.ndim</span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.nlevels</span><br><span class="line"><span class="number">1</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.shape</span><br><span class="line">(<span class="number">4</span>,)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.size</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.index.values</span><br><span class="line">array([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], dtype=object)</span><br></pre></td></tr></table></figure>
+<table><tr><td bgcolor="#FFA500"><font size="5" color="#fff">index 索引对象常用方法</font></td></tr></table>
+
+<p>官方文档：<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.html" target="_blank" rel="noopener">https://pandas.pydata.org/docs/reference/api/pandas.Index.html</a></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>all(self, *args, **kwargs)</td>
+<td>判断所有元素是否为真，有 0 会被视为 False</td>
+</tr>
+<tr>
+<td>any(self, *args, **kwargs)</td>
+<td>判断是否至少有一个元素为真，均为 0 会被视为 False</td>
+</tr>
+<tr>
+<td>append(self, other)</td>
+<td>连接另一个 index，产生一个新的 index</td>
+</tr>
+<tr>
+<td>argmax(self[, axis, skipna])</td>
+<td>返回 index 中最大值的索引值</td>
+</tr>
+<tr>
+<td>argmin(self[, axis, skipna])</td>
+<td>返回 index 中最小值的索引值</td>
+</tr>
+<tr>
+<td>argsort(self, *args, **kwargs)</td>
+<td>对 index 从小到大排序，返回排序后的元素在原 index 中的索引值</td>
+</tr>
+<tr>
+<td>delete(self, loc)</td>
+<td>删除指定索引位置的元素，返回删除后的新 index</td>
+</tr>
+<tr>
+<td>difference(self, other[, sort])</td>
+<td>在第一个 index 中删除第二个 index 中的元素，即差集</td>
+</tr>
+<tr>
+<td>drop(self, labels[, errors])</td>
+<td>在原 index 中删除传入的值</td>
+</tr>
+<tr>
+<td>drop_duplicates(self[, keep])</td>
+<td>删除重复值，keep 参数可选值如下：<br><code>‘first’</code>：保留第一次出现的重复项；<br><code>‘last’</code>：保留最后一次出现的重复项；<br><code>False</code>：不保留重复项</td>
+</tr>
+<tr>
+<td>duplicated(self[, keep])</td>
+<td>判断是否为重复值，keep 参数可选值如下：<br><code>‘first’</code>：第一次重复的为 False，其他为 True；<br><code>‘last’</code>：最后一次重复的为 False，其他为 True；<br><code>False</code>：所有重复的均为 True</td>
+</tr>
+<tr>
+<td>dropna(self[, how])</td>
+<td>删除缺失值，即 NaN</td>
+</tr>
+<tr>
+<td>fillna(self[, value, downcast])</td>
+<td>用指定值填充缺失值，即 NaN</td>
+</tr>
+<tr>
+<td>equals(self, other)</td>
+<td>判断两个  index 是否相同</td>
+</tr>
+<tr>
+<td>insert(self, loc, item)</td>
+<td>将元素插入到指定索引处，返回新的 index</td>
+</tr>
+<tr>
+<td>intersection(self, other[, sort])</td>
+<td>返回两个 index 的交集</td>
+</tr>
+<tr>
+<td>isna(self)</td>
+<td>检测 index 元素是否为缺失值，即 NaN</td>
+</tr>
+<tr>
+<td>isnull(self)</td>
+<td>检测 index 元素是否为缺失值，即 NaN</td>
+</tr>
+<tr>
+<td>max(self[, axis, skipna])</td>
+<td>返回 index 的最大值</td>
+</tr>
+<tr>
+<td>min(self[, axis, skipna])</td>
+<td>返回 index 的最小值</td>
+</tr>
+<tr>
+<td>union(self, other[, sort])</td>
+<td>返回两个 index 的并集</td>
+</tr>
+<tr>
+<td>unique(self[, level])</td>
+<td>返回 index 中的唯一值，相当于去除重复值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>all(self, *args, **kwargs)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.all.html" target="_blank" rel="noopener">官方文档</a>】</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]).all()</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>]).all()</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>any(self, *args, **kwargs)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.any.html" target="_blank" rel="noopener">官方文档</a>】</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>]).any()</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]).any()</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>append(self, other)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.append.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]).append(pd.Index([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]))</span><br><span class="line">Index([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], dtype=<span class="string">'object'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>argmax(self[, axis, skipna])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.argmax.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>]).argmax()</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>argmin(self[, axis, skipna])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.argmin.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>]).argmin()</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>argsort(self, *args, **kwargs)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.argsort.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>]).argsort()</span><br><span class="line">array([<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">3</span>], dtype=int32)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>delete(self, loc)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.delete.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>]).delete(<span class="number">0</span>)</span><br><span class="line">Int64Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>], dtype=<span class="string">'int64'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>difference(self, other[, sort])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.difference.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1 = pd.Index([<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx2 = pd.Index([<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1.difference(idx2)</span><br><span class="line">Int64Index([<span class="number">1</span>, <span class="number">2</span>], dtype=<span class="string">'int64'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1.difference(idx2, sort=<span class="keyword">False</span>)</span><br><span class="line">Int64Index([<span class="number">2</span>, <span class="number">1</span>], dtype=<span class="string">'int64'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>drop(self, labels[, errors])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.drop.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>]).drop([<span class="number">2</span>, <span class="number">1</span>])</span><br><span class="line">Int64Index([<span class="number">5</span>, <span class="number">3</span>, <span class="number">9</span>], dtype=<span class="string">'int64'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>drop_duplicates(self[, keep])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.drop_duplicates.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx = pd.Index([<span class="string">'lama'</span>, <span class="string">'cow'</span>, <span class="string">'lama'</span>, <span class="string">'beetle'</span>, <span class="string">'lama'</span>, <span class="string">'hippo'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx.drop_duplicates(keep=<span class="string">'first'</span>)</span><br><span class="line">Index([<span class="string">'lama'</span>, <span class="string">'cow'</span>, <span class="string">'beetle'</span>, <span class="string">'hippo'</span>], dtype=<span class="string">'object'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx.drop_duplicates(keep=<span class="string">'last'</span>)</span><br><span class="line">Index([<span class="string">'cow'</span>, <span class="string">'beetle'</span>, <span class="string">'lama'</span>, <span class="string">'hippo'</span>], dtype=<span class="string">'object'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx.drop_duplicates(keep=<span class="keyword">False</span>)</span><br><span class="line">Index([<span class="string">'cow'</span>, <span class="string">'beetle'</span>, <span class="string">'hippo'</span>], dtype=<span class="string">'object'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>duplicated(self[, keep]) 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.duplicated.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx = pd.Index([<span class="string">'lama'</span>, <span class="string">'cow'</span>, <span class="string">'lama'</span>, <span class="string">'beetle'</span>, <span class="string">'lama'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx.duplicated()</span><br><span class="line">array([<span class="keyword">False</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx.duplicated(keep=<span class="string">'first'</span>)</span><br><span class="line">array([<span class="keyword">False</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx.duplicated(keep=<span class="string">'last'</span>)</span><br><span class="line">array([ <span class="keyword">True</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>, <span class="keyword">False</span>, <span class="keyword">False</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx.duplicated(keep=<span class="keyword">False</span>)</span><br><span class="line">array([ <span class="keyword">True</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>])</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>dropna(self[, how])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.dropna.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">2</span>, <span class="number">5</span>, np.NaN, <span class="number">6</span>, np.NaN, np.NaN]).dropna()</span><br><span class="line">Float64Index([<span class="number">2.0</span>, <span class="number">5.0</span>, <span class="number">6.0</span>], dtype=<span class="string">'float64'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>fillna(self[, value, downcast])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.fillna.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">2</span>, <span class="number">5</span>, np.NaN, <span class="number">6</span>, np.NaN, np.NaN]).fillna(<span class="number">5</span>)</span><br><span class="line">Float64Index([<span class="number">2.0</span>, <span class="number">5.0</span>, <span class="number">5.0</span>, <span class="number">6.0</span>, <span class="number">5.0</span>, <span class="number">5.0</span>], dtype=<span class="string">'float64'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>equals(self, other)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.equals.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1 = pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx2 = pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1.equals(idx2)</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1 = pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx2 = pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">1</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1.equals(idx2)</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>intersection(self, other[, sort])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.intersection.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1 = pd.Index([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx2 = pd.Index([<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1.intersection(idx2)</span><br><span class="line">Int64Index([<span class="number">3</span>, <span class="number">4</span>], dtype=<span class="string">'int64'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>insert(self, loc, item)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.insert.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>]).insert(<span class="number">2</span>, <span class="string">'A'</span>)</span><br><span class="line">Index([<span class="number">5</span>, <span class="number">2</span>, <span class="string">'A'</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>], dtype=<span class="string">'object'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>isna(self)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.isna.html" target="_blank" rel="noopener">官方文档</a>】、<code>isnull(self)</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.isnull.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">2</span>, <span class="number">5</span>, np.NaN, <span class="number">6</span>, np.NaN, np.NaN]).isna()</span><br><span class="line">array([<span class="keyword">False</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>,  <span class="keyword">True</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">2</span>, <span class="number">5</span>, np.NaN, <span class="number">6</span>, np.NaN, np.NaN]).isnull()</span><br><span class="line">array([<span class="keyword">False</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>, <span class="keyword">False</span>,  <span class="keyword">True</span>,  <span class="keyword">True</span>])</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>max(self[, axis, skipna])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.max.html" target="_blank" rel="noopener">官方文档</a>】、<code>min(self[, axis, skipna])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.min.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>]).max()</span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">1</span>]).min()</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>union(self, other[, sort])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.union.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1 = pd.Index([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx2 = pd.Index([<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>idx1.union(idx2)</span><br><span class="line">Int64Index([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], dtype=<span class="string">'int64'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>unique(self[, level])</code> 【<a href="https://pandas.pydata.org/docs/reference/api/pandas.Index.unique.html" target="_blank" rel="noopener">官方文档</a>】</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pd.Index([<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>]).unique()</span><br><span class="line">Int64Index([<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>], dtype=<span class="string">'int64'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="【2】Pandas-一般索引"><a href="#【2】Pandas-一般索引" class="headerlink" title="【2】Pandas 一般索引"></a><font color="#FF0000">【2】Pandas 一般索引</font></h1><p>由于在 Pandas 中，由于有一些更高级的索引操作，比如重新索引，层级索引等，因此将一般的切片索引、花式索引、布尔索引等归纳为一般索引。</p>
+<h2 id="【2-1】Series-索引"><a href="#【2-1】Series-索引" class="headerlink" title="【2.1】Series 索引"></a><font color="#4876FF">【2.1】Series 索引</font></h2><h3 id="【2-1-1】head-tail"><a href="#【2-1-1】head-tail" class="headerlink" title="【2.1.1】head() / tail()"></a><font color="#FFA500">【2.1.1】head() / tail()</font></h3><p><code>Series.head()</code> 和 <code>Series.tail()</code> 方法可以获取的前五行和后五行数据，如果向 head() / tail() 里面传入参数，则会获取指定行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series(np.random.randn(<span class="number">8</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line"><span class="number">0</span>   <span class="number">-0.643437</span></span><br><span class="line"><span class="number">1</span>   <span class="number">-0.365652</span></span><br><span class="line"><span class="number">2</span>   <span class="number">-0.966554</span></span><br><span class="line"><span class="number">3</span>   <span class="number">-0.036127</span></span><br><span class="line"><span class="number">4</span>    <span class="number">1.046095</span></span><br><span class="line"><span class="number">5</span>   <span class="number">-2.048362</span></span><br><span class="line"><span class="number">6</span>   <span class="number">-1.865551</span></span><br><span class="line"><span class="number">7</span>    <span class="number">1.344728</span></span><br><span class="line">dtype: float64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.head()</span><br><span class="line"><span class="number">0</span>   <span class="number">-0.643437</span></span><br><span class="line"><span class="number">1</span>   <span class="number">-0.365652</span></span><br><span class="line"><span class="number">2</span>   <span class="number">-0.966554</span></span><br><span class="line"><span class="number">3</span>   <span class="number">-0.036127</span></span><br><span class="line"><span class="number">4</span>    <span class="number">1.046095</span></span><br><span class="line">dtype: float64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.head(<span class="number">3</span>)</span><br><span class="line"><span class="number">0</span>   <span class="number">-0.643437</span></span><br><span class="line"><span class="number">1</span>   <span class="number">-0.365652</span></span><br><span class="line"><span class="number">2</span>   <span class="number">-0.966554</span></span><br><span class="line">dtype: float64</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.tail()</span><br><span class="line"><span class="number">3</span>    <span class="number">1.221221</span></span><br><span class="line"><span class="number">4</span>   <span class="number">-1.373496</span></span><br><span class="line"><span class="number">5</span>    <span class="number">1.032843</span></span><br><span class="line"><span class="number">6</span>    <span class="number">0.029734</span></span><br><span class="line"><span class="number">7</span>   <span class="number">-1.861485</span></span><br><span class="line">dtype: float64</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.tail(<span class="number">3</span>)</span><br><span class="line"><span class="number">5</span>    <span class="number">1.032843</span></span><br><span class="line"><span class="number">6</span>    <span class="number">0.029734</span></span><br><span class="line"><span class="number">7</span>   <span class="number">-1.861485</span></span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<h3 id="【2-1-2】行索引"><a href="#【2-1-2】行索引" class="headerlink" title="【2.1.2】行索引"></a><font color="#FFA500">【2.1.2】行索引</font></h3><p>Pandas 中可以按照位置进行索引，也可以按照索引名（index）进行索引，也可以用 Python 字典的表达式和方法来获取值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">1</span>, <span class="number">5</span>, <span class="number">-8</span>, <span class="number">2</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="string">'c'</span>]</span><br><span class="line"><span class="number">-8</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="number">2</span>]</span><br><span class="line"><span class="number">-8</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'b'</span> <span class="keyword">in</span> obj</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.keys()</span><br><span class="line">Index([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], dtype=<span class="string">'object'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(obj.items())</span><br><span class="line">[(<span class="string">'a'</span>, <span class="number">1</span>), (<span class="string">'b'</span>, <span class="number">5</span>), (<span class="string">'c'</span>, <span class="number">-8</span>), (<span class="string">'d'</span>, <span class="number">2</span>)]</span><br></pre></td></tr></table></figure>
+<h3 id="【2-1-3】切片索引"><a href="#【2-1-3】切片索引" class="headerlink" title="【2.1.3】切片索引"></a><font color="#FFA500">【2.1.3】切片索引</font></h3><p>切片的方法有两种：按位置切片和按索引名（index）切片，注意：按位置切片时，<font color="#FF0000"><strong>不包含</strong></font>终止索引；按索引名（index）切片时，<font color="#FF0000"><strong>包含</strong></font>终止索引。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">1</span>, <span class="number">5</span>, <span class="number">-8</span>, <span class="number">2</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="number">1</span>:<span class="number">3</span>]</span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">dtype: int64</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="number">0</span>:<span class="number">3</span>:<span class="number">2</span>]</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">dtype: int64</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="string">'b'</span>:<span class="string">'d'</span>]</span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<h3 id="【2-1-4】花式索引"><a href="#【2-1-4】花式索引" class="headerlink" title="【2.1.4】花式索引"></a><font color="#FFA500">【2.1.4】花式索引</font></h3><p>所谓的花式索引，就是间隔索引、不连续的索引，传递一个由索引名（index）或者位置参数组成的<font color="#FF0000"><strong>列表</strong></font>来一次性获得多个元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">1</span>, <span class="number">5</span>, <span class="number">-8</span>, <span class="number">2</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[[<span class="number">0</span>, <span class="number">2</span>]]</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[[<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]]</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<h3 id="【2-1-5】布尔索引"><a href="#【2-1-5】布尔索引" class="headerlink" title="【2.1.5】布尔索引"></a><font color="#FFA500">【2.1.5】布尔索引</font></h3><p>可以通过一个布尔数组来索引目标数组，即通过布尔运算（如：比较运算符）来获取符合指定条件的元素的数组。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">1</span>, <span class="number">5</span>, <span class="number">-8</span>, <span class="number">2</span>, <span class="number">-3</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">e   <span class="number">-3</span></span><br><span class="line">dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[obj &gt; <span class="number">0</span>]</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj &gt; <span class="number">0</span></span><br><span class="line">a     <span class="keyword">True</span></span><br><span class="line">b     <span class="keyword">True</span></span><br><span class="line">c    <span class="keyword">False</span></span><br><span class="line">d     <span class="keyword">True</span></span><br><span class="line">e    <span class="keyword">False</span></span><br><span class="line">dtype: bool</span><br></pre></td></tr></table></figure>
+<h2 id="【2-2】DataFrame-索引"><a href="#【2-2】DataFrame-索引" class="headerlink" title="【2.2】DataFrame 索引"></a><font color="#4876FF">【2.2】DataFrame 索引</font></h2><h3 id="【2-2-1】head-tail"><a href="#【2-2-1】head-tail" class="headerlink" title="【2.2.1】head() / tail()"></a><font color="#FFA500">【2.2.1】head() / tail()</font></h3><p>和 Series 一样，<code>DataFrame.head()</code> 和 <code>DataFrame.tail()</code> 方法同样可以获取 DataFrame 的前五行和后五行数据，如果向 head() / tail() 里面传入参数，则会获取指定行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame(np.random.randn(<span class="number">8</span>,<span class="number">4</span>), columns = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">          a         b         c         d</span><br><span class="line"><span class="number">0</span> <span class="number">-1.399390</span>  <span class="number">0.521596</span> <span class="number">-0.869613</span>  <span class="number">0.506621</span></span><br><span class="line"><span class="number">1</span> <span class="number">-0.748562</span> <span class="number">-0.364952</span>  <span class="number">0.188399</span> <span class="number">-1.402566</span></span><br><span class="line"><span class="number">2</span>  <span class="number">1.378776</span> <span class="number">-1.476480</span>  <span class="number">0.361635</span>  <span class="number">0.451134</span></span><br><span class="line"><span class="number">3</span> <span class="number">-0.206405</span> <span class="number">-1.188609</span>  <span class="number">3.002599</span>  <span class="number">0.563650</span></span><br><span class="line"><span class="number">4</span>  <span class="number">0.993289</span>  <span class="number">1.133748</span>  <span class="number">1.177549</span> <span class="number">-2.562286</span></span><br><span class="line"><span class="number">5</span> <span class="number">-0.482157</span>  <span class="number">1.069293</span>  <span class="number">1.143983</span> <span class="number">-1.303079</span></span><br><span class="line"><span class="number">6</span> <span class="number">-1.199154</span>  <span class="number">0.220360</span>  <span class="number">0.801838</span> <span class="number">-0.104533</span></span><br><span class="line"><span class="number">7</span> <span class="number">-1.359816</span> <span class="number">-2.092035</span>  <span class="number">2.003530</span> <span class="number">-0.151812</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.head()</span><br><span class="line">          a         b         c         d</span><br><span class="line"><span class="number">0</span> <span class="number">-1.399390</span>  <span class="number">0.521596</span> <span class="number">-0.869613</span>  <span class="number">0.506621</span></span><br><span class="line"><span class="number">1</span> <span class="number">-0.748562</span> <span class="number">-0.364952</span>  <span class="number">0.188399</span> <span class="number">-1.402566</span></span><br><span class="line"><span class="number">2</span>  <span class="number">1.378776</span> <span class="number">-1.476480</span>  <span class="number">0.361635</span>  <span class="number">0.451134</span></span><br><span class="line"><span class="number">3</span> <span class="number">-0.206405</span> <span class="number">-1.188609</span>  <span class="number">3.002599</span>  <span class="number">0.563650</span></span><br><span class="line"><span class="number">4</span>  <span class="number">0.993289</span>  <span class="number">1.133748</span>  <span class="number">1.177549</span> <span class="number">-2.562286</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.head(<span class="number">3</span>)</span><br><span class="line">          a         b         c         d</span><br><span class="line"><span class="number">0</span> <span class="number">-1.399390</span>  <span class="number">0.521596</span> <span class="number">-0.869613</span>  <span class="number">0.506621</span></span><br><span class="line"><span class="number">1</span> <span class="number">-0.748562</span> <span class="number">-0.364952</span>  <span class="number">0.188399</span> <span class="number">-1.402566</span></span><br><span class="line"><span class="number">2</span>  <span class="number">1.378776</span> <span class="number">-1.476480</span>  <span class="number">0.361635</span>  <span class="number">0.451134</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.tail()</span><br><span class="line">          a         b         c         d</span><br><span class="line"><span class="number">3</span> <span class="number">-0.206405</span> <span class="number">-1.188609</span>  <span class="number">3.002599</span>  <span class="number">0.563650</span></span><br><span class="line"><span class="number">4</span>  <span class="number">0.993289</span>  <span class="number">1.133748</span>  <span class="number">1.177549</span> <span class="number">-2.562286</span></span><br><span class="line"><span class="number">5</span> <span class="number">-0.482157</span>  <span class="number">1.069293</span>  <span class="number">1.143983</span> <span class="number">-1.303079</span></span><br><span class="line"><span class="number">6</span> <span class="number">-1.199154</span>  <span class="number">0.220360</span>  <span class="number">0.801838</span> <span class="number">-0.104533</span></span><br><span class="line"><span class="number">7</span> <span class="number">-1.359816</span> <span class="number">-2.092035</span>  <span class="number">2.003530</span> <span class="number">-0.151812</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.tail(<span class="number">3</span>)</span><br><span class="line">          a         b         c         d</span><br><span class="line"><span class="number">5</span> <span class="number">-0.482157</span>  <span class="number">1.069293</span>  <span class="number">1.143983</span> <span class="number">-1.303079</span></span><br><span class="line"><span class="number">6</span> <span class="number">-1.199154</span>  <span class="number">0.220360</span>  <span class="number">0.801838</span> <span class="number">-0.104533</span></span><br><span class="line"><span class="number">7</span> <span class="number">-1.359816</span> <span class="number">-2.092035</span>  <span class="number">2.003530</span> <span class="number">-0.151812</span></span><br></pre></td></tr></table></figure>
+<h3 id="【2-2-2】列索引"><a href="#【2-2-2】列索引" class="headerlink" title="【2.2.2】列索引"></a><font color="#FFA500">【2.2.2】列索引</font></h3><p>DataFrame 可以按照列标签（columns）来进行列索引：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame(np.random.randn(<span class="number">7</span>,<span class="number">2</span>), columns = [<span class="string">'a'</span>, <span class="string">'b'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">          a         b</span><br><span class="line"><span class="number">0</span> <span class="number">-1.198795</span>  <span class="number">0.928378</span></span><br><span class="line"><span class="number">1</span> <span class="number">-2.878230</span>  <span class="number">0.014650</span></span><br><span class="line"><span class="number">2</span>  <span class="number">2.267475</span>  <span class="number">0.370952</span></span><br><span class="line"><span class="number">3</span>  <span class="number">0.639340</span> <span class="number">-1.301041</span></span><br><span class="line"><span class="number">4</span> <span class="number">-1.953444</span>  <span class="number">0.148934</span></span><br><span class="line"><span class="number">5</span> <span class="number">-0.445225</span>  <span class="number">0.459632</span></span><br><span class="line"><span class="number">6</span>  <span class="number">0.097109</span> <span class="number">-2.592833</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="string">'a'</span>]</span><br><span class="line"><span class="number">0</span>   <span class="number">-1.198795</span></span><br><span class="line"><span class="number">1</span>   <span class="number">-2.878230</span></span><br><span class="line"><span class="number">2</span>    <span class="number">2.267475</span></span><br><span class="line"><span class="number">3</span>    <span class="number">0.639340</span></span><br><span class="line"><span class="number">4</span>   <span class="number">-1.953444</span></span><br><span class="line"><span class="number">5</span>   <span class="number">-0.445225</span></span><br><span class="line"><span class="number">6</span>    <span class="number">0.097109</span></span><br><span class="line">Name: a, dtype: float64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[[<span class="string">'a'</span>]]</span><br><span class="line">          a</span><br><span class="line"><span class="number">0</span> <span class="number">-1.198795</span></span><br><span class="line"><span class="number">1</span> <span class="number">-2.878230</span></span><br><span class="line"><span class="number">2</span>  <span class="number">2.267475</span></span><br><span class="line"><span class="number">3</span>  <span class="number">0.639340</span></span><br><span class="line"><span class="number">4</span> <span class="number">-1.953444</span></span><br><span class="line"><span class="number">5</span> <span class="number">-0.445225</span></span><br><span class="line"><span class="number">6</span>  <span class="number">0.097109</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(obj[<span class="string">'a'</span>])</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">pandas</span>.<span class="title">core</span>.<span class="title">series</span>.<span class="title">Series</span>'&gt;</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; <span class="title">type</span><span class="params">(obj[[<span class="string">'a'</span>]])</span></span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">pandas</span>.<span class="title">core</span>.<span class="title">frame</span>.<span class="title">DataFrame</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="【2-2-3】切片索引"><a href="#【2-2-3】切片索引" class="headerlink" title="【2.2.3】切片索引"></a><font color="#FFA500">【2.2.3】切片索引</font></h3><p>DataFrame 中的切片索引是针对行来操作的，切片的方法有两种：按位置切片和按索引名（index）切片，注意：按位置切片时，不包含终止索引；按索引名（index）切片时，包含终止索引。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>data = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>index = [<span class="string">'I1'</span>, <span class="string">'I2'</span>, <span class="string">'I3'</span>, <span class="string">'I4'</span>, <span class="string">'I5'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>columns = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame(data, index, columns)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">           a         b         c         d</span><br><span class="line">I1  <span class="number">0.828676</span> <span class="number">-1.663337</span>  <span class="number">1.753632</span>  <span class="number">1.432487</span></span><br><span class="line">I2  <span class="number">0.368138</span>  <span class="number">0.222166</span>  <span class="number">0.902764</span> <span class="number">-1.436186</span></span><br><span class="line">I3  <span class="number">2.285615</span> <span class="number">-2.415175</span> <span class="number">-1.344456</span> <span class="number">-0.502214</span></span><br><span class="line">I4  <span class="number">3.224288</span> <span class="number">-0.500268</span>  <span class="number">1.293596</span> <span class="number">-1.235549</span></span><br><span class="line">I5 <span class="number">-0.938833</span> <span class="number">-0.804433</span> <span class="number">-0.170047</span> <span class="number">-0.566766</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="number">0</span>:<span class="number">3</span>]</span><br><span class="line">           a         b         c         d</span><br><span class="line">I1  <span class="number">0.828676</span> <span class="number">-1.663337</span>  <span class="number">1.753632</span>  <span class="number">1.432487</span></span><br><span class="line">I2  <span class="number">0.368138</span>  <span class="number">0.222166</span>  <span class="number">0.902764</span> <span class="number">-1.436186</span></span><br><span class="line">I3  <span class="number">2.285615</span> <span class="number">-2.415175</span> <span class="number">-1.344456</span> <span class="number">-0.502214</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="number">0</span>:<span class="number">4</span>:<span class="number">2</span>]</span><br><span class="line">           a         b         c         d</span><br><span class="line">I1 <span class="number">-0.042168</span>  <span class="number">1.437354</span> <span class="number">-1.114545</span>  <span class="number">0.830790</span></span><br><span class="line">I3  <span class="number">0.241506</span>  <span class="number">0.018984</span> <span class="number">-0.499151</span> <span class="number">-1.190143</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[<span class="string">'I2'</span>:<span class="string">'I4'</span>]</span><br><span class="line">           a         b         c         d</span><br><span class="line">I2  <span class="number">0.368138</span>  <span class="number">0.222166</span>  <span class="number">0.902764</span> <span class="number">-1.436186</span></span><br><span class="line">I3  <span class="number">2.285615</span> <span class="number">-2.415175</span> <span class="number">-1.344456</span> <span class="number">-0.502214</span></span><br><span class="line">I4  <span class="number">3.224288</span> <span class="number">-0.500268</span>  <span class="number">1.293596</span> <span class="number">-1.235549</span></span><br></pre></td></tr></table></figure>
+<h3 id="【2-2-4】花式索引"><a href="#【2-2-4】花式索引" class="headerlink" title="【2.2.4】花式索引"></a><font color="#FFA500">【2.2.4】花式索引</font></h3><p>和 Series 一样，所谓的花式索引，就是间隔索引、不连续的索引，传递一个由列名（columns）组成的<font color="#FF0000"><strong>列表</strong></font>来一次性获得多列元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>data = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>index = [<span class="string">'I1'</span>, <span class="string">'I2'</span>, <span class="string">'I3'</span>, <span class="string">'I4'</span>, <span class="string">'I5'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>columns = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame(data, index, columns)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">           a         b         c         d</span><br><span class="line">I1 <span class="number">-1.083223</span> <span class="number">-0.182874</span> <span class="number">-0.348460</span> <span class="number">-1.572120</span></span><br><span class="line">I2 <span class="number">-0.205206</span> <span class="number">-0.251931</span>  <span class="number">1.180131</span>  <span class="number">0.847720</span></span><br><span class="line">I3 <span class="number">-0.980379</span>  <span class="number">0.325553</span> <span class="number">-0.847566</span> <span class="number">-0.882343</span></span><br><span class="line">I4 <span class="number">-0.638228</span> <span class="number">-0.282882</span> <span class="number">-0.624997</span> <span class="number">-0.245980</span></span><br><span class="line">I5 <span class="number">-0.229769</span>  <span class="number">1.002930</span> <span class="number">-0.226715</span> <span class="number">-0.916591</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[[<span class="string">'a'</span>, <span class="string">'d'</span>]]</span><br><span class="line">           a         d</span><br><span class="line">I1 <span class="number">-1.083223</span> <span class="number">-1.572120</span></span><br><span class="line">I2 <span class="number">-0.205206</span>  <span class="number">0.847720</span></span><br><span class="line">I3 <span class="number">-0.980379</span> <span class="number">-0.882343</span></span><br><span class="line">I4 <span class="number">-0.638228</span> <span class="number">-0.245980</span></span><br><span class="line">I5 <span class="number">-0.229769</span> <span class="number">-0.916591</span></span><br></pre></td></tr></table></figure>
+<h3 id="【2-2-5】布尔索引"><a href="#【2-2-5】布尔索引" class="headerlink" title="【2.2.5】布尔索引"></a><font color="#FFA500">【2.2.5】布尔索引</font></h3><p>可以通过一个布尔数组来索引目标数组，即通过布尔运算（如：比较运算符）来获取符合指定条件的元素的数组。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>data = np.random.randn(<span class="number">5</span>,<span class="number">4</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>index = [<span class="string">'I1'</span>, <span class="string">'I2'</span>, <span class="string">'I3'</span>, <span class="string">'I4'</span>, <span class="string">'I5'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>columns = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame(data, index, columns)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">           a         b         c         d</span><br><span class="line">I1 <span class="number">-0.602984</span> <span class="number">-0.135716</span>  <span class="number">0.999689</span> <span class="number">-0.339786</span></span><br><span class="line">I2  <span class="number">0.911130</span> <span class="number">-0.092485</span> <span class="number">-0.914074</span> <span class="number">-0.279588</span></span><br><span class="line">I3  <span class="number">0.849606</span> <span class="number">-0.420055</span> <span class="number">-1.240389</span> <span class="number">-0.179297</span></span><br><span class="line">I4  <span class="number">0.249986</span> <span class="number">-1.250668</span>  <span class="number">0.329416</span> <span class="number">-1.105774</span></span><br><span class="line">I5 <span class="number">-0.743816</span>  <span class="number">0.430647</span> <span class="number">-0.058126</span> <span class="number">-0.337319</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj[obj &gt; <span class="number">0</span>]</span><br><span class="line">           a         b         c   d</span><br><span class="line">I1       NaN       NaN  <span class="number">0.999689</span> NaN</span><br><span class="line">I2  <span class="number">0.911130</span>       NaN       NaN NaN</span><br><span class="line">I3  <span class="number">0.849606</span>       NaN       NaN NaN</span><br><span class="line">I4  <span class="number">0.249986</span>       NaN  <span class="number">0.329416</span> NaN</span><br><span class="line">I5       NaN  <span class="number">0.430647</span>       NaN NaN</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj &gt; <span class="number">0</span></span><br><span class="line">        a      b      c      d</span><br><span class="line">I1  <span class="keyword">False</span>  <span class="keyword">False</span>   <span class="keyword">True</span>  <span class="keyword">False</span></span><br><span class="line">I2   <span class="keyword">True</span>  <span class="keyword">False</span>  <span class="keyword">False</span>  <span class="keyword">False</span></span><br><span class="line">I3   <span class="keyword">True</span>  <span class="keyword">False</span>  <span class="keyword">False</span>  <span class="keyword">False</span></span><br><span class="line">I4   <span class="keyword">True</span>  <span class="keyword">False</span>   <span class="keyword">True</span>  <span class="keyword">False</span></span><br><span class="line">I5  <span class="keyword">False</span>   <span class="keyword">True</span>  <span class="keyword">False</span>  <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">这里是一段防爬虫文本，请读者忽略。</span></span><br><span class="line"><span class="string">本文原创首发于</span> <span class="string">CSDN，作者</span> <span class="string">TRHX。</span></span><br><span class="line"><span class="string">博客首页：https://itrhx.blog.csdn.net/</span></span><br><span class="line"><span class="string">本文链接：https://itrhx.blog.csdn.net/article/details/106698307</span></span><br><span class="line"><span class="string">未经授权，禁止转载！恶意转载，后果自负！尊重原创，远离剽窃！</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="【3】索引器：loc-和-iloc"><a href="#【3】索引器：loc-和-iloc" class="headerlink" title="【3】索引器：loc 和 iloc"></a><font color="#FF0000">【3】索引器：loc 和 iloc</font></h1><p>loc 是标签索引、iloc 是位置索引，注意：在 Pandas1.0.0 之前还有 ix 方法（即可按标签也可按位置索引），在 Pandas1.0.0 之后已被移除。</p>
+<h2 id="【3-1】loc-标签索引"><a href="#【3-1】loc-标签索引" class="headerlink" title="【3.1】loc 标签索引"></a><font color="#4876FF">【3.1】loc 标签索引</font></h2><p>loc 标签索引，即根据 index 和 columns 来选择数据。</p>
+<h3 id="【3-1-1】Series-loc"><a href="#【3-1-1】Series-loc" class="headerlink" title="【3.1.1】Series.loc"></a><font color="#FFA500">【3.1.1】Series.loc</font></h3><p>在 Series 中，允许输入：</p>
+<ul>
+<li>单个标签，例如 <code>5</code> 或 <code>&#39;a&#39;</code>，（注意，<code>5</code> 是 index 的名称，而不是位置索引）；</li>
+<li>标签列表或数组，例如 <code>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</code>；</li>
+<li>带有标签的切片对象，例如 <code>&#39;a&#39;:&#39;f&#39;</code>。</li>
+</ul>
+<p>官方文档：<a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.loc.html" target="_blank" rel="noopener">https://pandas.pydata.org/docs/reference/api/pandas.Series.loc.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">1</span>, <span class="number">5</span>, <span class="number">-8</span>, <span class="number">2</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.loc[<span class="string">'a'</span>]</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.loc[<span class="string">'a'</span>:<span class="string">'c'</span>]</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">dtype: int64</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.loc[[<span class="string">'a'</span>, <span class="string">'d'</span>]]</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<h3 id="【3-1-2】DataFrame-loc"><a href="#【3-1-2】DataFrame-loc" class="headerlink" title="【3.1.2】DataFrame.loc"></a><font color="#FFA500">【3.1.2】DataFrame.loc</font></h3><p>在 DataFrame 中，第一个参数索引<font color="#FF0000"><strong>行</strong></font>，第二个参数是索引<font color="#FF0000"><strong>列</strong></font>，允许输入的格式和 Series 大同小异。</p>
+<p>官方文档：<a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html" target="_blank" rel="noopener">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>], columns=[<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">   A  B  C</span><br><span class="line">a  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line">b  <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span></span><br><span class="line">c  <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.loc[<span class="string">'a'</span>]</span><br><span class="line">A    <span class="number">1</span></span><br><span class="line">B    <span class="number">2</span></span><br><span class="line">C    <span class="number">3</span></span><br><span class="line">Name: a, dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.loc[<span class="string">'a'</span>:<span class="string">'c'</span>]</span><br><span class="line">   A  B  C</span><br><span class="line">a  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line">b  <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span></span><br><span class="line">c  <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.loc[[<span class="string">'a'</span>, <span class="string">'c'</span>]]</span><br><span class="line">   A  B  C</span><br><span class="line">a  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line">c  <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.loc[<span class="string">'b'</span>, <span class="string">'B'</span>]</span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.loc[<span class="string">'b'</span>, <span class="string">'A'</span>:<span class="string">'C'</span>]</span><br><span class="line">A    <span class="number">4</span></span><br><span class="line">B    <span class="number">5</span></span><br><span class="line">C    <span class="number">6</span></span><br><span class="line">Name: b, dtype: int64</span><br></pre></td></tr></table></figure>
+<h2 id="【3-2】iloc-位置索引"><a href="#【3-2】iloc-位置索引" class="headerlink" title="【3.2】iloc 位置索引"></a><font color="#4876FF">【3.2】iloc 位置索引</font></h2><p>作用和 loc 一样，不过是基于索引的编号来索引，即根据 index 和 columns 的位置编号来选择数据。</p>
+<h3 id="【3-2-1】Series-iloc"><a href="#【3-2-1】Series-iloc" class="headerlink" title="【3.2.1】Series.iloc"></a><font color="#FFA500">【3.2.1】Series.iloc</font></h3><p>官方文档：<a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.iloc.html" target="_blank" rel="noopener">https://pandas.pydata.org/docs/reference/api/pandas.Series.iloc.html</a></p>
+<p>在 Series 中，允许输入：</p>
+<ul>
+<li>整数，例如 <code>5</code>；</li>
+<li>整数列表或数组，例如 <code>[4, 3, 0]</code>；</li>
+<li>具有整数的切片对象，例如 <code>1:7</code>。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">1</span>, <span class="number">5</span>, <span class="number">-8</span>, <span class="number">2</span>], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">c   <span class="number">-8</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.iloc[<span class="number">1</span>]</span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.iloc[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.iloc[[<span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>]]</span><br><span class="line">a    <span class="number">1</span></span><br><span class="line">b    <span class="number">5</span></span><br><span class="line">d    <span class="number">2</span></span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<h3 id="【3-2-2】DataFrame-iloc"><a href="#【3-2-2】DataFrame-iloc" class="headerlink" title="【3.2.2】DataFrame.iloc"></a><font color="#FFA500">【3.2.2】DataFrame.iloc</font></h3><p>官方文档：<a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html" target="_blank" rel="noopener">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html</a></p>
+<p>在 DataFrame 中，第一个参数索引<font color="#FF0000"><strong>行</strong></font>，第二个参数是索引<font color="#FF0000"><strong>列</strong></font>，允许输入的格式和 Series 大同小异：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]], index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>], columns=[<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">   A  B  C</span><br><span class="line">a  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line">b  <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span></span><br><span class="line">c  <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.iloc[<span class="number">1</span>]</span><br><span class="line">A    <span class="number">4</span></span><br><span class="line">B    <span class="number">5</span></span><br><span class="line">C    <span class="number">6</span></span><br><span class="line">Name: b, dtype: int64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.iloc[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">   A  B  C</span><br><span class="line">a  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line">b  <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.iloc[[<span class="number">0</span>, <span class="number">2</span>]]</span><br><span class="line">   A  B  C</span><br><span class="line">a  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line">c  <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.iloc[<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.iloc[<span class="number">1</span>, <span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">A    <span class="number">4</span></span><br><span class="line">B    <span class="number">5</span></span><br><span class="line">Name: b, dtype: int64</span><br></pre></td></tr></table></figure>
+<h1 id="【4】Pandas-重新索引"><a href="#【4】Pandas-重新索引" class="headerlink" title="【4】Pandas 重新索引"></a><font color="#FF0000">【4】Pandas 重新索引</font></h1><p>Pandas 对象的一个重要方法是 reindex，其作用是创建一个新对象，它的数据符合新的索引。以 <code>DataFrame.reindex</code> 为例（Series 类似），基本语法如下：</p>
+<p><code>DataFrame.reindex(self, labels=None, index=None, columns=None, axis=None, method=None, copy=True, level=None, fill_value=nan, limit=None, tolerance=None)</code></p>
+<p>部分参数描述如下：（完整参数解释参见<a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reindex.html" target="_blank" rel="noopener">官方文档</a>）</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>用作索引的新序列，既可以是 index 实例，也可以是其他序列型的 Python 数据结构</td>
+</tr>
+<tr>
+<td>method</td>
+<td>插值（填充）方式，取值如下：<br><code>None</code>：不填补空白；<br><code>pad / ffill</code>：将上一个有效的观测值向前传播到下一个有效的观测值；<br><code>backfill / bfill</code>：使用下一个有效观察值来填补空白；<br><code>nearest</code>：使用最近的有效观测值来填补空白。</td>
+</tr>
+<tr>
+<td>fill_value</td>
+<td>在重新索引的过程中，需要引入缺失值时使用的替代值</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>前向或后向填充时的最大填充量</td>
+</tr>
+<tr>
+<td>tolerance</td>
+<td>向前或向后填充时，填充不准确匹配项的最大间距（绝对值距离）</td>
+</tr>
+<tr>
+<td>level</td>
+<td>在 Multilndex 的指定级别上匹配简单索引，否则选其子集</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>默认为 True，无论如何都复制；如果为 False，则新旧相等就不复制</td>
+</tr>
+</tbody>
+</table>
+<p>reindex 将会根据新索引进行重排。如果某个索引值当前不存在，就引入缺失值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="number">4.5</span>, <span class="number">7.2</span>, <span class="number">-5.3</span>, <span class="number">3.6</span>], index=[<span class="string">'d'</span>, <span class="string">'b'</span>, <span class="string">'a'</span>, <span class="string">'c'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">d    <span class="number">4.5</span></span><br><span class="line">b    <span class="number">7.2</span></span><br><span class="line">a   <span class="number">-5.3</span></span><br><span class="line">c    <span class="number">3.6</span></span><br><span class="line">dtype: float64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj2 = obj.reindex([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj2</span><br><span class="line">a   <span class="number">-5.3</span></span><br><span class="line">b    <span class="number">7.2</span></span><br><span class="line">c    <span class="number">3.6</span></span><br><span class="line">d    <span class="number">4.5</span></span><br><span class="line">e    NaN</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<p>对于时间序列这样的有序数据，重新索引时可能需要做一些插值处理。method 选项即可达到此目的，例如，使用 ffill 可以实现前向值填充：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.Series([<span class="string">'blue'</span>, <span class="string">'purple'</span>, <span class="string">'yellow'</span>], index=[<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line"><span class="number">0</span>      blue</span><br><span class="line"><span class="number">2</span>    purple</span><br><span class="line"><span class="number">4</span>    yellow</span><br><span class="line">dtype: object</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj2 = obj.reindex(range(<span class="number">6</span>), method=<span class="string">'ffill'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj2</span><br><span class="line"><span class="number">0</span>      blue</span><br><span class="line"><span class="number">1</span>      blue</span><br><span class="line"><span class="number">2</span>    purple</span><br><span class="line"><span class="number">3</span>    purple</span><br><span class="line"><span class="number">4</span>    yellow</span><br><span class="line"><span class="number">5</span>    yellow</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+<p>借助 DataFrame，reindex可以修改（行）索引和列。只传递一个序列时，会重新索引结果的行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame(np.arange(<span class="number">9</span>).reshape((<span class="number">3</span>, <span class="number">3</span>)), index=[<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], columns=[<span class="string">'Ohio'</span>, <span class="string">'Texas'</span>, <span class="string">'California'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">   Ohio  Texas  California</span><br><span class="line">a     <span class="number">0</span>      <span class="number">1</span>           <span class="number">2</span></span><br><span class="line">c     <span class="number">3</span>      <span class="number">4</span>           <span class="number">5</span></span><br><span class="line">d     <span class="number">6</span>      <span class="number">7</span>           <span class="number">8</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj2 = obj.reindex([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj2</span><br><span class="line">   Ohio  Texas  California</span><br><span class="line">a   <span class="number">0.0</span>    <span class="number">1.0</span>         <span class="number">2.0</span></span><br><span class="line">b   NaN    NaN         NaN</span><br><span class="line">c   <span class="number">3.0</span>    <span class="number">4.0</span>         <span class="number">5.0</span></span><br><span class="line">d   <span class="number">6.0</span>    <span class="number">7.0</span>         <span class="number">8.0</span></span><br></pre></td></tr></table></figure>
+<p>列可以用 columns 关键字重新索引：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj = pd.DataFrame(np.arange(<span class="number">9</span>).reshape((<span class="number">3</span>, <span class="number">3</span>)), index=[<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>], columns=[<span class="string">'Ohio'</span>, <span class="string">'Texas'</span>, <span class="string">'California'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj</span><br><span class="line">   Ohio  Texas  California</span><br><span class="line">a     <span class="number">0</span>      <span class="number">1</span>           <span class="number">2</span></span><br><span class="line">c     <span class="number">3</span>      <span class="number">4</span>           <span class="number">5</span></span><br><span class="line">d     <span class="number">6</span>      <span class="number">7</span>           <span class="number">8</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>states = [<span class="string">'Texas'</span>, <span class="string">'Utah'</span>, <span class="string">'California'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>obj.reindex(columns=states)</span><br><span class="line">   Texas  Utah  California</span><br><span class="line">a      <span class="number">1</span>   NaN           <span class="number">2</span></span><br><span class="line">c      <span class="number">4</span>   NaN           <span class="number">5</span></span><br><span class="line">d      <span class="number">7</span>   NaN           <span class="number">8</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">这里是一段防爬虫文本，请读者忽略。</span></span><br><span class="line"><span class="string">本文原创首发于</span> <span class="string">CSDN，作者</span> <span class="string">TRHX。</span></span><br><span class="line"><span class="string">博客首页：https://itrhx.blog.csdn.net/</span></span><br><span class="line"><span class="string">本文链接：https://itrhx.blog.csdn.net/article/details/106698307</span></span><br><span class="line"><span class="string">未经授权，禁止转载！恶意转载，后果自负！尊重原创，远离剽窃！</span></span><br></pre></td></tr></table></figure>
+<hr>
+
+        </div>
+        <hr /><br>
+        
+          <div class="img_container"><a href="https://www.courseduck.com/programming/python/" target="_blank"><img src="https://www.courseduck.com/global/images/Python_header.jpg" class="img-responsive" alt="CourseDuck Python Banner"></a></div>
+        
+        
+          <div id="reward">
+  
+  <div>您的喜欢是作者写作最大的动力！❤️</div>
+  
+  <div class="reward">
+    <a href="https://github.com/Kaiyuan/donate-page" target="_blank" class=" tr3" title="Github"><span
+        id="github"></span></a>
+    <ul id="RewardBox" class="list pos-f tr3">
+      
+      <li id="PayPal" title="PayPal打赏"><a href="https://paypal.me/trhx" target="_blank">PayPal</a></li>
+      
+      
+      <li id="AliPayOR" title="支付宝打赏">AliPay</li>
+      
+      
+      <li id="WeChatPayOR" title="微信打赏">WeChatPay</li>
+      
+      
+      <li id="QQPayOR" title="QQ打赏">QQPay</li>
+      
+    </ul>
+    <div id="RewardText" class="tr3">Donate</div>
+    <div id="QRBox" class="pos-f left-100">
+      <div id="MainBox"></div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    var QRBox = $('#QRBox');
+    var MainBox = $('#MainBox');
+    var AliPayOR = 'https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/AliPayQR.png';
+    var WeChatPayOR = 'https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/WeChatQR.png';
+    var QQPayOR = 'https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/QQPayQR.png';
+
+    function showQR(QR) {
+      if (QR) {
+        MainBox.css('background-image', 'url(' + QR + ')');
+      }
+      $('#RewardText,#RewardBox,#github').addClass('blur');
+      QRBox.fadeIn(300, function (argument) {
+        MainBox.addClass('showQR');
+      });
+    }
+
+    $('#RewardBox>li').click(function (event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'AliPayOR') {
+        showQR(AliPayOR);
+      } else if (thisID === 'WeChatPayOR') {
+        showQR(WeChatPayOR);
+      } else if (thisID === 'QQPayOR') {
+        showQR(QQPayOR);
+      }
+    });
+
+    MainBox.click(function (event) {
+      MainBox.removeClass('showQR').addClass('hideQR');
+      setTimeout(function (a) {
+        QRBox.fadeOut(300, function (argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#RewardText,#RewardBox,#github').removeClass('blur');
+      }, 600);
+
+    });
+  });
+</script>
+
+        
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-06T20:51:15+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2020年7月6日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/索引/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>索引</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Pandas/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>Pandas</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Index/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>Index</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.itrhx.com/2020/06/13/A80-Pandas-02/&title=Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.itrhx.com/2020/06/13/A80-Pandas-02/&title=Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACGElEQVR42u3aS47DIBAFwNz/0p5tpMjW6waPBBSryMMEVxYt+vP5xOv6Wd/P7/Z8//X3255P+byxMDAwlmVcj6u35xmZnJ6fi4GBcQ7jOSy+8TnHRyEbAwMDIw6COaYasjEwMDByRp6U9vZjYGBgjCSxeYEsSUfzct7kXBwDA2NBRjVE/ufnV/obGBgYSzGu4nqG9Vqb1/DCwMDYm5EHuPxaNr6n+j4YGBh7M6rJZ7VkVr3w5WdhYGCcw+i9RILsXRmT54XQjIGBsQVjPGhWk9veSMeEjigGBsayjPeaBMlP1ktlp8EwMDAWYeRl+hFk9XWr34CBgbE3o3pNzCcceshpwRcDA2NTRi9xTUYuhip/xXYFBgbGfowkjFZLaXkJr8eLpkUwMDCOYSQFtfER2Dzg3j7BwMDYmtHcWiyEJUF2JAHGwMDYm1Ed2Oq1E4aufeM9VQwMjC0Ys4a38tJbb//tcwwMjK0Zc5uU1QLcCL6cxGJgYCzOSLbmvdD3AmtUO8TAwDiAUQ2g+QvlrYjkLAwMjDMZPUDvJ0hKcvmIGAYGxt6MkVGJarDuJbcRFQMDY2vGeJcwv/b1GpwjwxkYGBg7MaqH9a5xb/wXBgbGaYxeqauHn5XEYmBgYFRvl3mbM8GUqRgYGBjFtmXeckhCbfQDYWBgHMCYOxaWRMKkkPdKuQ0DA2NBRp46zjqgOqgxramJgYGxHuMPvosi4Jc7sd0AAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://www.itrhx.com/2020/06/13/A80-Pandas-02/&title=Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作 | TRHX'S BLOG&pics=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACGElEQVR42u3aS47DIBAFwNz/0p5tpMjW6waPBBSryMMEVxYt+vP5xOv6Wd/P7/Z8//X3255P+byxMDAwlmVcj6u35xmZnJ6fi4GBcQ7jOSy+8TnHRyEbAwMDIw6COaYasjEwMDByRp6U9vZjYGBgjCSxeYEsSUfzct7kXBwDA2NBRjVE/ufnV/obGBgYSzGu4nqG9Vqb1/DCwMDYm5EHuPxaNr6n+j4YGBh7M6rJZ7VkVr3w5WdhYGCcw+i9RILsXRmT54XQjIGBsQVjPGhWk9veSMeEjigGBsayjPeaBMlP1ktlp8EwMDAWYeRl+hFk9XWr34CBgbE3o3pNzCcceshpwRcDA2NTRi9xTUYuhip/xXYFBgbGfowkjFZLaXkJr8eLpkUwMDCOYSQFtfER2Dzg3j7BwMDYmtHcWiyEJUF2JAHGwMDYm1Ed2Oq1E4aufeM9VQwMjC0Ys4a38tJbb//tcwwMjK0Zc5uU1QLcCL6cxGJgYCzOSLbmvdD3AmtUO8TAwDiAUQ2g+QvlrYjkLAwMjDMZPUDvJ0hKcvmIGAYGxt6MkVGJarDuJbcRFQMDY2vGeJcwv/b1GpwjwxkYGBg7MaqH9a5xb/wXBgbGaYxeqauHn5XEYmBgYFRvl3mbM8GUqRgYGBjFtmXeckhCbfQDYWBgHMCYOxaWRMKkkPdKuQ0DA2NBRp46zjqgOqgxramJgYGxHuMPvosi4Jc7sd0AAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2020/06/14/A81-Pandas-03/" rel="prev" title="Python 数据分析三剑客之 Pandas（三）：算术运算与缺失值的处理">
+                                  
+                                      Python 数据分析三剑客之 Pandas（三）：算术运算与缺失值的处理
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/Pandas/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;Pandas</a> <a class="tag" href="/tags/算术运算/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;算术运算</a> <a class="tag" href="/tags/缺失值/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;缺失值</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2020/06/11/A79-Pandas-01/" rel="prev" title="Python 数据分析三剑客之 Pandas（一）：认识 Pandas 及其 Series、DataFrame 对象">
+                                    
+                                        Python 数据分析三剑客之 Pandas（一）：认识 Pandas 及其 Series、DataFrame 对象
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/Pandas/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;Pandas</a> <a class="tag" href="/tags/Series/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;Series</a> <a class="tag" href="/tags/DataFrame/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;DataFrame</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+        <section id="comments">
+          <div id="gitalk-container"></div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Python 数据分析三剑客之 Pandas（二）：Index 索引对象以及各种索引操作',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/trhx.png'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+          <h2>๑۩ﺴ&nbsp;&nbsp;TRHX&nbsp;&nbsp;ﺴ۩๑</h2>
+        
+        
+        
+      </div>
+    
+    <!-- 彩色滚动字体 -->
+    <div id="binft" align="center"></div>
+    <script>
+      var binft = function (r) {
+        function t() {
+          return b[Math.floor(Math.random() * b.length)]
+        }  
+        function e() {
+          return String.fromCharCode(94 * Math.random() + 33)
+        }
+        function n(r) {
+          for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+            var l = document.createElement("span");
+            l.textContent = e(), l.style.color = t(), n.appendChild(l)
+          }
+          return n
+        }
+        function i() {
+          var t = o[c.skillI];
+          c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+        }
+        var l = "",
+        o = ["Stay Hungry, Stay Foolish!"].map(function (r) {
+        return r + ""
+        }),
+        a = 2,
+        g = 1,
+        s = 5,
+        d = 75,
+        b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+        c = {
+          text: "",
+          prefixP: -s,
+          skillI: 0,
+          skillP: 0,
+          direction: "forward",
+          delay: a,
+          step: g
+        };
+        i()
+        };
+        binft(document.getElementById('binft'));
+    </script>
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://github.com/TRHX"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://itrhx.blog.csdn.net/"
+              class="social fab fa-cuttlefish flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/itrhx"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:admin@itrhx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2273902448&site=qq&menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#【1】Index-索引对象"><span class="toc-text">【1】Index 索引对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【2】Pandas-一般索引"><span class="toc-text">【2】Pandas 一般索引</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【2-1】Series-索引"><span class="toc-text">【2.1】Series 索引</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-1-1】head-tail"><span class="toc-text">【2.1.1】head() / tail()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-1-2】行索引"><span class="toc-text">【2.1.2】行索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-1-3】切片索引"><span class="toc-text">【2.1.3】切片索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-1-4】花式索引"><span class="toc-text">【2.1.4】花式索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-1-5】布尔索引"><span class="toc-text">【2.1.5】布尔索引</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【2-2】DataFrame-索引"><span class="toc-text">【2.2】DataFrame 索引</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-2-1】head-tail"><span class="toc-text">【2.2.1】head() / tail()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-2-2】列索引"><span class="toc-text">【2.2.2】列索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-2-3】切片索引"><span class="toc-text">【2.2.3】切片索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-2-4】花式索引"><span class="toc-text">【2.2.4】花式索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【2-2-5】布尔索引"><span class="toc-text">【2.2.5】布尔索引</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【3】索引器：loc-和-iloc"><span class="toc-text">【3】索引器：loc 和 iloc</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#【3-1】loc-标签索引"><span class="toc-text">【3.1】loc 标签索引</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#【3-1-1】Series-loc"><span class="toc-text">【3.1.1】Series.loc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【3-1-2】DataFrame-loc"><span class="toc-text">【3.1.2】DataFrame.loc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#【3-2】iloc-位置索引"><span class="toc-text">【3.2】iloc 位置索引</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#【3-2-1】Series-iloc"><span class="toc-text">【3.2.1】Series.iloc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【3-2-2】DataFrame-iloc"><span class="toc-text">【3.2.2】DataFrame.iloc</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#【4】Pandas-重新索引"><span class="toc-text">【4】Pandas 重新索引</span></a></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-handshake fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;欢迎光临</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://www.revolvermaps.com/"
+    title="https://www.revolvermaps.com/">
+    <i class="fas fa-info-circle fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <p><script type="text/javascript" src="//rf.revolvermaps.com/0/0/4.js?i=5eyl60h41k1&amp;m=6&amp;h=122&amp;c=ff0000&amp;r=30" async="async"></script><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5L7nNUS">Hexo QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/joinchat/Mro2h0uVt0DpDvOofWG65A">Telegram 交流群</a></p>
+
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-blog fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;CSDN 内容合伙人</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://itrhx.blog.csdn.net/"
+    title="https://itrhx.blog.csdn.net/">
+    <i class="fas fa-info-circle fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <p><a href="https://itrhx.blog.csdn.net/" title="微信扫描二维码添加好友"><img src="https://img-blog.csdnimg.cn/20200610152107390.png"></a></p>
+
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/BLOG/" href="/categories/BLOG/"><div class='name'>BLOG</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/CDN/" href="/categories/CDN/"><div class='name'>CDN</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Hexo/" href="/categories/Hexo/"><div class='name'>Hexo</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Java/" href="/categories/Java/"><div class='name'>Java</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class='name'>Linux</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Markdown/" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python-数据分析/" href="/categories/Python-数据分析/"><div class='name'>Python 数据分析</div><div class='badge'>(27)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python-数据分析/Matplotlib/" href="/categories/Python-数据分析/Matplotlib/"><div class='name'>Matplotlib</div><div class='badge'>(11)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python-数据分析/NumPy/" href="/categories/Python-数据分析/NumPy/"><div class='name'>NumPy</div><div class='badge'>(6)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python-数据分析/Pandas/" href="/categories/Python-数据分析/Pandas/"><div class='name'>Pandas</div><div class='badge'>(10)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python3-学习笔记/" href="/categories/Python3-学习笔记/"><div class='name'>Python3 学习笔记</div><div class='badge'>(40)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/基础学习/" href="/categories/Python3-学习笔记/基础学习/"><div class='name'>基础学习</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/学习经验/" href="/categories/Python3-学习笔记/学习经验/"><div class='name'>学习经验</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/爬虫学习/" href="/categories/Python3-学习笔记/爬虫学习/"><div class='name'>爬虫学习</div><div class='badge'>(18)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/Python3-学习笔记/爬虫实战/" href="/categories/Python3-学习笔记/爬虫实战/"><div class='name'>爬虫实战</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/VPS/" href="/categories/VPS/"><div class='name'>VPS</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/WEB前端/" href="/categories/WEB前端/"><div class='name'>WEB前端</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/图床/" href="/categories/图床/"><div class='name'>图床</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/12306/" style="font-size: 14px; color: #999">12306</a> <a href="/tags/3D图/" style="font-size: 14px; color: #999">3D图</a> <a href="/tags/58同城/" style="font-size: 14px; color: #999">58同城</a> <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/BLOG/" style="font-size: 15.43px; color: #8f8f8f">BLOG</a> <a href="/tags/Beautiful-Soup/" style="font-size: 14px; color: #999">Beautiful Soup</a> <a href="/tags/CDN/" style="font-size: 14px; color: #999">CDN</a> <a href="/tags/Coding-Pages/" style="font-size: 14px; color: #999">Coding Pages</a> <a href="/tags/DataFrame/" style="font-size: 14px; color: #999">DataFrame</a> <a href="/tags/Deepin/" style="font-size: 14px; color: #999">Deepin</a> <a href="/tags/Elicpse/" style="font-size: 14px; color: #999">Elicpse</a> <a href="/tags/GitHub-Pages/" style="font-size: 14px; color: #999">GitHub Pages</a> <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/tags/Github-Pages/" style="font-size: 14px; color: #999">Github Pages</a> <a href="/tags/GroupBy/" style="font-size: 14px; color: #999">GroupBy</a> <a href="/tags/HTTPS/" style="font-size: 15.43px; color: #8f8f8f">HTTPS</a> <a href="/tags/Hexo/" style="font-size: 19.71px; color: #727272">Hexo</a> <a href="/tags/ICP备案/" style="font-size: 14px; color: #999">ICP备案</a> <a href="/tags/IO操作/" style="font-size: 15.43px; color: #8f8f8f">IO操作</a> <a href="/tags/Index/" style="font-size: 14px; color: #999">Index</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS-预加载/" style="font-size: 14px; color: #999">JS 预加载</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 15.43px; color: #8f8f8f">Markdown</a> <a href="/tags/Material-X/" style="font-size: 14px; color: #999">Material X</a> <a href="/tags/Matplotlib/" style="font-size: 22.57px; color: #5f5f5f">Matplotlib</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #999">MongoDB</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/NumPy/" style="font-size: 18.29px; color: #7c7c7c">NumPy</a> <a href="/tags/PEP8/" style="font-size: 14px; color: #999">PEP8</a> <a href="/tags/Pandas/" style="font-size: 21.14px; color: #686868">Pandas</a> <a href="/tags/PicGo/" style="font-size: 14px; color: #999">PicGo</a> <a href="/tags/Pygame/" style="font-size: 14px; color: #999">Pygame</a> <a href="/tags/Python/" style="font-size: 15.43px; color: #8f8f8f">Python</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/SEO/" style="font-size: 14px; color: #999">SEO</a> <a href="/tags/SQL-Server-2012/" style="font-size: 14px; color: #999">SQL Server 2012</a> <a href="/tags/SSR/" style="font-size: 14px; color: #999">SSR</a> <a href="/tags/Selenium/" style="font-size: 16.86px; color: #868686">Selenium</a> <a href="/tags/Series/" style="font-size: 14px; color: #999">Series</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/User-Agent/" style="font-size: 14px; color: #999">User-Agent</a> <a href="/tags/VMware/" style="font-size: 15.43px; color: #8f8f8f">VMware</a> <a href="/tags/VPS/" style="font-size: 14px; color: #999">VPS</a> <a href="/tags/XPath/" style="font-size: 14px; color: #999">XPath</a> <a href="/tags/if语句/" style="font-size: 14px; color: #999">if语句</a> <a href="/tags/input-函数/" style="font-size: 14px; color: #999">input()函数</a> <a href="/tags/instant-page/" style="font-size: 14px; color: #999">instant.page</a> <a href="/tags/jsDelivr/" style="font-size: 15.43px; color: #8f8f8f">jsDelivr</a> <a href="/tags/lxml/" style="font-size: 14px; color: #999">lxml</a> <a href="/tags/matplotibrc/" style="font-size: 14px; color: #999">matplotibrc</a> <a href="/tags/pyspider/" style="font-size: 15.43px; color: #8f8f8f">pyspider</a> <a href="/tags/requests/" style="font-size: 14px; color: #999">requests</a> <a href="/tags/spfk/" style="font-size: 14px; color: #999">spfk</a> <a href="/tags/urllib/" style="font-size: 14px; color: #999">urllib</a> <a href="/tags/while循环/" style="font-size: 14px; color: #999">while循环</a> <a href="/tags/主题个性化/" style="font-size: 14px; color: #999">主题个性化</a> <a href="/tags/代理/" style="font-size: 14px; color: #999">代理</a> <a href="/tags/位运算/" style="font-size: 14px; color: #999">位运算</a> <a href="/tags/公安备案/" style="font-size: 14px; color: #999">公安备案</a> <a href="/tags/函数/" style="font-size: 14px; color: #999">函数</a> <a href="/tags/函数应用/" style="font-size: 14px; color: #999">函数应用</a> <a href="/tags/分割/" style="font-size: 14px; color: #999">分割</a> <a href="/tags/切片/" style="font-size: 14px; color: #999">切片</a> <a href="/tags/列表/" style="font-size: 14px; color: #999">列表</a> <a href="/tags/判断函数/" style="font-size: 14px; color: #999">判断函数</a> <a href="/tags/变量/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/合并数据集/" style="font-size: 14px; color: #999">合并数据集</a> <a href="/tags/哔哩哔哩/" style="font-size: 14px; color: #999">哔哩哔哩</a> <a href="/tags/图例/" style="font-size: 14px; color: #999">图例</a> <a href="/tags/图床/" style="font-size: 14px; color: #999">图床</a> <a href="/tags/图形验证码/" style="font-size: 14px; color: #999">图形验证码</a> <a href="/tags/垃圾/" style="font-size: 14px; color: #999">垃圾</a> <a href="/tags/备份/" style="font-size: 14px; color: #999">备份</a> <a href="/tags/子图/" style="font-size: 14px; color: #999">子图</a> <a href="/tags/字典/" style="font-size: 14px; color: #999">字典</a> <a href="/tags/字符串函数/" style="font-size: 14px; color: #999">字符串函数</a> <a href="/tags/安居客/" style="font-size: 14px; color: #999">安居客</a> <a href="/tags/层级索引/" style="font-size: 14px; color: #999">层级索引</a> <a href="/tags/年终总结/" style="font-size: 14px; color: #999">年终总结</a> <a href="/tags/广播/" style="font-size: 14px; color: #999">广播</a> <a href="/tags/异常/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/技巧/" style="font-size: 14px; color: #999">技巧</a> <a href="/tags/拼接/" style="font-size: 14px; color: #999">拼接</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/排序函数/" style="font-size: 14px; color: #999">排序函数</a> <a href="/tags/操作列表/" style="font-size: 14px; color: #999">操作列表</a> <a href="/tags/散点图/" style="font-size: 14px; color: #999">散点图</a> <a href="/tags/数学函数/" style="font-size: 14px; color: #999">数学函数</a> <a href="/tags/数据分裂/" style="font-size: 14px; color: #999">数据分裂</a> <a href="/tags/数据合并/" style="font-size: 14px; color: #999">数据合并</a> <a href="/tags/数据替换/" style="font-size: 14px; color: #999">数据替换</a> <a href="/tags/数据类型/" style="font-size: 14px; color: #999">数据类型</a> <a href="/tags/数据读写/" style="font-size: 14px; color: #999">数据读写</a> <a href="/tags/数据重塑/" style="font-size: 14px; color: #999">数据重塑</a> <a href="/tags/数组/" style="font-size: 15.43px; color: #8f8f8f">数组</a> <a href="/tags/文件/" style="font-size: 14px; color: #999">文件</a> <a href="/tags/文件储存/" style="font-size: 14px; color: #999">文件储存</a> <a href="/tags/无界面浏览器/" style="font-size: 14px; color: #999">无界面浏览器</a> <a href="/tags/时间序列/" style="font-size: 14px; color: #999">时间序列</a> <a href="/tags/映射/" style="font-size: 14px; color: #999">映射</a> <a href="/tags/条件函数/" style="font-size: 14px; color: #999">条件函数</a> <a href="/tags/条形图/" style="font-size: 14px; color: #999">条形图</a> <a href="/tags/极区图/" style="font-size: 14px; color: #999">极区图</a> <a href="/tags/极坐标图/" style="font-size: 14px; color: #999">极坐标图</a> <a href="/tags/柱状图/" style="font-size: 14px; color: #999">柱状图</a> <a href="/tags/模块/" style="font-size: 14px; color: #999">模块</a> <a href="/tags/正则表达式/" style="font-size: 14px; color: #999">正则表达式</a> <a href="/tags/滑动验证码/" style="font-size: 14px; color: #999">滑动验证码</a> <a href="/tags/点触验证码/" style="font-size: 14px; color: #999">点触验证码</a> <a href="/tags/爬虫/" style="font-size: 24px; color: #555">爬虫</a> <a href="/tags/猫眼电影/" style="font-size: 14px; color: #999">猫眼电影</a> <a href="/tags/瓜子二手车/" style="font-size: 14px; color: #999">瓜子二手车</a> <a href="/tags/画布/" style="font-size: 14px; color: #999">画布</a> <a href="/tags/直方图/" style="font-size: 14px; color: #999">直方图</a> <a href="/tags/矩阵/" style="font-size: 14px; color: #999">矩阵</a> <a href="/tags/等值线图/" style="font-size: 14px; color: #999">等值线图</a> <a href="/tags/等高线图/" style="font-size: 14px; color: #999">等高线图</a> <a href="/tags/算术函数/" style="font-size: 14px; color: #999">算术函数</a> <a href="/tags/算术运算/" style="font-size: 14px; color: #999">算术运算</a> <a href="/tags/类/" style="font-size: 14px; color: #999">类</a> <a href="/tags/索引/" style="font-size: 15.43px; color: #8f8f8f">索引</a> <a href="/tags/线性代数/" style="font-size: 14px; color: #999">线性代数</a> <a href="/tags/线性图/" style="font-size: 14px; color: #999">线性图</a> <a href="/tags/统计函数/" style="font-size: 14px; color: #999">统计函数</a> <a href="/tags/统计描述/" style="font-size: 14px; color: #999">统计描述</a> <a href="/tags/统计计算/" style="font-size: 14px; color: #999">统计计算</a> <a href="/tags/继承/" style="font-size: 14px; color: #999">继承</a> <a href="/tags/编辑器/" style="font-size: 14px; color: #999">编辑器</a> <a href="/tags/缺失值/" style="font-size: 14px; color: #999">缺失值</a> <a href="/tags/网格/" style="font-size: 14px; color: #999">网格</a> <a href="/tags/肺炎疫情/" style="font-size: 14px; color: #999">肺炎疫情</a> <a href="/tags/虎扑论坛/" style="font-size: 14px; color: #999">虎扑论坛</a> <a href="/tags/补丁/" style="font-size: 14px; color: #999">补丁</a> <a href="/tags/豆瓣电影/" style="font-size: 14px; color: #999">豆瓣电影</a> <a href="/tags/迭代/" style="font-size: 14px; color: #999">迭代</a> <a href="/tags/雷达图/" style="font-size: 14px; color: #999">雷达图</a> <a href="/tags/饼状图/" style="font-size: 14px; color: #999">饼状图</a>
+    </div>
+  </section>
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/user/home?id=3019271605"
+    title="https://music.163.com/#/user/home?id=3019271605">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="3019271605"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://github.com/TRHX"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://itrhx.blog.csdn.net/"
+              class="social fab fa-cuttlefish flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/itrhx"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:admin@itrhx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2273902448&amp;site=qq&amp;menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+    <br>
+    Copyright <i class="far fa-copyright"></i> 2018-2020
+    <a href="https://www.itrhx.com/" target="_blank"> TRHX&#39;S BLOG </a>丨
+    <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.9/images/icp.png" style="width:18px;height:18px;margin-bottom:-2px" alt="ICP">
+    <a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备19003281号-4</a>丨
+    <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.9/images/moeicp.png" style="width:18px;height:18px;margin-bottom:-3px" alt="MOE ICP">
+    <a href="https://icp.gov.moe/" target="_blank">萌ICP备20202022号</a>丨
+    <!-- 网站运行时间 -->
+    <span id="timeDate">正在载入...</span><span id="times"><span><i class="fa fa-spinner fa-spin"> </i></span></span>
+    <script>
+    var now = new Date(); 
+    function createtime() {
+      var grt= new Date("08/10/2018 17:38:00");//建站时间2018-08-10
+      now.setTime(now.getTime()+250); 
+      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+      document.getElementById("timeDate").innerHTML = "本站已运行 "
+      document.getElementById("times").innerHTML = dnum +" 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+      /*document.getElementById("times").style.color="#0056FF";*/
+      }
+      setInterval("createtime()",250);
+    </script>丨
+    <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
+    <a href="https://tongji.baidu.com/web/welcome/ico?s=df0bc7c6bdbd80356ba4db429724ccad" target="_blank">百度统计</a>丨
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275909280'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275909280%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><br><br>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Coding Pages">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Coding</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-blueviolet">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+        <a style="color: #fff" rel="license" href="https://xaoxuu.com/wiki/material-x/" target="_blank" title="站点使用 Material X 主题">
+      <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Material X</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+      <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">287.7k</span>
+    </div>
+</footer>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.2/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: "d19a84b9d9a2ddb2c6b9",
+      clientSecret: "cec9feae5129a6106edc68ce06d167be8eb06021",
+      repo: "trhx.github.io",
+      owner: "TRHX",
+      admin: "TRHX",
+      
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+      
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+    gitalk.render('gitalk-container');
+  </script>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+  <!-- 单击显示文字 -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/ClickShowText.js"></script> -->
+  <!-- 点击冒点 -->
+  <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas><script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+  <!-- 浏览器搞笑标题 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/FunnyTitle.js"></script>
+  <!-- 样式一（鼠标点击更换样式） -->
+  <!--<script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>-->
+  <!-- 样式二（飘动的彩带） -->
+  <!--<script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script>-->
+  <!-- 数字雨 -->
+  <canvas id="canvas" width="1920" height="1080"></canvas>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/DigitalRain.js"></script>
+  <!--动态线条背景-->
+  <!--<script type="text/javascript" color="27,195,251" opacity='0.7' zIndex="-5" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>-->
+  <!-- 速度优化脚本 -->
+  <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/instantclick-1.2.2.js" type="module"></script>
+  <!-- 悟空 -->
+  <!--<div id="wukong"><marquee direction="right"><img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/images/wukong.gif"></marquee></div>-->
+  <!-- 雪花 -->
+  <!--<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/snow1.js"></script> -->
+</body>
+</html>
