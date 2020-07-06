@@ -507,14 +507,14 @@
       <a class='notlink'>
         <i class="fas fa-keyboard" aria-hidden="true"></i>
         <p>字数统计:</p>
-        <p>6,256字</p>
+        <p>6,304字</p>
       </a>
     </div>
     <div class="new-meta-item readtime">
       <a class='notlink'>
         <i class="fas fa-hourglass-half" aria-hidden="true"></i>
         <p>阅读时长≈</p>
-        <p>29分</p>
+        <p>30分</p>
       </a>
     </div>
   
@@ -540,7 +540,10 @@
 <hr>
 <h2 id="【1x00】前言"><a href="#【1x00】前言" class="headerlink" title="【1x00】前言"></a><font color="#FF0000">【1x00】前言</font></h2><p>本来两三个月之前就想搞个疫情数据实时数据展示的，由于各种不可抗拒因素一而再再而三的鸽了，最近终于抽空写了一个，数据是用 Python 爬取的<a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/" target="_blank" rel="noopener">百度疫情实时大数据报告</a>，请求库用的 requests，解析用的 Xpath 语法，词云用的 wordcloud 库，数据可视化用 pyecharts 绘制的地图和折线图，数据储存在 Excel 表格里面，使用 openpyxl 对表格进行处理。</p>
 <p>本程序实现了累计确诊地图展示和每日数据变化折线图展示，其他更多数据的获取和展示均可在程序中进行拓展，可以将程序部署在服务器上，设置定时运行，即可实时展示数据，pyecharts 绘图模块也可以整合到 Web 框架（Django、Flask等）中使用。</p>
-<p>注意项：在获取数据时有<font color="#FF0000"><strong>全球</strong></font>和<font color="#FF0000"><strong>境外</strong></font>两个概念，全球包含中国，境外不包含中国，后期绘制的四个图：中国累计确诊地图、全球累计确诊地图（包含中国）、中国每日数据折线图、境外每日数据折线图（不包含中国）。</p>
+<p>在获取数据时有<font color="#FF0000"><strong>全球</strong></font>和<font color="#FF0000"><strong>境外</strong></font>两个概念，全球包含中国，境外不包含中国，后期绘制的四个图：中国累计确诊地图、全球累计确诊地图（包含中国）、中国每日数据折线图、境外每日数据折线图（不包含中国）。</p>
+<font color="#FF0000"><strong>注意项：直接向该网页发送请求获取的响应中，没有每个国家的每日数据，该数据获取的地址是：<a href="https://voice.baidu.com/newpneumonia/get?target=trend&amp;isCaseIn=1&amp;stage=publish" target="_blank" rel="noopener">https://voice.baidu.com/newpneumonia/get?target=trend&amp;isCaseIn=1&amp;stage=publish</a></strong></font>
+
+
 <ul>
 <li><p><strong>预览地址</strong>：<a href="http://cov.itrhx.com/" target="_blank" rel="noopener">http://cov.itrhx.com/</a></p>
 </li>
@@ -590,10 +593,7 @@
 <hr>
 
         </div>
-        <hr /><br>
-        
-          <div class="img_container"><a href="https://www.courseduck.com/programming/python/" target="_blank"><img src="https://www.courseduck.com/global/images/Python_header.jpg" class="img-responsive" alt="CourseDuck Python Banner"></a></div>
-        
+        <hr />
         
           <div id="reward">
   
@@ -675,7 +675,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-06T15:37:22+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-06T22:20:55+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>最后更新于 2020年7月6日</p>
@@ -1287,7 +1287,7 @@
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">287.7k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">286.2k</span>
     </div>
 </footer>
 
