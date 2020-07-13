@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
+    <lastmod>2020-07-13</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
+    <lastmod>2020-07-13</lastmod>
+  </url>  <url>
+    <loc>https://www.itrhx.com/2020/07/13/A90-pyspider-51job/</loc>
+    <lastmod>2020-07-13</lastmod>
+  </url>  <url>
     <loc>https://www.itrhx.com/2020/07/06/A89-COVID-19/</loc>
     <lastmod>2020-07-06</lastmod>
   </url>  <url>
@@ -91,17 +100,11 @@
     <loc>https://www.itrhx.com/2018/08/15/A02-hexo-blog/</loc>
     <lastmod>2020-04-26</lastmod>
   </url>  <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
-    <lastmod>2020-04-26</lastmod>
-  </url>  <url>
     <loc>https://www.itrhx.com/2019/09/16/A47-hexo-deployed-to-github-and-coding/</loc>
     <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
     <lastmod>2020-03-31</lastmod>
-  </url>  <url>
-    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
-    <lastmod>2020-03-16</lastmod>
   </url>  <url>
     <loc>https://www.itrhx.com/2019/09/03/A40-Python3-spider-C10/</loc>
     <lastmod>2020-03-14</lastmod>

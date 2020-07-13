@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
+    
+    <lastmod>2020-07-13T13:29:40.312Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
+    
+    <lastmod>2020-07-13T13:29:36.480Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/2020/07/13/A90-pyspider-51job/</loc>
+    
+    <lastmod>2020-07-13T13:26:12.164Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2020/07/06/A89-COVID-19/</loc>
     
     <lastmod>2020-07-06T14:35:55.758Z</lastmod>
@@ -219,13 +240,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/</loc>
-    
-    <lastmod>2020-04-26T03:59:23.151Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/comments/index.html</loc>
     
     <lastmod>2020-04-16T04:39:29.101Z</lastmod>
@@ -243,13 +257,6 @@
     <loc>https://www.itrhx.com/2020/01/10/A61-build-a-SSR-server-with-VPS/</loc>
     
     <lastmod>2020-03-31T09:27:43.584Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
-    
-    <lastmod>2020-03-16T09:21:52.219Z</lastmod>
     
   </url>
   
