@@ -33,11 +33,39 @@ links:
     - name: shansan
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/shansan.jpeg
       url: https://shan333.cn/
-      backgroundColor: '#A47366'
+      backgroundColor: '#E94335'
       textColor: '#fff'
       tags:
       - C++
       - Python
+
+    - name: Yinux's Blog
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yinuxy.jpg
+      url: https://www.yinuxy.com/
+      backgroundColor: '#7C5246'
+      textColor: '#fff'
+      tags:
+      - Python
+      - 算法
+      - 大数据
+
+    - name: TUFZ
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/TUFZ.jpg
+      url: http://www.itufz.com/
+      backgroundColor: '#967ADC'
+      textColor: '#fff'
+      tags:
+      - Java
+      - 算法
+
+    - name: DAYUANSHUAI
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/dayuanshuai.jpg
+      url: http://idayuanshuai.com/
+      backgroundColor: '#708090'
+      textColor: '#fff'
+      tags:
+      - 网络工程师
+      - 运维大佬
 
     - name: 番茄酱の萌化小屋
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/kurumi.jpg
@@ -52,7 +80,7 @@ links:
     - name: attack204
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/attack204.jpg
       url: http://attack204.com/
-      backgroundColor: '#967ADC'
+      backgroundColor: '#34A853'
       textColor: '#fff'
       tags:
       - OIer
@@ -200,16 +228,6 @@ links:
       tags:
       - C++
       - 蒟蒻
-
-    - name: Yinux's Blog
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/yinuxy.jpg
-      url: https://www.yinuxy.com/
-      backgroundColor: '#7C5246'
-      textColor: '#fff'
-      tags:
-      - Python
-      - 算法
-      - 大数据
 
     - name: Steven_MengのBlog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/stevenmhy.jpg
@@ -379,7 +397,7 @@ links:
 
     - name: 高高编程小屋
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/frogfrog.jpg
-      url: http://frogfrog.cn/
+      url: http://littlewhale.xyz/
       backgroundColor: '#967ADC'
       textColor: '#fff'
       tags:
@@ -436,6 +454,14 @@ links:
       tags:
       - Java
       - Spring
+
+    - name: Alex Kyle
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/congjinyebaiya.jpg
+      url: https://congjinyebaiya.wang/
+      backgroundColor: '#967ADC'
+      textColor: '#fff'
+      tags:
+      - 前端
 
   - group: 虐狗博主
     icon: fas fa-heartbeat

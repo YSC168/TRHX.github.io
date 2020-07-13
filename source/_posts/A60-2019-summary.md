@@ -9,6 +9,7 @@ music:
   type: song
   id: 413829859
 avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.4/images/trhx.png
+top: true
 ---
 
 <fancybox>

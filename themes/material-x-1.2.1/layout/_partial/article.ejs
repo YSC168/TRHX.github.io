@@ -7,10 +7,7 @@
         <div class="article-entry" itemprop="articleBody">
           <%- post.content %>
         </div>
-        <hr /><br>
-        <% if (post.layout == 'post'){ %>
-          <div class="img_container"><a href="https://www.courseduck.com/programming/python/" target="_blank"><img src="https://www.courseduck.com/global/images/Python_header.jpg" class="img-responsive" alt="CourseDuck Python Banner"></a></div>
-        <% } %>
+        <hr />
         <% if (theme.reward.enable && post.layout == 'post' && post.reward != false){ %>
           <%- partial('reward') %>
         <% } %>
