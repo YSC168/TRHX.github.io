@@ -559,8 +559,10 @@
 <hr>
 <h2 id="【1x00】认识-Matplotlib"><a href="#【1x00】认识-Matplotlib" class="headerlink" title="【1x00】认识 Matplotlib"></a><font color="#FF0000">【1x00】认识 Matplotlib</font></h2><p>Matplotlib 是建立在 NumPy 数组基础上的多平台数据可视化程序库，用于在 Python 中绘制数组的 2D 图形库，最初被设计用于完善 SciPy 的生态环境，虽然它起源于模仿 Matlab 图形命令，但它独立于 Matlab，可以以 Pythonic 和面向对象的方式使用。虽然 Matplotlib 主要是在纯 Python 中编写的，但它大量使用 NumPy 和其他扩展代码，即使对于大型数组也能提供良好的性能。它与 NumPy 一起使用，提供了一种有效的 Matlab 开源替代方案。 它也可以和图形工具包一起使用，如 PyQt 和 wxPython。Matplotlib 最重要的特性之一就是具有良好的操作系统兼容性和图形显示底层接口兼容性。</p>
 <h3 id="【1x01】简单示例"><a href="#【1x01】简单示例" class="headerlink" title="【1x01】简单示例"></a><font color="#1BC3FB">【1x01】简单示例</font></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = range(<span class="number">2</span>, <span class="number">26</span>, <span class="number">2</span>)     <span class="comment"># 数据在 x 轴的位置，是一个可迭代对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y = range(<span class="number">0</span>, <span class="number">12</span>)        <span class="comment"># 数据在 y 轴的位置，是一个可迭代对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>plt.plot(x, y)          <span class="comment"># 绘制线形图</span></span><br><span class="line">[&lt;matplotlib.lines.Line2D object at <span class="number">0x00BA1D18</span>&gt;]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/01.png" alt="01"></p>
-<h3 id="【1x02】图像结构"><a href="#【1x02】图像结构" class="headerlink" title="【1x02】图像结构"></a><font color="#1BC3FB">【1x02】图像结构</font></h3><p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/02.png" alt="02"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/01.png" alt="01"><br></fancybox>
+
+<h3 id="【1x02】图像结构"><a href="#【1x02】图像结构" class="headerlink" title="【1x02】图像结构"></a><font color="#1BC3FB">【1x02】图像结构</font></h3><fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/02.png" alt="02"><br></fancybox>
+
 <h3 id="【1x03】三层结构"><a href="#【1x03】三层结构" class="headerlink" title="【1x03】三层结构"></a><font color="#1BC3FB">【1x03】三层结构</font></h3><p>Matplotlib 三层结构：容器层、辅助显示层、图像层</p>
 <table><tr><td bgcolor="#7FFFD4">容器层</td></tr></table>
 
@@ -614,7 +616,8 @@
 <hr>
 <p><code>rcParams</code> 修改示例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'Microsoft YaHei'</span>]   <span class="comment"># 定义全局字体</span></span><br><span class="line">plt.rcParams[<span class="string">'xtick.color'</span>] = <span class="string">'red'</span>         <span class="comment"># 定义 x 轴刻度颜色</span></span><br><span class="line">plt.rcParams[<span class="string">'lines.marker'</span>] = <span class="string">'o'</span>          <span class="comment"># 定义线条上点的形状</span></span><br><span class="line">plt.rcParams[<span class="string">'legend.loc'</span>] = <span class="string">'upper left'</span>   <span class="comment"># 定义图例在左上角</span></span><br><span class="line"></span><br><span class="line">x = range(<span class="number">2</span>, <span class="number">26</span>, <span class="number">2</span>)</span><br><span class="line">y = range(<span class="number">0</span>, <span class="number">12</span>)</span><br><span class="line">a = [<span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">25</span>, <span class="number">30</span>]</span><br><span class="line">b = [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br><span class="line"></span><br><span class="line">plt.title(<span class="string">'This is a title / 这是标题'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'这是 x 轴标题'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'这是 y 轴标题'</span>)</span><br><span class="line">plt.grid(<span class="keyword">True</span>)</span><br><span class="line">plt.plot(x, y)</span><br><span class="line">plt.plot(a, b)</span><br><span class="line">plt.legend([<span class="string">'图例一'</span>, <span class="string">'图例二'</span>])</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/03.png" alt="03"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/03.png" alt="03"><br></fancybox>
+
 <hr>
 <h3 id="【2x01】axes-部分属性"><a href="#【2x01】axes-部分属性" class="headerlink" title="【2x01】axes 部分属性"></a><font color="#1BC3FB">【2x01】axes 部分属性</font></h3><table>
 <thead>
@@ -1374,10 +1377,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-06T21:30:42+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-06T11:05:37+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年7月6日</p>
+    <p>最后更新于 2020年8月6日</p>
   </a>
 </div>
 
@@ -2071,7 +2074,7 @@
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.2/dist/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
   <script type="text/javascript">
     var gitalk = new Gitalk({

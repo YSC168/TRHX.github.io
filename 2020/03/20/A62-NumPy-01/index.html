@@ -566,7 +566,8 @@
 <p>Python 列表的元素不同类型举例：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>l = [<span class="keyword">True</span>, <span class="string">'2'</span>, <span class="number">3.2</span>, <span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[type(item) <span class="keyword">for</span> item <span class="keyword">in</span> l]</span><br><span class="line">[&lt;class 'bool'&gt;, &lt;class 'str'&gt;, &lt;class 'float'&gt;, &lt;class 'int'&gt;]</span><br></pre></td></tr></table></figure>
 <p>Python 列表中的每一项必须包含各自的类型信息、引用计数和其他信息，也就是说，每一项都是一个完整的 Python 对象，同时，Python 列表还包含一个指向指针块的指针，其中的每一个指针对应一个完整的 Python 对象，另外，列表的优势是灵活，因为每个列表元素是一个包含数据和类型信息的完整结构体。相反 NumPy 数组缺乏这种灵活性，但是 NumPy 却能更有效地存储和操作数据。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/01.png" alt="01"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/01.png" alt="01"><br></fancybox>
+
 <h2 id="【3x00】理解-NumPy-Ndarray-对象"><a href="#【3x00】理解-NumPy-Ndarray-对象" class="headerlink" title="【3x00】理解 NumPy Ndarray 对象"></a><font color="#ff0000">【3x00】理解 NumPy Ndarray 对象</font></h2><p>NumPy 提供了一个 N 维数组类型，即 Ndarray，它是一系列同类型数据的集合，是用于存放同类型元素的多维数组，以 0 下标为开始进行集合中元素的索引，所有 Ndarray 中的每个元素在内存中都有相同存储大小的区域。</p>
 <p>Ndarray 内部由以下内容组成：</p>
 <ul>
@@ -575,29 +576,34 @@
 <li>一个表示数组形状（shape）的元组，表示各维度大小的元组；</li>
 <li>一个跨度元组（stride），其中的整数指的是为了前进到当前维度下一个元素需要“跨过”的字节数。</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/02.png" alt="02"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/02.png" alt="02"><br></fancybox>
+
 <h2 id="【4x00】理解不同维度的数组"><a href="#【4x00】理解不同维度的数组" class="headerlink" title="【4x00】理解不同维度的数组"></a><font color="#FF0000">【4x00】理解不同维度的数组</font></h2><p>NumPy 数组的维数称为秩（rank），秩就是轴的数量，即数组的维度，一维数组的秩为 1，二维数组的秩为 2，以此类推。</p>
 <p>在 NumPy 中，每一个线性的数组称为是一个轴（axis），也就是维度（dimensions）。比如说，二维数组相当于是两个一维数组，其中第一个一维数组中每个元素又是一个一维数组。所以一维数组就是 NumPy 中的轴（axis），第一个轴相当于是底层数组，第二个轴是底层数组里的数组。而轴的数量 — 秩，就是数组的维数。</p>
 <p>很多时候可以声明 axis，axis=0，表示沿着第 0 轴进行操作，即对每一列进行操作；axis=1，表示沿着第 1 轴进行操作，即对每一行进行操作。</p>
 <p>一维数组：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a)</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a.shape)</span><br><span class="line">(<span class="number">4</span>,)</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/03.png" alt="03"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/03.png" alt="03"><br></fancybox>
+
 <hr>
 <p>二维数组：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a)</span><br><span class="line">[[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span>]]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a.shape)</span><br><span class="line">(<span class="number">2</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>a.shape 输出数组的维度，对于此二维数组，可以理解为 2 行 4 列。</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/04.png" alt="04"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/04.png" alt="04"><br></fancybox>
+
 <hr>
 <p>三维数组：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = np.array([[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]], [[<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>], [<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>]], [[<span class="number">17</span>,<span class="number">18</span>,<span class="number">19</span>,<span class="number">20</span>], [<span class="number">21</span>,<span class="number">22</span>,<span class="number">23</span>,<span class="number">24</span>]]])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a)</span><br><span class="line">[[[ <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span>]</span><br><span class="line">  [ <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span>  <span class="number">8</span>]]</span><br><span class="line"></span><br><span class="line"> [[ <span class="number">9</span> <span class="number">10</span> <span class="number">11</span> <span class="number">12</span>]</span><br><span class="line">  [<span class="number">13</span> <span class="number">14</span> <span class="number">15</span> <span class="number">16</span>]]</span><br><span class="line"></span><br><span class="line"> [[<span class="number">17</span> <span class="number">18</span> <span class="number">19</span> <span class="number">20</span>]</span><br><span class="line">  [<span class="number">21</span> <span class="number">22</span> <span class="number">23</span> <span class="number">24</span>]]]</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a.shape)</span><br><span class="line">(<span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>a.shape 输出数组的维度，对于此三维数组，可以理解为 3 块，每块有 2 行 4 列。</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/05.png" alt="05"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/05.png" alt="05"><br></fancybox>
+
 <p>有网友对三维数组的这个图有疑问，认为横线应该是 axis=0，竖线是 axis=1，斜线是 axis=2，这个确实有点儿绕，不要受到前面一维二维的影响，我把我的理解又画了一张图出来，另外大家可以尝试去取三维数组里面的某个值，多想一下就可以理解了。欢迎各位大佬一起交流学习！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/06.png" alt="06"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/06.png" alt="06"><br></fancybox>
+
 <h2 id="【5x00】创建-Ndarray-对象（创建数组）"><a href="#【5x00】创建-Ndarray-对象（创建数组）" class="headerlink" title="【5x00】创建 Ndarray 对象（创建数组）"></a><font color="#FF0000">【5x00】创建 Ndarray 对象（创建数组）</font></h2><h3 id="【5x01】一张表快速了解创建数组的不同方法"><a href="#【5x01】一张表快速了解创建数组的不同方法" class="headerlink" title="【5x01】一张表快速了解创建数组的不同方法"></a><font color="#00CD00">【5x01】一张表快速了解创建数组的不同方法</font></h3><table>
 <thead>
 <tr>
@@ -1383,10 +1389,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-06T21:25:18+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-06T11:01:29+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年7月6日</p>
+    <p>最后更新于 2020年8月6日</p>
   </a>
 </div>
 
@@ -2080,7 +2086,7 @@
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.2/dist/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
   <script type="text/javascript">
     var gitalk = new Gitalk({

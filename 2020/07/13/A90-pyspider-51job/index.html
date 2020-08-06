@@ -552,7 +552,8 @@
 <p>初始化函数：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">    self.base_url = <span class="string">'https://search.51job.com/list/000000,000000,0000,00,9,99,%s,2,%s.html'</span></span><br><span class="line">    self.headers = &#123;<span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.13 Safari/537.36'</span>&#125;</span><br><span class="line">    self.keyword = input(<span class="string">'请输入关键字：'</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="【01x02】获取总页数"><a href="#【01x02】获取总页数" class="headerlink" title="【01x02】获取总页数"></a><font color="#4876FF">【01x02】获取总页数</font></h3><p>在页面的下方给出了该职位一共有多少页，使用 Xpath 和正则表达式提取里面的数字，方便后面翻页爬取使用，注意页面编码为 <code>gbk</code>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/01.png" alt="01"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/01.png" alt="01"><br></fancybox>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tatal_url</span><span class="params">(self)</span>:</span></span><br><span class="line">    url = self.base_url % (self.keyword, str(<span class="number">1</span>))</span><br><span class="line">    response = requests.get(url=url, headers=self.headers)</span><br><span class="line">    tree = etree.HTML(response.content.decode(<span class="string">'gbk'</span>))</span><br><span class="line">    <span class="comment"># 提取一共有多少页</span></span><br><span class="line">    text = tree.xpath(<span class="string">"//div[@class='p_in']/span[1]/text()"</span>)[<span class="number">0</span>]</span><br><span class="line">    number = re.findall(<span class="string">'[0-9]'</span>, text)</span><br><span class="line">    number = int(<span class="string">''</span>.join(number))</span><br><span class="line">    print(<span class="string">'%s职位共有%d页'</span> % (self.keyword, number))</span><br><span class="line">    <span class="keyword">return</span> number</span><br></pre></td></tr></table></figure>
 <h3 id="【01x03】提取详情页-URL"><a href="#【01x03】提取详情页-URL" class="headerlink" title="【01x03】提取详情页 URL"></a><font color="#4876FF">【01x03】提取详情页 URL</font></h3><p>定义一个 <code>detail_url()</code> 方法，传入总页数，循环提取每一页职位详情页的 URL，将每一个详情页 URL 传递给 <code>parse_data()</code> 方法，用于解析详情页内的具体职位信息。</p>
 <p>提取详情页时有以下几种特殊情况：</p>
@@ -560,12 +561,16 @@
 <p>  页面示例：<a href="https://51rz.51job.com/job.html?jobid=115980776" target="_blank" rel="noopener">https://51rz.51job.com/job.html?jobid=115980776</a></p>
 <p>  页面真实数据请求地址类似于：<a href="https://coapi.51job.com/job_detail.php?jsoncallback=&amp;key=&amp;sign=params={&quot;jobid&quot;:&quot;&quot;}" target="_blank" rel="noopener">https://coapi.51job.com/job_detail.php?jsoncallback=&amp;key=&amp;sign=params={&quot;jobid&quot;:&quot;&quot;}</a></p>
 <p>  请求地址中的各参数值通过 js 加密：<a href="https://js.51jobcdn.com/in/js/2018/coapi/coapi.min.js" target="_blank" rel="noopener">https://js.51jobcdn.com/in/js/2018/coapi/coapi.min.js</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/02.png" alt="02"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/03.png" alt="03"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/02.png" alt="02"><br></fancybox>
+
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/03.png" alt="03"><br></fancybox>
+
 <p><strong>特殊情况二：</strong>部分公司有自己的专属页面，此类页面的结构也不同于普通页面</p>
 <p>  页面示例：<a href="http://dali.51ideal.com/jobdetail.html?jobid=121746338" target="_blank" rel="noopener">http://dali.51ideal.com/jobdetail.html?jobid=121746338</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/04.png" alt="04"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/05.png" alt="05"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/04.png" alt="04"><br></fancybox>
+
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/05.png" alt="05"><br></fancybox>
+
 <p>为了规范化，本次爬取将去掉这部分特殊页面，仅爬取 URL 带有 <code>jobs.51job.com</code> 的数据</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">detail_url</span><span class="params">(self, number)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">1</span>, number+<span class="number">1</span>):</span><br><span class="line">        url = self.base_url % (self.keyword, str(num))</span><br><span class="line">        response = requests.get(url=url, headers=self.headers)</span><br><span class="line">        tree = etree.HTML(response.content.decode(<span class="string">'gbk'</span>))</span><br><span class="line">        detail_url1 = tree.xpath(<span class="string">"//div[@class='dw_table']/div[@class='el']/p/span/a/@href"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        深拷贝一个 url 列表，如果有连续的不满足要求的链接，若直接在原列表里面删除，</span></span><br><span class="line"><span class="string">        则会漏掉一些链接，因为每次删除后的索引已改变，因此在原列表中提取不符合元素</span></span><br><span class="line"><span class="string">        后，在深拷贝的列表里面进行删除。最后深拷贝的列表里面的元素均符合要求。</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line"></span><br><span class="line">        detail_url2 = copy.deepcopy(detail_url1)</span><br><span class="line">        <span class="keyword">for</span> url <span class="keyword">in</span> detail_url1:</span><br><span class="line">            <span class="keyword">if</span> <span class="string">'jobs.51job.com'</span> <span class="keyword">not</span> <span class="keyword">in</span> url:</span><br><span class="line">                detail_url2.remove(url)</span><br><span class="line">        self.parse_data(detail_url2)</span><br><span class="line">        print(<span class="string">'第%d页数据爬取完毕！'</span> % num)</span><br><span class="line">        time.sleep(<span class="number">2</span>)</span><br><span class="line">    print(<span class="string">'所有数据爬取完毕！'</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="【01x04】提取职位信息"><a href="#【01x04】提取职位信息" class="headerlink" title="【01x04】提取职位信息"></a><font color="#4876FF">【01x04】提取职位信息</font></h3><p>解析详情页时页面编码是 <code>gbk</code>，但是某些页面在解析时仍然会报编码错误，因此使用 <code>try-except</code> 语句捕捉编码错误（UnicodeDecodeError），如果该页面有编码错误则直接 return 结束函数。</p>
@@ -579,14 +584,19 @@
 <h3 id="【02x04】绘制学历与平均薪资关系图"><a href="#【02x04】绘制学历与平均薪资关系图" class="headerlink" title="【02x04】绘制学历与平均薪资关系图"></a><font color="#4876FF">【02x04】绘制学历与平均薪资关系图</font></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wages_education_chart</span><span class="params">(data)</span>:</span></span><br><span class="line">    <span class="comment"># 根据学历分类，求不同学历对应的平均薪资</span></span><br><span class="line">    wages_education = data.groupby(<span class="string">'学历'</span>).mean()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取学历和薪资的值，将其作为画图的 x 和 y 数据</span></span><br><span class="line">    wages = wages_education[<span class="string">'工资'</span>].index.values</span><br><span class="line">    education = [int(i) <span class="keyword">for</span> i <span class="keyword">in</span> wages_education[<span class="string">'工资'</span>].values]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 绘制柱状图</span></span><br><span class="line">    plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'Microsoft YaHei'</span>]</span><br><span class="line">    plt.figure(figsize=(<span class="number">9</span>, <span class="number">6</span>))</span><br><span class="line">    x = wages</span><br><span class="line">    y = education</span><br><span class="line">    color = [<span class="string">'#E41A1C'</span>, <span class="string">'#377EB8'</span>, <span class="string">'#4DAF4A'</span>]</span><br><span class="line">    plt.bar(x, y, color=color)</span><br><span class="line">    <span class="keyword">for</span> a, b <span class="keyword">in</span> zip(x, y):</span><br><span class="line">        plt.text(a, b, b, ha=<span class="string">'center'</span>, va=<span class="string">'bottom'</span>)</span><br><span class="line">    plt.title(<span class="string">'Python 相关职位学历与平均薪资关系'</span>, fontsize=<span class="number">13</span>)</span><br><span class="line">    plt.xlabel(<span class="string">'学历'</span>, fontsize=<span class="number">13</span>)</span><br><span class="line">    plt.ylabel(<span class="string">'平均薪资（元 / 月）'</span>, fontsize=<span class="number">13</span>)</span><br><span class="line">    plt.savefig(<span class="string">'wages_education_chart.png'</span>)</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure>
 <h2 id="【3x00】数据截图"><a href="#【3x00】数据截图" class="headerlink" title="【3x00】数据截图"></a><font color="#FF0000">【3x00】数据截图</font></h2><p>一共有 34009 条数据，完整数据已放在 github，可自行下载。</p>
 <p>MongoDB：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/06.png" alt="06"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/06.png" alt="06"><br></fancybox>
+
 <p>CSV 文件：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/07.png" alt="07"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/07.png" alt="07"><br></fancybox>
+
 <p>JSON 文件：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/08.png" alt="08"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/08.png" alt="08"><br></fancybox>
+
 <p>关系图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/09.png" alt="09"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/10.png" alt="10"></p>
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/09.png" alt="09"><br></fancybox>
+
+<fancybox><br><img src="https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/10.png" alt="10"><br></fancybox>
+
 <h2 id="【4x00】完整代码"><a href="#【4x00】完整代码" class="headerlink" title="【4x00】完整代码"></a><font color="#FF0000">【4x00】完整代码</font></h2><p>完整代码地址（点亮 star 有 buff 加成）：<a href="https://github.com/TRHX/Python3-Spider-Practice/tree/master/51job" target="_blank" rel="noopener">https://github.com/TRHX/Python3-Spider-Practice/tree/master/51job</a></p>
 <p>其他爬虫实战代码合集（持续更新）：<a href="https://github.com/TRHX/Python3-Spider-Practice" target="_blank" rel="noopener">https://github.com/TRHX/Python3-Spider-Practice</a></p>
 <p>爬虫实战专栏（持续更新）：<a href="https://itrhx.blog.csdn.net/article/category/9351278" target="_blank" rel="noopener">https://itrhx.blog.csdn.net/article/category/9351278</a></p>
@@ -674,10 +684,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-13T21:26:12+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-06T11:35:57+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年7月13日</p>
+    <p>最后更新于 2020年8月6日</p>
   </a>
 </div>
 
@@ -1352,7 +1362,7 @@
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.2/dist/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
   <script type="text/javascript">
     var gitalk = new Gitalk({
