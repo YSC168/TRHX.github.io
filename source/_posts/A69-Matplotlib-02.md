@@ -73,7 +73,9 @@ plt.plot(x, y)
 plt.show()
 ```
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/01.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【1x02】为坐标轴添加标签：matplotlib.pyplot.xlabel() / ylabel()</font>
 
@@ -110,7 +112,9 @@ plt.plot(a, b)
 plt.show()
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/02.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【1x03】任意位置添加文本：matplotlib.pyplot.text()</font>
 
@@ -152,7 +156,9 @@ plt.plot(a, b)
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/03.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【1x03】任意位置添加文本：matplotlib.pyplot.annotate()</font>
 
@@ -243,7 +249,9 @@ plt.show()
 
 <table><tr><td bgcolor="#7FFFD4" colspan="2"><strong><font color=#FF0000 size=3px>connectionstyle 样式举例</font></strong></td></tr></table>
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/04.png)
+</fancybox>
 
 应用举例：
 
@@ -270,7 +278,9 @@ plt.annotate(r'$\lim_{x\to 0}\frac{\sin(x)}{x}=1$',  # 插入 LaTeX 表达式
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/05.png)
+</fancybox>
 
 ---
 
@@ -364,8 +374,9 @@ plt.plot(a, b)
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/06.png)
-
+</fancybox>
 
 ### <font color=#1BC3FB>【2x03】指定单个字体：fontproperties</font>
 
@@ -389,14 +400,17 @@ plt.plot(a, b)
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/07.png)
-
+</fancybox>
 
 ### <font color=#1BC3FB>【2x04】指定文字路径：FontProperties</font>
 
 `matplotlib` 中 `font_manager` 模块的 `FontProperties` 方法可以通过指定文字路径来使用本地文字，在 Windows 中，文字路径一般是 `C:\Windows\Fonts\`，文字名称可以通过其属性来获取，部分用户自己安装的字体可能包含多个类型，可打开字体合集后通过其属性来获取。
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/08.png)
+</fancybox>
 
 ```python
 import matplotlib.pyplot as plt
@@ -414,7 +428,9 @@ plt.plot(a, b)
 plt.show()
 ```
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/09.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【2x05】文字更多属性：rc</font>
 
@@ -444,7 +460,9 @@ plt.plot(a, b)
 plt.show()
 ```
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/10.png)
+</fancybox>
 
 ## <font color=#FF0000>【3x00】设置画布大小 / 分辨率 / 颜色</font>
 
@@ -475,7 +493,9 @@ plt.plot(x, y)
 plt.show()
 ```
 
+<fancybox>
 ![11](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/11.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】设置网格</font>
 
@@ -518,7 +538,9 @@ plt.plot(a, b)
 plt.show()
 ```
 
+<fancybox>
 ![12](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A69/12.png)
+</fancybox>
 
 ---
 

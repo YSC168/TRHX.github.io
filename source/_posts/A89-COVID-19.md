@@ -44,13 +44,17 @@ description: COVID-19 肺炎疫情数据实时监控，基于 python 爬虫 + py
 
 ## <font color=#FF0000>【2x00】思维导图</font>
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A89/01.png)
+</fancybox>
 
 ## <font color=#FF0000>【3x00】数据结构分析</font>
 
 通过查看百度的疫情数据页面，可以看到很多整齐的数据，猜测就是疫情相关的数据，保存该页面，对其进行格式化，很容易可以分析出所有的数据都在 `<script type="application/json" id="captain-config"></script>` 里面，其中 title 里面是一些 Unicode 编码，将其转为中文后更容易得到不同的分类数据。
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A89/02.png)
+</fancybox>
 
 由于数据繁多，可以将数据主体部分提取出来，删除一些重复项和其他杂项，留下数据大体位置并分析数据结构，便于后期的数据提取，经过处理后的数据大致结构如下：
 
@@ -1038,19 +1042,29 @@ def foreign_daily_map():
 
 ### <font color="#4876FF">【8x01】数据储存 Excel</font>
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A89/03.png)
+</fancybox>
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A89/04.png)
+</fancybox>
 
 ### <font color="#4876FF">【8x02】词云图</font>
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A89/05.png)
+</fancybox>
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A89/06.png)
+</fancybox>
 
 ### <font color="#4876FF">【8x03】地图 + 折线图</font>
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A89/07.png)
+</fancybox>
 
 ## <font color=#FF0000>【9x00】完整代码</font>
 

@@ -117,7 +117,9 @@ plt.ylabel('y axis label')         # y 轴标签
 plt.show()
 ```
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/01.png)
+</fancybox>
 
 ### <font color=##4876FF>【2x03】堆积的直方图</font>
 
@@ -146,7 +148,9 @@ plt.legend(loc="upper left")
 plt.show()
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/02.png)
+</fancybox>
 
 ### <font color=##4876FF>【2x04】填充其他样式</font>
 
@@ -171,7 +175,9 @@ plt.ylabel('y axis label')         # y 轴标签
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/03.png)
+</fancybox>
 
 ![分割线](https://img-blog.csdnimg.cn/20200509010455973.png)
 
@@ -236,7 +242,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/04.png)
+</fancybox>
 
 ### <font color=##4876FF>【3x03】添加与标准差的误差线</font>
 
@@ -276,7 +284,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/05.png)
+</fancybox>
 
 ### <font color=##4876FF>【3x04】多序列柱状图</font>
 
@@ -310,7 +320,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/06.png)
+</fancybox>
 
 ### <font color=##4876FF>【3x05】堆积的柱状图</font>
 
@@ -340,7 +352,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/07.png)
+</fancybox>
 
 ### <font color=##4876FF>【3x06】填充其他样式</font>
 
@@ -370,7 +384,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/08.png)
+</fancybox>
 
 ### <font color=##4876FF>【3x07】添加文字描述</font>
 
@@ -411,7 +427,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/09.png)
+</fancybox>
 
 ![分割线](https://img-blog.csdnimg.cn/20200509010455973.png)
 
@@ -483,7 +501,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/10.png)
+</fancybox>
 
 ### <font color=##4876FF>【4x03】添加与标准差的误差线</font>
 
@@ -523,7 +543,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![11](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/11.png)
+</fancybox>
 
 ### <font color=##4876FF>【4x04】多序列条形图</font>
 
@@ -557,7 +579,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![12](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/12.png)
+</fancybox>
 
 ### <font color=##4876FF>【4x05】堆积的条形图</font>
 
@@ -587,7 +611,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![13](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/13.png)
+</fancybox>
 
 ### <font color=##4876FF>【4x06】填充其他样式</font>
 
@@ -617,7 +643,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![14](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/14.png)
+</fancybox>
 
 ### <font color=##4876FF>【4x07】添加文字描述</font>
 
@@ -658,7 +686,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![15](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A73/15.png)
+</fancybox>
 
 ---
 

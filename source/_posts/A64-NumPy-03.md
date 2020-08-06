@@ -253,7 +253,9 @@ True
 False
 ```
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A64/01.png)
+</fancybox>
 
 ```python
 >>> import numpy as np
@@ -278,7 +280,9 @@ True
 False
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A64/02.png)
+</fancybox>
 
 ```python
 >>> import numpy as np
@@ -303,7 +307,9 @@ True
 False
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A64/03.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【1x06】广播数组迭代</font>
 

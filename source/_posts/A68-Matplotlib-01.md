@@ -60,11 +60,15 @@ Matplotlib 是建立在 NumPy 数组基础上的多平台数据可视化程序�
 >>> plt.show()
 ```
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/01.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【1x02】图像结构</font>
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/02.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【1x03】三层结构</font>
 
@@ -164,7 +168,9 @@ plt.legend(['图例一', '图例二'])
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A68/03.png)
+</fancybox>
 
 ---
 

@@ -60,7 +60,9 @@ Pandas 系列文章：
 
 官方介绍：[https://pandas.pydata.org/docs/user_guide/groupby.html](https://pandas.pydata.org/docs/user_guide/groupby.html)
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A84/01.png)
+</fancybox>
 
 ## <font color=#FF0000>【02x00】GroupBy 对象</font>
 

@@ -90,21 +90,12 @@ links:
 
     - name: ZJohnson海马体
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/zjohnson.jpg
-      url: http://www.zjohnson.top/
+      url: http://zjohnson.top/
       backgroundColor: '#FBBC05'
       textColor: '#fff'
       tags:
       - 生物信息
       - Python
-
-    - name: Fangzh
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/fangzh.jpg
-      url: http://fangzh.top/
-      backgroundColor: '#708090'
-      textColor: '#fff'
-      tags:
-      - 人工智能
-      - 人生感悟
 
     - name: 一去二三遥
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/moonster.jpg
@@ -115,9 +106,9 @@ links:
       - 一个想当摄影师却被迫写代码的厨子
 
     - name: 清酒踏月
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/lkxin.png
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/lkxinblog.png
       url: https://www.lkxin.cn/
-      backgroundColor: '#E94335'
+      backgroundColor: '#708090'
       textColor: '#fff'
       tags:
       - 网络技术
@@ -167,15 +158,6 @@ links:
       - 前端
       - 摄影
 
-    - name: Tohot
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/tohot.jpg
-      url: https://tohot.top/
-      backgroundColor: '#008B8B'
-      textColor: '#fff'
-      tags:
-      - 开发
-      - 分享
-
     - name: Wuyongzhi·Blog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/wuyongzhi.jpg
       url: https://wuyongzhi.top/
@@ -194,15 +176,6 @@ links:
       - Java
       - 生活
 
-    - name: 喵喵喵~
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/giligili.jpg
-      url: https://giligili.top/
-      backgroundColor: '#FBBC05'
-      textColor: '#fff'
-      tags:
-      - 前端
-      - 二次元
-
     - name: mjx's blog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/mjx.jpg
       url: https://mjx.js.org/
@@ -211,14 +184,6 @@ links:
       tags:
       - JS
       - C++
-
-    - name: 人生地里的地瓜
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/l-zhe.jpg
-      url: http://www.l-zhe.com/
-      backgroundColor: '#E94335'
-      textColor: '#fff'
-      tags:
-      - 机器学习
 
     - name: Mohen's blog
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/mcmohen.jpg
@@ -256,14 +221,6 @@ links:
       - Web
       - 嵌入式
 
-    - name: Singularity
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/singularity2u.jpg
-      url: https://www.singularity2u.top/
-      backgroundColor: '#008B8B'
-      textColor: '#fff'
-      tags:
-      - ACM
-
     - name: 暗影
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/anbujingying.jpg
       url: https://dsanying.github.io/
@@ -284,16 +241,6 @@ links:
       - python
       - Linux
 
-    - name: 松林羊
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/andus.png
-      url: http://www.andus.top/
-      backgroundColor: '#708090'
-      textColor: '#fff'
-      tags:
-      - DevOps
-      - Java
-      - 前端
-
     - name: 小丁的个人博客
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/tding.jpg
       url: https://tding.top/
@@ -304,7 +251,7 @@ links:
 
     - name: KAYGB
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/kaygb.png
-      url: https://kaygb.top/
+      url: https://kaygb.com/
       backgroundColor: '#34A853'
       textColor: '#fff'
       tags:
@@ -312,9 +259,9 @@ links:
       - PHP
 
     - name: 黑猫
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/blackcat.png
-      url: https://www.blackcat.top/
-      backgroundColor: '#E94335'
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/blackcattop.png
+      url: https://blackcat.top/
+      backgroundColor: '#187BC3'
       textColor: '#fff'
       tags:
       - Java
@@ -325,7 +272,9 @@ links:
       backgroundColor: '#008B8B'
       textColor: '#fff'
       tags:
-      - 你现在的努力,是为了以后有更多的选择.
+      - Web
+      - Java
+      - 随笔
 
     - name: 残梦
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/2662419405.jpg
@@ -378,9 +327,9 @@ links:
       - DEVOPS
       - 技术交流
 
-    - name: 一觉睡到小时候
+    - name: LeePandar
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/lida1024.jpg
-      url: https://lida1024.top/
+      url: https://likeyou.cool/
       backgroundColor: '#E94335'
       textColor: '#fff'
       tags:
@@ -388,15 +337,15 @@ links:
       - 前端
 
     - name: 优客-blog
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/youke0.png
-      url: http://youke0.xyz/
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/youkeblog.jpeg
+      url: https://youkeblog.com/
       backgroundColor: '#708090'
       textColor: '#fff'
       tags:
       - 一定要比从前的自己更加优秀！
 
     - name: 高高编程小屋
-      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/frogfrog.jpg
+      avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/littlewhale.jpg
       url: http://littlewhale.xyz/
       backgroundColor: '#967ADC'
       textColor: '#fff'
@@ -438,9 +387,9 @@ links:
       tags:
       - 一个懒人的博客
 
-    - name: ChrAlpha 的幻想乡
+    - name: ChrAlpha
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/chralpha.jpg
-      url: https://chralpha.com/
+      url: https://ichr.me/
       backgroundColor: '#34A853'
       textColor: '#fff'
       tags:
@@ -510,3 +459,4 @@ links:
 > 简介：求知若饥，虚心若愚！
 
 > **<font size=4px color=#FF0000>由于目前友链数过多，所以暂停交换友链，敬请见谅！</font>**
+> **<font size=4px color=#FF0000>长期不能访问的站点将会被删除，若已恢复请留言告知！</font>**

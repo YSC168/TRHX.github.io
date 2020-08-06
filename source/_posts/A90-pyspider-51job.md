@@ -46,7 +46,9 @@ description: 利用 Python 根据用户输入的关键字爬取相关职位信�
 
 在页面的下方给出了该职位一共有多少页，使用 Xpath 和正则表达式提取里面的数字，方便后面翻页爬取使用，注意页面编码为 `gbk`。
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/01.png)
+</fancybox>
 
 ```python
     def tatal_url(self):
@@ -75,17 +77,25 @@ description: 利用 Python 根据用户输入的关键字爬取相关职位信�
   
   请求地址中的各参数值通过 js 加密：[https://js.51jobcdn.com/in/js/2018/coapi/coapi.min.js](https://js.51jobcdn.com/in/js/2018/coapi/coapi.min.js)
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/02.png)
+</fancybox>
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/03.png)
+</fancybox>
 
 **特殊情况二：**部分公司有自己的专属页面，此类页面的结构也不同于普通页面
 
   页面示例：[http://dali.51ideal.com/jobdetail.html?jobid=121746338](http://dali.51ideal.com/jobdetail.html?jobid=121746338)
-  
-![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/04.png)
 
+<fancybox>
+![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/04.png)
+</fancybox>
+
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/05.png)
+</fancybox>
 
 为了规范化，本次爬取将去掉这部分特殊页面，仅爬取 URL 带有 `jobs.51job.com` 的数据
 
@@ -352,21 +362,31 @@ def wages_education_chart(data):
 
 MongoDB：
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/06.png)
+</fancybox>
 
 CSV 文件：
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/07.png)
+</fancybox>
 
 JSON 文件：
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/08.png)
+</fancybox>
 
 关系图：
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/09.png)
+</fancybox>
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A90/10.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】完整代码</font>
 

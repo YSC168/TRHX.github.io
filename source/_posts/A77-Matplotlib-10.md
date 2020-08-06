@@ -147,7 +147,9 @@ plt.show()
 
 以上三种方法运行结果均为下图：
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/01.png)
+</fancybox>
 
 ## <font color=#FF0000>【02x00】cmap 与 colorbar</font>
 
@@ -155,7 +157,9 @@ plt.show()
 
 官方文档：[https://matplotlib.org/tutorials/colors/colormaps.html](https://matplotlib.org/tutorials/colors/colormaps.html)
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/02.png)
+</fancybox>
 
 如果使用了 cmap 参数，则可以使用 `pyplot.colorbar()` 函数来绘制一个色条，即颜色对照条。
 
@@ -219,7 +223,9 @@ ax.legend()
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/03.png)
+</fancybox>
 
 ## <font color=#FF0000>【04x00】3D 散点图：Axes3D.scatter</font>
 
@@ -271,7 +277,9 @@ ax.set_zlabel('z 轴', color='b')
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/04.png)
+</fancybox>
 
 ## <font color=#FF0000>【05x00】3D 线框图：Axes3D.plot_wireframe</font>
 
@@ -319,7 +327,9 @@ ax.set_zlabel('z 轴')
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/05.png)
+</fancybox>
 
 ## <font color=#FF0000>【06x00】3D 曲面图：Axes3D.plot_surface</font>
 
@@ -368,7 +378,9 @@ ax.set_zlim(-2, 2)
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/06.png)
+</fancybox>
 
 ---
 
@@ -424,7 +436,9 @@ ax.set_yticks(yticks)
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/07.png)
+</fancybox>
 
 ## <font color=#FF0000>【08x00】3D 箭头图：Axes3D.quiver</font>
 
@@ -475,7 +489,9 @@ ax.view_init(20)
 plt.show()
 ```
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/08.png)
+</fancybox>
 
 ## <font color=#FF0000>【09x00】3D 等高线图：Axes3D.contour</font>
 
@@ -527,7 +543,9 @@ ax.set_zlabel('z 轴')
 plt.show()
 ```
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/09.png)
+</fancybox>
 
 ## <font color=#FF0000>【10x00】3D 等高线填充图：Axes3D.contourf</font>
 
@@ -577,7 +595,9 @@ ax.set_zlabel('z 轴')
 plt.show()
 ```
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/10.png)
+</fancybox>
 
 ## <font color=#FF0000>【11x00】3D 三角曲面图：Axes3D.plot_trisurf</font>
 
@@ -624,7 +644,9 @@ ax.set_zlabel('z 轴')
 plt.show()
 ```
 
+<fancybox>
 ![11](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/11.png)
+</fancybox>
 
 ```python
 import numpy as np
@@ -693,7 +715,9 @@ ax.set_zlabel('z 轴')
 plt.show()
 ```
 
+<fancybox>
 ![12](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/12.png)
+</fancybox>
 
 ## <font color=#FF0000>【12x00】将 2D 图像聚合到 3D 图像中：Axes3D.add_collection3d</font>
 
@@ -741,7 +765,9 @@ ax.set_zlim3d(0, 300)
 plt.show()
 ```
 
+<fancybox>
 ![13](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/13.png)
+</fancybox>
 
 此外，该方法也常被用于绘制 3D 多边形图，即多边体，示例如下：
 
@@ -780,7 +806,9 @@ ax.set_zlim3d(-0.5, 1.5)
 plt.show()
 ```
 
+<fancybox>
 ![14](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/14.png)
+</fancybox>
 
 ## <font color=#FF0000>【13x00】3D 图添加文本描述：Axes3D.text</font>
 
@@ -829,7 +857,9 @@ ax.set_zlabel('Z 轴')
 plt.show()
 ```
 
+<fancybox>
 ![15](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A77/15.png)
+</fancybox>
 
 ---
 

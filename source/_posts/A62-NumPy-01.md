@@ -69,7 +69,9 @@ Python 列表的元素不同类型举例：
 
 Python 列表中的每一项必须包含各自的类型信息、引用计数和其他信息，也就是说，每一项都是一个完整的 Python 对象，同时，Python 列表还包含一个指向指针块的指针，其中的每一个指针对应一个完整的 Python 对象，另外，列表的优势是灵活，因为每个列表元素是一个包含数据和类型信息的完整结构体。相反 NumPy 数组缺乏这种灵活性，但是 NumPy 却能更有效地存储和操作数据。
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/01.png)
+</fancybox>
 
 ## <font color=#ff0000>【3x00】理解 NumPy Ndarray 对象</font>
 
@@ -82,7 +84,9 @@ Ndarray 内部由以下内容组成：
 - 一个表示数组形状（shape）的元组，表示各维度大小的元组；
 - 一个跨度元组（stride），其中的整数指的是为了前进到当前维度下一个元素需要“跨过”的字节数。
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/02.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】理解不同维度的数组</font>
 
@@ -103,7 +107,9 @@ NumPy 数组的维数称为秩（rank），秩就是轴的数量，即数组的�
 (4,)
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/03.png)
+</fancybox>
 
 ---
 
@@ -122,7 +128,9 @@ NumPy 数组的维数称为秩（rank），秩就是轴的数量，即数组的�
 
 > a.shape 输出数组的维度，对于此二维数组，可以理解为 2 行 4 列。
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/04.png)
+</fancybox>
 
 ---
 
@@ -147,11 +155,15 @@ NumPy 数组的维数称为秩（rank），秩就是轴的数量，即数组的�
 
 > a.shape 输出数组的维度，对于此三维数组，可以理解为 3 块，每块有 2 行 4 列。
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/05.png)
+</fancybox>
 
 有网友对三维数组的这个图有疑问，认为横线应该是 axis=0，竖线是 axis=1，斜线是 axis=2，这个确实有点儿绕，不要受到前面一维二维的影响，我把我的理解又画了一张图出来，另外大家可以尝试去取三维数组里面的某个值，多想一下就可以理解了。欢迎各位大佬一起交流学习！
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A62/06.png)
+</fancybox>
 
 ## <font color=#FF0000>【5x00】创建 Ndarray 对象（创建数组）</font>
 
@@ -486,8 +498,6 @@ numpy.logspace() 方法用于创建一个一维数组，该数组由一个等比
 >>> print(a)
 [  1   2   4   8  16  32  64 128 256 512]
 ```
-
-
 
 ### <font color=#1BC3FB>【5x07】numpy.empty()</font>
 

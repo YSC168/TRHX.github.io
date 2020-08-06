@@ -126,8 +126,8 @@ colors = [plt.cm.tab10(i/float(len(categories)-1)) for i in range(len(categories
 plt.figure(figsize=(16, 10), dpi= 80, facecolor='w', edgecolor='k')
 
 for i, category in enumerate(categories):
-    plt.scatter('area', 'poptotal', 
-                data=midwest.loc[midwest.category==category, :], 
+    plt.scatter('area', 'poptotal',
+                data=midwest.loc[midwest.category==category, :],
                 s=20, cmap=colors[i], label=str(category))
 # 原文 c=colors[i] 已修改为 cmap=colors[i]
 
@@ -137,11 +137,13 @@ plt.gca().set(xlim=(0.0, 0.1), ylim=(0, 90000),
 
 plt.xticks(fontsize=12); plt.yticks(fontsize=12)
 plt.title("Scatterplot of Midwest Area vs Population", fontsize=22)
-plt.legend(fontsize=12)    
-plt.show()    
+plt.legend(fontsize=12)
+plt.show()
 ```
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/01.png)
+</fancybox>
 
 ### <font color=##4876FF>【02】带边界的气泡图（Bubble plot with Encircling）</font>
 
@@ -193,7 +195,9 @@ plt.legend(fontsize=12)
 plt.show()
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/02.png)
+</fancybox>
 
 ### <font color=##4876FF>【03】带线性回归最佳拟合线的散点图（Scatter plot with linear regression line of best fit）</font>
 
@@ -216,7 +220,9 @@ plt.title("Scatterplot with line of best fit grouped by number of cylinders", fo
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/03.png)
+</fancybox>
 
 针对每一组数据绘制线性回归线（Each regression line in its own column），可以通过在 `sns.lmplot()` 中设置 `col=groupingcolumn` 参数来实现，如下：
 
@@ -240,7 +246,9 @@ gridobj.set(xlim=(0.5, 7.5), ylim=(0, 50))
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/04.png)
+</fancybox>
 
 ### <font color=##4876FF>【04】抖动图（Jittering with stripplot）</font>
 
@@ -259,7 +267,9 @@ plt.title('Use jittered plots to avoid overlapping of points', fontsize=22)
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/05.png)
+</fancybox>
 
 ### <font color=##4876FF>【05】计数图（Counts Plot）</font>
 
@@ -279,8 +289,9 @@ plt.title('Counts Plot - Size of circle is bigger as more points overlap', fonts
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/06.png)
-
+</fancybox>
 
 ### <font color=##4876FF>【06】边缘直方图（Marginal Histogram）</font>
 
@@ -320,7 +331,9 @@ ax_main.set_xticklabels(xlabels)
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/07.png)
+</fancybox>
 
 ### <font color=##4876FF>【07】边缘箱形图（Marginal Boxplot）</font>
 
@@ -362,7 +375,9 @@ for item in ([ax_main.xaxis.label, ax_main.yaxis.label] + ax_main.get_xticklabel
 plt.show()
 ```
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/08.png)
+</fancybox>
 
 ### <font color=##4876FF>【08】相关图（Correllogram）</font>
 
@@ -383,7 +398,9 @@ plt.yticks(fontsize=12)
 plt.show()
 ```
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/09.png)
+</fancybox>
 
 ### <font color=##4876FF>【09】成对图（Pairwise Plot）</font>
 
@@ -399,7 +416,9 @@ sns.pairplot(df, kind="scatter", hue="species", plot_kws=dict(s=80, edgecolor="w
 plt.show()
 ```
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/10.png)
+</fancybox>
 
 ```python
 # Load Dataset
@@ -411,7 +430,9 @@ sns.pairplot(df, kind="reg", hue="species")
 plt.show()
 ```
 
+<fancybox>
 ![11](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/11.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】偏差（Deviation）</font>
 
@@ -440,7 +461,9 @@ plt.grid(linestyle='--', alpha=0.5)
 plt.show()
 ```
 
+<fancybox>
 ![12](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/12.png)
+</fancybox>
 
 ### <font color=##4876FF>【11】发散型文本图（Diverging Texts）</font>
 
@@ -470,7 +493,9 @@ plt.xlim(-2.5, 2.5)
 plt.show()
 ```
 
+<fancybox>
 ![13](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/13.png)
+</fancybox>
 
 ### <font color=##4876FF>【12】发散型散点图（Diverging Dot Plot）</font>
 
@@ -507,7 +532,9 @@ plt.xlim(-2.5, 2.5)
 plt.show()
 ```
 
+<fancybox>
 ![14](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/14.png)
+</fancybox>
 
 ### <font color=##4876FF>【13】带标记的发散型棒棒糖图（Diverging Lollipop Chart with Markers）</font>
 
@@ -553,7 +580,9 @@ plt.grid(linestyle='--', alpha=0.5)
 plt.show()
 ```
 
+<fancybox>
 ![15](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/15.png)
+</fancybox>
 
 ### <font color=##4876FF>【14】面积图（Area Chart）</font>
 
@@ -591,7 +620,9 @@ plt.grid(alpha=0.5)
 plt.show()
 ```
 
+<fancybox>
 ![16](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/16.png)
+</fancybox>
 
 ## <font color=#FF0000>【5x00】排序（Ranking）</font>
 
@@ -630,7 +661,9 @@ fig.add_artist(p2)
 plt.show()
 ```
 
+<fancybox>
 ![17](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/17.png)
+</fancybox>
 
 ### <font color=##4876FF>【16】棒棒糖图（Lollipop Chart）</font>
 
@@ -662,7 +695,9 @@ for row in df.itertuples():
 plt.show()
 ```
 
+<fancybox>
 ![18](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/18.png)
+</fancybox>
 
 ### <font color=##4876FF>【17】点图（Dot Plot）</font>
 
@@ -689,7 +724,9 @@ ax.set_xlim(10, 27)
 plt.show()
 ```
 
+<fancybox>
 ![19](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/19.png)
+</fancybox>
 
 ### <font color=##4876FF>【18】坡度图（Slope Chart）</font>
 
@@ -755,7 +792,9 @@ plt.gca().spines["left"].set_alpha(.0)
 plt.show()
 ```
 
+<fancybox>
 ![20](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/20.png)
+</fancybox>
 
 ### <font color=##4876FF>【19】哑铃图（Dumbbell Plot）</font>
 
@@ -805,7 +844,9 @@ ax.set_xticklabels(['5%', '15%', '20%', '25%'])
 plt.show()
 ```
 
+<fancybox>
 ![21](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/21.png)
+</fancybox>
 
 ## <font color=#FF0000>【6x00】分布（Distribution）</font>
 
@@ -838,7 +879,9 @@ plt.xticks(ticks=bins[::3], labels=[round(b, 1) for b in bins[::3]])
 plt.show()
 ```
 
+<fancybox>
 ![22](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/22.png)
+</fancybox>
 
 ### <font color=##4876FF>【21】分类变量的直方图（Histogram for Categorical Variable）</font>
 
@@ -869,7 +912,9 @@ plt.xticks(ticks=bins, labels=np.unique(df[x_var]).tolist(), rotation=90, horizo
 plt.show()
 ```
 
+<fancybox>
 ![23](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/23.png)
+</fancybox>
 
 ### <font color=##4876FF>【22】密度图（Density Plot）</font>
 
@@ -892,7 +937,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![24](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/24.png)
+</fancybox>
 
 ### <font color=##4876FF>【23】直方图密度曲线（Density Curves with Histogram）</font>
 
@@ -918,7 +965,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![25](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/25.png)
+</fancybox>
 
 ### <font color=##4876FF>【24】山峰叠峦图 / 欢乐图（Joy Plot）</font>
 
@@ -943,7 +992,9 @@ plt.title('Joy Plot of City and Highway Mileage by Class', fontsize=22)
 plt.show()
 ```
 
+<fancybox>
 ![26](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/26.png)
+</fancybox>
 
 ### <font color=##4876FF>【25】分布式点图（Distributed Dot Plot）</font>
 
@@ -993,7 +1044,9 @@ plt.grid(axis='both', alpha=.4, linewidth=.1)
 plt.show()
 ```
 
+<fancybox>
 ![27](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/27.png)
+</fancybox>
 
 ### <font color=##4876FF>【26】箱形图（Box Plot）</font>
 
@@ -1028,7 +1081,9 @@ plt.ylim(10, 40)
 plt.show()
 ```
 
+<fancybox>
 ![28](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/28.png)
+</fancybox>
 
 ### <font color=##4876FF>【27】点 + 箱形图（Dot + Box Plot）</font>
 
@@ -1052,7 +1107,9 @@ plt.legend(title='Cylinders')
 plt.show()
 ```
 
+<fancybox>
 ![29](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/29.png)
+</fancybox>
 
 ### <font color=##4876FF>【28】小提琴图（Violin Plot）</font>
 
@@ -1071,7 +1128,9 @@ plt.title('Violin Plot of Highway Mileage by Vehicle Class', fontsize=22)
 plt.show()
 ```
 
+<fancybox>
 ![30](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/30.png)
+</fancybox>
 
 ### <font color=##4876FF>【29】人口金字塔图（Population Pyramid）</font>
 
@@ -1099,7 +1158,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![31](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/31.png)
+</fancybox>
 
 ### <font color=##4876FF>【30】分类图（Categorical Plots）</font>
 
@@ -1120,7 +1181,9 @@ g = sns.catplot("alive", col="deck", col_wrap=4,
 plt.show()
 ```
 
+<fancybox>
 ![32](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/32.png)
+</fancybox>
 
 ```python
 # Load Dataset
@@ -1137,7 +1200,9 @@ sns.catplot(x="age", y="embark_town",
 plt.show()
 ```
 
+<fancybox>
 ![33](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/33.png)
+</fancybox>
 
 ## <font color=#FF0000>【7x00】组成（Composition）</font>
 
@@ -1180,7 +1245,9 @@ fig = plt.figure(
 plt.show()
 ```
 
+<fancybox>
 ![34](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/34.png)
+</fancybox>
 
 ```python
 # ! pip install pywaffle
@@ -1240,7 +1307,9 @@ fig = plt.figure(
 plt.show()
 ```
 
+<fancybox>
 ![35](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/35.png)
+</fancybox>
 
 ### <font color=##4876FF>【32】饼图（Pie Chart）</font>
 
@@ -1264,7 +1333,9 @@ plt.ylabel("")
 plt.show()
 ```
 
+<fancybox>
 ![36](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/36.png)
+</fancybox>
 
 ```python
 # Import
@@ -1300,7 +1371,9 @@ ax.set_title("Class of Vehicles: Pie Chart")
 plt.show()
 ```
 
+<fancybox>
 ![37](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/37.png)
+</fancybox>
 
 ### <font color=##4876FF>【33】矩阵树形图（Treemap）</font>
 
@@ -1331,7 +1404,9 @@ plt.axis('off')
 plt.show()
 ```
 
+<fancybox>
 ![38](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/38.png)
+</fancybox>
 
 ### <font color=##4876FF>【34】条形图（Bar Chart）</font>
 
@@ -1364,7 +1439,9 @@ plt.ylim(0, 45)
 plt.show()
 ```
 
+<fancybox>
 ![39](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/39.png)
+</fancybox>
 
 ## <font color=#FF0000>【8x00】变化（Change）</font>
 
@@ -1397,7 +1474,9 @@ plt.gca().spines["left"].set_alpha(0.3)
 plt.show()
 ```
 
+<fancybox>
 ![40](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/40.png)
+</fancybox>
 
 ### <font color=##4876FF>【36】带波峰和波谷注释的时间序列图（Time Series with Peaks and Troughs Annotated）</font>
 
@@ -1447,7 +1526,9 @@ plt.grid(axis='y', alpha=.3)
 plt.show()
 ```
 
+<fancybox>
 ![41](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/41.png)
+</fancybox>
 
 ### <font color=##4876FF>【37】自相关 (ACF) 和部分自相关 (PACF) 图（Autocorrelation (ACF) and Partial Autocorrelation (PACF) Plot）</font>
 
@@ -1483,7 +1564,9 @@ ax2.tick_params(axis='both', labelsize=12)
 plt.show()
 ```
 
+<fancybox>
 ![42](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/42.png)
+</fancybox>
 
 ### <font color=##4876FF>【38】交叉相关图（Cross Correlation plot）</font>
 
@@ -1520,7 +1603,9 @@ plt.xlim(0, len(ccs))
 plt.show()
 ```
 
+<fancybox>
 ![43](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/43.png)
+</fancybox>
 
 ### <font color=##4876FF>【39】时间序列分解图（Time Series Decomposition Plot）</font>
 
@@ -1544,7 +1629,9 @@ result.plot().suptitle('Time Series Decomposition of Air Passengers')
 plt.show()
 ```
 
+<fancybox>
 ![44](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/44.png)
+</fancybox>
 
 ### <font color=##4876FF>【40】多重时间序列（Multiple Time Series）</font>
 
@@ -1590,7 +1677,9 @@ plt.xlim(-2, 80)
 plt.show()
 ```
 
+<fancybox>
 ![45](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/45.png)
+</fancybox>
 
 ### <font color=##4876FF>【41】使用次要的 Y 轴来绘制不同范围的图形（Plotting with different scales using secondary Y axis）</font>
 
@@ -1630,7 +1719,9 @@ fig.tight_layout()
 plt.show()
 ```
 
+<fancybox>
 ![46](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/46.png)
+</fancybox>
 
 ### <font color=##4876FF>【42】带误差带的时间序列（Time Series with Error Bands）</font>
 
@@ -1673,7 +1764,9 @@ for y in range(8, 20, 2):
 plt.show()
 ```
 
+<fancybox>
 ![47](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/47.png)
+</fancybox>
 
 ```python
 "Data Source: https://www.kaggle.com/olistbr/brazilian-ecommerce#olist_orders_dataset.csv"
@@ -1716,7 +1809,9 @@ for y in range(5, 10, 1):
 plt.show()
 ```
 
+<fancybox>
 ![48](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/48.png)
+</fancybox>
 
 ### <font color=##4876FF>【43】堆积面积图（Stacked Area Chart）</font>
 
@@ -1768,7 +1863,9 @@ plt.gca().spines["left"].set_alpha(.3)
 plt.show()
 ```
 
+<fancybox>
 ![49](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/49.png)
+</fancybox>
 
 ### <font color=##4876FF>【44】未堆积面积图（Area Chart UnStacked）</font>
 
@@ -1810,7 +1907,9 @@ plt.gca().spines["left"].set_alpha(.3)
 plt.show()
 ```
 
+<fancybox>
 ![50](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/50.png)
+</fancybox>
 
 ### <font color=##4876FF>【45】日历热力图（Calendar Heat Map）</font>
 
@@ -1833,8 +1932,9 @@ calmap.calendarplot(df['2014']['VIX.Close'], fig_kws={'figsize': (16, 10)},
 plt.show()
 ```
 
+<fancybox>
 ![51](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/51.png)
-
+</fancybox>
 
 ### <font color=##4876FF>【46】季节图（Seasonal Plot）</font>
 
@@ -1881,7 +1981,9 @@ plt.gca().spines["left"].set_alpha(0.5)
 plt.show()
 ```
 
+<fancybox>
 ![52](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/52.png)
+</fancybox>
 
 ## <font color=#FF0000>【9x00】分组（ Groups）</font>
 
@@ -1904,7 +2006,9 @@ plt.xticks(fontsize=12)
 plt.show()
 ```
 
+<fancybox>
 ![53](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/53.png)
+</fancybox>
 
 ### <font color=##4876FF>【48】聚类图（Cluster Plot）</font>
 
@@ -1950,7 +2054,9 @@ plt.title('Agglomerative Clustering of USArrests (5 Groups)', fontsize=22)
 plt.show()
 ```
 
+<fancybox>
 ![54](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/54.png)
+</fancybox>
 
 ### <font color=##4876FF>【49】安德鲁斯曲线（Andrews Curve）</font>
 
@@ -1981,7 +2087,9 @@ plt.yticks(fontsize=12)
 plt.show()
 ```
 
+<fancybox>
 ![55](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/55.png)
+</fancybox>
 
 ### <font color=##4876FF>【50】平行坐标图（Parallel Coordinates）</font>
 
@@ -2010,7 +2118,9 @@ plt.yticks(fontsize=12)
 plt.show()
 ```
 
+<fancybox>
 ![56](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A78/56.png)
+</fancybox>
 
 ---
 

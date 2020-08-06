@@ -98,7 +98,9 @@ plt.title('饼状图简单示例')
 plt.show()
 ```
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A74/01.png)
+</fancybox>
 
 ## <font color=#FF0000>【3x00】按角度调整扇形标签</font>
 
@@ -120,7 +122,9 @@ plt.title('饼状图按角度调整 labels 示例')
 plt.show()
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A74/02.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】显示图例</font>
 
@@ -142,7 +146,9 @@ plt.legend(bbox_to_anchor=(1, 1))
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A74/03.png)
+</fancybox>
 
 ---
 
@@ -177,7 +183,9 @@ plt.legend(bbox_to_anchor=(1, 1))
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A74/04.png)
+</fancybox>
 
 ## <font color=#FF0000>【6x00】显示各扇区所占百分比</font>
 
@@ -207,7 +215,9 @@ plt.legend(bbox_to_anchor=(1, 1))  # 显示图例
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A74/05.png)
+</fancybox>
 
 ## <font color=#FF0000>【7x00】旋转饼状图</font>
 
@@ -238,7 +248,9 @@ plt.legend(bbox_to_anchor=(1, 1))  # 显示图例
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A74/06.png)
+</fancybox>
 
 ## <font color=#FF0000>【8x00】自定义每个扇形和文字属性</font>
 
@@ -281,7 +293,9 @@ plt.legend(bbox_to_anchor=(1, 1), borderpad=0.6)  # 显示图例
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A74/07.png)
+</fancybox>
 
 ---
 

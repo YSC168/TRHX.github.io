@@ -106,7 +106,9 @@ read_table：[https://pandas.pydata.org/docs/reference/api/pandas.read_table.htm
 
 首先创建一个 test1.csv 文件：
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/01.png)
+</fancybox>
 
 使用 read_csv 方法将其读出为一个 DataFrame 对象：
 
@@ -139,7 +141,9 @@ read_table：[https://pandas.pydata.org/docs/reference/api/pandas.read_table.htm
 
 以上示例中第一行为列标签，如果没有单独定义列标签，使用 read_csv 方法也会默认将第一行当作列标签：
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/02.png)
+</fancybox>
 
 ```python
 >>> import pandas as pd
@@ -176,7 +180,9 @@ read_table：[https://pandas.pydata.org/docs/reference/api/pandas.read_table.htm
 
 `index_col` 参数可以指定某一列作为 DataFrame 的行索引，传递的参数是列名称，在以下示例中，会将列名为 `message` 的列作为 DataFrame 的行索引：
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/03.png)
+</fancybox>
 
 ```python
 >>> pd.read_csv(r'C:\Users\TanRe\Desktop\test2.csv', 
@@ -191,7 +197,9 @@ python   9  10  11  12
 
 如果需要构造多层索引的 DataFrame 对象，则只需传入由列编号或列名组成的列表即可：
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/04.png)
+</fancybox>
 
 ```python
 >>> import pandas as pd
@@ -212,7 +220,9 @@ two  a          9      10
 
 在 read_table 中，sep 参数用于接收分隔符，如果遇到不是用固定的分隔符去分隔字段的，也可以传递一个正则表达式作为 read_table 的分隔符，如下面的 txt 文件数据之间是由不同的空白字符间隔开的：
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/05.png)
+</fancybox>
 
 ```python
 >>> import pandas as pd
@@ -228,7 +238,9 @@ ddd -0.871858 -0.348382  1.100491
 
 skiprows	参数可用于设置需要忽略的行数，或需要跳过的行号列表，在下面的示例中，读取文件时选择跳过第1、3、4行（索引值分别为0、2、3）：
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/06.png)
+</fancybox>
 
 ```python
 >>> import pandas as pd
@@ -243,7 +255,9 @@ skiprows	参数可用于设置需要忽略的行数，或需要跳过的行号�
 
 当文件中出现了空字符串或者 NA 值，Pandas 会将其标记成 NaN（缺失值），同样也可以使用 `isnull` 方法来判断结果值是否为缺失值：
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/07.png)
+</fancybox>
 
 ```python
 >>> import pandas as pd
@@ -292,7 +306,9 @@ skiprows	参数可用于设置需要忽略的行数，或需要跳过的行号�
 
 以下 test6.csv 文件中包含 50 行数据：
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/08.png)
+</fancybox>
 
 可以设置 `pd.options.display.max_rows` 来紧凑地显示指定行数的数据：
 
@@ -347,7 +363,7 @@ skiprows	参数可用于设置需要忽略的行数，或需要跳过的行号�
 >>> for piece in chunker:
 	tot = tot.add(piece['key'].value_counts(), fill_value=0)
 
-	
+
 >>> tot = tot.sort_values(ascending=False)
 >>> tot[:10]
 G    6.0
@@ -415,7 +431,9 @@ Pandas 提供了一些用于将表格型数据读取为 DataFrame 对象的函�
 >>> data.to_csv(r'C:\Users\TanRe\Desktop\out1.csv')
 ```
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/09.png)
+</fancybox>
 
 ### <font color=#4876FF>【02x02】sep 指定分隔符</font>
 
@@ -433,7 +451,9 @@ sep 参数可用于其他分隔符：
 >>> data.to_csv(r'C:\Users\TanRe\Desktop\out2.csv', sep='|')
 ```
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/10.png)
+</fancybox>
 
 ### <font color=#4876FF>【02x03】na_rep 替换缺失值</font>
 
@@ -451,7 +471,9 @@ na_rep 参数可将缺失值（NaN）替换成其他字符串：
 >>> data.to_csv(r'C:\Users\TanRe\Desktop\out3.csv', na_rep='X')
 ```
 
+<fancybox>
 ![11](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/11.png)
+</fancybox>
 
 ### <font color=#4876FF>【02x04】index / header 行与列标签</font>
 
@@ -469,7 +491,9 @@ na_rep 参数可将缺失值（NaN）替换成其他字符串：
 >>> data.to_csv(r'C:\Users\TanRe\Desktop\out4.csv', index=False, header=False)
 ```
 
+<fancybox>
 ![12](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/12.png)
+</fancybox>
 
 还可以传入列表来重新设置列标签：
 
@@ -485,7 +509,9 @@ na_rep 参数可将缺失值（NaN）替换成其他字符串：
 >>> data.to_csv(r'C:\Users\TanRe\Desktop\out5.csv', header=['a', 'b', 'c', 'd', 'e', 'f'])
 ```
 
+<fancybox>
 ![13](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/13.png)
+</fancybox>
 
 ### <font color=#4876FF>【02x05】columns 指定列</font>
 
@@ -499,11 +525,13 @@ na_rep 参数可将缺失值（NaN）替换成其他字符串：
 0       one  1   2   3.0   4     NaN
 1       two  5   6   NaN   8   world
 2     three  9  10  11.0  12  python
->>> 
+>>>
 >>> data.to_csv(r'C:\Users\TanRe\Desktop\out6.csv', columns=['c', 'b', 'a'])
 ```
 
+<fancybox>
 ![14](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A88/14.png)
+</fancybox>
 
 ---
 

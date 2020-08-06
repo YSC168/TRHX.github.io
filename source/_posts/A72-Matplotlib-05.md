@@ -124,7 +124,9 @@ plt.scatter(x, y)
 plt.show()
 ```
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/01.png)
+</fancybox>
 
 ## <font color=#FF0000>【3x00】多条数据</font>
 
@@ -151,7 +153,9 @@ plt.scatter(x, y3)
 plt.show()
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/02.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】设置颜色 / 样式 / 图例</font>
 
@@ -178,7 +182,9 @@ plt.legend(framealpha=0)    # 显示图例，设置为全透明
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/03.png)
+</fancybox>
 
 ## <font color=#FF0000>【5x00】指定位置显示文本注释</font>
 
@@ -213,7 +219,9 @@ for m, n in zip(x, y):
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/04.png)
+</fancybox>
 
 ---
 
@@ -257,8 +265,9 @@ plt.scatter(x, y, alpha=0.5)
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/05.png)
-
+</fancybox>
 
 ## <font color=#FF0000>【7x00】随机颜色与色条</font>
 
@@ -284,7 +293,9 @@ plt.scatter(x, y, c=color, s=size, alpha=0.5)
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/06.png)
+</fancybox>
 
 可以用 `pyplot.colorbar()` 方法绘制颜色对照条。
 
@@ -322,7 +333,9 @@ plt.colorbar()
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/07.png)
+</fancybox>
 
 ## <font color=#FF0000>【8x00】不同图像之间的层级调整</font>
 
@@ -352,7 +365,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/08.png)
+</fancybox>
 
 设置 `zorder` 参数后：
 
@@ -378,7 +393,9 @@ plt.legend()
 plt.show()
 ```
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/09.png)
+</fancybox>
 
 ## <font color=#FF0000>【9x00】框选部分数据</font>
 
@@ -419,7 +436,9 @@ ax.add_patch(polygon)   # 将补丁添加到当前绘图区
 plt.show()
 ```
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A72/10.png)
+</fancybox>
 
 ---
 

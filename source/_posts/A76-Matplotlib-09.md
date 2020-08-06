@@ -51,7 +51,9 @@ Matplotlib 系列文章：
 
 参考百度百科：极坐标，属于二维坐标系统，创始人是牛顿，主要应用于数学领域。极坐标是指在平面内取一个定点 <font color=#FF0000>O</font>，叫极点，引一条射线 <font color=#FF0000>Ox</font>，叫做极轴，再选定一个长度单位和角度的正方向（通常取逆时针方向）。对于平面内任何一点 <font color=#FF0000>M</font>，用 <font color=#FF0000>ρ</font> 表示线段 <font color=#FF0000>OM</font> 的长度（有时也用 <font color=#FF0000>r</font> 表示），<font color=#FF0000>θ</font> 表示从 <font color=#FF0000>Ox</font> 到 <font color=#FF0000>OM</font> 的角度，<font color=#FF0000>ρ</font> 叫做点 <font color=#FF0000>M</font> 的极径，<font color=#FF0000>θ</font> 叫做点 <font color=#FF0000>M</font> 的极角，有序数对 <font color=#FF0000>(ρ,θ)</font> 就叫点 <font color=#FF0000>M</font> 的极坐标，这样建立的坐标系叫做极坐标系。通常情况下，<font color=#FF0000>M</font> 的极径坐标单位为 <font color=#FF0000>1</font>（长度单位），极角坐标单位为 <font color=#FF0000>rad</font>（或<font color=#FF0000>°</font>）。
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/01.png)
+</fancybox>
 
 ## <font color=#FF0000>【2x00】基本方法 matplotlib.pyplot.polar()</font>
 
@@ -172,7 +174,9 @@ plt.show()
 
 绘制结果如下图：
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/02.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】绘制雷达图</font>
 
@@ -258,7 +262,9 @@ plt.title('matplotlib.pyplot.thetagrids() 用法示例', pad=15)
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/03.png)
+</fancybox>
 
 ---
 
@@ -301,7 +307,9 @@ plt.legend(bbox_to_anchor=(1.3, 1))
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/04.png)
+</fancybox>
 
 ---
 
@@ -354,7 +362,9 @@ plt.title('极坐标散点图示例一', pad=15)
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/05.png)
+</fancybox>
 
 ---
 
@@ -386,7 +396,9 @@ plt.title('极坐标散点图示例二', pad=15)
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/06.png)
+</fancybox>
 
 ---
 
@@ -418,7 +430,9 @@ plt.title('极坐标散点图示例三', pad=15)
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/07.png)
+</fancybox>
 
 ## <font color=#FF0000>【6x00】高级用法：绘制极坐标柱状图</font>
 
@@ -457,7 +471,9 @@ plt.title('极坐标柱状图示例一', pad=15)
 plt.show()
 ```
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/08.png)
+</fancybox>
 
 ---
 
@@ -486,7 +502,9 @@ plt.title('极坐标柱状图示例二', pad=15)
 plt.show()
 ```
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/09.png)
+</fancybox>
 
 ---
 
@@ -516,7 +534,9 @@ plt.title('极坐标柱状图示例三', pad=15)
 plt.show()
 ```
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A76/10.png)
+</fancybox>
 
 ---
 

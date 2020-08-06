@@ -586,7 +586,9 @@ ValueError: operands could not be broadcast together with shapes (3,4,5) (4,2)
  [30 31 32]]
 ```
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A63/01.png)
+</fancybox>
 
 实例二：一个 <font color=#ff0000>**4 行 3 列**</font>的二维数组与一个 <font color=#ff0000>**4 行 1 列**</font>的二维数组相加，此时就会触发广播机制，代码与图解如下：
 
@@ -611,7 +613,9 @@ ValueError: operands could not be broadcast together with shapes (3,4,5) (4,2)
  [14 15 16]]
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A63/02.png)
+</fancybox>
 
 实例三：一个 <font color=#ff0000>**3 块 4 行 2 列，即 shape=(3, 4, 2)**</font> 的三维数组与一个 <font color=#ff0000>**1 块 4 行 2 列，即 shape=(1, 4, 2)**</font> 的三维数组相加，此时就会触发广播机制，代码与图解如下：
 
@@ -660,7 +664,9 @@ ValueError: operands could not be broadcast together with shapes (3,4,5) (4,2)
   [30 32]]]
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A63/03.png)
+</fancybox>
 
 ---
 

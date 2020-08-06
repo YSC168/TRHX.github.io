@@ -156,7 +156,9 @@ plt.show()
 
 以上三种方法绘制的图形均一致：
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/01.png)
+</fancybox>
 
 ## <font color=#FF0000>【2x00】数学公式 LaTeX</font>
 
@@ -181,7 +183,9 @@ plt.plot(t, s)
 plt.show()
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/02.png)
+</fancybox>
 
 ## <font color=#FF0000>【3x00】调整 x / y 轴刻度和范围</font>
 
@@ -215,8 +219,9 @@ plt.xticks(range(2, 26, 3), ('the {} ticks'.format(i) for i in range(2, 26, 3)),
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/03.png)
-
+</fancybox>
 
 ```python
 import matplotlib.pyplot as plt
@@ -231,7 +236,9 @@ plt.plot(x, y)
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/04.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】画布边框与坐标轴的移动</font>
 
@@ -273,7 +280,9 @@ ax.spines['left'].set_position(('data', 0))    # 设置 y 轴在 (0, 0) 位置
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/05.png)
+</fancybox>
 
 ---
 
@@ -320,7 +329,9 @@ ax4.plot(-x, x ** 2)
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/06.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【5x02】方法二：pyplot.subplot()</font>
 
@@ -349,7 +360,9 @@ plt.plot(x, x ** 4)
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/07.png)
+</fancybox>
 
 ### <font color=#1BC3FB>【5x03】方法三：pyplot.subplots()</font>
 
@@ -372,7 +385,9 @@ axes[1][1].plot(x, -x ** 2)   # 绘制第2行第2列
 plt.show()
 ```
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/08.png)
+</fancybox>
 
 ## <font color=#FF0000>【6x00】填充补丁</font>
 
@@ -437,7 +452,9 @@ plt.plot(x, y)
 plt.show()
 ```
 
+<fancybox>
 ![09](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/09.png)
+</fancybox>
 
 ## <font color=#FF0000>【7x00】保存图像</font>
 
@@ -475,7 +492,9 @@ plt.savefig('D:\\data\\pic.png', transparent=True)  # 保存为透明文件
 plt.show()
 ```
 
+<fancybox>
 ![10](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A70/10.png)
+</fancybox>
 
 ---
 

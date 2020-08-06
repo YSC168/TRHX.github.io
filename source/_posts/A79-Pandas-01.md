@@ -124,7 +124,9 @@ Series 是带标签的一维数组，可存储整数、浮点数、字符串、P
 |    name    |  str 类型，可选项，给 Series 命名  |
 |     copy    |  bool 类型，可选项，默认 False，是否复制输入数据  |
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A79/01.png)
+</fancybox>
 
 ### <font color=#4876FF>【03x01】通过 list 构建 Series</font>
 
@@ -390,7 +392,9 @@ DataFrame 是一个表格型的数据结构，它含有一组有序的列，每�
 |    dtype    |  输出系列的数据类型。可选项，如果未指定，则将从数据中推断，具体参考官网 [dtypes](https://pandas.pydata.org/docs/getting_started/basics.html#dtypes) 介绍  |
 |     copy    |  bool 类型，可选项，默认 False，是否复制输入数据，仅影响 DataFrame/2d ndarray 输入  |
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A79/02.png)
+</fancybox>
 
 ### <font color=#4876FF>【03x01】通过 ndarray 构建 DataFrame</font>
 

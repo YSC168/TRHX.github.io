@@ -158,8 +158,10 @@ plt.ylabel('y 轴')       # 设置 y 轴标签
 plt.plot(x, y)
 plt.show()
 ```
-                
+
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A71/01.png)
+</fancybox>
 
 ## <font color=#FF0000>【3x00】多条数据</font>
 
@@ -186,7 +188,9 @@ plt.plot(x, y3)
 plt.show()
 ```
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A71/02.png)
+</fancybox>
 
 ## <font color=#FF0000>【4x00】设置颜色 / 样式 / 图例</font>
 
@@ -217,7 +221,9 @@ plt.legend(edgecolor='#87A3CC', facecolor='#F5F5F5')                  # 图例
 plt.show()
 ```
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A71/03.png)
+</fancybox>
 
 ---
 
@@ -260,7 +266,9 @@ plt.yticks((-1, 0, 1, 2, 3))
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A71/04.png)
+</fancybox>
 
 ## <font color=#FF0000>【6x00】隐藏画布边框</font>
 
@@ -303,7 +311,9 @@ ax.spines['top'].set_visible(False)     # 获取绘图区的轴对象（spines�
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A71/05.png)
+</fancybox>
 
 ## <font color=#FF0000>【7x00】移动坐标轴</font>
 
@@ -343,8 +353,10 @@ ax.yaxis.set_ticks_position('left')            # 设置 y 坐标轴标签的位�
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A71/06.png)
- 
+</fancybox>
+
 ## <font color=#FF0000>【8x00】指定位置显示文本</font>
 
 `matplotlib.pyplot.annotate()` 方法可以在指定坐标点添加文本或 LaTeX 描述，也可以在其他位置添加描述后，使用箭头指向某个坐标点。
@@ -434,7 +446,9 @@ plt.show()
 
 <table><tr><td bgcolor="#7FFFD4" colspan="2"><strong><font color=#FF0000 size=3px>connectionstyle 样式举例</font></strong></td></tr></table>
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A71/07.png)
+</fancybox>
 
 应用举例：
 
@@ -482,7 +496,9 @@ plt.annotate(r'$\lim_{x\to 0}\frac{\sin(x)}{x}=1$',  # 插入 LaTeX 表达式
 plt.show()
 ```
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A71/08.png)
+</fancybox>
 
 ---
 

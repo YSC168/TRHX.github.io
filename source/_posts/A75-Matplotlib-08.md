@@ -58,11 +58,13 @@ Matplotlib 系列文章：
 
 <font color=#FF0000>**在 Matplotlib 等高线的绘制中，需要传递三个基本参数：某个点的 x、y 轴坐标以及其高度。**</font>
 
+<fancybox>
 ![01](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A75/01.png)
+</fancybox>
 
+<fancybox>
 ![02](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A75/02.png)
-
-
+</fancybox>
 
 ## <font color=#FF0000>【2x00】理解 numpy.meshgrid()</font>
 
@@ -190,7 +192,9 @@ print(res)
 
 官方文档：[https://matplotlib.org/tutorials/colors/colormaps.html](https://matplotlib.org/tutorials/colors/colormaps.html)
 
+<fancybox>
 ![03](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A75/03.png)
+</fancybox>
 
 ![分割线](https://img-blog.csdnimg.cn/20200512112427932.png)
 
@@ -221,7 +225,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![04](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A75/04.png)
+</fancybox>
 
 ![分割线](https://img-blog.csdnimg.cn/20200512112427932.png)
 
@@ -256,7 +262,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![05](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A75/05.png)
+</fancybox>
 
 ![分割线](https://img-blog.csdnimg.cn/20200512112427932.png)
 
@@ -292,7 +300,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![06](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A75/06.png)
+</fancybox>
 
 如果想启用渐变色，则可以设置 `cmap`，取值参见<font color=#FF0000>**【6x00】Colormap 取值**</font>，`colorbar()` 方法可以显示颜色对照条。
 
@@ -325,7 +335,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![07](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A75/07.png)
+</fancybox>
 
 ![分割线](https://img-blog.csdnimg.cn/20200512112427932.png)
 
@@ -363,7 +375,9 @@ plt.ylabel('y axis label')
 plt.show()
 ```
 
+<fancybox>
 ![08](https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-PIC/A75/08.png)
+</fancybox>
 
 ---
 
