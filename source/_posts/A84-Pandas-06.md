@@ -534,7 +534,7 @@ GroupBy 对象支持转换成列表或字典：
 7    a  three  0.112884  0.004367
 >>> 
 >>> grouped = obj.groupby('key1')
->>> list(grouped1)
+>>> list(grouped)
 [('a',   key1   key2     data1     data2
 0    a    one -0.607009  1.948301
 2    a    two -2.086024  0.358164
@@ -545,8 +545,8 @@ GroupBy 对象支持转换成列表或字典：
 1    b    one  0.150818 -0.025095
 3    b  three  0.446061  1.708797
 5    b    two  0.981877  2.159327)]
->>> 
->>> dict(list(grouped1))
+>>>
+>>> dict(list(grouped))
 {'a':   key1   key2     data1     data2
 0    a    one -0.607009  1.948301
 2    a    two -2.086024  0.358164
