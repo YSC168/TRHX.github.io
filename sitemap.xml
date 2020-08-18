@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.itrhx.com/friends/index.html</loc>
+    
+    <lastmod>2020-08-18T01:45:12.586Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.itrhx.com/2020/06/17/A84-Pandas-06/</loc>
     
     <lastmod>2020-08-07T01:13:45.027Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>https://www.itrhx.com/2019/12/31/A60-2019-summary/</loc>
     
     <lastmod>2020-08-06T02:59:52.727Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.itrhx.com/friends/index.html</loc>
-    
-    <lastmod>2020-08-06T02:58:25.284Z</lastmod>
     
   </url>
   
@@ -422,13 +422,6 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/element/index.html</loc>
-    
-    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.itrhx.com/games/cat/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
@@ -436,14 +429,21 @@
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/box/about/index.html</loc>
+    <loc>https://www.itrhx.com/games/2048/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.itrhx.com/games/2048/index.html</loc>
+    <loc>https://www.itrhx.com/games/element/index.html</loc>
+    
+    <lastmod>2019-12-29T06:55:50.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.itrhx.com/box/about/index.html</loc>
     
     <lastmod>2019-12-29T06:55:50.751Z</lastmod>
     
