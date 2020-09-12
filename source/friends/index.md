@@ -364,7 +364,7 @@ links:
 
     - name: 覃浩的博客
       avatar: https://cdn.jsdelivr.net/gh/TRHX/ImageHosting/ITRHX-LINKS/zhengyuanyuan520.jpg
-      url: https://www.zhengyuanyuan520.com/
+      url: https://imqinhao.cn/
       backgroundColor: '#FBBC05'
       textColor: '#fff'
       tags:

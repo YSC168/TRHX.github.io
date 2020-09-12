@@ -4,11 +4,11 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/css/style.css
+      style: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/app.js
-      search: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/js/app.js
+      search: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/js/volantis.min.js
 
 
 
@@ -38,7 +38,7 @@ music:
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/bitmap.gif
+avatar_placeholder: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/bitmap.gif
 
 # 文章字数统计、阅读时长
 word_count: true
@@ -48,9 +48,9 @@ reward:
   enable: true
   reward_comment: 您的喜欢是作者写作最大的动力！❤️
   PayPalLink: https://paypal.me/trhx
-  AliPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/AliPayQR.png
-  WeChatPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/WeChatQR.png
-  QQPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/reward/QQPayQR.png
+  AliPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/reward/AliPayQR.png
+  WeChatPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/reward/WeChatQR.png
+  QQPayOR: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/reward/QQPayQR.png
 
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
@@ -62,9 +62,9 @@ backstretch:
   duration: 5000 # 持续时间（毫秒）
   fade: 1500     # 渐变（毫秒）
   images:
-    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/background/023.webp
-    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/background/022.webp
-    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/background/021.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/background/023.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/background/022.webp
+    #- https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/background/021.webp
 
 
 ############################### 自定义 ###############################
@@ -73,7 +73,7 @@ cover:
   scheme: search    # 后期将会提供多种封面方案
   height: full      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
   # title: "TRHX'S BLOG"
-  logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
+  logo: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
   search_placeholder: '世界之大，探索一下！'
   # 主页封面菜单
   features:
@@ -168,7 +168,7 @@ body: [article, comments]
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
   - widget: author
-    avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/trhx.png
+    avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/trhx.png
     title: ๑۩ﺴ&nbsp;&nbsp;TRHX&nbsp;&nbsp;ﺴ۩๑
     # body: Stay Hungry, Stay Foolish!
     social: true
@@ -200,7 +200,7 @@ sidebar:
 # - widget: plain
 #   icon: fas fa-handshake
 #   title: 欢迎光临
-#   body: '<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script src=" https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/ip.js"></script><br><script type="text/javascript" src="//rf.revolvermaps.com/0/0/4.js?i=5eyl60h41k1&amp;m=6&amp;h=122&amp;c=ff0000&amp;r=30" async="async"></script><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5L7nNUS">Hexo QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/joinchat/Mro2h0uVt0DpDvOofWG65A">Telegram 交流群</a>'
+#   body: '<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script src=" https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/js/ip.js"></script><br><script type="text/javascript" src="//rf.revolvermaps.com/0/0/4.js?i=5eyl60h41k1&amp;m=6&amp;h=122&amp;c=ff0000&amp;r=30" async="async"></script><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5L7nNUS">Hexo QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/joinchat/Mro2h0uVt0DpDvOofWG65A">Telegram 交流群</a>'
 #   more:
 #     icon: fas fa-info-circle
 #     url: https://www.revolvermaps.com/
@@ -224,7 +224,7 @@ sidebar:
 # - widget: plain
 #   icon: fas fa-map-marked-alt
 #   title: 家乡产业 - 恩施富硒茶
-#   body: <script src=" https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/js/tea.js"></script><marquee>恩施硒茶、利川红•冷后浑，源自北纬30°的功夫红茶，产于世界硒都 — 湖北恩施，2018年4月28日，国家主席习近平在武汉东湖同印度总理莫迪一同品尝了利川红，富硒茶具有降脂减肥、防癌抗毒、提神醒脑等功能，传统炒青工艺，正宗产地，色泽翠绿，茶香浓郁，爱茶养生人士的不二选择！</marquee><a href="https://item.taobao.com/item.htm?id=603056142723" target="_blank"><img class="img-slide tea_index_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/1.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=607252399515" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/2.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=606622560069" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/3.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=607320655187" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/4.jpg" alt="恩施富硒茶"></a><a href="https://yangkeduo.com/goods.html?goods_id=94106762662" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/5.jpg" alt="恩施富硒茶"></a><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/tea/6.jpg" alt="恩施富硒茶"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://shop144988343.taobao.com/">进店逛逛</a>
+#   body: <script src=" https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/js/tea.js"></script><marquee>恩施硒茶、利川红•冷后浑，源自北纬30°的功夫红茶，产于世界硒都 — 湖北恩施，2018年4月28日，国家主席习近平在武汉东湖同印度总理莫迪一同品尝了利川红，富硒茶具有降脂减肥、防癌抗毒、提神醒脑等功能，传统炒青工艺，正宗产地，色泽翠绿，茶香浓郁，爱茶养生人士的不二选择！</marquee><a href="https://item.taobao.com/item.htm?id=603056142723" target="_blank"><img class="img-slide tea_index_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/tea/1.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=607252399515" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/tea/2.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=606622560069" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/tea/3.jpg" alt="恩施富硒茶"></a><a href="https://item.taobao.com/item.htm?id=607320655187" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/tea/4.jpg" alt="恩施富硒茶"></a><a href="https://yangkeduo.com/goods.html?goods_id=94106762662" target="_blank"><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/tea/5.jpg" alt="恩施富硒茶"></a><img class="img-slide tea_other_img" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/tea/6.jpg" alt="恩施富硒茶"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://shop144988343.taobao.com/">进店逛逛</a>
 #   more:
 #     icon: fas fa-shopping-cart
 #     url: https://shop144988343.taobao.com/
@@ -232,7 +232,7 @@ sidebar:
 #  - widget: plain
 #    icon: fas fa-comments
 #    title: 交流群组
-#    body: '<img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/joinchat/Mro2h0uVt0DpDvOofWG65A">Telegram 交流群</a>'
+#    body: '<img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/groups.png"><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5F6HRuG">QQ 交流群</a><a id="goroups_button" class="goroups_button_new" target="_blank" href="https://t.me/joinchat/Mro2h0uVt0DpDvOofWG65A">Telegram 交流群</a>'
 #  - widget: list
 #    icon: fas fa-link
 #    title: 特别链接
